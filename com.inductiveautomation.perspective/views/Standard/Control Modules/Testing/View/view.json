@@ -715,7 +715,7 @@
     }
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.list": {

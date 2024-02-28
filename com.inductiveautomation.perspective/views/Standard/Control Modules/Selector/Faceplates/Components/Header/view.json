@@ -1,14 +1,14 @@
 {
   "custom": {
-    "DeselectionInterlocked": true,
-    "Interlocked": false,
-    "Selection": "Unselected",
-    "SelectionInterlocked": true,
+    "DeselectionInterlocked": null,
+    "Interlocked": null,
+    "Selection": null,
+    "SelectionInterlocked": null,
     "interlockLabel": "Healthy",
-    "interlockStyle": "Standard/Popups/Faceplates/Interlocked"
+    "interlockStyle": null
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/100S100"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.DeselectionInterlocked": {

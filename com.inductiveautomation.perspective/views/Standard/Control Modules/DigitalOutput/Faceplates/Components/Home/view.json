@@ -1,11 +1,11 @@
 {
   "custom": {
     "FormatString": "#,##0.##",
-    "State": true,
-    "StsValue": "On"
+    "State": false,
+    "StsValue": "Off"
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalOutput"
+    "TagPath": "[TPOpnim]Control Modules/DO001"
   },
   "propConfig": {
     "custom.FormatString": {
@@ -116,7 +116,7 @@
                   "marginLeft": 2,
                   "textAlign": "left"
                 },
-                "Value": "On",
+                "Value": "Off",
                 "ValueStyle": {
                   "classes": "Standard/Popups/Faceplates/ValueDisplay",
                   "paddingRight": 0,
@@ -459,7 +459,7 @@
             "props": {
               "params": {
                 "Label": "Command",
-                "OperMode": 2,
+                "OperMode": 1,
                 "Tag1": {
                   "Label": "On",
                   "Name": "Cmd/ManualOn",

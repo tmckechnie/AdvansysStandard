@@ -1,0 +1,9 @@
+{
+  "base": {
+    "style": {
+      "color": "var(--bodySymbolInterlockedText)",
+      "fontSize": "10px",
+      "textAlign": "center"
+    }
+  }
+}

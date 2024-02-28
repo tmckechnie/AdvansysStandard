@@ -1,22 +1,22 @@
 {
   "custom": {
-    "DeviationNegative": 0,
-    "DeviationPositive": 0,
-    "InternalExternalSelect": false,
-    "Output": 40,
-    "OutputClampHigh": 100,
-    "OutputClampLow": 0,
-    "OutputDisplayFormat": "#,##0.##",
-    "OutputEngUnit": "%",
-    "ProcessVariable": 20,
-    "ProcessVariableDisplayFormat": "#,##0.##",
-    "ProcessVariableEngUnit": "%",
-    "ScaleEngineeringMax": 100,
-    "ScaleEngineeringMin": 0,
-    "Setpoint": 60
+    "DeviationNegative": null,
+    "DeviationPositive": null,
+    "InternalExternalSelect": null,
+    "Output": null,
+    "OutputClampHigh": null,
+    "OutputClampLow": null,
+    "OutputDisplayFormat": null,
+    "OutputEngUnit": null,
+    "ProcessVariable": null,
+    "ProcessVariableDisplayFormat": null,
+    "ProcessVariableEngUnit": null,
+    "ScaleEngineeringMax": null,
+    "ScaleEngineeringMin": null,
+    "Setpoint": null
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Controller01"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.DeviationNegative": {

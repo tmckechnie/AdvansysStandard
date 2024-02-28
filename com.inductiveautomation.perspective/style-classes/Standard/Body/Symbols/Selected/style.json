@@ -1,0 +1,9 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--bodySymbolSelected)",
+      "color": "var(--bodySymbolValueDisplayText)",
+      "fontSize": "10px"
+    }
+  }
+}

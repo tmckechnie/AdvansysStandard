@@ -1,0 +1,9 @@
+{
+  "base": {
+    "style": {
+      "color": "var(--popupText)",
+      "fontSize": "12px",
+      "fontWeight": "normal"
+    }
+  }
+}

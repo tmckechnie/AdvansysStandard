@@ -1,0 +1,96 @@
+{
+  "custom": {
+    "configTagPath": "[FMMM01]Utilities/Cooling Water/GRPMM001/Cfg"
+  },
+  "params": {
+    "TagPath": "[FMMM01]Utilities/Cooling Water/GRPMM001"
+  },
+  "propConfig": {
+    "custom.configTagPath": {
+      "binding": {
+        "config": {
+          "expression": "{view.params.TagPath} + \"/Cfg\""
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 586,
+      "width": 350
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "NoParametersMessage"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "len({../Numeric Parameters.props.instances}) \u003d 0"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/HeaderText"
+          },
+          "text": "No Parameters Configured"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Numeric Parameters"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.instances": {
+            "binding": {
+              "config": {
+                "path": "view.custom.configTagPath"
+              },
+              "transforms": [
+                {
+                  "code": "\t#Returns all Numeric Parameter Types for this Group\n\tbaseTagPath \u003d value\n\tinstances \u003d []\n\tfilter \u003d {\n\t\t\t\"typeId\":\"S71500/Implementation Modules/Primitives/Parameter\",\n\t\t\t\"tagType\":\"UdtInstance\",\n\t\t\t\"recursive\":False,\n\t\t\t\"Name\":\"*Cfg\"\n\t\t\t\t}\n\tparameterResults \u003d system.tag.browse(baseTagPath, filter)\n\tfor parameterResult in parameterResults:\n\t\tparameterResultTagPath \u003d parameterResult[\"fullPath\"].toString()\n\t\tinstanceObject \u003d {\n\t\t\t\t\t\t\t\"TagPath\":parameterResultTagPath\t\t\t\n\t\t\t\t\t\t\t\t}\n\t\tinstances.append(instanceObject)\n\t\n\treturn instances",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "path": "Standard/Components/Faceplates/Input/ParameterEntry",
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

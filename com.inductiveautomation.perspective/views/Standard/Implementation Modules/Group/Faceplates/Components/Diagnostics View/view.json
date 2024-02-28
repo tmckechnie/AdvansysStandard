@@ -1,6 +1,20 @@
 {
   "custom": {
-    "key": null
+    "key": {
+      "ChildrenMode": 0,
+      "ChildrenRequiredMode": 0,
+      "RequestStart": false,
+      "RequestStop": false,
+      "Running": false,
+      "Siren": false,
+      "SirenOnTimeElapsed": 0,
+      "StartOnTimeElapsed": 0,
+      "Started": false,
+      "Starting": false,
+      "StopOnTimeElapsed": 0,
+      "Stopped": false,
+      "Stopping": false
+    }
   },
   "params": {
     "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/100G001"
@@ -139,7 +153,7 @@
                 "viewParams": {},
                 "viewPath": "Standard/Implementation Modules/Group/Faceplates/Components/Diagnostics/Control"
               },
-              "expanded": false,
+              "expanded": true,
               "header": {
                 "content": {
                   "style": {
@@ -150,7 +164,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
-                    "Expanded": false,
+                    "Expanded": true,
                     "Title": "Control"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"

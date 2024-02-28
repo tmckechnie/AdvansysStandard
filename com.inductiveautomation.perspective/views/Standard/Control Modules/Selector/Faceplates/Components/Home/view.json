@@ -1,15 +1,15 @@
 {
   "custom": {
-    "CmdDeSelect": false,
-    "CmdSelect": false,
-    "InterlockDeselection": true,
-    "LabelDeselect": "Unselected",
-    "LabelSelect": "Selected",
-    "OutSelected": false,
-    "Selection": "Unselected"
+    "CmdDeSelect": null,
+    "CmdSelect": null,
+    "InterlockDeselection": null,
+    "LabelDeselect": null,
+    "LabelSelect": null,
+    "OutSelected": null,
+    "Selection": null
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Selector"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.CmdDeSelect": {

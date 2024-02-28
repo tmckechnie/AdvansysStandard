@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100AI100"
+    "TagPath": "[TPOpnim]Control Modules/Rh_FIT_7080\n"
   },
   "propConfig": {
     "params.TagPath": {

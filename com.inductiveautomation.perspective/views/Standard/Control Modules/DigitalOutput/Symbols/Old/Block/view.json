@@ -1,53 +1,6 @@
 {
   "custom": {
-    "AlarmSummary": {
-      "HighestActivePriority": 0,
-      "HighestActivePriorityName": null,
-      "HighestUnackedPriority": 0,
-      "HighestUnackedPriorityName": null,
-      "Overall": {
-        "ActiveAckCount": 0,
-        "ActiveUnackCount": 0,
-        "ClearUnackCount": 0,
-        "Detail": [],
-        "ShelvedCount": 0,
-        "Total": 0
-      },
-      "PriorityDetail": {
-        "Critical": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "High": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "Low": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "Medium": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        }
-      }
-    },
+    "AlarmSummary": null,
     "References": {
       "Abbreviation": "",
       "Delay": 0,
@@ -70,7 +23,7 @@
       "AbbreviationOverwrite": "YY",
       "InstanceNameOverwrite": ""
     },
-    "TagPath": "[StandardS71500]Modules/Control Modules/201YY001"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {
@@ -305,7 +258,7 @@
             },
             "props": {
               "style": {
-                "classes": " Standard/Body/Symbols/Displays/Mode/Manual Standard/Body/Symbols/Displays/Container Standard/Body/Symbols/Displays/Fill/Passive",
+                "classes": " Standard/Body/Symbols/Displays/Container Standard/Body/Symbols/Displays/Fill/Passive",
                 "margin": 2,
                 "marginRight": 2,
                 "textAlign": "center"
@@ -346,7 +299,7 @@
             },
             "props": {
               "params": {
-                "Bad": false
+                "Bad": true
               },
               "path": "Standard/Components/Symbols/Quality",
               "style": {

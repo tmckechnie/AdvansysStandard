@@ -1,0 +1,9 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--popupContent)",
+      "borderColor": "var(--popupContent)",
+      "borderStyle": "solid"
+    }
+  }
+}

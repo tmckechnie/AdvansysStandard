@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[TPUtilities]Utilities/Chemical Dosing/XLMM560A_DM"
+    "TagPath": ""
   },
   "propConfig": {
     "params.TagPath": {

@@ -1,10 +1,10 @@
 {
   "custom": {
-    "DriverModuleTagPath": "",
-    "DriverModuleViewPath": "Standard/Driver Modules/No Driver Module/No Driver Configured"
+    "DriverModuleTagPath": "[FMMM01]Utilities/Cooling Water/Cooling Tower/XLMM958A_DM",
+    "DriverModuleViewPath": "Application/Driver Modules/Siemens/SINAMICS/Faceplates/Components/Diagnostics/Status"
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
+    "TagPath": "[FMMM01]Utilities/Cooling Water/Cooling Tower/XLMM958A"
   },
   "propConfig": {
     "custom.DriverModuleTagPath": {
@@ -71,7 +71,7 @@
           }
         },
         "props": {
-          "path": "Standard/Driver Modules/No Driver Module/No Driver Configured"
+          "path": "Application/Driver Modules/Siemens/SINAMICS/Faceplates/Components/Diagnostics/Status"
         },
         "type": "ia.display.view"
       }

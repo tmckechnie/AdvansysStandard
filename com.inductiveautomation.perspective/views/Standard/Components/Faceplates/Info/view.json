@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[TPROM]ROM/100R001"
+    "TagPath": ""
   },
   "propConfig": {
     "params.TagPath": {

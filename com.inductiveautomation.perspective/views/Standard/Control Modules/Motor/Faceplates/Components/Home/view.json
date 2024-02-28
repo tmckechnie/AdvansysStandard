@@ -1,11 +1,11 @@
 {
   "custom": {
-    "FormatString": "#,##0.##",
-    "Running": false,
-    "StsValue": "Not Running"
+    "FormatString": null,
+    "Running": null,
+    "StsValue": null
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.FormatString": {
@@ -116,7 +116,7 @@
                   "marginLeft": 2,
                   "textAlign": "left"
                 },
-                "Value": "Stop",
+                "Value": null,
                 "ValueStyle": {
                   "classes": "Standard/Popups/Faceplates/ValueDisplay",
                   "paddingRight": 0,
@@ -459,7 +459,7 @@
             "props": {
               "params": {
                 "Label": "Command",
-                "OperMode": 2,
+                "OperMode": null,
                 "Tag1": {
                   "Label": "Start",
                   "Name": "Cmd/ManualStart",

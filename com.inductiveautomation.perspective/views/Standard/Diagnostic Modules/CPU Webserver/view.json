@@ -1,0 +1,68 @@
+{
+  "custom": {},
+  "params": {
+    "strUrl": "https://172.17.193.70/"
+  },
+  "propConfig": {
+    "params.strUrl": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "newTab": true,
+                "url": "{view.params.strUrl}"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "props": {
+          "text": "Open CPU Web Server in new tab"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "IFrame"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.src": {
+            "binding": {
+              "config": {
+                "path": "view.params.strUrl"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.iframe"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

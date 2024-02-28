@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "GatewayDiagnosticTagPath": "[Standard]System/Diagnostics/Gateway/Diagnostics"
+    "GatewayDiagnosticTagPath": "[TPUtilities]System/Diagnostics/Gateway/Diagnostics"
   },
   "propConfig": {
     "params.GatewayDiagnosticTagPath": {

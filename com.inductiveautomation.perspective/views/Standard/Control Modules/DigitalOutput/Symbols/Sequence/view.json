@@ -16,7 +16,7 @@
       "AbbreviationOverwrite": "",
       "InstanceNameOverwrite": ""
     },
-    "TagPath": "[StandardS71500]Modules/Control Modules/100DO100"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {

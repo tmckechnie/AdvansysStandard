@@ -12,7 +12,7 @@
     },
     "SetValue": true,
     "ShowLabel": true,
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/100S100/Cmd/Select"
+    "TagPath": ""
   },
   "propConfig": {
     "params.ButtonLabel": {

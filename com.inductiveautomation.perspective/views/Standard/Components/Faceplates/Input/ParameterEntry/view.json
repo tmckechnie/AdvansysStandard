@@ -1,13 +1,13 @@
 {
   "custom": {
     "Enabled": true,
-    "EngUnit": "",
+    "EngUnit": "min",
     "Format": "#,##0.##",
-    "Label": "Parameter 1",
-    "Value": false
+    "Label": "Blowdown Timer",
+    "Value": 0
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Implementation Modules/100SEQ100/Cfg/Parameter 1"
+    "TagPath": "[FMMM01]Utilities/Cooling Water/GRPMM008/Cfg/BlowdownTimerCfg"
   },
   "propConfig": {
     "custom.Enabled": {
@@ -60,7 +60,7 @@
           "references": {
             "TagPath": "{view.params.TagPath}"
           },
-          "tagPath": "{TagPath}.Documentation"
+          "tagPath": "{TagPath}/Value.Documentation"
         },
         "type": "tag"
       },
@@ -180,7 +180,7 @@
               "style": {
                 "classes": "Standard/Popups/Faceplates/ValueInput"
               },
-              "value": false
+              "value": 0
             },
             "type": "ia.input.numeric-entry-field"
           },

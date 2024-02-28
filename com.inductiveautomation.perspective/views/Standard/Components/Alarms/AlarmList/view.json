@@ -2,13 +2,13 @@
   "custom": {},
   "params": {
     "AlarmJournal": {
-      "Name": "AdvansysStandard",
+      "Name": "IMPSIGNI01Journal",
       "RefreshRate": 5000
     },
     "ContentHeaderStyle": {
       "classes": "Standard/Docked/Footer/ContentBackground Standard/Docked/Footer/ContentBorder Standard/Docked/Footer/ContentText"
     },
-    "DisplayPathFilter": "Standard*",
+    "DisplayPathFilter": "Standard",
     "ShowCleared": true
   },
   "propConfig": {
@@ -346,7 +346,7 @@
                     {
                       "enabled": true,
                       "name": "filterAlarm",
-                      "script": "\treturn True\n\tdisplayPathFilter \u003d self.view.params.DisplayPathFilter#.tostring()\n\tdisplayPath \u003d alarmEvent[\u0027displayPath\u0027].toString()\n\t#system.perspective.print(\"displayPath: \" + displayPath)\n\tif displayPathFilter[-1] \u003d\u003d \"*\":\n\t\t#system.perspective.print(\"displayPath with *: \" + displayPath + \" type:\" + str(type(displayPath)))\n\t\tdisplayPathFilter \u003d displayPathFilter[0:-1]\n\t\tdisplayPathFilterLen \u003d len(displayPathFilter)\n\t\tdisplayPath \u003d displayPath[0:displayPathFilterLen]\n\t\t#system.perspective.print(\"displayPathFilter: \" + displayPathFilter + \" len: \" + str(displayPathFilterLen) + \" -- displayPath: \" + displayPath)\n\t\tif len(displayPath) \u003e\u003d displayPathFilterLen and displayPathFilter \u003d\u003d displayPath:\n\t\t\t#system.perspective.print(\"displayPath: \" + displayPath)\n\t\t\treturn True\n\telif displayPathFilter \u003d\u003d displayPath:\n\t\treturn True\n\t\n\treturn False"
+                      "script": "\t\n\tdisplayPathFilter \u003d self.view.params.DisplayPathFilter#.tostring()\n\tdisplayPath \u003d alarmEvent[\u0027displayPath\u0027].toString()\n\t#system.perspective.print(\"displayPath: \" + displayPath)\n\tif displayPathFilter[-1] \u003d\u003d \"*\":\n\t\t#system.perspective.print(\"displayPath with *: \" + displayPath + \" type:\" + str(type(displayPath)))\n\t\tdisplayPathFilter \u003d displayPathFilter[0:-1]\n\t\tdisplayPathFilterLen \u003d len(displayPathFilter)\n\t\tdisplayPath \u003d displayPath[0:displayPathFilterLen]\n\t\t#system.perspective.print(\"displayPathFilter: \" + displayPathFilter + \" len: \" + str(displayPathFilterLen) + \" -- displayPath: \" + displayPath)\n\t\tif len(displayPath) \u003e\u003d displayPathFilterLen and displayPathFilter \u003d\u003d displayPath:\n\t\t\t#system.perspective.print(\"displayPath: \" + displayPath)\n\t\t\treturn True\n\telif displayPathFilter \u003d\u003d displayPath:\n\t\treturn True\n\t\n\treturn False"
                     }
                   ],
                   "messageHandlers": []

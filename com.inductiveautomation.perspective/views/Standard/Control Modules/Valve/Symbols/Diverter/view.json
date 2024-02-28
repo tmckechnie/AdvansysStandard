@@ -1,59 +1,6 @@
 {
   "custom": {
-    "AlarmSummary": {
-      "HighestActivePriority": 1,
-      "HighestActivePriorityName": "Low",
-      "HighestUnackedPriority": 1,
-      "HighestUnackedPriorityName": "Low",
-      "Overall": {
-        "ActiveAckCount": 0,
-        "ActiveUnackCount": 1,
-        "ClearUnackCount": 0,
-        "Detail": [],
-        "ShelvedCount": 0,
-        "Total": 1
-      },
-      "PriorityDetail": {
-        "Critical": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "High": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "Low": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 1,
-          "ClearUnackCount": 0,
-          "Detail": [
-            {
-              "EventID": "a3c2353b-21f6-4dcf-86cd-fe04c2386e20",
-              "Label": "Available",
-              "State": "Active, Unacknowledged"
-            }
-          ],
-          "ShelvedCount": 0,
-          "Total": 1
-        },
-        "Medium": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        }
-      }
-    },
+    "AlarmSummary": null,
     "ModuleType": "Valve",
     "References": {
       "Abbreviation": "V"
@@ -75,7 +22,7 @@
     "Cfg": {
       "Mirror": false
     },
-    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/G01/100V001"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {
@@ -778,7 +725,7 @@
             },
             "props": {
               "params": {
-                "Bad": false
+                "Bad": true
               },
               "path": "Standard/Components/Symbols/Quality",
               "style": {

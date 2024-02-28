@@ -1,0 +1,855 @@
+{
+  "custom": {
+    "key": [
+      {
+        "name": "Base",
+        "path": "[default]_types_/Standard/Control Modules/Base",
+        "tagType": "Unknown"
+      }
+    ],
+    "key_1": "value",
+    "key_2": {
+      "Hold": {
+        "FirstUpReason": "",
+        "FirstUpReasonCode": 0,
+        "Reason": "",
+        "ReasonCode": 0,
+        "State": true
+      },
+      "Operation": {
+        "FirstUpReason": "",
+        "FirstUpReasonCode": 0,
+        "Reason": "\"DB100M001IL01\"",
+        "ReasonCode": 0,
+        "State": false
+      },
+      "Permissive": {
+        "FirstUpReason": "",
+        "FirstUpReasonCode": 0,
+        "Reason": "",
+        "ReasonCode": 0,
+        "State": true
+      },
+      "Protective": {
+        "FirstUpReason": "",
+        "FirstUpReasonCode": 0,
+        "Reason": "",
+        "ReasonCode": 0,
+        "State": true
+      }
+    },
+    "pathFrom": "value"
+  },
+  "params": {},
+  "propConfig": {
+    "custom.key": {
+      "binding": {
+        "config": {
+          "expression": "0"
+        },
+        "transforms": [
+          {
+            "code": "\tproviderFrom \u003d \"default\"\n\tproviderTo \u003d \"ROM\"\n\tpathFrom \u003d \"Standard/Control Modules/Base\"\n\t#pathTo \u003d \"Standard/Control Modules\"\n\tcopyFrom \u003d [\"[\"+providerFrom+\"]_types_/\"+pathFrom]\n\t#copyTo \u003d \"[\"+providerTo+\"]_types_/\"+pathTo\n\t#collisionPolicy \u003d \"o\"\n\t#result \u003d system.tag.copy(copyFrom,copyTo,collisionPolicy)\n\t#print result\n\t\n\tprint copyFrom\n\tconfig \u003d system.tag.getConfiguration(basePath \u003d copyFrom[0], recursive \u003dTrue)\n\tprint config\n\treturn config",
+            "type": "script"
+          }
+        ],
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.key_1": {
+      "persistent": true
+    },
+    "custom.key_2": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "publishInitial": false,
+          "tagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV01/100M001/Interlock/Interlock"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.pathFrom": {
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "EmbeddedView"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 79,
+          "y": 155
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M100"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_0"
+        },
+        "position": {
+          "height": 25,
+          "width": 132,
+          "x": 63,
+          "y": 72
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/Description",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M100"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_1"
+        },
+        "position": {
+          "height": 50,
+          "width": 50,
+          "x": 47,
+          "y": 105
+        },
+        "props": {
+          "params": {
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M100",
+            "UseLabel": true
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/Compressor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_2"
+        },
+        "position": {
+          "height": 50,
+          "width": 50,
+          "x": 161,
+          "y": 105
+        },
+        "props": {
+          "params": {
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M100",
+            "UseLabel": true
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/Motor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_3"
+        },
+        "position": {
+          "height": 50,
+          "width": 50,
+          "x": 104,
+          "y": 105
+        },
+        "props": {
+          "params": {
+            "Direction": "",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M100",
+            "UseLabel": true
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/Pump"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_4"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 79,
+          "y": 346
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100V100"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_5"
+        },
+        "position": {
+          "height": 25,
+          "width": 132,
+          "x": 63,
+          "y": 278
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/Description",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100V100"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_6"
+        },
+        "position": {
+          "height": 33,
+          "width": 58,
+          "x": 39,
+          "y": 311
+        },
+        "props": {
+          "params": {
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100V100"
+          },
+          "path": "Standard/Control Modules/Valve/Symbols/Butterfly"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_7"
+        },
+        "position": {
+          "height": 50,
+          "width": 50,
+          "x": 104,
+          "y": 302
+        },
+        "props": {
+          "params": {
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100V100"
+          },
+          "path": "Standard/Control Modules/Valve/Symbols/Diverter"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_8"
+        },
+        "position": {
+          "height": 50,
+          "width": 50,
+          "x": 161,
+          "y": 302
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "active": {
+                "bottom": true,
+                "leftBot": false,
+                "leftMid": false,
+                "leftTop": false,
+                "midBot": true,
+                "midTop": true,
+                "rightBot": false,
+                "rightMid": false,
+                "rightTop": false,
+                "top": true
+              },
+              "passive": {
+                "bottom": false,
+                "leftBot": false,
+                "leftMid": true,
+                "leftTop": false,
+                "midBot": false,
+                "midTop": false,
+                "rightBot": false,
+                "rightMid": true,
+                "rightTop": false,
+                "top": false
+              },
+              "port": {
+                "bottom": true,
+                "leftBot": false,
+                "leftMid": true,
+                "leftTop": false,
+                "rightBot": false,
+                "rightMid": true,
+                "rightTop": false,
+                "top": true
+              }
+            },
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100V100"
+          },
+          "path": "Standard/Control Modules/Valve/Symbols/Multi Port"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_9"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 79,
+          "y": 442
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100WQ100A"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_10"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 81,
+          "y": 420
+        },
+        "props": {
+          "params": {
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100WQ100A"
+          },
+          "path": "Standard/Control Modules/Totaliser/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_11"
+        },
+        "position": {
+          "height": 25,
+          "width": 129,
+          "x": 66,
+          "y": 394
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/Description",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100WQ100A"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_12"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 63,
+          "y": 533
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100WT100"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_13"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 63,
+          "y": 485.5
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/Description",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100WT100"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_14"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 63,
+          "y": 512.5
+        },
+        "props": {
+          "params": {
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100WT100"
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_15"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 63,
+          "y": 623
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M100ZS01"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_16"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 63,
+          "y": 560
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/Description",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M100ZS01"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_17"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 63,
+          "y": 742
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100WC001"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_18"
+        },
+        "position": {
+          "height": 25,
+          "width": 144,
+          "x": 42,
+          "y": 661
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/Description",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100WC001"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_19"
+        },
+        "position": {
+          "height": 50,
+          "width": 100,
+          "x": 63,
+          "y": 683
+        },
+        "props": {
+          "params": {
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100WC001",
+            "show": {
+              "Output": true,
+              "ProcessVariable": true,
+              "Setpoint": true
+            }
+          },
+          "path": "Standard/Control Modules/Controller/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Signal"
+        },
+        "position": {
+          "height": 30,
+          "width": 30,
+          "x": 47,
+          "y": 590
+        },
+        "props": {
+          "params": {
+            "LabelOverwrite": "",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M100ZS01",
+            "UseLabel": true
+          },
+          "path": "Standard/Control Modules/DigitalInput/Symbols/Signal"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_20"
+        },
+        "position": {
+          "height": 35,
+          "width": 150,
+          "x": 586,
+          "y": 72
+        },
+        "props": {
+          "params": {
+            "LabelOverwrite": "",
+            "TagPath": "[AdvansysStandard]Standard/Implementation Modules/Application/100G100"
+          },
+          "path": "Standard/Implementation Modules/Group/Symbols/Symbol"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_21"
+        },
+        "position": {
+          "height": 35,
+          "width": 150,
+          "x": 586,
+          "y": 108.5
+        },
+        "props": {
+          "params": {
+            "LabelOverwrite": "",
+            "TagPath": "[AdvansysStandard]Standard/Implementation Modules/Application/100R101"
+          },
+          "path": "Standard/Implementation Modules/Route/Symbols/Symbol"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_22"
+        },
+        "position": {
+          "height": 35,
+          "width": 300,
+          "x": 431,
+          "y": 29
+        },
+        "props": {
+          "params": {
+            "EditAllowedRoles": [
+              "Administrator",
+              "Engineer"
+            ],
+            "ShowOrdinal": true,
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/Steps",
+            "style": {
+              "classes": "Standard/Body/Statics/Fill Standard/Body/Symbols/Text"
+            }
+          },
+          "path": "Standard/Implementation Modules/Primitives/Enumeration/Symbol"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_23"
+        },
+        "position": {
+          "height": 35,
+          "width": 150,
+          "x": 228,
+          "y": 112.5
+        },
+        "props": {
+          "params": {
+            "LabelOverwrite": "",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M100"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/Block"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_24"
+        },
+        "position": {
+          "height": 35,
+          "width": 150,
+          "x": 228,
+          "y": 310
+        },
+        "props": {
+          "params": {
+            "LabelOverwrite": "",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100V100"
+          },
+          "path": "Standard/Control Modules/Valve/Symbols/Block"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_25"
+        },
+        "position": {
+          "height": 50,
+          "width": 50,
+          "x": 104,
+          "y": 202
+        },
+        "props": {
+          "params": {
+            "Direction": "",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M104",
+            "Text": "MR"
+          },
+          "path": "Standard/Control Modules/MotorReverse/Symbols/Motor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_26"
+        },
+        "position": {
+          "height": 35,
+          "width": 150,
+          "x": 228,
+          "y": 209.5
+        },
+        "props": {
+          "params": {
+            "LabelOverwrite": "",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M104"
+          },
+          "path": "Standard/Control Modules/MotorReverse/Symbols/Block"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_27"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 79,
+          "y": 252
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M104"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_28"
+        },
+        "position": {
+          "height": 25,
+          "width": 172,
+          "x": 43,
+          "y": 180
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/Description",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M104"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_29"
+        },
+        "position": {
+          "height": 33,
+          "width": 58,
+          "x": 88,
+          "y": 588.5
+        },
+        "props": {
+          "params": {
+            "LabelOverwrite": "",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M100ZS01",
+            "UseLabel": true
+          },
+          "path": "Standard/Control Modules/DigitalInput/Symbols/Hand Valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_30"
+        },
+        "position": {
+          "height": 50,
+          "width": 50,
+          "x": 162,
+          "y": 580
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "active": {
+                "bottom": false,
+                "leftBot": false,
+                "leftMid": true,
+                "leftTop": false,
+                "midBot": false,
+                "midTop": false,
+                "rightBot": false,
+                "rightMid": true,
+                "rightTop": false,
+                "top": false
+              },
+              "passive": {
+                "bottom": false,
+                "leftBot": false,
+                "leftMid": false,
+                "leftTop": false,
+                "midBot": false,
+                "midTop": false,
+                "rightBot": false,
+                "rightMid": false,
+                "rightTop": false,
+                "top": false
+              },
+              "port": {
+                "bottom": false,
+                "leftBot": false,
+                "leftMid": true,
+                "leftTop": false,
+                "rightBot": false,
+                "rightMid": true,
+                "rightTop": false,
+                "top": false
+              }
+            },
+            "LabelOverwrite": "",
+            "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M100ZS01",
+            "UseLabel": true
+          },
+          "path": "Standard/Control Modules/DigitalInput/Symbols/Multi Port"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "TimeSeriesChart"
+        },
+        "position": {
+          "height": 400,
+          "width": 400,
+          "x": 393,
+          "y": 333
+        },
+        "propConfig": {
+          "props.series[0].data": {
+            "binding": {
+              "config": {
+                "aggregate": "MinMax",
+                "avoidScanClassValidation": true,
+                "dateRange": {
+                  "mostRecent": "1",
+                  "mostRecentUnits": "HOUR"
+                },
+                "enableValueCache": true,
+                "ignoreBadQuality": false,
+                "polling": {
+                  "enabled": false,
+                  "rate": "30"
+                },
+                "preventInterpolation": false,
+                "returnFormat": "Wide",
+                "returnSize": {
+                  "numRows": "100",
+                  "type": "FIXED"
+                },
+                "tags": [
+                  {
+                    "path": "[AdvansysStandard/default:default]CAN01VS1/Kiln6/IA004_LK6"
+                  }
+                ],
+                "valueFormat": "DATASET"
+              },
+              "type": "tag-history"
+            }
+          }
+        },
+        "props": {
+          "series": [
+            {
+              "name": "Boiler"
+            }
+          ]
+        },
+        "type": "ia.chart.timeseries"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "Standard/Body/Background"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "SystemDiagnosticsTagPath": "[StandardS71500]System/Diagnostics"
+    "SystemDiagnosticsTagPath": "[TPUtilities]System/Diagnostics"
   },
   "propConfig": {
     "params.SystemDiagnosticsTagPath": {
@@ -40,7 +40,7 @@
         },
         "props": {
           "params": {
-            "GatewayDiagnosticTagPath": "[StandardS71500]System/Diagnostics/Gateway/Diagnostics"
+            "GatewayDiagnosticTagPath": "[TPUtilities]System/Diagnostics/Gateway/Diagnostics"
           },
           "path": "Standard/Diagnostic Modules/Components/Gateway Diagnostics"
         },
@@ -69,7 +69,7 @@
         },
         "props": {
           "params": {
-            "RedundancyTagPath": "[StandardS71500]System/Diagnostics/Gateway/Redundancy"
+            "RedundancyTagPath": "[TPUtilities]System/Diagnostics/Gateway/Redundancy"
           },
           "path": "Standard/Diagnostic Modules/Components/Redundancy Diagnostics"
         },
@@ -98,7 +98,7 @@
         },
         "props": {
           "params": {
-            "SystemGatewayAgentsTagPath": "[StandardS71500]System/Diagnostics/Gateway/Agents"
+            "SystemGatewayAgentsTagPath": "[TPUtilities]System/Diagnostics/Gateway/Agents"
           },
           "path": "Standard/Diagnostic Modules/Components/EAM Agents"
         },
@@ -125,6 +125,9 @@
           }
         },
         "props": {
+          "params": {
+            "Heading": ""
+          },
           "path": "Standard/Diagnostic Modules/Components/Gateway Device Connections"
         },
         "type": "ia.display.view"

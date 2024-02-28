@@ -14,7 +14,7 @@
     }
   },
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100DI100"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {

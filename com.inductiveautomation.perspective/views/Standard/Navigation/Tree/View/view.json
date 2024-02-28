@@ -9,24 +9,13 @@
     "items": [
       {
         "data": {
-          "BaseViewPath": "Model Views/StandardS71500/Standard",
-          "ModelItemTagPath": "[StandardS71500]Standard/Model Item",
-          "Name": "Standard",
+          "BaseViewPath": "Model Views/FMMM01/Utilities/Cooling Water",
+          "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Model Item",
+          "Name": "Cooling Water",
           "Order": 0,
           "Path": "0",
-          "TagFolderName": "Standard",
+          "TagFolderName": "Cooling Water",
           "ViewPaths": [
-            {
-              "ContentType": [
-                "Footer Alarms"
-              ],
-              "Label": "Alarms",
-              "Order": 0,
-              "PagePath": "",
-              "Roles": [],
-              "ViewPath": "*Alarms/Alarms",
-              "key": "kNew1"
-            },
             {
               "ContentType": [
                 "Overview"
@@ -34,545 +23,555 @@
               "Label": "Overview",
               "Order": 0,
               "PagePath": "",
+              "Params": {},
               "Roles": [],
               "ViewPath": "*Overview/Overview",
               "key": "k0"
+            },
+            {
+              "ContentType": [
+                "Alarms",
+                "Footer Alarms"
+              ],
+              "Label": "Alarms",
+              "Order": 2,
+              "PagePath": "",
+              "Params": {},
+              "Roles": [],
+              "ViewPath": "Application/Content Types/Alarms/Alarms Status",
+              "key": "k1"
+            },
+            {
+              "ContentType": [
+                "Trend"
+              ],
+              "Label": "Trend",
+              "Order": 3,
+              "PagePath": "",
+              "Params": {},
+              "Roles": [],
+              "ViewPath": "Application/Content Types/Trends/Trends Chart",
+              "key": "k2"
+            },
+            {
+              "ContentType": [
+                "System Diagnostics"
+              ],
+              "Label": "System Diagnostics",
+              "Order": 2,
+              "PagePath": "",
+              "Params": {},
+              "Roles": [],
+              "ViewPath": "Standard/Diagnostic Modules/System Diagnostics",
+              "key": "kNew4"
+            },
+            {
+              "ContentType": [
+                "Footer CM Legend"
+              ],
+              "Label": "Control Module Legend",
+              "Order": 2,
+              "PagePath": "",
+              "Params": {},
+              "Roles": [],
+              "ViewPath": "Application/Navigation/Footer Components/Styling Legend",
+              "key": "k3"
             }
           ]
         },
         "dataV0": {
-          "ModelItemTagPath": "[StandardS71500]Standard/Model Item",
-          "TagFolderName": "Standard"
+          "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Model Item",
+          "TagFolderName": "Cooling Water"
         },
         "expanded": true,
         "items": [
           {
             "data": {
-              "BaseViewPath": "Model Views/StandardS71500/Standard/Examples",
-              "ModelItemTagPath": "[StandardS71500]Standard/Examples/Model Item",
-              "Name": "Examples",
+              "BaseViewPath": "Model Views/FMMM01/Utilities/Cooling Water/Chemical Dosing",
+              "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Chemical Dosing/Model Item",
+              "Name": "Chemical Dosing",
               "Order": 0,
               "Path": "0/0",
-              "TagFolderName": "Examples",
+              "TagFolderName": "Chemical Dosing",
               "ViewPaths": [
                 {
                   "ContentType": [
-                    "Overview"
+                    "Mimic"
                   ],
-                  "Label": "Overview",
-                  "Order": 0,
+                  "Label": "Mimic",
+                  "Order": 1,
                   "PagePath": "",
+                  "Params": {},
                   "Roles": [],
-                  "ViewPath": "*Overview/Overview",
-                  "key": "k0"
+                  "ViewPath": "*Mimic/Mimic"
+                },
+                {
+                  "ContentType": [
+                    "Alarms"
+                  ],
+                  "Label": "Alarms",
+                  "Order": 2,
+                  "PagePath": "",
+                  "Params": {},
+                  "Roles": [],
+                  "ViewPath": "Application/Content Types/Alarms/Alarms Status"
+                },
+                {
+                  "ContentType": [
+                    "Trend"
+                  ],
+                  "Label": "Trend",
+                  "Order": 3,
+                  "PagePath": "",
+                  "Params": {
+                    "DefaultPens": [
+                      "[FMMM01]Utilities/Cooling Water/Chemical Dosing/LTMM960A/Sts/Value",
+                      "[FMMM01]Utilities/Cooling Water/Chemical Dosing/LTMM960B/Sts/Value",
+                      "[FMMM01]Utilities/Cooling Water/Chemical Dosing/LTMM960C/Sts/Value",
+                      "[FMMM01]Utilities/Cooling Water/Chemical Dosing/PYMM954C/Sts/Value"
+                    ]
+                  },
+                  "Roles": [],
+                  "ViewPath": "Application/Content Types/Trends/Trends Chart"
+                },
+                {
+                  "ContentType": [
+                    "Footer CM Legend"
+                  ],
+                  "Label": "Control Module Legend",
+                  "Order": 1,
+                  "PagePath": "",
+                  "Params": {},
+                  "Roles": [],
+                  "ViewPath": "Application/Navigation/Footer Components/Styling Legend"
                 }
               ]
             },
             "dataV0": {
-              "ModelItemTagPath": "[StandardS71500]Standard/Examples/Model Item",
-              "TagFolderName": "Examples"
+              "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Chemical Dosing/Model Item",
+              "TagFolderName": "Chemical Dosing"
             },
             "expanded": false,
-            "items": [
-              {
-                "data": {
-                  "BaseViewPath": "Model Views/StandardS71500/Standard/Examples/Material Handling",
-                  "ModelItemTagPath": "[StandardS71500]Standard/Examples/Material Handling/Model Item",
-                  "Name": "Material Handling",
-                  "Order": 0,
-                  "Path": "0/0/0",
-                  "TagFolderName": "Material Handling",
-                  "ViewPaths": [
-                    {
-                      "ContentType": [
-                        "Overview"
-                      ],
-                      "Label": "Overview",
-                      "Order": 0,
-                      "PagePath": "",
-                      "Roles": [],
-                      "ViewPath": "*Overview/Overview",
-                      "key": "k0"
-                    }
-                  ]
-                },
-                "dataV0": {
-                  "ModelItemTagPath": "[StandardS71500]Standard/Examples/Material Handling/Model Item",
-                  "TagFolderName": "Material Handling"
-                },
-                "expanded": false,
-                "items": [
-                  {
-                    "data": {
-                      "BaseViewPath": "Model Views/TPROM/ROM",
-                      "ModelItemTagPath": "[TPROM]ROM/Model Item",
-                      "Name": "ROM",
-                      "Order": 0,
-                      "Path": "0/0/0/0",
-                      "TagFolderName": "ROM",
-                      "ViewPaths": [
-                        {
-                          "ContentType": [
-                            "Overview"
-                          ],
-                          "Label": "Overview",
-                          "Order": 0,
-                          "PagePath": "",
-                          "Roles": [],
-                          "ViewPath": "*Overview/Overview",
-                          "key": "k0"
-                        },
-                        {
-                          "ContentType": [
-                            "Dashboard"
-                          ],
-                          "Label": "Dashboard",
-                          "Order": 1,
-                          "PagePath": "",
-                          "Roles": [],
-                          "ViewPath": "*Dashboard/Dashboard",
-                          "key": "k1"
-                        },
-                        {
-                          "ContentType": [
-                            "Sequence"
-                          ],
-                          "Label": "Sequence",
-                          "Order": 2,
-                          "PagePath": "",
-                          "Roles": [],
-                          "ViewPath": "*Sequence/Sequence",
-                          "key": "k2"
-                        },
-                        {
-                          "ContentType": [
-                            "Footer Alarms"
-                          ],
-                          "Label": "Alarms",
-                          "Order": 3,
-                          "PagePath": "",
-                          "Roles": [],
-                          "ViewPath": "*Alarms/Alarms",
-                          "key": "k3"
-                        },
-                        {
-                          "ContentType": [
-                            "Header Status"
-                          ],
-                          "Label": "Plant Status",
-                          "Order": 0,
-                          "PagePath": "",
-                          "Roles": [],
-                          "ViewPath": "*Header/Status",
-                          "key": "k4"
-                        }
-                      ]
-                    },
-                    "dataV0": {
-                      "ModelItemTagPath": "[TPROM]ROM/Model Item",
-                      "TagFolderName": "ROM"
-                    },
-                    "expanded": false,
-                    "items": [
-                      {
-                        "data": {
-                          "BaseViewPath": "Model Views/TPROM/ROM/CV01",
-                          "ModelItemTagPath": "[TPROM]ROM/CV01/Model Item",
-                          "Name": "CV01",
-                          "Order": 0,
-                          "Path": "0/0/0/0/0",
-                          "TagFolderName": "CV01",
-                          "ViewPaths": [
-                            {
-                              "ContentType": [
-                                "Overview"
-                              ],
-                              "Label": "Overview",
-                              "Order": 0,
-                              "PagePath": "",
-                              "Roles": [],
-                              "ViewPath": "*Overview/Overview",
-                              "key": "k0"
-                            },
-                            {
-                              "ContentType": [
-                                "Dashboard"
-                              ],
-                              "Label": "Dashboard",
-                              "Order": 1,
-                              "PagePath": "",
-                              "Roles": [],
-                              "ViewPath": "*Dashboard/Dashboard",
-                              "key": "k1"
-                            },
-                            {
-                              "ContentType": [
-                                "Sequence"
-                              ],
-                              "Label": "Sequence",
-                              "Order": 2,
-                              "PagePath": "",
-                              "Roles": [],
-                              "ViewPath": "*Sequence/Sequence",
-                              "key": "k2"
-                            },
-                            {
-                              "ContentType": [
-                                "Footer Alarms"
-                              ],
-                              "Label": "Alarms",
-                              "Order": 3,
-                              "PagePath": "",
-                              "Roles": [],
-                              "ViewPath": "*Alarms/Alarms",
-                              "key": "k3"
-                            },
-                            {
-                              "ContentType": [
-                                "Header Status"
-                              ],
-                              "Label": "Plant Status",
-                              "Order": 0,
-                              "PagePath": "",
-                              "Roles": [],
-                              "ViewPath": "*Header/Status",
-                              "key": "k4"
-                            }
-                          ]
-                        },
-                        "dataV0": {
-                          "ModelItemTagPath": "[TPROM]ROM/CV01/Model Item",
-                          "TagFolderName": "CV01"
-                        },
-                        "expanded": false,
-                        "items": [],
-                        "label": "CV01"
-                      },
-                      {
-                        "data": {
-                          "BaseViewPath": "Model Views/TPROM/ROM/Level 2",
-                          "ModelItemTagPath": "[TPROM]ROM/Level 2/Model Item",
-                          "Name": "Level 2",
-                          "Order": 0,
-                          "Path": "0/0/0/0/1",
-                          "TagFolderName": "Level 2",
-                          "ViewPaths": [
-                            {
-                              "ContentType": [
-                                "Overview"
-                              ],
-                              "Label": "Overview",
-                              "Order": 0,
-                              "PagePath": "",
-                              "Roles": [],
-                              "ViewPath": "*Overview/Overview",
-                              "key": "k0"
-                            },
-                            {
-                              "ContentType": [
-                                "Dashboard"
-                              ],
-                              "Label": "Dashboard",
-                              "Order": 1,
-                              "PagePath": "",
-                              "Roles": [],
-                              "ViewPath": "*Dashboard/Dashboard",
-                              "key": "k1"
-                            },
-                            {
-                              "ContentType": [
-                                "Sequence"
-                              ],
-                              "Label": "Sequence",
-                              "Order": 2,
-                              "PagePath": "",
-                              "Roles": [],
-                              "ViewPath": "*Sequence/Sequence",
-                              "key": "k2"
-                            },
-                            {
-                              "ContentType": [
-                                "Footer Alarms"
-                              ],
-                              "Label": "Alarms",
-                              "Order": 3,
-                              "PagePath": "",
-                              "Roles": [],
-                              "ViewPath": "*Alarms/Alarms",
-                              "key": "k3"
-                            },
-                            {
-                              "ContentType": [
-                                "Header Status"
-                              ],
-                              "Label": "Plant Status",
-                              "Order": 0,
-                              "PagePath": "",
-                              "Roles": [],
-                              "ViewPath": "*Header/Status",
-                              "key": "k4"
-                            }
-                          ]
-                        },
-                        "dataV0": {
-                          "ModelItemTagPath": "[TPROM]ROM/Level 2/Model Item",
-                          "TagFolderName": "Level 2"
-                        },
-                        "expanded": false,
-                        "items": [
-                          {
-                            "data": {
-                              "BaseViewPath": "Model Views/TPROM/ROM/Level 2/CV20",
-                              "ModelItemTagPath": "[TPROM]ROM/Level 2/CV20/Model Item",
-                              "Name": "CV20",
-                              "Order": 0,
-                              "Path": "0/0/0/0/1/0",
-                              "TagFolderName": "CV20",
-                              "ViewPaths": [
-                                {
-                                  "ContentType": [
-                                    "Overview"
-                                  ],
-                                  "Label": "Overview",
-                                  "Order": 0,
-                                  "PagePath": "",
-                                  "Roles": [],
-                                  "ViewPath": "*Overview/Overview",
-                                  "key": "k0"
-                                },
-                                {
-                                  "ContentType": [
-                                    "Dashboard"
-                                  ],
-                                  "Label": "Dashboard",
-                                  "Order": 1,
-                                  "PagePath": "",
-                                  "Roles": [],
-                                  "ViewPath": "*Dashboard/Dashboard",
-                                  "key": "k1"
-                                },
-                                {
-                                  "ContentType": [
-                                    "Sequence"
-                                  ],
-                                  "Label": "Sequence",
-                                  "Order": 2,
-                                  "PagePath": "",
-                                  "Roles": [],
-                                  "ViewPath": "*Sequence/Sequence",
-                                  "key": "k2"
-                                },
-                                {
-                                  "ContentType": [
-                                    "Footer Alarms"
-                                  ],
-                                  "Label": "Alarms",
-                                  "Order": 3,
-                                  "PagePath": "",
-                                  "Roles": [],
-                                  "ViewPath": "*Alarms/Alarms",
-                                  "key": "k3"
-                                },
-                                {
-                                  "ContentType": [
-                                    "Header Status"
-                                  ],
-                                  "Label": "Plant Status",
-                                  "Order": 0,
-                                  "PagePath": "",
-                                  "Roles": [],
-                                  "ViewPath": "*Header/Status",
-                                  "key": "k4"
-                                }
-                              ]
-                            },
-                            "dataV0": {
-                              "ModelItemTagPath": "[TPROM]ROM/Level 2/CV20/Model Item",
-                              "TagFolderName": "CV20"
-                            },
-                            "expanded": false,
-                            "items": [],
-                            "label": "CV20"
-                          }
-                        ],
-                        "label": "Level 2"
-                      }
-                    ],
-                    "label": "ROM"
-                  }
-                ],
-                "label": "Material Handling"
-              }
-            ],
-            "label": "Examples"
+            "items": [],
+            "label": "Chemical Dosing"
           },
           {
             "data": {
-              "BaseViewPath": "Model Views/StandardS71500/Standard/Modules",
-              "ModelItemTagPath": "[StandardS71500]Standard/Modules/Model Item",
-              "Name": "Modules",
+              "BaseViewPath": "Model Views/FMMM01/Utilities/Cooling Water/Cooling Tower",
+              "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Cooling Tower/Model Item",
+              "Name": "Cooling Tower",
               "Order": 0,
               "Path": "0/1",
-              "TagFolderName": "Modules",
+              "TagFolderName": "Cooling Tower",
               "ViewPaths": [
                 {
                   "ContentType": [
-                    "Footer Alarms"
+                    "Mimic"
                   ],
-                  "Koos": {
-                    "key": "value",
-                    "pirt": 6546
-                  },
-                  "Label": "Alarms",
-                  "Order": 0,
+                  "Label": "Mimic",
+                  "Order": 1,
                   "PagePath": "",
+                  "Params": {},
                   "Roles": [],
-                  "ViewPath": "*Alarms/Alarms",
-                  "key": "kNew1"
+                  "ViewPath": "*Mimic/Mimic",
+                  "key": "k0"
                 },
                 {
                   "ContentType": [
-                    "Overview"
+                    "Alarms"
                   ],
-                  "Koos": {
-                    "key": "value",
-                    "pirt": 6546
-                  },
-                  "Label": "Overview",
-                  "Order": 0,
+                  "Label": "Alarms",
+                  "Order": 2,
                   "PagePath": "",
+                  "Params": {},
                   "Roles": [],
-                  "ViewPath": "*Overview/Overview",
-                  "key": "k0"
+                  "ViewPath": "Application/Content Types/Alarms/Alarms Status",
+                  "key": "k1"
+                },
+                {
+                  "ContentType": [
+                    "Trend"
+                  ],
+                  "Label": "Trend",
+                  "Order": 3,
+                  "PagePath": "",
+                  "Params": {
+                    "DefaultPens": [
+                      "[FMMM01]Utilities/Cooling Water/Cooling Tower/UYMM950_2/In/Opened",
+                      "[FMMM01]Utilities/Cooling Water/Cooling Tower/TTMM950_2/Sts/Value",
+                      "[FMMM01]Utilities/Cooling Water/Cooling Tower/LITMM950/Sts/Value"
+                    ]
+                  },
+                  "Roles": [],
+                  "ViewPath": "Application/Content Types/Trends/Trends Chart",
+                  "key": "k2"
+                },
+                {
+                  "ContentType": [
+                    "Footer CM Legend"
+                  ],
+                  "Label": "Control Module Legend",
+                  "Order": 1,
+                  "PagePath": "",
+                  "Params": {},
+                  "Roles": [],
+                  "ViewPath": "Application/Navigation/Footer Components/Styling Legend",
+                  "key": "k4"
                 }
               ]
             },
             "dataV0": {
-              "ModelItemTagPath": "[StandardS71500]Standard/Modules/Model Item",
-              "TagFolderName": "Modules"
+              "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Cooling Tower/Model Item",
+              "TagFolderName": "Cooling Tower"
+            },
+            "expanded": false,
+            "items": [],
+            "label": "Cooling Tower"
+          },
+          {
+            "data": {
+              "BaseViewPath": "Model Views/FMMM01/Utilities/Cooling Water/Fan Filter Units",
+              "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Fan Filter Units/Model Item",
+              "Name": "Fan Filter Units",
+              "Order": 0,
+              "Path": "0/2",
+              "TagFolderName": "Fan Filter Units",
+              "ViewPaths": [
+                {
+                  "ContentType": [
+                    "Mimic"
+                  ],
+                  "Label": "Mimic",
+                  "Order": 1,
+                  "PagePath": "",
+                  "Params": {},
+                  "Roles": [],
+                  "ViewPath": "*Mimic"
+                },
+                {
+                  "ContentType": [
+                    "Alarms"
+                  ],
+                  "Label": "Alarms",
+                  "Order": 2,
+                  "PagePath": "",
+                  "Params": {},
+                  "Roles": [],
+                  "ViewPath": "Application/Content Types/Alarms/Alarms Status"
+                },
+                {
+                  "ContentType": [
+                    "Trend"
+                  ],
+                  "Label": "Trend",
+                  "Order": 3,
+                  "PagePath": "",
+                  "Params": {
+                    "DefaultPens": []
+                  },
+                  "Roles": [],
+                  "ViewPath": "Application/Content Types/Trends/Trends Chart"
+                },
+                {
+                  "ContentType": [
+                    "Footer CM Legend"
+                  ],
+                  "Label": "Control Module Legend",
+                  "Order": 1,
+                  "PagePath": "",
+                  "Params": {},
+                  "Roles": [],
+                  "ViewPath": "Application/Navigation/Footer Components/Styling Legend"
+                }
+              ]
+            },
+            "dataV0": {
+              "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Fan Filter Units/Model Item",
+              "TagFolderName": "Fan Filter Units"
+            },
+            "expanded": false,
+            "items": [],
+            "label": "Fan Filter Units"
+          },
+          {
+            "data": {
+              "BaseViewPath": "Model Views/FMMM01/Utilities/Cooling Water/Sand Filter",
+              "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Sand Filter/Model Item",
+              "Name": "Sand Filter",
+              "Order": 0,
+              "Path": "0/3",
+              "TagFolderName": "Sand Filter",
+              "ViewPaths": [
+                {
+                  "ContentType": [
+                    "Mimic"
+                  ],
+                  "Label": "Mimic",
+                  "Order": 1,
+                  "PagePath": "",
+                  "Params": {},
+                  "Roles": [],
+                  "ViewPath": "*Mimic/Mimic"
+                },
+                {
+                  "ContentType": [
+                    "Alarms"
+                  ],
+                  "Label": "Alarms",
+                  "Order": 2,
+                  "PagePath": "",
+                  "Params": {},
+                  "Roles": [],
+                  "ViewPath": "Application/Content Types/Alarms/Alarms Status"
+                },
+                {
+                  "ContentType": [
+                    "Trend"
+                  ],
+                  "Label": "Trend",
+                  "Order": 3,
+                  "PagePath": "",
+                  "Params": {
+                    "DefaultPens": [
+                      "[FMMM01]Utilities/Cooling Water/Sand Filter/UYMM930A_1/In/Opened",
+                      "[FMMM01]Utilities/Cooling Water/Sand Filter/UYMM930A_2/In/Opened",
+                      "[FMMM01]Utilities/Cooling Water/Sand Filter/UYMM930A_3/In/Opened",
+                      "[FMMM01]Utilities/Cooling Water/Sand Filter/UYMM930A_4/In/Opened"
+                    ]
+                  },
+                  "Roles": [],
+                  "ViewPath": "Application/Content Types/Trends/Trends Chart"
+                },
+                {
+                  "ContentType": [
+                    "Footer CM Legend"
+                  ],
+                  "Label": "Control Module Legend",
+                  "Order": 1,
+                  "PagePath": "",
+                  "Params": {},
+                  "Roles": [],
+                  "ViewPath": "Application/Navigation/Footer Components/Styling Legend"
+                }
+              ]
+            },
+            "dataV0": {
+              "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Sand Filter/Model Item",
+              "TagFolderName": "Sand Filter"
+            },
+            "expanded": false,
+            "items": [],
+            "label": "Sand Filter"
+          },
+          {
+            "data": {
+              "BaseViewPath": "Model Views/FMMM01/Utilities/Cooling Water/Water Recirculation",
+              "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Water Recirculation/Model Item",
+              "Name": "Water Recirculation",
+              "Order": 0,
+              "Path": "0/4",
+              "TagFolderName": "Water Recirculation",
+              "ViewPaths": [
+                {
+                  "ContentType": [
+                    "Overview"
+                  ],
+                  "ContentTypeParams": {},
+                  "Label": "Overview",
+                  "Order": 0,
+                  "PagePath": "",
+                  "Roles": [],
+                  "ViewPath": "*Overview/Overview"
+                },
+                {
+                  "ContentType": [
+                    "Alarms",
+                    "Footer Alarms"
+                  ],
+                  "ContentTypeParams": {},
+                  "Label": "Alarms",
+                  "Order": 2,
+                  "PagePath": "",
+                  "Roles": [],
+                  "ViewPath": "Application/Content Types/Alarms/Alarms Status"
+                },
+                {
+                  "ContentType": [
+                    "Trend"
+                  ],
+                  "ContentTypeParams": {
+                    "DefaultPens": []
+                  },
+                  "Label": "Trend",
+                  "Order": 3,
+                  "PagePath": "",
+                  "Roles": [],
+                  "ViewPath": "Application/Content Types/Trends/Trends Chart"
+                },
+                {
+                  "ContentType": [
+                    "Footer CM Legend"
+                  ],
+                  "ContentTypeParams": {},
+                  "Label": "Control Module Legend",
+                  "Order": 1,
+                  "PagePath": "",
+                  "Roles": [],
+                  "ViewPath": "Application/Navigation/Footer Components/Styling Legend"
+                }
+              ]
+            },
+            "dataV0": {
+              "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Water Recirculation/Model Item",
+              "TagFolderName": "Water Recirculation"
             },
             "expanded": false,
             "items": [
               {
                 "data": {
-                  "BaseViewPath": "Model Views/StandardS71500/Standard/Modules/Control Modules",
-                  "ModelItemTagPath": "[StandardS71500]Standard/Modules/Control Modules/Model Item",
-                  "Name": "Control Modules",
+                  "BaseViewPath": "Model Views/FMMM01/Utilities/Cooling Water/Water Recirculation/FM",
+                  "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Water Recirculation/FM/Model Item",
+                  "Name": "FM",
                   "Order": 0,
-                  "Path": "0/1/0",
-                  "TagFolderName": "Control Modules",
+                  "Path": "0/4/0",
+                  "TagFolderName": "FM",
                   "ViewPaths": [
                     {
                       "ContentType": [
-                        "Overview"
+                        "Mimic"
                       ],
-                      "Label": "Testing",
-                      "Order": "1",
+                      "Label": "Mimic",
+                      "Order": 1,
                       "PagePath": "",
+                      "Params": {},
                       "Roles": [],
-                      "ViewPath": "*Testing/Testing",
-                      "key": "k0"
+                      "ViewPath": "*Mimic"
                     },
                     {
                       "ContentType": [
-                        "Footer Alarms"
+                        "Alarms"
                       ],
                       "Label": "Alarms",
-                      "Order": "10",
+                      "Order": 2,
                       "PagePath": "",
+                      "Params": {},
                       "Roles": [],
-                      "ViewPath": "*Alarms/Alarms",
-                      "key": "k1"
+                      "ViewPath": "Application/Content Types/Alarms/Alarms Status"
                     },
                     {
                       "ContentType": [
-                        "Overview"
+                        "Trend"
                       ],
-                      "Label": "Level Controller",
-                      "Order": "3",
+                      "Label": "Trend",
+                      "Order": 3,
                       "PagePath": "",
+                      "Params": {
+                        "DefaultPens": [
+                          "[FMMM01]Utilities/Cooling Water/Water Recirculation/FM/XLMM955E/In/Running",
+                          "[FMMM01]Utilities/Cooling Water/Water Recirculation/FM/XLMM955F/In/Running",
+                          "[FMMM01]Utilities/Cooling Water/Water Recirculation/FM/XLMM955G/In/Running",
+                          "[FMMM01]Utilities/Cooling Water/Water Recirculation/FM/XLMM955H/In/Running"
+                        ]
+                      },
                       "Roles": [],
-                      "ViewPath": "Model Views/StandardS71500/Standard/Modules/Control Modules/Testing/Components/LevelControl",
-                      "key": "kNew3"
+                      "ViewPath": "Application/Content Types/Trends/Trends Chart"
                     },
                     {
                       "ContentType": [
-                        "Overview"
+                        "Footer CM Legend"
                       ],
-                      "Label": "Overview",
-                      "Order": 0,
+                      "Label": "Control Module Legend",
+                      "Order": 1,
                       "PagePath": "",
+                      "Params": {},
                       "Roles": [],
-                      "ViewPath": "*Overview/Overview",
-                      "key": "k2"
+                      "ViewPath": "Application/Navigation/Footer Components/Styling Legend"
                     }
                   ]
                 },
                 "dataV0": {
-                  "ModelItemTagPath": "[StandardS71500]Standard/Modules/Control Modules/Model Item",
-                  "TagFolderName": "Control Modules"
+                  "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Water Recirculation/FM/Model Item",
+                  "TagFolderName": "FM"
                 },
                 "expanded": false,
                 "items": [],
-                "label": "Control Modules"
+                "label": "FM"
               },
               {
                 "data": {
-                  "BaseViewPath": "Model Views/StandardS71500/Standard/Modules/Implementation Modules",
-                  "ModelItemTagPath": "[StandardS71500]Standard/Modules/Implementation Modules/Model Item",
-                  "Name": "Implementation Modules",
+                  "BaseViewPath": "Model Views/FMMM01/Utilities/Cooling Water/Water Recirculation/PCR",
+                  "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Water Recirculation/PCR/Model Item",
+                  "Name": "PCR",
                   "Order": 0,
-                  "Path": "0/1/1",
-                  "TagFolderName": "Implementation Modules",
+                  "Path": "0/4/1",
+                  "TagFolderName": "PCR",
                   "ViewPaths": [
                     {
                       "ContentType": [
-                        "Overview"
+                        "Mimic"
                       ],
-                      "Label": "Testing",
-                      "Order": "1",
+                      "Label": "Mimic",
+                      "Order": 1,
                       "PagePath": "",
+                      "Params": {},
                       "Roles": [],
-                      "ViewPath": "*Testing/Testing",
-                      "key": "k0"
+                      "ViewPath": "*Mimic"
                     },
                     {
                       "ContentType": [
-                        "Footer Alarms"
+                        "Alarms"
                       ],
                       "Label": "Alarms",
-                      "Order": 0,
+                      "Order": 2,
                       "PagePath": "",
+                      "Params": {},
                       "Roles": [],
-                      "ViewPath": "*Alarms/Alarms",
-                      "key": "kNew2"
+                      "ViewPath": "Application/Content Types/Alarms/Alarms Status"
                     },
                     {
                       "ContentType": [
-                        "Overview"
+                        "Trend"
                       ],
-                      "Label": "Overview",
-                      "Order": 0,
+                      "Label": "Trend",
+                      "Order": 3,
                       "PagePath": "",
+                      "Params": {
+                        "DefaultPens": [
+                          "[FMMM01]Utilities/Cooling Water/Water Recirculation/PCR/XLMM955A/In/Running",
+                          "[FMMM01]Utilities/Cooling Water/Water Recirculation/PCR/XLMM955B/In/Running",
+                          "[FMMM01]Utilities/Cooling Water/Water Recirculation/PCR/XLMM955C/In/Running",
+                          "[FMMM01]Utilities/Cooling Water/Water Recirculation/PCR/XLMM955D/In/Running"
+                        ]
+                      },
                       "Roles": [],
-                      "ViewPath": "*Overview/Overview",
-                      "key": "k1"
+                      "ViewPath": "Application/Content Types/Trends/Trends Chart"
+                    },
+                    {
+                      "ContentType": [
+                        "Footer CM Legend"
+                      ],
+                      "Label": "Control Module Legend",
+                      "Order": 1,
+                      "PagePath": "",
+                      "Params": {},
+                      "Roles": [],
+                      "ViewPath": "Application/Navigation/Footer Components/Styling Legend"
                     }
                   ]
                 },
                 "dataV0": {
-                  "ModelItemTagPath": "[StandardS71500]Standard/Modules/Implementation Modules/Model Item",
-                  "TagFolderName": "Implementation Modules"
+                  "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Water Recirculation/PCR/Model Item",
+                  "TagFolderName": "PCR"
                 },
                 "expanded": false,
                 "items": [],
-                "label": "Implementation Modules"
+                "label": "PCR"
               }
             ],
-            "label": "Modules"
+            "label": "Water Recirculation"
           }
         ],
-        "label": "Standard"
+        "label": "Cooling Water"
       }
     ]
   },

@@ -5,7 +5,7 @@
     "alarmStyle": null
   },
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100AI100"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {

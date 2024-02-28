@@ -1,6 +1,6 @@
 {
   "custom": {
-    "FullTagPath": "[StandardS71500]Modules/Control Modules/100AO100/Cfg/InternalExternalSelect//"
+    "FullTagPath": "//"
   },
   "params": {
     "CategoryName": "",
@@ -9,7 +9,7 @@
     "LabelButton2": "Close",
     "OperMode": 1,
     "TagName": "",
-    "TagPath": "[StandardS71500]Modules/Control Modules/100AO100/Cfg/InternalExternalSelect"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.FullTagPath": {

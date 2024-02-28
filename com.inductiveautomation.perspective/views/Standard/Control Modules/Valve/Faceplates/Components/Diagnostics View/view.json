@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
+    "TagPath": ""
   },
   "propConfig": {
     "params.TagPath": {
@@ -296,7 +296,6 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
-                    "Expanded": false,
                     "Title": "Alarms"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"

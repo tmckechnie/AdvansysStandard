@@ -1,14 +1,14 @@
 {
   "custom": {
-    "Closed": false,
+    "Closed": null,
     "Command": {},
-    "FormatString": "#,##0.##",
-    "Mid": false,
-    "Opened": false,
+    "FormatString": null,
+    "Mid": null,
+    "Opened": null,
     "OpenedText": "Transitioning",
-    "Value": "Transitioning",
-    "historyDuration": 5,
-    "outOpen": false
+    "Value": null,
+    "historyDuration": 10,
+    "outOpen": null
   },
   "params": {
     "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Positioner"
@@ -641,9 +641,16 @@
         ],
         "custom": {
           "History": {
+            "firstTimestamp": {
+              "$": [
+                "ts",
+                192,
+                1695882142945
+              ],
+              "$ts": 1695881542943
+            },
             "run": true
-          },
-          "key_1": "value"
+          }
         },
         "meta": {
           "name": "Trend"
@@ -709,6 +716,7 @@
               "config": {
                 "path": "this.custom.History.data[0].data[0].time"
               },
+              "enabled": false,
               "transforms": [
                 {
                   "expression": "fromMillis({value})",

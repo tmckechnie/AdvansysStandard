@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
+    "TagPath": ""
   },
   "propConfig": {
     "params.TagPath": {
@@ -226,7 +226,7 @@
                 "useDefaultViewHeight": false,
                 "useDefaultViewWidth": false,
                 "viewParams": {
-                  "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
+                  "TagPath": ""
                 },
                 "viewPath": "Standard/Driver Modules/Driver Module Info"
               },

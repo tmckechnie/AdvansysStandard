@@ -1,59 +1,6 @@
 {
   "custom": {
-    "AlarmSummary": {
-      "HighestActivePriority": 4,
-      "HighestActivePriorityName": "Critical",
-      "HighestUnackedPriority": 4,
-      "HighestUnackedPriorityName": "Critical",
-      "Overall": {
-        "ActiveAckCount": 0,
-        "ActiveUnackCount": 1,
-        "ClearUnackCount": 0,
-        "Detail": [],
-        "ShelvedCount": 0,
-        "Total": 1
-      },
-      "PriorityDetail": {
-        "Critical": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 1,
-          "ClearUnackCount": 0,
-          "Detail": [
-            {
-              "EventID": "309a17ec-c3c7-46cd-ad8f-d276c06867c2",
-              "Label": "Available",
-              "State": "Active, Unacknowledged"
-            }
-          ],
-          "ShelvedCount": 0,
-          "Total": 1
-        },
-        "High": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "Low": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "Medium": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        }
-      }
-    },
+    "AlarmSummary": null,
     "ModuleType": "Motor",
     "References": {
       "Abbreviation": "M"
@@ -73,7 +20,7 @@
     "Cfg": {
       "AbbreviationOverwrite": ""
     },
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {
@@ -707,7 +654,7 @@
             },
             "props": {
               "params": {
-                "Bad": false
+                "Bad": true
               },
               "path": "Standard/Components/Symbols/Quality",
               "style": {

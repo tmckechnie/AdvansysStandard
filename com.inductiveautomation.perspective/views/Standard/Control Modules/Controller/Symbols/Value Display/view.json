@@ -1,53 +1,6 @@
 {
   "custom": {
-    "AlarmSummary": {
-      "HighestActivePriority": 0,
-      "HighestActivePriorityName": null,
-      "HighestUnackedPriority": 0,
-      "HighestUnackedPriorityName": null,
-      "Overall": {
-        "ActiveAckCount": 0,
-        "ActiveUnackCount": 0,
-        "ClearUnackCount": 0,
-        "Detail": [],
-        "ShelvedCount": 0,
-        "Total": 0
-      },
-      "PriorityDetail": {
-        "Critical": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "High": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "Low": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "Medium": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        }
-      }
-    },
+    "AlarmSummary": null,
     "ModuleType": "Controller",
     "References": {
       "Abbreviation": "S"
@@ -68,7 +21,7 @@
         "Setpoint": true
       }
     },
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Controller01"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {
@@ -548,7 +501,7 @@
         "props": {
           "direction": "column",
           "style": {
-            "classes": "  Standard/Body/Symbols/Displays/Mode/Auto Standard/Body/Symbols/Displays/Container",
+            "classes": "  Standard/Body/Symbols/Displays/Container",
             "margin": 3,
             "outline-offset": 1
           }

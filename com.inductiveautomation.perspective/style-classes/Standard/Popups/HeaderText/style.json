@@ -1,0 +1,21 @@
+{
+  "base": {
+    "style": {
+      "color": "var(--popupHeadingText)",
+      "fontSize": "12px",
+      "fontWeight": "bold",
+      "textAlign": "center"
+    }
+  },
+  "variants": [
+    {
+      "media": {
+        "feature": "maxWidth",
+        "value": "700px"
+      },
+      "style": {
+        "fontSize": "10px"
+      }
+    }
+  ]
+}

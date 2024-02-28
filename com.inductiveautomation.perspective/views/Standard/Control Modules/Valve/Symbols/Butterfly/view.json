@@ -1,53 +1,6 @@
 {
   "custom": {
-    "AlarmSummary": {
-      "HighestActivePriority": 0,
-      "HighestActivePriorityName": null,
-      "HighestUnackedPriority": 0,
-      "HighestUnackedPriorityName": null,
-      "Overall": {
-        "ActiveAckCount": 0,
-        "ActiveUnackCount": 0,
-        "ClearUnackCount": 0,
-        "Detail": [],
-        "ShelvedCount": 0,
-        "Total": 0
-      },
-      "PriorityDetail": {
-        "Critical": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "High": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "Low": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "Medium": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        }
-      }
-    },
+    "AlarmSummary": null,
     "ModuleType": "Valve",
     "References": {
       "Abbreviation": "V"
@@ -66,7 +19,7 @@
     }
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {
@@ -505,6 +458,26 @@
         "type": "expr-struct"
       }
     },
+    "custom.Styling.SVG.StatePorts": {
+      "binding": {
+        "config": {
+          "struct": {
+            "activating": "{view.custom.References.Activating}",
+            "deActivating": "{view.custom.References.DeActivating}",
+            "interlocked": "{view.custom.References.Interlocked}",
+            "state": "{view.custom.References.State}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols/SVG\"\n\tstyle \u003d baseStyle + \"/Basic \"\n\n#\t#Interlocked\n#\tif value[\"interlocked\"]:\n#\t\treturn baseStyle + \"/Fill/Interlocked \"\n\n\t#State\n\tif value[\"state\"]:\n\t\tstyle +\u003d baseStyle + \"/Fill/Active\"\t\n\telse:\n\t\tstyle +\u003d baseStyle + \"/Fill/Passive\"\n\t\n\t#Transitioning\t\n\tif value[\"activating\"]:\n\t\treturn baseStyle + \"/Fill/PassiveActive\"\n\t\t\n\tif value[\"deActivating\"]:\n\t\treturn baseStyle + \"/Fill/ActivePassive\"\n\t\t\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
     "custom.Styling.SVG.StateText": {
       "binding": {
         "config": {
@@ -567,7 +540,7 @@
               "custom.portsStyleClasses": {
                 "binding": {
                   "config": {
-                    "expression": "{view.custom.Styling.SVG.State} + \" \" + {view.custom.Styling.SVG.Mode}"
+                    "expression": "{view.custom.Styling.SVG.StatePorts} + \" \" + {view.custom.Styling.SVG.Mode}"
                   },
                   "type": "expr"
                 }
@@ -661,7 +634,7 @@
             },
             "props": {
               "params": {
-                "Bad": false
+                "Bad": true
               },
               "path": "Standard/Components/Symbols/Quality",
               "style": {

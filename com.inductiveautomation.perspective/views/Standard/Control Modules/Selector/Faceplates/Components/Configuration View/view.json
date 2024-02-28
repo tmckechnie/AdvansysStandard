@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/Selector"
+    "TagPath": ""
   },
   "propConfig": {
     "params.TagPath": {

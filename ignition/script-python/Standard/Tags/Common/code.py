@@ -56,7 +56,7 @@ def GetTrendData(HistoryConfig,PeriodEnd,HistoryDuration,TimestampFormat=None):
 			if timeMillis < periodStartMillis:
 				timeMillis = periodStartMillis
 				t_stamp = periodStart
-				dataPoint['boundryType'] = 'Boundry'
+				dataPoint['boundryType'] = 'Before'
 			else:
 				dataPoint['boundryType'] = 'Between'
 				
@@ -88,7 +88,7 @@ def GetTrendData(HistoryConfig,PeriodEnd,HistoryDuration,TimestampFormat=None):
 			fisrtDataPoint = data[0]
 			timeMillis = fisrtDataPoint['time']
 			if timeMillis < periodStartMillis:
-				fisrtDataPoint['boundryType'] = 'Boundry'	
+				fisrtDataPoint['boundryType'] = 'Before'	
 				
 				
 		#Create End Trend Data Point

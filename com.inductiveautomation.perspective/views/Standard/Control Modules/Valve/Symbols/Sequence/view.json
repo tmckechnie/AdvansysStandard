@@ -23,7 +23,7 @@
       "AbbreviationOverwrite": "",
       "InstanceNameOverwrite": ""
     },
-    "TagPath": "[StandardS71500]Modules/Control Modules/100XV100"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {

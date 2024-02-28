@@ -1,0 +1,9 @@
+{
+  "base": {
+    "style": {
+      "borderColor": "var(--cmSimulated)",
+      "borderStyle": "dotted",
+      "borderWidth": "2.5px"
+    }
+  }
+}

@@ -1,0 +1,450 @@
+{
+  "custom": {
+    "Display": true
+  },
+  "params": {
+    "AlarmPrimitiveTagPath": "",
+    "ShowHeader": false
+  },
+  "propConfig": {
+    "custom.Display": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "AlarmPrimitiveTagPath": "{view.params.AlarmPrimitiveTagPath}"
+          },
+          "tagPath": "{AlarmPrimitiveTagPath}.Documentation"
+        },
+        "transforms": [
+          {
+            "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+            "type": "script"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.AlarmPrimitiveTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowHeader": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "props.defaultSize.height": {
+      "binding": {
+        "config": {
+          "expression": "if({view.params.ShowHeader},64,32)"
+        },
+        "type": "expr"
+      }
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 350
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Alarm Name"
+            },
+            "position": {
+              "basis": "50px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Text",
+                "paddingLeft": 2
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Enabled"
+            },
+            "position": {
+              "basis": "70px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Text",
+                "marginRight": 2
+              },
+              "text": "Enabled"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Priority"
+            },
+            "position": {
+              "basis": "60px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Text",
+                "marginLeft": 2,
+                "marginRight": 2
+              },
+              "text": "Priority"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Setpoint"
+            },
+            "position": {
+              "basis": "25px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Text",
+                "marginLeft": 2,
+                "marginRight": 2
+              },
+              "text": "Setpoint"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Delay"
+            },
+            "position": {
+              "basis": "25px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Text",
+                "marginLeft": 2
+              },
+              "text": "Delay (s)"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "200px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.params.ShowHeader"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "marginBottom": 5
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Alarm Name"
+            },
+            "position": {
+              "basis": "50px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "AlarmPrimitiveTagPath": "{view.params.AlarmPrimitiveTagPath}"
+                    },
+                    "tagPath": "{AlarmPrimitiveTagPath}.Documentation"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Text",
+                "paddingLeft": 2
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Alarm Enabled"
+            },
+            "position": {
+              "basis": "70px",
+              "grow": 1
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "AlarmPrimitiveTagPath": "{view.params.AlarmPrimitiveTagPath}"
+                    },
+                    "tagPath": "{AlarmPrimitiveTagPath}/Cfg/Enable.Enabled"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "AlarmPrimitiveTagPath": "{view.params.AlarmPrimitiveTagPath}"
+                    },
+                    "tagPath": "{AlarmPrimitiveTagPath}/Cfg/Enable"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Enable": true,
+                "Label": "",
+                "ShowLabel": false,
+                "options": [
+                  {
+                    "label": "Enabled",
+                    "value": true
+                  },
+                  {
+                    "label": "Disabled",
+                    "value": false
+                  }
+                ]
+              },
+              "path": "Standard/Components/Faceplates/Input/LabelDropdown",
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Text",
+                "marginRight": 2
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Alarm Priority"
+            },
+            "position": {
+              "basis": "60px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "AlarmPrimitiveTagPath": "{view.params.AlarmPrimitiveTagPath}"
+                    },
+                    "tagPath": "{AlarmPrimitiveTagPath}/Cfg/OperationActivePriority"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Enable": true,
+                "Label": "",
+                "ShowLabel": false,
+                "options": [
+                  {
+                    "label": "Critical",
+                    "value": "Critical"
+                  },
+                  {
+                    "label": "High",
+                    "value": "High"
+                  },
+                  {
+                    "label": "Medium",
+                    "value": "Medium"
+                  },
+                  {
+                    "label": "Low",
+                    "value": "Low"
+                  },
+                  {
+                    "label": "Diagnostic",
+                    "value": "Diagnostic"
+                  }
+                ]
+              },
+              "path": "Standard/Components/Faceplates/Input/LabelDropdown",
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Text",
+                "marginLeft": 2,
+                "marginRight": 2
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Alarm Limit"
+            },
+            "position": {
+              "basis": "25px",
+              "grow": 1
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "AlarmPrimitiveTagPath": "{view.params.AlarmPrimitiveTagPath}"
+                    },
+                    "tagPath": "{AlarmPrimitiveTagPath}/Cfg/ConditionSetpoint.Enabled"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "AlarmPrimitiveTagPath": "{view.params.AlarmPrimitiveTagPath}"
+                    },
+                    "tagPath": "{AlarmPrimitiveTagPath}/Cfg/ConditionSetpoint"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Enable": true,
+                "Format": "0,0.##",
+                "Label": "",
+                "ShowLabel": false,
+                "Units": ""
+              },
+              "path": "Standard/Components/Faceplates/Input/LabelNumericEntryField",
+              "style": {
+                "marginRight": 2
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Alarm Delay"
+            },
+            "position": {
+              "basis": "25px",
+              "grow": 1
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "AlarmPrimitiveTagPath": "{view.params.AlarmPrimitiveTagPath}"
+                    },
+                    "tagPath": "{AlarmPrimitiveTagPath}/Cfg/Delay.Enabled"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "AlarmPrimitiveTagPath": "{view.params.AlarmPrimitiveTagPath}"
+                    },
+                    "tagPath": "{AlarmPrimitiveTagPath}/Cfg/Delay"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Enable": true,
+                "Format": "0,0.##",
+                "Label": "",
+                "ShowLabel": false,
+                "Units": ""
+              },
+              "path": "Standard/Components/Faceplates/Input/LabelNumericEntryField"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Alarm Properties"
+        },
+        "position": {
+          "basis": "200px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Display"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

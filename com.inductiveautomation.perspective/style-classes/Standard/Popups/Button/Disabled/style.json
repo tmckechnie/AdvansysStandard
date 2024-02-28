@@ -1,0 +1,12 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--popupAccentDisabled)",
+      "borderColor": "var(--popupAccentDisabled)",
+      "borderStyle": "solid",
+      "borderWidth": "1px",
+      "color": "var(--popupAccentTextDisabled)",
+      "fontSize": "10px"
+    }
+  }
+}

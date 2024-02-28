@@ -1,19 +1,19 @@
 {
   "custom": {
-    "Closed": false,
-    "FailSafePosition": false,
-    "FormatString": "#,##0.##",
-    "IsHandValve": true,
-    "Mode": 2,
-    "Opened": false,
+    "Closed": null,
+    "FailSafePosition": null,
+    "FormatString": null,
+    "IsHandValve": null,
+    "Mode": null,
+    "Opened": null,
     "OpenedText": "Transitioning",
     "Simulation": false,
-    "SimulationActive": false,
-    "Value": "Closing",
-    "outOpen": false
+    "SimulationActive": null,
+    "Value": null,
+    "outOpen": null
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.Closed": {
@@ -209,7 +209,7 @@
                   "marginLeft": 2,
                   "textAlign": "left"
                 },
-                "Value": "Close",
+                "Value": null,
                 "ValueStyle": {
                   "classes": "Standard/Popups/Faceplates/ValueDisplay",
                   "paddingRight": 0,
@@ -230,7 +230,7 @@
         },
         "position": {
           "basis": "55px",
-          "display": false,
+          "display": null,
           "shrink": 0
         },
         "propConfig": {
@@ -558,6 +558,14 @@
         ],
         "custom": {
           "History": {
+            "firstTimestamp": {
+              "$": [
+                "ts",
+                192,
+                1695881830855
+              ],
+              "$ts": 1695881230852
+            },
             "run": true
           }
         },
@@ -623,6 +631,7 @@
               "config": {
                 "path": "this.custom.History.data[0].data[0].time"
               },
+              "enabled": false,
               "transforms": [
                 {
                   "expression": "fromMillis({value})",
@@ -664,7 +673,7 @@
             },
             "position": {
               "basis": "52px",
-              "display": false
+              "display": null
             },
             "propConfig": {
               "position.display": {

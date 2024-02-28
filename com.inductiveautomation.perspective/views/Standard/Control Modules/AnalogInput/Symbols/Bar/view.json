@@ -22,7 +22,7 @@
       "ShowAlarmOutLine": true,
       "ValueWedgeExtent": 2
     },
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/100AI100"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {

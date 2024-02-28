@@ -1,0 +1,233 @@
+{
+  "custom": {
+    "References": {
+      "Abbreviation": "MRP"
+    }
+  },
+  "params": {
+    "Cfg": {
+      "AbbreviationOverwrite": "",
+      "InstanceNameOverwrite": ""
+    },
+    "TagPath": "[TPUtilities]System/Diagnostics/DBCommsMRPStatus_S2"
+  },
+  "propConfig": {
+    "custom.References": {
+      "persistent": true
+    },
+    "custom.References.Description": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Parameters.Description"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.Documentation": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {},
+          "tagPath": "[TPUtilities]System/Diagnostics/DBCommsMRPStatus_S2/Parameters.Description"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.InstanceName": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/InstanceName"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.RingHealthy": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/RingHealthy"
+        },
+        "type": "tag"
+      }
+    },
+    "params.Cfg": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 61,
+      "width": 406
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Standard/Diagnostic Modules/MRPStatus"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "32px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.style.classes": {
+                "persistent": true
+              },
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "if({view.params.Cfg.InstanceNameOverwrite}\u003d\"\",{view.custom.References.Description},{view.params.Cfg.InstanceNameOverwrite})"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "margin": 2,
+                "marginRight": 2,
+                "textAlign": "center"
+              },
+              "textStyle": {
+                "classes": "Standard/Body/Symbols/Displays/Text",
+                "fontSize": 10
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Siren"
+            },
+            "position": {
+              "basis": "25px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.path": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.References.RingHealthy"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": false,
+                          "output": "material/clear"
+                        },
+                        {
+                          "input": true,
+                          "output": "material/check"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.display.icon"
+          }
+        ],
+        "meta": {
+          "name": "DisplayContainer",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "30px",
+          "grow": 1
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.References.Description"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.custom.References.RingHealthy"
+              },
+              "transforms": [
+                {
+                  "fallback": "Standard/Alarms/Critical/Active/RowBaseStyle",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": false,
+                      "output": "Standard/Alarms/Critical/Active/RowBaseStyle"
+                    },
+                    {
+                      "input": true,
+                      "output": ""
+                    }
+                  ],
+                  "outputType": "style-list",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "margin": 3,
+            "outline-offset": 1
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

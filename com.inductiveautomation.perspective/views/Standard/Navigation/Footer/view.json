@@ -1,15 +1,12 @@
 {
   "custom": {
-    "CurrentModelItemTagPath": {
-      "ContentType": "",
-      "ModelItemTagPath": "[TPROM]ROM/Model Item",
-      "SearchModule": "100M005"
-    },
+    "CurrentModelItemTagPath": "[ImpalaDevelopment]Utilities/Cooling Water/Model Item",
     "ViewPathArray": [
       {
         "ContentType": [
           "Overview"
         ],
+        "ContentTypeParams": {},
         "Label": "Overview",
         "Order": 0,
         "PagePath": "",
@@ -19,71 +16,85 @@
       },
       {
         "ContentType": [
-          "Dashboard"
+          "Alarms",
+          "Footer Alarms"
         ],
-        "Label": "Dashboard",
-        "Order": 1,
+        "ContentTypeParams": {},
+        "Label": "Alarms",
+        "Order": 2,
         "PagePath": "",
         "Roles": [],
-        "ViewPath": "*Dashboard/Dashboard",
+        "ViewPath": "Application/Content Types/Alarms/Alarms Status",
         "key": "k1"
       },
       {
         "ContentType": [
-          "Sequence"
+          "Trend"
         ],
-        "Label": "Sequence",
-        "Order": 2,
+        "ContentTypeParams": {},
+        "Label": "Trend",
+        "Order": 3,
         "PagePath": "",
         "Roles": [],
-        "ViewPath": "*Sequence/Sequence",
+        "ViewPath": "Application/Content Types/Trends/Trends Chart",
         "key": "k2"
       },
       {
         "ContentType": [
-          "Footer Alarms"
+          "Footer CM Legend"
         ],
-        "Label": "Alarms",
-        "Order": 3,
+        "ContentTypeParams": {},
+        "Label": "Control Module Legend",
+        "Order": "0",
         "PagePath": "",
         "Roles": [],
-        "ViewPath": "*Alarms/Alarms",
+        "ViewPath": "Application/Navigation/Footer Components/Styling Legend",
         "key": "k3"
-      },
-      {
-        "ContentType": [
-          "Header Status"
-        ],
-        "Label": "Plant Status",
-        "Order": 0,
-        "PagePath": "",
-        "Roles": [],
-        "ViewPath": "*Header/Status",
-        "key": "k4"
       }
     ],
     "contentTypes": [
       {
+        "contentType": "Footer CM Legend",
+        "label": "Control Module Legend",
+        "order": 0
+      },
+      {
         "contentType": "Footer Alarms",
         "label": "Alarms",
-        "order": 3
+        "order": 2
       }
-    ]
+    ],
+    "currentModelItem": {
+      "ContentType": "Overview",
+      "Path": "0",
+      "SearchModule": ""
+    }
   },
   "params": {
     "AllowedContentTypes": [
       "Footer Alarms",
       "Footer Trend",
-      "Footer Setpoints"
+      "Footer Setpoints",
+      "Footer CM Legend"
     ]
   },
   "propConfig": {
     "custom.CurrentModelItemTagPath": {
       "binding": {
         "config": {
-          "expression": "runScript(\"Standard.Navigation.Common.GetCurrentModelItemTagPath\",0,{session.custom.CurrentModelItemTagPaths},{session.custom.UseSessionModelItemTagPath},{page.props.pageId})"
+          "struct": {
+            "modelItems": "{session.custom.ModelItems}",
+            "path": "{view.custom.currentModelItem.Path}"
+          },
+          "waitOnAll": true
         },
-        "type": "expr"
+        "transforms": [
+          {
+            "code": "\tmodelItems \u003d value[\"modelItems\"]\n\tpath \u003d value[\"path\"]\n\t\n\treturn Standard.Navigation.Common.GetModelItemByPath(ModelItems \u003d modelItems,Path \u003d path)[\"data\"][\"ModelItemTagPath\"]",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
       },
       "persistent": true
     },
@@ -93,7 +104,7 @@
           "fallbackDelay": 2.5,
           "mode": "indirect",
           "references": {
-            "CurrentModelItemTagPath": "{view.custom.CurrentModelItemTagPath.ModelItemTagPath}"
+            "CurrentModelItemTagPath": "{view.custom.CurrentModelItemTagPath}"
           },
           "tagPath": "{CurrentModelItemTagPath}/ViewPaths[\u0027ViewPathArray\u0027]"
         },
@@ -120,6 +131,26 @@
       },
       "persistent": true
     },
+    "custom.currentModelItem": {
+      "binding": {
+        "config": {
+          "struct": {
+            "currentModelItem": "{session.custom.CurrentModelItem}",
+            "pageId": "{page.props.pageId}",
+            "useSessionModelItem": "{session.custom.UseSessionModelItem}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tcurrentModelItem \u003d value[\u0027currentModelItem\u0027]\n\tuseSessionModelItem \u003d value[\u0027useSessionModelItem\u0027]\n\tpageId \u003d value[\u0027pageId\u0027]\n\treturn Standard.Navigation.Common.GetCurrentModelItem(CurrentModelItem\u003dcurrentModelItem,UseSession\u003duseSessionModelItem,PerspectivePageID\u003dpageId)",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
     "params.AllowedContentTypes": {
       "paramDirection": "input",
       "persistent": true
@@ -137,7 +168,8 @@
         "children": [
           {
             "meta": {
-              "name": "Previous Button"
+              "name": "Previous Button",
+              "visible": false
             },
             "position": {
               "basis": "100px"

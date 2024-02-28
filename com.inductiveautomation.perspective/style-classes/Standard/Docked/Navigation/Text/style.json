@@ -1,0 +1,20 @@
+{
+  "base": {
+    "style": {
+      "color": "var(--dockedNavigationText)",
+      "fontSize": "12px",
+      "textAlign": "center"
+    }
+  },
+  "variants": [
+    {
+      "media": {
+        "feature": "maxWidth",
+        "value": "700px"
+      },
+      "style": {
+        "fontSize": "10px"
+      }
+    }
+  ]
+}

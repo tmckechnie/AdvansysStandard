@@ -1,53 +1,6 @@
 {
   "custom": {
-    "AlarmSummary": {
-      "HighestActivePriority": 0,
-      "HighestActivePriorityName": null,
-      "HighestUnackedPriority": 0,
-      "HighestUnackedPriorityName": null,
-      "Overall": {
-        "ActiveAckCount": 0,
-        "ActiveUnackCount": 0,
-        "ClearUnackCount": 0,
-        "Detail": [],
-        "ShelvedCount": 0,
-        "Total": 0
-      },
-      "PriorityDetail": {
-        "Critical": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "High": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "Low": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "Medium": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        }
-      }
-    },
+    "AlarmSummary": null,
     "ModuleType": "AnalogOutput",
     "References": {
       "Abbreviation": "V"
@@ -66,7 +19,7 @@
     }
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogOutput01"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {
@@ -649,7 +602,7 @@
             },
             "props": {
               "params": {
-                "Bad": false
+                "Bad": true
               },
               "path": "Standard/Components/Symbols/Quality",
               "style": {

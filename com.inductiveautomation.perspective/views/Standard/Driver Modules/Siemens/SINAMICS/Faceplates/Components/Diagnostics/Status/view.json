@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[Standard]Demo/Control Modules/MM955A"
+    "TagPath": "[FMMM01]Utilities/Cooling Water/Water Recirculation/PCR/XLMM955C_DM"
   },
   "propConfig": {
     "params.TagPath": {
@@ -19,7 +19,7 @@
     "children": [
       {
         "meta": {
-          "name": "Starting"
+          "name": "Current"
         },
         "position": {
           "basis": "30px"
@@ -44,202 +44,21 @@
           "props.params.Label": {
             "binding": {
               "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\".Documentation\""
+                "expression": "{this.meta.name}"
               },
-              "type": "tag"
+              "type": "expr"
             }
           },
           "props.params.Value": {
             "binding": {
               "config": {
                 "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
-              },
-              "type": "tag"
-            }
-          }
-        },
-        "props": {
-          "params": {
-            "MappedObject": {
-              "False": "False",
-              "True": "True"
-            },
-            "ShowLabel": true
-          },
-          "path": "Standard/Components/Faceplates/Status/LabelDisplayEnumeration",
-          "style": {
-            "margin": 5,
-            "padding": 3
-          }
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "Stopping"
-        },
-        "position": {
-          "basis": "30px"
-        },
-        "propConfig": {
-          "position.display": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
-              },
-              "transforms": [
-                {
-                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
-                  "type": "script"
-                }
-              ],
-              "type": "tag"
-            }
-          },
-          "props.params.Label": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\".Documentation\""
-              },
-              "type": "tag"
-            }
-          },
-          "props.params.Value": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
-              },
-              "type": "tag"
-            }
-          }
-        },
-        "props": {
-          "params": {
-            "MappedObject": {
-              "False": "False",
-              "True": "True"
-            },
-            "ShowLabel": true
-          },
-          "path": "Standard/Components/Faceplates/Status/LabelDisplayEnumeration",
-          "style": {
-            "margin": 5,
-            "padding": 3
-          }
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "Held"
-        },
-        "position": {
-          "basis": "30px"
-        },
-        "propConfig": {
-          "position.display": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
-              },
-              "transforms": [
-                {
-                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
-                  "type": "script"
-                }
-              ],
-              "type": "tag"
-            }
-          },
-          "props.params.Label": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\".Documentation\""
-              },
-              "type": "tag"
-            }
-          },
-          "props.params.Value": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
-              },
-              "type": "tag"
-            }
-          }
-        },
-        "props": {
-          "params": {
-            "MappedObject": {
-              "False": "Not Held",
-              "True": "Held"
-            },
-            "ShowLabel": true
-          },
-          "path": "Standard/Components/Faceplates/Status/LabelDisplayEnumeration",
-          "style": {
-            "margin": 5,
-            "padding": 3
-          }
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "StopReasonCode"
-        },
-        "position": {
-          "basis": "30px"
-        },
-        "propConfig": {
-          "position.display": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
-              },
-              "transforms": [
-                {
-                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
-                  "type": "script"
-                }
-              ],
-              "type": "tag"
-            }
-          },
-          "props.params.Label": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\".Documentation\""
-              },
-              "type": "tag"
-            }
-          },
-          "props.params.Value": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Sts/Structure[\u0027{name}\u0027]"
               },
               "type": "tag"
             }
@@ -250,7 +69,7 @@
             "Format": "#,##0.##",
             "ShowLabel": true,
             "ShowUnits": true,
-            "Units": "",
+            "Units": "A",
             "style": {
               "classes": "General/Text/Status_Label"
             }
@@ -265,7 +84,7 @@
       },
       {
         "meta": {
-          "name": "DelayMotionSwitchElapsed"
+          "name": "Speed"
         },
         "position": {
           "basis": "30px"
@@ -290,19 +109,21 @@
           "props.params.Label": {
             "binding": {
               "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\".Documentation\""
+                "expression": "{this.meta.name}"
               },
-              "type": "tag"
+              "type": "expr"
             }
           },
           "props.params.Value": {
             "binding": {
               "config": {
                 "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Sts/Structure[\u0027{name}\u0027]"
               },
               "type": "tag"
             }
@@ -313,7 +134,7 @@
             "Format": "#,##0.##",
             "ShowLabel": true,
             "ShowUnits": true,
-            "Units": "s"
+            "Units": "rpm"
           },
           "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
           "style": {
@@ -325,7 +146,7 @@
       },
       {
         "meta": {
-          "name": "DelayRunningElapsed"
+          "name": "Torque"
         },
         "position": {
           "basis": "30px"
@@ -350,19 +171,21 @@
           "props.params.Label": {
             "binding": {
               "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\".Documentation\""
+                "expression": "{this.meta.name}"
               },
-              "type": "tag"
+              "type": "expr"
             }
           },
           "props.params.Value": {
             "binding": {
               "config": {
                 "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Sts/Structure[\u0027{name}\u0027]"
               },
               "type": "tag"
             }
@@ -373,7 +196,7 @@
             "Format": "#,##0.##",
             "ShowLabel": true,
             "ShowUnits": true,
-            "Units": "s"
+            "Units": "Nm"
           },
           "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
           "style": {
@@ -385,7 +208,7 @@
       },
       {
         "meta": {
-          "name": "DelaySirenElapsed"
+          "name": "VSD_Fault"
         },
         "position": {
           "basis": "30px"
@@ -394,35 +217,21 @@
           "position.display": {
             "binding": {
               "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
+                "expression": "{view.params.TagPath}!\u003d\" \" // Done to hide rows if Motor does not have a Driver Module associated"
               },
-              "transforms": [
-                {
-                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
-                  "type": "script"
-                }
-              ],
-              "type": "tag"
-            }
-          },
-          "props.params.Label": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\".Documentation\""
-              },
-              "type": "tag"
+              "type": "expr"
             }
           },
           "props.params.Value": {
             "binding": {
               "config": {
                 "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Sts/Structure[\u0027{name}\u0027]"
               },
               "type": "tag"
             }
@@ -430,12 +239,14 @@
         },
         "props": {
           "params": {
-            "Format": "#,##0.##",
-            "ShowLabel": true,
-            "ShowUnits": true,
-            "Units": "s"
+            "Label": "Fault Present",
+            "MappedObject": {
+              "False": "False",
+              "True": "True"
+            },
+            "ShowLabel": true
           },
-          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayEnumeration",
           "style": {
             "margin": 5,
             "padding": 3
@@ -445,7 +256,7 @@
       },
       {
         "meta": {
-          "name": "DelayStartElapsed"
+          "name": "VSD_FaultCode"
         },
         "position": {
           "basis": "30px"
@@ -470,19 +281,21 @@
           "props.params.Label": {
             "binding": {
               "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\".Documentation\""
+                "expression": "{this.meta.name}"
               },
-              "type": "tag"
+              "type": "expr"
             }
           },
           "props.params.Value": {
             "binding": {
               "config": {
                 "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Sts/Structure[\u0027{name}\u0027]"
               },
               "type": "tag"
             }
@@ -490,187 +303,7 @@
         },
         "props": {
           "params": {
-            "Format": "#,##0.##",
-            "ShowLabel": true,
-            "ShowUnits": true,
-            "Units": "s"
-          },
-          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
-          "style": {
-            "margin": 5,
-            "padding": 3
-          }
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "DelayStopElapsed"
-        },
-        "position": {
-          "basis": "30px"
-        },
-        "propConfig": {
-          "position.display": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
-              },
-              "transforms": [
-                {
-                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
-                  "type": "script"
-                }
-              ],
-              "type": "tag"
-            }
-          },
-          "props.params.Label": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\".Documentation\""
-              },
-              "type": "tag"
-            }
-          },
-          "props.params.Value": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
-              },
-              "type": "tag"
-            }
-          }
-        },
-        "props": {
-          "params": {
-            "Format": "#,##0.##",
-            "ShowLabel": true,
-            "ShowUnits": true,
-            "Units": "s"
-          },
-          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
-          "style": {
-            "margin": 5,
-            "padding": 3
-          }
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "RunningHours"
-        },
-        "position": {
-          "basis": "30px"
-        },
-        "propConfig": {
-          "position.display": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
-              },
-              "transforms": [
-                {
-                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
-                  "type": "script"
-                }
-              ],
-              "type": "tag"
-            }
-          },
-          "props.params.Label": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\".Documentation\""
-              },
-              "type": "tag"
-            }
-          },
-          "props.params.Value": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
-              },
-              "type": "tag"
-            }
-          }
-        },
-        "props": {
-          "params": {
-            "Format": "#,##0.##",
-            "ShowLabel": true,
-            "ShowUnits": true,
-            "Units": "hr"
-          },
-          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
-          "style": {
-            "margin": 5,
-            "padding": 3
-          }
-        },
-        "type": "ia.display.view"
-      },
-      {
-        "meta": {
-          "name": "StartCount"
-        },
-        "position": {
-          "basis": "30px"
-        },
-        "propConfig": {
-          "position.display": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
-              },
-              "transforms": [
-                {
-                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
-                  "type": "script"
-                }
-              ],
-              "type": "tag"
-            }
-          },
-          "props.params.Label": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\".Documentation\""
-              },
-              "type": "tag"
-            }
-          },
-          "props.params.Value": {
-            "binding": {
-              "config": {
-                "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
-              },
-              "type": "tag"
-            }
-          }
-        },
-        "props": {
-          "params": {
-            "Format": "#,##0.##",
+            "Format": "0000",
             "ShowLabel": true,
             "ShowUnits": true,
             "Units": ""

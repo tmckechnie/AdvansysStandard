@@ -1,0 +1,9 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--valueInputBackGround)",
+      "color": "var(--valueInputText)",
+      "fontSize": "12px"
+    }
+  }
+}

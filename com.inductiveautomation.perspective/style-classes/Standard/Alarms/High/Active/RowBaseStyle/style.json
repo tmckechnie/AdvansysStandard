@@ -1,0 +1,9 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--AlarmHigh)",
+      "color": "var(--alarmTextDark)",
+      "fontSize": "10px"
+    }
+  }
+}

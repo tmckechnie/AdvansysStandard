@@ -1,15 +1,13 @@
 {
   "custom": {
-    "Interlocked": false,
-    "Label": "Protective",
-    "Reason": "Protective",
-    "reasonDetail": {
-      "instanceExists": false
-    }
+    "Interlocked": null,
+    "Label": null,
+    "Reason": null,
+    "reasonDetail": null
   },
   "params": {
     "ShowBlock": false,
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor/Interlock/Protective"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.Interlocked": {

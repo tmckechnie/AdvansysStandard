@@ -1,0 +1,30 @@
+{
+  "custom": {
+    "key": false
+  },
+  "params": {},
+  "propConfig": {
+    "custom.key": {
+      "binding": {
+        "config": {
+          "path": ""
+        },
+        "transforms": [
+          {
+            "code": "\tlocalFolder \u003d \"C:\\Test Folder\"\n#\tmappedFolder \u003d \"Z:\\\\Mastercase\\Palletiser\"\n\timport os \n#\tfiles \u003d os.listdir(mappedFolder)\n#\tfiles \u003d os.listdir(localFolder)\n\tfiles \u003d system.file.fileExists(\"Z:\\Palletiser\\Mastercase\\MasterCaseInfo_PS001S_20230413163136005.xml\")\n\treturn files",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

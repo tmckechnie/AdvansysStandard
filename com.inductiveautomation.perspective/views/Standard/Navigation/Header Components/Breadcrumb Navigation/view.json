@@ -1,0 +1,152 @@
+{
+  "custom": {
+    "currentModelItemTagPath": "[Standard]Standard/Model Item",
+    "items": null
+  },
+  "params": {
+    "InitialModelItemTagPath": "[Standard]Standard/Model Item",
+    "LimitItems": 0,
+    "ShowOnlyOne": false
+  },
+  "propConfig": {
+    "custom.currentModelItemTagPath": {
+      "binding": {
+        "config": {
+          "path": "session.custom.CurrentModelItemTagPath"
+        },
+        "enabled": false,
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.items": {
+      "binding": {
+        "config": {
+          "struct": {
+            "CurrentModelItemTagPath": "{view.custom.currentModelItemTagPath}",
+            "CurrentScreenWidth": "{page.props.dimensions.screen.width}",
+            "LimitItems": "{view.params.LimitItems}",
+            "ShowOnlyOne": "{view.params.ShowOnlyOne}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tinstances \u003d Standard.Navigation.BreadCrumb.GetCurrentBreadCrumbItems(value[\"CurrentModelItemTagPath\"],items\u003d[],currentScreenWidth \u003d value[\"CurrentScreenWidth\"], showOnlyOne \u003d value[\"ShowOnlyOne\"],limitItems\u003dvalue[\"LimitItems\"])\n\treturn instances",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.InitialModelItemTagPath": {
+      "onChange": {
+        "enabled": null,
+        "script": "\tcurrentModelItemTagPath \u003d self.custom.currentModelItemTagPath\n\tinitialModelItemTagPath \u003d currentValue.value\n\tif currentModelItemTagPath \u003d\u003d \"\":\n\t\tinstanceObject \u003d Standard.Navigation.BreadCrumb.GetBreadCrumbMenuItem(ModelItemTagPath\u003dinitialModelItemTagPath,position\u003d1,totalCrumbs\u003d1)\n\t\tif instanceObject is not None:\n\t\t\tsystem.perspective.print(\"BreadCrumb: Initial Model Item: \" + initialModelItemTagPath)\n\t\t\tself.getChild(\"root\").getChild(\"CurrentBreadCrumb\").props.instances \u003d [instanceObject]\n\t\t\tself.custom.currentModelItemTagPath \u003d initialModelItemTagPath\n\t\telse:\n\t\t\tsystem.perspective.print(\"BreadCrumb Error: Initial Model Item: Does Not Exists!: \" + initialModelItemTagPath)\n"
+      },
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.LimitItems": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowOnlyOne": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 70,
+      "width": 1000
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "CurrentBreadCrumb"
+        },
+        "position": {
+          "basis": "50px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.currentModelItemTagPath}!\u003d\"\""
+              },
+              "type": "expr"
+            }
+          },
+          "props.instances": {
+            "binding": {
+              "config": {
+                "path": "view.custom.items"
+              },
+              "enabled": false,
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "instances": [
+            {
+              "ModelItemTagPath": "[Standard]Standard/Model Item",
+              "childrenCount": 0,
+              "instancePosition": {
+                "grow": 1
+              },
+              "instanceStyle": {
+                "classes": "Standard/Docked/Navigation/Background"
+              },
+              "position": 1,
+              "totalCrumbs": 1
+            }
+          ],
+          "path": "Standard/Navigation/Components/Breadcrumb"
+        },
+        "scripts": {
+          "customMethods": [],
+          "extensionFunctions": null,
+          "messageHandlers": [
+            {
+              "messageType": "addInstance",
+              "pageScope": true,
+              "script": "\t#Get Current Bread Crumb instances present - Used to get position and totalCrumbs for new instance object\n\tcurrentInstances \u003d self.props.instances\n\t#Params\n\tposition \u003d currentInstances[-1][\"position\"] + 1\n\ttotalCrumbs \u003d position\n\t#Model Item TagPath from payload - Will be used to update session property \"CurrentModelItem\" for dynamic View Perspective\n\tModelItemTagPath \u003d payload[\"ModelItemTagPath\"]\n\t#Children Count calculated from ModelItemTagPath\n\tchildFolderPath \u003d ModelItemTagPath.replace(\"/Model Item\",\"\")\n\tChildrenCount \u003d Standard.Navigation.Common.GetChildrenCount(childFolderPath)\n\t#Get new Instance Object to add to instances\t\n\tinstanceObject \u003d Standard.Navigation.BreadCrumb.GetBreadCrumbMenuItem(ModelItemTagPath,position,totalCrumbs,instanceStyleClass \u003d \"Standard/Docked/Navigation/Background\", childrenCount \u003d ChildrenCount)\n\tcurrentInstances.append(instanceObject)\n\t#Need to update totalCrumbs value of each instance to new total value\n\tfor currentInstance in currentInstances:\n\t\tcurrentInstance[\"totalCrumbs\"] \u003d totalCrumbs",
+              "sessionScope": false,
+              "viewScope": false
+            },
+            {
+              "messageType": "removeInstances",
+              "pageScope": true,
+              "script": "\t#Payload\n\tinstancePositionClicked \u003d payload[\"position\"]\n\tsystem.perspective.print(\"instanceClicked: \" + str(instancePositionClicked) + str(type(instancePositionClicked)))\n\tcurrentInstances \u003d self.props.instances\n\tupdatedInstances \u003d []\n\t#Add required instances to new Instances array\n\tfor currentInstance in currentInstances:\n\t\tinstancePosition \u003d currentInstance[\"position\"]\n\t\tsystem.perspective.print(\"instance: \" + str(instancePosition) + str(type(instancePosition)))\t\n\t\tif instancePosition \u003c\u003d instancePositionClicked:\n\t\t\tupdatedInstances.append(currentInstance)\n\t\t\n\t#Once new array has been created - go through each instance and update totaCrumbs and position values\n\ttotalCrumbs \u003d len(updatedInstances)\n\tsystem.perspective.print(\"totalCrumbs: \" + str(totalCrumbs) + str(type(totalCrumbs)))\t\n\tsystem.perspective.print(\"updatedInstances: \" + str(updatedInstances) + str(type(updatedInstances)))\n\tposition \u003d 0\n\tfor updatedInstance in updatedInstances:\n\t\t updatedInstance[\"totalCrumbs\"] \u003d totalCrumbs\n\t\t updatedInstance[\"position\"] \u003d position\n\t\t position +\u003d 1\n\t\t \n\t#Write updated instances to breadcrumb instances property\n\tsystem.perspective.print(\"updatedInstances: \" + str(updatedInstances) + str(type(updatedInstances)))\t\n\tself.props.instances \u003d updatedInstances\n\t\n\t\t\t\n\t\n\t",
+              "sessionScope": false,
+              "viewScope": false
+            },
+            {
+              "messageType": "CreateBreadCrumbInstances",
+              "pageScope": true,
+              "script": "\tModelItemTagPathArray \u003d payload[\"ModelItemTagPathArray\"]\n\t\n\tnewBreadCrumbInstances \u003d []\n\tposition \u003d 1\n\ttotalCrumbs \u003d len(ModelItemTagPathArray)\n\tfor ModelItemTagPath in ModelItemTagPathArray:\n\t\tchildFolderPath \u003d ModelItemTagPath.replace(\"/Model Item\",\"\")\n\t\tChildrenCount \u003d Standard.Navigation.Common.GetChildrenCount(childFolderPath)\t\t\n\t\tinstanceObject \u003d Standard.Navigation.BreadCrumb.GetBreadCrumbMenuItem(ModelItemTagPath,position,totalCrumbs,instanceStyleClass \u003d \"Standard/Docked/Navigation/Background\", childrenCount \u003d ChildrenCount)\n\t\tnewBreadCrumbInstances.append(instanceObject)\n\t\tposition+\u003d1\n\t\n\tself.props.instances \u003d newBreadCrumbInstances\n\n\t",
+              "sessionScope": false,
+              "viewScope": false
+            }
+          ]
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "Standard/Docked/Navigation/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

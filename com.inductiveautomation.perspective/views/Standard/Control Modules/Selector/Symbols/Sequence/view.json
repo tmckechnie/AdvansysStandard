@@ -17,7 +17,7 @@
       "AbbreviationOverwrite": "",
       "InstanceNameOverwrite": ""
     },
-    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/Level 1/Striker 1/111S001"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.ModuleType": {
@@ -318,7 +318,7 @@
             },
             "props": {
               "params": {
-                "Bad": false
+                "Bad": true
               },
               "path": "Standard/Components/Symbols/Quality",
               "style": {

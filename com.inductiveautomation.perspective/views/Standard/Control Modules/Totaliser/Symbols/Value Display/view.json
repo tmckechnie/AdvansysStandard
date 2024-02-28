@@ -15,7 +15,7 @@
       "AbbreviationDisplay": false,
       "AbbreviationOverwrite": ""
     },
-    "TagPath": "[StandardS71500]Modules/Control Modules/100T100"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {

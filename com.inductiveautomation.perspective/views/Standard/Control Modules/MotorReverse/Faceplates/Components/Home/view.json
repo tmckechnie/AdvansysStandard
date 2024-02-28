@@ -1,10 +1,10 @@
 {
   "custom": {
-    "FormatString": "#,##0.##",
-    "Mode": 0,
-    "RunningForward": false,
-    "RunningReverse": false,
-    "StsValue": "Stopped"
+    "FormatString": null,
+    "Mode": null,
+    "RunningForward": null,
+    "RunningReverse": null,
+    "StsValue": null
   },
   "params": {
     "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/MotorReverse"
@@ -146,7 +146,7 @@
                   "marginLeft": 2,
                   "textAlign": "left"
                 },
-                "Value": "Stop",
+                "Value": null,
                 "ValueStyle": {
                   "classes": "Standard/Popups/Faceplates/ValueDisplay",
                   "paddingRight": 0,
@@ -483,6 +483,14 @@
         ],
         "custom": {
           "History": {
+            "firstTimestamp": {
+              "$": [
+                "ts",
+                192,
+                1695881986380
+              ],
+              "$ts": 1695881386378
+            },
             "run": true
           },
           "key_1": "value"
@@ -549,6 +557,7 @@
               "config": {
                 "path": "this.custom.History.data[0].data[0].time"
               },
+              "enabled": false,
               "transforms": [
                 {
                   "expression": "fromMillis({value})",

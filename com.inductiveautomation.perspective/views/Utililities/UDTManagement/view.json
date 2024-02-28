@@ -1,21 +1,9 @@
 {
   "custom": {
     "TagProviders": [
-      "[TPPlant1]",
-      "[TPPlant2]",
-      "[TPROM]",
-      "[StandardS71500]",
-      "[TPJellyFactory]",
-      "[TPPackaging]",
-      "[Utilities]",
-      "[TPSite]",
       "[default]",
-      "[TPWashPlant]",
-      "[AdvansysStandard]",
-      "[TOPSERVER]",
-      "[TPPSCV01003]",
-      "[TPJellyFactoryStandard]",
-      "[BATHeidelberg]"
+      "[TPOpnim]",
+      "[FMMM01]"
     ],
     "selectedDestProvider": null,
     "selectedSrcProvider": null,

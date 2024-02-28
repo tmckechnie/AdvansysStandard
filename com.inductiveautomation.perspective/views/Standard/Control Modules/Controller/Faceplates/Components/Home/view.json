@@ -1,27 +1,27 @@
 {
   "custom": {
-    "DeviationNegative": 0,
-    "DeviationPositive": 0,
-    "InstanceName": "Controller01",
-    "InternalExternalSelect": false,
-    "InternalSetpoint": 0,
-    "ManualOutput": 0,
-    "Mode": 2,
-    "Output": 0,
-    "OutputClampHigh": 100,
-    "OutputClampLow": 0,
-    "OutputDisplayFormat": "#,##0.##",
-    "OutputEngUnit": "%",
-    "ProcessVariable": 0,
-    "ProcessVariableDisplayFormat": "#,##0.##",
-    "ProcessVariableEngUnit": "%",
-    "ScaleEngineeringMax": 100,
-    "ScaleEngineeringMin": 0,
-    "Setpoint": 0,
-    "ShortDescription": "Controller 1"
+    "DeviationNegative": null,
+    "DeviationPositive": null,
+    "InstanceName": null,
+    "InternalExternalSelect": null,
+    "InternalSetpoint": null,
+    "ManualOutput": null,
+    "Mode": null,
+    "Output": null,
+    "OutputClampHigh": null,
+    "OutputClampLow": null,
+    "OutputDisplayFormat": null,
+    "OutputEngUnit": null,
+    "ProcessVariable": null,
+    "ProcessVariableDisplayFormat": null,
+    "ProcessVariableEngUnit": null,
+    "ScaleEngineeringMax": null,
+    "ScaleEngineeringMin": null,
+    "Setpoint": null,
+    "ShortDescription": null
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Controller01"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.DeviationNegative": {
@@ -1234,7 +1234,7 @@
             },
             "props": {
               "params": {
-                "CurrentValueOut": 2,
+                "CurrentValueOut": "No Data",
                 "Label": "Controller Mode"
               },
               "path": "Standard/Components/Faceplates/Input/Mode Auto Manual",

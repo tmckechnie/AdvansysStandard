@@ -8,7 +8,7 @@
     "HasMaintenanceMode": true,
     "Label": "Mode",
     "StatusTagname": "Cmd/Mode",
-    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/100G001"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.CommandValue": {

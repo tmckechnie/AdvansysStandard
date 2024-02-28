@@ -5,17 +5,17 @@
       "Low": {},
       "NoChange": {}
     },
-    "EngUnit": "L",
-    "FormatString": "#,##0.##",
-    "Target": 0,
-    "Value": 0,
-    "ValueFormatString": "#,##0.##",
-    "ValueTrendMax": 0,
-    "ValueTrendMin": 0,
-    "valueLabel": "0 L"
+    "EngUnit": null,
+    "FormatString": null,
+    "Target": null,
+    "Value": null,
+    "ValueFormatString": null,
+    "ValueTrendMax": null,
+    "ValueTrendMin": null,
+    "valueLabel": " "
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Totaliser01"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.Alarms": {

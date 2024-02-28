@@ -1,0 +1,8 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--seqPaused)",
+      "fill": "var(--seqPaused)"
+    }
+  }
+}

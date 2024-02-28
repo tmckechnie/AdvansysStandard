@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100DI100"
+    "TagPath": "[TPOpnim]Rh_Thermosyphon/Rh_7510/Rh_LSH_7510A"
   },
   "propConfig": {
     "params.TagPath": {
@@ -55,6 +55,17 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "publishInitial": false,
+                "tagPath": "[TPOpnim]Rh_Thermosyphon/Rh_7510/Rh_LSH_7510A/Alarms/Communication/Sts/Active"
+              },
+              "type": "tag"
+            }
+          },
           "props.params.AlarmPrimitiveTagPath": {
             "binding": {
               "config": {

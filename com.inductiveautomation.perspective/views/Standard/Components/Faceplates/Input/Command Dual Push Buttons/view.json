@@ -1,7 +1,7 @@
 {
   "custom": {
-    "fullTagPath1": "[StandardS71500]Standard/Modules/Control Modules/100M100/Cmd/ManualStart",
-    "fullTagPath2": "[StandardS71500]Standard/Modules/Control Modules/100M100/Cmd/ManualStop"
+    "fullTagPath1": "[TPOpnim]Control Modules/DO001/Cmd/ManualOn",
+    "fullTagPath2": "[TPOpnim]Control Modules/DO001/Cmd/ManualOff"
   },
   "params": {
     "Label": "Command",
@@ -9,7 +9,7 @@
     "Tag1": {
       "Enabled": true,
       "Label": "Start",
-      "Name": "Cmd/ManualStart",
+      "Name": "Cmd/ManualOn",
       "Prompt": {
         "TagPath": "",
         "parameters": {},
@@ -20,14 +20,14 @@
     "Tag2": {
       "Enabled": true,
       "Label": "Stop",
-      "Name": "Cmd/ManualStop",
+      "Name": "Cmd/ManualOff",
       "Prompt": {
         "parameters": {},
         "popupIdentifier": "",
         "viewPath": ""
       }
     },
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/100M100"
+    "TagPath": "[TPOpnim]Control Modules/DO001"
   },
   "propConfig": {
     "custom.fullTagPath1": {

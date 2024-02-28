@@ -1,0 +1,497 @@
+{
+  "custom": {},
+  "params": {
+    "AllowedContentTypes": [
+      "Overview",
+      "Dashboard",
+      "Mimic",
+      "Alarms",
+      "Trend",
+      "Setpoints"
+    ],
+    "HeaderView": "Standard/Navigation/Header Breadcrump",
+    "InitialModelItemTagPath": "[StandardS71500]Standard/Model Item",
+    "ShowOnlyConfiguredContentTypes": true
+  },
+  "propConfig": {
+    "params.AllowedContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.HeaderView": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.InitialModelItemTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowOnlyConfiguredContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 120,
+      "width": 1000
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Logo"
+                },
+                "position": {
+                  "basis": "40px",
+                  "shrink": 0
+                },
+                "props": {
+                  "path": "Standard/Navigation/Components/Logo",
+                  "style": {
+                    "marginBottom": 5,
+                    "marginLeft": 5,
+                    "marginTop": 5
+                  }
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "User Summary"
+                },
+                "position": {
+                  "basis": "200px",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "props": {
+                  "path": "Standard/Navigation/Header Components/User Summary"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "FlexTop"
+            },
+            "position": {
+              "basis": "50px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Docked/Header/ContentBackground Standard/Docked/Header/ContentBorder"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Breadcrumb Navigation"
+                },
+                "position": {
+                  "basis": "200px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.params.AllowedContentTypes": {
+                    "binding": {
+                      "config": {
+                        "path": "view.params.AllowedContentTypes"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.params.InitialModelItemTagPath": {
+                    "binding": {
+                      "config": {
+                        "path": "view.params.InitialModelItemTagPath"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.params.ShowOnlyConfiguredContentTypes": {
+                    "binding": {
+                      "config": {
+                        "path": "view.params.ShowOnlyConfiguredContentTypes"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "LimitItems": 1,
+                    "ShowOnlyOne": false
+                  },
+                  "path": "Standard/Navigation/Breadcrumb/View"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "Current Model Path"
+                },
+                "position": {
+                  "basis": "175px",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "props": {
+                  "params": {
+                    "ContentType": ""
+                  },
+                  "path": "Standard/Navigation/Header Components/Current Model Path"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "FlexBottom"
+            },
+            "position": {
+              "basis": "70px",
+              "shrink": 0
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "ContainerSmall"
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Logo"
+                    },
+                    "position": {
+                      "basis": "141px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "path": "Standard/Navigation/Components/Logo",
+                      "style": {
+                        "marginBottom": 5,
+                        "marginLeft": 5,
+                        "marginTop": 5
+                      }
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "Current Model Path"
+                    },
+                    "position": {
+                      "basis": "320px",
+                      "grow": 1
+                    },
+                    "props": {
+                      "params": {
+                        "ContentType": ""
+                      },
+                      "path": "Standard/Navigation/Header Components/Current Model Path"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "PlantStatus"
+                    },
+                    "position": {
+                      "basis": "300px",
+                      "shrink": 0
+                    },
+                    "propConfig": {
+                      "position.display": {
+                        "binding": {
+                          "config": {
+                            "path": "this.props.params.Exists"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "ContentType": "Header Status",
+                        "Exists": false
+                      },
+                      "path": "Standard/Navigation/Components/Content Container"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "User Summary"
+                    },
+                    "position": {
+                      "basis": "200px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "path": "Standard/Navigation/Header Components/User Summary"
+                    },
+                    "type": "ia.display.view"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "basis": "50px",
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "overflow": "hidden"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "Breadcrumb Navigation"
+                },
+                "position": {
+                  "basis": "70px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.AllowedContentTypes": {
+                    "binding": {
+                      "config": {
+                        "path": "view.params.AllowedContentTypes"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.params.ShowOnlyConfiguredContentTypes": {
+                    "binding": {
+                      "config": {
+                        "path": "view.params.ShowOnlyConfiguredContentTypes"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "LimitItems": 0,
+                    "ShowOnlyOne": false
+                  },
+                  "path": "Standard/Navigation/Breadcrumb/View"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "ContainerMedium"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "classes": "Standard/Docked/Header/ContentBackground Standard/Docked/Header/ContentBorder"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Logo"
+                        },
+                        "position": {
+                          "basis": "141px",
+                          "shrink": 0
+                        },
+                        "props": {
+                          "path": "Standard/Navigation/Components/Logo",
+                          "style": {
+                            "marginBottom": 5,
+                            "marginLeft": 5,
+                            "marginTop": 5
+                          }
+                        },
+                        "type": "ia.display.view"
+                      },
+                      {
+                        "meta": {
+                          "name": "Current Model Path"
+                        },
+                        "position": {
+                          "basis": "320px",
+                          "grow": 1
+                        },
+                        "props": {
+                          "params": {
+                            "ContentType": ""
+                          },
+                          "path": "Standard/Navigation/Header Components/Current Model Path"
+                        },
+                        "type": "ia.display.view"
+                      },
+                      {
+                        "meta": {
+                          "name": "PlantStatus"
+                        },
+                        "position": {
+                          "basis": "300px",
+                          "shrink": 0
+                        },
+                        "propConfig": {
+                          "position.display": {
+                            "binding": {
+                              "config": {
+                                "path": "this.props.params.Exists"
+                              },
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "props": {
+                          "params": {
+                            "ContentType": "Header Status",
+                            "Exists": false
+                          },
+                          "path": "Standard/Navigation/Components/Content Container"
+                        },
+                        "type": "ia.display.view"
+                      },
+                      {
+                        "meta": {
+                          "name": "User Summary"
+                        },
+                        "position": {
+                          "basis": "200px",
+                          "shrink": 0
+                        },
+                        "props": {
+                          "path": "Standard/Navigation/Header Components/User Summary"
+                        },
+                        "type": "ia.display.view"
+                      }
+                    ],
+                    "meta": {
+                      "name": "FlexContainer"
+                    },
+                    "position": {
+                      "basis": "50px",
+                      "shrink": 0
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "meta": {
+                      "name": "Breadcrumb Navigation"
+                    },
+                    "position": {
+                      "basis": "70px",
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.params.AllowedContentTypes": {
+                        "binding": {
+                          "config": {
+                            "path": "view.params.AllowedContentTypes"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.params.InitialModelItemTagPath": {
+                        "binding": {
+                          "config": {
+                            "path": "view.params.InitialModelItemTagPath"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.params.ShowOnlyConfiguredContentTypes": {
+                        "binding": {
+                          "config": {
+                            "path": "view.params.ShowOnlyConfiguredContentTypes"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "LimitItems": 0,
+                        "ShowOnlyOne": false
+                      },
+                      "path": "Standard/Navigation/Breadcrumb/View"
+                    },
+                    "type": "ia.display.view"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer_0"
+                },
+                "position": {
+                  "basis": "200px",
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "ContainerLarge"
+            },
+            "position": {
+              "size": "large"
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Docked/Header/ContentBackground Standard/Docked/Header/ContentBorder"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "BreakpointContainer"
+        },
+        "position": {
+          "size": "large"
+        },
+        "props": {
+          "breakpoint": 800
+        },
+        "type": "ia.container.breakpt"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "breakpoint": 600
+    },
+    "type": "ia.container.breakpt"
+  }
+}

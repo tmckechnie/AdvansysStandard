@@ -3,7 +3,7 @@
     "Output": null
   },
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100C100"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.Output": {

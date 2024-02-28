@@ -1,53 +1,6 @@
 {
   "custom": {
-    "AlarmSummary": {
-      "HighestActivePriority": 0,
-      "HighestActivePriorityName": null,
-      "HighestUnackedPriority": 0,
-      "HighestUnackedPriorityName": null,
-      "Overall": {
-        "ActiveAckCount": 0,
-        "ActiveUnackCount": 0,
-        "ClearUnackCount": 0,
-        "Detail": [],
-        "ShelvedCount": 0,
-        "Total": 0
-      },
-      "PriorityDetail": {
-        "Critical": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "High": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "Low": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "Medium": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        }
-      }
-    },
+    "AlarmSummary": null,
     "ModuleType": "DigitalOutput",
     "References": {},
     "Styling": {
@@ -67,7 +20,7 @@
     "Cfg": {
       "AbbreviationOverwrite": ""
     },
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalOutput"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {
@@ -560,7 +513,7 @@
             },
             "props": {
               "style": {
-                "classes": " Standard/Body/Symbols/Displays/Mode/Auto Standard/Body/Symbols/Displays/Fill/Active Standard/Body/Symbols/Displays/Basic ",
+                "classes": " Standard/Body/Symbols/Displays/Fill/Passive Standard/Body/Symbols/Displays/Basic ",
                 "overflow": "hidden"
               },
               "textStyle": {
@@ -593,7 +546,7 @@
             },
             "props": {
               "params": {
-                "Bad": false
+                "Bad": true
               },
               "path": "Standard/Components/Symbols/Quality",
               "style": {

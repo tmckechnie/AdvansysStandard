@@ -2,53 +2,73 @@
   "custom": {
     "CurrentModelItem": {
       "ContentType": "Overview",
-      "Path": "0",
+      "Path": "0/1",
       "SearchModule": ""
     },
     "assetSearch": {
       "projectName": "AdvansysStandardDevelopment"
     },
     "currentModelItem": {
-      "BaseViewPath": "Model Views/StandardS71500/Standard",
-      "ModelItemTagPath": "[StandardS71500]Standard/Model Item",
-      "Name": "Standard",
+      "BaseViewPath": "Model Views/FMMM01/Utilities/Cooling Water/Cooling Tower",
+      "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Cooling Tower/Model Item",
+      "Name": "Cooling Tower",
       "Order": 0,
-      "Path": "0",
-      "TagFolderName": "Standard",
+      "Path": "0/1",
+      "TagFolderName": "Cooling Tower",
       "ViewPaths": [
         {
           "ContentType": [
-            "Footer Alarms"
+            "Mimic"
           ],
-          "Label": "Alarms",
-          "Order": 0,
+          "Label": "Mimic",
+          "Order": 1,
           "PagePath": "",
+          "Params": {},
           "Roles": [],
-          "ViewPath": "*Alarms/Alarms",
-          "key": "kNew1"
+          "ViewPath": "*Mimic/Mimic"
         },
         {
           "ContentType": [
-            "Overview"
+            "Alarms"
           ],
-          "Label": "Overview",
-          "Order": 0,
+          "Label": "Alarms",
+          "Order": 2,
           "PagePath": "",
+          "Params": {},
           "Roles": [],
-          "ViewPath": "*Overview/Overview",
-          "key": "k0"
+          "ViewPath": "Application/Content Types/Alarms/Alarms Status"
+        },
+        {
+          "ContentType": [
+            "Trend"
+          ],
+          "Label": "Trend",
+          "Order": 3,
+          "PagePath": "",
+          "Params": {
+            "DefaultPens": [
+              "[FMMM01]Utilities/Cooling Water/Cooling Tower/UYMM950_2/In/Opened",
+              "[FMMM01]Utilities/Cooling Water/Cooling Tower/TTMM950_2/Sts/Value",
+              "[FMMM01]Utilities/Cooling Water/Cooling Tower/LITMM950/Sts/Value"
+            ]
+          },
+          "Roles": [],
+          "ViewPath": "Application/Content Types/Trends/Trends Chart"
+        },
+        {
+          "ContentType": [
+            "Footer CM Legend"
+          ],
+          "Label": "Control Module Legend",
+          "Order": 1,
+          "PagePath": "",
+          "Params": {},
+          "Roles": [],
+          "ViewPath": "Application/Navigation/Footer Components/Styling Legend"
         }
       ]
     },
-    "views": [
-      {
-        "exist": true,
-        "label": "Overview",
-        "order": 0,
-        "params": {},
-        "viewPath": "Model Views/StandardS71500/Standard/Overview/Overview"
-      }
-    ]
+    "views": []
   },
   "params": {
     "ContentType": "Overview",
@@ -193,6 +213,7 @@
           }
         },
         "props": {
+          "currentTabIndex": -1,
           "menuType": "modern"
         },
         "type": "ia.container.tab"

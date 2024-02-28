@@ -1,27 +1,27 @@
 {
   "custom": {
-    "ClampHigh": 100,
-    "ClampLow": 0,
+    "ClampHigh": null,
+    "ClampLow": null,
     "Data": null,
-    "EngUnit": "%",
-    "FormatString": "#,##0.##",
+    "EngUnit": null,
+    "FormatString": null,
     "HistoryTag": [
       {
         "aggregate": "MinMax",
         "alias": "Value",
-        "path": "[StandardS71500/default:default]CAN01VS1/StandardS71500/Standard/Modules/Control Modules/CMTESTING/CMs/AnalogOutput01/Sts/Value"
+        "path": null
       }
     ],
-    "InternalExternalSelect": true,
-    "InternalSetpoint": 0,
-    "ScaleEngineeringMax": 100,
-    "ScaleEngineeringMin": 0,
-    "Simulation": false,
-    "Value": 0,
-    "historyDuration": 30
+    "InternalExternalSelect": null,
+    "InternalSetpoint": null,
+    "ScaleEngineeringMax": null,
+    "ScaleEngineeringMin": null,
+    "Simulation": null,
+    "Value": null,
+    "historyDuration": 10
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogOutput01"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.ClampHigh": {

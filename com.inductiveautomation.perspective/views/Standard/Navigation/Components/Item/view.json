@@ -6,24 +6,13 @@
       "breadCrumbBorder": "var(--bodyContentBorder)"
     },
     "modelItem": {
-      "BaseViewPath": "Model Views/StandardS71500/Standard",
-      "ModelItemTagPath": "[StandardS71500]Standard/Model Item",
-      "Name": "Standard",
+      "BaseViewPath": "Model Views/FMMM01/Utilities/Cooling Water",
+      "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Model Item",
+      "Name": "Cooling Water",
       "Order": 0,
       "Path": "0",
-      "TagFolderName": "Standard",
+      "TagFolderName": "Cooling Water",
       "ViewPaths": [
-        {
-          "ContentType": [
-            "Footer Alarms"
-          ],
-          "Label": "Alarms",
-          "Order": 0,
-          "PagePath": "",
-          "Roles": [],
-          "ViewPath": "*Alarms/Alarms",
-          "key": "kNew1"
-        },
         {
           "ContentType": [
             "Overview"
@@ -31,9 +20,59 @@
           "Label": "Overview",
           "Order": 0,
           "PagePath": "",
+          "Params": {},
           "Roles": [],
           "ViewPath": "*Overview/Overview",
           "key": "k0"
+        },
+        {
+          "ContentType": [
+            "Alarms",
+            "Footer Alarms"
+          ],
+          "Label": "Alarms",
+          "Order": 2,
+          "PagePath": "",
+          "Params": {},
+          "Roles": [],
+          "ViewPath": "Application/Content Types/Alarms/Alarms Status",
+          "key": "k1"
+        },
+        {
+          "ContentType": [
+            "Trend"
+          ],
+          "Label": "Trend",
+          "Order": 3,
+          "PagePath": "",
+          "Params": {},
+          "Roles": [],
+          "ViewPath": "Application/Content Types/Trends/Trends Chart",
+          "key": "k2"
+        },
+        {
+          "ContentType": [
+            "System Diagnostics"
+          ],
+          "Label": "System Diagnostics",
+          "Order": 2,
+          "PagePath": "",
+          "Params": {},
+          "Roles": [],
+          "ViewPath": "Standard/Diagnostic Modules/System Diagnostics",
+          "key": "kNew4"
+        },
+        {
+          "ContentType": [
+            "Footer CM Legend"
+          ],
+          "Label": "Control Module Legend",
+          "Order": 2,
+          "PagePath": "",
+          "Params": {},
+          "Roles": [],
+          "ViewPath": "Application/Navigation/Footer Components/Styling Legend",
+          "key": "k3"
         }
       ]
     }
@@ -46,7 +85,7 @@
       "Setpoints"
     ],
     "Label": "",
-    "ModelItemTagPath": "[StandardS71500]Standard/Model Item",
+    "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Model Item",
     "ShowOnlyConfiguredContentTypes": true
   },
   "propConfig": {

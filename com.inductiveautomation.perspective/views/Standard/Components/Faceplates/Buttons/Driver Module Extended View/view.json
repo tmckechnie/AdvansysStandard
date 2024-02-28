@@ -1,13 +1,13 @@
 {
   "custom": {
-    "DriverModuleTagPath": "[StandardS71500]Standard/Modules/Driver Modules/Simocode DM",
-    "DriverModuleViewPath": "Standard/Driver Modules/Siemens/SIMOCODE/Faceplates/Components/Diagnostics View",
+    "DriverModuleTagPath": null,
+    "DriverModuleViewPath": null,
     "References": {}
   },
   "params": {
     "Icon": "material/mediation",
     "Label": "Algorithm",
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.DriverModuleTagPath": {

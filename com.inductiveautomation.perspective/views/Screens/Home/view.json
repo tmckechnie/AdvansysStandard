@@ -1,0 +1,71 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Image"
+            },
+            "position": {
+              "height": 0.5,
+              "width": 0.5,
+              "x": 0.2537,
+              "y": 0.2425
+            },
+            "propConfig": {
+              "props.source": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {},
+                    "tagPath": "[FMMM01]System/System Info/Logo"
+                  },
+                  "transforms": [
+                    {
+                      "expression": "\u0027data:imagef;base64,\u0027+{value}",
+                      "type": "expression"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "fit": {
+                "mode": "contain"
+              }
+            },
+            "type": "ia.display.image"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "center",
+      "style": {
+        "classes": "Standard/Docked/Header/ContentBackground"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

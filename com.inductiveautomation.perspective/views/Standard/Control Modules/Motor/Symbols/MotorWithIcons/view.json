@@ -20,7 +20,7 @@
     "Cfg": {
       "AbbreviationOverwrite": ""
     },
-    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV05/100M005"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {

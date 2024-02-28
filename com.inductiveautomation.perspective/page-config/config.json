@@ -2,7 +2,11 @@
   "pages": {
     "/": {
       "title": "",
-      "viewPath": "Screens/Main"
+      "viewPath": "Screens/Home"
+    },
+    "/GatewayDiagnostics": {
+      "title": "",
+      "viewPath": "Standard/Diagnostic Modules/System Diagnostics"
     },
     "/Home/:ContentType": {
       "title": "",
@@ -11,10 +15,6 @@
     "/MapTest": {
       "title": "MapTest",
       "viewPath": "Standard/Components/Map/Map"
-    },
-    "/WebDev/Test": {
-      "title": "",
-      "viewPath": "WebDev/Test"
     }
   },
   "sharedDocks": {
@@ -33,8 +33,7 @@
         "viewParams": {
           "AllowedContentTypes": [
             "Footer Alarms",
-            "Footer Trend",
-            "Footer Setpoints"
+            "Footer CM Legend"
           ]
         },
         "viewPath": "Standard/Navigation/Footer"
@@ -70,7 +69,7 @@
         "modal": false,
         "resizable": false,
         "show": "visible",
-        "size": 120,
+        "size": 106,
         "viewParams": {
           "AllowedContentTypes": [
             "Overview",
@@ -79,9 +78,10 @@
             "Alarms",
             "Trend",
             "Setpoints",
-            "Sequence"
+            "Sequence",
+            "System Diagnostics"
           ],
-          "HeaderView": "Standard/Navigation/Header Breadcrumb",
+          "HeaderView": "Standard/Navigation/Header Menu Bar",
           "InitialModelItemTagPath": "[StandardS71500]Standard/Model Item",
           "ShowOnlyConfiguredContentTypes": true
         },

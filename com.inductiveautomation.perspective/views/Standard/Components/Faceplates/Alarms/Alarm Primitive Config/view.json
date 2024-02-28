@@ -1,9 +1,9 @@
 {
   "custom": {
-    "Display": true
+    "Display": false
   },
   "params": {
-    "AlarmPrimitiveTagPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/LocalStop",
+    "AlarmPrimitiveTagPath": "[TPOpnim]Rh_Thermosyphon/Rh_7510/Rh_LSH_7510A/Alarms/Communication",
     "ShowHeader": false
   },
   "propConfig": {
@@ -15,7 +15,7 @@
           "references": {
             "AlarmPrimitiveTagPath": "{view.params.AlarmPrimitiveTagPath}"
           },
-          "tagPath": "{AlarmPrimitiveTagPath}.Documentation"
+          "tagPath": "{AlarmPrimitiveTagPath}/Sts/Active"
         },
         "transforms": [
           {
@@ -92,7 +92,7 @@
           "position.display": {
             "binding": {
               "config": {
-                "expression": "!{../Header.position.display}"
+                "expression": "!{../Header.position.display}\u0026\u0026{view.custom.Display}"
               },
               "type": "expr"
             }

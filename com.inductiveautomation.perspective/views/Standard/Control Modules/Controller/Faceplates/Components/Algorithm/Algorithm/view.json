@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Controller01"
+    "TagPath": "[TPOpnim]Control Modules/Rh_FIC_7080"
   },
   "propConfig": {
     "params.TagPath": {

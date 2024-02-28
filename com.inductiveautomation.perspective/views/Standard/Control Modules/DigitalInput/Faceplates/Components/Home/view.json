@@ -1,11 +1,11 @@
 {
   "custom": {
-    "FormatString": "#,##0.##",
-    "State": false,
-    "StateString": "Passive"
+    "FormatString": null,
+    "State": null,
+    "StateString": null
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput01"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.FormatString": {

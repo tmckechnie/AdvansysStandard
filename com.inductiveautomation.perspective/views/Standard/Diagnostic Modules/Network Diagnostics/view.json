@@ -1,0 +1,99 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 1000,
+      "width": 1920
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "MRPStatus_S2"
+            },
+            "position": {
+              "height": 40,
+              "width": 240,
+              "x": 10,
+              "y": 164
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "AbbreviationOverwrite": "",
+                  "InstanceNameOverwrite": ""
+                },
+                "TagPath": "[FMMM01]System/Diagnostics/DBCommsMRPStatus_S2"
+              },
+              "path": "Standard/Diagnostic Modules/Components/MRPStatus"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "MRPStatus_S8"
+            },
+            "position": {
+              "height": 40,
+              "width": 240,
+              "x": 255,
+              "y": 164
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "AbbreviationOverwrite": "",
+                  "InstanceNameOverwrite": ""
+                },
+                "TagPath": "[FMMM01]System/Diagnostics/DBCommsMRPStatus_S8"
+              },
+              "path": "Standard/Diagnostic Modules/Components/MRPStatus"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "MRPStatus_S9"
+            },
+            "position": {
+              "height": 40,
+              "width": 240,
+              "x": 500,
+              "y": 164
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "AbbreviationOverwrite": "",
+                  "InstanceNameOverwrite": ""
+                },
+                "TagPath": "[FMMM01]System/Diagnostics/DBCommsMRPStatus_S9"
+              },
+              "path": "Standard/Diagnostic Modules/Components/MRPStatus"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

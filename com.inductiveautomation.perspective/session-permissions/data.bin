@@ -3,12 +3,7 @@
   "securityLevels": [
     {
       "name": "Authenticated",
-      "children": [
-        {
-          "name": "Roles",
-          "children": []
-        }
-      ]
+      "children": []
     }
   ]
 }

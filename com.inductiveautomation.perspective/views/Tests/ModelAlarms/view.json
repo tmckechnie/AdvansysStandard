@@ -1,0 +1,419 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 995,
+      "width": 1178
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "LabelSite"
+                },
+                "props": {
+                  "text": "Site"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "SiteAlarmCount"
+                },
+                "props": {
+                  "params": {
+                    "AlarmSummaryTagPath": "[TPSite]Site/Model Item/Alarm Summary"
+                  },
+                  "path": "Standard/Components/Alarms/Alarm Summary Symbols",
+                  "useDefaultViewHeight": true,
+                  "useDefaultViewWidth": true
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "Site"
+            },
+            "position": {
+              "height": 80,
+              "width": 500,
+              "x": 6,
+              "y": 5
+            },
+            "props": {
+              "alignItems": "center"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "text": "Plant 1"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Plant1AlarmCount"
+                },
+                "props": {
+                  "params": {
+                    "AlarmSummaryTagPath": "[TPSite]Site/Plant 1/Model Item/Alarm Summary"
+                  },
+                  "path": "Standard/Components/Alarms/Alarm Summary Symbols",
+                  "useDefaultViewHeight": true,
+                  "useDefaultViewWidth": true
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "Plant1AlarmCount_0"
+                },
+                "props": {
+                  "params": {
+                    "AlarmSummaryTagPath": "[TPPlant1]Plant 1/Model Item/Alarm Summary"
+                  },
+                  "path": "Standard/Components/Alarms/Alarm Summary Symbols",
+                  "useDefaultViewHeight": true,
+                  "useDefaultViewWidth": true
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "Plant1"
+            },
+            "position": {
+              "height": 80,
+              "width": 500,
+              "x": 90,
+              "y": 68
+            },
+            "props": {
+              "alignItems": "center"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "text": "Plant 1 Area 1"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Plant1Area1AlarmCount"
+                },
+                "props": {
+                  "params": {
+                    "AlarmSummaryTagPath": "[TPPlant1]Plant 1/Area 1/Model Item/Alarm Summary"
+                  },
+                  "path": "Standard/Components/Alarms/Alarm Summary Symbols",
+                  "useDefaultViewHeight": true,
+                  "useDefaultViewWidth": true
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "Plant1Area1"
+            },
+            "position": {
+              "height": 80,
+              "width": 500,
+              "x": 123,
+              "y": 139
+            },
+            "props": {
+              "alignItems": "center"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "text": "Plant 1 Area 1 CM 1"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Plant1Area1CM1AlarmCount"
+                },
+                "props": {
+                  "params": {
+                    "AlarmSummaryTagPath": "[TPPlant1]Plant 1/Area 1/100M100/Alarms/Summary"
+                  },
+                  "path": "Standard/Components/Alarms/Alarm Summary Symbols",
+                  "useDefaultViewHeight": true,
+                  "useDefaultViewWidth": true
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "Plant1Area1CM1"
+            },
+            "position": {
+              "height": 80,
+              "width": 500,
+              "x": 173,
+              "y": 202
+            },
+            "props": {
+              "alignItems": "center"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "text": "Plant 2"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Plant1AlarmCount"
+                },
+                "props": {
+                  "params": {
+                    "AlarmSummaryTagPath": "[TPPlant2]Plant 2/Model Item/Alarm Summary"
+                  },
+                  "path": "Standard/Components/Alarms/Alarm Summary Symbols",
+                  "useDefaultViewHeight": true,
+                  "useDefaultViewWidth": true
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "Plant2"
+            },
+            "position": {
+              "height": 80,
+              "width": 500,
+              "x": 90,
+              "y": 266
+            },
+            "props": {
+              "alignItems": "center"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "text": "Plant 2 Area 1"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Plant1Area1AlarmCount"
+                },
+                "props": {
+                  "params": {
+                    "AlarmSummaryTagPath": "[TPPlant2]Plant 2/Area 1/Model Item/Alarm Summary"
+                  },
+                  "path": "Standard/Components/Alarms/Alarm Summary Symbols",
+                  "useDefaultViewHeight": true,
+                  "useDefaultViewWidth": true
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "Plant2Area1"
+            },
+            "position": {
+              "height": 80,
+              "width": 500,
+              "x": 123,
+              "y": 334
+            },
+            "props": {
+              "alignItems": "center"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "props": {
+                  "text": "Plant 2 Area 1 CM 1"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Plant1Area1CM1AlarmCount"
+                },
+                "props": {
+                  "params": {
+                    "AlarmSummaryTagPath": "[TPPlant2]Plant 2/Area 1/100M100/Alarms/Summary"
+                  },
+                  "path": "Standard/Components/Alarms/Alarm Summary Symbols",
+                  "useDefaultViewHeight": true,
+                  "useDefaultViewWidth": true
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "MultiStateButton"
+                },
+                "propConfig": {
+                  "props.controlValue": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "tagPath": "[TPPlant1]Plant 1/Area 1/100M100/Alarms/Test"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.indicatorValue": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "direct",
+                        "publishInitial": false,
+                        "tagPath": "[TPPlant1]Plant 1/Area 1/100M100/Alarms/Test"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "orientation": "row",
+                  "states": [
+                    {
+                      "selectedStyle": {
+                        "backgroundColor": "#FFF275",
+                        "classes": ""
+                      },
+                      "text": "Clear",
+                      "unselectedStyle": {
+                        "classes": ""
+                      },
+                      "value": 0
+                    },
+                    {
+                      "selectedStyle": {
+                        "backgroundColor": "#F84553",
+                        "classes": ""
+                      },
+                      "text": "Critical",
+                      "unselectedStyle": {
+                        "classes": ""
+                      },
+                      "value": 1
+                    },
+                    {
+                      "selectedStyle": {
+                        "backgroundColor": "#7CEA9C",
+                        "classes": ""
+                      },
+                      "text": "High",
+                      "unselectedStyle": {
+                        "classes": ""
+                      },
+                      "value": 2
+                    }
+                  ]
+                },
+                "type": "ia.input.multi-state-button"
+              }
+            ],
+            "meta": {
+              "name": "Plant2Area1CM1"
+            },
+            "position": {
+              "height": 80,
+              "width": 500,
+              "x": 180,
+              "y": 404
+            },
+            "props": {
+              "alignItems": "center"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "AlarmStatusTable"
+            },
+            "position": {
+              "height": 483,
+              "width": 1093,
+              "x": 30,
+              "y": 484
+            },
+            "props": {
+              "filters": {
+                "active": {
+                  "priorities": {
+                    "critical": false,
+                    "high": false,
+                    "low": false,
+                    "medium": false
+                  }
+                }
+              }
+            },
+            "type": "ia.display.alarmstatustable"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

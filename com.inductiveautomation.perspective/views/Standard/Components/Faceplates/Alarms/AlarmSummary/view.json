@@ -5,7 +5,7 @@
     "alarmStyle": null
   },
   "params": {
-    "TagPath": "[default]SCVD/Sefateng/ROM/Surface/100WT100"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {

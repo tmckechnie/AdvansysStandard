@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100S100"
+    "TagPath": ""
   },
   "propConfig": {
     "params.TagPath": {

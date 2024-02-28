@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100DI100"
+    "TagPath": "[TPOpnim]Control Modules/DI001"
   },
   "propConfig": {
     "params.TagPath": {

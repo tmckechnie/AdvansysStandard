@@ -1,12 +1,12 @@
 {
   "custom": {
-    "type": "Boolean",
+    "type": null,
     "updateTrigger": "value"
   },
   "params": {
     "Format": "value",
     "Label": "value",
-    "ParameterTagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cfg/Parameter 1",
+    "ParameterTagPath": "",
     "Units": "value",
     "Value": "value"
   },

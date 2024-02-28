@@ -1,42 +1,9 @@
 {
   "custom": {
-    "Interlocks": [
-      {
-        "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor/Interlock/Protective",
-        "displayOrder": 0,
-        "instancePosition": {},
-        "instanceStyle": {
-          "classes": ""
-        }
-      },
-      {
-        "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor/Interlock/Permissive",
-        "displayOrder": 1,
-        "instancePosition": {},
-        "instanceStyle": {
-          "classes": ""
-        }
-      },
-      {
-        "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor/Interlock/Operation",
-        "displayOrder": 2,
-        "instancePosition": {},
-        "instanceStyle": {
-          "classes": ""
-        }
-      },
-      {
-        "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor/Interlock/Hold",
-        "displayOrder": 3,
-        "instancePosition": {},
-        "instanceStyle": {
-          "classes": ""
-        }
-      }
-    ]
+    "Interlocks": []
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.Interlocks": {

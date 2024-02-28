@@ -1,29 +1,56 @@
 {
   "custom": {
-    "CurrentModelItemTagPath": "[StandardS71500]Standard/Model Item",
+    "CurrentModelItemTagPath": "[ImpalaDevelopment]Utilities/Cooling Water/Model Item",
     "ViewPaths": {
       "ViewPathArray": [
         {
           "ContentType": [
-            "Footer Alarms"
-          ],
-          "Label": "Alarms",
-          "Order": 0,
-          "PagePath": "",
-          "Roles": [],
-          "ViewPath": "*Alarms/Alarms",
-          "key": "kNew1"
-        },
-        {
-          "ContentType": [
             "Overview"
           ],
+          "ContentTypeParams": {},
           "Label": "Overview",
           "Order": 0,
           "PagePath": "",
           "Roles": [],
           "ViewPath": "*Overview/Overview",
           "key": "k0"
+        },
+        {
+          "ContentType": [
+            "Alarms",
+            "Footer Alarms"
+          ],
+          "ContentTypeParams": {},
+          "Label": "Alarms",
+          "Order": 2,
+          "PagePath": "",
+          "Roles": [],
+          "ViewPath": "Application/Content Types/Alarms/Alarms Status",
+          "key": "k1"
+        },
+        {
+          "ContentType": [
+            "Trend"
+          ],
+          "ContentTypeParams": {},
+          "Label": "Trend",
+          "Order": 3,
+          "PagePath": "",
+          "Roles": [],
+          "ViewPath": "Application/Content Types/Trends/Trends Chart",
+          "key": "k2"
+        },
+        {
+          "ContentType": [
+            "Footer CM Legend"
+          ],
+          "ContentTypeParams": {},
+          "Label": "Control Module Legend",
+          "Order": "0",
+          "PagePath": "",
+          "Roles": [],
+          "ViewPath": "Application/Navigation/Footer Components/Styling Legend",
+          "key": "k3"
         }
       ]
     },
@@ -35,29 +62,56 @@
     "data": {
       "k0": {
         "ContentType": [
-          "Footer Alarms"
-        ],
-        "Label": "Alarms",
-        "Order": 0,
-        "PagePath": "",
-        "Roles": [],
-        "ViewPath": "*Alarms/Alarms",
-        "key": "k0"
-      },
-      "k1": {
-        "ContentType": [
           "Overview"
         ],
+        "ContentTypeParams": {},
         "Label": "Overview",
         "Order": 0,
         "PagePath": "",
         "Roles": [],
         "ViewPath": "*Overview/Overview",
+        "key": "k0"
+      },
+      "k1": {
+        "ContentType": [
+          "Alarms",
+          "Footer Alarms"
+        ],
+        "ContentTypeParams": {},
+        "Label": "Alarms",
+        "Order": 2,
+        "PagePath": "",
+        "Roles": [],
+        "ViewPath": "Application/Content Types/Alarms/Alarms Status",
         "key": "k1"
+      },
+      "k2": {
+        "ContentType": [
+          "Trend"
+        ],
+        "ContentTypeParams": {},
+        "Label": "Trend",
+        "Order": 3,
+        "PagePath": "",
+        "Roles": [],
+        "ViewPath": "Application/Content Types/Trends/Trends Chart",
+        "key": "k2"
+      },
+      "k3": {
+        "ContentType": [
+          "Footer CM Legend"
+        ],
+        "ContentTypeParams": {},
+        "Label": "Control Module Legend",
+        "Order": "0",
+        "PagePath": "",
+        "Roles": [],
+        "ViewPath": "Application/Navigation/Footer Components/Styling Legend",
+        "key": "k3"
       }
     },
     "popupIdentifier": "ModelItemEditorPopup",
-    "tagPath": "[StandardS71500]Standard/Model Item",
+    "tagPath": "[ImpalaDevelopment]Utilities/Cooling Water/Model Item",
     "trackNavigation": true
   },
   "params": {
@@ -228,6 +282,7 @@
             },
             "props": {
               "allowCustomOptions": true,
+              "enabled": false,
               "options": [
                 {
                   "label": "[StandardS71500]Standard/Model Item",

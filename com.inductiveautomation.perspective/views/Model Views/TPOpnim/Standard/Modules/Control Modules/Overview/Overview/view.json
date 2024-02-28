@@ -1,0 +1,183 @@
+{
+  "custom": {
+    "key": []
+  },
+  "params": {},
+  "propConfig": {
+    "custom.key": {
+      "binding": {
+        "config": {
+          "expression": "0"
+        },
+        "transforms": [
+          {
+            "code": "\tprovider \u003d \u0027StandardS71500\u0027\n\tlimit \u003d 100\n\t\n\tquery \u003d {\n\t  \"options\": {\n\t    \"includeUdtMembers\": True,\n\t    \"includeUdtDefinitions\": False\n\t  },\n\t  \"condition\": {\n\t    \"path\": \"Standard*\",\n\t    \"tagType\": \"AtomicTag\",\n\t    \"attributes\": {\n\t      \"values\": [],\n\t      \"requireAll\": True\n\t    },\n\t    \"valueSource\": \"opc\",\n\t    \"quality\": [\n\t      \"Bad\",\n\t      \"Error\",\n\t      \"Uncertain\"\n\t    ]\n\t  },\n\t  \"returnProperties\": [\n\t    \"tagType\",\n\t    \"quality\"\n\t  ]\n\t}\n\t\n\t# Limited to 100 rows. Use continuationPoint functionality to continue from last result, \n\t# or remove limit for full results.\n\tresults \u003d system.tag.query(provider, query, limit)\n\treturn results",
+            "type": "script"
+          }
+        ],
+        "type": "expr"
+      },
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 835,
+      "width": 1189
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/HeadingText"
+          },
+          "text": "Control Modules"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "AI"
+            },
+            "position": {
+              "height": 200,
+              "width": 180
+            },
+            "props": {
+              "path": "Model Views/TPOpnim/Standard/Modules/Control Modules/Overview/Components/AnalogInput"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DI"
+            },
+            "position": {
+              "height": 200,
+              "width": 180,
+              "y": 210
+            },
+            "props": {
+              "path": "Model Views/TPOpnim/Standard/Modules/Control Modules/Overview/Components/DigitalInput"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DO"
+            },
+            "position": {
+              "height": 200,
+              "width": 180,
+              "x": 234,
+              "y": 210
+            },
+            "props": {
+              "path": "Model Views/TPOpnim/Standard/Modules/Control Modules/Overview/Components/DigitalOutput"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Motor"
+            },
+            "position": {
+              "height": 200,
+              "width": 180,
+              "y": 420
+            },
+            "props": {
+              "path": "Model Views/TPOpnim/Standard/Modules/Control Modules/Overview/Components/Motor"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Totaliser"
+            },
+            "position": {
+              "height": 200,
+              "width": 180,
+              "x": 234,
+              "y": 420
+            },
+            "props": {
+              "path": "Model Views/TPOpnim/Standard/Modules/Control Modules/Overview/Components/Totaliser"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Valve"
+            },
+            "position": {
+              "height": 200,
+              "width": 180,
+              "x": 466,
+              "y": 210
+            },
+            "props": {
+              "path": "Model Views/TPOpnim/Standard/Modules/Control Modules/Overview/Components/Valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "AnalogOutput"
+            },
+            "position": {
+              "height": 200,
+              "width": 180,
+              "x": 234,
+              "y": 18
+            },
+            "props": {
+              "path": "Model Views/TPOpnim/Standard/Modules/Control Modules/Overview/Components/AnalogOutput"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Controller"
+            },
+            "position": {
+              "height": 200,
+              "width": 180,
+              "x": 466,
+              "y": 10
+            },
+            "props": {
+              "path": "Model Views/TPOpnim/Standard/Modules/Control Modules/Overview/Components/Controller"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

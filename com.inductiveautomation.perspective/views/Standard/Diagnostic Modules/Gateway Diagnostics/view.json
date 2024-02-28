@@ -1,10 +1,21 @@
 {
   "custom": {},
+  "events": {
+    "system": {
+      "onStartup": {
+        "config": {
+          "script": "\tself.getChild(\"root\").getChild(\"Gateway Selection Flex\").getChild(\"Dropdown\").props.value \u003d self.getChild(\"root\").getChild(\"Gateway Selection Flex\").getChild(\"Dropdown\").props.options[0].value"
+        },
+        "scope": "G",
+        "type": "script"
+      }
+    }
+  },
   "params": {
     "Gateways": {
-      "AdvansysPrimary": {
+      "ImpalaPMRMaster": {
         "GatewayDiagnosticsViewPath": "Standard/Diagnostic Modules/Gateway Diagnostics Components/Master Gateway Diagnostics",
-        "SystemDiagnosticsTagPath": "[StandardS71500]System/Diagnostics"
+        "SystemDiagnosticsTagPath": "[TPUtilities]System/Diagnostics"
       }
     }
   },
@@ -63,7 +74,7 @@
               }
             },
             "props": {
-              "value": "AdvansysPrimary"
+              "value": "ImpalaPMRMaster"
             },
             "type": "ia.input.dropdown"
           }

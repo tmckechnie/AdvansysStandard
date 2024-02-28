@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalOutput"
+    "TagPath": ""
   },
   "propConfig": {
     "params.TagPath": {

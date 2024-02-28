@@ -6,7 +6,7 @@
     "CurrentValue": 2,
     "CurrentValueOut": "No Data",
     "Label": "Mode",
-    "TagPath": "[FMG]Test/DOC201A/Cfg/Mode"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.CurrentValue": {

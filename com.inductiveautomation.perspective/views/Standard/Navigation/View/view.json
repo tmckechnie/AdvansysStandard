@@ -1,0 +1,150 @@
+{
+  "custom": {
+    "HeaderView": "Standard/Navigation/Header Breadcrumb"
+  },
+  "params": {
+    "HeaderView": "Standard/Navigation/Header Breadcrumb"
+  },
+  "propConfig": {
+    "custom.HeaderView": {
+      "binding": {
+        "config": {
+          "path": "view.params.HeaderView"
+        },
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.HeaderView": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "contextMenu": {
+            "enabled": true,
+            "items": [
+              {
+                "children": [],
+                "icon": {
+                  "color": "",
+                  "path": "",
+                  "style": {}
+                },
+                "link": {
+                  "target": "self",
+                  "url": ""
+                },
+                "message": {
+                  "payload": {},
+                  "scope": "page",
+                  "type": ""
+                },
+                "method": {
+                  "name": "ContextMenuAction",
+                  "params": {
+                    "Action": "Methon"
+                  }
+                },
+                "style": {
+                  "classes": ""
+                },
+                "text": "Methon",
+                "type": "method"
+              },
+              {
+                "children": [],
+                "icon": {
+                  "color": "",
+                  "path": "",
+                  "style": {}
+                },
+                "link": {
+                  "target": "self",
+                  "url": ""
+                },
+                "message": {
+                  "payload": {
+                    "Action": "Message"
+                  },
+                  "scope": "view",
+                  "type": "ContextMenuActionMessage"
+                },
+                "method": {
+                  "name": "ContextMenuAction",
+                  "params": {
+                    "Action": "None"
+                  }
+                },
+                "style": {
+                  "classes": ""
+                },
+                "text": "Message",
+                "type": "message"
+              }
+            ]
+          },
+          "name": "Button"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "props": {
+          "text": "Methon"
+        },
+        "scripts": {
+          "customMethods": [
+            {
+              "name": "ContextMenuAction",
+              "params": [
+                "Action"
+              ],
+              "script": "\t# implement your method here\n\t\n\tsystem.perspective.print(\"Hello Method\")\n\tself.props.text \u003d Action"
+            }
+          ],
+          "extensionFunctions": null,
+          "messageHandlers": [
+            {
+              "messageType": "ContextMenuActionMessage",
+              "pageScope": false,
+              "script": "\t# implement your handler here\n\tsystem.perspective.print(\"Hello Message\")\n\tself.props.text \u003d payload[\u0027Action\u0027]",
+              "sessionScope": false,
+              "viewScope": true
+            }
+          ]
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView"
+        },
+        "position": {
+          "basis": "320px"
+        },
+        "propConfig": {
+          "props.path": {
+            "binding": {
+              "config": {
+                "path": "view.custom.HeaderView"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

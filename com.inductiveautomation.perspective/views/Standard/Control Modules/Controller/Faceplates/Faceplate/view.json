@@ -1,11 +1,11 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100WC001"
+    "TagPath": "[TPOpnim]Control Modules/Rh_FIC_7090"
   },
   "propConfig": {
     "params.TagPath": {
-      "paramDirection": "input",
+      "paramDirection": "output",
       "persistent": true
     }
   },

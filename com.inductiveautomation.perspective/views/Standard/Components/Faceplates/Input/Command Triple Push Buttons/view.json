@@ -1,8 +1,8 @@
 {
   "custom": {
-    "FullTagPath1": "[StandardS71500]Modules/Control Modules/100MR100/Cmd/ManualStartForward",
-    "FullTagPath2": "[StandardS71500]Modules/Control Modules/100MR100/Cmd/ManualStartReverse",
-    "FullTagPath3": "[StandardS71500]Modules/Control Modules/100MR100/Cmd/ManualStop"
+    "FullTagPath1": "",
+    "FullTagPath2": "",
+    "FullTagPath3": ""
   },
   "params": {
     "Label": "Command",
@@ -22,7 +22,7 @@
       "Label": "Stop",
       "Name": "Cmd/ManualStop"
     },
-    "TagPath": "[StandardS71500]Modules/Control Modules/100MR100"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.FullTagPath1": {

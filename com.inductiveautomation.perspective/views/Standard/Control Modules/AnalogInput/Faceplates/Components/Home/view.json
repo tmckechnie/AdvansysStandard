@@ -7,15 +7,15 @@
       "LowLow": {}
     },
     "ControlLimits": {},
-    "EngUnit": "l/hr",
-    "FormatString": "#,##0.##",
-    "ScaleEngineeringMax": 800,
-    "ScaleEngineeringMin": 0,
-    "Target": 0,
-    "Value": 262.92932
+    "EngUnit": null,
+    "FormatString": null,
+    "ScaleEngineeringMax": null,
+    "ScaleEngineeringMin": null,
+    "Target": null,
+    "Value": null
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput02"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.Alarms": {

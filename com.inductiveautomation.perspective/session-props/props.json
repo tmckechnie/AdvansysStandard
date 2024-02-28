@@ -3,7 +3,7 @@
     "CurrentModelItem": {
       "Session": {
         "ContentType": "Overview",
-        "Path": "0",
+        "Path": "0/1",
         "SearchModule": ""
       }
     },
@@ -11,8 +11,8 @@
     "FlowInfo": {
       "CurrentAuthenticatedUser": ""
     },
-    "InitialModelItemTagPath": "[StandardS71500]Standard/Model Item",
-    "UseSessionModelItem": true
+    "InitialModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Model Item",
+    "UseSessionModelItem": false
   },
   "propConfig": {
     "custom.ModelItems": {
@@ -39,7 +39,7 @@
         "config": {
           "fallbackDelay": 2.5,
           "mode": "direct",
-          "tagPath": "[AdvansysStandard]System/System Info"
+          "tagPath": "[FMMM01]System/System Info"
         },
         "type": "tag"
       }
@@ -94,11 +94,14 @@
     }
   },
   "props": {
-    "address": "192.168.1.119",
+    "address": "192.168.1.184",
     "device": {},
     "geolocation": {},
     "locale": "en-ZA",
-    "theme": "standard",
-    "timeZoneId": "Africa/Harare"
+    "pipes": {
+      "autoAppearance": "p\u0026id"
+    },
+    "theme": "standard-Impala",
+    "timeZoneId": "Africa/Johannesburg"
   }
 }

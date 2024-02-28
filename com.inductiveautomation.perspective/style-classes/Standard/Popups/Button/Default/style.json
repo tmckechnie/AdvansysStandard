@@ -1,0 +1,39 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--popupAccent)",
+      "borderColor": "var(--popupAccentBorder)",
+      "borderStyle": "solid",
+      "borderWidth": "1px",
+      "color": "var(--popupAccentText)",
+      "fontSize": "10px"
+    }
+  },
+  "variants": [
+    {
+      "pseudo": "focus",
+      "style": {
+        "backgroundColor": "var(--popupAccentDisabled)"
+      }
+    },
+    {
+      "pseudo": "hover",
+      "style": {
+        "backgroundColor": "var(--popupAccentDisabled)",
+        "borderColor": "var(--popupAccentDisabled)"
+      }
+    },
+    {
+      "pseudo": "disabled",
+      "style": {
+        "backgroundColor": "var(--popupAccentDisabled)",
+        "borderColor": "var(--popupAccentDisabled)",
+        "borderStyle": "solid",
+        "borderWidth": "1px",
+        "color": "var(--popupAccentTextDisabled)",
+        "fontFamily": "sans-serif",
+        "fontSize": "10px"
+      }
+    }
+  ]
+}

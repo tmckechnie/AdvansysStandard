@@ -157,16 +157,14 @@ def getChildModelItems(FolderTagPath,path,modelItems=[]):
 		childItem = getChildModelItem(ModelItemTagPath = modelItemTagPath)
 		showChildItem = childItem["showChild"]
 		if showChildItem:
-			#Check if Child is on Different Tag Provider
+			childModelItemOrder = childItem["order"]
 			childTagPathItem = childItem["childTagPath"]
+			viewPaths = childItem["viewPaths"]	
+			baseViewPath = childItem["baseViewPath"]	
 			if childTagPathItem != "":
 				childTagPath = childTagPathItem
 				modelItemTagPath = childTagPath + "/Model Item"
-				childItem = getChildModelItem(ModelItemTagPath = modelItemTagPath)
-				
-			viewPaths = childItem["viewPaths"]	
-			baseViewPath = childItem["baseViewPath"]
-			childModelItemOrder = childItem["order"]
+			
 			childItemName = childItem["name"]
 			tagFolderName = childArea["name"]
 			if childItemName is None:
@@ -231,6 +229,30 @@ def getModelItem(Name,ModelItemTagPath,tagFolderName,path,order,viewPaths,baseVi
 				}
 
 	return menuItem
+#=========================================================GetChildrenContainedNames=========================================================
+#Function that searches for all the contained names of all CMs in current folder.
+#Returns a document tag mapping the contained name to tagpath
+def GetChildrenContainedNames(PathToParentFolder):	
+	pathToParentFolder = PathToParentFolder
+	filterObject = {
+				"name":"ContainedName",
+				"recursive":True
+				}
+	containedNames = system.tag.browse(path = pathToParentFolder,filter = filterObject)
+	
+	children = {}
+	for containedNameObject in containedNames:
+		containedNameQualifiedValue = containedNameObject["value"]
+		if containedNameQualifiedValue is not None:
+			containedNameValue = containedNameQualifiedValue.value
+			if containedNameValue is not None and containedNameValue != " " and containedNameValue != "":
+				containedNameFullPath = containedNameObject["fullPath"].toString()
+				childFullPath = containedNameFullPath.replace("/Metadata/ContainedName","")
+				children[containedNameValue] = childFullPath
+	
+	childrenJson = system.util.jsonEncode(children)		
+	return childrenJson
+	
 #=========================================================GetTagProvidersList=========================================================
 def GetTagProvidersList(StartModelItemTagPath,ModelItems=None):
 	modelItems = ModelItems
@@ -265,5 +287,5 @@ def GetTagProvidersList(StartModelItemTagPath,ModelItems=None):
 		getTagProvider(ModelItem = modelItem)
 	return tagProviders.keys()
 
-	
+
 	

@@ -11,7 +11,7 @@
   "params": {
     "IconText": "YY",
     "LabelOverwrite": "",
-    "TagPath": "[StandardS71500]Control Modules/201YY001"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {

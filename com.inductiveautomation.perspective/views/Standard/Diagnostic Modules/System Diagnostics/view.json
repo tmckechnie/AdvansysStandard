@@ -1,0 +1,79 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Gateway Diagnostics"
+            },
+            "props": {
+              "params": {
+                "Gateways": {
+                  "ImpalaPMRMaster": {
+                    "GatewayDiagnosticsViewPath": "Standard/Diagnostic Modules/Gateway Diagnostics Components/Master Gateway Diagnostics",
+                    "SystemDiagnosticsTagPath": "[TPUtilities]System/Diagnostics"
+                  }
+                }
+              },
+              "path": "Standard/Diagnostic Modules/Gateway Diagnostics"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Network Diagnostics"
+            },
+            "position": {
+              "tabIndex": 1
+            },
+            "props": {
+              "path": "Standard/Diagnostic Modules/Network Diagnostics"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "CPU Webserver"
+            },
+            "position": {
+              "tabIndex": 2
+            },
+            "props": {
+              "params": {
+                "strUrl": "http://172.17.193.70"
+              },
+              "path": "Standard/Diagnostic Modules/CPU Webserver"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "TabContainer"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1
+        },
+        "props": {
+          "tabs": [
+            "Gateway",
+            "Network",
+            "CPU Webserver"
+          ]
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,53 +1,6 @@
 {
   "custom": {
-    "AlarmSummary": {
-      "HighestActivePriority": 0,
-      "HighestActivePriorityName": null,
-      "HighestUnackedPriority": 0,
-      "HighestUnackedPriorityName": null,
-      "Overall": {
-        "ActiveAckCount": 0,
-        "ActiveUnackCount": 0,
-        "ClearUnackCount": 0,
-        "Detail": [],
-        "ShelvedCount": 0,
-        "Total": 0
-      },
-      "PriorityDetail": {
-        "Critical": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "High": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "Low": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        },
-        "Medium": {
-          "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
-          "ClearUnackCount": 0,
-          "Detail": [],
-          "ShelvedCount": 0,
-          "Total": 0
-        }
-      }
-    },
+    "AlarmSummary": null,
     "MappedObject": {},
     "ModuleType": "DigitalInput",
     "References": {},
@@ -60,11 +13,11 @@
         "Basic": "Standard/Body/Symbols/SVG/StaticBorder"
       }
     },
-    "TagValue": false
+    "TagValue": null
   },
   "params": {
     "Label": "E-Stop",
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput01"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {
@@ -454,7 +407,7 @@
           "style": {
             "classes": "Standard/Popups/Faceplates/ValueDisplay"
           },
-          "text": "Passive"
+          "text": null
         },
         "type": "ia.display.label"
       }

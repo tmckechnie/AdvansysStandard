@@ -2,7 +2,7 @@
   "custom": {},
   "params": {
     "PathToFolder": "Standard/Control Modules/AnalogInput",
-    "TagPath": "[StandardS71500]Modules/Control Modules/100AI100"
+    "TagPath": ""
   },
   "propConfig": {
     "params.PathToFolder": {

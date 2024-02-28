@@ -3,7 +3,7 @@
     "ExtendedDiagnosticsTagPath": null
   },
   "params": {
-    "TagPath": "[TPUtilities]Utilities/Chemical Dosing/XLMM560A_DM"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.ExtendedDiagnosticsTagPath": {

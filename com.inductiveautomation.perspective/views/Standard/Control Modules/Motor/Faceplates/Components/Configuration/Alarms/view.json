@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV01/100M001"
+    "TagPath": ""
   },
   "propConfig": {
     "params.TagPath": {

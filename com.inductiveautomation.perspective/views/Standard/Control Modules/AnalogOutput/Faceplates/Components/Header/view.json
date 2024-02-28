@@ -5,7 +5,7 @@
     "alarmStyle": null
   },
   "params": {
-    "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100NS102"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.AlarmSummary": {
