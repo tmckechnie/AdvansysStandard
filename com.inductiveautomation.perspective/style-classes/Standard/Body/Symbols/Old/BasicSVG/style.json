@@ -1,0 +1,11 @@
+{
+  "base": {
+    "style": {
+      "borderColor": "var(--bodyAccent)",
+      "borderStyle": "solid",
+      "borderWidth": "2px",
+      "stroke": "var(--bodyAccent)",
+      "fill": "var(--bodySymbolPassive)"
+    }
+  }
+}

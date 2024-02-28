@@ -1,0 +1,86 @@
+{
+  "custom": {},
+  "params": {
+    "Mirror": false
+  },
+  "propConfig": {
+    "params.Mirror": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 131,
+      "width": 145
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Vibrating screen"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "props.elements[0].transform": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Mirror},\"translate(636,0) scale(-1, 1)\",\"\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "d": "M0,74 l24,-74 609,240 -27,79 30,295 -636,-540z",
+                  "fill": {},
+                  "name": "path",
+                  "stroke": {},
+                  "style": {
+                    "classes": "Standard/Body/Statics/Fill Standard/Body/Statics/Stroke",
+                    "vector-effect": "non-scaling-stroke"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M0,73 l604,245",
+                  "fill": {},
+                  "name": "path",
+                  "stroke": {},
+                  "style": {
+                    "classes": "Standard/Body/Statics/Fill Standard/Body/Statics/Stroke",
+                    "vector-effect": "non-scaling-stroke"
+                  },
+                  "type": "path"
+                }
+              ],
+              "type": "group"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 636 614"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "backgroundColor": "#FAFAFB00",
+        "classes": "Standard/Body/Statics/Background"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

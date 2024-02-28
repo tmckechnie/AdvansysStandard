@@ -1,0 +1,55 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/100S100"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 525,
+      "width": 430
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Main Page"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "path": "view.params.TagPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ModulePath": "Control Modules/Selector"
+          },
+          "path": "Standard/Components/Faceplates/Main Page"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

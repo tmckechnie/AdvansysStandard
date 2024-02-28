@@ -1,0 +1,97 @@
+{
+  "custom": {
+    "pageID": "Screens/Main",
+    "searchAssets": 1
+  },
+  "params": {
+    "ContentType": "Overview"
+  },
+  "propConfig": {
+    "custom.pageID": {
+      "binding": {
+        "config": {
+          "path": "page.props.pageId"
+        },
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.searchAssets": {
+      "binding": {
+        "config": {
+          "path": "view.params.ContentType"
+        },
+        "transforms": [
+          {
+            "code": "\treturn 1\n\t\t\n\tprojectName \u003d \u0027AdvansysStandardDevelopment\u0027 # e.g. \u0027AwesomeProject\u0027\n\tviewPath \u003d \u0027Standard/Test\u0027 # e.g. \u0027Testing/View to Modify\u0027\n\t\n\tfrom com.inductiveautomation.ignition.gateway import IgnitionGateway\n\tcontext \u003d IgnitionGateway.get()\n\tprojectParentFolder \u003d str(context.systemManager.dataDir.absoluteFile).replace(\u0027\\\\\u0027,\u0027/\u0027) + \u0027/projects\u0027\t\n\tprojectFolder \u003d projectParentFolder + \u0027/\u0027 + projectName\n\tviewFolder \u003d projectFolder + \u0027/com.inductiveautomation.perspective/views/\u0027 + viewPath\n\tviewJsonFile \u003d viewFolder + \u0027/view.json\u0027\n\t\n\t# read the view resource file as a string\n\tviewJsonStr \u003d system.file.readFileAsString(viewJsonFile)\n\t# convert it to Python objects (lists and dicts)\n\tviewJsonObj \u003d system.util.jsonDecode(viewJsonStr)\n\t#return viewJsonObj\n\tchildren \u003d viewJsonObj[\u0027root\u0027][\u0027children\u0027]\n\tassets \u003d []\n\tfor child in children:\n\t\tchildType \u003d child[\u0027type\u0027]\n\t\t#return child\n\t\tif childType \u003d\u003d \u0027ia.display.view\u0027:\n\t\t\tparams \u003d child[\u0027props\u0027][\u0027params\u0027]\n\t\t\tif \u0027TagPath\u0027 in params:\n\t\t\t\tasset \u003d {}\n\t\t\t\tasset[\u0027TagPath\u0027]\u003dparams[\u0027TagPath\u0027]\n\t\t\t\tasset[\u0027position\u0027]\u003dchild[\u0027position\u0027]\n\t\t\t\tassets.append(asset)\n\treturn assets\n\t\t\t\t",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.ContentType": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Content Container"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.params.ContentType": {
+            "binding": {
+              "config": {
+                "path": "view.params.ContentType"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Exists": true
+          },
+          "path": "Standard/Navigation/Components/Content Container"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px",
+          "display": false
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.ContentType"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

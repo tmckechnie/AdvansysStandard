@@ -1,0 +1,889 @@
+{
+  "custom": {
+    "CurrentModelItemTagPath": "[StandardS71500]Standard/Model Item",
+    "ViewPaths": {
+      "ViewPathArray": [
+        {
+          "ContentType": [
+            "Footer Alarms"
+          ],
+          "Label": "Alarms",
+          "Order": 0,
+          "PagePath": "",
+          "Roles": [],
+          "ViewPath": "*Alarms/Alarms",
+          "key": "kNew1"
+        },
+        {
+          "ContentType": [
+            "Overview"
+          ],
+          "Label": "Overview",
+          "Order": 0,
+          "PagePath": "",
+          "Roles": [],
+          "ViewPath": "*Overview/Overview",
+          "key": "k0"
+        }
+      ]
+    },
+    "currentModelItem": {
+      "ContentType": "Overview",
+      "Path": "0",
+      "SearchModule": ""
+    },
+    "data": {
+      "k0": {
+        "ContentType": [
+          "Footer Alarms"
+        ],
+        "Label": "Alarms",
+        "Order": 0,
+        "PagePath": "",
+        "Roles": [],
+        "ViewPath": "*Alarms/Alarms",
+        "key": "k0"
+      },
+      "k1": {
+        "ContentType": [
+          "Overview"
+        ],
+        "Label": "Overview",
+        "Order": 0,
+        "PagePath": "",
+        "Roles": [],
+        "ViewPath": "*Overview/Overview",
+        "key": "k1"
+      }
+    },
+    "popupIdentifier": "ModelItemEditorPopup",
+    "tagPath": "[StandardS71500]Standard/Model Item",
+    "trackNavigation": true
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Model Item"
+  },
+  "propConfig": {
+    "custom.CurrentModelItemTagPath": {
+      "binding": {
+        "config": {
+          "struct": {
+            "modelItems": "{session.custom.ModelItems}",
+            "path": "{view.custom.currentModelItem.Path}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tmodelItems \u003d value[\"modelItems\"]\n\tpath \u003d value[\"path\"]\n\t\n\treturn Standard.Navigation.Common.GetModelItemByPath(ModelItems \u003d modelItems,Path \u003d path)[\"data\"][\"ModelItemTagPath\"]",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.ViewPaths": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "tagPath": "{view.custom.tagPath}"
+          },
+          "tagPath": "{tagPath}/ViewPaths"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.currentModelItem": {
+      "binding": {
+        "config": {
+          "struct": {
+            "currentModelItem": "{session.custom.CurrentModelItem}",
+            "pageId": "{page.props.pageId}",
+            "useSessionModelItem": "{session.custom.UseSessionModelItem}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tcurrentModelItem \u003d value[\u0027currentModelItem\u0027]\n\tuseSessionModelItem \u003d value[\u0027useSessionModelItem\u0027]\n\tpageId \u003d value[\u0027pageId\u0027]\n\treturn Standard.Navigation.Common.GetCurrentModelItem(CurrentModelItem\u003dcurrentModelItem,UseSession\u003duseSessionModelItem,PerspectivePageID\u003dpageId)",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.data": {
+      "binding": {
+        "config": {
+          "path": "view.custom.ViewPaths.ViewPathArray"
+        },
+        "transforms": [
+          {
+            "code": "\tviewPaths \u003d{}\n\ti\u003d0\n\tfor viewPath in value:\n\t\tjsonString \u003d system.util.jsonEncode(viewPath)\n\t\tvp \u003d system.util.jsonDecode(jsonString)\n\t\tkey \u003d \u0027k\u0027+str(i)\n\t\tvp[\u0027key\u0027] \u003d key\n\t\tviewPaths[key]\u003dvp\n\t\ti+\u003d1\n\n\treturn viewPaths",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.popupIdentifier": {
+      "persistent": true
+    },
+    "custom.tagPath": {
+      "binding": {
+        "config": {
+          "expression": "if({view.custom.trackNavigation},{view.custom.CurrentModelItemTagPath},{view.params.TagPath})"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.trackNavigation": {
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 376
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "40px"
+        },
+        "propConfig": {
+          "props.params.Title": {
+            "binding": {
+              "config": {
+                "path": "view.custom.tagPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "ExpandedIconPath": "material/keyboard_arrow_up",
+              "RetractedIconPath": "material/keyboard_arrow_down",
+              "ShowIcon": false
+            },
+            "Expanded": false
+          },
+          "path": "Standard/Components/Faceplates/Header"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "50px",
+              "grow": 1
+            },
+            "props": {
+              "text": "Initial ModelItemTagPath Selector:",
+              "textStyle": {
+                "classes": "Standard/Popups/Navigation/Text"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "basis": "500px"
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "session.custom.InitialModelItemTagPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "allowCustomOptions": true,
+              "options": [
+                {
+                  "label": "[StandardS71500]Standard/Model Item",
+                  "value": "[StandardS71500]Standard/Model Item"
+                },
+                {
+                  "label": "[TPPower]Power Plant 1/Model Item",
+                  "value": "[TPPower]Power Plant 1/Model Item"
+                }
+              ],
+              "placeholder": {
+                "text": "Change InitialModelItemTagPath..."
+              }
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "Initial ModelItemTagPath"
+        },
+        "position": {
+          "basis": "45px",
+          "shrink": 0
+        },
+        "props": {
+          "justify": "flex-end"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "ToggleSwitch"
+            },
+            "position": {
+              "basis": "96px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.trackNavigation"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "text": "Track Navigation"
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tselection \u003d self.parent.parent.getChild(\"Table\").props.selection.data\n\tnumberofItems \u003d len(self.view.custom.data.values())\n\t#Get Copy\n\tif len(selection)\u003e0:\n\t\tkey \u003d selection[0][\u0027key\u0027]\n\t\tcopy \u003d self.view.custom.data[key]\n\telif len(self.view.custom.data.values())\u003e0:\n\t\t#Get Last viewPath\n\t\tcopy \u003d self.view.custom.data.values()[-1]\n\telse:\t\n\t\tcopy \u003d {\"Order\": 0,\"ContentType\": [\"Overview\"],\"ViewPath\": \"*Overview/Overview\",\"PagePath\": \"\",\"Label\": \"Overview\",\"Roles\": [],\"key\": \"k0\"}\n\t\t\n\t#Create Copy\n\tjsonString \u003d system.util.jsonEncode(copy)\n\tnew \u003d system.util.jsonDecode(jsonString)\n\t\n\tnew[\u0027Label\u0027] \u003d new[\u0027Label\u0027] + \u0027 New\u0027\n\tnewKey \u003d \u0027kNew\u0027+str(numberofItems)\n\tnew[\u0027key\u0027] \u003d newKey\n\tself.view.custom.data[newKey] \u003d new\n"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "ButtonAdd"
+            },
+            "position": {
+              "basis": "80px",
+              "shrink": 0
+            },
+            "props": {
+              "image": {
+                "icon": {
+                  "color": "var(--dockedFooterAccent)",
+                  "path": "material/add_box"
+                }
+              },
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Button/Default",
+                "marginBottom": 2,
+                "marginLeft": 5,
+                "marginRight": 5,
+                "marginTop": 2
+              },
+              "text": "Add"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tselection \u003d self.parent.parent.getChild(\"Table\").props.selection.data\n\tfor selected in selection:\n\t\tkey \u003d selected[\u0027key\u0027]\n\t\tself.view.custom.data.pop(key)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "ButtonRemove"
+            },
+            "position": {
+              "basis": "80px",
+              "shrink": 0
+            },
+            "props": {
+              "image": {
+                "icon": {
+                  "color": "var(--dockedFooterAccent)",
+                  "path": "material/delete"
+                }
+              },
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Button/Default",
+                "marginBottom": 2,
+                "marginLeft": 5,
+                "marginRight": 5,
+                "marginTop": 2
+              },
+              "text": "Remove"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tself.view.refreshBinding(\"custom.data\")\n\t"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "ButtonAdd_0"
+            },
+            "position": {
+              "basis": "80px",
+              "shrink": 0
+            },
+            "props": {
+              "image": {
+                "icon": {
+                  "color": "var(--dockedFooterAccent)",
+                  "path": "material/refresh"
+                }
+              },
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Button/Default",
+                "marginBottom": 2,
+                "marginLeft": 5,
+                "marginRight": 5,
+                "marginTop": 2
+              },
+              "text": "Refresh"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "Config"
+        },
+        "position": {
+          "basis": "45px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.data": {
+            "binding": {
+              "config": {
+                "path": "view.custom.data"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn value.values()",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "columns": [
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "key",
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": " "
+              },
+              "justify": "auto",
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "view",
+              "resizable": false,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": true,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "Standard/Navigation/Model Item/Components/EditButton",
+              "visible": true,
+              "width": 30
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Order",
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "center",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "center",
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "number",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": true,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 80
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": true,
+              "field": "Label",
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Label"
+              },
+              "justify": "auto",
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "string",
+              "resizable": false,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "ContentType",
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Content Type"
+              },
+              "justify": "auto",
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "string",
+              "resizable": false,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "ViewPath",
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "View Path"
+              },
+              "justify": "auto",
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "string",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            }
+          ],
+          "pager": {
+            "bottom": false
+          }
+        },
+        "type": "ia.display.table"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tdata \u003d self.view.custom.data\n\tself.view.custom.ViewPaths.ViewPathArray \u003d data.values()\n\tsystem.perspective.closePopup(id\u003dself.view.custom.popupIdentifier)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "ButtonOK"
+            },
+            "position": {
+              "basis": "80px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Button/Default",
+                "marginBottom": 2,
+                "marginLeft": 50,
+                "marginRight": 50,
+                "marginTop": 2
+              },
+              "text": "Save"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tsystem.perspective.closePopup(id\u003dself.view.custom.popupIdentifier)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "ButtonCancel"
+            },
+            "position": {
+              "basis": "80px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Button/Default",
+                "marginBottom": 2,
+                "marginLeft": 50,
+                "marginRight": 50,
+                "marginTop": 2
+              },
+              "text": "Cancel"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "Save"
+        },
+        "position": {
+          "basis": "35px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "scripts": {
+      "customMethods": [],
+      "extensionFunctions": null,
+      "messageHandlers": [
+        {
+          "messageType": "UpdateModelItemViewPath",
+          "pageScope": true,
+          "script": "\t# implement your handler here\n\tsystem.perspective.print(\"UpdateModelItemViewPath message recieved with payload:\" + str(payload))\n\tkey \u003d payload[\u0027key\u0027]\n\tself.view.custom.data[key] \u003d payload",
+          "sessionScope": false,
+          "viewScope": false
+        }
+      ]
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "custom": {
+    "AlarmSummary": null,
+    "alarmStyle": null
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Modules/Control Modules/100AI100"
+  },
+  "propConfig": {
+    "custom.AlarmSummary": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Summary/Information"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.alarmStyle": {
+      "binding": {
+        "config": {
+          "path": "view.custom.AlarmSummary"
+        },
+        "transforms": [
+          {
+            "code": "\treturn Standard.Modules.Alarms.GetAlarmStyle(AlarmSummary\u003dvalue)\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 435
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tlogger \u003d system.util.getLogger(\"AlarmACKFromFaceplate\")\n\n\talarmIdArray \u003d self.custom.unackedEventIDs\n\t\n\t\n\t#Acknowledge Only UnAcked EventIDs\n\tif len(alarmIdArray) \u003e 0:\n\t\tlogger.info(\"AlarmIdArray: \" + str(alarmIdArray))\t\n\t\tsystem.alarm.acknowledge(alarmIdArray,\"Acknowledge From Faceplate\",self.session.props.auth.user.userName)\n\t\tsystem.perspective.print(message\u003d\"Acknowledge From Faceplate\")\n\t\n\t\t\t\n\t#Write Cmd Acknowledge Tag\n\ttagPath \u003d self.view.params.TagPath\n\ttags \u003d system.tag.browse(path\u003dtagPath,filter\u003d{\"recursive\":True,\"name\":\"*Acknowledge*\"})\n\tacknowledgeTagPaths \u003d []\n\tacknowledgeValues \u003d []\n\tfor tag in tags:\n\t\ttagValue \u003d tag[\u0027value\u0027]\n\t\tif tagValue.value\u003d\u003dFalse:\n\t\t\tacknowledgeTagPaths.append(str(tag[\u0027fullPath\u0027]))\n\t\t\tacknowledgeValues.append(True)\n\tsystem.tag.writeBlocking(tagPaths\u003dacknowledgeTagPaths, values\u003dacknowledgeValues)\n"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "ButtonAck"
+        },
+        "position": {
+          "basis": "60px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "custom.allAlarms": {
+            "binding": {
+              "config": {
+                "path": "view.custom.AlarmSummary.PriorityDetail"
+              },
+              "transforms": [
+                {
+                  "code": "\tids \u003d []\n\tfor priority in value.values():\n\t\tdetail \u003d priority[\"Detail\"]\n\t\tfor alarm in detail:\n\t\t\tid \u003d alarm[\"EventID\"]\n\t\t\tstate \u003d alarm[\"State\"]\n\t\t\tids.append({\"EventID\":id,\"State\":state})\n\n\treturn ids",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "custom.unackedEventIDs": {
+            "binding": {
+              "config": {
+                "path": "this.custom.allAlarms"
+              },
+              "transforms": [
+                {
+                  "code": "\tids \u003d []\n\tfor alarm in value:\n\t\tif \u0027Unacknowledged\u0027 in alarm[\"State\"]:\n\t\t\tid \u003d alarm[\"EventID\"]\n\t\t\tids.append(id)\n\n\treturn ids",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "position.display": {
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Button/Default"
+          },
+          "text": "Acknowledge All Alarms"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

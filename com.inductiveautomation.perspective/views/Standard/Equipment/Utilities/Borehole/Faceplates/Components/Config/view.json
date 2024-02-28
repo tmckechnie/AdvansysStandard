@@ -1,0 +1,1063 @@
+{
+  "custom": {
+    "Description": "Jibeng - Borehole",
+    "LastDurationChange": {
+      "totalSeconds": 34,
+      "tsFormated": "2023-01-24 15:16:42"
+    },
+    "LastTimeChange": {
+      "$": [
+        "ts",
+        192,
+        1674566210342
+      ],
+      "$ts": 1674566202000
+    },
+    "PacketsRecieved": 7096,
+    "lastTimeChange": "2023-01-24 15:16:42 (0:0:34)"
+  },
+  "params": {
+    "TagPath": "[TPPSCV01003]Utilities/Water/Jibeng/Jibeng Borehole"
+  },
+  "propConfig": {
+    "custom.Description": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/Description"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.LastDurationChange": {
+      "binding": {
+        "config": {
+          "struct": {
+            "totalSeconds": "secondsBetween({view.custom.LastTimeChange}, now(1000))\r\n",
+            "tsFormated": "dateFormat({view.custom.LastTimeChange},\"yyyy-MM-dd HH:mm:ss\")"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\treturn value\n\tnow \u003d system.date.now()\n\ttotalSeconds \u003d system.date.secondsBetween(value, now)\n\ttsFormated \u003d system.date.format(value)\n\treturn {\u0027tsFormated\u0027:tsFormated,\u0027totalSeconds\u0027:totalSeconds}",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.LastTimeChange": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/History/PacketsRecievedCount.Timestamp"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.PacketsRecieved": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/History/PacketsRecievedCount"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.lastTimeChange": {
+      "binding": {
+        "config": {
+          "path": "view.custom.LastDurationChange"
+        },
+        "transforms": [
+          {
+            "code": "\ttotalSeconds \u003d value[\u0027totalSeconds\u0027]\n\ttsFormated \u003d value[\u0027tsFormated\u0027]\n\thours \u003d totalSeconds/3600.0\n\tif hours\u003c1.0:\n\t\thours \u003d 0\n\thours \u003d int(hours)\n\tminutes \u003d totalSeconds/60.0-hours*60.0\n\tif minutes\u003c\u003d1:\n\t\tminutes \u003d 0\n\tminutes \u003d int(minutes)\n\tseconds \u003d totalSeconds - hours*3600 - minutes*60\n\tseconds \u003d int(seconds)\n\tduration \u003d \" (%s:%s:%s)\"%(hours,minutes,seconds)\n\t\n\treturn tsFormated + duration  ",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 441,
+      "width": 343
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px",
+              "shrink": 0
+            },
+            "props": {
+              "params": {
+                "Title": "Configuration"
+              },
+              "path": "Standard/Equipment/Utilities/Components/Faceplate/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "LabelName"
+                    },
+                    "position": {
+                      "basis": "180px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#D5D5D5",
+                        "fontSize": 13,
+                        "fontWeight": "bold",
+                        "textAlign": "center"
+                      },
+                      "text": "Tag"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "LabelValue"
+                    },
+                    "position": {
+                      "basis": "200px",
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#D5D5D5",
+                        "fontSize": 13,
+                        "fontWeight": "bold",
+                        "textAlign": "center"
+                      },
+                      "text": "Value"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "LabelMin"
+                    },
+                    "position": {
+                      "basis": "200px",
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#D5D5D5",
+                        "fontSize": 13,
+                        "fontWeight": "bold",
+                        "textAlign": "center"
+                      },
+                      "text": "Min"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "LabelMax"
+                    },
+                    "position": {
+                      "basis": "200px",
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#D5D5D5",
+                        "fontSize": 13,
+                        "fontWeight": "bold",
+                        "textAlign": "center"
+                      },
+                      "text": "Max"
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexHeading"
+                },
+                "position": {
+                  "basis": "5px",
+                  "grow": 1
+                },
+                "props": {
+                  "style": {
+                    "marginLeft": 5,
+                    "marginRight": 5,
+                    "marginTop": 5
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "LabelName"
+                    },
+                    "position": {
+                      "basis": "150px",
+                      "shrink": 0
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "path": "parent.custom.tagName"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#D5D5D5",
+                        "classes": "Popups/Text"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "LabelValue"
+                    },
+                    "position": {
+                      "basis": "200px",
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "expression": "round({parent.custom.RawValue},4) + {parent.custom.RawEngUnit}+\" - \" + round({parent.custom.Value},1) + \"%\""
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#D5D5D578",
+                        "classes": "Popups/Text",
+                        "textAlign": "center"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "NumericMin"
+                    },
+                    "position": {
+                      "basis": "150px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}",
+                              "tagName": "{parent.custom.tagName}"
+                            },
+                            "tagPath": "{TagPath}\\Parameters.{tagName}RawMin"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "containerStyle": {
+                        "textAlign": "center"
+                      },
+                      "style": {
+                        "classes": "Popups/Text",
+                        "textAlign": "center"
+                      }
+                    },
+                    "type": "ia.input.numeric-entry-field"
+                  },
+                  {
+                    "meta": {
+                      "name": "NumericMax"
+                    },
+                    "position": {
+                      "basis": "150px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}",
+                              "tagName": "{parent.custom.tagName}"
+                            },
+                            "tagPath": "{TagPath}\\Parameters.{tagName}RawMax"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "containerStyle": {
+                        "textAlign": "center"
+                      },
+                      "style": {
+                        "classes": "Popups/Text",
+                        "textAlign": "center"
+                      }
+                    },
+                    "type": "ia.input.numeric-entry-field"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexLevel"
+                },
+                "position": {
+                  "basis": "10px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "custom.RawEngUnit": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "tagName": "{this.custom.tagName}"
+                        },
+                        "tagPath": "{TagPath}/{tagName}/RawValue.EngUnit"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "custom.RawValue": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "tagName": "{this.custom.tagName}"
+                        },
+                        "tagPath": "{TagPath}/{tagName}/RawValue"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "custom.Value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "tagName": "{this.custom.tagName}"
+                        },
+                        "tagPath": "{TagPath}/{tagName}/Value"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "custom.tagName": {
+                    "binding": {
+                      "config": {
+                        "expression": "replace({this.meta.name},\"Flex\",\"\")"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "marginLeft": 5,
+                    "marginRight": 5,
+                    "marginTop": 5
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "LabelName"
+                    },
+                    "position": {
+                      "basis": "150px",
+                      "shrink": 0
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "path": "parent.custom.tagName"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#D5D5D5",
+                        "classes": "Popups/Text"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "LabelValue"
+                    },
+                    "position": {
+                      "basis": "200px",
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "expression": "round({parent.custom.RawValue},4) + {parent.custom.RawEngUnit}+\" - \" + round({parent.custom.Value},1) + \"%\""
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#D5D5D578",
+                        "classes": "Popups/Text",
+                        "textAlign": "center"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "NumericMin"
+                    },
+                    "position": {
+                      "basis": "150px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}",
+                              "tagName": "{parent.custom.tagName}"
+                            },
+                            "tagPath": "{TagPath}\\Parameters.{tagName}RawMin"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "containerStyle": {
+                        "textAlign": "center"
+                      },
+                      "style": {
+                        "classes": "Popups/Text",
+                        "textAlign": "center"
+                      }
+                    },
+                    "type": "ia.input.numeric-entry-field"
+                  },
+                  {
+                    "meta": {
+                      "name": "NumericMax"
+                    },
+                    "position": {
+                      "basis": "150px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}",
+                              "tagName": "{parent.custom.tagName}"
+                            },
+                            "tagPath": "{TagPath}\\Parameters.{tagName}RawMax"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "containerStyle": {
+                        "textAlign": "center"
+                      },
+                      "style": {
+                        "classes": "Popups/Text",
+                        "textAlign": "center"
+                      }
+                    },
+                    "type": "ia.input.numeric-entry-field"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexFlow"
+                },
+                "position": {
+                  "basis": "10px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "custom.RawEngUnit": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "tagName": "{this.custom.tagName}"
+                        },
+                        "tagPath": "{TagPath}/{tagName}/RawValue.EngUnit"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "custom.RawValue": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "tagName": "{this.custom.tagName}"
+                        },
+                        "tagPath": "{TagPath}/{tagName}/RawValue"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "custom.Value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "tagName": "{this.custom.tagName}"
+                        },
+                        "tagPath": "{TagPath}/{tagName}/Value"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "custom.tagName": {
+                    "binding": {
+                      "config": {
+                        "expression": "replace({this.meta.name},\"Flex\",\"\")"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "marginLeft": 5,
+                    "marginRight": 5,
+                    "marginTop": 5
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "LabelName"
+                    },
+                    "position": {
+                      "basis": "150px",
+                      "shrink": 0
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "path": "parent.custom.tagName"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#D5D5D5",
+                        "classes": "Popups/Text"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "LabelValue"
+                    },
+                    "position": {
+                      "basis": "200px",
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "expression": "round({parent.custom.RawValue},4) + {parent.custom.RawEngUnit}+\" - \" + round({parent.custom.Value},1) + \"%\""
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#D5D5D578",
+                        "classes": "Popups/Text",
+                        "textAlign": "center"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "NumericMin"
+                    },
+                    "position": {
+                      "basis": "150px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}",
+                              "tagName": "{parent.custom.tagName}"
+                            },
+                            "tagPath": "{TagPath}\\Parameters.{tagName}RawMin"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "containerStyle": {
+                        "textAlign": "center"
+                      },
+                      "style": {
+                        "classes": "Popups/Text",
+                        "textAlign": "center"
+                      }
+                    },
+                    "type": "ia.input.numeric-entry-field"
+                  },
+                  {
+                    "meta": {
+                      "name": "NumericMax"
+                    },
+                    "position": {
+                      "basis": "150px"
+                    },
+                    "propConfig": {
+                      "props.value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}",
+                              "tagName": "{parent.custom.tagName}"
+                            },
+                            "tagPath": "{TagPath}\\Parameters.{tagName}RawMax"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "containerStyle": {
+                        "textAlign": "center"
+                      },
+                      "style": {
+                        "classes": "Popups/Text",
+                        "textAlign": "center"
+                      }
+                    },
+                    "type": "ia.input.numeric-entry-field"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexPressure"
+                },
+                "position": {
+                  "basis": "10px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "custom.RawEngUnit": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "tagName": "{this.custom.tagName}"
+                        },
+                        "tagPath": "{TagPath}/{tagName}/RawValue.EngUnit"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "custom.RawValue": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "tagName": "{this.custom.tagName}"
+                        },
+                        "tagPath": "{TagPath}/{tagName}/RawValue"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "custom.Value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "tagName": "{this.custom.tagName}"
+                        },
+                        "tagPath": "{TagPath}/{tagName}/Value"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "custom.tagName": {
+                    "binding": {
+                      "config": {
+                        "expression": "replace({this.meta.name},\"Flex\",\"\")"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "marginLeft": 5,
+                    "marginRight": 5,
+                    "marginTop": 5
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Body"
+            },
+            "position": {
+              "basis": "px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "classes": "Standard/Popups/Content"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Scaling"
+        },
+        "position": {
+          "basis": "150px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px",
+              "shrink": 0
+            },
+            "props": {
+              "params": {
+                "Title": "History"
+              },
+              "path": "Standard/Equipment/Utilities/Components/Faceplate/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "LabelName"
+                    },
+                    "position": {
+                      "basis": "150px",
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#D5D5D5"
+                      },
+                      "text": "Last Timestamp",
+                      "textStyle": {
+                        "classes": "Popups/Text"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "LabelValue"
+                    },
+                    "position": {
+                      "basis": "150px",
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.lastTimeChange"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#D5D5D578",
+                        "textAlign": "right"
+                      },
+                      "textStyle": {
+                        "classes": "Popups/Text"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexLastTimeChange"
+                },
+                "position": {
+                  "basis": "10px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.style.color": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({view.custom.LastDurationChange.totalSeconds} \u003e 330,\"#FF4747\",\"\")"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "marginLeft": 5,
+                    "marginRight": 5,
+                    "marginTop": 5
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "LabelName"
+                    },
+                    "position": {
+                      "basis": "200px",
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#D5D5D5",
+                        "classes": "Popups/Text"
+                      },
+                      "text": "Last Packets"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "events": {
+                      "component": {
+                        "onActionPerformed": {
+                          "config": {
+                            "draggable": false,
+                            "id": "QlY_YUD8",
+                            "modal": true,
+                            "overlayDismiss": true,
+                            "resizable": false,
+                            "showCloseIcon": true,
+                            "title": "{view.custom.Description}",
+                            "type": "open",
+                            "viewParams": {
+                              "DeviceTagPath": "{view.params.Site.deviceTagPath}"
+                            },
+                            "viewPath": "Telemetry Devices/Components/PacketHistory",
+                            "viewportBound": false
+                          },
+                          "enabled": false,
+                          "scope": "C",
+                          "type": "popup"
+                        }
+                      }
+                    },
+                    "meta": {
+                      "name": "Button"
+                    },
+                    "position": {
+                      "basis": "200px",
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "expression": "\"Recieved Count: \" + {view.custom.PacketsRecieved}"
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "backgroundColor": "#808080"
+                      },
+                      "textStyle": {
+                        "fontSize": 12
+                      }
+                    },
+                    "type": "ia.input.button"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexBuffer"
+                },
+                "position": {
+                  "basis": "10px",
+                  "grow": 1
+                },
+                "props": {
+                  "style": {
+                    "marginBottom": 5,
+                    "marginLeft": 5,
+                    "marginRight": 5,
+                    "marginTop": 5
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Body"
+            },
+            "position": {
+              "basis": "20px",
+              "grow": 1
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "classes": "Standard/Popups/Content"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Configuration"
+        },
+        "position": {
+          "basis": "150px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

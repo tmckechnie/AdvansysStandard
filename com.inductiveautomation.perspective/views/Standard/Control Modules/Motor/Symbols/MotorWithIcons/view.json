@@ -1,0 +1,922 @@
+{
+  "custom": {
+    "AlarmSummary": null,
+    "ModuleType": "Motor",
+    "References": {
+      "Abbreviation": "M"
+    },
+    "Styling": {
+      "Base": {},
+      "Default": {
+        "Container": "Standard/Body/Symbols/SVG/Container"
+      },
+      "Display": {},
+      "SVG": {
+        "Basic": " Standard/Body/Symbols/SVG/Basic"
+      }
+    }
+  },
+  "params": {
+    "Cfg": {
+      "AbbreviationOverwrite": ""
+    },
+    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV05/100M005"
+  },
+  "propConfig": {
+    "custom.AlarmSummary": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Summary/Information"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ModuleType": {
+      "persistent": true
+    },
+    "custom.References": {
+      "persistent": true
+    },
+    "custom.References.Activating": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Starting"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.Active": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/In/Running"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.Command": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Out/Start"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.DeActivating": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Stopping"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.Delay": {
+      "binding": {
+        "config": {
+          "struct": {
+            "delaySiren": "tag({view.params.TagPath}+\"/Sts/DelaySirenElapsed\")",
+            "delaySirenSP": "tag({view.params.TagPath}+\"/Cfg/DelaySirenTime\")",
+            "delayStart": "tag({view.params.TagPath}+\"/Sts/DelayStartElapsed\")",
+            "delayStartSP": "tag({view.params.TagPath}+\"/Cfg/DelayStartTime\")",
+            "delayStop": "tag({view.params.TagPath}+\"/Sts/DelayStopElapsed\")",
+            "delayStopSP": "tag({view.params.TagPath}+\"/Cfg/DelayStopTime\")"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "expression": "if({value}[\"delayStart\"]\u003e0 \u0026 {value}[\"delayStart\"]\u003c{value}[\"delayStartSP\"],{value}[\"delayStart\"],0) +\r\nif({value}[\"delayStop\"]\u003e0 \u0026 {value}[\"delayStop\"]\u003c{value}[\"delayStopSP\"],{value}[\"delayStop\"],0) +\r\nif({value}[\"delaySiren\"]\u003e0 \u0026 {value}[\"delaySiren\"]\u003c{value}[\"delaySirenSP\"],{value}[\"delaySiren\"],0)",
+            "type": "expression"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.References.Description": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/Description"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.Identify": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Id/Identify"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.InstanceName": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/InstanceName"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.Interlocked": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Interlock/Interlocked"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.Mode": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cmd/Mode"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.Passive": {
+      "binding": {
+        "config": {
+          "expression": "!{view.custom.References.Active}"
+        },
+        "type": "expr"
+      }
+    },
+    "custom.References.SelfIdentifyRequest": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Id/SelfIdentifyRequest"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.ShortDescription": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/ShortDescription"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.Simulated": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sim/Active"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.Siren": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Out/Siren"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.State": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/In/Running"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Styling": {
+      "persistent": true
+    },
+    "custom.Styling.Base.Alarm": {
+      "binding": {
+        "config": {
+          "path": "view.custom.AlarmSummary"
+        },
+        "transforms": [
+          {
+            "code": "\t \n\tstyle \u003d Standard.Modules.Alarms.GetAlarmStyle(AlarmSummary\u003dvalue,ComponentPart\u003d\"Outline\")\n\treturn style[\u0027classes\u0027]\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Styling.Base.Identify": {
+      "binding": {
+        "config": {
+          "path": "view.custom.References.Identify"
+        },
+        "transforms": [
+          {
+            "fallback": "Standard/Body/Symbols/Base/Basic",
+            "inputType": "scalar",
+            "mappings": [
+              {
+                "input": true,
+                "output": "Standard/Body/Symbols/Base/Basic Standard/Body/Symbols/Base/Identify"
+              }
+            ],
+            "outputType": "style-list",
+            "type": "map"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Styling.Base.Simulated": {
+      "binding": {
+        "config": {
+          "path": "view.custom.References.Simulated"
+        },
+        "transforms": [
+          {
+            "fallback": "{view.custom.Styling.Default.Container}",
+            "inputType": "scalar",
+            "mappings": [
+              {
+                "input": true,
+                "output": "\"Standard/Body/Symbols/Base/Simulated\""
+              }
+            ],
+            "outputType": "expression",
+            "type": "map"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Styling.Display.Mode": {
+      "binding": {
+        "config": {
+          "path": "view.custom.References.Mode"
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols/Displays/Mode\"\n\tstyle \u003d \"\"\t\t\n\tmode \u003d value\n\tif mode \u003d\u003d 0:#Maintenance\n\t\tstyle +\u003d  \" \" + baseStyle + \"/Maintenance\"\t\t\t\n\telif mode \u003d\u003d 1:#Manual\n\t\tstyle +\u003d \" \" + baseStyle + \"/Manual\"\n\telif mode \u003d\u003d 2:#Auto\n\t\tstyle +\u003d \" \" + baseStyle + \"/Auto\"\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Styling.Display.Selected": {
+      "binding": {
+        "config": {
+          "path": "view.custom.References.Selected"
+        },
+        "transforms": [
+          {
+            "fallback": "Standard/Body/Symbols/Displays/Container Standard/Body/Symbols/Displays/Selection/UnSelected",
+            "inputType": "scalar",
+            "mappings": [
+              {
+                "input": true,
+                "output": "Standard/Body/Symbols/Displays/Container Standard/Body/Symbols/Displays/Selection/Selected"
+              }
+            ],
+            "outputType": "style-list",
+            "type": "map"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Styling.Display.Simulated": {
+      "binding": {
+        "config": {
+          "path": "view.custom.References.Simulated"
+        },
+        "transforms": [
+          {
+            "fallback": "Standard/Body/Symbols/Displays/Container",
+            "inputType": "scalar",
+            "mappings": [
+              {
+                "input": true,
+                "output": "Standard/Body/Symbols/Base/Simulated"
+              }
+            ],
+            "outputType": "style-list",
+            "type": "map"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Styling.Display.State": {
+      "binding": {
+        "config": {
+          "struct": {
+            "interlocked": "{view.custom.References.Interlocked}",
+            "state": "{view.custom.References.State}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols/Displays\"\n\tstyle \u003d baseStyle + \"/Container \"\n\n\tif value[\"state\"]:\n\t\tstyle +\u003d baseStyle + \"/Fill/Active\"\t\n\telse:\n\t\tstyle +\u003d baseStyle + \"/Fill/Passive\"\n\t\t\t\t\n\tif value[\"interlocked\"]:\n\t\tstyle \u003d baseStyle + \"/Fill/Interlocked \" + baseStyle + \"/Fill/InterlockedText\"\n\t\t\n\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Styling.Display.StateText": {
+      "binding": {
+        "config": {
+          "struct": {
+            "interlocked": "{view.custom.References.Interlocked}",
+            "state": "{view.custom.References.State}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols/Displays\"\n\tstyle \u003d \"\"\n\n\tif value[\"interlocked\"]:\n\t\treturn baseStyle + \"/Text/Interlocked\"\n\t\t\n\n\tif value[\"state\"]:\n\t\tstyle +\u003d baseStyle + \"/Text/Active\"\t\n\telse:\n\t\tstyle +\u003d baseStyle + \"/Text/Passive\"\n\t\t\t\t\n\n\t\t\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Styling.SVG.Active": {
+      "binding": {
+        "config": {
+          "struct": {
+            "activating": "{view.custom.References.Activating}",
+            "deActivating": "{view.custom.References.DeActivating}",
+            "interlocked": "{view.custom.References.Interlocked}",
+            "state": "{view.custom.References.Active}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols/SVG\"\n\tstyle \u003d \"\"\n\tif value[\"state\"]:\n\t\tstyle \u003d baseStyle + \"/Fill/Active\"\t\n\telse:\n\t\tstyle \u003d baseStyle + \"/Fill/Passive\"\n\t\n\tif value[\"activating\"]:\n\t\treturn baseStyle + \"/Fill/PassiveActive\"\n\t\n\tif value[\"deActivating\"]:\n\t\treturn baseStyle + \"/Fill/ActivePassive\"\n\t\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Styling.SVG.Command": {
+      "binding": {
+        "config": {
+          "struct": {
+            "command": "{view.custom.References.Command}",
+            "interlocked": "{view.custom.References.Interlocked}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols/SVG\"\n\tstyle \u003d baseStyle + \"/Basic \"\n\n\tif value[\"command\"]:\n\t\tstyle \u003d baseStyle + \"/Fill/Active\"\t\n\telse:\n\t\tstyle \u003d baseStyle + \"/Fill/Passive\"\n\t\t\t\t\n\tif value[\"interlocked\"]:\n\t\tstyle \u003d baseStyle + \"/Fill/Interlocked \" + baseStyle + \"/Fill/InterlockedText\"\n\t\t\n\tstyle +\u003d \" \" + baseStyle + \"/Basic \"\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Styling.SVG.Mode": {
+      "binding": {
+        "config": {
+          "path": "view.custom.References.Mode"
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols/SVG/Mode\"\n\tstyle \u003d \"\"\t\t\n\tmode \u003d value\n\tif mode \u003d\u003d 0:#Maintenance\n\t\tstyle +\u003d  \" \" + baseStyle + \"/Maintenance\"\t\t\t\n\telif mode \u003d\u003d 1:#Manual\n\t\tstyle +\u003d \" \" + baseStyle + \"/Manual\"\n\telif mode \u003d\u003d 2:#Auto\n\t\tstyle +\u003d \" \" + baseStyle + \"/Auto\"\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Styling.SVG.Passive": {
+      "binding": {
+        "config": {
+          "struct": {
+            "activating": "{view.custom.References.Activating}",
+            "deActivating": "{view.custom.References.DeActivating}",
+            "interlocked": "{view.custom.References.Interlocked}",
+            "state": "{view.custom.References.Passive}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols/SVG\"\n\tstyle \u003d \"\"\n\tif value[\"state\"]:\n\t\tstyle \u003d baseStyle + \"/Fill/Active\"\t\n\telse:\n\t\tstyle \u003d baseStyle + \"/Fill/Passive\"\n\t\t\n\tif value[\"activating\"]:\n\t\treturn baseStyle + \"/Fill/PassiveActive\"\n\t\n\tif value[\"deActivating\"]:\n\t\treturn baseStyle + \"/Fill/ActivePassive\"\t\n\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Styling.SVG.State": {
+      "binding": {
+        "config": {
+          "struct": {
+            "activating": "{view.custom.References.Activating}",
+            "deActivating": "{view.custom.References.DeActivating}",
+            "interlocked": "{view.custom.References.Interlocked}",
+            "state": "{view.custom.References.State}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols/SVG\"\n\tstyle \u003d baseStyle + \"/Basic \"\n\n\t#Interlocked\n\tif value[\"interlocked\"]:\n\t\treturn baseStyle + \"/Fill/Interlocked \"\n\n\t#State\n\tif value[\"state\"]:\n\t\tstyle +\u003d baseStyle + \"/Fill/Active\"\t\n\telse:\n\t\tstyle +\u003d baseStyle + \"/Fill/Passive\"\n\t\n\t#Transitioning\t\n\tif value[\"activating\"]:\n\t\treturn baseStyle + \"/Fill/PassiveActive\"\n\t\t\n\tif value[\"deActivating\"]:\n\t\treturn baseStyle + \"/Fill/ActivePassive\"\n\t\t\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Styling.SVG.StateText": {
+      "binding": {
+        "config": {
+          "struct": {
+            "interlocked": "{view.custom.References.Interlocked}",
+            "state": "{view.custom.References.State}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols/SVG\"\n\tstyle \u003d \"\"\n\n\tif value[\"interlocked\"]:\n\t\treturn baseStyle + \"/Text/Interlocked\"\n\t\t\n\n\tif value[\"state\"]:\n\t\tstyle +\u003d baseStyle + \"/Text/Active\"\t\n\telse:\n\t\tstyle +\u003d baseStyle + \"/Text/Passive\"\n\t\t\t\t\n\n\t\t\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "params.Cfg": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 40,
+      "width": 60
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application Default/Control Modules/Motor"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "custom": {
+              "text": {}
+            },
+            "meta": {
+              "name": "SVG"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "propConfig": {
+              "custom.circleStyleClasses": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.Styling.SVG.State} + \" \" + {view.custom.Styling.SVG.Mode}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "custom.text.StyleClasses": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.Styling.SVG.StateText}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "custom.text.value": {
+                "binding": {
+                  "config": {
+                    "expression": "if({view.params.Cfg.AbbreviationOverwrite}\u003d\"\",{view.custom.References.Abbreviation},{view.params.Cfg.AbbreviationOverwrite})"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.elements[0].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.circleStyleClasses"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[1].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.text.StyleClasses"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[1].text": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.text.value"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "elements": [
+                {
+                  "cx": 200,
+                  "cy": 200,
+                  "fill": {
+                    "opacity": 1
+                  },
+                  "name": "Center",
+                  "r": 190,
+                  "stroke": {
+                    "opacity": 1,
+                    "width": 2
+                  },
+                  "style": {
+                    "vector-effect": "non-scaling-stroke"
+                  },
+                  "type": "circle"
+                },
+                {
+                  "fill": {
+                    "opacity": 1
+                  },
+                  "name": "Text",
+                  "stroke": {},
+                  "style": {
+                    "dominant-baseline": "middle",
+                    "fontSize": 200,
+                    "fontWeight": "bold",
+                    "text-anchor": "middle",
+                    "vector-effect": "non-scaling-stroke"
+                  },
+                  "type": "text",
+                  "x": 200,
+                  "y": 220
+                }
+              ],
+              "style": {
+                "classes": "Standard/Body/Symbols/SVG/Basic"
+              },
+              "viewBox": "0 0 400 400"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Quality"
+            },
+            "position": {
+              "height": 0.2,
+              "width": 0.2,
+              "x": 0.4,
+              "y": 0.1
+            },
+            "propConfig": {
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.TagPath} + \"/Id/Self\""
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Bad": true
+              },
+              "path": "Standard/Components/Symbols/Quality",
+              "style": {
+                "overflow": "hidden"
+              }
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "SymbolContainer",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "30px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.References.Description"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.Styling.Base.Simulated} +\" \"+ {view.custom.Styling.Base.Alarm}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "margin": 3,
+            "outline-offset": 1
+          }
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Timer"
+            },
+            "position": {
+              "height": 0.5769,
+              "width": 0.5769
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "expression": "!{view.custom.References.Siren}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.References.Delay"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Units": "s"
+              },
+              "path": "Standard/Components/Symbols/Timer"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Siren"
+            },
+            "position": {
+              "height": 0.5769,
+              "width": 0.5769
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.References.Siren"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.References.Delay"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Units": "s"
+              },
+              "path": "Standard/Components/Symbols/Siren"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Interlock"
+            },
+            "position": {
+              "height": 0.5769,
+              "width": 0.5769
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.References.Interlocked"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.params.Interlocked": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.References.Interlocked"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "path": "Standard/Components/Symbols/Interlock"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "IconContainer"
+        },
+        "position": {
+          "basis": "15px",
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\ttagPath \u003d self.view.params.TagPath\n\tinstanceName \u003d self.view.custom.References.InstanceName\n\tdescription \u003d self.view.custom.References.ShortDescription\n\ttitle \u003d instanceName + \" - \" + description\n\tparamsObject \u003d {\"TagPath\":tagPath}\n\tmoduleType \u003d self.view.custom.ModuleType\n\tfaceplatePath \u003d \"Standard/Control Modules/\"+moduleType+\"/Faceplates/Faceplate\"\n\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003dfaceplatePath)"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "contextMenu": {
+        "items": [
+          {
+            "children": [],
+            "icon": {
+              "color": "",
+              "path": "",
+              "style": {}
+            },
+            "link": {
+              "target": "self",
+              "url": ""
+            },
+            "message": {
+              "payload": {},
+              "scope": "page",
+              "type": ""
+            },
+            "method": {
+              "name": "ClearSelfIdentifyRequest",
+              "params": {}
+            },
+            "style": {
+              "classes": ""
+            },
+            "text": "Clear Identify",
+            "type": "method"
+          }
+        ],
+        "style": {
+          "classes": "Standard/Body/Symbols/ContextMenuButton"
+        }
+      },
+      "name": "root"
+    },
+    "propConfig": {
+      "meta.contextMenu.enabled": {
+        "binding": {
+          "config": {
+            "path": "view.custom.References.Identify"
+          },
+          "type": "property"
+        }
+      },
+      "props.style.classes": {
+        "binding": {
+          "config": {
+            "path": "view.custom.Styling.Base.Identify"
+          },
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "style": {}
+    },
+    "scripts": {
+      "customMethods": [
+        {
+          "name": "ClearSelfIdentifyRequest",
+          "params": [],
+          "script": "\t#ClearSelfIdentifyRequest\n\tself.view.custom.References.SelfIdentifyRequest \u003d False"
+        }
+      ],
+      "extensionFunctions": null,
+      "messageHandlers": []
+    },
+    "type": "ia.container.flex"
+  }
+}

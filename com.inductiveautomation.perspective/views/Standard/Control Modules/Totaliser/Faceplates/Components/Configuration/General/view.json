@@ -1,0 +1,324 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/100T100"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 215,
+      "width": 350
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Enable"
+        },
+        "position": {
+          "basis": "25px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Cfg/{name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Format": null,
+            "Label": "Enable",
+            "ShowLabel": true,
+            "Units": null,
+            "options": [
+              {
+                "label": "Enable",
+                "value": true
+              },
+              {
+                "label": "Disable",
+                "value": false
+              }
+            ]
+          },
+          "path": "Standard/Components/Faceplates/Input/LabelDropdown"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Target"
+        },
+        "position": {
+          "basis": "25px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.Format": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Cfg/{name}.FormatString"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Units": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Cfg/{name}.EngUnit"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Cfg/{name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Label": "Target",
+            "ShowLabel": true
+          },
+          "path": "Standard/Components/Faceplates/Input/LabelNumericEntryField",
+          "style": {
+            "marginBottom": 3,
+            "marginTop": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "TotaliserType"
+        },
+        "position": {
+          "basis": "25px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Cfg/{name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Label": "Totaliser Type",
+            "ShowLabel": true,
+            "options": [
+              {
+                "label": "Pulse",
+                "value": 0
+              },
+              {
+                "label": "Analog Input",
+                "value": 1
+              },
+              {
+                "label": "Counter",
+                "value": 2
+              }
+            ]
+          },
+          "path": "Standard/Components/Faceplates/Input/LabelDropdown"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Increment"
+        },
+        "position": {
+          "basis": "25px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.Format": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Cfg/{name}.FormatString"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Units": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Cfg/{name}.EngUnit"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Cfg/{name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Label": "Increment",
+            "ShowLabel": true
+          },
+          "path": "Standard/Components/Faceplates/Input/LabelNumericEntryField",
+          "style": {
+            "marginBottom": 3,
+            "marginTop": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Timebase"
+        },
+        "position": {
+          "basis": "25px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Cfg/{name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Label": "Timebase",
+            "ShowLabel": true,
+            "options": [
+              {
+                "label": "Second",
+                "value": 0
+              },
+              {
+                "label": "Minute",
+                "value": 1
+              },
+              {
+                "label": "Hour",
+                "value": 2
+              }
+            ]
+          },
+          "path": "Standard/Components/Faceplates/Input/LabelDropdown"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

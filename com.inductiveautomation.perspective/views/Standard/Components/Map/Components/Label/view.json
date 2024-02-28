@@ -1,0 +1,126 @@
+{
+  "custom": {},
+  "params": {
+    "DefaultHeight": 50,
+    "DefaultWidth": 200,
+    "ModelItemTagPath": "[Standard]Standard/Model Item",
+    "Visible": false
+  },
+  "propConfig": {
+    "params.DefaultHeight": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.DefaultWidth": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ModelItemTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Visible": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "props.defaultSize.height": {
+      "binding": {
+        "config": {
+          "path": "view.params.DefaultHeight"
+        },
+        "type": "property"
+      }
+    },
+    "props.defaultSize.width": {
+      "binding": {
+        "config": {
+          "path": "view.params.DefaultWidth"
+        },
+        "type": "property"
+      }
+    }
+  },
+  "props": {
+    "defaultSize": {}
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Site Label"
+        },
+        "position": {
+          "basis": "150px",
+          "grow": 1
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "view.params.Visible"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "ModelItemTagPath": "{view.params.ModelItemTagPath}"
+                },
+                "tagPath": "{ModelItemTagPath}/Name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Alarm Summary"
+        },
+        "position": {
+          "basis": "150px",
+          "grow": 1
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "view.params.Visible"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.ModelItemTagPath": {
+            "binding": {
+              "config": {
+                "path": "view.params.ModelItemTagPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Navigation/Components/Alarm Summary",
+          "useDefaultViewHeight": true,
+          "useDefaultViewWidth": true
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignContent": "center",
+      "alignItems": "center",
+      "direction": "column",
+      "justify": "center"
+    },
+    "type": "ia.container.flex"
+  }
+}

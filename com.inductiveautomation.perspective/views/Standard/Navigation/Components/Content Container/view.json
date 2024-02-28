@@ -1,0 +1,326 @@
+{
+  "custom": {
+    "CurrentModelItem": {
+      "ContentType": "Overview",
+      "Path": "0",
+      "SearchModule": ""
+    },
+    "assetSearch": {
+      "projectName": "AdvansysStandardDevelopment"
+    },
+    "currentModelItem": {
+      "BaseViewPath": "Model Views/StandardS71500/Standard",
+      "ModelItemTagPath": "[StandardS71500]Standard/Model Item",
+      "Name": "Standard",
+      "Order": 0,
+      "Path": "0",
+      "TagFolderName": "Standard",
+      "ViewPaths": [
+        {
+          "ContentType": [
+            "Footer Alarms"
+          ],
+          "Label": "Alarms",
+          "Order": 0,
+          "PagePath": "",
+          "Roles": [],
+          "ViewPath": "*Alarms/Alarms",
+          "key": "kNew1"
+        },
+        {
+          "ContentType": [
+            "Overview"
+          ],
+          "Label": "Overview",
+          "Order": 0,
+          "PagePath": "",
+          "Roles": [],
+          "ViewPath": "*Overview/Overview",
+          "key": "k0"
+        }
+      ]
+    },
+    "views": [
+      {
+        "exist": true,
+        "label": "Overview",
+        "order": 0,
+        "params": {},
+        "viewPath": "Model Views/StandardS71500/Standard/Overview/Overview"
+      }
+    ]
+  },
+  "params": {
+    "ContentType": "Overview",
+    "Exists": true
+  },
+  "propConfig": {
+    "custom.CurrentModelItem": {
+      "binding": {
+        "config": {
+          "struct": {
+            "currentModelItem": "{session.custom.CurrentModelItem}",
+            "pageId": "{page.props.pageId}",
+            "useSessionModelItem": "{session.custom.UseSessionModelItem}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tcurrentModelItem \u003d value[\u0027currentModelItem\u0027]\n\tuseSessionModelItem \u003d value[\u0027useSessionModelItem\u0027]\n\tpageId \u003d value[\u0027pageId\u0027]\n\treturn Standard.Navigation.Common.GetCurrentModelItem(CurrentModelItem\u003dcurrentModelItem,UseSession\u003duseSessionModelItem,PerspectivePageID\u003dpageId)",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.assetSearch": {
+      "persistent": true
+    },
+    "custom.assetSearch.asset": {
+      "binding": {
+        "config": {
+          "struct": {
+            "projectName": "{view.custom.assetSearch.projectName}",
+            "viewPath": "{view.custom.assetSearch.viewPath}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\t#return value\n\t\t\t\n\tprojectName \u003d value[\u0027projectName\u0027] # e.g. \u0027AwesomeProject\u0027\n\tviewPath \u003d value[\u0027viewPath\u0027]  # e.g. \u0027Testing/View to Modify\u0027\n\t#import os,time\n\tfrom com.inductiveautomation.ignition.gateway import IgnitionGateway\n\tcontext \u003d IgnitionGateway.get()\n\tprojectParentFolder \u003d str(context.systemManager.dataDir.absoluteFile).replace(\u0027\\\\\u0027,\u0027/\u0027) + \u0027/projects\u0027\t\n\tprojectFolder \u003d projectParentFolder + \u0027/\u0027 + projectName\n\tviewFolder \u003d projectFolder + \u0027/com.inductiveautomation.perspective/views/\u0027 + viewPath\n\t#return viewFolder\n\tviewJsonFile \u003d viewFolder + \u0027/view.json\u0027\n\t#return viewJsonFile\n\t#return  time.ctime(os.path.getmtime(viewJsonFile))\n\t\n\t# read the view resource file as a string\n\tviewJsonStr \u003d system.file.readFileAsString(viewJsonFile)\n\t# convert it to Python objects (lists and dicts)\n\tviewJsonObj \u003d system.util.jsonDecode(viewJsonStr)\n\t#return viewJsonObj\n\tchildren \u003d viewJsonObj[\u0027root\u0027][\u0027children\u0027]\n\tassets \u003d []\n\tfor child in children:\n\t\tchildType \u003d child[\u0027type\u0027]\n\t\tif childType \u003d\u003d \u0027ia.display.view\u0027 and \u0027params\u0027 in child[\u0027props\u0027]:\n\t\t\tparams \u003d child[\u0027props\u0027][\u0027params\u0027]\n\t\t\tif \u0027TagPath\u0027 in params:\n\t\t\t\tasset \u003d {}\n\t\t\t\tasset[\u0027TagPath\u0027]\u003dparams[\u0027TagPath\u0027]\n\t\t\t\tasset[\u0027position\u0027]\u003dchild[\u0027position\u0027]\n\t\t\t\tassets.append(asset)\n\treturn assets\n\t\t\t\t\t",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.assetSearch.viewPath": {
+      "binding": {
+        "config": {
+          "path": "view.custom.views[0].viewPath"
+        },
+        "type": "property"
+      }
+    },
+    "custom.currentModelItem": {
+      "binding": {
+        "config": {
+          "struct": {
+            "modelItems": "{session.custom.ModelItems}",
+            "path": "{view.custom.CurrentModelItem.Path}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tmodelItems \u003d value[\"modelItems\"]\n\tpath \u003d value[\"path\"]\n\tmodelItem \u003d Standard.Navigation.Common.GetModelItemByPath(ModelItems \u003d modelItems,Path \u003d path)\n\treturn modelItem[\u0027data\u0027]",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.views": {
+      "binding": {
+        "config": {
+          "struct": {
+            "baseViewPath": "{view.custom.currentModelItem.BaseViewPath}",
+            "myContentType": "{view.params.ContentType}",
+            "viewPathArray": "{view.custom.currentModelItem.ViewPaths}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tviewPathArray \u003d value[\"viewPathArray\"]\n\tmyContentType \u003d value[\"myContentType\"]\n\tbaseViewPath \u003d value[\"baseViewPath\"]\n\tcurrentProvider \u003d (baseViewPath).split(\"/\")[1]\n\tfirstNodeViewPath \u003d (baseViewPath).split(\"/\")[:2]\n\tfirstNodeViewPath \u003d \"/\".join(firstNodeViewPath)\n\tprojectInfoViews \u003d system.perspective.getProjectInfo()[\u0027views\u0027]\n\t\n\tdef checkIfViewExist(viewPath):\n\t\tfor vpObject in projectInfoViews:\n\t\t\tvp \u003d vpObject[\u0027path\u0027]\n\t\t\tif str(viewPath) \u003d\u003d str(vp):\n\t\t\t\treturn True\n\t\treturn False\n\n\n\tdef getView(viewPathWithWildCard):\n\t\tviewPath \u003d baseViewPath + \"/\" + viewPathWithWildCard[1:]\n\t\t#Standard.Utilities.Common.PrintPerspectiveMessage(Message\u003d\"Check if view exists:\"  + viewPath,DebugLevel \u003d 1)\n\t\tif checkIfViewExist(viewPath\u003dviewPath):\n\t\t\treturn {\u0027exist\u0027:True,\u0027viewPath\u0027:viewPath}\n\n\t\tcurrentFolderPaths \u003d baseViewPath.split(\"/\")\n\t\tfor i in range(-1*len(currentFolderPaths),0):\n\t\t\t#system.perspective.print(\"\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\"+str(i))\n\t\t\tpreViewPath \u003d viewPath\n\t\t\tpath \u003d \"/\".join(currentFolderPaths[0:-1*i])\n\t\t\tviewPath \u003d path +  \"/\" + viewPathWithWildCard[1:]\n\t\t\t#Standard.Utilities.Common.PrintPerspectiveMessage(Message\u003dstr(i)+\" Tree up Path\u003d\" + viewPath,DebugLevel \u003d 1)\n\t\t\tif checkIfViewExist(viewPath\u003dviewPath):\n\t\t\t\treturn {\u0027exist\u0027:True,\u0027viewPath\u0027:viewPath}\n\t\t\tif firstNodeViewPath not in viewPath:\n\t\t\t\treturn {\u0027exist\u0027:False,\u0027viewPath\u0027:preViewPath}\n\t\t\n\t\t#Not Found\n\t\treturn {\u0027exist\u0027:False,\u0027viewPath\u0027:viewPath}\n\t\t\n\t\n\tviews \u003d []\n\tfor viewPathObject in viewPathArray:\n\t\tcontentTypes \u003d viewPathObject[\"ContentType\"]\n\t\tfor contentType in contentTypes:\n\t\t\tif contentType \u003d\u003d myContentType:\n\t\t\t\tview \u003d {}\n\t\t\t\tviewPath \u003d viewPathObject[\"ViewPath\"]\n\t\t\t\t\n\t\t\t\tif viewPath \u003d\u003d \"\":\n\t\t\t\t\tcontinue\n\t\t\t\t#Find View configured With Wild Cards\u0027*\u0027\n\t\t\t\tif viewPath[0]\u003d\u003d\"*\":\n\t\t\t\t\tviewObject \u003d getView(viewPath)\n\t\t\t\t\tviewPath \u003d viewObject[\u0027viewPath\u0027]\n\t\t\t\t\tviewExist \u003d viewObject[\u0027exist\u0027]\n\t\t\t\telse:\n\t\t\t\t\tviewExist \u003d checkIfViewExist(viewPath\u003dviewPath)\n\t\t\t\t\n\t\t\t\tview[\"viewPath\"] \u003d viewPath\n\t\t\t\tview[\"exist\"] \u003d viewExist\n\t\t\t\tview[\"label\"] \u003d viewPathObject[\"Label\"]\n\t\t\t\tview[\"order\"] \u003d viewPathObject[\"Order\"]\n\t\t\t\tview[\"params\"] \u003d {}\n\t\t\t\tif \"Params\" in viewPathObject:\n\t\t\t\t\tview[\"params\"] \u003d viewPathObject[\"Params\"]\n\n\t\t\t\tviews.append(view)\n\n\n\treturn sorted(views,key\u003dlambda row: row[\u0027order\u0027])",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.ContentType": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Exists": {
+      "binding": {
+        "config": {
+          "path": "/root/SingleView.position.display"
+        },
+        "type": "property"
+      },
+      "paramDirection": "output",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TabContainerMultiViews"
+        },
+        "position": {
+          "basis": "35px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "len({view.custom.views})\u003e1"
+              },
+              "type": "expr"
+            }
+          },
+          "props.tabs": {
+            "binding": {
+              "config": {
+                "path": "view.custom.views"
+              },
+              "transforms": [
+                {
+                  "code": "\ttabs \u003d []\n\tfor view in value:\n\t\ttab \u003d view[\"label\"]\n\t\ttabs.append(tab)\n\treturn tabs",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "menuType": "modern"
+        },
+        "type": "ia.container.tab"
+      },
+      {
+        "meta": {
+          "name": "SingleView"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "if(len({view.custom.views})\u003e0,{view.custom.views}[{../TabContainerMultiViews.props.currentTabIndex}][\"exist\"],False)"
+              },
+              "type": "expr"
+            }
+          },
+          "props.params": {
+            "binding": {
+              "config": {
+                "expression": "if(len({view.custom.views})\u003e0,{view.custom.views}[{../TabContainerMultiViews.props.currentTabIndex}][\"params\"],\"\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.path": {
+            "binding": {
+              "config": {
+                "expression": "if(len({view.custom.views})\u003e0,{view.custom.views}[{../TabContainerMultiViews.props.currentTabIndex}][\"viewPath\"],\"\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Model Item Path"
+            },
+            "position": {
+              "basis": "32px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.currentModelItem.ModelItemTagPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "textStyle": {
+                "fontSize": 8,
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "View Path"
+            },
+            "position": {
+              "basis": "32px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "if(len({view.custom.views})\u003e0,{view.custom.views}[{../../TabContainerMultiViews.props.currentTabIndex}][\"viewPath\"],\"\") + \" Does Not Exist!\""
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "textStyle": {
+                "fontSize": 8,
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainerViewError"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "!{../SingleView.position.display}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Body/Background",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

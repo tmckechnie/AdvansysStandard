@@ -1,0 +1,141 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV01/100M001IL01"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 450,
+      "width": 360
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "HeaderStatus",
+              "tooltip": {
+                "enabled": true
+              }
+            },
+            "position": {
+              "basis": "35px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "meta.tooltip.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.TagPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Title": "Logic"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Logic"
+            },
+            "position": {
+              "basis": "320px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.TagPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/Logic",
+              "style": {
+                "margin": 10
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "HeaderStatus_0"
+            },
+            "position": {
+              "basis": "35px",
+              "shrink": 0
+            },
+            "props": {
+              "params": {
+                "Title": "Detail"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Detail"
+            },
+            "position": {
+              "basis": "160px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.TagPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/Detail"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Status"
+        },
+        "position": {
+          "basis": "150px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,785 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[Standard]Demo/Control Modules/MM955A"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 450,
+      "width": 325
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "params": {
+                "Title": "Configuration"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "DualOutput"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/Cfg/\"+{this.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Enable": true,
+                    "Label": "Dual Output",
+                    "ShowLabel": true,
+                    "options": [
+                      {
+                        "label": "Start",
+                        "value": false
+                      },
+                      {
+                        "label": "Start \u0026 Stop",
+                        "value": true
+                      }
+                    ]
+                  },
+                  "path": "Standard/Components/Faceplates/Input/LabelDropdown",
+                  "style": {
+                    "margin": 5,
+                    "paddingLeft": 3
+                  }
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "MotionSwitchOverride"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/Cfg/\"+{this.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Enable": true,
+                    "Label": "Motion Switch Override",
+                    "ShowLabel": true,
+                    "options": [
+                      {
+                        "label": "Enabled",
+                        "value": true
+                      },
+                      {
+                        "label": "Disabled",
+                        "value": false
+                      }
+                    ]
+                  },
+                  "path": "Standard/Components/Faceplates/Input/LabelDropdown",
+                  "style": {
+                    "margin": 5,
+                    "paddingLeft": 3
+                  }
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "MotionSwitchResetEnable"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/Cfg/\"+{this.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Enable": true,
+                    "Label": "Motion Switch Reset",
+                    "ShowLabel": true,
+                    "options": [
+                      {
+                        "label": "Disabled",
+                        "value": false
+                      },
+                      {
+                        "label": "Enabled",
+                        "value": true
+                      }
+                    ]
+                  },
+                  "path": "Standard/Components/Faceplates/Input/LabelDropdown",
+                  "style": {
+                    "margin": 5,
+                    "paddingLeft": 3
+                  }
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "MotionSwitchType"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/Cfg/\"+{this.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Enable": true,
+                    "Label": "Motion Switch Type",
+                    "ShowLabel": true,
+                    "options": [
+                      {
+                        "label": "Proxy",
+                        "value": false
+                      },
+                      {
+                        "label": "Monitor",
+                        "value": true
+                      }
+                    ]
+                  },
+                  "path": "Standard/Components/Faceplates/Input/LabelDropdown",
+                  "style": {
+                    "margin": 5,
+                    "paddingLeft": 3
+                  }
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "MotionSwitchLocalEnable"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/Cfg/\"+{this.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Enable": true,
+                    "Label": "Motion Switch in Local",
+                    "ShowLabel": true,
+                    "options": [
+                      {
+                        "label": "Disabled",
+                        "value": false
+                      },
+                      {
+                        "label": "Enabled",
+                        "value": true
+                      }
+                    ]
+                  },
+                  "path": "Standard/Components/Faceplates/Input/LabelDropdown",
+                  "style": {
+                    "margin": 5,
+                    "paddingLeft": 3
+                  }
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "DelaySirenTime"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/Cfg/\"+{this.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Enable": true,
+                    "Format": "0,0.##",
+                    "Label": "Siren Delay (s)",
+                    "ShowLabel": true,
+                    "Units": ""
+                  },
+                  "path": "Standard/Components/Faceplates/Input/LabelNumericEntryField",
+                  "style": {
+                    "margin": 5,
+                    "paddingLeft": 3
+                  }
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "SirenAutoEnable"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/Cfg/\"+{this.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Enable": true,
+                    "Label": "Siren in Auto",
+                    "ShowLabel": true,
+                    "options": [
+                      {
+                        "label": "Disabled",
+                        "value": false
+                      },
+                      {
+                        "label": "Enabled",
+                        "value": true
+                      }
+                    ]
+                  },
+                  "path": "Standard/Components/Faceplates/Input/LabelDropdown",
+                  "style": {
+                    "margin": 5,
+                    "paddingLeft": 3
+                  }
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "SirenManualEnable"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/Cfg/\"+{this.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Enable": true,
+                    "Label": "Siren in Manual",
+                    "ShowLabel": true,
+                    "options": [
+                      {
+                        "label": "Disabled",
+                        "value": false
+                      },
+                      {
+                        "label": "Enabled",
+                        "value": true
+                      }
+                    ]
+                  },
+                  "path": "Standard/Components/Faceplates/Input/LabelDropdown",
+                  "style": {
+                    "margin": 5,
+                    "paddingLeft": 3
+                  }
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "SirenLocalEnable"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/Cfg/\"+{this.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Enable": true,
+                    "Label": "Siren in Local",
+                    "ShowLabel": true,
+                    "options": [
+                      {
+                        "label": "Disabled",
+                        "value": false
+                      },
+                      {
+                        "label": "Enabled",
+                        "value": true
+                      }
+                    ]
+                  },
+                  "path": "Standard/Components/Faceplates/Input/LabelDropdown",
+                  "style": {
+                    "margin": 5,
+                    "paddingLeft": 3
+                  }
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "DelayStartTime"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/Cfg/\"+{this.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Enable": true,
+                    "Format": "0,0.##",
+                    "Label": "Delay Start Time (s)",
+                    "ShowLabel": true,
+                    "Units": ""
+                  },
+                  "path": "Standard/Components/Faceplates/Input/LabelNumericEntryField",
+                  "style": {
+                    "margin": 5,
+                    "paddingLeft": 3
+                  }
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "DelayStopTime"
+                },
+                "position": {
+                  "basis": "32px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/Cfg/\"+{this.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Enable": true,
+                    "Format": "0,0.##",
+                    "Label": "Delay Stop Time (s)",
+                    "ShowLabel": true,
+                    "Units": ""
+                  },
+                  "path": "Standard/Components/Faceplates/Input/LabelNumericEntryField",
+                  "style": {
+                    "margin": 5,
+                    "paddingLeft": 3
+                  }
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "Body"
+            },
+            "position": {
+              "basis": "30px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "classes": "Standard/Popups/Content"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Configuration"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px",
+              "shrink": 0
+            },
+            "props": {
+              "params": {
+                "Title": "Simulation"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "SimulationRow"
+            },
+            "position": {
+              "basis": "52px"
+            },
+            "propConfig": {
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.TagPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "path": "Standard/Components/Faceplates/Input/Simulation",
+              "style": {
+                "margin": 5,
+                "paddingLeft": 3
+              }
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Simulation"
+        },
+        "position": {
+          "basis": "80px",
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

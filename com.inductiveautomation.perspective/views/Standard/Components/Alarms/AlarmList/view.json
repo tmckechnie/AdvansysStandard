@@ -1,0 +1,440 @@
+{
+  "custom": {},
+  "params": {
+    "AlarmJournal": {
+      "Name": "AdvansysStandard",
+      "RefreshRate": 5000
+    },
+    "ContentHeaderStyle": {
+      "classes": "Standard/Docked/Footer/ContentBackground Standard/Docked/Footer/ContentBorder Standard/Docked/Footer/ContentText"
+    },
+    "DisplayPathFilter": "Standard*",
+    "ShowCleared": true
+  },
+  "propConfig": {
+    "params.AlarmJournal": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ContentHeaderStyle": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.DisplayPathFilter": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowCleared": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 777,
+      "width": 1920
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.style": {
+            "binding": {
+              "config": {
+                "path": "view.params.ContentHeaderStyle"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "\"Alarms For: \"+ {view.params.DisplayPathFilter}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "custom": {
+              "navigateTo": "[StandardS71500]Standard/Examples/Material Handling/ROM/G01/100V001"
+            },
+            "meta": {
+              "contextMenu": {
+                "items": [
+                  {
+                    "children": [],
+                    "icon": {
+                      "color": "",
+                      "path": "",
+                      "style": {}
+                    },
+                    "link": {
+                      "target": "self",
+                      "url": ""
+                    },
+                    "message": {
+                      "payload": {},
+                      "scope": "page",
+                      "type": ""
+                    },
+                    "method": {
+                      "name": "NavigateTo",
+                      "params": {}
+                    },
+                    "style": {
+                      "classes": ""
+                    },
+                    "text": "Navigate To",
+                    "type": "method"
+                  }
+                ]
+              },
+              "name": "AlarmStatusTable",
+              "tooltip": {
+                "enabled": true
+              }
+            },
+            "propConfig": {
+              "meta.contextMenu.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "len({this.props.selection.active.data})\u003e0"
+                  },
+                  "type": "expr"
+                }
+              },
+              "meta.contextMenu.items[0].method.params.Alarm": {
+                "binding": {
+                  "config": {
+                    "path": "this.props.selection.active.data[0].source"
+                  },
+                  "type": "property"
+                }
+              },
+              "meta.tooltip.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.DisplayPathFilter"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.rowStyles.activeAcked": {
+                "binding": {
+                  "config": {
+                    "expression": "\"ActiveAcked\""
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tbob\u003d {\n\t  \"base\": {\n\t    \"classes\": \"\"\n\t  },\n\t  \"priorities\": {\n\t    \"diagnostic\": {\n\t      \"backgroundColor\": \"var(--AlarmDiagnostic)\",\n\t      \"color\": \"#222222\"\n\t    },\n\t    \"low\": {\n\t      \"classes\": \"Standard/Alarms/Low/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"medium\": {\n\t      \"classes\": \"Standard/Alarms/Medium/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"high\": {\n\t      \"classes\": \"Standard/Alarms/High/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"critical\": {\n\t      \"classes\": \"Standard/Alarms/Critical/\"+value+\"/RowBaseStyle\"\n\t    }\n\t  }\n\t}\n\treturn bob",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              },
+              "props.rowStyles.activeUnacked": {
+                "binding": {
+                  "config": {
+                    "expression": "\"ActiveUnacked\""
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tbob\u003d {\n\t  \"base\": {\n\t    \"classes\": \"\"\n\t  },\n\t  \"priorities\": {\n\t    \"diagnostic\": {\n\t      \"backgroundColor\": \"var(--AlarmDiagnostic)\",\n\t      \"color\": \"#222222\"\n\t    },\n\t    \"low\": {\n\t      \"classes\": \"Standard/Alarms/Low/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"medium\": {\n\t      \"classes\": \"Standard/Alarms/Medium/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"high\": {\n\t      \"classes\": \"Standard/Alarms/High/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"critical\": {\n\t      \"classes\": \"Standard/Alarms/Critical/\"+value+\"/RowBaseStyle\"\n\t    }\n\t  }\n\t}\n\treturn bob",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              },
+              "props.rowStyles.clearUnacked": {
+                "binding": {
+                  "config": {
+                    "expression": "\"ClearUnacked\""
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tbob\u003d {\n\t  \"base\": {\n\t    \"classes\": \"\"\n\t  },\n\t  \"priorities\": {\n\t    \"diagnostic\": {\n\t      \"backgroundColor\": \"var(--AlarmDiagnostic)\",\n\t      \"color\": \"#222222\"\n\t    },\n\t    \"low\": {\n\t      \"classes\": \"Standard/Alarms/Low/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"medium\": {\n\t      \"classes\": \"Standard/Alarms/Medium/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"high\": {\n\t      \"classes\": \"Standard/Alarms/High/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"critical\": {\n\t      \"classes\": \"Standard/Alarms/Critical/\"+value+\"/RowBaseStyle\"\n\t    }\n\t  }\n\t}\n\treturn bob",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "activeSortOrder": [
+                "priority",
+                "state",
+                "activeTime"
+              ],
+              "columns": {
+                "active": {
+                  "activeTime": {
+                    "sort": "descending",
+                    "width": 100
+                  },
+                  "isAcked": {
+                    "sort": "descending"
+                  },
+                  "isActive": {
+                    "sort": "descending"
+                  },
+                  "priority": {
+                    "strictWidth": true,
+                    "width": 70
+                  }
+                }
+              },
+              "enableDetails": false,
+              "enableShelve": false,
+              "enableUnshelve": false,
+              "pager": {
+                "enabled": false
+              },
+              "responsive": {
+                "enabled": true
+              },
+              "rowStyles": {
+                "clearAcked": {
+                  "base": {
+                    "classes": "Standard/Alarms/Text"
+                  }
+                }
+              },
+              "toolbar": {
+                "enabled": false
+              }
+            },
+            "scripts": {
+              "customMethods": [
+                {
+                  "name": "NavigateTo",
+                  "params": [
+                    "Alarm"
+                  ],
+                  "script": "\ta \u003d Alarm.split(\u0027:\u0027)\n\ttagPath \u003d a[3]\n\ttagProvider \u003d a[1]\n\ttagPaths \u003d tagPath.split(\u0027/\u0027)[0:-4]\n\ttagPath \u003d \u0027/\u0027.join(tagPaths)\n\tself.custom.navigateTo \u003d \"[\"+tagProvider+\"]\" + tagPath\n\t"
+                }
+              ],
+              "extensionFunctions": [
+                {
+                  "enabled": true,
+                  "name": "filterAlarm",
+                  "script": "\tdisplayPathFilter \u003d self.view.params.DisplayPathFilter#.tostring()\n\tdisplayPath \u003d alarmEvent[\u0027displayPath\u0027].toString()\n\t#system.perspective.print(\"displayPath: \" + displayPath)\n\tif displayPathFilter[-1] \u003d\u003d \"*\":\n\t\t#system.perspective.print(\"displayPath with *: \" + displayPath + \" type:\" + str(type(displayPath)))\n\t\tdisplayPathFilter \u003d displayPathFilter[0:-1]\n\t\tdisplayPathFilterLen \u003d len(displayPathFilter)\n\t\tdisplayPath \u003d displayPath[0:displayPathFilterLen]\n\t\t#system.perspective.print(\"displayPathFilter: \" + displayPathFilter + \" len: \" + str(displayPathFilterLen) + \" -- displayPath: \" + displayPath)\n\t\tif len(displayPath) \u003e\u003d displayPathFilterLen and displayPathFilter \u003d\u003d displayPath:\n\t\t\t#system.perspective.print(\"displayPath: \" + displayPath)\n\t\t\treturn True\n\telif displayPathFilter \u003d\u003d displayPath:\n\t\treturn True\n\t\n\treturn False"
+                },
+                {
+                  "enabled": false,
+                  "name": "filterShelvedAlarm",
+                  "script": ""
+                }
+              ],
+              "messageHandlers": []
+            },
+            "type": "ia.display.alarmstatustable"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "AlarmJournalTable"
+                },
+                "position": {
+                  "basis": "400px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.name": {
+                    "binding": {
+                      "config": {
+                        "path": "view.params.AlarmJournal.Name"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.refreshRate": {
+                    "binding": {
+                      "config": {
+                        "path": "view.params.AlarmJournal.RefreshRate"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.rowStyles.active": {
+                    "binding": {
+                      "config": {
+                        "expression": "\"ActiveAcked\""
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tbob\u003d {\n\t  \"base\": {\n\t    \"classes\": \"\"\n\t  },\n\t  \"priorities\": {\n\t    \"diagnostic\": {\n\t      \"backgroundColor\": \"var(--AlarmDiagnostic)\",\n\t      \"color\": \"#222222\"\n\t    },\n\t    \"low\": {\n\t      \"classes\": \"Standard/Alarms/Low/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"medium\": {\n\t      \"classes\": \"Standard/Alarms/Medium/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"high\": {\n\t      \"classes\": \"Standard/Alarms/High/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"critical\": {\n\t      \"classes\": \"Standard/Alarms/Critical/\"+value+\"/RowBaseStyle\"\n\t    }\n\t  }\n\t}\n\treturn bob",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "columns": {
+                    "ackNotes": {
+                      "enabled": true
+                    },
+                    "ackUser": {
+                      "enabled": true,
+                      "strictWidth": true,
+                      "width": 200
+                    },
+                    "displayPath": {
+                      "enabled": true,
+                      "order": 2,
+                      "strictWidth": true,
+                      "width": 700
+                    },
+                    "eventId": {
+                      "enabled": false
+                    },
+                    "eventState": {
+                      "enabled": false
+                    },
+                    "eventTime": {
+                      "strictWidth": true
+                    },
+                    "label": {
+                      "order": 3
+                    },
+                    "priority": {
+                      "order": 1,
+                      "sort": "descending",
+                      "strictWidth": true
+                    },
+                    "source": {
+                      "enabled": false
+                    },
+                    "state": {
+                      "enabled": true,
+                      "strictWidth": true,
+                      "width": 200
+                    }
+                  },
+                  "filter": {
+                    "priorities": {
+                      "diagnostic": true
+                    }
+                  },
+                  "rowStyles": {}
+                },
+                "scripts": {
+                  "customMethods": [],
+                  "extensionFunctions": [
+                    {
+                      "enabled": true,
+                      "name": "filterAlarm",
+                      "script": "\treturn True\n\tdisplayPathFilter \u003d self.view.params.DisplayPathFilter#.tostring()\n\tdisplayPath \u003d alarmEvent[\u0027displayPath\u0027].toString()\n\t#system.perspective.print(\"displayPath: \" + displayPath)\n\tif displayPathFilter[-1] \u003d\u003d \"*\":\n\t\t#system.perspective.print(\"displayPath with *: \" + displayPath + \" type:\" + str(type(displayPath)))\n\t\tdisplayPathFilter \u003d displayPathFilter[0:-1]\n\t\tdisplayPathFilterLen \u003d len(displayPathFilter)\n\t\tdisplayPath \u003d displayPath[0:displayPathFilterLen]\n\t\t#system.perspective.print(\"displayPathFilter: \" + displayPathFilter + \" len: \" + str(displayPathFilterLen) + \" -- displayPath: \" + displayPath)\n\t\tif len(displayPath) \u003e\u003d displayPathFilterLen and displayPathFilter \u003d\u003d displayPath:\n\t\t\t#system.perspective.print(\"displayPath: \" + displayPath)\n\t\t\treturn True\n\telif displayPathFilter \u003d\u003d displayPath:\n\t\treturn True\n\t\n\treturn False"
+                    }
+                  ],
+                  "messageHandlers": []
+                },
+                "type": "ia.display.alarmjournaltable"
+              },
+              {
+                "events": {
+                  "component": {
+                    "onActionPerformed": {
+                      "config": {
+                        "script": "\tself.getSibling(\"AlarmJournalTable\").refreshData()"
+                      },
+                      "scope": "G",
+                      "type": "script"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "ButtonRefresh"
+                },
+                "position": {
+                  "basis": "34px",
+                  "display": false
+                },
+                "props": {
+                  "image": {
+                    "icon": {
+                      "path": "material/refresh"
+                    }
+                  },
+                  "text": "Refresh"
+                },
+                "type": "ia.input.button"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "tabIndex": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "TabContainer"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1
+        },
+        "props": {
+          "contentStyle": {
+            "classes": "Standard/Docked/Footer/ContentBackground Standard/Docked/Footer/ContentBorder Standard/Docked/Footer/ContentText"
+          },
+          "menuType": "modern",
+          "tabStyle": {
+            "active": {
+              "classes": "Standard/Docked/Footer/ContentBackground Standard/Docked/Footer/ContentBorder Standard/Docked/Footer/ContentText",
+              "fontWeight": "bolder"
+            },
+            "inactive": {
+              "classes": "Standard/Docked/Footer/ContentBackground Standard/Docked/Footer/ContentBorder Standard/Docked/Footer/ContentText",
+              "fontWeight": "lighter"
+            }
+          },
+          "tabs": [
+            "Current",
+            "Journal"
+          ]
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-between",
+      "style": {
+        "classes": "Standard/Docked/Footer/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

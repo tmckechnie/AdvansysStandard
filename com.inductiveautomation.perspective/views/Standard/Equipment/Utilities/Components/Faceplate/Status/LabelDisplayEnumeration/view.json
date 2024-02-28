@@ -1,0 +1,123 @@
+{
+  "custom": {},
+  "params": {
+    "Label": "Command",
+    "MappedObject": {
+      "False": "Inactive",
+      "True": "Active"
+    },
+    "ShowLabel": true,
+    "Value": false
+  },
+  "propConfig": {
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.MappedObject": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.MappedObject.False": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.MappedObject.True": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowLabel": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Value": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 300
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "266px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.params.ShowLabel"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Text"
+          },
+          "text": "Command"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Value"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "mappedValueObject": "{view.params.MappedObject}",
+                  "tagValue": "{view.params.Value}"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\ttagValue \u003d value[\u0027tagValue\u0027]\n\tmappedValueObject \u003d value[\u0027mappedValueObject\u0027]\n\treturn mappedValueObject[tagValue]\n",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/ValueDisplay"
+          },
+          "text": "Inactive"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

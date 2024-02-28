@@ -1,0 +1,162 @@
+{
+  "custom": {
+    "Label": null
+  },
+  "params": {
+    "InstanceTagPath": "/Metadata/InstanceName",
+    "LabelOverwrite": "",
+    "TagPath": "[Standard]Test/100M100"
+  },
+  "propConfig": {
+    "custom.Label": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "expression",
+          "tagPath": "{view.params.TagPath}+{view.params.InstanceTagPath}"
+        },
+        "transforms": [
+          {
+            "expression": "if(len({view.params.LabelOverwrite}),{view.params.LabelOverwrite},{value})",
+            "type": "expression"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.InstanceTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.LabelOverwrite": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 25,
+      "width": 100
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application/Control Modules/AI"
+        },
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application/Control Modules/AO"
+        },
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application/Control Modules/Motor"
+        },
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application/Control Modules/Motor Reverse"
+        },
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application/Control Modules/Valve"
+        },
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application/Control Modules/Controller"
+        },
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application/Control Modules/Totaliser"
+        },
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application/Control Modules/DI"
+        },
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application/Control Modules/DO"
+        },
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application/Control Modules/Selector"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Label"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/Symbols/Base/Text",
+            "margin": 2,
+            "textAlign": "center"
+          },
+          "text": null
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.style.classes": {
+        "persistent": true
+      }
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "scripts": {
+      "customMethods": [],
+      "extensionFunctions": null,
+      "messageHandlers": [
+        {
+          "messageType": "DisplaySymbolLabel",
+          "pageScope": true,
+          "script": "\tself.meta.visible \u003d not self.meta.visible",
+          "sessionScope": false,
+          "viewScope": false
+        }
+      ]
+    },
+    "type": "ia.container.flex"
+  }
+}

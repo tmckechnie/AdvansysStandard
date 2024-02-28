@@ -1,0 +1,226 @@
+{
+  "custom": {},
+  "params": {
+    "Label": "value",
+    "Selected": false,
+    "ShowLabel": false,
+    "StrokeWidth": 6
+  },
+  "propConfig": {
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Selected": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowLabel": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.StrokeWidth": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 128,
+      "width": 127
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.params.ShowLabel"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Text",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Selection"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.elements[0].stroke.width": {
+            "binding": {
+              "config": {
+                "path": "view.params.StrokeWidth"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].stroke.width": {
+            "binding": {
+              "config": {
+                "path": "view.params.StrokeWidth"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[2].stroke.width": {
+            "binding": {
+              "config": {
+                "path": "view.params.StrokeWidth"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[3].visibility": {
+            "binding": {
+              "config": {
+                "path": "view.params.Selected"
+              },
+              "transforms": [
+                {
+                  "fallback": null,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "hidden"
+                    },
+                    {
+                      "input": false,
+                      "output": "visible"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[4].visibility": {
+            "binding": {
+              "config": {
+                "path": "view.params.Selected"
+              },
+              "transforms": [
+                {
+                  "fallback": null,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": false,
+                      "output": "hidden"
+                    },
+                    {
+                      "input": true,
+                      "output": "visible"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M 200 300 L 0 300 ",
+              "fill": {
+                "paint": "#000000"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#AAAAAA"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M 0 550 L 200 550 ",
+              "fill": {
+                "paint": "#000000"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#AAAAAA"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M 800 550 L 600 550 ",
+              "fill": {
+                "paint": "#000000"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#AAAAAA"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M 200 550 L 600 550 ",
+              "fill": {
+                "paint": "#000000"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#555555",
+                "width": 25
+              },
+              "type": "path"
+            },
+            {
+              "d": "M 200 300 L 600 550 ",
+              "fill": {
+                "paint": "#000000"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#555555",
+                "width": 25
+              },
+              "type": "path"
+            }
+          ],
+          "viewBox": "0 0 800 800"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

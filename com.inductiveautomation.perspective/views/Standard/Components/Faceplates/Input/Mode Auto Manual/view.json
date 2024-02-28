@@ -1,0 +1,185 @@
+{
+  "custom": {
+    "CurrentValue": null
+  },
+  "params": {
+    "CurrentValue": 2,
+    "CurrentValueOut": "No Data",
+    "Label": "Mode",
+    "TagPath": "[FMG]Test/DOC201A/Cfg/Mode"
+  },
+  "propConfig": {
+    "custom.CurrentValue": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.CurrentValueOut": {
+      "binding": {
+        "config": {
+          "path": "view.custom.CurrentValue"
+        },
+        "transforms": [
+          {
+            "code": "\tif quality.isGood():\n\t\treturn value\n\telse:\n\t\treturn \"No Data\"",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "paramDirection": "output",
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 56,
+      "width": 500
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "100px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Text"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "custom": {
+          "OperMode": 2
+        },
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t#logger \u003d system.util.getLogger(\"Mode Row Tag Write\")\n\t#Write Back to tag\n\ttagPath \u003d self.view.params.TagPath\n\tnewValue \u003d int(self.custom.OperMode)\n\t#logger.info(str(newValue))\n\ttagWrite \u003d system.tag.writeBlocking([tagPath],[newValue])\n\tif tagWrite[0].isGood() \u003d\u003d False:\n\t\t#logger.info(\"Mode Row Write Failed %s: \"%(self.getSibling(\"Label\").props.text) + str(OPCPath) + str(OPCServer) + str(newValue))\n\t\tmessage \u003d \"Tag Write Failed. \"\n\t\treason \u003d str(tagWrite[0])#\"Tag Write response is not good.\"\n\t\tStandard.ControlModules.Common.ThrownException(message,reason)\n\t\treturn\n\t#logger.info(\"Mode Row Write Good %s: \"%(self.getSibling(\"Label\").props.text) + str(OPCPath) + str(OPCServer) + str(newValue))\t\t\t"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Auto"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.custom.CurrentValue"
+              },
+              "transforms": [
+                {
+                  "code": "\tvalidOperMode \u003d self.custom.OperMode\n\tif value \u003d\u003d validOperMode:\n\t\treturn \"Standard/Popups/Faceplates/Button/Selected\"\n\t\t\n\treturn \"Standard/Popups/Faceplates/Button/UnSelected\"",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Button/UnSelected",
+            "margin": 4
+          },
+          "text": "Auto"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "custom": {
+          "OperMode": 1
+        },
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t#logger \u003d system.util.getLogger(\"Mode Row Tag Write\")\n\t#Write Back to tag\n\ttagPath \u003d self.view.params.TagPath\n\tnewValue \u003d int(self.custom.OperMode)\n\t#logger.info(str(newValue))\n\ttagWrite \u003d system.tag.writeBlocking([tagPath],[newValue])\n\tif tagWrite[0].isGood() \u003d\u003d False:\n\t\t#logger.info(\"Mode Row Write Failed %s: \"%(self.getSibling(\"Label\").props.text) + str(OPCPath) + str(OPCServer) + str(newValue))\n\t\tmessage \u003d \"Tag Write Failed. \"\n\t\treason \u003d str(tagWrite[0])#\"Tag Write response is not good.\"\n\t\tStandard.ControlModules.Common.ThrownException(message,reason)\n\t\treturn\n\t#logger.info(\"Mode Row Write Good %s: \"%(self.getSibling(\"Label\").props.text) + str(OPCPath) + str(OPCServer) + str(newValue))\t\t\t"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Manual"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.custom.CurrentValue"
+              },
+              "transforms": [
+                {
+                  "code": "\tvalidOperMode \u003d self.custom.OperMode\n\tif value \u003d\u003d validOperMode:\n\t\treturn \"Standard/Popups/Faceplates/Button/Selected\"\n\t\t\n\treturn \"Standard/Popups/Faceplates/Button/UnSelected\"",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Button/UnSelected",
+            "margin": 4
+          },
+          "text": "Manual"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

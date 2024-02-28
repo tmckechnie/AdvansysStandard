@@ -1,0 +1,231 @@
+{
+  "custom": {},
+  "params": {
+    "Max": 100,
+    "Min": 0,
+    "Ranges": [
+      {
+        "Label": "AHH ",
+        "Max": 100,
+        "Min": 90,
+        "Style": {
+          "classes": "Standard/Popups/Faceplates/Trend/Alarms/Critical"
+        }
+      },
+      {
+        "Label": "AH ",
+        "Max": 90,
+        "Min": 80,
+        "Style": {
+          "classes": "Standard/Popups/Faceplates/Trend/Alarms/Critical"
+        }
+      },
+      {
+        "Label": "CHH ",
+        "Max": 80,
+        "Min": 60,
+        "Style": {
+          "classes": "Standard/Popups/Faceplates/Trend/Control/HighHigh"
+        }
+      },
+      {
+        "Label": "CH ",
+        "Max": 60,
+        "Min": 40,
+        "Style": {
+          "classes": "Standard/Popups/Faceplates/Trend/Control/High"
+        }
+      },
+      {
+        "Label": "CL ",
+        "Max": 0,
+        "Min": 0,
+        "Style": {
+          "classes": "Standard/Popups/Faceplates/Trend/Control/Low"
+        }
+      },
+      {
+        "Label": "CLL ",
+        "Max": 0,
+        "Min": 0,
+        "Style": {
+          "classes": "Standard/Popups/Faceplates/Trend/Control/LowLow"
+        }
+      },
+      {
+        "Label": "AL ",
+        "Max": 30,
+        "Min": 20,
+        "Style": {
+          "classes": "Standard/Popups/Faceplates/Trend/Alarms/Low"
+        }
+      },
+      {
+        "Label": "ALL ",
+        "Max": 20,
+        "Min": 0,
+        "Style": {
+          "classes": "Standard/Popups/Faceplates/Trend/Alarms/Low"
+        }
+      }
+    ],
+    "Value": 10
+  },
+  "propConfig": {
+    "params.Max": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Min": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Ranges": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Value": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 582,
+      "width": 241
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Icon"
+            },
+            "position": {
+              "height": 0.0443,
+              "width": 1.4,
+              "x": -0.2
+            },
+            "propConfig": {
+              "position.y": {
+                "binding": {
+                  "config": {
+                    "expression": "1-{view.params.Value}/({view.params.Max}-{view.params.Min}) - ({this.position.height}/2.0)"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "path": "material/arrow_right_alt"
+            },
+            "type": "ia.display.icon"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 0.03,
+              "width": 0.9
+            },
+            "props": {
+              "alignVertical": "top",
+              "text": 100,
+              "textStyle": {
+                "fontSize": 10,
+                "textAlign": "right"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "height": 0.03,
+              "width": 0.9,
+              "y": 0.97
+            },
+            "props": {
+              "alignVertical": "bottom",
+              "text": 0,
+              "textStyle": {
+                "fontSize": 10,
+                "textAlign": "right"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "30px",
+          "display": false,
+          "shrink": 0
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "FlexRepeater"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.instances": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "max": "{view.params.Max}",
+                  "min": "{view.params.Min}",
+                  "ranges": "{view.params.Ranges}"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\tranges \u003d value[\u0027ranges\u0027]\n\tmin \u003d value[\u0027min\u0027]\n\tmax \u003d value[\u0027max\u0027]\n\ttotalRange \u003d float(max - min)\n\t\n\titems \u003d []\n\ttotalBand \u003d min\n\trangesSorted \u003d sorted(ranges,key\u003dlambda row: row[\u0027Min\u0027],reverse\u003dFalse)\n\tpreMax \u003d min\n\t#return rangesSorted\n\tfor i in range(0,len(rangesSorted)):\n\t\trMin\u003drangesSorted[i][\u0027Min\u0027]\n\t\tlabel \u003d rangesSorted[i][\u0027Label\u0027]\n\t\t#return rangesSorted[i]\n\t\tif (rMin\u003epreMax): #Add Blank\n\t\t\tband \u003d rMin-preMax\n\t\t\tratio \u003d band/totalRange\n\t\t\titem \u003d {\"instanceStyle\": {\"classes\": \"\"},\n\t\t\t\t\t  \"instancePosition\": {\"grow\": ratio,\"shrink\": 1,\"basis\": str(band) + \"px\"},\n\t\t\t\t\t  \"Label\": \"\",\n\t\t\t\t\t  \u0027Value\u0027:preMax}\n\t\t\titems.append(item)\t\t\n\t\t\n\t\trMax\u003drangesSorted[i][\u0027Max\u0027]\n\t\tband \u003d rMax-rMin\n\t\tif band\u003e0:\n\t\t\tratio \u003d band/totalRange\n\t\t\titem \u003d {\"instanceStyle\": rangesSorted[i][\u0027Style\u0027],\n\t\t\t\t  \"instancePosition\": {\"grow\": ratio,\"shrink\": 1,\"basis\": str(band) + \"px\"},\n\t\t\t\t  \"Label\": rangesSorted[i][\u0027Label\u0027],\n\t\t\t\t  \u0027Value\u0027:rMin}\n\t\t\titems.append(item)\n\t\tpreMax \u003d rMax\n\n\titemsSorted \u003d sorted(items,key\u003dlambda row: row[\u0027Value\u0027],reverse\u003dTrue)\n\treturn itemsSorted",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "path": "Standard/Components/Trends/Components/RangeBlock",
+          "style": {
+            "overflow": "hidden"
+          },
+          "useDefaultViewHeight": false,
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "backgroundColor": "#FFFFFF00"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

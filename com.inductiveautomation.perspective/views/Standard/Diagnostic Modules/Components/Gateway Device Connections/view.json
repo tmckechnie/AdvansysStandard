@@ -1,0 +1,367 @@
+{
+  "custom": {},
+  "params": {
+    "Heading": "",
+    "UnitDevicesTagPath": "[Standard]System/Diagnostics/Devices"
+  },
+  "propConfig": {
+    "params.Heading": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.UnitDevicesTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 405,
+      "width": 358
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.label": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Heading} + \" Device Summary\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Components/Views/Header/Header"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "OPC Connections"
+                },
+                "position": {
+                  "basis": "320px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "path": "this.props.instances"
+                      },
+                      "overlayOptOut": true,
+                      "transforms": [
+                        {
+                          "code": "\tinstances \u003d value\t\t\n\tif len(instances) \u003d\u003d 0:\n\t\treturn False\n\telse:\n\t\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  },
+                  "props.instances": {
+                    "binding": {
+                      "config": {
+                        "struct": {
+                          "RequiredUDTType": "\"Standard/Diagnostic Modules/OPC Server Diagnostics\"",
+                          "UnitDevicesTagPath": "{view.params.UnitDevicesTagPath}"
+                        },
+                        "waitOnAll": true
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tDiagnosticsTagPath \u003d value[\"UnitDevicesTagPath\"]\n\tdiagnosticTagsArray \u003d system.tag.browse(DiagnosticsTagPath)\n\trequiredtypeId \u003dvalue[\"RequiredUDTType\"]\n\tif DiagnosticsTagPath \u003d\u003d \"\":\n\t\treturn []\n\tinstances \u003d []\n\tfor diagnosticTag in diagnosticTagsArray:\n\t\tinstanceObject \u003d {}\n\t\tTagPath \u003d diagnosticTag[\"fullPath\"]\n\t\ttypeId \u003d diagnosticTag[\"typeId\"]\n\t\tinstanceObject[\"OPCServerTagPath\"] \u003d TagPath\n\t\tif typeId \u003d\u003d requiredtypeId:\n\t\t\tinstances.append(instanceObject)\n\n\treturn instances",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr-struct"
+                    }
+                  }
+                },
+                "props": {
+                  "elementStyle": {
+                    "margin": 2
+                  },
+                  "path": "Standard/Diagnostic Modules/Components/Device Connection Components/OPC Server Connection",
+                  "useDefaultViewWidth": false
+                },
+                "type": "ia.display.flex-repeater"
+              },
+              {
+                "meta": {
+                  "name": "No Connections Found Label"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "expression": "!{../OPC Connections.position.display}"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "classes": "Synergy/Overview/Card/Status/Value/BackgroundDefault Synergy/Overview/Card/Status/Value/Text",
+                    "paddingLeft": 20,
+                    "textAlign": "center"
+                  },
+                  "text": "No OPC Server Connections Found"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "OPC Server Connections Flex"
+            },
+            "position": {
+              "basis": "50px",
+              "grow": 1
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "padding": 5
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Device Connections "
+                },
+                "position": {
+                  "basis": "320px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "path": "this.props.instances"
+                      },
+                      "overlayOptOut": true,
+                      "transforms": [
+                        {
+                          "code": "\tinstances \u003d value\t\t\n\tif len(instances) \u003d\u003d 0:\n\t\treturn False\n\telse:\n\t\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  },
+                  "props.instances": {
+                    "binding": {
+                      "config": {
+                        "struct": {
+                          "RequiredUDTType": "\"Standard/Diagnostic Modules/Device Connection Diagnostics\"",
+                          "UnitDevicesTagPath": "{view.params.UnitDevicesTagPath}"
+                        },
+                        "waitOnAll": true
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tDiagnosticsTagPath \u003d value[\"UnitDevicesTagPath\"]\n\tdiagnosticTagsArray \u003d system.tag.browse(DiagnosticsTagPath)\n\trequiredtypeId \u003dvalue[\"RequiredUDTType\"]\n\tif DiagnosticsTagPath \u003d\u003d \"\":\n\t\treturn []\n\tinstances \u003d []\n\tfor diagnosticTag in diagnosticTagsArray:\n\t\tinstanceObject \u003d {}\n\t\tTagPath \u003d diagnosticTag[\"fullPath\"]\n\t\ttypeId \u003d diagnosticTag[\"typeId\"]\n\t\tinstanceObject[\"DeviceTagPath\"] \u003d TagPath\n\t\tif typeId \u003d\u003d requiredtypeId:\n\t\t\tinstances.append(instanceObject)\n\n\t\t\t\n\treturn instances",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr-struct"
+                    }
+                  }
+                },
+                "props": {
+                  "elementStyle": {
+                    "margin": 2
+                  },
+                  "path": "Standard/Diagnostic Modules/Components/Device Connection Components/Device Connection",
+                  "useDefaultViewHeight": false,
+                  "useDefaultViewWidth": false
+                },
+                "type": "ia.display.flex-repeater"
+              },
+              {
+                "meta": {
+                  "name": "No Connections Found Label"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "expression": "!{../Device Connections .position.display}"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "classes": "Synergy/Overview/Card/Status/Value/BackgroundDefault Synergy/Overview/Card/Status/Value/Text",
+                    "paddingLeft": 20,
+                    "textAlign": "center"
+                  },
+                  "text": "No OPC Server Device Connections Found"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "Device Connections Flex"
+            },
+            "position": {
+              "basis": "50px",
+              "display": false,
+              "grow": 1
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "padding": 5
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Device Connections "
+                },
+                "position": {
+                  "basis": "320px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "path": "this.props.instances"
+                      },
+                      "overlayOptOut": true,
+                      "transforms": [
+                        {
+                          "code": "\tinstances \u003d value\t\t\n\tif len(instances) \u003d\u003d 0:\n\t\treturn False\n\telse:\n\t\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  },
+                  "props.instances": {
+                    "binding": {
+                      "config": {
+                        "struct": {
+                          "RequiredUDTType": "\"Standard/Diagnostic Modules/PLC Device Diagnostics\"",
+                          "UnitDevicesTagPath": "{view.params.UnitDevicesTagPath}"
+                        },
+                        "waitOnAll": true
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tDiagnosticsTagPath \u003d value[\"UnitDevicesTagPath\"]\n\tdiagnosticTagsArray \u003d system.tag.browse(DiagnosticsTagPath)\n\trequiredtypeId \u003dvalue[\"RequiredUDTType\"]\n\tif DiagnosticsTagPath \u003d\u003d \"\":\n\t\treturn []\n\tinstances \u003d []\n\tfor diagnosticTag in diagnosticTagsArray:\n\t\tinstanceObject \u003d {}\n\t\tTagPath \u003d diagnosticTag[\"fullPath\"]\n\t\ttypeId \u003d diagnosticTag[\"typeId\"]\n\t\tinstanceObject[\"DeviceTagPath\"] \u003d TagPath\n\t\tif typeId \u003d\u003d requiredtypeId:\n\t\t\tinstances.append(instanceObject)\n\n\treturn instances",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr-struct"
+                    }
+                  }
+                },
+                "props": {
+                  "elementStyle": {
+                    "margin": 2
+                  },
+                  "path": "Standard/Diagnostic Modules/Components/Device Connection Components/PLC Driver Device Connection",
+                  "useDefaultViewHeight": false,
+                  "useDefaultViewWidth": false
+                },
+                "type": "ia.display.flex-repeater"
+              },
+              {
+                "meta": {
+                  "name": "No Connections Found Label"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "expression": "!{../Device Connections .position.display}"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "classes": "Synergy/Overview/Card/Status/Value/BackgroundDefault Synergy/Overview/Card/Status/Value/Text",
+                    "paddingLeft": 20,
+                    "textAlign": "center"
+                  },
+                  "text": "No PLC Driver Connections Found"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "PLC Driver Device Connections Flex"
+            },
+            "position": {
+              "basis": "50px",
+              "display": false,
+              "grow": 1
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "padding": 5
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "All Device Connections"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

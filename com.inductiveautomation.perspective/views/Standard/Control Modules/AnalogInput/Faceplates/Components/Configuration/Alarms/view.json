@@ -1,0 +1,295 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[StandardS71500]Modules/Control Modules/100IT100"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 586,
+      "width": 350
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "HighHigh"
+        },
+        "position": {
+          "basis": "64px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.AlarmPrimitiveTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}+\"/Alarms/\"+{this.meta.name}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ShowHeader": true
+          },
+          "path": "Standard/Components/Faceplates/Alarms/Alarm Primitive Config",
+          "style": {
+            "paddingBottom": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "High"
+        },
+        "position": {
+          "basis": "64px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.AlarmPrimitiveTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}+\"/Alarms/\"+{this.meta.name}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ShowHeader": false
+          },
+          "path": "Standard/Components/Faceplates/Alarms/Alarm Primitive Config",
+          "style": {
+            "marginBottom": 3,
+            "marginTop": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Low"
+        },
+        "position": {
+          "basis": "64px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.AlarmPrimitiveTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}+\"/Alarms/\"+{this.meta.name}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ShowHeader": false
+          },
+          "path": "Standard/Components/Faceplates/Alarms/Alarm Primitive Config",
+          "style": {
+            "marginBottom": 3,
+            "marginTop": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "LowLow"
+        },
+        "position": {
+          "basis": "64px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.AlarmPrimitiveTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}+\"/Alarms/\"+{this.meta.name}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ShowHeader": false
+          },
+          "path": "Standard/Components/Faceplates/Alarms/Alarm Primitive Config",
+          "style": {
+            "marginBottom": 3,
+            "marginTop": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "HighRate"
+        },
+        "position": {
+          "basis": "64px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.AlarmPrimitiveTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}+\"/Alarms/\"+{this.meta.name}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ShowHeader": false
+          },
+          "path": "Standard/Components/Faceplates/Alarms/Alarm Primitive Config",
+          "style": {
+            "marginBottom": 3,
+            "marginTop": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "LowRate"
+        },
+        "position": {
+          "basis": "64px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.AlarmPrimitiveTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}+\"/Alarms/\"+{this.meta.name}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ShowHeader": false
+          },
+          "path": "Standard/Components/Faceplates/Alarms/Alarm Primitive Config",
+          "style": {
+            "marginBottom": 3,
+            "marginTop": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "BadData"
+        },
+        "position": {
+          "basis": "64px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.AlarmPrimitiveTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}+\"/Alarms/\"+{this.meta.name}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ShowHeader": false
+          },
+          "path": "Standard/Components/Faceplates/Alarms/Alarm Primitive Config",
+          "style": {
+            "marginTop": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Communication"
+        },
+        "position": {
+          "basis": "64px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.AlarmPrimitiveTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}+\"/Alarms/\"+{this.meta.name}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ShowHeader": false
+          },
+          "path": "Standard/Components/Faceplates/Alarms/Alarm Primitive Config",
+          "style": {
+            "marginTop": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "NoChange"
+        },
+        "position": {
+          "basis": "64px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.AlarmPrimitiveTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}+\"/Alarms/\"+{this.meta.name}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ShowHeader": false
+          },
+          "path": "Standard/Components/Faceplates/Alarms/Alarm Primitive Config",
+          "style": {
+            "marginTop": 3
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

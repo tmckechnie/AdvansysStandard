@@ -1,0 +1,8 @@
+{
+  "base": {
+    "style": {
+      "outlineColor": "var(--AlarmCritical)",
+      "outlineWidth": "2px"
+    }
+  }
+}

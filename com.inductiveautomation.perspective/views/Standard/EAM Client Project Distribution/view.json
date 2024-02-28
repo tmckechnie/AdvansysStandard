@@ -1,0 +1,286 @@
+{
+  "custom": {
+    "clientName": "Sefateng",
+    "lastSendProjectResourseVersion": "2.172.15.24",
+    "lastSendProjectVersion": "2.172.15.22",
+    "lastSendTagsVersion": "2.2023.173.16.52",
+    "version": "2.2023.195.15.48"
+  },
+  "params": {},
+  "propConfig": {
+    "custom.clientName": {
+      "persistent": true
+    },
+    "custom.lastSendProjectResourseVersion": {
+      "persistent": true
+    },
+    "custom.lastSendProjectVersion": {
+      "persistent": true
+    },
+    "custom.lastSendTagsVersion": {
+      "persistent": true
+    },
+    "custom.version": {
+      "binding": {
+        "config": {
+          "expression": "now(10000)"
+        },
+        "transforms": [
+          {
+            "code": "\t#Build Version\n\tnow \u003d value\n\tyear \u003d system.date.getYear(now)\n\tbaseVesion \u003d \u00272\u0027\n\tdayOfYear \u003d system.date.getDayOfYear(now)\n\tHourOfDay \u003d system.date.getHour24(now)\n\tminuteOfDay \u003d system.date.getMinute(now)\n\tversion \u003d \u0027%s.%s.%s.%s.%s\u0027 %(baseVesion,year,dayOfYear,HourOfDay,minuteOfDay)\n\treturn version",
+            "type": "script"
+          }
+        ],
+        "type": "expr"
+      },
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 243,
+      "width": 521
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "150px"
+            },
+            "props": {
+              "text": "Name"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "TextField"
+            },
+            "position": {
+              "basis": "150px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.clientName"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "textAlign": "right"
+              }
+            },
+            "type": "ia.input.text-field"
+          }
+        ],
+        "meta": {
+          "name": "Name"
+        },
+        "position": {
+          "basis": "37px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t\n\ttaskname \u003d self.custom.taskName\n\tresponse \u003d system.eam.runTask(taskname)\n\tself.view.custom.lastSendProjectVersion \u003d self.view.custom.version"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "ButtonSendStandardProject"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "propConfig": {
+          "custom.taskName": {
+            "binding": {
+              "config": {
+                "expression": "\u0027Send Advansys Standard Project To \u0027 + {view.custom.clientName}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "this.custom.taskName"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Button/Default",
+            "margin": 10
+          }
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t\n\ttaskname \u003d self.custom.taskName\n\tresponse \u003d system.eam.runTask(taskname)\n\tself.view.custom.lastSendProjectResourseVersion \u003d self.view.custom.version"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "ButtonSendStandardProjectResources"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "propConfig": {
+          "custom.taskName": {
+            "binding": {
+              "config": {
+                "expression": "\u0027Send Project Resources Advansys Standard To \u0027+{view.custom.clientName} + \u0027 Master\u0027"
+              },
+              "type": "expr"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "this.custom.taskName"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Button/Default",
+            "margin": 10
+          }
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t#Set Version\n\tbasePath \u003d \u0027[StandardS71500]_types_/Standard/Default\u0027\n\tbasePathFolder \u003d \u0027[StandardS71500]_types_/Standard/\u0027\n\ttagsConfig \u003d system.tag.getConfiguration(basePath\u003dbasePath, recursive \u003d True)\n\ttagConfig \u003d tagsConfig[0]\n\tprint tagConfig[\u0027parameters\u0027]\n\n\tversion \u003d self.view.custom.version\n\n\ttagConfig[\u0027parameters\u0027][\u0027Version\u0027] \u003d version\n\tcollisionPolicy \u003d \"o\"\n\tresponse \u003d system.tag.configure(basePath\u003dbasePathFolder,tags \u003d [tagConfig], collisionPolicy\u003dcollisionPolicy)\n\n\ttaskname \u003d self.custom.taskName\n\tresponse \u003d system.eam.runTask(taskname)\n\tself.view.custom.lastSendTagsVersion \u003d version"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "ButtonSendStandardUDTs"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "propConfig": {
+          "custom.taskName": {
+            "binding": {
+              "config": {
+                "expression": "\u0027Send Advansys Standard Tags To \u0027+{view.custom.clientName}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "this.custom.taskName"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Button/Default",
+            "margin": 10
+          }
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "150px"
+            },
+            "props": {
+              "text": "Version"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "basis": "50px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.version"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "textStyle": {
+                "textAlign": "right"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Version"
+        },
+        "position": {
+          "basis": "37px"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

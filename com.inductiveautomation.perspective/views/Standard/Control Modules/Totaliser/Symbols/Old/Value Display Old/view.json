@@ -1,0 +1,293 @@
+{
+  "custom": {
+    "AlarmSummary": {
+      "HighestActivePriority": 0,
+      "HighestActivePriorityName": null,
+      "HighestUnackedPriority": 0,
+      "HighestUnackedPriorityName": null,
+      "Overall": {
+        "ActiveAckCount": 0,
+        "ActiveUnackCount": 0,
+        "ClearUnackCount": 0,
+        "Detail": [],
+        "ShelvedCount": 0,
+        "Total": 0
+      },
+      "PriorityDetail": {
+        "Critical": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "High": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Low": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Medium": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        }
+      }
+    },
+    "Description": "Totaliser - Standard Test",
+    "EngUnits": "t",
+    "FormatedValue": "0 t",
+    "InstanceName": "100WQ100A",
+    "Value": 0,
+    "alarmStyle": {
+      "classes": ""
+    },
+    "formatedValue": " t",
+    "styling": "Standard/Body/Symbols/ValueDisplay Standard/Body/Symbols/Selected Standard/Body/Symbols/Simulation"
+  },
+  "params": {
+    "TagPath": "[Standard]Standard/Test/100WQ100A"
+  },
+  "propConfig": {
+    "custom.AlarmSummary": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Summary/Information"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Description": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/Description"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.EngUnits": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/EngUnits"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.FormatedString": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value.FormatString"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.InstanceName": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/InstanceName"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Value": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.alarmStyle": {
+      "binding": {
+        "config": {
+          "path": "view.custom.AlarmSummary"
+        },
+        "transforms": [
+          {
+            "code": "\treturn Standard.Modules.Alarms.GetAlarmStyle(AlarmSummary\u003dvalue)\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.formatedValue": {
+      "binding": {
+        "config": {
+          "expression": "numberFormat({view.custom.Value},{view.custom.FormatedString}) + \" \" + {view.custom.EngUnits}"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.styling": {
+      "binding": {
+        "config": {
+          "struct": {
+            "alarmStyleClasses": "{view.custom.alarmStyle.classes}",
+            "inAlarm": "{view.custom.AlarmSummary.Overall.Total}\u003e0",
+            "isSelected": "tag({view.params.TagPath}+\"/Id/Selected\")",
+            "isSimulation": "tag({view.params.TagPath}+\"/Sim/Simulation\")"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\t\n\tbaseStyle \u003d \"Standard/Body/Symbols\"\n\tstyleClasses \u003d baseStyle+\"/ValueDisplay\"\n\n\t#Selected\n\tif value[\"isSelected\"]:\n\t\tstyleClasses +\u003d \" \"+baseStyle+\"/Selected\"\n\n\t#Simulation\n\tif value[\"isSimulation\"]:\n\t\tstyleClasses +\u003d \" \"+baseStyle+\"/Simulation\"\n\n\t#Alarm\n\tif value[\"inAlarm\"]:\n\t\tstyleClasses +\u003d \" \"+value[\"alarmStyleClasses\"]\n\t\n\treturn styleClasses",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 25,
+      "width": 100
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application Default/Control Modules/Totaliser"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TagValue",
+          "tooltip": {
+            "enabled": true,
+            "style": {
+              "classes": "Standard/Body/Symbols/Label"
+            }
+          }
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Description"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.custom.styling"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.formatedValue"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/Symbols/ValueDisplay Standard/Body/Symbols/Selected Standard/Body/Symbols/Simulation",
+            "margin": 2,
+            "textAlign": "center"
+          },
+          "text": " t"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\ttagPath \u003d self.view.params.TagPath\n\tinstanceName \u003d self.view.custom.InstanceName\n\tdescription \u003d self.view.custom.Description\n\ttitle \u003d instanceName + \" - \" + description\n\tparamsObject \u003d {\"TagPath\":tagPath}\n\tfaceplatePath \u003d \"Standard/Control Modules/Totaliser/Faceplates/Faceplate\"\n\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003dfaceplatePath)"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.style.classes": {
+        "persistent": true
+      }
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

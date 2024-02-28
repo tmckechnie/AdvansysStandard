@@ -1,0 +1,459 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 500,
+      "width": 500
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TimeSeriesChart"
+        },
+        "position": {
+          "basis": "400px",
+          "display": false,
+          "grow": 1
+        },
+        "props": {
+          "series": [
+            {
+              "data": [
+                {
+                  "Pressure": 12,
+                  "Temperature": 52,
+                  "time": 1560469431423
+                },
+                {
+                  "Pressure": 42,
+                  "Temperature": 18,
+                  "time": 1560469432423
+                },
+                {
+                  "Pressure": 81,
+                  "Temperature": 26,
+                  "time": 1560469433423
+                },
+                {
+                  "Pressure": 11,
+                  "Temperature": 63,
+                  "time": 1560469434423
+                },
+                {
+                  "Pressure": 23,
+                  "Temperature": 65,
+                  "time": 1560469435423
+                },
+                {
+                  "Pressure": 43,
+                  "Temperature": 12,
+                  "time": 1560469436423
+                },
+                {
+                  "Pressure": 71,
+                  "Temperature": 61,
+                  "time": 1560469437423
+                },
+                {
+                  "Pressure": 89,
+                  "Temperature": 60,
+                  "time": 1560469438423
+                },
+                {
+                  "Pressure": 66,
+                  "Temperature": 58,
+                  "time": 1560469439423
+                },
+                {
+                  "Pressure": 33,
+                  "Temperature": 1,
+                  "time": 1560469440423
+                }
+              ],
+              "name": "Boiler"
+            }
+          ]
+        },
+        "type": "ia.chart.timeseries"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "FlexContainer"
+            },
+            "position": {
+              "basis": "20px",
+              "shrink": 0
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "AnalogueIndicator"
+            },
+            "position": {
+              "basis": "320px",
+              "grow": 1
+            },
+            "props": {
+              "params": {
+                "Max": 100,
+                "Min": 0,
+                "Ranges": [
+                  {
+                    "Label": "High High",
+                    "Style": {
+                      "classes": "Standard/Popups/Faceplates/Trend/Alarms/Critical"
+                    },
+                    "Value": 90
+                  },
+                  {
+                    "Label": "High",
+                    "Style": {
+                      "classes": "Standard/Popups/Faceplates/Trend/Alarms/High"
+                    },
+                    "Value": 80
+                  },
+                  {
+                    "Label": "CLHH",
+                    "Style": {
+                      "classes": "Standard/Popups/Faceplates/Trend/Control/HighHigh"
+                    },
+                    "Value": 70
+                  },
+                  {
+                    "Label": "CLH",
+                    "Style": {
+                      "classes": "Standard/Popups/Faceplates/Trend/Control/High"
+                    },
+                    "Value": 60
+                  },
+                  {
+                    "Label": "CLL",
+                    "Style": {
+                      "classes": "Standard/Popups/Faceplates/Trend/Control/Low"
+                    },
+                    "Value": 40
+                  },
+                  {
+                    "Label": "CLLL",
+                    "Style": {
+                      "classes": "Standard/Popups/Faceplates/Trend/Control/LowLow"
+                    },
+                    "Value": 30
+                  },
+                  {
+                    "Label": "Low",
+                    "Style": {
+                      "classes": "Standard/Popups/Faceplates/Trend/Alarms/High"
+                    },
+                    "Value": 20
+                  },
+                  {
+                    "Label": "Low Low",
+                    "Style": {
+                      "classes": "Standard/Popups/Faceplates/Trend/Alarms/Critical"
+                    },
+                    "Value": 10
+                  }
+                ],
+                "Value": 50
+              },
+              "path": "Standard/Components/Trends/AnalogueIndicator"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "FlexContainer_1"
+            },
+            "position": {
+              "basis": "85px",
+              "shrink": 0
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "80px",
+          "display": false,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "AnalogueIndicator",
+              "visible": false
+            },
+            "position": {
+              "height": 0.808,
+              "width": 1,
+              "y": 0.032
+            },
+            "props": {
+              "params": {
+                "Max": 100,
+                "Min": 0,
+                "Ranges": [
+                  {
+                    "Label": "High High",
+                    "Style": {
+                      "classes": "Standard/Popups/Faceplates/Trend/Alarms/Critical"
+                    },
+                    "Value": 90
+                  },
+                  {
+                    "Label": "High",
+                    "Style": {
+                      "classes": "Standard/Popups/Faceplates/Trend/Alarms/High"
+                    },
+                    "Value": 80
+                  },
+                  {
+                    "Label": "CLHH",
+                    "Style": {
+                      "classes": "Standard/Popups/Faceplates/Trend/Control/HighHigh"
+                    },
+                    "Value": 70
+                  },
+                  {
+                    "Label": "CLH",
+                    "Style": {
+                      "classes": "Standard/Popups/Faceplates/Trend/Control/High"
+                    },
+                    "Value": 60
+                  },
+                  {
+                    "Label": "CLL",
+                    "Style": {
+                      "classes": "Standard/Popups/Faceplates/Trend/Control/Low"
+                    },
+                    "Value": 40
+                  },
+                  {
+                    "Label": "CLLL",
+                    "Style": {
+                      "classes": "Standard/Popups/Faceplates/Trend/Control/LowLow"
+                    },
+                    "Value": 30
+                  },
+                  {
+                    "Label": "Low",
+                    "Style": {
+                      "classes": "Standard/Popups/Faceplates/Trend/Alarms/High"
+                    },
+                    "Value": 20
+                  },
+                  {
+                    "Label": "Low Low",
+                    "Style": {
+                      "classes": "Standard/Popups/Faceplates/Trend/Alarms/Critical"
+                    },
+                    "Value": 10
+                  }
+                ],
+                "Value": 50
+              },
+              "path": "Standard/Components/Trends/AnalogueIndicator"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "TimeSeriesChart"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "plots": [
+                {
+                  "axes": [
+                    {
+                      "alignment": "left",
+                      "grid": {
+                        "color": "",
+                        "dashArray": 0,
+                        "opacity": 0.9,
+                        "style": {
+                          "classes": ""
+                        },
+                        "visible": false
+                      },
+                      "label": {
+                        "font": {
+                          "color": "",
+                          "size": 10
+                        },
+                        "offset": 0,
+                        "style": {
+                          "classes": ""
+                        },
+                        "text": "",
+                        "visible": true
+                      },
+                      "max": 100,
+                      "min": 0,
+                      "name": "Value",
+                      "style": {
+                        "classes": ""
+                      },
+                      "tick": {
+                        "color": "",
+                        "count": "Auto",
+                        "label": {
+                          "font": {
+                            "color": "",
+                            "size": 10
+                          },
+                          "format": "Auto",
+                          "style": {
+                            "classes": ""
+                          }
+                        },
+                        "style": {
+                          "classes": ""
+                        }
+                      },
+                      "width": 60
+                    }
+                  ],
+                  "markers": [
+                    {
+                      "axis": "Value",
+                      "line": {
+                        "color": "#0000AC",
+                        "dashArray": "",
+                        "label": {
+                          "font": {
+                            "color": "",
+                            "size": 10
+                          },
+                          "position": "right",
+                          "style": {
+                            "classes": ""
+                          },
+                          "text": ""
+                        },
+                        "opacity": 0.5,
+                        "style": {
+                          "classes": ""
+                        },
+                        "width": 40
+                      },
+                      "type": "line",
+                      "value": 15,
+                      "visible": true
+                    }
+                  ],
+                  "relativeWeight": 1,
+                  "trends": [
+                    {
+                      "axis": "Value",
+                      "baselines": [],
+                      "breakLine": true,
+                      "columns": [],
+                      "interpolation": "curveStep",
+                      "radius": 2,
+                      "series": "Boiler",
+                      "stack": true,
+                      "type": "line",
+                      "visible": true
+                    }
+                  ]
+                }
+              ],
+              "series": [
+                {
+                  "data": [
+                    {
+                      "Pressure": 12,
+                      "Temperature": 52,
+                      "time": 1560469431423
+                    },
+                    {
+                      "Pressure": 42,
+                      "Temperature": 18,
+                      "time": 1560469432423
+                    },
+                    {
+                      "Pressure": 81,
+                      "Temperature": 26,
+                      "time": 1560469433423
+                    },
+                    {
+                      "Pressure": 11,
+                      "Temperature": 63,
+                      "time": 1560469434423
+                    },
+                    {
+                      "Pressure": 23,
+                      "Temperature": 65,
+                      "time": 1560469435423
+                    },
+                    {
+                      "Pressure": 43,
+                      "Temperature": 12,
+                      "time": 1560469436423
+                    },
+                    {
+                      "Pressure": 71,
+                      "Temperature": 61,
+                      "time": 1560469437423
+                    },
+                    {
+                      "Pressure": 89,
+                      "Temperature": 60,
+                      "time": 1560469438423
+                    },
+                    {
+                      "Pressure": 66,
+                      "Temperature": 58,
+                      "time": 1560469439423
+                    },
+                    {
+                      "Pressure": 33,
+                      "Temperature": 1,
+                      "time": 1560469440423
+                    }
+                  ],
+                  "name": "Boiler"
+                }
+              ]
+            },
+            "type": "ia.chart.timeseries"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

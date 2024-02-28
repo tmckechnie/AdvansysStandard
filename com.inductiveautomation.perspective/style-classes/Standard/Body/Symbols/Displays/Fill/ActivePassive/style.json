@@ -1,0 +1,14 @@
+{
+  "base": {
+    "animation": {
+      "duration": "1s",
+      "keyframes": {
+        "0%": {},
+        "100%": {
+          "color": "var(--bodyContentText)",
+          "fill": "var(--bodySymbolPassive)"
+        }
+      }
+    }
+  }
+}

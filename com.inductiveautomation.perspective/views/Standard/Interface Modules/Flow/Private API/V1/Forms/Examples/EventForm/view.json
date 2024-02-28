@@ -1,0 +1,1947 @@
+{
+  "custom": {
+    "EnumerationGroups": {
+      "pid59": {
+        "enumerationFilterOrder": [
+          "State"
+        ],
+        "enumerationGroup": [
+          {
+            "State": "Stopped"
+          },
+          {
+            "State": "Running"
+          }
+        ]
+      },
+      "pid63": {
+        "enumerationFilterOrder": [
+          "Plan"
+        ],
+        "enumerationGroup": []
+      },
+      "pid64": {
+        "enumerationFilterOrder": [
+          "Cause"
+        ],
+        "enumerationGroup": [
+          {
+            "Cause": "Maintenance"
+          },
+          {
+            "Cause": "Rock"
+          },
+          {
+            "Cause": "Spillage"
+          },
+          {
+            "Cause": "Loose rele"
+          },
+          {
+            "Cause": "Metal Object"
+          },
+          {
+            "Cause": "None"
+          },
+          {
+            "Cause": "Running"
+          },
+          {
+            "Cause": "Stripped"
+          },
+          {
+            "Cause": "Rain"
+          },
+          {
+            "Cause": "Damage"
+          },
+          {
+            "Cause": "Tramp Metal"
+          },
+          {
+            "Cause": "Minisub"
+          },
+          {
+            "Cause": "Damaged"
+          },
+          {
+            "Cause": "Big Rocks"
+          },
+          {
+            "Cause": "Loose Bolts"
+          }
+        ]
+      },
+      "pid65": {
+        "enumerationFilterOrder": [
+          "Conveyor"
+        ],
+        "enumerationGroup": [
+          {
+            "Conveyor": "Slew Conveyor"
+          },
+          {
+            "Conveyor": "Waste Conveyor"
+          },
+          {
+            "Conveyor": "DC 1"
+          },
+          {
+            "Conveyor": "Sacrificial Conveyor"
+          },
+          {
+            "Conveyor": "SC 1"
+          },
+          {
+            "Conveyor": "Section"
+          }
+        ]
+      },
+      "pid66": {
+        "enumerationFilterOrder": [
+          "Failure Mode"
+        ],
+        "enumerationGroup": [
+          {
+            "FailureMode": "Isolated"
+          },
+          {
+            "FailureMode": "Pulled"
+          },
+          {
+            "FailureMode": "Tripped"
+          },
+          {
+            "FailureMode": "Clean"
+          },
+          {
+            "FailureMode": "Torn"
+          },
+          {
+            "FailureMode": "Blocked"
+          },
+          {
+            "FailureMode": "None"
+          },
+          {
+            "FailureMode": "Cracked"
+          },
+          {
+            "FailureMode": "Gears"
+          },
+          {
+            "FailureMode": "Stopped"
+          },
+          {
+            "FailureMode": "Cleaning"
+          },
+          {
+            "FailureMode": "Skirting"
+          },
+          {
+            "FailureMode": "Blockage"
+          },
+          {
+            "FailureMode": "Running"
+          },
+          {
+            "FailureMode": "Damaged"
+          }
+        ]
+      },
+      "pid67": {
+        "enumerationFilterOrder": [
+          "Object Type"
+        ],
+        "enumerationGroup": [
+          {
+            "ObjectType": "Pullswitch"
+          },
+          {
+            "ObjectType": "Gearbox"
+          },
+          {
+            "ObjectType": "Electrical"
+          },
+          {
+            "ObjectType": "Isolated"
+          },
+          {
+            "ObjectType": "Chute"
+          },
+          {
+            "ObjectType": "Magnet"
+          },
+          {
+            "ObjectType": "Conveyor"
+          },
+          {
+            "ObjectType": "Belting"
+          },
+          {
+            "ObjectType": "None"
+          },
+          {
+            "ObjectType": "Feeder"
+          },
+          {
+            "ObjectType": "Section"
+          },
+          {
+            "ObjectType": "Tip"
+          }
+        ]
+      }
+    },
+    "FlowDefinition": {
+      "defaultDisplayPeriod": "StartOfPeriod",
+      "durationTitle": "Duration",
+      "enumerationOrdinals": {
+        "1": "Stopped",
+        "2": "Running",
+        "21": "DC 1",
+        "22": "SC 1",
+        "23": "Sacrificial Conveyor",
+        "24": "Waste Conveyor",
+        "25": "Slew Conveyor",
+        "29": "Tip",
+        "32": "Chute",
+        "33": "Belting",
+        "34": "Conveyor",
+        "35": "Gearbox",
+        "36": "Pullswitch",
+        "37": "Isolated",
+        "38": "Electrical",
+        "39": "Damaged",
+        "40": "Blockage",
+        "41": "Skirting",
+        "42": "Blocked",
+        "43": "Torn",
+        "44": "Stopped",
+        "45": "Gears",
+        "46": "Pulled",
+        "47": "Isolated",
+        "48": "Tripped",
+        "50": "Damage",
+        "51": "Big Rocks",
+        "52": "Damaged",
+        "54": "Metal Object",
+        "55": "Rain",
+        "56": "Stripped",
+        "57": "Rock",
+        "58": "Maintenance",
+        "59": "Loose rele",
+        "60": "Minisub",
+        "61": "Tramp Metal",
+        "62": "Loose Bolts",
+        "64": "Magnet",
+        "65": "Clean",
+        "67": "Cracked",
+        "68": "Spillage",
+        "70": "Feeder",
+        "71": "Cleaning",
+        "73": "Section",
+        "74": "None",
+        "75": "None",
+        "76": "None",
+        "89": "Running",
+        "90": "Running",
+        "91": "Section"
+      },
+      "formGroups": [
+        {
+          "displayOrder": 1,
+          "eventSchemes": [
+            {
+              "alias": "ROM",
+              "allowDelete": true,
+              "allowEdit": true,
+              "allowInsert": true,
+              "allowSplit": true,
+              "displayOrder": 1,
+              "eventAttributes": [
+                {
+                  "alias": "Plan",
+                  "displayOrder": 1,
+                  "eventAttributeID": 55,
+                  "formGroupEventSchemeEventAttributeID": 63,
+                  "readOnly": true
+                },
+                {
+                  "alias": "State",
+                  "displayOrder": 2,
+                  "enumerationValues": [
+                    2,
+                    1
+                  ],
+                  "eventAttributeID": 51,
+                  "formGroupEventSchemeEventAttributeID": 59
+                },
+                {
+                  "alias": "Conveyor",
+                  "displayOrder": 4,
+                  "enumerationValues": [
+                    21,
+                    23,
+                    22,
+                    73,
+                    25,
+                    24
+                  ],
+                  "eventAttributeID": 91,
+                  "filteredOptions": {
+                    "21": {
+                      "21": []
+                    },
+                    "22": {
+                      "22": []
+                    },
+                    "23": {
+                      "23": []
+                    },
+                    "24": {
+                      "24": []
+                    },
+                    "25": {
+                      "25": []
+                    },
+                    "73": {
+                      "73": []
+                    }
+                  },
+                  "formGroupEventSchemeEventAttributeID": 65
+                },
+                {
+                  "alias": "Object Type",
+                  "displayOrder": 5,
+                  "enumerationValues": [
+                    33,
+                    32,
+                    34,
+                    38,
+                    70,
+                    35,
+                    37,
+                    64,
+                    74,
+                    36,
+                    91,
+                    29
+                  ],
+                  "eventAttributeID": 93,
+                  "filteredOptions": {
+                    "29": {
+                      "29": []
+                    },
+                    "32": {
+                      "32": []
+                    },
+                    "33": {
+                      "33": []
+                    },
+                    "34": {
+                      "34": []
+                    },
+                    "35": {
+                      "35": []
+                    },
+                    "36": {
+                      "36": []
+                    },
+                    "37": {
+                      "37": []
+                    },
+                    "38": {
+                      "38": []
+                    },
+                    "64": {
+                      "64": []
+                    },
+                    "70": {
+                      "70": []
+                    },
+                    "74": {
+                      "74": []
+                    },
+                    "91": {
+                      "91": []
+                    }
+                  },
+                  "formGroupEventSchemeEventAttributeID": 67
+                },
+                {
+                  "alias": "Failure Mode",
+                  "displayOrder": 6,
+                  "enumerationValues": [
+                    40,
+                    42,
+                    65,
+                    71,
+                    67,
+                    39,
+                    45,
+                    47,
+                    75,
+                    46,
+                    90,
+                    41,
+                    44,
+                    43,
+                    48
+                  ],
+                  "eventAttributeID": 92,
+                  "filteredOptions": {
+                    "39": {
+                      "39": []
+                    },
+                    "40": {
+                      "40": []
+                    },
+                    "41": {
+                      "41": []
+                    },
+                    "42": {
+                      "42": []
+                    },
+                    "43": {
+                      "43": []
+                    },
+                    "44": {
+                      "44": []
+                    },
+                    "45": {
+                      "45": []
+                    },
+                    "46": {
+                      "46": []
+                    },
+                    "47": {
+                      "47": []
+                    },
+                    "48": {
+                      "48": []
+                    },
+                    "65": {
+                      "65": []
+                    },
+                    "67": {
+                      "67": []
+                    },
+                    "71": {
+                      "71": []
+                    },
+                    "75": {
+                      "75": []
+                    },
+                    "90": {
+                      "90": []
+                    }
+                  },
+                  "formGroupEventSchemeEventAttributeID": 66
+                },
+                {
+                  "alias": "Cause",
+                  "displayOrder": 7,
+                  "enumerationValues": [
+                    51,
+                    50,
+                    52,
+                    62,
+                    59,
+                    58,
+                    54,
+                    60,
+                    76,
+                    55,
+                    57,
+                    89,
+                    68,
+                    56,
+                    61
+                  ],
+                  "eventAttributeID": 90,
+                  "filteredOptions": {
+                    "50": {
+                      "50": []
+                    },
+                    "51": {
+                      "51": []
+                    },
+                    "52": {
+                      "52": []
+                    },
+                    "54": {
+                      "54": []
+                    },
+                    "55": {
+                      "55": []
+                    },
+                    "56": {
+                      "56": []
+                    },
+                    "57": {
+                      "57": []
+                    },
+                    "58": {
+                      "58": []
+                    },
+                    "59": {
+                      "59": []
+                    },
+                    "60": {
+                      "60": []
+                    },
+                    "61": {
+                      "61": []
+                    },
+                    "62": {
+                      "62": []
+                    },
+                    "68": {
+                      "68": []
+                    },
+                    "76": {
+                      "76": []
+                    },
+                    "89": {
+                      "89": []
+                    }
+                  },
+                  "formGroupEventSchemeEventAttributeID": 64
+                }
+              ],
+              "eventSchemeID": 15,
+              "filters": [
+                {
+                  "eventAttributeID": 51,
+                  "eventFormFilterTypeID": "includes",
+                  "formGroupEventSchemeFilterID": 2,
+                  "values": [
+                    {
+                      "enumerationOrdinalID": 1
+                    }
+                  ]
+                }
+              ],
+              "measures": [
+                {
+                  "alias": "Stoping Target",
+                  "displayOrder": 11,
+                  "formGroupEventSchemeMeasureID": 2,
+                  "measureID": 279,
+                  "readOnly": true,
+                  "uom": "ton",
+                  "visibility": "alwaysVisible"
+                },
+                {
+                  "alias": "Development Target",
+                  "displayOrder": 10,
+                  "formGroupEventSchemeMeasureID": 1,
+                  "measureID": 282,
+                  "readOnly": true,
+                  "uom": "ton",
+                  "visibility": "alwaysVisible"
+                }
+              ]
+            }
+          ],
+          "formGroupID": 12,
+          "measures": [],
+          "name": "ROM"
+        }
+      ],
+      "formType": "tables-eventbased-table",
+      "name": "ROM State Form",
+      "timeSchemes": [],
+      "title": "[Name]"
+    },
+    "data": [],
+    "definition": [
+      {
+        "event": {
+          "baseColInstances": [
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "editable": false,
+              "field": "periodStart",
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Period Start"
+              },
+              "justify": "auto",
+              "number": "value",
+              "numberFormat": "0.0",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "date",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 150
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "editable": false,
+              "field": "periodEnd",
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Period End"
+              },
+              "justify": "auto",
+              "number": "value",
+              "numberFormat": "0.0",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "date",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 150
+            }
+          ],
+          "enumerationGroup": {
+            "pid59": {
+              "enumerationFilterOrder": [
+                "State"
+              ],
+              "enumerationGroup": [
+                {
+                  "State": "Stopped"
+                },
+                {
+                  "State": "Running"
+                }
+              ]
+            },
+            "pid63": {
+              "enumerationFilterOrder": [
+                "Plan"
+              ],
+              "enumerationGroup": []
+            },
+            "pid64": {
+              "enumerationFilterOrder": [
+                "Cause"
+              ],
+              "enumerationGroup": [
+                {
+                  "Cause": "Maintenance"
+                },
+                {
+                  "Cause": "Rock"
+                },
+                {
+                  "Cause": "Spillage"
+                },
+                {
+                  "Cause": "Loose rele"
+                },
+                {
+                  "Cause": "Metal Object"
+                },
+                {
+                  "Cause": "None"
+                },
+                {
+                  "Cause": "Running"
+                },
+                {
+                  "Cause": "Stripped"
+                },
+                {
+                  "Cause": "Rain"
+                },
+                {
+                  "Cause": "Damage"
+                },
+                {
+                  "Cause": "Tramp Metal"
+                },
+                {
+                  "Cause": "Minisub"
+                },
+                {
+                  "Cause": "Damaged"
+                },
+                {
+                  "Cause": "Big Rocks"
+                },
+                {
+                  "Cause": "Loose Bolts"
+                }
+              ]
+            },
+            "pid65": {
+              "enumerationFilterOrder": [
+                "Conveyor"
+              ],
+              "enumerationGroup": [
+                {
+                  "Conveyor": "Slew Conveyor"
+                },
+                {
+                  "Conveyor": "Waste Conveyor"
+                },
+                {
+                  "Conveyor": "DC 1"
+                },
+                {
+                  "Conveyor": "Sacrificial Conveyor"
+                },
+                {
+                  "Conveyor": "SC 1"
+                },
+                {
+                  "Conveyor": "Section"
+                }
+              ]
+            },
+            "pid66": {
+              "enumerationFilterOrder": [
+                "Failure Mode"
+              ],
+              "enumerationGroup": [
+                {
+                  "FailureMode": "Isolated"
+                },
+                {
+                  "FailureMode": "Pulled"
+                },
+                {
+                  "FailureMode": "Tripped"
+                },
+                {
+                  "FailureMode": "Clean"
+                },
+                {
+                  "FailureMode": "Torn"
+                },
+                {
+                  "FailureMode": "Blocked"
+                },
+                {
+                  "FailureMode": "None"
+                },
+                {
+                  "FailureMode": "Cracked"
+                },
+                {
+                  "FailureMode": "Gears"
+                },
+                {
+                  "FailureMode": "Stopped"
+                },
+                {
+                  "FailureMode": "Cleaning"
+                },
+                {
+                  "FailureMode": "Skirting"
+                },
+                {
+                  "FailureMode": "Blockage"
+                },
+                {
+                  "FailureMode": "Running"
+                },
+                {
+                  "FailureMode": "Damaged"
+                }
+              ]
+            },
+            "pid67": {
+              "enumerationFilterOrder": [
+                "Object Type"
+              ],
+              "enumerationGroup": [
+                {
+                  "ObjectType": "Pullswitch"
+                },
+                {
+                  "ObjectType": "Gearbox"
+                },
+                {
+                  "ObjectType": "Electrical"
+                },
+                {
+                  "ObjectType": "Isolated"
+                },
+                {
+                  "ObjectType": "Chute"
+                },
+                {
+                  "ObjectType": "Magnet"
+                },
+                {
+                  "ObjectType": "Conveyor"
+                },
+                {
+                  "ObjectType": "Belting"
+                },
+                {
+                  "ObjectType": "None"
+                },
+                {
+                  "ObjectType": "Feeder"
+                },
+                {
+                  "ObjectType": "Section"
+                },
+                {
+                  "ObjectType": "Tip"
+                }
+              ]
+            }
+          },
+          "eventAttributes": [
+            {
+              "colInstance": {
+                "align": "center",
+                "boolean": "checkbox",
+                "dateFormat": "YYYY/MM/DD HH:mm:ss",
+                "editable": false,
+                "field": "Plan",
+                "footer": {
+                  "align": "center",
+                  "justify": "left",
+                  "style": {
+                    "classes": ""
+                  },
+                  "title": ""
+                },
+                "header": {
+                  "align": "center",
+                  "justify": "left",
+                  "style": {
+                    "classes": ""
+                  },
+                  "title": "Plan"
+                },
+                "justify": "auto",
+                "number": "value",
+                "numberFormat": "0.0",
+                "progressBar": {
+                  "bar": {
+                    "color": "",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "max": 100,
+                  "min": 0,
+                  "track": {
+                    "color": "",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "value": {
+                    "enabled": true,
+                    "format": "0,0.##",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    }
+                  }
+                },
+                "render": "auto",
+                "resizable": true,
+                "sort": "none",
+                "sortable": false,
+                "strictWidth": false,
+                "style": {
+                  "classes": ""
+                },
+                "toggleSwitch": {
+                  "color": {
+                    "selected": "",
+                    "unselected": ""
+                  }
+                },
+                "viewParams": {},
+                "viewPath": "",
+                "visible": true,
+                "width": ""
+              },
+              "displayOrder": 1,
+              "eventAttributeID": 55,
+              "name": "Plan",
+              "readOnly": true,
+              "title": "Plan"
+            },
+            {
+              "colInstance": {
+                "align": "center",
+                "boolean": "checkbox",
+                "dateFormat": "YYYY/MM/DD HH:mm:ss",
+                "editable": true,
+                "field": "State",
+                "footer": {
+                  "align": "center",
+                  "justify": "left",
+                  "style": {
+                    "classes": ""
+                  },
+                  "title": ""
+                },
+                "header": {
+                  "align": "center",
+                  "justify": "left",
+                  "style": {
+                    "classes": ""
+                  },
+                  "title": "State"
+                },
+                "justify": "auto",
+                "number": "value",
+                "numberFormat": "0.0",
+                "progressBar": {
+                  "bar": {
+                    "color": "",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "max": 100,
+                  "min": 0,
+                  "track": {
+                    "color": "",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "value": {
+                    "enabled": true,
+                    "format": "0,0.##",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    }
+                  }
+                },
+                "render": "auto",
+                "resizable": true,
+                "sort": "none",
+                "sortable": false,
+                "strictWidth": false,
+                "style": {
+                  "classes": ""
+                },
+                "toggleSwitch": {
+                  "color": {
+                    "selected": "",
+                    "unselected": ""
+                  }
+                },
+                "viewParams": {},
+                "viewPath": "",
+                "visible": true,
+                "width": ""
+              },
+              "displayOrder": 2,
+              "eventAttributeID": 51,
+              "name": "State",
+              "readOnly": false,
+              "title": "State"
+            },
+            {
+              "colInstance": {
+                "align": "center",
+                "boolean": "checkbox",
+                "dateFormat": "YYYY/MM/DD HH:mm:ss",
+                "editable": true,
+                "field": "Conveyor",
+                "footer": {
+                  "align": "center",
+                  "justify": "left",
+                  "style": {
+                    "classes": ""
+                  },
+                  "title": ""
+                },
+                "header": {
+                  "align": "center",
+                  "justify": "left",
+                  "style": {
+                    "classes": ""
+                  },
+                  "title": "Conveyor"
+                },
+                "justify": "auto",
+                "number": "value",
+                "numberFormat": "0.0",
+                "progressBar": {
+                  "bar": {
+                    "color": "",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "max": 100,
+                  "min": 0,
+                  "track": {
+                    "color": "",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "value": {
+                    "enabled": true,
+                    "format": "0,0.##",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    }
+                  }
+                },
+                "render": "auto",
+                "resizable": true,
+                "sort": "none",
+                "sortable": false,
+                "strictWidth": false,
+                "style": {
+                  "classes": ""
+                },
+                "toggleSwitch": {
+                  "color": {
+                    "selected": "",
+                    "unselected": ""
+                  }
+                },
+                "viewParams": {},
+                "viewPath": "",
+                "visible": true,
+                "width": ""
+              },
+              "displayOrder": 4,
+              "eventAttributeID": 91,
+              "name": "Conveyor",
+              "readOnly": false,
+              "title": "Conveyor"
+            },
+            {
+              "colInstance": {
+                "align": "center",
+                "boolean": "checkbox",
+                "dateFormat": "YYYY/MM/DD HH:mm:ss",
+                "editable": true,
+                "field": "ObjectType",
+                "footer": {
+                  "align": "center",
+                  "justify": "left",
+                  "style": {
+                    "classes": ""
+                  },
+                  "title": ""
+                },
+                "header": {
+                  "align": "center",
+                  "justify": "left",
+                  "style": {
+                    "classes": ""
+                  },
+                  "title": "Object Type"
+                },
+                "justify": "auto",
+                "number": "value",
+                "numberFormat": "0.0",
+                "progressBar": {
+                  "bar": {
+                    "color": "",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "max": 100,
+                  "min": 0,
+                  "track": {
+                    "color": "",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "value": {
+                    "enabled": true,
+                    "format": "0,0.##",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    }
+                  }
+                },
+                "render": "auto",
+                "resizable": true,
+                "sort": "none",
+                "sortable": false,
+                "strictWidth": false,
+                "style": {
+                  "classes": ""
+                },
+                "toggleSwitch": {
+                  "color": {
+                    "selected": "",
+                    "unselected": ""
+                  }
+                },
+                "viewParams": {},
+                "viewPath": "",
+                "visible": true,
+                "width": ""
+              },
+              "displayOrder": 5,
+              "eventAttributeID": 93,
+              "name": "Object Type",
+              "readOnly": false,
+              "title": "Object Type"
+            },
+            {
+              "colInstance": {
+                "align": "center",
+                "boolean": "checkbox",
+                "dateFormat": "YYYY/MM/DD HH:mm:ss",
+                "editable": true,
+                "field": "FailureMode",
+                "footer": {
+                  "align": "center",
+                  "justify": "left",
+                  "style": {
+                    "classes": ""
+                  },
+                  "title": ""
+                },
+                "header": {
+                  "align": "center",
+                  "justify": "left",
+                  "style": {
+                    "classes": ""
+                  },
+                  "title": "Failure Mode"
+                },
+                "justify": "auto",
+                "number": "value",
+                "numberFormat": "0.0",
+                "progressBar": {
+                  "bar": {
+                    "color": "",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "max": 100,
+                  "min": 0,
+                  "track": {
+                    "color": "",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "value": {
+                    "enabled": true,
+                    "format": "0,0.##",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    }
+                  }
+                },
+                "render": "auto",
+                "resizable": true,
+                "sort": "none",
+                "sortable": false,
+                "strictWidth": false,
+                "style": {
+                  "classes": ""
+                },
+                "toggleSwitch": {
+                  "color": {
+                    "selected": "",
+                    "unselected": ""
+                  }
+                },
+                "viewParams": {},
+                "viewPath": "",
+                "visible": true,
+                "width": ""
+              },
+              "displayOrder": 6,
+              "eventAttributeID": 92,
+              "name": "Failure Mode",
+              "readOnly": false,
+              "title": "Failure Mode"
+            },
+            {
+              "colInstance": {
+                "align": "center",
+                "boolean": "checkbox",
+                "dateFormat": "YYYY/MM/DD HH:mm:ss",
+                "editable": true,
+                "field": "Cause",
+                "footer": {
+                  "align": "center",
+                  "justify": "left",
+                  "style": {
+                    "classes": ""
+                  },
+                  "title": ""
+                },
+                "header": {
+                  "align": "center",
+                  "justify": "left",
+                  "style": {
+                    "classes": ""
+                  },
+                  "title": "Cause"
+                },
+                "justify": "auto",
+                "number": "value",
+                "numberFormat": "0.0",
+                "progressBar": {
+                  "bar": {
+                    "color": "",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "max": 100,
+                  "min": 0,
+                  "track": {
+                    "color": "",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "value": {
+                    "enabled": true,
+                    "format": "0,0.##",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    }
+                  }
+                },
+                "render": "auto",
+                "resizable": true,
+                "sort": "none",
+                "sortable": false,
+                "strictWidth": false,
+                "style": {
+                  "classes": ""
+                },
+                "toggleSwitch": {
+                  "color": {
+                    "selected": "",
+                    "unselected": ""
+                  }
+                },
+                "viewParams": {},
+                "viewPath": "",
+                "visible": true,
+                "width": ""
+              },
+              "displayOrder": 7,
+              "eventAttributeID": 90,
+              "name": "Cause",
+              "readOnly": false,
+              "title": "Cause"
+            }
+          ],
+          "eventSchemeID": 15,
+          "measures": [
+            {
+              "colInstance": {
+                "align": "center",
+                "boolean": "checkbox",
+                "dateFormat": "YYYY/MM/DD HH:mm:ss",
+                "editable": false,
+                "field": "StopingTarget",
+                "footer": {
+                  "align": "center",
+                  "justify": "left",
+                  "style": {
+                    "classes": ""
+                  },
+                  "title": ""
+                },
+                "header": {
+                  "align": "center",
+                  "justify": "left",
+                  "style": {
+                    "classes": ""
+                  },
+                  "title": "Stoping Target (ton)"
+                },
+                "justify": "auto",
+                "number": "value",
+                "numberFormat": "0.0",
+                "progressBar": {
+                  "bar": {
+                    "color": "",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "max": 100,
+                  "min": 0,
+                  "track": {
+                    "color": "",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "value": {
+                    "enabled": true,
+                    "format": "0,0.##",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    }
+                  }
+                },
+                "render": "auto",
+                "resizable": true,
+                "sort": "none",
+                "sortable": false,
+                "strictWidth": false,
+                "style": {
+                  "classes": ""
+                },
+                "toggleSwitch": {
+                  "color": {
+                    "selected": "",
+                    "unselected": ""
+                  }
+                },
+                "viewParams": {},
+                "viewPath": "",
+                "visible": true,
+                "width": ""
+              },
+              "displayOrder": 11,
+              "measureID": 279,
+              "name": "Stoping Target",
+              "readOnly": true,
+              "title": "Stoping Target",
+              "uom": "ton"
+            },
+            {
+              "colInstance": {
+                "align": "center",
+                "boolean": "checkbox",
+                "dateFormat": "YYYY/MM/DD HH:mm:ss",
+                "editable": false,
+                "field": "DevelopmentTarget",
+                "footer": {
+                  "align": "center",
+                  "justify": "left",
+                  "style": {
+                    "classes": ""
+                  },
+                  "title": ""
+                },
+                "header": {
+                  "align": "center",
+                  "justify": "left",
+                  "style": {
+                    "classes": ""
+                  },
+                  "title": "Development Target (ton)"
+                },
+                "justify": "auto",
+                "number": "value",
+                "numberFormat": "0.0",
+                "progressBar": {
+                  "bar": {
+                    "color": "",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "max": 100,
+                  "min": 0,
+                  "track": {
+                    "color": "",
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "value": {
+                    "enabled": true,
+                    "format": "0,0.##",
+                    "justify": "center",
+                    "style": {
+                      "classes": ""
+                    }
+                  }
+                },
+                "render": "auto",
+                "resizable": true,
+                "sort": "none",
+                "sortable": false,
+                "strictWidth": false,
+                "style": {
+                  "classes": ""
+                },
+                "toggleSwitch": {
+                  "color": {
+                    "selected": "",
+                    "unselected": ""
+                  }
+                },
+                "viewParams": {},
+                "viewPath": "",
+                "visible": true,
+                "width": ""
+              },
+              "displayOrder": 10,
+              "measureID": 282,
+              "name": "Development Target",
+              "readOnly": true,
+              "title": "Development Target",
+              "uom": "ton"
+            }
+          ],
+          "name": "ROM"
+        },
+        "title": "ROM"
+      }
+    ],
+    "status": "No Data",
+    "username": "Advansys\\\\Braam"
+  },
+  "params": {
+    "editable": {
+      "Cause": {
+        "name": "Cause",
+        "type": "Dropdown"
+      },
+      "Conveyor": {
+        "name": "Conveyor",
+        "type": "Dropdown"
+      },
+      "Description": {
+        "name": "Description",
+        "type": "TextField"
+      },
+      "FailureMode": {
+        "name": "Failure Mode",
+        "type": "Dropdown"
+      },
+      "ObjectType": {
+        "name": "Object Type",
+        "type": "Dropdown"
+      },
+      "Plan": {
+        "name": "Object Type",
+        "type": "Dropdown"
+      }
+    },
+    "filter": {
+      "State": [
+        "Stopped"
+      ]
+    },
+    "formID": 6
+  },
+  "propConfig": {
+    "custom.EnumerationGroups": {
+      "binding": {
+        "config": {
+          "path": "view.custom.FlowDefinition"
+        },
+        "transforms": [
+          {
+            "code": "\tFlowDefinition \u003d value\n\teventAttributes \u003d FlowDefinition[\"formGroups\"][0][\"eventSchemes\"][0][\"eventAttributes\"]\n\tEnumerationFilterOrderObject \u003d Flow.PrivateAPI.V1.Event.getEnumerationFilterOrderFromFlowDefinition(eventAttributes)\n\teventAttributeIDMapping \u003d {}\t\n\tfor eventAttributeObject in eventAttributes:\n\t\teventAttributeObjectAlias \u003d  eventAttributeObject[\"alias\"].replace(\" \",\"\")\n\t\tfilteredAttributeID \u003d eventAttributeObject[\"formGroupEventSchemeEventAttributeID\"]\t\t\t\t\t\n\t\t\n\t\tfilteredAttributeIDKey \u003d \"fid\"  + str(filteredAttributeID)\n\t\teventAttributeIDMapping[filteredAttributeIDKey] \u003d eventAttributeObjectAlias\n\t\n\tenumerationGroupsObject \u003d {}\n\tenumerationOrdinals \u003d FlowDefinition[\"enumerationOrdinals\"]\n\tfor EnumerationFilterOrderKey in EnumerationFilterOrderObject:\n\t\tEnumerationFilterOrder \u003d EnumerationFilterOrderObject[EnumerationFilterOrderKey]\n\t\toptionPathsObject \u003d {}\n\t\tfor eventAttributeAlias in EnumerationFilterOrder:\n\t\t\tfor eventAttributeObject in eventAttributes:\n\t\t\t\teventAttributeObjectAlias \u003d  eventAttributeObject[\"alias\"]\n\t\t\t\tif eventAttributeAlias \u003d\u003d eventAttributeObjectAlias:\n\t\t\t\t\tif (\"filterAttributeID\" in eventAttributeObject) \u003d\u003d False:\n\t\t\t\t\t\t#Parent Attribute just uses enumerationValues\n\t\t\t\t\t\tif \"enumerationValues\" in eventAttributeObject:\n\t\t\t\t\t\t\tenumerationValues \u003d eventAttributeObject[\"enumerationValues\"]\t\n\t\t\t\t\t\t\teventAttributeAliasKey \u003d eventAttributeAlias.replace(\" \",\"\")\t\t\t\t\t\t\n\t\t\t\t\t\t\tfor enumValue in enumerationValues:\t\n\t\t\t\t\t\t\t\toptionPathObject \u003d {}\n\t\t\t\t\t\t\t\tvalidOptionKey \u003d \"oid\" + str(enumValue)\n\t\t\t\t\t\t\t\toptionPathObject[eventAttributeAliasKey] \u003d enumerationOrdinals[str(enumValue)]\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\toptionPathsObject[validOptionKey] \u003d optionPathObject\t\t\t\t\t\n\n\t\t\t\t\t\tbreak\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\tfilteredAttributeID \u003d eventAttributeObject[\"filterAttributeID\"]\n\t\t\t\t\tfilterAttributeAlias \u003d eventAttributeIDMapping[\"fid\" + str(filteredAttributeID)]\n\t\t\t\t\tfilteredOptions \u003d eventAttributeObject[\"filteredOptions\"]\n\t\t\t\t\tfor filteredOption in filteredOptions:\t\t\t\t\t\t\n\t\t\t\t\t\tfor eventAttributeEnum in filteredOptions[filteredOption]:\n\t\t\t\t\t\t\tvalidOptions \u003d filteredOptions[filteredOption][eventAttributeEnum] \n\t\t\t\t\t\t\tfor validOption in validOptions:\n\t\t\t\t\t\t\t\tvalidOptionKey \u003d \"oid\" + str(validOption)\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\tif validOptionKey in optionPathsObject:\n\t\t\t\t\t\t\t\t\toptionPathsObject[validOptionKey][eventAttributeObjectAlias.replace(\" \",\"\")] \u003d enumerationOrdinals[eventAttributeEnum]\n\t\t\t\t\t\t\t\t\toptionPathsObject[validOptionKey][filterAttributeAlias] \u003d \tenumerationOrdinals[filteredOption]\t\n\t\t\t\t\t\t\t\telse:\n\t\t\t\t\t\t\t\t\toptionPathObject \u003d {}\n\t\t\t\t\t\t\t\t\tfor alias in EnumerationFilterOrder:\n\t\t\t\t\t\t\t\t\t\tenumValue \u003d \"\"\n\t\t\t\t\t\t\t\t\t\tif alias \u003d\u003d eventAttributeAlias:\n\t\t\t\t\t\t\t\t\t\t\tenumValue \u003d enumerationOrdinals[eventAttributeEnum]\n\t\t\t\t\t\t\t\t\t\telif alias.replace(\" \",\"\") \u003d\u003d filterAttributeAlias:\n\t\t\t\t\t\t\t\t\t\t\tenumValue \u003d enumerationOrdinals[filteredOption]\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\toptionPathObject[alias.replace(\" \",\"\")] \u003d enumValue\n\t\t\t\t\t\t\t\t\toptionPathsObject[validOptionKey] \u003d optionPathObject\n\t\toptionPathsObject \u003d optionPathsObject.values()\n\t\tenumerationGroupsObject[EnumerationFilterOrderKey] \u003d {\"enumerationGroup\":optionPathsObject,\"enumerationFilterOrder\":EnumerationFilterOrder}\n\treturn enumerationGroupsObject",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.FlowDefinition": {
+      "binding": {
+        "config": {
+          "path": "view.params.formID"
+        },
+        "enabled": false,
+        "transforms": [
+          {
+            "code": "\tconnection \u003d Flow.PrivateAPI.V1.Common.GetConnection()\n\tdefinition \u003d Flow.PrivateAPI.V1.Event.getFlowDefinitionFromForm(Connection\u003dconnection,FormID\u003dvalue)\n\treturn definition[\u0027json\u0027]",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.data": {
+      "binding": {
+        "config": {
+          "struct": {
+            "filter": "{view.params.filter}",
+            "formID": "{view.params.formID}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\t\n\tusername \u003d self.custom.username\n\tconnection \u003d None\n\t#period \u003d self.params.period\n\tperiod \u003d None\n\tformID \u003d value[\u0027formID\u0027]\n\tfilters \u003d value[\u0027filter\u0027]\n\tdata \u003d Flow.PrivateAPI.V1.Event.GetDataFromForm(Connection\u003dconnection,Username\u003dusername,FormID\u003dformID,DefinitionFormGroup\u003dNone,Period\u003dNone)\n\tif \u0027error\u0027 in data and data[\u0027error\u0027]:\n\t\tself.custom.status \u003d data[\u0027message\u0027]\n\t\treturn []\n\tfilterData \u003d []\n\tfor row in data:\n\t\tif filters is not None:\n\t\t\tinclude \u003d False\n\t\t\tfor filterKey in filters:\n\t\t\t\tv \u003d row[filterKey][\u0027value\u0027]\n\t\t\t\tfor filterValue in filters[filterKey]:\n\t\t\t\t\tif v \u003d\u003d filterValue:\n\t\t\t\t\t\tinclude \u003d True\n\t\telse:\n\t\t\tinclude \u003d True\n\t\t\n\t\t\n\t\tif include:\n\t\t\tfilterData.append(row)\n\tif len(filterData)\u003e0:\n\t\tself.custom.status \u003d \u0027OK\u0027\n\telse:\n\t\tself.custom.status \u003d \u0027No Data\u0027\n\treturn filterData",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.definition": {
+      "binding": {
+        "config": {
+          "path": "view.params.formID"
+        },
+        "transforms": [
+          {
+            "code": "\tconnection \u003d None\n\tdefinition \u003d Flow.PrivateAPI.V1.Event.GetDefinitionFromForm(Connection\u003dconnection,FormID\u003dvalue)\n\treturn definition",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.status": {
+      "persistent": true
+    },
+    "custom.username": {
+      "binding": {
+        "config": {
+          "path": "session.custom.flowUser"
+        },
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.editable": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.filter": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.formID": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 781,
+      "width": 1013
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "50px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.FlowDefinition.name"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Flow/DefaultHeading"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tself.view.refreshBinding(\u0027custom.definition\u0027)\n\tself.view.refreshBinding(\u0027custom.data\u0027)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "ButtonRefresh"
+            },
+            "position": {
+              "basis": "30px",
+              "shrink": 0
+            },
+            "props": {
+              "image": {
+                "icon": {
+                  "path": "material/refresh"
+                }
+              },
+              "style": {
+                "classes": "Flow/defaultButton",
+                "marginBottom": 2,
+                "marginLeft": 2,
+                "marginRight": 2,
+                "marginTop": 2
+              },
+              "text": ""
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainerHeader"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.columns": {
+            "binding": {
+              "config": {
+                "path": "view.custom.definition"
+              },
+              "transforms": [
+                {
+                  "code": "\tcolInstances \u003d []\n\t#Edit\n\tvisible \u003d True\n\theader \u003d \" \"\n\tfield \u003d \"edit\"\t\t\n\tEditButtonColumn \u003d Flow.PrivateAPI.V1.Event.getColumnInstance(field,header,visible,editable \u003d False,Width \u003d \"\",render\u003d{\u0027datatype\u0027:\u0027view\u0027,\u0027numberFormat\u0027:\u00270.0\u0027,\u0027dateFormat\u0027:\u0027YYYY/MM/DD HH:mm:ss\u0027})\n\tEditButtonColumn[\"viewPath\"] \u003d \"Flow/Private API/V1/Forms/Components/Event Edit Button\"\n\tEditButtonColumn[\"width\"] \u003d 50\n\tEditButtonColumn[\u0027strictWidth\u0027] \u003d True\n\teditParams \u003d {}\n\teditParams[\"enumerationGroup\"] \u003d self.view.custom.definition[0].event.enumerationGroup\n\teditParams[\"editable\"] \u003d self.view.params.editable\n\tEditButtonColumn[\"viewParams\"] \u003d editParams\t\n\tcolInstances.append(EditButtonColumn)\n\t\n\t#BaseColInstances\n\tbaseColInstances \u003d value[0][\u0027event\u0027][\u0027baseColInstances\u0027]\n\tfor baseColInstance in baseColInstances:\n\t\t\tcolInstances.append(baseColInstance)\n\t\n\n\t\n\teventAttributes \u003d value[0][\u0027event\u0027][\u0027eventAttributes\u0027]\n\t\n\teventAttributesSorted \u003d sorted(eventAttributes, key \u003d lambda row:row[\"displayOrder\"])\n\tfor eventAttribute in eventAttributesSorted:\n\t\tcolInstances.append(eventAttribute[\u0027colInstance\u0027])\n\n\tmeasures \u003d value[0][\u0027event\u0027][\u0027measures\u0027]\n\tmeasuresSorted \u003d sorted(measures, key \u003d lambda row:row[\"displayOrder\"])\n\tfor measure in measuresSorted:\n\t\tcolInstances.append(measure[\u0027colInstance\u0027])\n\t\n\t\n\treturn colInstances",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.data": {
+            "binding": {
+              "config": {
+                "path": "view.custom.data"
+              },
+              "type": "property"
+            }
+          },
+          "props.emptyMessage.noData.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.status"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "emptyMessage": {
+            "noData": {}
+          },
+          "pager": {
+            "initialOption": 100
+          }
+        },
+        "type": "ia.display.table"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tusername \u003d self.view.custom.username\n\tformID \u003d self.view.params.formID\n\tconnection \u003d None\n\tsplitTimeStamp \u003d system.date.now()\n\teventPeriods \u003d Flow.Event.SplitCurrentEvent(Connection\u003dconnection,Username\u003dusername, FormID \u003d formID,SplitTimeStamp\u003dsplitTimeStamp)\n\tself.view.refreshBinding(\u0027custom.data\u0027)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "ButtonSplitCurrentEvent"
+            },
+            "position": {
+              "basis": "34px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "classes": "Flow/defaultButton",
+                "marginBottom": 2,
+                "marginLeft": 20,
+                "marginRight": 20,
+                "marginTop": 2
+              },
+              "text": "Split Current Event"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tself.view.refreshBinding(\u0027custom.definition\u0027)\n\tself.view.refreshBinding(\u0027custom.data\u0027)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "ButtonRefresh"
+            },
+            "position": {
+              "basis": "34px",
+              "grow": 1
+            },
+            "props": {
+              "image": {
+                "icon": {
+                  "path": "material/refresh"
+                }
+              },
+              "style": {
+                "classes": "Flow/defaultButton",
+                "marginBottom": 2,
+                "marginLeft": 20,
+                "marginRight": 20,
+                "marginTop": 2
+              },
+              "text": "Refresh"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "custom": {
+              "filters": [
+                {
+                  "name": "Cause",
+                  "value": "None"
+                }
+              ]
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "draggable": true,
+                    "id": "MultiEventEditorPopup",
+                    "modal": false,
+                    "overlayDismiss": false,
+                    "resizable": true,
+                    "showCloseIcon": true,
+                    "type": "open",
+                    "viewParams": {
+                      "editable": "{view.params.editable}",
+                      "enumerationGroup": "{view.custom.definition[0].event.enumerationGroup}",
+                      "eventPeriods": "{/root/FlexContainer/ButtonMultiAttributeAllocator.custom.filterEventPeriods}"
+                    },
+                    "viewPath": "Flow/Forms/Components/Multi Event Editor",
+                    "viewportBound": false
+                  },
+                  "scope": "C",
+                  "type": "popup"
+                }
+              }
+            },
+            "meta": {
+              "name": "ButtonMultiAttributeAllocator"
+            },
+            "position": {
+              "basis": "20px",
+              "grow": 1
+            },
+            "propConfig": {
+              "custom.filterEventPeriods": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "data": "{view.custom.data}",
+                      "filters": "{this.custom.filters}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\teventPeriods \u003d value[\u0027data\u0027]\n\tif \u0027error\u0027 in eventPeriods:\n\t\treturn []\n\tfilters \u003d value[\u0027filters\u0027]\n\teventPeriodsFiltered \u003d []\n\tfor eventPeriod in eventPeriods:\n\t\tmatches \u003d []\n\t\tfor filter in filters:\n\t\t\tfilterAttributeName \u003d filter[\u0027name\u0027]\n\t\t\tfilterAttributeValue \u003d  filter[\u0027value\u0027]\n\t\t\tattributeValue \u003d eventPeriod[filterAttributeName][\u0027value\u0027]\n\t\t\t#if attributeValue \u003d\u003d filterAttributeValue:\n\t\t\tmatches.append(attributeValue \u003d\u003d filterAttributeValue)\n\t\t\n\t\t\n\t\tif all(matches):\n\t\t\teventPeriodsFiltered.append(eventPeriod)\n\t\t\n\treturn eventPeriodsFiltered\n",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "len({this.custom.filterEventPeriods})\u003e0"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "image": {
+                "height": 20,
+                "width": 20
+              },
+              "style": {
+                "classes": "Flow/defaultButton",
+                "marginBottom": 2,
+                "marginLeft": 20,
+                "marginRight": 20,
+                "marginTop": 2
+              },
+              "text": "Multi Attribute Allocator"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainerFooter"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "scripts": {
+      "customMethods": [],
+      "extensionFunctions": null,
+      "messageHandlers": [
+        {
+          "messageType": "refresh",
+          "pageScope": true,
+          "script": "\t# implement your handler here\n\tlogger \u003d system.util.getLogger(\"refresh Message Received\")\n\tlogger.info(\u0027Starting.....\u0027)\n\tsystem.perspective.print(\u0027Refresh Message Recieved!\u0027)\n\t\n\tself.view.refreshBinding(\u0027custom.data\u0027)\n\tlogger.info(\u0027Done!\u0027)",
+          "sessionScope": true,
+          "viewScope": true
+        }
+      ]
+    },
+    "type": "ia.container.flex"
+  }
+}

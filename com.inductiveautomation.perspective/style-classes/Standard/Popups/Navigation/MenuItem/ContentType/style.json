@@ -1,0 +1,24 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--popupContentType)",
+      "borderBottomColor": "var(--popupAccentBorder)",
+      "borderBottomStyle": "solid",
+      "borderBottomWidth": "0.5px",
+      "borderLeftStyle": "none",
+      "borderRightStyle": "none",
+      "borderTopStyle": "none",
+      "color": "var(--popupContentText)",
+      "textAlign": "center"
+    }
+  },
+  "variants": [
+    {
+      "pseudo": "hover",
+      "style": {
+        "backgroundColor": "var(--callToAction--hover)",
+        "cursor": "pointer"
+      }
+    }
+  ]
+}

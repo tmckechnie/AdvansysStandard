@@ -1,0 +1,118 @@
+{
+  "custom": {},
+  "params": {
+    "OPCServerTagPath": "[Standard]Systems/Devices/OPC PLC Device 1"
+  },
+  "propConfig": {
+    "params.OPCServerTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 201,
+      "width": 302
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "DeviceTagPath",
+          "type": "Diagnostics/Device Connection Diagnostics"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Details Card"
+        },
+        "position": {
+          "basis": "320px"
+        },
+        "propConfig": {
+          "props.params.HeaderLabel": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "OPCServerTagPath": "{view.params.OPCServerTagPath}"
+                },
+                "tagPath": "{OPCServerTagPath}/Name"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Instances[1].Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "OPCServerTagPath": "{view.params.OPCServerTagPath}"
+                },
+                "tagPath": "{OPCServerTagPath}/Enabled"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Instances[2].Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "OPCServerTagPath": "{view.params.OPCServerTagPath}"
+                },
+                "tagPath": "{OPCServerTagPath}/Connected"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Instances": [
+              {
+                "Label": "Connection Type",
+                "Value": "OPC",
+                "instancePosition": {},
+                "instanceStyle": {
+                  "classes": ""
+                }
+              },
+              {
+                "Label": "Enabled",
+                "instancePosition": {},
+                "instanceStyle": {
+                  "classes": ""
+                }
+              },
+              {
+                "Label": "Connected",
+                "instancePosition": {},
+                "instanceStyle": {
+                  "classes": ""
+                }
+              }
+            ],
+            "RepeaterViewPath": "Standard/Components/Views/Status/LabelDisplayLabel"
+          },
+          "path": "Standard/Components/Views/Details Card"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

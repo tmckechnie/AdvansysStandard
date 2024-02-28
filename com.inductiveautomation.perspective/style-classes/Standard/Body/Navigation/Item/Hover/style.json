@@ -1,0 +1,14 @@
+{
+  "base": {
+    "style": {}
+  },
+  "variants": [
+    {
+      "pseudo": "hover",
+      "style": {
+        "cursor": "pointer",
+        "fill": "var(--bodyAccent)"
+      }
+    }
+  ]
+}

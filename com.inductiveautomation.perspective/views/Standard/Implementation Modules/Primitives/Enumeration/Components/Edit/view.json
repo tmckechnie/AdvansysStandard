@@ -1,0 +1,321 @@
+{
+  "custom": {
+    "Cfg": {
+      "Ordinal0": "Ordinal 0",
+      "Ordinal1": "Ordinal 1",
+      "Ordinal4": "Ordinal 4",
+      "Ordinal5": "Ordinal 5",
+      "Ordinal6": "Ordinal 6",
+      "Ordinal7": "Ordinal 7"
+    },
+    "instances": [
+      {
+        "Deleted": false,
+        "Ordinal": "0",
+        "Selected": false,
+        "Value": "Ordinal 0"
+      },
+      {
+        "Deleted": false,
+        "Ordinal": "1",
+        "Selected": false,
+        "Value": "Ordinal 1"
+      },
+      {
+        "Deleted": false,
+        "Ordinal": "4",
+        "Selected": false,
+        "Value": "Ordinal 4"
+      },
+      {
+        "Deleted": false,
+        "Ordinal": "5",
+        "Selected": false,
+        "Value": "Ordinal 5"
+      },
+      {
+        "Deleted": false,
+        "Ordinal": "6",
+        "Selected": false,
+        "Value": "Ordinal 6"
+      },
+      {
+        "Deleted": false,
+        "Ordinal": "7",
+        "Selected": false,
+        "Value": "Ordinal 7"
+      }
+    ],
+    "nextOrdinal": 7
+  },
+  "params": {
+    "TagPath": "[Standard]Standard/Test/Steps"
+  },
+  "propConfig": {
+    "custom.Cfg": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/Values"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.cfgModified": {
+      "binding": {
+        "config": {
+          "path": "view.custom.instances"
+        },
+        "transforms": [
+          {
+            "code": "\tcfg\u003d {}\n\tfor instance in value:\n\t\tdeleted \u003d instance[\u0027Deleted\u0027]\n\t\tif not deleted:\n\t\t\tordinal \u003d str(instance[\u0027Ordinal\u0027])\n\t\t\tcfg[\"Ordinal\"+ordinal] \u003d instance[\u0027Value\u0027]\n\n\treturn cfg",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.instances": {
+      "binding": {
+        "config": {
+          "path": "view.custom.Cfg"
+        },
+        "transforms": [
+          {
+            "code": "\tcase \u003d []\n\tfor item in value:\n\t\tordinal \u003d item.replace(\"Ordinal\",\"\")\n\t\tinstance \u003d  {\u0027Ordinal\u0027: ordinal, \u0027Value\u0027: value[item],\u0027Selected\u0027:False,\u0027Deleted\u0027:False }\n\t\tcase.append(instance)\n\t\n\tcase.sort(key\u003dlambda x: x.get(\u0027Ordinal\u0027))\n\treturn case",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.nextOrdinal": {
+      "binding": {
+        "config": {
+          "expression": "(len({view.custom.instances})+1)"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 302,
+      "width": 350
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "LabelOrdinal"
+            },
+            "position": {
+              "basis": "55px"
+            },
+            "props": {
+              "text": "Ordinal"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "LabelValue"
+            },
+            "position": {
+              "basis": "129px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "paddingLeft": 10
+              },
+              "text": "Value",
+              "textStyle": {
+                "textAlign": "left"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "LabelValue_0"
+            },
+            "position": {
+              "basis": "30px"
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "35px"
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/HeaderBackground Standard/Popups/Faceplates/HeaderText"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "FlexRepeater"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.instances": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "view.custom.instances"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "path": "Standard/Implementation Modules/Primitives/Enumeration/Components/Input",
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Content"
+          },
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tcurrentInstances \u003d self.view.custom.instances\n\tcopyList \u003d []\n\tfor instance in currentInstances:\n\t\tselected \u003d instance[\u0027Selected\u0027]\n\t\tif selected:\n\t\t\tcopyList.append(instance)\n\tif len(copyList)\u003d\u003d0:\n\t\tcopy \u003d currentInstances[-1]\n\t\tcopyList \u003d [copy]\n\tnextOrdinal \u003d self.view.custom.nextOrdinal\n\t\n\ti\u003d0\n\tfor copy in copyList:\n\t\tadd \u003d {\"Ordinal\":nextOrdinal+i,\"Value\": copy[\"Value\"],\u0027Selected\u0027:False,\u0027Deleted\u0027:False}\n\t\tcurrentInstances.append(add)\n\t\ti \u003d+1\n\t\n"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Copy"
+            },
+            "position": {
+              "basis": "50px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Button/Default",
+                "marginBottom": 5,
+                "marginLeft": 10,
+                "marginRight": 10,
+                "marginTop": 5
+              },
+              "text": "Copy"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tself.view.custom.Cfg \u003d self.view.custom.cfgModified"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Save"
+            },
+            "position": {
+              "basis": "50px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Button/Default",
+                "marginBottom": 5,
+                "marginLeft": 10,
+                "marginRight": 10,
+                "marginTop": 5
+              },
+              "text": "Save"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tcurrentInstances \u003d self.view.custom.instances\n\tfor instance in currentInstances:\n\t\tselected \u003d instance[\u0027Selected\u0027]\n\t\tif selected:\n\t\t\tinstance[\u0027Deleted\u0027]\u003dTrue\n"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Delete"
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Button/Default",
+                "marginBottom": 5,
+                "marginLeft": 10,
+                "marginRight": 10,
+                "marginTop": 5
+              },
+              "text": "Delete"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "60px"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Popups/Faceplates/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

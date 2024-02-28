@@ -1,0 +1,4024 @@
+{
+  "custom": {
+    "list": [
+      [
+        "Interlocks",
+        "Permissive",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Interlocks",
+        "Operational",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Interlocks",
+        "Hold",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Interlocks",
+        "Protective",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "In",
+        "Available",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "In",
+        "Running",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "In",
+        "LocalStart",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "In",
+        "LocalStop",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "In",
+        "MotionSwitch",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "In",
+        "MotionSwitchReset",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "In",
+        "IOStatus",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "In",
+        "Active",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "In",
+        "Opened",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "In",
+        "Closed",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Out",
+        "Start",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Out",
+        "PulseStart",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Out",
+        "Stop",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Out",
+        "PulseStop",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Out",
+        "StartForward",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Out",
+        "StartReverse",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Out",
+        "Siren",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Out",
+        "On",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Out",
+        "Open",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Out",
+        "Close",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Cmd",
+        "Start",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Cmd",
+        "ImmediateStart",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Cmd",
+        "Stop",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Cmd",
+        "ImmediateStop",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Cmd",
+        "StartForward",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Cmd",
+        "StartReverse",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Cmd",
+        "Open",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Cmd",
+        "Close",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Cmd",
+        "On",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ],
+      [
+        "Cmd",
+        "Off",
+        "Bool",
+        "false",
+        "Non-retain",
+        "True",
+        "True",
+        "True",
+        "False",
+        "",
+        ""
+      ]
+    ],
+    "udt": {
+      "name": "Testing",
+      "tagType": "UdtType",
+      "tags": [
+        {
+          "name": "In",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "dataType": "Boolean",
+              "name": "Available",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "Running",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "LocalStart",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "LocalStop",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "MotionSwitch",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "MotionSwitchReset",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "IOStatus",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "Active",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "Opened",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "Closed",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            }
+          ]
+        },
+        {
+          "name": "Interlocks",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "dataType": "Boolean",
+              "name": "Permissive",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "Operational",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "Hold",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "Protective",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            }
+          ]
+        },
+        {
+          "name": "Out",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "dataType": "Boolean",
+              "name": "Start",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "PulseStart",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "Stop",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "PulseStop",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "StartForward",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "StartReverse",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "Siren",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "On",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "Open",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "Close",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            }
+          ]
+        },
+        {
+          "name": "Cmd",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "dataType": "Boolean",
+              "name": "Start",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "ImmediateStart",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "Stop",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "ImmediateStop",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "StartForward",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "StartReverse",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "Open",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "Close",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "On",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "Off",
+              "tagType": "AtomicTag",
+              "value": "false",
+              "valueSource": "memory"
+            }
+          ]
+        }
+      ],
+      "typeId": "Standard/Base/Control Module"
+    }
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING"
+  },
+  "propConfig": {
+    "custom.list": {
+      "binding": {
+        "config": {
+          "path": ""
+        },
+        "transforms": [
+          {
+            "code": "#\u0027,\u0027Interlocks\u0027,\u0027Struct\u0027,\u0027\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\n\tl\u003d[]\n\tl.append([\u0027Interlocks\u0027,\u0027Permissive\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Interlocks\u0027,\u0027Operational\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Interlocks\u0027,\u0027Hold\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Interlocks\u0027,\u0027Protective\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\n#\u0027,\u0027In\u0027,\u0027Struct\u0027,\u0027\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\n\tl.append([\u0027In\u0027,\u0027Available\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027In\u0027,\u0027Running\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027In\u0027,\u0027LocalStart\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027In\u0027,\u0027LocalStop\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027In\u0027,\u0027MotionSwitch\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027In\u0027,\u0027MotionSwitchReset\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027In\u0027,\u0027IOStatus\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027In\u0027,\u0027Active\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027In\u0027,\u0027Opened\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027In\u0027,\u0027Closed\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\n#\u0027,\u0027Out\u0027,\u0027Struct\u0027,\u0027\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\n\tl.append([\u0027Out\u0027,\u0027Start\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Out\u0027,\u0027PulseStart\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Out\u0027,\u0027Stop\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Out\u0027,\u0027PulseStop\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Out\u0027,\u0027StartForward\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Out\u0027,\u0027StartReverse\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Out\u0027,\u0027Siren\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Out\u0027,\u0027On\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Out\u0027,\u0027Open\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Out\u0027,\u0027Close\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\n#\u0027,\u0027Cmd\u0027,\u0027Struct\u0027,\u0027\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\n\tl.append([\u0027Cmd\u0027,\u0027Start\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Cmd\u0027,\u0027ImmediateStart\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Cmd\u0027,\u0027Stop\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Cmd\u0027,\u0027ImmediateStop\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Cmd\u0027,\u0027StartForward\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Cmd\u0027,\u0027StartReverse\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Cmd\u0027,\u0027Open\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Cmd\u0027,\u0027Close\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Cmd\u0027,\u0027On\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\tl.append([\u0027Cmd\u0027,\u0027Off\u0027,\u0027Bool\u0027,\u0027false\u0027,\u0027Non-retain\u0027,\u0027True\u0027,\u0027True\u0027,\u0027True\u0027,\u0027False\u0027,\u0027\u0027,\u0027\u0027])\n\t\n\t\n\n\t#return tag\n\treturn l\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.udt": {
+      "binding": {
+        "config": {
+          "path": "view.custom.list"
+        },
+        "transforms": [
+          {
+            "code": "\t\n\tdef getDataType(dtName):\n\t\n\t\tif dtName\u003d\u003d\u0027Bool\u0027:\n\t\t\treturn \u0027Boolean\u0027\n\t\treturn None\n\t\t\n\tudt \u003d {}\n\tfor item in value:\n\t\tfolderkey \u003d item[0]\n\t\tname \u003d item[1]\n\t\tdatatype \u003d getDataType(item[2])\n\t\tv\u003ditem[3]\n\t\tif folderkey not in udt:\n\t\t\tudt[folderkey]\u003d{\u0027name\u0027:folderkey,\u0027tagType\u0027:\u0027Folder\u0027,\u0027tags\u0027:[]}\n\t\t\t\n\t\ttag \u003d {\"valueSource\": \"memory\",\"dataType\": datatype,\"name\": name,\"value\": v,\"tagType\": \"AtomicTag\"}\n\n\t\tudt[folderkey][\u0027tags\u0027].append(tag)\n\t\t\t\n\treturn {\"name\": \"Testing\",\"typeId\": \"Standard/Base/Control Module\",\"tagType\": \"UdtType\",\"tags\": udt.values()}",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 1371
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "HeaderInterlocks"
+        },
+        "position": {
+          "basis": "36px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "ExpandedIconPath": "material/keyboard_arrow_up",
+              "RetractedIconPath": "material/keyboard_arrow_down",
+              "ShowIcon": true
+            },
+            "Expanded": true,
+            "Title": "Interlocks"
+          },
+          "path": "Standard/Components/Faceplates/Header",
+          "style": {
+            "marginLeft": 2,
+            "marginRight": 2,
+            "marginTop": 5
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Permissive"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "Protective"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "Operational"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "Hold"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "PermissiveForward"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "PermissiveReverse"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "OperationalForward"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "HoldForward"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "OperationalReverse"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "HoldReverse"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "OperationalMode01"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.params.Label": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Enable": true,
+                "ShowLabel": true,
+                "Visible": true,
+                "options": [
+                  {
+                    "label": "Mode 0",
+                    "value": 0
+                  },
+                  {
+                    "label": "Mode 1",
+                    "value": 1
+                  },
+                  {
+                    "label": "Mode 2",
+                    "value": 2
+                  },
+                  {
+                    "label": "Mode 3",
+                    "value": 3
+                  },
+                  {
+                    "label": "Mode 4",
+                    "value": 4
+                  },
+                  {
+                    "label": "Mode 5",
+                    "value": 5
+                  },
+                  {
+                    "label": "Mode 6",
+                    "value": 6
+                  },
+                  {
+                    "label": "Mode 7",
+                    "value": 7
+                  }
+                ]
+              },
+              "path": "Standard/Components/Faceplates/Input/LabelDropdown"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "OperationalMode02"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.params.Label": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Enable": true,
+                "ShowLabel": true,
+                "Visible": true,
+                "options": [
+                  {
+                    "label": "Mode 0",
+                    "value": 0
+                  },
+                  {
+                    "label": "Mode 1",
+                    "value": 1
+                  },
+                  {
+                    "label": "Mode 2",
+                    "value": 2
+                  },
+                  {
+                    "label": "Mode 3",
+                    "value": 3
+                  },
+                  {
+                    "label": "Mode 4",
+                    "value": 4
+                  },
+                  {
+                    "label": "Mode 5",
+                    "value": 5
+                  },
+                  {
+                    "label": "Mode 6",
+                    "value": 6
+                  },
+                  {
+                    "label": "Mode 7",
+                    "value": 7
+                  }
+                ]
+              },
+              "path": "Standard/Components/Faceplates/Input/LabelDropdown"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Interlocks"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "../HeaderInterlocks.props.params.Expanded"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "marginLeft": 2,
+            "marginRight": 2,
+            "marginTop": 2
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "HeaderCommands"
+        },
+        "position": {
+          "basis": "36px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "ExpandedIconPath": "material/keyboard_arrow_up",
+              "RetractedIconPath": "material/keyboard_arrow_down",
+              "ShowIcon": true
+            },
+            "Expanded": true,
+            "Title": "Commands"
+          },
+          "path": "Standard/Components/Faceplates/Header",
+          "style": {
+            "marginLeft": 2,
+            "marginRight": 2,
+            "marginTop": 5
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Start"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "ImmediateStart"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "Stop"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "ImmediateStop"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "StartForward"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "StartReverse"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "ImmediateStartForward"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "ImmediateStartReverse"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "OperationActive"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "Open"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "Close"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "ImmediateOpen"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "ImmediateClose"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "On"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "Off"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "ImmediateOn"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "ImmediateOff"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          }
+        ],
+        "meta": {
+          "name": "Cmd"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "../HeaderCommands.props.params.Expanded"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "marginLeft": 2,
+            "marginRight": 2,
+            "marginTop": 2
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "HeaderOut"
+        },
+        "position": {
+          "basis": "36px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "ExpandedIconPath": "material/keyboard_arrow_up",
+              "RetractedIconPath": "material/keyboard_arrow_down",
+              "ShowIcon": true
+            },
+            "Expanded": true,
+            "Title": "Outputs"
+          },
+          "path": "Standard/Components/Faceplates/Header",
+          "style": {
+            "marginLeft": 2,
+            "marginRight": 2,
+            "marginTop": 5
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Start"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "PulseStart"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "Stop"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "PulseStop"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "StartForward"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "StartReverse"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "Open"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "Opening"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "Close"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "Closing"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "PulseStartForward"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "PulseStartReverse"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "parent.meta.name"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Value"
+                },
+                "position": {
+                  "basis": "32px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/\"+{..../Out.meta.name}+\"/\"+{parent.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "type": "ia.input.numeric-entry-field"
+              }
+            ],
+            "meta": {
+              "name": "RealOutput01"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "fontSize": 10
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "parent.meta.name"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Value"
+                },
+                "position": {
+                  "basis": "32px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/\"+{..../Out.meta.name}+\"/\"+{parent.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "type": "ia.input.numeric-entry-field"
+              }
+            ],
+            "meta": {
+              "name": "RawOutput01"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "fontSize": 10
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Out"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "../HeaderOut.props.params.Expanded"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "marginLeft": 2,
+            "marginRight": 2,
+            "marginTop": 2
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "HeaderInputs"
+        },
+        "position": {
+          "basis": "36px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "ExpandedIconPath": "material/keyboard_arrow_up",
+              "RetractedIconPath": "material/keyboard_arrow_down",
+              "ShowIcon": true
+            },
+            "Expanded": true,
+            "Title": "Inputs"
+          },
+          "path": "Standard/Components/Faceplates/Header",
+          "style": {
+            "marginLeft": 2,
+            "marginRight": 2,
+            "marginTop": 5
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Active"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "Available"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "LocalStop"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "LocalStart"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "LocalStartForward"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "LocalStartReverse"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "MotionSwitch"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "MotionSwitchReset"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "Opened"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "Closed"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "IOStatus"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "LocalClose"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "LocalOpen"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "Running"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "RunningForward"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "meta": {
+              "name": "RunningReverse"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.label.text": {
+                "binding": {
+                  "config": {
+                    "path": "this.meta.name"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.selected": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "expression",
+                    "tagPath": "{view.params.TagPath}+\"/\"+{parent.meta.name}+\"/\"+{this.meta.name}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "label": {
+                "position": "left",
+                "style": {
+                  "fontSize": 10
+                }
+              }
+            },
+            "type": "ia.input.toggle-switch"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "parent.meta.name"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Value"
+                },
+                "position": {
+                  "basis": "32px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/\"+{..../In.meta.name}+\"/\"+{parent.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "type": "ia.input.numeric-entry-field"
+              }
+            ],
+            "meta": {
+              "name": "RealInput"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "fontSize": 10
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "parent.meta.name"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Value"
+                },
+                "position": {
+                  "basis": "32px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/\"+{..../In.meta.name}+\"/\"+{parent.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "type": "ia.input.numeric-entry-field"
+              }
+            ],
+            "meta": {
+              "name": "RawInput"
+            },
+            "position": {
+              "basis": "36px",
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "fontSize": 10
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "In"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "../HeaderInputs.props.params.Expanded"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "marginLeft": 2,
+            "marginRight": 2,
+            "marginTop": 2
+          },
+          "wrap": "wrap"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "HeaderSymbols"
+        },
+        "position": {
+          "basis": "36px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "ExpandedIconPath": "material/keyboard_arrow_up",
+              "RetractedIconPath": "material/keyboard_arrow_down",
+              "ShowIcon": false
+            },
+            "Expanded": false,
+            "Title": "Symbols"
+          },
+          "path": "Standard/Components/Faceplates/Header",
+          "style": {
+            "marginLeft": 2,
+            "marginRight": 2,
+            "marginTop": 5
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "EmbeddedView"
+            },
+            "position": {
+              "height": 40,
+              "width": 64,
+              "x": 20,
+              "y": 34.890625
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "AbbreviationOverwrite": ""
+                },
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
+              },
+              "path": "Standard/Control Modules/Motor/Symbols/MotorWithIcons",
+              "useDefaultViewWidth": true
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_0"
+            },
+            "position": {
+              "height": 35,
+              "width": 35,
+              "x": 107.5,
+              "y": 39.890625
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "AbbreviationOverwrite": ""
+                },
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalOutput"
+              },
+              "path": "Standard/Control Modules/DigitalOutput/Symbols/Symbol"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_1"
+            },
+            "position": {
+              "height": 40,
+              "width": 40,
+              "x": 300,
+              "y": 36.625
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "AbbreviationOverwrite": "M"
+                },
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/MotorReverse"
+              },
+              "path": "Standard/Control Modules/MotorReverse/Symbols/Motor"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_2"
+            },
+            "position": {
+              "height": 35,
+              "width": 60,
+              "x": 195.5,
+              "y": 39.90597500000001
+            },
+            "props": {
+              "params": {
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
+              },
+              "path": "Standard/Control Modules/Valve/Symbols/Butterfly With Actuator"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_3"
+            },
+            "position": {
+              "height": 25,
+              "width": 100,
+              "x": 175.5,
+              "y": 14.90627500000005
+            },
+            "props": {
+              "params": {
+                "InstanceTagPath": "/Metadata/InstanceName",
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
+              },
+              "path": "Standard/Components/Symbols/Label"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_4"
+            },
+            "position": {
+              "height": 25,
+              "width": 100,
+              "x": 270,
+              "y": 11.625
+            },
+            "props": {
+              "params": {
+                "InstanceTagPath": "/Metadata/InstanceName",
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/MotorReverse"
+              },
+              "path": "Standard/Components/Symbols/Label"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_5"
+            },
+            "position": {
+              "height": 25,
+              "width": 100,
+              "x": 2.5,
+              "y": 9.390625
+            },
+            "props": {
+              "params": {
+                "InstanceTagPath": "/Metadata/InstanceName",
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
+              },
+              "path": "Standard/Components/Symbols/Label"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_6"
+            },
+            "position": {
+              "height": 25,
+              "width": 100,
+              "x": 72.5,
+              "y": 9.890625
+            },
+            "props": {
+              "params": {
+                "InstanceTagPath": "/Metadata/InstanceName",
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalOutput"
+              },
+              "path": "Standard/Components/Symbols/Label"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_7"
+            },
+            "position": {
+              "height": 25,
+              "width": 100,
+              "x": 383,
+              "y": 9.515625
+            },
+            "props": {
+              "params": {
+                "InstanceTagPath": "/Metadata/InstanceName",
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput01"
+              },
+              "path": "Standard/Components/Symbols/Label"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Value Display"
+            },
+            "position": {
+              "height": 35,
+              "width": 125,
+              "x": 370,
+              "y": 39.78122499999995
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "AbbreviationDisplay": false,
+                  "AbbreviationOverwrite": ""
+                },
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput01"
+              },
+              "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Value Display_0"
+            },
+            "position": {
+              "height": 35,
+              "width": 125,
+              "x": 505,
+              "y": 39.90620000000001
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "AbbreviationDisplay": false,
+                  "AbbreviationOverwrite": ""
+                },
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput02"
+              },
+              "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_8"
+            },
+            "position": {
+              "height": 25,
+              "width": 100,
+              "x": 518,
+              "y": 9.640620000000013
+            },
+            "props": {
+              "params": {
+                "InstanceTagPath": "/Metadata/InstanceName",
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput02"
+              },
+              "path": "Standard/Components/Symbols/Label"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_9"
+            },
+            "position": {
+              "height": 25,
+              "width": 100,
+              "x": 654,
+              "y": 3.53125
+            },
+            "props": {
+              "params": {
+                "InstanceTagPath": "/Metadata/InstanceName",
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Controller01"
+              },
+              "path": "Standard/Components/Symbols/Label"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Value Display_1"
+            },
+            "position": {
+              "height": 75,
+              "width": 125,
+              "x": 641,
+              "y": 24.4062
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "Display": {
+                    "Output": true,
+                    "ProcessVariable": true,
+                    "Setpoint": true
+                  }
+                },
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Controller01"
+              },
+              "path": "Standard/Control Modules/Controller/Symbols/Value Display",
+              "useDefaultViewHeight": true
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_10"
+            },
+            "position": {
+              "height": 25,
+              "width": 100,
+              "x": 781,
+              "y": 1.9375
+            },
+            "props": {
+              "params": {
+                "InstanceTagPath": "/Metadata/InstanceName",
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogOutput01"
+              },
+              "path": "Standard/Components/Symbols/Label"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Value Display_2"
+            },
+            "position": {
+              "height": 35,
+              "width": 125,
+              "x": 777,
+              "y": 38
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "AbbreviationDisplay": false,
+                  "AbbreviationOverwrite": ""
+                },
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogOutput01"
+              },
+              "path": "Standard/Control Modules/AnalogOutput/Symbols/Value Display"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Hand Valve"
+            },
+            "position": {
+              "height": 35,
+              "width": 60,
+              "x": 1113.5,
+              "y": 30.9218
+            },
+            "props": {
+              "params": {
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput01"
+              },
+              "path": "Standard/Control Modules/DigitalInput/Symbols/Hand Valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Signal"
+            },
+            "position": {
+              "height": 35,
+              "width": 131,
+              "x": 969,
+              "y": 28.31
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "AbbreviationOverwrite": "",
+                  "InstanceNameOverwrite": "",
+                  "LabelPosition": "Left",
+                  "ShowLabel": true
+                },
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput01"
+              },
+              "path": "Standard/Control Modules/DigitalInput/Symbols/Signal"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Value Display_3"
+            },
+            "position": {
+              "height": 32,
+              "width": 300,
+              "x": 950,
+              "y": 68.4219
+            },
+            "props": {
+              "params": {
+                "Label": "E-Stop",
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput01"
+              },
+              "path": "Standard/Control Modules/DigitalInput/Symbols/Value Display"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView_11"
+            },
+            "position": {
+              "height": 25,
+              "width": 100,
+              "x": 1022,
+              "y": 0.78125
+            },
+            "props": {
+              "params": {
+                "InstanceTagPath": "/Metadata/InstanceName",
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput01"
+              },
+              "path": "Standard/Components/Symbols/Label"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Multi Port"
+            },
+            "position": {
+              "height": 60,
+              "width": 50,
+              "x": 1191,
+              "y": 14.8906
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "active": {
+                    "bottom": false,
+                    "left": {
+                      "bottom": false,
+                      "middle": true,
+                      "top": false
+                    },
+                    "middle": {
+                      "bottom": false,
+                      "top": false
+                    },
+                    "right": {
+                      "bottom": false,
+                      "middle": true,
+                      "top": false
+                    },
+                    "top": false
+                  },
+                  "passive": {
+                    "bottom": true,
+                    "left": {
+                      "bottom": false,
+                      "middle": false,
+                      "top": false
+                    },
+                    "middle": {
+                      "bottom": true,
+                      "top": true
+                    },
+                    "right": {
+                      "bottom": false,
+                      "middle": false,
+                      "top": false
+                    },
+                    "top": true
+                  }
+                },
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput01"
+              },
+              "path": "Standard/Control Modules/DigitalInput/Symbols/Multi Port"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "100px",
+          "shrink": 0
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "custom": {
+    "Description": "Feed to Uphill (Community)",
+    "EngUnits": "m3",
+    "InstanceName": "FM 01",
+    "Value": 0,
+    "formatedValue": "0 m3",
+    "styling": "Standard/Body/Symbols/Displays/Basic Standard/Body/Symbols/Displays/Text Standard/Body/Symbols/Displays/Container"
+  },
+  "params": {
+    "TagPath": "[Utilities]Utilities/Water/Fire Water Dam/FM 01"
+  },
+  "propConfig": {
+    "custom.Description": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/Description"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.EngUnits": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/EngUnits"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.FormatedString": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/FormattedValue"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.InstanceName": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/InstanceName"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Value": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Value"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.formatedValue": {
+      "binding": {
+        "config": {
+          "expression": "{view.custom.FormatedString} + \" \" + {view.custom.EngUnits}"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.styling": {
+      "binding": {
+        "config": {
+          "struct": {
+            "alarmStyleClasses": "{view.custom.alarmStyle.classes}",
+            "inAlarm": "{view.custom.AlarmSummary.Overall.Total}\u003e0",
+            "isSelected": "tag({view.params.TagPath}+\"/Id/Selected\")",
+            "isSimulation": "tag({view.params.TagPath}+\"/Sim/Simulation\")"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\t\n\tbaseStyle \u003d \"Standard/Body/Symbols/Displays\"\n\tstyleClasses \u003d baseStyle+\"/Basic \" + baseStyle+\"/Text \" + baseStyle+ \"/Container\"\n\n\t#Selected\n\tif value[\"isSelected\"]:\n\t\tstyleClasses +\u003d \" \"+baseStyle+\"/Selection/Selected\"\n\n\t#Simulation\n\tif value[\"isSimulation\"]:\n\t\tstyleClasses +\u003d \" \"+baseStyle+\"/Simulated\"\n\n\t#Alarm\n\tif value[\"inAlarm\"]:\n\t\tstyleClasses +\u003d \" \"+value[\"alarmStyleClasses\"]\n\t\n\treturn styleClasses",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 25,
+      "width": 100
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TagValue",
+          "tooltip": {
+            "enabled": true,
+            "style": {
+              "classes": "Standard/Body/Symbols/Label"
+            }
+          }
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Description"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.custom.styling"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.formatedValue"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/Symbols/Displays/Basic Standard/Body/Symbols/Displays/Text Standard/Body/Symbols/Displays/Container",
+            "margin": 2,
+            "textAlign": "center"
+          },
+          "text": "0 m3"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.style.classes": {
+        "persistent": true
+      }
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

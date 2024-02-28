@@ -1,0 +1,233 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 360,
+      "width": 435
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Current"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.params.Format": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Index/{name}.FormatString"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Name": "{this.meta.name}",
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Index/{Name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Current Step",
+            "ShowLabel": true,
+            "ShowUnits": false,
+            "Units": "s"
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "style": {
+            "marginBottom": 5
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Next"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.params.Format": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Index/{name}.FormatString"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Name": "{this.meta.name}",
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Index/{Name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Next Step",
+            "ShowLabel": true,
+            "ShowUnits": false,
+            "Units": "s"
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "style": {
+            "marginBottom": 5
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Pause"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.params.Format": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Index/{name}.FormatString"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Index/{name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Pause",
+            "ShowLabel": true,
+            "ShowUnits": false,
+            "Units": "s"
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "style": {
+            "marginBottom": 5
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Resume"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.params.Format": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Index/{name}.FormatString"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Index/{name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Resume",
+            "ShowLabel": true,
+            "ShowUnits": false,
+            "Units": "s"
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "style": {
+            "marginBottom": 5
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

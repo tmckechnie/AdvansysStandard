@@ -1,0 +1,421 @@
+{
+  "custom": {
+    "baseFolderPath": "",
+    "collisionPolicy": "m",
+    "controlModulePath": "Standard/Control Modules/Application",
+    "filePath": "C:\\Projects\\FMG\\FMG ISA S95 v2 (CSV).csv",
+    "modelItem": "Model Item",
+    "modelItemPath": "Standard/Model/Model Item"
+  },
+  "params": {},
+  "propConfig": {
+    "custom.baseFolderPath": {
+      "persistent": true
+    },
+    "custom.collisionPolicy": {
+      "persistent": true
+    },
+    "custom.controlModulePath": {
+      "persistent": true
+    },
+    "custom.filePath": {
+      "persistent": true
+    },
+    "custom.modelItem": {
+      "persistent": true
+    },
+    "custom.modelItemPath": {
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "labelFilePath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFCCCC"
+              },
+              "text": "File Path"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "textFieldFilePath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.filePath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.input.text-field"
+          }
+        ],
+        "meta": {
+          "name": "flexContainerFilePath"
+        },
+        "position": {
+          "basis": 50,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "labelBaseFolderPath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFCCCC"
+              },
+              "text": "Container Collision Policy"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "dropdownContainerCollisionPolicy"
+            },
+            "position": {
+              "basis": "36px"
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.collisionPolicy"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Abort",
+                  "value": "a"
+                },
+                {
+                  "label": "Overwrite",
+                  "value": "o"
+                },
+                {
+                  "label": "Ignore",
+                  "value": "i"
+                },
+                {
+                  "label": "Merge",
+                  "value": "m"
+                }
+              ]
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "flexContainerCollisionPolicy"
+        },
+        "position": {
+          "basis": "\u002750\u0027"
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "labelBaseFolderPath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFCCCC"
+              },
+              "text": "Base Folder Path"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "textBaseFolderPath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.baseFolderPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.input.text-field"
+          }
+        ],
+        "meta": {
+          "name": "flexContainerBaseFolderPath"
+        },
+        "position": {
+          "basis": 50,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "labelModelItemPath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFCCCC"
+              },
+              "text": "Model Item Path"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "textModelItemPath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.modelItemPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.input.text-field"
+          }
+        ],
+        "meta": {
+          "name": "flexContainerModelItemPath"
+        },
+        "position": {
+          "basis": 50,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "labelModelItem"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFCCCC"
+              },
+              "text": "Model Item"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "textModelItem"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.modelItem"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.input.text-field"
+          }
+        ],
+        "meta": {
+          "name": "flexContainerModelItem"
+        },
+        "position": {
+          "basis": 50,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "labelControlModulePath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFCCCC"
+              },
+              "text": "Control Module Path"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "textControlModulePath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.controlModulePath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.input.text-field"
+          }
+        ],
+        "meta": {
+          "name": "flexContainerControlModulePath"
+        },
+        "position": {
+          "basis": 50,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\t# Import Python\u0027s built-in csv library\n\timport csv\n\t\n\t# Create Logger\n\tlogger \u003d system.util.getLogger(\u0027S95 Generator\u0027)\n\t\n\t# Read the csv file from the provided file path\n\tpath \u003d self.view.custom.filePath\n\tlogger.info(\"File Path \u003d \" + path)\n\t\n\tcsvData \u003d csv.reader(open(path))\n\theader \u003d csvData.next()\n\t\n\t#Get Header Positions\n\tfolderPathColumnIndex \u003d -1\n\ttry:\n\t\tfolderPathColumnIndex \u003d header.index(\u0027Folder Path\u0027)\n\texcept:\n\t\tlogger.error(\u0027Folder Path not listed in header \\n\u0027 + str(header))\n\t\n\tif folderPathColumnIndex \u003e\u003d 0:\n\t\t # Create a dataset with the header and the rest of our CSV.\n\t\tdataset \u003d system.dataset.toDataSet(header ,list(csvData))\n\t\tpyData \u003d system.dataset.toPyDataSet(dataset)\n\t\t\n\t\t# Set the collision policy to Abort. That way if a tag already exists at the base path,\n\t\t# we will not override the tag. If you are overwriting an existing tag, then set this to \"o\"\n\t\t#   a - Abort and throw an exception\n\t\t#   o - Overwrite and replace existing Tag\u0027s configuration\n\t\t#   i - Ignore that item in the list.\n\t\t#   m - merge, modifying values that are specified in the definition, without impacting values that aren\u0027t defined in the definition. Use this when you want to apply a slight change to tags, without having to build a complete configuration object.\n\t\t#   Defaults to Overwrite. [optional]\n\t\tcollisionPolicy \u003d self.view.custom.collisionPolicy\n\t\t\t\n\t\t# Iterate through the reader object\n\t\tfor row in pyData:\n\t\t\t#Generate the base tag path\n\t\t\ttagPath \u003d row[header.index(\u0027Folder Path\u0027)]\n\t\t\tif tagPath[0] \u003d\u003d \u0027\\\\\u0027:\n\t\t\t\ttagPath \u003d tagPath[1:]\t\t\t\n\t\t\tbaseTagPath \u003d self.view.custom.baseFolderPath+tagPath\n\t\t\t\n\t\t\t#Create the Model Item Tag\n\t\t\ttagName \u003d self.view.custom.modelItem\n\t\t\tmodelItemInstancePath \u003d baseTagPath + \u0027\\\\\u0027 + tagName\n\t\t\tif not system.tag.exists(modelItemInstancePath):\t\t\n\t\t\t\ttypeId \u003d self.view.custom.modelItemPath\n\t\t\t\ttagType \u003d \"UdtInstance\"\n\t\t\t\ttag \u003d {\n\t\t\t\t\t\t\t\"name\": tagName,         \n\t\t\t\t\t\t\t\"typeId\" : typeId,\n\t\t\t\t\t\t\t\"tagType\" : tagType\n\t\t\t\t\t\t\t,\"parameters\" : {}\n\t\t\t\t\t   }\n\t\t\t\tsystem.tag.configure(baseTagPath, [tag], collisionPolicy)\n\t\t\t\n\t\t\t#Create the Control Module Tag if Required\n\t\t\tif row[header.index(\u0027Control Module\u0027)] \u003c\u003e \"\":\n\t\t\t\ttagName \u003d row[header.index(\u0027Item\u0027)]\n\t\t\t\tdeviceName \u003d row[header.index(\u0027Control Module\u0027)]\n\t\t\t\ttypeId \u003d self.view.custom.controlModulePath + \u0027/\u0027 + row[header.index(\u0027UDT\u0027)]\n\t\t\t\ttagType \u003d \"UdtInstance\"\n\t\t\t\ttag \u003d {\n\t\t\t\t\t\t\t\"name\": tagName,         \n\t\t\t\t\t\t\t\"typeId\" : typeId,\n\t\t\t\t\t\t\t\"tagType\" : tagType\n\t\t\t\t\t\t\t,\"parameters\" : {\"DeviceName\": deviceName}\n\t\t\t\t\t   }\n\t\t\t\tsystem.tag.configure(baseTagPath, [tag], collisionPolicy)\t\t\n\t\t\t\t\n\t\t\t"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "buttonCSVLoad"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "propConfig": {
+          "props.enabled": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.collisionPolicy}"
+              },
+              "transforms": [
+                {
+                  "fallback": false,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "a",
+                      "output": true
+                    },
+                    {
+                      "input": "o",
+                      "output": true
+                    },
+                    {
+                      "input": "m",
+                      "output": true
+                    },
+                    {
+                      "input": "i",
+                      "output": true
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "text": "Load CSV"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,2004 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Controller01"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 618,
+      "width": 437
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "SP INT"
+        },
+        "position": {
+          "height": 0.0623,
+          "width": 0.156,
+          "x": 0.0178,
+          "y": 0.0709
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Cmd/InternalSetpoint"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Format": "0,0.##",
+            "ShowLabel": true,
+            "Units": ""
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/NumericEntryField"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "PV IN"
+        },
+        "position": {
+          "height": 0.0623,
+          "width": 0.156,
+          "x": 0.0177,
+          "y": 0.1257
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/In/ProcessVariable"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": false,
+            "Format": "0,0.##",
+            "ShowLabel": true,
+            "Units": ""
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/NumericEntryField"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Deadband"
+        },
+        "position": {
+          "height": 0.0623,
+          "width": 0.156,
+          "x": 0.41
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Cfg/Deadband"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Format": "0,0.##",
+            "ShowLabel": true,
+            "Units": ""
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/NumericEntryField"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Error"
+        },
+        "position": {
+          "height": 0.0623,
+          "width": 0.156,
+          "x": 0.6357,
+          "y": 0.0981
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}\\Sts\\Error"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": false,
+            "Format": "0,0.##",
+            "ShowLabel": true,
+            "Units": ""
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/NumericEntryField"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "TI"
+        },
+        "position": {
+          "height": 0.0584,
+          "width": 0.156,
+          "x": 0.151,
+          "y": 0.3402
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Cfg/IntegralTime"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Format": "0,0.##",
+            "ShowLabel": true,
+            "Units": ""
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/NumericEntryField"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "I Component"
+        },
+        "position": {
+          "height": 0.0623,
+          "width": 0.156,
+          "x": 0.5362,
+          "y": 0.4601
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}\\Sts\\IntegralComponent"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": false,
+            "Format": "0,0.##",
+            "ShowLabel": true,
+            "Units": ""
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/NumericEntryField"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "TD"
+        },
+        "position": {
+          "height": 0.0584,
+          "width": 0.156,
+          "x": 0.1509,
+          "y": 0.5598
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Cfg/DerivativeTime"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Format": "0,0.##",
+            "ShowLabel": true,
+            "Units": ""
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/NumericEntryField"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "D Component"
+        },
+        "position": {
+          "height": 0.0623,
+          "width": 0.1606,
+          "x": 0.5339,
+          "y": 0.686
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}\\Sts\\DerivativeComponent"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": false,
+            "Format": "0,0.##",
+            "ShowLabel": true,
+            "Units": ""
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/NumericEntryField"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "P Component"
+        },
+        "position": {
+          "height": 0.0623,
+          "width": 0.156,
+          "x": 0.5362,
+          "y": 0.3138
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}\\Sts\\ProportionalComponent"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": false,
+            "Format": "0,0.##",
+            "ShowLabel": true,
+            "Units": ""
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/NumericEntryField"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Gain"
+        },
+        "position": {
+          "height": 0.0584,
+          "width": 0.156,
+          "x": 0.8142,
+          "y": 0.035
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}\\Cfg\\Gain"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Format": "0,0.##",
+            "ShowLabel": true,
+            "Units": ""
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/NumericEntryField"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DISV"
+        },
+        "position": {
+          "height": 0.0584,
+          "width": 0.156,
+          "x": 0.8157,
+          "y": 0.3942
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}\\Cfg\\DisturbanceVariable"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Format": "0,0.##",
+            "ShowLabel": true,
+            "Units": ""
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/NumericEntryField"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "External SP"
+        },
+        "position": {
+          "height": 0.0584,
+          "width": 0.156,
+          "x": 0.0428,
+          "y": 0.8431
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Cmd/ExternalSetpoint"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Format": "0,0.##",
+            "ShowLabel": true,
+            "Units": ""
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/NumericEntryField"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Clamp High"
+        },
+        "position": {
+          "height": 0.0584,
+          "width": 0.156,
+          "x": 0.4094,
+          "y": 0.8351
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Cfg/OutputClampHigh"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Format": "0,0.##",
+            "ShowLabel": true,
+            "Units": ""
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/NumericEntryField"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Clamp Low"
+        },
+        "position": {
+          "height": 0.0584,
+          "rotate": {
+            "anchor": "50% 25%"
+          },
+          "width": 0.156,
+          "x": 0.4094,
+          "y": 0.9249
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Cfg/OutputClampLow"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Format": "0,0.##",
+            "ShowLabel": true,
+            "Units": ""
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/NumericEntryField"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Out"
+        },
+        "position": {
+          "height": 0.0623,
+          "width": 0.156,
+          "x": 0.8314,
+          "y": 0.874
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Out/Output"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": false,
+            "Format": "0,0.##",
+            "ShowLabel": true,
+            "Units": ""
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/NumericEntryField"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "P Select"
+        },
+        "position": {
+          "height": 0.0905,
+          "width": 0.135,
+          "x": 0.3687,
+          "y": 0.2346
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Cfg/ProportionalEnable"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Position": "right",
+            "ShowLabel": true
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/Toggle Switch"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "I Select"
+        },
+        "position": {
+          "height": 0.0905,
+          "width": 0.135,
+          "x": 0.3687,
+          "y": 0.3705
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Cfg/IntegralEnable"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Position": "right",
+            "ShowLabel": true
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/Toggle Switch"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "D Select"
+        },
+        "position": {
+          "height": 0.0905,
+          "width": 0.135,
+          "x": 0.3689,
+          "y": 0.5797
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Cfg/DerivativeEnable"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Position": "right",
+            "ShowLabel": true
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/Toggle Switch"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Mode"
+        },
+        "position": {
+          "height": 0.0584,
+          "width": 0.1349,
+          "x": 0.2366,
+          "y": 0.8001
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "this.meta.name"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Cmd/Mode"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ShowLabel": true
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/Mode Mapping"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Selection"
+        },
+        "position": {
+          "height": 0.1081,
+          "width": 0.1405,
+          "x": 0.3448,
+          "y": 0.289
+        },
+        "propConfig": {
+          "props.params.Selected": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Cfg/ProportionalEnable"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "value",
+            "ShowLabel": false,
+            "StrokeWidth": 15
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/Selection"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Selection_0"
+        },
+        "position": {
+          "height": 0.1098,
+          "width": 0.1407,
+          "x": 0.3595,
+          "y": 0.6594
+        },
+        "propConfig": {
+          "props.params.Selected": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Cfg/DerivativeEnable"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "value",
+            "ShowLabel": false,
+            "StrokeWidth": 15
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/Selection"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Selection_1"
+        },
+        "position": {
+          "height": 0.1081,
+          "width": 0.1405,
+          "x": 0.3595,
+          "y": 0.4358
+        },
+        "propConfig": {
+          "props.params.Selected": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Cfg/IntegralEnable"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "value",
+            "ShowLabel": false,
+            "StrokeWidth": 15
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/Selection"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Selection_2"
+        },
+        "position": {
+          "height": 0.1081,
+          "width": 0.1405,
+          "x": 0.2299,
+          "y": 0.8478
+        },
+        "propConfig": {
+          "props.params.Selected": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Cmd/Mode"
+              },
+              "transforms": [
+                {
+                  "fallback": null,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": true
+                    },
+                    {
+                      "input": 2,
+                      "output": false
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "value",
+            "ShowLabel": false,
+            "StrokeWidth": 3
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/Selection"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 0.04,
+          "width": 0.0575,
+          "x": 0.8634,
+          "y": 0.1256
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#D5D5D5",
+            "fontSize": 12,
+            "textAlign": "center"
+          },
+          "text": "X"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "height": 0.052,
+          "width": 0.07,
+          "x": 0.2709,
+          "y": 0.093
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#D5D5D5",
+            "fontSize": 20,
+            "textAlign": "center"
+          },
+          "text": "+"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_2"
+        },
+        "position": {
+          "height": 0.04,
+          "width": 0.0575,
+          "x": 0.7431,
+          "y": 0.4872
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#D5D5D5",
+            "fontSize": 20,
+            "textAlign": "center"
+          },
+          "text": "+"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_4"
+        },
+        "position": {
+          "height": 0.0524,
+          "width": 0.07,
+          "x": 0.2709,
+          "y": 0.1409
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#D5D5D5",
+            "fontSize": 20,
+            "textAlign": "center"
+          },
+          "text": "-"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_5"
+        },
+        "position": {
+          "height": 0.04,
+          "width": 0.0575,
+          "x": 0.8625,
+          "y": 0.4872
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#D5D5D5",
+            "fontSize": 20,
+            "textAlign": "center"
+          },
+          "text": "+"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "TypeSymbol"
+        },
+        "position": {
+          "height": 0.117,
+          "width": 0.1443,
+          "x": 0.4165,
+          "y": 0.0879
+        },
+        "props": {
+          "params": {
+            "Selected": false,
+            "ShowLabel": true,
+            "StrokeWidth": 4,
+            "Type": {
+              "Deadband": true,
+              "Differential": false,
+              "Integral": false,
+              "Limit": false
+            }
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/TypeSymbol"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "TypeSymbol_0"
+        },
+        "position": {
+          "height": 0.117,
+          "width": 0.1443,
+          "x": 0.1565,
+          "y": 0.4239
+        },
+        "props": {
+          "params": {
+            "Selected": false,
+            "ShowLabel": true,
+            "StrokeWidth": 4,
+            "Type": {
+              "Deadband": false,
+              "Differential": false,
+              "Integral": true,
+              "Limit": false
+            }
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/TypeSymbol"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "TypeSymbol_1"
+        },
+        "position": {
+          "height": 0.117,
+          "width": 0.1443,
+          "x": 0.1565,
+          "y": 0.6427
+        },
+        "props": {
+          "params": {
+            "Selected": false,
+            "ShowLabel": true,
+            "StrokeWidth": 4,
+            "Type": {
+              "Deadband": false,
+              "Differential": true,
+              "Integral": false,
+              "Limit": false
+            }
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/TypeSymbol"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "TypeSymbol_2"
+        },
+        "position": {
+          "height": 0.117,
+          "width": 0.1443,
+          "x": 0.6201,
+          "y": 0.8664
+        },
+        "props": {
+          "params": {
+            "Selected": false,
+            "ShowLabel": true,
+            "StrokeWidth": 4,
+            "Type": {
+              "Deadband": false,
+              "Differential": false,
+              "Integral": false,
+              "Limit": true
+            }
+          },
+          "path": "Standard/Control Modules/Controller/Faceplates/Components/Algorithm/Components/TypeSymbol"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "pipes": [
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.2715,
+                "y": 0.1183
+              }
+            ],
+            "x": 0.1412,
+            "y": 0.1183
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_0",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.2737,
+                "y": 0.1736
+              }
+            ],
+            "x": 0.1471,
+            "y": 0.1736
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_1",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.416,
+                "y": 0.1459
+              }
+            ],
+            "x": 0.3393,
+            "y": 0.1459
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_3",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.6394,
+                "y": 0.1465
+              }
+            ],
+            "x": 0.4554,
+            "y": 0.1465
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_5",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [],
+                            "x": 0.8936,
+                            "y": 0.1458
+                          }
+                        ],
+                        "x": 0.9714,
+                        "y": 0.1458
+                      }
+                    ],
+                    "x": 0.9714,
+                    "y": 0.2294
+                  }
+                ],
+                "x": 0.0177,
+                "y": 0.2294
+              },
+              {
+                "connections": [],
+                "x": 0.1564,
+                "y": 0.4789
+              }
+            ],
+            "x": 0.0177,
+            "y": 0.4789
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_4",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "x": 0.1565,
+                        "y": 0.7009
+                      }
+                    ],
+                    "x": 0.0689,
+                    "y": 0.7009
+                  }
+                ],
+                "x": 0.0689,
+                "y": 0.3305
+              }
+            ],
+            "x": 0.3802,
+            "y": 0.3305
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_9",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "x": 0.7717,
+                    "y": 0.4833
+                  }
+                ],
+                "x": 0.7717,
+                "y": 0.3596
+              }
+            ],
+            "x": 0.6836,
+            "y": 0.3596
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_10",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.8625,
+                "y": 0.507
+              }
+            ],
+            "x": 0.7847,
+            "y": 0.507
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_11",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.7431,
+                "y": 0.5079
+              }
+            ],
+            "x": 0.6653,
+            "y": 0.5079
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_15",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "x": 0.3972,
+                    "y": 0.4771
+                  }
+                ],
+                "x": 0.3007,
+                "y": 0.4771
+              }
+            ],
+            "x": 0.2664,
+            "y": 0.4771
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_17",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "x": 0.7717,
+                    "y": 0.5293
+                  }
+                ],
+                "x": 0.7717,
+                "y": 0.7334
+              }
+            ],
+            "x": 0.6802,
+            "y": 0.7334
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_18",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.1277,
+                "y": 0.8881
+              }
+            ],
+            "x": 0.2667,
+            "y": 0.8881
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_19",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [
+                                  {
+                                    "connections": [],
+                                    "x": 0.9197,
+                                    "y": 0.5075
+                                  }
+                                ],
+                                "x": 0.9714,
+                                "y": 0.5075
+                              }
+                            ],
+                            "x": 0.9714,
+                            "y": 0.657
+                          }
+                        ],
+                        "x": 0.9714,
+                        "y": 0.7924
+                      }
+                    ],
+                    "x": 0.0177,
+                    "y": 0.7924
+                  }
+                ],
+                "x": 0.0177,
+                "y": 0.92
+              }
+            ],
+            "x": 0.2737,
+            "y": 0.92
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_21",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.614,
+                "y": 0.8789
+              }
+            ],
+            "x": 0.5514,
+            "y": 0.8789
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_14",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "x": 0.2291,
+                    "y": 0.7017
+                  }
+                ],
+                "x": 0.2679,
+                "y": 0.7017
+              }
+            ],
+            "x": 0.3948,
+            "y": 0.7017
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_25",
+          "origin": {
+            "connections": [
+              {
+                "connections": [],
+                "x": 0.4386,
+                "y": 0.3436
+              }
+            ],
+            "x": 0.4386,
+            "y": 0.3098
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_26",
+          "origin": {
+            "connections": [
+              {
+                "connections": [],
+                "x": 0.4341,
+                "y": 0.4787
+              }
+            ],
+            "x": 0.4341,
+            "y": 0.445
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_27",
+          "origin": {
+            "connections": [
+              {
+                "connections": [],
+                "x": 0.437,
+                "y": 0.691
+              }
+            ],
+            "x": 0.437,
+            "y": 0.657
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_28",
+          "origin": {
+            "connections": [
+              {
+                "connections": [],
+                "x": 0.892,
+                "y": 0.1243
+              }
+            ],
+            "x": 0.892,
+            "y": 0.0916
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_31",
+          "origin": {
+            "connections": [
+              {
+                "connections": [],
+                "x": 0.894,
+                "y": 0.4859
+              }
+            ],
+            "x": 0.894,
+            "y": 0.452
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_32",
+          "origin": {
+            "connections": [
+              {
+                "connections": [],
+                "x": 0.3038,
+                "y": 0.8897
+              }
+            ],
+            "x": 0.3038,
+            "y": 0.8557
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_2",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.4874,
+                "y": 0.0879
+              }
+            ],
+            "x": 0.4874,
+            "y": 0.0453
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_6",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.2334,
+                "y": 0.4213
+              }
+            ],
+            "x": 0.2334,
+            "y": 0.3787
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_7",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.2288,
+                "y": 0.6413
+              }
+            ],
+            "x": 0.2288,
+            "y": 0.5987
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_20",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.6172,
+                "y": 0.9707
+              }
+            ],
+            "x": 0.5394,
+            "y": 0.9707
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_22",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.8625,
+                "y": 0.1458
+              }
+            ],
+            "x": 0.7781,
+            "y": 0.1458
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_8",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.8383,
+                "y": 0.92
+              }
+            ],
+            "x": 0.3341,
+            "y": 0.92
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_12",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.6394,
+                "y": 0.1465
+              }
+            ],
+            "x": 0.4554,
+            "y": 0.1465
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_13",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.6394,
+                "y": 0.3613
+              }
+            ],
+            "x": 0.4485,
+            "y": 0.3613
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_16",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.6554,
+                "y": 0.5085
+              }
+            ],
+            "x": 0.4645,
+            "y": 0.5085
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_23",
+          "origin": {
+            "connections": [
+              {
+                "x": 0.6554,
+                "y": 0.7334
+              }
+            ],
+            "x": 0.4645,
+            "y": 0.7334
+          },
+          "start": "none",
+          "stroke": "#AAAAAA",
+          "width": 2
+        }
+      ],
+      "style": {
+        "classes": "Standard/Popups/Faceplates/Content"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

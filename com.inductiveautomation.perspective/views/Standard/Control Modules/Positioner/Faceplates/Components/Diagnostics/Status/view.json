@@ -1,0 +1,403 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/100P100"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 338,
+      "width": 354
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Opening"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\u0027.Documentation\u0027"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "MappedObject": {
+              "False": "False",
+              "True": "True"
+            },
+            "ShowLabel": true
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayEnumeration",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Closing"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\u0027.Documentation\u0027"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "MappedObject": {
+              "False": "False",
+              "True": "True"
+            },
+            "ShowLabel": true
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayEnumeration",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "MoveCount"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\u0027.Documentation\u0027"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Format": "###",
+            "ShowLabel": true,
+            "ShowUnits": false,
+            "Units": "",
+            "style": {
+              "classes": "General/Text/Status_Label"
+            }
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "MoveHours"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\u0027.Documentation\u0027"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Format": "###",
+            "ShowLabel": true,
+            "ShowUnits": false,
+            "Units": "",
+            "style": {
+              "classes": "General/Text/Status_Label"
+            }
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DelayCloseElapsed"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\u0027.Documentation\u0027"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Format": "###",
+            "ShowLabel": true,
+            "ShowUnits": true,
+            "Style": {
+              "classes": "General/Text/Status_Label"
+            },
+            "Units": "s"
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DelayOpenElapsed"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\u0027.Documentation\u0027"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Format": "###",
+            "ShowLabel": true,
+            "ShowUnits": true,
+            "Units": "s",
+            "style": {
+              "classes": "General/Text/Status_Label"
+            }
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "custom": {},
+  "params": {
+    "SystemDiagnosticsTagPath": "[StandardS71500]System/Diagnostics"
+  },
+  "propConfig": {
+    "params.SystemDiagnosticsTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1376,
+      "width": 1307
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Gateway Diagnostics"
+        },
+        "position": {
+          "height": 387,
+          "width": 322,
+          "x": 27.98,
+          "y": 35
+        },
+        "propConfig": {
+          "props.params.GatewayDiagnosticTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.SystemDiagnosticsTagPath} + \"/Gateway/Diagnostics\""
+              },
+              "type": "expr"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "params": {
+            "GatewayDiagnosticTagPath": "[StandardS71500]System/Diagnostics/Gateway/Diagnostics"
+          },
+          "path": "Standard/Diagnostic Modules/Components/Gateway Diagnostics"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Redundant Gateway"
+        },
+        "position": {
+          "height": 293,
+          "width": 300,
+          "x": 366,
+          "y": 35
+        },
+        "propConfig": {
+          "props.params.RedundancyTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.SystemDiagnosticsTagPath} + \"/Gateway/Redundancy\""
+              },
+              "type": "expr"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "params": {
+            "RedundancyTagPath": "[StandardS71500]System/Diagnostics/Gateway/Redundancy"
+          },
+          "path": "Standard/Diagnostic Modules/Components/Redundancy Diagnostics"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EAM Agents"
+        },
+        "position": {
+          "height": 800,
+          "width": 1197,
+          "x": 29,
+          "y": 475
+        },
+        "propConfig": {
+          "props.params.SystemGatewayAgentsTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.SystemDiagnosticsTagPath} + \"/Gateway/Agents\""
+              },
+              "type": "expr"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "params": {
+            "SystemGatewayAgentsTagPath": "[StandardS71500]System/Diagnostics/Gateway/Agents"
+          },
+          "path": "Standard/Diagnostic Modules/Components/EAM Agents"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Gateway Device Connections"
+        },
+        "position": {
+          "height": 264,
+          "width": 300,
+          "x": 691.3,
+          "y": 35.98
+        },
+        "propConfig": {
+          "props.params.UnitDevicesTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.SystemDiagnosticsTagPath} + \"/Devices\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Diagnostic Modules/Components/Gateway Device Connections"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 0,
+      "y": 74
+    },
+    "props": {
+      "style": {
+        "overflow": "auto"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

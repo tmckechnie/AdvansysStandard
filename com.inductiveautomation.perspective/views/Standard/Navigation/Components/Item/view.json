@@ -1,0 +1,377 @@
+{
+  "custom": {
+    "Styles": {
+      "baseBackground": "var(--bodyBackground)",
+      "breadCrumbBackground": "var(--bodyContentBackground)",
+      "breadCrumbBorder": "var(--bodyContentBorder)"
+    },
+    "modelItem": {
+      "BaseViewPath": "Model Views/StandardS71500/Standard",
+      "ModelItemTagPath": "[StandardS71500]Standard/Model Item",
+      "Name": "Standard",
+      "Order": 0,
+      "Path": "0",
+      "TagFolderName": "Standard",
+      "ViewPaths": [
+        {
+          "ContentType": [
+            "Footer Alarms"
+          ],
+          "Label": "Alarms",
+          "Order": 0,
+          "PagePath": "",
+          "Roles": [],
+          "ViewPath": "*Alarms/Alarms",
+          "key": "kNew1"
+        },
+        {
+          "ContentType": [
+            "Overview"
+          ],
+          "Label": "Overview",
+          "Order": 0,
+          "PagePath": "",
+          "Roles": [],
+          "ViewPath": "*Overview/Overview",
+          "key": "k0"
+        }
+      ]
+    }
+  },
+  "params": {
+    "AllowedContentTypes": [
+      "Mimic",
+      "Alarms",
+      "Trend",
+      "Setpoints"
+    ],
+    "Label": "",
+    "ModelItemTagPath": "[StandardS71500]Standard/Model Item",
+    "ShowOnlyConfiguredContentTypes": true
+  },
+  "propConfig": {
+    "custom.Styles": {
+      "persistent": true
+    },
+    "custom.modelItem": {
+      "binding": {
+        "config": {
+          "struct": {
+            "modelItemTagPath": "{view.params.ModelItemTagPath}",
+            "modelItems": "{session.custom.ModelItems}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tmodelItems \u003d value[\"modelItems\"]\n\tmodelItemTagPath \u003d value[\"modelItemTagPath\"]\n\tmodelItem \u003d Standard.Navigation.Common.GetModelItemByTagPath(ModelItems \u003d modelItems ,ModelItemTagPath \u003d modelItemTagPath)\n\treturn modelItem[\"data\"]",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.AllowedContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ModelItemTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowOnlyConfiguredContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 40,
+      "width": 125
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Breadcrumb",
+          "tooltip": {
+            "text": "none"
+          }
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "props.elements[0].elements[0].elements[0].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Styles.baseBackground"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.elements[0].elements[0].elements[0].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Styles.baseBackground"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.elements[0].elements[0].elements[1].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Styles.baseBackground"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.elements[0].elements[0].elements[1].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Styles.baseBackground"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.elements[0].elements[0].elements[2].fill.paint": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Styles.baseBackground"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.elements[0].elements[0].elements[2].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Styles.baseBackground"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.elements[0].elements[0].elements[3].style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.params.ModelItemTagPath"
+              },
+              "transforms": [
+                {
+                  "code": "\tstyleClasses \u003d \"Standard/Body/Navigation/Item/Border Standard/Body/Navigation/Item/Background\"\n\tif value !\u003d \"\":\n\t\tstyleClasses +\u003d \" Standard/Body/Navigation/Item/Hover\"\n\n\treturn styleClasses",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "d": "m 210.96808,164.09938 7.43416,0.0571 0,11.12891 z",
+                      "fill": {
+                        "opacity": 1,
+                        "paint": "var(--bodyBackground)"
+                      },
+                      "name": "next",
+                      "stroke": {
+                        "dasharray": "none",
+                        "dashoffset": "0",
+                        "linecap": "butt",
+                        "miterlimit": "4",
+                        "opacity": 1,
+                        "paint": "var(--bodyBackground)",
+                        "width": 0.3
+                      },
+                      "style": {
+                        "display": "inline"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "m 218.40224,171.92958 -1.5e-4,11.71662 -7.43401,-0.0582 z",
+                      "fill": {
+                        "opacity": 1,
+                        "paint": "var(--bodyBackground)"
+                      },
+                      "name": "nextTip",
+                      "stroke": {
+                        "dasharray": "none",
+                        "dashoffset": "0",
+                        "linecap": "butt",
+                        "miterlimit": "4",
+                        "opacity": 1,
+                        "paint": "var(--bodyBackground)",
+                        "width": 0.3
+                      },
+                      "style": {
+                        "display": "inline"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "m 168.84116,164.1481 7.43416,9.65056 -7.38097,9.8762 z",
+                      "fill": {
+                        "opacity": 1,
+                        "paint": "var(--bodyBackground)"
+                      },
+                      "name": "base",
+                      "stroke": {
+                        "dasharray": "none",
+                        "dashoffset": "0",
+                        "linecap": "butt",
+                        "miterlimit": "4",
+                        "opacity": 1,
+                        "paint": "var(--bodyBackground)",
+                        "width": 1
+                      },
+                      "style": {
+                        "display": "inline"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "m 174.00295,173.65576 -5.16179,-9.50766 44.60497,-0.0487 4.95611,9.78774 -4.95611,9.70909 -44.56982,0.0787 z",
+                      "fill": {},
+                      "name": "current",
+                      "stroke": {
+                        "dasharray": "none",
+                        "dashoffset": "0",
+                        "linecap": "butt",
+                        "miterlimit": "4",
+                        "opacity": 1,
+                        "width": 0
+                      },
+                      "style": {
+                        "display": "inline"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "fill": {},
+                  "name": "g1758",
+                  "stroke": {
+                    "dasharray": "none",
+                    "miterlimit": "4",
+                    "opacity": "0.48583",
+                    "paint": "#000000",
+                    "width": "0.131623"
+                  },
+                  "style": {
+                    "display": "inline"
+                  },
+                  "transform": "matrix(4.0354242,0,0,3.5758961,-739.22667,-357.77674)",
+                  "type": "group"
+                }
+              ],
+              "name": "layer1",
+              "transform": "translate(57.88097,-229.02559)",
+              "type": "group"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 200.50045 70.000135"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 1,
+          "width": 0.5,
+          "x": 0.25
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/Symbols/Text",
+            "cursor": "pointer",
+            "fontSize": "9px",
+            "overflowY": "visible",
+            "pointerEvents": "none",
+            "textAlign": "center"
+          },
+          "textStyle": {
+            "overflowWrap": "normal"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\t#Check if valid model item exists\n\tmodelItemTagPath \u003d self.view.params.ModelItemTagPath\n\ttagExists \u003d system.tag.exists(modelItemTagPath)\n\tif tagExists and modelItemTagPath!\u003d\"\":\n\t\t#Update CurrentModelItem Object\n\t\tmodelItemPath \u003d self.view.custom.modelItem.Path\n\t\tuseSessionModelItem \u003d self.session.custom.UseSessionModelItem\n\t\tcurrentModelItem\u003d self.session.custom.CurrentModelItem\n\t\tperspectivePageID \u003d self.page.props.pageId\n\t\tself.session.custom.CurrentModelItem \u003d Standard.Navigation.Common.UpdateCurrentModelItem(Path \u003d modelItemPath,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t CurrentModelItem \u003d currentModelItem,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t UseSession \u003d useSessionModelItem,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t PerspectivePageID \u003d perspectivePageID)\t\t\n\t\n\n\t\n\t\n\t"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "enabled": true
+      }
+    },
+    "position": {
+      "x": 0.12,
+      "y": 0.1867
+    },
+    "propConfig": {
+      "meta.tooltip.enabled": {
+        "binding": {
+          "config": {
+            "expression": "{view.params.ModelItemTagPath}!\u003d\"\""
+          },
+          "type": "expr"
+        },
+        "persistent": true
+      },
+      "meta.tooltip.text": {
+        "binding": {
+          "config": {
+            "path": "view.params.ModelItemTagPath"
+          },
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "overflow": "visible"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

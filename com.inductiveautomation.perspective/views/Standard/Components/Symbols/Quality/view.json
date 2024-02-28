@@ -1,0 +1,103 @@
+{
+  "custom": {
+    "Quality": "Bad_NotFound(\"Path \u0027[AdvansysStandard]Standard/Control Modules/Application/100V100/In/Opened\u0027 not found.\")"
+  },
+  "params": {
+    "Bad": true,
+    "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100V100/In/Opened"
+  },
+  "propConfig": {
+    "custom.Quality": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}"
+        },
+        "transforms": [
+          {
+            "code": "\treturn quality",
+            "type": "script"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.Bad": {
+      "binding": {
+        "config": {
+          "expression": "{view.custom.Quality}!\u003d\"Good\""
+        },
+        "type": "expr"
+      },
+      "paramDirection": "output",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 20,
+      "width": 20
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Icon"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "props": {
+          "color": "var(--bodySymbolBadQualityIcon)",
+          "path": "material/highlight_off",
+          "style": {
+            "classes": "",
+            "strokeWidth": "0"
+          }
+        },
+        "type": "ia.display.icon"
+      }
+    ],
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "enabled": true
+      }
+    },
+    "propConfig": {
+      "meta.tooltip.text": {
+        "binding": {
+          "config": {
+            "expression": "\"Quality: \" + {view.custom.Quality} + \"!\""
+          },
+          "type": "expr"
+        }
+      },
+      "meta.visible": {
+        "binding": {
+          "config": {
+            "expression": "{view.custom.Quality}!\u003d\"Good\""
+          },
+          "type": "expr"
+        }
+      }
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

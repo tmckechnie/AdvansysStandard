@@ -1,0 +1,792 @@
+{
+  "custom": {
+    "AlarmSummary": {
+      "HighestActivePriority": 0,
+      "HighestActivePriorityName": null,
+      "HighestUnackedPriority": 0,
+      "HighestUnackedPriorityName": null,
+      "Overall": {
+        "ActiveAckCount": 0,
+        "ActiveUnackCount": 0,
+        "ClearUnackCount": 0,
+        "Detail": [],
+        "ShelvedCount": 0,
+        "Total": 0
+      },
+      "PriorityDetail": {
+        "Critical": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "High": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Low": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Medium": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        }
+      }
+    },
+    "Alarms": {
+      "High": {},
+      "HighHigh": {},
+      "Low": {},
+      "LowLow": {}
+    },
+    "ControlLimits": {},
+    "Desired": {},
+    "History": {},
+    "ModuleType": "AnalogInput",
+    "References": {},
+    "Styling": {
+      "Base": {},
+      "Default": {
+        "Container": "Standard/Body/Symbols/Displays/Container"
+      }
+    }
+  },
+  "params": {
+    "Cfg": {
+      "Desired": {
+        "HighTag": "Cfg/ControlLimitHigh",
+        "LowTag": "Cfg/ControlLimitLow"
+      },
+      "ShowAlarmOutLine": true,
+      "ValueWedgeExtent": 2
+    },
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput02"
+  },
+  "propConfig": {
+    "custom.AlarmSummary": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Summary/Information"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Alarms": {
+      "persistent": true
+    },
+    "custom.Alarms.High.Enable": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/High/Cfg/Enable"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.High.Priority": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/High/Sts/Priority"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.High.Setpoint": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/High/Cfg/ConditionSetpoint"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.HighHigh.Enable": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/HighHigh/Cfg/Enable"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.HighHigh.Priority": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/HighHigh/Sts/Priority"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.HighHigh.Setpoint": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/HighHigh/Cfg/ConditionSetpoint"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.Low.Enable": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Low/Cfg/Enable"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.Low.Priority": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Low/Sts/Priority"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.Low.Setpoint": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Low/Cfg/ConditionSetpoint"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.LowLow.Enable": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/LowLow/Cfg/Enable"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.LowLow.Priority": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/LowLow/Sts/Priority"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.LowLow.Setpoint": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/LowLow/Cfg/ConditionSetpoint"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.ControlLimits": {
+      "persistent": true
+    },
+    "custom.ControlLimits.High": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/ControlLimitHigh"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.ControlLimits.HighHigh": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/ControlLimitHighHigh"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.ControlLimits.Low": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/ControlLimitLow"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.ControlLimits.LowLow": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/ControlLimitLowLow"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Desired": {
+      "persistent": true
+    },
+    "custom.Desired.High": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "HighTag": "{view.params.Cfg.Desired.HighTag}",
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/{HighTag}"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Desired.Low": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "LowTag": "{view.params.Cfg.Desired.LowTag}",
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/{LowTag}"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.History": {
+      "persistent": true
+    },
+    "custom.History.config": {
+      "binding": {
+        "config": {
+          "struct": {
+            "currentValue": "{view.custom.References.StsValue}",
+            "gatewayType": "{session.custom.SystemInfo.GatewayType}",
+            "historyPath": "tag({view.params.TagPath}+\"/Sts/Value.History Path\")\r\n"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\thistoryPath \u003d value[\u0027historyPath\u0027]\n\tgatewayType \u003d value[\u0027gatewayType\u0027]\n\tcurrentValue \u003d value[\u0027currentValue\u0027]\n\tpath \u003d historyPath\n\tif gatewayType \u003d\u003d \"Edge\":\n\t\tpath \u003d self.params.TagPath + \"/Sts/Value\"\n\tseries \u003d {\"seriesName\": \"Value\",\"tags\": [{\"alias\":\"Value\", \"currentValue\": currentValue,\"path\": path,\"isBool\":False}]}\n\treturn [series]\n",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.History.data": {
+      "binding": {
+        "config": {
+          "struct": {
+            "config": "{this.custom.History.config}",
+            "duration": "{this.custom.History.duration}",
+            "periodEnd": "now(1000*{this.custom.History.run})"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tconfig \u003d value[\u0027config\u0027] \n\tduration \u003d value[\u0027duration\u0027] \n\tperiodEnd \u003d value[\u0027periodEnd\u0027]\n\tdata \u003d Standard.Tags.Common.GetTrendData(HistoryConfig\u003dconfig,PeriodEnd\u003dperiodEnd,HistoryDuration\u003dduration) \n\treturn data\n\t\n\t\n",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.History.duration": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "path": "session.custom.DefaultPopupHistoryDuration"
+        },
+        "type": "property"
+      }
+    },
+    "custom.ModuleType": {
+      "persistent": true
+    },
+    "custom.References": {
+      "persistent": true
+    },
+    "custom.References.Description": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/Description"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.EngUnits": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value.EngUnit"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.FormatString": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value.FormatString"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.FormattedValue": {
+      "binding": {
+        "config": {
+          "expression": "numberFormat({view.custom.References.StsValue},{view.custom.References.FormatString}) + \" \" + {view.custom.References.EngUnits}"
+        },
+        "type": "expr"
+      }
+    },
+    "custom.References.Identify": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Id/Identify"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.InstanceName": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/InstanceName"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.ScaleEngineeringMax": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/ScaleEngineeringMax"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.ScaleEngineeringMin": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/ScaleEngineeringMin"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.ShortDescription": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/ShortDescription"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.Simulated": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sim/Active"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.StsValue": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Styling": {
+      "persistent": true
+    },
+    "custom.Styling.Base.Alarm": {
+      "binding": {
+        "config": {
+          "path": "view.custom.AlarmSummary"
+        },
+        "transforms": [
+          {
+            "code": "\t \n\tstyle \u003d Standard.Modules.Alarms.GetAlarmStyle(AlarmSummary\u003dvalue,ComponentPart\u003d\"Outline\")\n\treturn style[\u0027classes\u0027]\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Styling.Base.Identify": {
+      "binding": {
+        "config": {
+          "path": "view.custom.References.Identify"
+        },
+        "transforms": [
+          {
+            "fallback": "Standard/Body/Symbols/Base/Basic",
+            "inputType": "scalar",
+            "mappings": [
+              {
+                "input": true,
+                "output": "Standard/Body/Symbols/Base/Basic Standard/Body/Symbols/Base/Identify"
+              }
+            ],
+            "outputType": "style-list",
+            "type": "map"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Styling.Base.Simulated": {
+      "binding": {
+        "config": {
+          "path": "view.custom.References.Simulated"
+        },
+        "transforms": [
+          {
+            "fallback": "{view.custom.Styling.Default.Container}",
+            "inputType": "scalar",
+            "mappings": [
+              {
+                "input": true,
+                "output": "\"Standard/Body/Symbols/Base/Simulated\""
+              }
+            ],
+            "outputType": "expression",
+            "type": "map"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "params.Cfg": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 134,
+      "width": 198
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application Default/Control Modules/AI"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Sparkline"
+            },
+            "position": {
+              "basis": "100px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.desired.high": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Desired.High"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.desired.low": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Desired.Low"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.points": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.History.data[0].data"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tpoints \u003d []\n\tfor tv in value:\n\t\tpoints.append(tv[\u0027Value\u0027])\n\treturn points",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.range.high": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.References.ScaleEngineeringMax"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.range.low": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.References.ScaleEngineeringMin"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "color": "var(--bodySparklineLine)",
+              "desired": {
+                "fill": {
+                  "color": "var(--bodySparklineDesiredFill"
+                },
+                "stroke": {
+                  "color": "var(--bodySparklineDesiredStroke)"
+                }
+              },
+              "marker": {
+                "first": {
+                  "style": {
+                    "classes": "Standard/Body/Symbols/Sparkline/MarkerFirst"
+                  }
+                },
+                "high": {
+                  "style": {
+                    "classes": "Standard/Body/Symbols/Sparkline/MarkerHigh"
+                  }
+                },
+                "last": {
+                  "shape": "triangle",
+                  "style": {
+                    "classes": "Standard/Body/Symbols/Sparkline/MarkerLast"
+                  }
+                },
+                "low": {
+                  "style": {
+                    "classes": "Standard/Body/Symbols/Sparkline/MarkerLow"
+                  }
+                }
+              },
+              "range": {}
+            },
+            "type": "ia.display.sparkline"
+          }
+        ],
+        "meta": {
+          "name": "DisplayContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Cfg.ShowAlarmOutLine},{view.custom.Styling.Base.Simulated} +\" \"+ {view.custom.Styling.Base.Alarm},\"\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.style.margin": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Cfg.ShowAlarmOutLine},3,0)"
+              },
+              "type": "expr"
+            }
+          },
+          "props.style.outline-offset": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Cfg.ShowAlarmOutLine},1,0)"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "custom": {
+      "UpdateRateSeconds": 5
+    },
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\ttagPath \u003d self.view.params.TagPath\n\tinstanceName \u003d self.view.custom.References.InstanceName\n\tdescription \u003d self.view.custom.References.ShortDescription\n\ttitle \u003d instanceName + \" - \" + description\n\tparamsObject \u003d {\"TagPath\":tagPath}\n\tmoduleType \u003d self.view.custom.ModuleType\n\tfaceplatePath \u003d \"Standard/Control Modules/\"+moduleType+\"/Faceplates/Faceplate\"\n\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003dfaceplatePath)"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.style.classes": {
+        "binding": {
+          "config": {
+            "expression": "if({view.params.Cfg.ShowAlarmOutLine},{view.custom.Styling.Base.Identify},\"\")"
+          },
+          "type": "expr"
+        }
+      }
+    },
+    "props": {
+      "direction": "column",
+      "style": {}
+    },
+    "type": "ia.container.flex"
+  }
+}

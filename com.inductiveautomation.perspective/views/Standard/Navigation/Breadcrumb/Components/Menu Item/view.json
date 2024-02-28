@@ -1,0 +1,136 @@
+{
+  "custom": {},
+  "params": {
+    "BreadcrumbPosition": 0,
+    "ContentType": "",
+    "Label": "",
+    "ModelItemTagPath": "",
+    "Path": 0
+  },
+  "propConfig": {
+    "params.BreadcrumbPosition": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ContentType": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ModelItemTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Path": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 70,
+      "width": 200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Alarm Summary"
+        },
+        "position": {
+          "height": 0.3,
+          "width": 0.5,
+          "x": 0.05,
+          "y": 0.7
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.ContentType}\u003d\"\""
+              },
+              "type": "expr"
+            },
+            "persistent": true
+          },
+          "props.params.AlarmSummaryTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.ModelItemTagPath}+\"/Alarm Summary\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Components/Alarms/Alarm Summary Symbols"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Label}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Navigation/Text"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\t#Update ModelItemTagPaths Object\n\tcontentType \u003d self.view.params.ContentType\n\tuseSessionModelItem \u003d self.session.custom.UseSessionModelItem\n\tcurrentModelItem \u003d self.session.custom.CurrentModelItem\n\tpath \u003d  self.view.params.Path\n\tperspectivePageID \u003d self.page.props.pageId\n\t\n\t#Get Updated CurrentModelItem\n\tcurrentModelItemUpdated \u003d Standard.Navigation.Common.UpdateCurrentModelItem(Path \u003d path,\n\tCurrentModelItem \u003d currentModelItem,UseSession \u003d useSessionModelItem,PerspectivePageID \u003d perspectivePageID)\n\t#Write to Session Property CurrentModelItem\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \n\tself.session.custom.CurrentModelItem \u003d currentModelItemUpdated\n\t#system.perspective.print(str(currentModelItemUpdated))\n\t#Set ContentType\n\tif contentType !\u003d \"\":\n\t\tcontentTypePage \u003d \t\"/Home/\" + contentType\n\t\tsystem.perspective.navigate(page \u003d contentTypePage)\n\t\t\n\tbreadcrumbpopupID \u003d \"breadcrumbpopup\"\n\tsystem.perspective.closePopup(id \u003d breadcrumbpopupID)\t\n\t\n\t\n\t\n\t"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "enabled": true
+      }
+    },
+    "position": {
+      "x": 0.12,
+      "y": 0.1867
+    },
+    "propConfig": {
+      "meta.tooltip.text": {
+        "binding": {
+          "config": {
+            "expression": "{view.params.ModelItemTagPath} + \" - Path:\" + {view.params.Path} + if({view.params.ContentType}\u003d\"\",\"\",\" - \"+{view.params.ContentType})"
+          },
+          "type": "expr"
+        }
+      }
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "custom": {
+    "instances": [
+      {
+        "fullPath": "[TPROM]ROM/CV01/100M001",
+        "hasChildren": true,
+        "name": "100M001",
+        "tagType": "UdtInstance",
+        "typeId": "Application Default/Control Modules/Motor",
+        "value": null
+      },
+      {
+        "fullPath": "[TPROM]ROM/CV02/100M002",
+        "hasChildren": true,
+        "name": "100M002",
+        "tagType": "UdtInstance",
+        "typeId": "Application Default/Control Modules/Motor",
+        "value": null
+      },
+      {
+        "fullPath": "[TPROM]ROM/CV03/100M003",
+        "hasChildren": true,
+        "name": "100M003",
+        "tagType": "UdtInstance",
+        "typeId": "Application Default/Control Modules/Motor",
+        "value": null
+      },
+      {
+        "fullPath": "[TPROM]ROM/CV04/100M004",
+        "hasChildren": true,
+        "name": "100M004",
+        "tagType": "UdtInstance",
+        "typeId": "Application Default/Control Modules/Motor",
+        "value": null
+      },
+      {
+        "fullPath": "[TPROM]ROM/CV05/100M005",
+        "hasChildren": true,
+        "name": "100M005",
+        "tagType": "UdtInstance",
+        "typeId": "Application Default/Control Modules/Motor",
+        "value": null
+      },
+      {
+        "fullPath": "[TPROM]ROM/Level 1/110M002",
+        "hasChildren": true,
+        "name": "110M002",
+        "tagType": "UdtInstance",
+        "typeId": "Application Default/Control Modules/Motor",
+        "value": null
+      },
+      {
+        "fullPath": "[TPROM]ROM/Level 1/CV10/110M001",
+        "hasChildren": true,
+        "name": "110M001",
+        "tagType": "UdtInstance",
+        "typeId": "Application Default/Control Modules/Motor",
+        "value": null
+      },
+      {
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003",
+        "hasChildren": true,
+        "name": "110M003",
+        "tagType": "UdtInstance",
+        "typeId": "Application Default/Control Modules/Motor",
+        "value": null
+      },
+      {
+        "fullPath": "[TPROM]ROM/Level 1/Striker 1/111M001",
+        "hasChildren": true,
+        "name": "111M001",
+        "tagType": "UdtInstance",
+        "typeId": "Application Default/Control Modules/Motor",
+        "value": null
+      },
+      {
+        "fullPath": "[TPROM]ROM/Level 1/Striker 2/112M001",
+        "hasChildren": true,
+        "name": "112M001",
+        "tagType": "UdtInstance",
+        "typeId": "Application Default/Control Modules/Motor",
+        "value": null
+      },
+      {
+        "fullPath": "[TPROM]ROM/Level 2/120M002",
+        "hasChildren": true,
+        "name": "120M002",
+        "tagType": "UdtInstance",
+        "typeId": "Application Default/Control Modules/Motor",
+        "value": null
+      },
+      {
+        "fullPath": "[TPROM]ROM/Level 2/CV20/120M001",
+        "hasChildren": true,
+        "name": "120M001",
+        "tagType": "UdtInstance",
+        "typeId": "Application Default/Control Modules/Motor",
+        "value": null
+      },
+      {
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003",
+        "hasChildren": true,
+        "name": "120M003",
+        "tagType": "UdtInstance",
+        "typeId": "Application Default/Control Modules/Motor",
+        "value": null
+      },
+      {
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001",
+        "hasChildren": true,
+        "name": "121M001",
+        "tagType": "UdtInstance",
+        "typeId": "Application Default/Control Modules/Motor",
+        "value": null
+      },
+      {
+        "fullPath": "[TPROM]ROM/SCR01/100M006",
+        "hasChildren": true,
+        "name": "100M006",
+        "tagType": "UdtInstance",
+        "typeId": "Application Default/Control Modules/Motor",
+        "value": null
+      }
+    ]
+  },
+  "params": {
+    "Filter": {
+      "recursive": true,
+      "typeId": "Application Default/Control Modules/Motor"
+    },
+    "TagPath": "[TPROM]ROM"
+  },
+  "propConfig": {
+    "custom.instances": {
+      "binding": {
+        "config": {
+          "struct": {
+            "filter": "{view.params.Filter}",
+            "tagPath": "{view.params.TagPath}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tpath\u003dvalue[\u0027tagPath\u0027]\n\tfilter \u003d value[\u0027filter\u0027]\n\tfilter \u003d {\n\t  \"typeId\": value[\u0027filter\u0027][\"typeId\"],\n\t  \"tagType\": \"UdtInstance\",\n\t  \"recursive\": value[\u0027filter\u0027][\"recursive\"]\n\t}\n\t#return filter\n\tbrowsedTags \u003d system.tag.browse(path\u003dpath, filter\u003dfilter)\n\treturn browsedTags\n",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.Filter": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 798,
+      "width": 623
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Accordion"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.items": {
+            "binding": {
+              "config": {
+                "path": "view.custom.instances"
+              },
+              "transforms": [
+                {
+                  "code": "\t#return value\n\titems \u003d []\n\tfor instance in value:\n\t\tfullPath \u003d str(instance[\"fullPath\"])\n\t\ttypeId \u003d instance[\u0027typeId\u0027]\n\t\tviewPath \u003d \"Standard/Components/Bulk/Module Configuration\"\n\t\titem \u003d {\"expanded\": False,\n\t\t  \"header\": {\n\t\t    \"toggle\": {\"enabled\": True,\"expandedIcon\": {\"path\": \"material/expand_less\",\"color\": \"\",\"style\": {\"classes\": \"\"}},\"collapsedIcon\": {\"path\": \"material/expand_more\",\"color\": \"\",\"style\": {\"classes\": \"\"}}\n\t\t    },\n\t\t    \"content\": {\n\t\t      \"type\": \"view\",\n\t\t      \"text\": \"\",\n\t\t      \"useDefaultViewWidth\": False,\n\t\t      \"useDefaultViewHeight\": True,\n\t\t      \"viewPath\": \"Standard/Components/Bulk/Module Header\",\n\t\t      \"viewParams\": {\"TagPath\":fullPath},\n\t\t      \"style\": {\"classes\": \"\"}\n\t\t    },\n\t\t    \"height\": \"30px\",\n\t\t    \"reverse\": False,\n\t\t    \"style\": {\"classes\": \"\"}\n\t\t  },\n\t\t  \"body\": {\n\t\t    \"viewPath\": viewPath,\n\t\t    \"viewParams\": {\"TagPath\":fullPath},\n\t\t    \"useDefaultViewWidth\": False,\n\t\t    \"useDefaultViewHeight\": True,\n\t\t    \"height\": \"auto\",\n\t\t    \"style\": {\"classes\": \"\",\"margin\": \"16px\"}\n\t\t  }\n\t\t}\n\t\titems.append(item)\n\treturn items",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.accordion"
+      }
+    ],
+    "custom": {
+      "filter": "value"
+    },
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "custom.key": {
+        "binding": {
+          "config": {
+            "struct": {},
+            "waitOnAll": true
+          },
+          "transforms": [
+            {
+              "code": "\tfilter \u003d {\"typeId\":\"Application/Control Modules/Motor\", \"tagType\":\"UdtInstance\",\"name\":\"*\"}\n\tfilter \u003d {\"recursive\":True}\n\tpath\u003d\"[StandardS71500]Modules\"\n\ttags \u003d system.tag.browse(path\u003dpath, filter\u003dfilter)\n\treturn tags",
+              "type": "script"
+            }
+          ],
+          "type": "expr-struct"
+        }
+      }
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

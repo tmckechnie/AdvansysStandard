@@ -1,0 +1,352 @@
+{
+  "custom": {
+    "Label": "Value"
+  },
+  "params": {
+    "Selected": false,
+    "ShowLabel": true,
+    "StrokeWidth": 4,
+    "Type": {
+      "Deadband": false,
+      "Differential": false,
+      "Integral": false,
+      "Limit": false
+    }
+  },
+  "propConfig": {
+    "custom.Label": {
+      "binding": {
+        "config": {
+          "path": "view.params.Type"
+        },
+        "transforms": [
+          {
+            "code": "\t\n\tdeadband \u003d value[\u0027Deadband\u0027]\n\tdifferential \u003d value[\u0027Differential\u0027]\n\tintegral \u003d value[\u0027Integral\u0027]\n\tlimit \u003d value[\u0027Limit\u0027]\n\t\n\tif deadband:\n\t\treturn \"Deadband\"\n\t\t\n\telif differential:\n\t\treturn \"Differential\"\n\t\t\t\n\telif integral:\n\t\treturn \"Integral\"\n\t\t\n\telif limit:\n\t\t\treturn \"Limit\"\n\telse: \n\t\treturn \"Value\"\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.Selected": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowLabel": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.StrokeWidth": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Type": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 128,
+      "width": 127
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.params.ShowLabel"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Text",
+            "color": "#808080",
+            "fontSize": 10,
+            "fontWeight": "bold",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Graphic"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.elements[0].stroke.width": {
+            "binding": {
+              "config": {
+                "path": "view.params.StrokeWidth"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[0].visibility": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Type.Deadband},\"visible\",\"hidden\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[1].stroke.width": {
+            "binding": {
+              "config": {
+                "path": "view.params.StrokeWidth"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].visibility": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Type.Deadband},\"visible\",\"hidden\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[2].stroke.width": {
+            "binding": {
+              "config": {
+                "path": "view.params.StrokeWidth"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[2].visibility": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Type.Deadband},\"visible\",\"hidden\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[3].stroke.width": {
+            "binding": {
+              "config": {
+                "path": "view.params.StrokeWidth"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[3].visibility": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Type.Deadband},\"visible\",\"hidden\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[4].visibility": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Type.Differential},\"visible\",\"hidden\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[5].visibility": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Type.Differential},\"visible\",\"hidden\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[6].visibility": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Type.Limit},\"visible\",\"hidden\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[7].visibility": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Type.Limit},\"visible\",\"hidden\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[8].visibility": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Type.Integral},\"visible\",\"hidden\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[9].visibility": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Type.Integral},\"visible\",\"hidden\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M 400 100 L 400 500 ",
+              "fill": {
+                "paint": "#000000"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M 700 300 L 100 300 ",
+              "fill": {
+                "paint": "#000000"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M 700 200 L 600 300 ",
+              "fill": {
+                "paint": "#000000"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M 100 400 L 200 300 ",
+              "fill": {
+                "paint": "#000000"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#000000"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M 100 100 L 100 500 L 700 500 L 100 500 ",
+              "fill": {
+                "paint": "#000000"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#000000",
+                "width": 4
+              },
+              "type": "path"
+            },
+            {
+              "d": "M 100 100 Q 200 450 700 500 ",
+              "fill": {
+                "paint": "#D5D5D5"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#000000",
+                "width": 4
+              },
+              "type": "path"
+            },
+            {
+              "d": "M 100 100 L 100 500 L 700 500 L 100 500 ",
+              "fill": {
+                "paint": "#000000"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#000000",
+                "width": 4
+              },
+              "type": "path"
+            },
+            {
+              "d": "M 150 450 L 300 450 L 500 150 L 650 150 ",
+              "fill": {
+                "paint": "#D5D5D5"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#000000",
+                "width": 4
+              },
+              "type": "path"
+            },
+            {
+              "d": "M 100 100 L 100 500 L 700 500 L 100 500 ",
+              "fill": {
+                "paint": "#000000"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#000000",
+                "width": 4
+              },
+              "type": "path"
+            },
+            {
+              "d": "M 650 100 L 100 500 ",
+              "fill": {
+                "paint": "#000000"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#000000",
+                "width": 4
+              },
+              "type": "path"
+            }
+          ],
+          "viewBox": "0 0 800 600"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#D5D5D5",
+        "borderColor": "#808080",
+        "borderStyle": "solid",
+        "borderWidth": 2
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

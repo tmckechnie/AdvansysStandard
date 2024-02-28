@@ -1,0 +1,147 @@
+{
+  "custom": {
+    "Interlocks": [
+      {
+        "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor/Interlock/Protective",
+        "displayOrder": 0,
+        "instancePosition": {},
+        "instanceStyle": {
+          "classes": ""
+        }
+      },
+      {
+        "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor/Interlock/Permissive",
+        "displayOrder": 1,
+        "instancePosition": {},
+        "instanceStyle": {
+          "classes": ""
+        }
+      },
+      {
+        "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor/Interlock/Operation",
+        "displayOrder": 2,
+        "instancePosition": {},
+        "instanceStyle": {
+          "classes": ""
+        }
+      },
+      {
+        "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor/Interlock/Hold",
+        "displayOrder": 3,
+        "instancePosition": {},
+        "instanceStyle": {
+          "classes": ""
+        }
+      }
+    ]
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
+  },
+  "propConfig": {
+    "custom.Interlocks": {
+      "binding": {
+        "config": {
+          "path": "view.params.TagPath"
+        },
+        "transforms": [
+          {
+            "code": "\ttags \u003d system.tag.browse(path\u003dvalue+\"/Interlock\",filter\u003d{\"typeId\":\"Standard/Primitives/Interlock Primitive\",\"tagType\":\"UdtInstance\"})\n\tinstances \u003d []\n\t\n\tfor tag in tags:\n\t\tfullPath \u003d tag[\u0027fullPath\u0027]\n\t\tfullPath \u003d str(fullPath)+\"\\Parameters.DisplayOrder\"\n\t\ttagValue \u003d system.tag.readBlocking(tagPaths\u003d[fullPath])[0].value\n\t\tdisplayOrder \u003d  tagValue\n\t\tif \u0027Interlocked\u0027 not in tag[\u0027name\u0027]:\n\t\t\tinstance \u003d {\n\t\t\t\t\t\t\t  \"instanceStyle\": {\n\t\t\t\t\t\t\t\t\"classes\": \"\"\n\t\t\t\t\t\t\t  },\n\t\t\t\t\t\t\t  \"instancePosition\": {},\n\t\t\t\t\t\t\t  \"TagPath\": tag[\u0027fullPath\u0027],\n\t\t\t\t\t\t\t  \"displayOrder\":displayOrder\n\t\t\t\t\t\t\t}\n\t\t\tinstances.append(instance)\n\tinstancesSorted \u003d sorted(instances,key\u003dlambda row: row[\u0027displayOrder\u0027],reverse\u003dFalse)\n\treturn instancesSorted",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 256,
+      "width": 383
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px",
+              "shrink": 0
+            },
+            "props": {
+              "params": {
+                "Title": "Interlocks"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "InterlockStatusRepeater"
+            },
+            "position": {
+              "basis": "120px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.instances": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Interlocks"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "direction": "column",
+              "elementPosition": {
+                "basis": "30px",
+                "grow": 0
+              },
+              "elementStyle": {
+                "margin": 5
+              },
+              "path": "Standard/Components/Faceplates/Interlocks/InterlockRow",
+              "style": {
+                "classes": "Standard/Popups/Content"
+              },
+              "useDefaultViewHeight": false,
+              "useDefaultViewWidth": false
+            },
+            "type": "ia.display.flex-repeater"
+          }
+        ],
+        "meta": {
+          "name": "Interlocks"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

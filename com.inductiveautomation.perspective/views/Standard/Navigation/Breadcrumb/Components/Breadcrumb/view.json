@@ -1,0 +1,357 @@
+{
+  "custom": {},
+  "params": {
+    "BreadcrumbPosition": 1,
+    "ChildrenCount": 2,
+    "ContentTypes": [
+      {
+        "contentType": "Overview",
+        "label": "Overview",
+        "order": 0
+      }
+    ],
+    "Label": "Standard",
+    "ModelItem": {
+      "ModelItemTagPath": "[StandardS71500]Standard/Model Item",
+      "Path": "0",
+      "TagFolderName": "Standard",
+      "ViewPaths": [
+        {
+          "ContentType": [
+            "Overview"
+          ],
+          "Label": "Overview",
+          "Order": 0,
+          "PagePath": "",
+          "Roles": [],
+          "ViewPath": "*Overview/Overview",
+          "key": "kNew0"
+        }
+      ]
+    },
+    "StyleClasses": {
+      "Base": "Standard/Popups/Navigation/BreadCrumb/Palette01",
+      "Current": "Standard/Popups/Navigation/BreadCrumb/Palette01",
+      "Next": ""
+    }
+  },
+  "propConfig": {
+    "params.BreadcrumbPosition": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ChildrenCount": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ModelItem": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.StyleClasses": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 70,
+      "width": 200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Breadcrumb",
+          "tooltip": {
+            "enabled": true,
+            "text": "none"
+          }
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "custom.styleClassesBase": {
+            "binding": {
+              "config": {
+                "path": "view.params.StyleClasses.Base"
+              },
+              "type": "property"
+            }
+          },
+          "custom.styleClassesCurrent": {
+            "binding": {
+              "config": {
+                "path": "view.params.StyleClasses.Current"
+              },
+              "type": "property"
+            }
+          },
+          "custom.styleClassesNext": {
+            "binding": {
+              "config": {
+                "path": "view.params.StyleClasses.Next"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[0].elements[0].elements[0].style.classes": {
+            "binding": {
+              "config": {
+                "path": "this.custom.styleClassesNext"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[0].elements[0].elements[1].style.classes": {
+            "binding": {
+              "config": {
+                "path": "this.custom.styleClassesNext"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[0].elements[0].elements[2].style.classes": {
+            "binding": {
+              "config": {
+                "path": "this.custom.styleClassesBase"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[0].elements[0].elements[3].style.classes": {
+            "binding": {
+              "config": {
+                "path": "this.custom.styleClassesCurrent"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "d": "m 210.96808,164.09938 7.43416,0.0571 0,11.12891 z",
+                      "fill": {
+                        "opacity": 1
+                      },
+                      "name": "next",
+                      "stroke": {
+                        "dasharray": "none",
+                        "dashoffset": "0",
+                        "linecap": "butt",
+                        "miterlimit": "4",
+                        "opacity": 1,
+                        "width": 0.3
+                      },
+                      "style": {
+                        "display": "inline"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "m 218.40224,171.92958 -1.5e-4,11.71662 -7.43401,-0.0582 z",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "nextTip",
+                      "stroke": {
+                        "dasharray": "none",
+                        "dashoffset": "0",
+                        "linecap": "butt",
+                        "miterlimit": "4",
+                        "opacity": 1,
+                        "width": 0.3
+                      },
+                      "style": {
+                        "display": "inline"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "m 168.84116,164.1481 7.43416,9.65056 -7.38097,9.8762 z",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "base",
+                      "stroke": {
+                        "dasharray": "none",
+                        "dashoffset": "0",
+                        "linecap": "butt",
+                        "miterlimit": "4",
+                        "opacity": 1,
+                        "width": 1
+                      },
+                      "style": {
+                        "display": "inline"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "m 174.00295,173.65576 -5.16179,-9.50766 44.60497,-0.0487 4.95611,9.78774 -4.95611,9.70909 -44.56982,0.0787 z",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "current",
+                      "stroke": {
+                        "dasharray": "none",
+                        "dashoffset": "0",
+                        "linecap": "butt",
+                        "miterlimit": "4",
+                        "opacity": 1,
+                        "width": 0
+                      },
+                      "style": {
+                        "display": "inline"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "fill": {
+                    "opacity": "1",
+                    "paint": "#00000000"
+                  },
+                  "name": "g1758",
+                  "stroke": {
+                    "dasharray": "none",
+                    "miterlimit": "4",
+                    "opacity": "0.48583",
+                    "paint": "#00000000",
+                    "width": "0.131623"
+                  },
+                  "style": {
+                    "display": "inline"
+                  },
+                  "transform": "matrix(4.0354242,0,0,3.5758961,-739.22667,-357.77674)",
+                  "type": "group"
+                }
+              ],
+              "name": "layer1",
+              "transform": "translate(57.88097,-229.02559)",
+              "type": "group"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 200.50045 70.000135"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Alarm Summary"
+        },
+        "position": {
+          "height": 0.2286,
+          "width": 0.51,
+          "x": 0.18,
+          "y": 0.7714
+        },
+        "propConfig": {
+          "meta.visible": {
+            "persistent": false
+          },
+          "props.params.AlarmSummaryTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.ModelItem.ModelItemTagPath}+\"/Alarm Summary\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Components/Alarms/Alarm Summary Symbols"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 1,
+          "width": 0.5,
+          "x": 0.25
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Docked/Header/Text"
+          },
+          "textStyle": {
+            "overflowWrap": "normal"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\t#system.perspective.print(\"Breadcrump - Opening Popup..\")\n\tmodelItem \u003d self.view.params.ModelItem\n\tchildrenCount \u003d self.view.params.ChildrenCount\n\tcontentTypes \u003d self.view.params.ContentTypes\n\tbreadcrumbPosition \u003d  self.view.params.BreadcrumbPosition\n\t\n\n\t#Position Calculation\n\t#system.perspective.print(\"Breadcrump - Opening Popup..Position Calculation..\")\n\tcurrentScreenHeight \u003d self.page.props.dimensions.screen.height\n\tcurrentScreenWidth \u003d self.page.props.dimensions.screen.width\n\tcurrentScreen \u003d {\"height\":currentScreenHeight,\"width\":currentScreenWidth}\n\ttop \u003d 50\n\twidth \u003d 200 #currentScreen[\"width\"]/self.view.params.totalCrumbs\n\theight \u003d 70 * (childrenCount + len(contentTypes))\n\n\t#If Screen Width is too small then only current breadcrumb is displayed -- Therefore position \u003d 1\n\t#Width limit must be same as limit from Standard.Navigation.BreadCrumb.GetCurrentBreadCrumbItems(CurrentModelFolderPath,items\u003d[],currentScreenWidth \u003d 10000)\n#\tif currentScreenWidth \u003c\u003d 600:\t\n#\t\tbreadcrumbPosition \u003d 1\n\t\t\n\t#If Screen width too small then header becomes stacked and top must move down.\n\t#Width limit must be same as limit on basis binding on Standard/Framework/Overview/Overview Column and the setpoints on the overview column container (Navigation/Overview Column)\n\tif currentScreenWidth \u003c\u003d 996:\n\t\ttop \u003d 100\n\t\n\t#If Screen height too small then make popup equal to height available\n\tif (height + top) \u003e\u003d  currentScreenHeight:\n\t\theight \u003d currentScreenHeight - top\t\n\t\t\n\tleft \u003d width * breadcrumbPosition - 20 # 20px is the width of the arrow head\n\tif (currentScreenWidth - left) \u003c width:\n\t\tleft \u003d currentScreenWidth - width\n\t\t\n\t#Popup Details\n\t#system.perspective.print(\"Breadcrump - Opening Popup..Position Calculation..Popup Details..\")\n\tid \u003d \"breadcrumbpopup\"\n\tview \u003d \"Standard/Navigation/Breadcrumb/Components/Popup\"\t\n\t\t\n\tposition \u003d {\"top\":top,\"left\":left,\"height\":height,\"width\":width}\n\tshowCloseIcon \u003d False\n\tdraggable \u003d False\n\tresizable \u003d False\n\tmodal \u003d True\n\toverlayDismiss \u003d True\n\tparams \u003d {\"ModelItem\":modelItem,\"ContentTypes\":contentTypes,\"BreadcrumbPosition\":breadcrumbPosition}\n\t\t\n\tsystem.perspective.openPopup(id \u003d id,view \u003d view,params \u003d params,position\u003dposition,showCloseIcon \u003d showCloseIcon,draggable \u003d draggable,resizable \u003d resizable,modal \u003d modal,overlayDismiss \u003d overlayDismiss)\n\t\n\t\n\n\t\n\t\n\t"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "enabled": true
+      }
+    },
+    "position": {
+      "x": 0.12,
+      "y": 0.1867
+    },
+    "propConfig": {
+      "meta.tooltip.text": {
+        "binding": {
+          "config": {
+            "path": "view.params.ModelItem.ModelItemTagPath"
+          },
+          "transforms": [
+            {
+              "expression": "{value} + \" Pos:[\"+tostr({view.params.BreadcrumbPosition})+\"] CC:[\" + tostr({view.params.ChildrenCount})+\"]\"",
+              "type": "expression"
+            }
+          ],
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "backgroundColor": ""
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

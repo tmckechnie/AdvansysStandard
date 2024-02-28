@@ -1,0 +1,203 @@
+{
+  "custom": {
+    "PathToFolder": "Standard/Control Modules/AnalogInput",
+    "RootFolder": "Standard",
+    "currentView": "Home"
+  },
+  "params": {
+    "ModulePath": "Control Modules/AnalogInput",
+    "TagPath": "[StandardS71500]Modules/Control Modules/100AI100"
+  },
+  "propConfig": {
+    "custom.PathToFolder": {
+      "binding": {
+        "config": {
+          "expression": "{view.custom.RootFolder} + \"/\" + {view.params.ModulePath}"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.RootFolder": {
+      "persistent": true
+    },
+    "custom.currentView": {
+      "persistent": true
+    },
+    "params.ModulePath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 600,
+      "width": 450
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "50px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.ModulePath"
+              },
+              "enabled": false,
+              "type": "property"
+            }
+          },
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "path": "view.params.TagPath"
+              },
+              "type": "property"
+            }
+          },
+          "props.path": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.PathToFolder}+\"/Faceplates/Components/Header\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Navigation"
+            },
+            "position": {
+              "basis": "50px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.params.CurrentView": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.currentView"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.TagPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "InterlockEnabled": false
+              },
+              "path": "Standard/Components/Faceplates/Navigation",
+              "style": {
+                "margin": 5
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EmbeddedView"
+            },
+            "position": {
+              "basis": "380px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.params.PathToFolder": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.PathToFolder}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.TagPath"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.path": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.PathToFolder} + \"/Faceplates/Components/\" + {view.custom.currentView}"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tcurrentView \u003d self.view.custom.currentView\n\tsharedComponentsPath \u003d \"Standard/Components/Faceplates\"\n\tif \"Alarms\" \u003d\u003d currentView:\n\t\treturn sharedComponentsPath + \"/Alarms/AlarmList\"\n\telif \"Interlock\" \u003d\u003d currentView:\n\t\treturn sharedComponentsPath + \"/Interlocks/InterlockList\"\n\telif \"Info\" \u003d\u003d currentView:\n\t\treturn sharedComponentsPath + \"/Info\"\n\telif \"Diagnostic\" \u003d\u003d currentView:\n\t\treturn sharedComponentsPath + \"/Diagnostics\"\n\telse:\n\t\treturn value\n\t\t\n\t\t",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "borderBottomLeftRadius": 0,
+                "borderBottomRightRadius": 0,
+                "borderBottomStyle": "solid",
+                "borderBottomWidth": "0px",
+                "borderLeftStyle": "solid",
+                "borderLeftWidth": "0px",
+                "borderRightStyle": "solid",
+                "borderRightWidth": "0px",
+                "borderTopLeftRadius": 0,
+                "borderTopRightRadius": 0,
+                "borderTopStyle": "hidden",
+                "borderTopWidth": "0px",
+                "margin": 5,
+                "overflow": "auto"
+              }
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Body"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Popups/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

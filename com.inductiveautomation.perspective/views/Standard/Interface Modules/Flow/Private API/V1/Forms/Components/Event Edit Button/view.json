@@ -1,0 +1,370 @@
+{
+  "custom": {},
+  "params": {
+    "editable": {
+      "Equipment": {
+        "enumGroup": "Filler State Reasons",
+        "name": "Equipment",
+        "type": "Dropdown"
+      },
+      "Reason": {
+        "enumGroup": "Filler State Reasons",
+        "name": "Reason",
+        "type": "Dropdown"
+      }
+    },
+    "enumerationGroup": {
+      "pid40": {
+        "enumerationFilterOrder": [
+          "Conveyor"
+        ],
+        "enumerationGroup": [
+          {
+            "Conveyor": "Slew Conveyor"
+          },
+          {
+            "Conveyor": "Waste Conveyor"
+          },
+          {
+            "Conveyor": "DC 1"
+          },
+          {
+            "Conveyor": "Sacrificial Conveyor"
+          },
+          {
+            "Conveyor": "SC 1"
+          }
+        ]
+      },
+      "pid41": {
+        "enumerationFilterOrder": [
+          "Shift"
+        ],
+        "enumerationGroup": [
+          {
+            "Shift": "Afternoon"
+          },
+          {
+            "Shift": "Morning"
+          },
+          {
+            "Shift": "Night"
+          }
+        ]
+      },
+      "pid42": {
+        "enumerationFilterOrder": [
+          "Object Type",
+          "Failure Mode",
+          "Cause"
+        ],
+        "enumerationGroup": [
+          {
+            "Cause": "Spillage",
+            "FailureMode": "Cleaning",
+            "ObjectType": "Feeder"
+          },
+          {
+            "ObjectType": "Magnet"
+          },
+          {
+            "Cause": "Tramp Metal",
+            "FailureMode": "Clean",
+            "ObjectType": "Magnet"
+          },
+          {
+            "Cause": "Loose Bolts",
+            "FailureMode": "Cracked",
+            "ObjectType": "Feeder"
+          },
+          {
+            "Cause": "Big Rocks",
+            "FailureMode": "Blockage",
+            "ObjectType": "Feeder"
+          },
+          {
+            "Cause": "Damage",
+            "FailureMode": "Damaged",
+            "ObjectType": "Tip"
+          },
+          {
+            "ObjectType": "Tip"
+          },
+          {
+            "ObjectType": "Pullswitch"
+          },
+          {
+            "Cause": "Rain",
+            "FailureMode": "Stopped",
+            "ObjectType": "Conveyor"
+          },
+          {
+            "ObjectType": "Gearbox"
+          },
+          {
+            "Cause": "Metal Object",
+            "FailureMode": "Torn",
+            "ObjectType": "Belting"
+          },
+          {
+            "ObjectType": "Electrical"
+          },
+          {
+            "Cause": "Rock",
+            "FailureMode": "Pulled",
+            "ObjectType": "Pullswitch"
+          },
+          {
+            "ObjectType": "Isolated"
+          },
+          {
+            "Cause": "Stripped",
+            "FailureMode": "Gears",
+            "ObjectType": "Gearbox"
+          },
+          {
+            "Cause": "Big Rocks",
+            "FailureMode": "Blockage",
+            "ObjectType": "Tip"
+          },
+          {
+            "ObjectType": "Chute"
+          },
+          {
+            "ObjectType": "Conveyor"
+          },
+          {
+            "Cause": "Big Rocks",
+            "FailureMode": "Blocked",
+            "ObjectType": "Chute"
+          },
+          {
+            "Cause": "Damaged",
+            "FailureMode": "Skirting",
+            "ObjectType": "Tip"
+          },
+          {
+            "ObjectType": "Belting"
+          },
+          {
+            "ObjectType": "Feeder"
+          },
+          {
+            "Cause": "Loose rele",
+            "FailureMode": "Tripped",
+            "ObjectType": "Electrical"
+          },
+          {
+            "Cause": "Maintenance",
+            "FailureMode": "Isolated",
+            "ObjectType": "Isolated"
+          },
+          {
+            "Cause": "Minisub",
+            "FailureMode": "Tripped",
+            "ObjectType": "Electrical"
+          }
+        ]
+      },
+      "pid45": {
+        "enumerationFilterOrder": [
+          "Description"
+        ],
+        "enumerationGroup": []
+      }
+    },
+    "rowData": {
+      "Mode": {
+        "displayOrder": 1,
+        "eventAttributeID": 235,
+        "pending": false,
+        "preferred": true,
+        "quality": 192,
+        "readOnly": false,
+        "title": "Mode",
+        "value": "Maintenance",
+        "version": 2,
+        "versionType": "manual"
+      },
+      "WorkOrder": {
+        "displayOrder": 2,
+        "eventAttributeID": 234,
+        "pending": false,
+        "preferred": true,
+        "quality": 192,
+        "readOnly": false,
+        "title": "Work Order",
+        "value": "None12",
+        "version": 2,
+        "versionType": "manual"
+      },
+      "edit": {
+        "value": true
+      },
+      "eventPeriodID": {
+        "value": 28521
+      },
+      "eventSchemeID": {
+        "value": 45
+      },
+      "formGroup": {
+        "value": "Production"
+      },
+      "index": {
+        "value": 68
+      },
+      "periodEnd": {
+        "value": "2021-11-03T12:54:57.922Z"
+      },
+      "periodEndFormated": {
+        "displayOrder": -1,
+        "title": "Period End",
+        "value": "2021-11-03 14:54:57"
+      },
+      "periodStart": {
+        "value": "2021-11-03T12:00:00Z"
+      },
+      "periodStartFormated": {
+        "displayOrder": -2,
+        "title": "Period Start",
+        "value": "2021-11-03 14:00:00"
+      }
+    }
+  },
+  "propConfig": {
+    "params.editable": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.enumerationGroup": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.rowData": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 25,
+      "width": 45
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "draggable": true,
+                "id": "EventEditorPopup",
+                "modal": false,
+                "overlayDismiss": false,
+                "resizable": true,
+                "showCloseIcon": true,
+                "type": "open",
+                "viewParams": {
+                  "editable": "{view.params.editable}",
+                  "enumerationGroup": "{view.params.enumerationGroup}",
+                  "rowData": "{view.params.rowData}"
+                },
+                "viewPath": "Flow/Private API/V1/Forms/Components/Event Editor",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Event Edit Button"
+        },
+        "position": {
+          "basis": "20px",
+          "grow": 1
+        },
+        "props": {
+          "image": {
+            "height": 20,
+            "icon": {
+              "path": "material/edit"
+            },
+            "width": 20
+          },
+          "style": {
+            "classes": "Flow/defaultButton",
+            "margin": 3
+          },
+          "text": ""
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "draggable": true,
+                "id": "EventSpitEditorPopup",
+                "modal": false,
+                "overlayDismiss": false,
+                "resizable": true,
+                "showCloseIcon": true,
+                "type": "open",
+                "viewParams": {
+                  "rowData": "{view.params.rowData}",
+                  "tilte": "Split Event"
+                },
+                "viewPath": "Flow/Private API/V1/Forms/Components/Event Spit Editor",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Event Edit Button Split"
+        },
+        "position": {
+          "basis": "20px",
+          "grow": 1
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.rowData.periodEndFormated.value}!\u003d\u0027\u0027"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "image": {
+            "height": 20,
+            "icon": {
+              "path": "material/call_split"
+            },
+            "width": 20
+          },
+          "style": {
+            "classes": "Flow/defaultButton",
+            "margin": 3
+          },
+          "text": ""
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "justify": "space-evenly"
+    },
+    "type": "ia.container.flex"
+  }
+}

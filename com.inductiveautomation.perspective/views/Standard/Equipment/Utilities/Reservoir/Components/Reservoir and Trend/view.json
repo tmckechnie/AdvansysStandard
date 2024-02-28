@@ -1,0 +1,78 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[TPPSCV01003]Utilities/Water/Fire Water Dam/DAM001/Reservoir"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 215,
+      "width": 224
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Reservoir"
+        },
+        "position": {
+          "height": 0.967,
+          "width": 0.884
+        },
+        "props": {
+          "params": {
+            "LabelText": null,
+            "Style": {
+              "classes": "Standard/Body/Statics/Stroke Standard/Body/Statics/Fill",
+              "vector-effect": "non-scaling-stroke"
+            }
+          },
+          "path": "Standard/Statics/Reservoir"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Trends"
+        },
+        "position": {
+          "height": 0.7619,
+          "width": 0.955,
+          "x": 0.0321,
+          "y": 0.1438
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "path": "view.params.TagPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Equipment/Utilities/Reservoir/Components/Trends"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "backgroundColor": "#FFFFFF00",
+        "classes": "Standard/Body/Statics/Background"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

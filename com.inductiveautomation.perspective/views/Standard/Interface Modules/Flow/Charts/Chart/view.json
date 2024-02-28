@@ -1,0 +1,102 @@
+{
+  "custom": {
+    "WebPath": "http://IGN01VS2:8000",
+    "periodstring": "",
+    "url": "http://IGN01VS2:8000/charts/3?toolbar\u003dno"
+  },
+  "params": {
+    "ChartID": 3,
+    "ConnectionTagPath": "[TPROM]ROM/System/Flow Connection",
+    "Period": {
+      "End": "",
+      "Start": ""
+    }
+  },
+  "propConfig": {
+    "custom.WebPath": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "ConnectionTagPath": "{view.params.ConnectionTagPath}"
+          },
+          "tagPath": "{ConnectionTagPath}/WebPath"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.periodstring": {
+      "binding": {
+        "config": {
+          "path": "view.params.Period"
+        },
+        "transforms": [
+          {
+            "code": "\tperiodStart \u003d value[\u0027Start\u0027]\n\tperiodEnd \u003d value[\u0027End\u0027]\n\n\tif len(str(periodEnd))\u003d\u003d0:\n\t\treturn \"\"\n\n\tif len(str(periodStart))\u003d\u003d0:\n\t\ttimestamp \u003d Standard.InterfaceModules.Flow.Common.GetUTCFormattedTime(LocalTimestamp\u003dperiodEnd)\n\t\treturn \"timestamp\u003d\" + timestamp\n\t\t\n\tperiodStartFormatted \u003d Standard.InterfaceModules.Flow.Common.GetUTCFormattedTime(LocalTimestamp\u003dperiodStart)\n\tperiodEndFormatted \u003d Standard.InterfaceModules.Flow.Common.GetUTCFormattedTime(LocalTimestamp\u003dperiodEnd)\n\treturn \"periodStart\u003d\"+periodStartFormatted+\"\u0026periodEnd\u003d\" + periodEndFormatted\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.url": {
+      "binding": {
+        "config": {
+          "expression": "{view.custom.WebPath}+\"/charts/\"+{view.params.ChartID}+\"?toolbar\u003dno\" + if({view.custom.periodstring}\u003d\"\",\"\",\"\u0026\"+{view.custom.periodstring})"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.ChartID": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ConnectionTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Period": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "IFrame"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.src": {
+            "binding": {
+              "config": {
+                "path": "view.custom.url"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "allowFullScreen": true
+        },
+        "type": "ia.display.iframe"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalOutput"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 489,
+      "width": 330
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Value"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Format": "",
+            "Label": "Value",
+            "ShowLabel": true,
+            "ShowUnits": false,
+            "Units": ""
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "LabelActive"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Format": "",
+            "Label": "Label Active",
+            "ShowLabel": true,
+            "ShowUnits": false,
+            "Units": ""
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "LabelPassive"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Format": "",
+            "Label": "Label Passive",
+            "ShowLabel": true,
+            "ShowUnits": false,
+            "Units": ""
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DelayOnElapsed"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\".Documentation\""
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Units": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\".EngUnit\""
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Format": "",
+            "ShowLabel": true,
+            "ShowUnits": true
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "DelayOffElapsed"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\".Documentation\""
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Units": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}+\".EngUnit\""
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Sts/\"+{this.meta.name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Format": "",
+            "ShowLabel": true,
+            "ShowUnits": true
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

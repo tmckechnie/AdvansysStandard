@@ -1,0 +1,10 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--AlarmHigh)",
+      "color": "var(--AlarmTextDark)",
+      "fontSize": "10px",
+      "fontStyle": "italic"
+    }
+  }
+}

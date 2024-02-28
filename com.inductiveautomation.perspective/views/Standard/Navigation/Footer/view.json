@@ -1,0 +1,277 @@
+{
+  "custom": {
+    "CurrentModelItemTagPath": {
+      "ContentType": "",
+      "ModelItemTagPath": "[TPROM]ROM/Model Item",
+      "SearchModule": "100M005"
+    },
+    "ViewPathArray": [
+      {
+        "ContentType": [
+          "Overview"
+        ],
+        "Label": "Overview",
+        "Order": 0,
+        "PagePath": "",
+        "Roles": [],
+        "ViewPath": "*Overview/Overview",
+        "key": "k0"
+      },
+      {
+        "ContentType": [
+          "Dashboard"
+        ],
+        "Label": "Dashboard",
+        "Order": 1,
+        "PagePath": "",
+        "Roles": [],
+        "ViewPath": "*Dashboard/Dashboard",
+        "key": "k1"
+      },
+      {
+        "ContentType": [
+          "Sequence"
+        ],
+        "Label": "Sequence",
+        "Order": 2,
+        "PagePath": "",
+        "Roles": [],
+        "ViewPath": "*Sequence/Sequence",
+        "key": "k2"
+      },
+      {
+        "ContentType": [
+          "Footer Alarms"
+        ],
+        "Label": "Alarms",
+        "Order": 3,
+        "PagePath": "",
+        "Roles": [],
+        "ViewPath": "*Alarms/Alarms",
+        "key": "k3"
+      },
+      {
+        "ContentType": [
+          "Header Status"
+        ],
+        "Label": "Plant Status",
+        "Order": 0,
+        "PagePath": "",
+        "Roles": [],
+        "ViewPath": "*Header/Status",
+        "key": "k4"
+      }
+    ],
+    "contentTypes": [
+      {
+        "contentType": "Footer Alarms",
+        "label": "Alarms",
+        "order": 3
+      }
+    ]
+  },
+  "params": {
+    "AllowedContentTypes": [
+      "Footer Alarms",
+      "Footer Trend",
+      "Footer Setpoints"
+    ]
+  },
+  "propConfig": {
+    "custom.CurrentModelItemTagPath": {
+      "binding": {
+        "config": {
+          "expression": "runScript(\"Standard.Navigation.Common.GetCurrentModelItemTagPath\",0,{session.custom.CurrentModelItemTagPaths},{session.custom.UseSessionModelItemTagPath},{page.props.pageId})"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.ViewPathArray": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "CurrentModelItemTagPath": "{view.custom.CurrentModelItemTagPath.ModelItemTagPath}"
+          },
+          "tagPath": "{CurrentModelItemTagPath}/ViewPaths[\u0027ViewPathArray\u0027]"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.contentTypes": {
+      "binding": {
+        "config": {
+          "struct": {
+            "allowedContentTypes": "{view.params.AllowedContentTypes}",
+            "viewPaths": "{view.custom.ViewPathArray}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tallowedContentTypes \u003d value[\u0027allowedContentTypes\u0027]\n\tviewPaths \u003d value[\u0027viewPaths\u0027]\n\t#contentTypes \u003d Standard.Navigation.Common.GetContentTypes(ModelItemTagPath\u003dcurrentModelItemTagPath,GetOnlyConfiguredContentTypes\u003dTrue,AllowedContentTypes\u003dallowedContentTypes)\n\tcontentTypes \u003d Standard.Navigation.Common.GetContentTypes(ViewPaths\u003dviewPaths,GetOnlyConfiguredContentTypes\u003dTrue,AllowedContentTypes\u003dallowedContentTypes)\n\treturn contentTypes",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.AllowedContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1000,
+      "width": 1920
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Previous Button"
+            },
+            "position": {
+              "basis": "100px"
+            },
+            "props": {
+              "path": "Standard/Navigation/Footer Components/Previous Button"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Placeholder"
+            },
+            "position": {
+              "basis": "50px",
+              "grow": 1
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Toolbar"
+            },
+            "position": {
+              "basis": "150px"
+            },
+            "props": {
+              "path": "Standard/Navigation/Footer Components/Toolbar"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "40px",
+          "shrink": 0
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Content Container"
+            },
+            "propConfig": {
+              "position.tabIndex": {
+                "binding": {
+                  "config": {
+                    "path": "parent.props.currentTabIndex"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.params.ContentType": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.contentTypes}[{parent.props.currentTabIndex}][\u0027contentType\u0027]"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Exists": true
+              },
+              "path": "Standard/Navigation/Components/Content Container"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "TabContainer"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "len({this.props.tabs})\u003e0"
+              },
+              "type": "expr"
+            }
+          },
+          "props.tabs": {
+            "binding": {
+              "config": {
+                "path": "view.custom.contentTypes"
+              },
+              "transforms": [
+                {
+                  "code": "\ttabs \u003d []\n\tfor contentType in value:\n\t\t\ttab \u003d contentType[\u0027label\u0027]\n\t\t\ttabs.append(tab)\n\treturn tabs",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "contentStyle": {
+            "classes": "Standard/Docked/Footer/ContentBackground Standard/Docked/Footer/ContentBorder Standard/Docked/Footer/ContentText"
+          },
+          "menuType": "modern",
+          "tabStyle": {
+            "active": {
+              "classes": "Standard/Docked/Footer/ContentBackground Standard/Docked/Footer/ContentBorder Standard/Docked/Footer/ContentText",
+              "fontWeight": "bolder"
+            },
+            "inactive": {
+              "classes": "Standard/Docked/Footer/ContentBackground Standard/Docked/Footer/ContentBorder Standard/Docked/Footer/ContentText",
+              "fontWeight": "lighter"
+            }
+          }
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignContent": "flex-end",
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Docked/Footer/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

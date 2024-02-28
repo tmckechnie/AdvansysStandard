@@ -1,0 +1,10 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--bodyDisplayBackground)",
+      "borderColor": "var(--bodyDisplayBorder)",
+      "borderStyle": "solid",
+      "borderWidth": "2px"
+    }
+  }
+}

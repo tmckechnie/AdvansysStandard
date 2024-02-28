@@ -1,0 +1,145 @@
+{
+  "custom": {
+    "ValueString": "Devolopment"
+  },
+  "params": {
+    "Cfg": {
+      "LabelRatio": 0.6,
+      "LabelStyle": {
+        "classes": "Standard/Body/Symbols/Text Standard/Body/Symbols/Displays/Container",
+        "padding": 4,
+        "textAlign": "left"
+      },
+      "ShowEngUnits": true,
+      "ShowLabel": true,
+      "ValueStyle": {
+        "classes": "Standard/Body/Symbols/Text Standard/Body/Symbols/Displays/Container",
+        "padding": 4,
+        "textAlign": "right"
+      }
+    },
+    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/100G001/Cfg/Source"
+  },
+  "propConfig": {
+    "custom.ValueString": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/ValueString"
+        },
+        "transforms": [
+          {
+            "expression": "if(qualityOf({value})\u003d\"Bad_Disabled\",\"\",{value})",
+            "type": "expression"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.label": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Value.Documentation"
+        },
+        "type": "tag"
+      }
+    },
+    "params.Cfg": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 32,
+      "width": 500
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Standard/Primitives/Parameter"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "grow": 5,
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.style": {
+            "binding": {
+              "config": {
+                "path": "view.params.Cfg.LabelStyle"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Value"
+        },
+        "position": {
+          "grow": 5,
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.style": {
+            "binding": {
+              "config": {
+                "path": "view.params.Cfg.ValueStyle"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.ValueString"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

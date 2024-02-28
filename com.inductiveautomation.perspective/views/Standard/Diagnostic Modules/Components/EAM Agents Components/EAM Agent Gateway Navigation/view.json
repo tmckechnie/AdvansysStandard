@@ -1,0 +1,55 @@
+{
+  "custom": {},
+  "params": {
+    "GatewayURL": "https://csaznflwpfgw01.internal.ccbagroup.com:8044/web/home?2"
+  },
+  "propConfig": {
+    "params.GatewayURL": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 150
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "newTab": true,
+                "url": "{view.params.GatewayURL}"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "name": "Gateway Navigation"
+        },
+        "position": {
+          "basis": "75px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "text": "Open Gateway",
+          "textStyle": {
+            "fontSize": "12px"
+          }
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

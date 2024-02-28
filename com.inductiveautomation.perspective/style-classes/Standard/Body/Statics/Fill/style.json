@@ -1,0 +1,8 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--bodyContentBackground)",
+      "fill": "var(--bodyContentBackground)"
+    }
+  }
+}

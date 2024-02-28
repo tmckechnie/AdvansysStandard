@@ -1,0 +1,80 @@
+{
+  "custom": {},
+  "params": {
+    "Units": "s",
+    "Value": 0
+  },
+  "propConfig": {
+    "params.Units": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Value": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 15,
+      "width": 15
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "bind",
+          "param": "Value",
+          "type": "Application/Control Modules/Motor"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Icon",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "25px",
+          "grow": 1
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Value} + \" \" + {view.params.Units}"
+              },
+              "type": "expr"
+            }
+          },
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Value}\u003e0"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "path": "material/access_time"
+        },
+        "type": "ia.display.icon"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "Standard/Body/Symbols/SVG/Basic Standard/Body/Symbols/SVG/Fill/Active",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

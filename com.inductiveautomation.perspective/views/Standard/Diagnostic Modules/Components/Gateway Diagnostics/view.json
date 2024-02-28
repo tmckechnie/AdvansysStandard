@@ -1,0 +1,241 @@
+{
+  "custom": {},
+  "params": {
+    "GatewayDiagnosticTagPath": "[Standard]System/Diagnostics/Gateway/Diagnostics"
+  },
+  "propConfig": {
+    "params.GatewayDiagnosticTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 381,
+      "width": 400
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "GatewayDiagnosticTagPath",
+          "type": "Diagnostics/Gateway Diagnostics"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "label": "Gateway Diagnostics"
+          },
+          "path": "Standard/Components/Views/Header/Header"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Perspective Sessions"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "GatewayDiagnosticTagPath": "{view.params.GatewayDiagnosticTagPath}"
+                },
+                "tagPath": "{GatewayDiagnosticTagPath}/Current Sessions"
+              },
+              "transforms": [
+                {
+                  "expression": "if(isGood({value}),{value},\"Gateway Unavailable\")",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Sessions"
+          },
+          "path": "Standard/Components/Views/Status/LabelDisplayLabel"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Gateway System Name"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "GatewayDiagnosticTagPath": "{view.params.GatewayDiagnosticTagPath}"
+                },
+                "tagPath": "{GatewayDiagnosticTagPath}/System Name"
+              },
+              "transforms": [
+                {
+                  "expression": "if(isGood({value}),{value},\"Gateway Unavailable\")",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "System Name",
+            "Severity": 3
+          },
+          "path": "Standard/Components/Views/Status/LabelDisplayLabel"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Alarming Detail"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "../Gateway System Name.props.params.Value"
+              },
+              "enabled": false,
+              "transforms": [
+                {
+                  "fallback": true,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "Gateway Unavailable",
+                      "output": false
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.params.Instances": {
+            "binding": {
+              "config": {
+                "path": "view.params.GatewayDiagnosticTagPath"
+              },
+              "transforms": [
+                {
+                  "code": "\tDiagnosticsTagPath \u003d value + \"/Alarming\"\n\tdiagnosticTagsArray \u003d system.tag.browse(DiagnosticsTagPath)\n\tinstances \u003d []\n\tfor diagnosticTag in diagnosticTagsArray:\n\t\tinstanceObject \u003d {}\n\t\tTagPath \u003d diagnosticTag[\"fullPath\"]\n\t\tLabel \u003d diagnosticTag[\"name\"]\n\t\tinstanceObject[\"TagPath\"] \u003d TagPath\n\t\tinstanceObject[\"Label\"] \u003d Label\n\t\tinstanceObject[\"ShowUnits\"] \u003d False\n\t\tinstances.append(instanceObject)\n\t\t\t\n\treturn instances",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "HeaderLabel": "Alarms",
+            "RepeaterViewPath": "Standard/Components/Views/Tag Status/LabelDisplayLabel"
+          },
+          "path": "Standard/Components/Views/Details Card"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Performance Detail"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "../Gateway System Name.props.params.Value"
+              },
+              "enabled": false,
+              "transforms": [
+                {
+                  "fallback": true,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "Gateway Unavailable",
+                      "output": false
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.params.Instances": {
+            "binding": {
+              "config": {
+                "path": "view.params.GatewayDiagnosticTagPath"
+              },
+              "transforms": [
+                {
+                  "code": "\tDiagnosticsTagPath \u003d value + \"/Performance\"\n\tdiagnosticTagsArray \u003d system.tag.browse(DiagnosticsTagPath)\n\tinstances \u003d []\n\tfor diagnosticTag in diagnosticTagsArray:\n\t\tinstanceObject \u003d {}\n\t\tTagPath \u003d diagnosticTag[\"fullPath\"]\n\t\tLabel \u003d diagnosticTag[\"name\"]\n\t\tinstanceObject[\"TagPath\"] \u003d TagPath\n\t\tinstanceObject[\"Label\"] \u003d Label\n\t\tinstanceObject[\"ShowUnits\"] \u003d True\n\t\tinstances.append(instanceObject)\n\t\t\t\n\treturn instances",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "HeaderLabel": "Performance",
+            "RepeaterViewPath": "Standard/Components/Views/Tag Status/LabelDisplayLabel"
+          },
+          "path": "Standard/Components/Views/Details Card"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

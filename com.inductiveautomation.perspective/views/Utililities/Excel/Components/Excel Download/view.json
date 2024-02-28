@@ -1,0 +1,488 @@
+{
+  "custom": {
+    "file": {
+      "datasets": [
+        {
+          "$": [
+            "ds",
+            192,
+            1669202802628
+          ],
+          "$columns": []
+        }
+      ],
+      "sheetNames": [
+        "Sheet1"
+      ]
+    }
+  },
+  "params": {
+    "FileName": "Export.xlsx",
+    "Sheets": [
+      {
+        "Columns": [],
+        "Data": [
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1669154400000
+            },
+            "C2": "Koos",
+            "C3": 48.53174392419729,
+            "localID": 1
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1669240800000
+            },
+            "C2": "Jan",
+            "C3": 96.67749245988567,
+            "localID": 2
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1669327200000
+            },
+            "C2": "Koos",
+            "C3": 90.83262721767062,
+            "localID": 3
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1669413600000
+            },
+            "C2": "Feb",
+            "C3": 96.7149060296517,
+            "localID": 4
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1669500000000
+            },
+            "C2": "Koos",
+            "C3": 92.53766736724187,
+            "localID": 5
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1669586400000
+            },
+            "C2": "Mar",
+            "C3": 86.31042142500348,
+            "localID": 6
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1669672800000
+            },
+            "C2": "Koos",
+            "C3": 70.02499500561076,
+            "localID": 7
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1669759200000
+            },
+            "C2": "Apr",
+            "C3": 68.11020467248734,
+            "localID": 8
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1669845600000
+            },
+            "C2": "Koos",
+            "C3": 59.24931482675264,
+            "localID": 9
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1669932000000
+            },
+            "C2": "May",
+            "C3": 35.58799955719982,
+            "localID": 10
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1670018400000
+            },
+            "C2": "Koos",
+            "C3": 31.96712519263484,
+            "localID": 11
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1670104800000
+            },
+            "C2": "Jun",
+            "C3": 0.5401272046263728,
+            "localID": 12
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1670191200000
+            },
+            "C2": "Koos",
+            "C3": 5.881435339806829,
+            "localID": 13
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1670277600000
+            },
+            "C2": "Jul",
+            "C3": 11.935057322750797,
+            "localID": 14
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1670364000000
+            },
+            "C2": "Koos",
+            "C3": 98.66947150236756,
+            "localID": 15
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1670450400000
+            },
+            "C2": "Aug",
+            "C3": 73.55408797003453,
+            "localID": 16
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1670536800000
+            },
+            "C2": "Koos",
+            "C3": 53.65945470181514,
+            "localID": 17
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1670623200000
+            },
+            "C2": "Sep",
+            "C3": 26.729715432974665,
+            "localID": 18
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1670709600000
+            },
+            "C2": "Koos",
+            "C3": 55.772525862281206,
+            "localID": 19
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1670796000000
+            },
+            "C2": "Oct",
+            "C3": 78.79236320669956,
+            "localID": 20
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1670882400000
+            },
+            "C2": "Koos",
+            "C3": 0.6376439322074323,
+            "localID": 21
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1670968800000
+            },
+            "C2": "Nov",
+            "C3": 0.3674410453684773,
+            "localID": 22
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1671055200000
+            },
+            "C2": "Koos",
+            "C3": 49.729129017146676,
+            "localID": 23
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1671141600000
+            },
+            "C2": "Dec",
+            "C3": 31.124666724055295,
+            "localID": 24
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1671228000000
+            },
+            "C2": "Koos",
+            "C3": 57.48093644070035,
+            "localID": 25
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1671314400000
+            },
+            "C2": "Jan",
+            "C3": 2.780524100685877,
+            "localID": 26
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1671400800000
+            },
+            "C2": "Koos",
+            "C3": 61.5512325235807,
+            "localID": 27
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1671487200000
+            },
+            "C2": "Feb",
+            "C3": 17.826739982657724,
+            "localID": 28
+          },
+          {
+            "C1": {
+              "$": [
+                "ts",
+                192,
+                1669202325372
+              ],
+              "$ts": 1671573600000
+            },
+            "C2": "Koos",
+            "C3": 49.41983260524855,
+            "localID": 29
+          }
+        ],
+        "Name": "Sheet1"
+      }
+    ]
+  },
+  "propConfig": {
+    "custom.file": {
+      "binding": {
+        "config": {
+          "path": "view.params.Sheets"
+        },
+        "transforms": [
+          {
+            "code": "\tsheets \u003d value\n\tdatasets \u003d []\n\tsheetNames \u003d []\n\tfor sheet in sheets:\n\t\tsheetName \u003d sheet[\u0027Name\u0027]\n\t\tsheetNames.append(sheetName)\n\t\tcolumns \u003d sheet[\u0027Columns\u0027]\n\t\tif columns is None:\n\t\t\tcolumns \u003d []\n\t\t\tfirstRow \u003d sheet[\u0027Data\u0027][0]\n\t\t\tfor key in firstRow:\n\t\t\t\tcol \u003d { \"Key\": key,\"Label\": key}\n\t\t\t\tcolumns.append(key)\n\t\t\t\tcolumnNames.append(key)\n\t\t\n\t\t#Get Column Label\n\t\theaders \u003d []\n\t\tfor col in columns:\n\t\t\tname \u003d col[\u0027Label\u0027]\n\t\t\theaders.append(name)\n\t\t#return columnLabels\n\n\t\t#Build Dataset Column Label\n\t\tdata\u003d[]\n\t\t#for row in [sheet[\u0027Data\u0027][0]]:\n\t\tfor row in sheet[\u0027Data\u0027]:\n\t\t\t# Build row array\n\t\t\trowArray \u003d []                \n\t\t\tfor col in columns:\n\t\t\t\t\n\t\t\t\tcolKey \u003d col[\u0027Key\u0027]\n\t\t\t\trowValue \u003d row[colKey]\n\t\t\t\t#return rowValue\n\t\t\t\tif \u0027value\u0027 in  str(rowValue):\n\t\t\t\t\trowValue \u003d rowValue[\u0027value\u0027]\n\t\t\t\trowArray.append(rowValue)\n\t\t\t\n\t\t\tdata.append(rowArray)\n\t\t\t#return data\t\n\t\tdataset \u003d system.dataset.toDataSet(headers,data)\n\t\tdatasets.append(dataset)\n\treturn {\u0027datasets\u0027:datasets,\u0027sheetNames\u0027:sheetNames}\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.FileName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Sheets": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 30,
+      "width": 30
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tfile \u003d self.view.custom.file\n\tdatasets \u003d file[\u0027datasets\u0027]\n\tsheetNames \u003d file[\u0027sheetNames\u0027]\n\tspreadsheet \u003d system.dataset.toExcel(showHeaders\u003dTrue, dataset\u003ddatasets, sheetNames\u003dsheetNames)\n\tfilename \u003d self.view.params.FileName\n\tsystem.perspective.download(filename, spreadsheet)      "
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "ButtonInExcel",
+          "tooltip": {
+            "enabled": true,
+            "text": "Download Excel File"
+          }
+        },
+        "position": {
+          "basis": "30px",
+          "shrink": 0
+        },
+        "props": {
+          "image": {
+            "height": 20,
+            "icon": {
+              "path": "material/cloud_download"
+            },
+            "position": "center",
+            "width": 20
+          },
+          "text": ""
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

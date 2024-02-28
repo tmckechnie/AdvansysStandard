@@ -1,0 +1,255 @@
+{
+  "custom": {},
+  "params": {
+    "DetailTrendPopup": {
+      "Identity": "",
+      "TagPath": "",
+      "Title": "",
+      "ViewPath": ""
+    },
+    "Run": true
+  },
+  "propConfig": {
+    "params.DetailTrendPopup": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Run": {
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 30,
+      "width": 230
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "DropdownSelector"
+        },
+        "position": {
+          "basis": "25px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "session.custom.DefaultPopupHistoryDuration"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Label": "Duration",
+            "ShowLabel": true,
+            "options": [
+              {
+                "label": "1 Min",
+                "value": 1
+              },
+              {
+                "label": "5 Min",
+                "value": 5
+              },
+              {
+                "label": "10 Min",
+                "value": 10
+              },
+              {
+                "label": "30 Min",
+                "value": 30
+              },
+              {
+                "label": "60 Min",
+                "value": 60
+              }
+            ]
+          },
+          "path": "Standard/Components/Faceplates/Input/LabelDropdown",
+          "style": {
+            "margin": 2
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tself.view.params.Run \u003d False"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "IconPause"
+            },
+            "position": {
+              "basis": "30px",
+              "grow": 1
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.Run}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "path": "material/pause"
+            },
+            "type": "ia.display.icon"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tself.view.params.Run \u003d True"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "IconRun"
+            },
+            "position": {
+              "basis": "30px",
+              "grow": 1
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "!{view.params.Run}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "path": "material/play_arrow"
+            },
+            "type": "ia.display.icon"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "20px",
+          "display": false,
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Text"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "RunPause"
+        },
+        "position": {
+          "basis": "20px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.Run": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "view.params.Run"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": ""
+          },
+          "path": "Standard/Components/Faceplates/Input/RunPause"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "draggable": true,
+                "id": "T1RaxWuC{view.params.DetailTrendPopup.Identity}",
+                "modal": false,
+                "overlayDismiss": false,
+                "resizable": true,
+                "showCloseIcon": true,
+                "title": "{view.params.DetailTrendPopup.Title}",
+                "type": "open",
+                "viewParams": {
+                  "TagPath": "{view.params.DetailTrendPopup.TagPath}"
+                },
+                "viewPath": "{view.params.DetailTrendPopup.ViewPath}",
+                "viewportBound": true
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Icon",
+          "tooltip": {
+            "enabled": true,
+            "text": "Open detail trend?"
+          }
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "len({view.params.DetailTrendPopup.ViewPath})\u003e0"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "path": "material/trending_up",
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Text"
+          }
+        },
+        "type": "ia.display.icon"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "base": {
+    "style": {
+      "outlineColor": "var(--bodySymbolSimulated)",
+      "outlineStyle": "dotted",
+      "outlineWidth": "2px"
+    }
+  }
+}

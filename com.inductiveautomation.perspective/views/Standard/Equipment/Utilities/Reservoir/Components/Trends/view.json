@@ -1,0 +1,256 @@
+{
+  "custom": {
+    "History": [],
+    "HistoryPath": "[Canary/default:default]CAN01VS1/SefatengUtilities/Utilities/Water/Hallcore Dam/DAM005/Reservoir/Level/Value",
+    "Level": 85,
+    "distoryDuration": 10,
+    "highAlarm": 100,
+    "historyTags": [
+      {
+        "alias": "Level",
+        "path": "[Canary/default:default]CAN01VS1/SefatengUtilities/Utilities/Water/Hallcore Dam/DAM005/Reservoir/Level/Value"
+      }
+    ],
+    "lowAlarm": 0
+  },
+  "params": {
+    "TagPath": "[TPPSCV01003]Utilities/Water/Hallcore Dam/DAM005/Reservoir"
+  },
+  "propConfig": {
+    "custom.History": {
+      "binding": {
+        "config": {
+          "avoidScanClassValidation": true,
+          "dateRange": {
+            "mostRecent": "{view.custom.distoryDuration}",
+            "mostRecentUnits": "MIN"
+          },
+          "enableValueCache": true,
+          "ignoreBadQuality": false,
+          "polling": {
+            "enabled": false,
+            "rate": ""
+          },
+          "preventInterpolation": false,
+          "returnFormat": "Wide",
+          "returnSize": {
+            "type": "RAW"
+          },
+          "tags": "{view.custom.historyTags}",
+          "valueFormat": "DOCUMENT"
+        },
+        "transforms": [
+          {
+            "code": "\thistCount \u003d len(value)\n\t#return histCount\n\ti\u003d0\n\tnow \u003d system.date.now()\n\tfor point in value:\n\t\trow\u003dpoint\n\t\tts \u003d system.date.fromMillis(point[\u0027t_stamp\u0027])\n\t\trow[\u0027ts\u0027] \u003d ts\n\t\tduration \u003d 0\n\t\tif (i+1)\u003chistCount:\n\t\t\t#return [1,histCount]\n\t\t\ttsNext \u003d system.date.fromMillis(value[i+1][\u0027t_stamp\u0027])\n\t\telse:\n\t\t\ttsNext \u003d now\n\t\tduration \u003d system.date.secondsBetween(ts, tsNext)\n\t\trow[\u0027duration\u0027] \u003d duration\n\t\ti+\u003d1\n\treturn value",
+            "type": "script"
+          }
+        ],
+        "type": "tag-history"
+      },
+      "persistent": true
+    },
+    "custom.HistoryPath": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Level/Value.History Path"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Level": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Level/Value"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.distoryDuration": {
+      "binding": {
+        "config": {
+          "path": "session.custom.DefaultPopupHistoryDuration"
+        },
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.highAlarm": {
+      "persistent": true
+    },
+    "custom.historyTags": {
+      "binding": {
+        "config": {
+          "path": "view.custom.HistoryPath"
+        },
+        "transforms": [
+          {
+            "code": "\ttag \u003d {\n\t    \"alias\": \"Level\",\n\t    \"path\": value\n\t  }\n\treturn [tag]",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.lowAlarm": {
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 339,
+      "width": 337
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Sparkline"
+            },
+            "position": {
+              "basis": "250px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.points": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.History"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tpoints \u003d []\n\tfor v in value:\n\t\tpoint \u003d v[\u0027Level\u0027]\n\t\tpoints.append(point)\n\treturn points",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "marker": {
+                "first": {
+                  "size": 0
+                },
+                "high": {
+                  "size": 0
+                },
+                "last": {
+                  "size": 0
+                },
+                "low": {
+                  "size": 0
+                }
+              },
+              "range": {
+                "high": 100,
+                "low": 0
+              }
+            },
+            "type": "ia.display.sparkline"
+          },
+          {
+            "meta": {
+              "name": "MovingAnalogIndicator"
+            },
+            "position": {
+              "basis": "100px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.desiredHigh": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Level/Value"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.highAlarm": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.highAlarm"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.lowAlarm": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.lowAlarm"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.processValue": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Level/Value"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "desiredLow": 0,
+              "desiredRangeColor": "#808080",
+              "highHighAlarm": null,
+              "highInterlock": null,
+              "lowInterlock": null,
+              "lowLowAlarm": null,
+              "reverseIndicator": true,
+              "style": {
+                "marginLeft": -10
+              }
+            },
+            "type": "ia.display.moving-analog-indicator"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

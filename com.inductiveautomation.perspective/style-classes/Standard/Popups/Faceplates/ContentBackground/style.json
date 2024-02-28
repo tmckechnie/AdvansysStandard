@@ -1,0 +1,10 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--valueDisplay)",
+      "borderColor": "var(--valueDisplay)",
+      "borderStyle": "solid",
+      "padding": "10px"
+    }
+  }
+}

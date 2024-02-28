@@ -1,0 +1,564 @@
+{
+  "custom": {
+    "CmdDeSelect": false,
+    "CmdSelect": false,
+    "InterlockDeselection": true,
+    "LabelDeselect": "Unselected",
+    "LabelSelect": "Selected",
+    "OutSelected": false,
+    "Selection": "Unselected"
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Selector"
+  },
+  "propConfig": {
+    "custom.CmdDeSelect": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cmd/Deselect"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.CmdSelect": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cmd/Select"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.InterlockDeselection": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Interlock/Deselection/State"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.InterlockSelection": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Interlock/Selection/State"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.LabelDeselect": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Out/LabelUnselected"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.LabelSelect": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Out/LabelSelected"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.OutSelected": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Out/Selected"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Selection": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Out/Selection"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 540,
+      "width": 380
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "params": {
+                "Title": "Status"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "TimeSeriesChart"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.series": {
+                    "binding": {
+                      "config": {
+                        "path": "parent.custom.History.data"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.title.text": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.Selection"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "plots": [
+                    {
+                      "axes": [
+                        {
+                          "alignment": "left",
+                          "label": {
+                            "font": {
+                              "color": "",
+                              "size": 10
+                            },
+                            "offset": 0,
+                            "style": {
+                              "classes": ""
+                            },
+                            "text": "Selection",
+                            "visible": true
+                          },
+                          "max": 1,
+                          "min": 0,
+                          "name": "Value",
+                          "style": {
+                            "classes": ""
+                          },
+                          "tick": {
+                            "color": "",
+                            "label": {
+                              "font": {
+                                "color": "",
+                                "size": 10
+                              },
+                              "style": {
+                                "classes": ""
+                              }
+                            },
+                            "style": {
+                              "classes": ""
+                            }
+                          },
+                          "width": 60
+                        }
+                      ],
+                      "markers": [],
+                      "relativeWeight": 1,
+                      "trends": [
+                        {
+                          "axis": "Value",
+                          "baselines": [],
+                          "breakLine": true,
+                          "columns": [],
+                          "interpolation": "curveStepAfter",
+                          "radius": 2,
+                          "series": "Selected",
+                          "stack": true,
+                          "type": "line",
+                          "visible": true
+                        }
+                      ]
+                    }
+                  ],
+                  "timeAxis": {
+                    "height": 20,
+                    "tick": {
+                      "label": {
+                        "format": "hh:mm:ss"
+                      }
+                    }
+                  },
+                  "timeRange": {
+                    "dateFormat": "YYYY-MM-DD",
+                    "timeFormat": "HH:mm:ss",
+                    "visible": false
+                  },
+                  "title": {
+                    "font": {
+                      "size": 15
+                    },
+                    "height": 20,
+                    "visible": true
+                  },
+                  "xTrace": {
+                    "infoBox": {
+                      "dateFormat": "YYYY-M-D",
+                      "timeFormat": "hh:mm:ss"
+                    }
+                  }
+                },
+                "type": "ia.chart.timeseries"
+              },
+              {
+                "meta": {
+                  "name": "TrendDurationSelector"
+                },
+                "position": {
+                  "basis": "25px"
+                },
+                "propConfig": {
+                  "props.params.Run": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "path": "parent.custom.History.run"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "DetailTrendPopup": {
+                      "Identity": "",
+                      "TagPath": "",
+                      "Title": "",
+                      "ViewPath": ""
+                    }
+                  },
+                  "path": "Standard/Components/Faceplates/TrendController"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "custom": {
+              "History": {
+                "firstTimestamp": {
+                  "$": [
+                    "ts",
+                    192,
+                    1689243968693
+                  ],
+                  "$ts": 1689243369068
+                },
+                "run": false
+              }
+            },
+            "meta": {
+              "name": "Trend"
+            },
+            "position": {
+              "basis": "200px",
+              "grow": 1
+            },
+            "propConfig": {
+              "custom.History.config": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "currentValue": "{view.custom.OutSelected}",
+                      "gatewayType": "{session.custom.SystemInfo.GatewayType}",
+                      "historyPath": "tag({view.params.TagPath}+\"/Out/Selected.History Path\")\r\n"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\thistoryPath \u003d value[\u0027historyPath\u0027]\n\tgatewayType \u003d value[\u0027gatewayType\u0027]\n\tcurrentValue \u003d value[\u0027currentValue\u0027]\n\tpath \u003d historyPath\n\tif gatewayType \u003d\u003d \"Edge\":\n\t\tpath \u003d self.params.TagPath + \"/Out/Seleted\"\n\tseries \u003d {\"seriesName\": \"Selected\",\"tags\": [{\"alias\":\"Value\", \"currentValue\": currentValue,\"path\": path,\"isBool\":True}]}\n\treturn [series]\n",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "custom.History.data": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "config": "{this.custom.History.config}",
+                      "duration": "{this.custom.History.duration}",
+                      "periodEnd": "now(1000*{this.custom.History.run})"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tconfig \u003d value[\u0027config\u0027] \n\tduration \u003d value[\u0027duration\u0027] \n\tperiodEnd \u003d value[\u0027periodEnd\u0027]\n\tdata \u003d Standard.Tags.Common.GetTrendData(HistoryConfig\u003dconfig,PeriodEnd\u003dperiodEnd,HistoryDuration\u003dduration) \n\treturn data\n\t\n\t\n",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "custom.History.duration": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "session.custom.DefaultPopupHistoryDuration"
+                  },
+                  "type": "property"
+                }
+              },
+              "custom.History.firstTimestamp": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.History.data[0].data[0].time"
+                  },
+                  "enabled": false,
+                  "transforms": [
+                    {
+                      "expression": "fromMillis({value})",
+                      "type": "expression"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Status"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "30px",
+              "shrink": 0
+            },
+            "props": {
+              "params": {
+                "Title": "Operation"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "CmdSelectRow"
+            },
+            "position": {
+              "basis": "40px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.params.Enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "if({view.custom.InterlockSelection} \u0026 !{view.custom.OutSelected},true,false)"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Label": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.LabelSelect"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.TagPath} + \"/Cmd/Select\""
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "SetValue": true,
+                "Tag": {
+                  "Label": "Set",
+                  "Name": "Cmd/Select",
+                  "Prompt": {
+                    "TagPath": "",
+                    "parameters": {},
+                    "popupIdentifier": "",
+                    "viewPath": ""
+                  }
+                }
+              },
+              "path": "Standard/Components/Faceplates/Input/Command Set Button",
+              "style": {
+                "margin": 5
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "CmdDeSelectRow"
+            },
+            "position": {
+              "basis": "40px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.params.Enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "if({view.custom.InterlockDeselection} \u0026 {view.custom.OutSelected},true,false)"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Label": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.LabelDeselect"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.TagPath} + \"/Cmd/Deselect\""
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "ButtonLabel": "Set",
+                "Prompt": {
+                  "TagPath": "",
+                  "parameters": {},
+                  "popupIdentifier": "",
+                  "viewPath": ""
+                },
+                "SetValue": true,
+                "ShowLabel": true
+              },
+              "path": "Standard/Components/Faceplates/Input/Command Set Button",
+              "style": {
+                "margin": 5
+              }
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Operation"
+        },
+        "position": {
+          "basis": "140px",
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

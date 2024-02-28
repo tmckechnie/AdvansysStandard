@@ -1,0 +1,262 @@
+{
+  "custom": {
+    "CurrentModelItem": {
+      "Session": {
+        "ContentType": "Overview",
+        "Path": "0",
+        "SearchModule": ""
+      },
+      "pidStandard/Navigation/Tree/View": {
+        "ContentType": "Overview",
+        "Path": "0",
+        "SearchModule": ""
+      }
+    }
+  },
+  "params": {},
+  "propConfig": {
+    "custom.CurrentModelItem": {
+      "binding": {
+        "config": {
+          "path": "session.custom.CurrentModelItem"
+        },
+        "type": "property"
+      },
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 208
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "props": {
+              "text": "Session"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.modelItem.Name"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.modelItem.Path"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_2"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.modelItem.ModelItemTagPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Session"
+        },
+        "position": {
+          "basis": "200px"
+        },
+        "propConfig": {
+          "custom.modelItem": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "modelItems": "{session.custom.ModelItems}",
+                  "path": "{session.custom.CurrentModelItem.Session.Path}"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\treturn Standard.Navigation.Common.GetModelItemByPath(ModelItems\u003dvalue[\u0027modelItems\u0027], Path\u003dvalue[\u0027path\u0027])[\u0027data\u0027]",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Docked/Right/ContentBackground Standard/Docked/Right/Text",
+            "fontSize": 10
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "props": {
+              "text": "Page"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.modelItem.Name"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.modelItem.Path"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_2"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.modelItem.ModelItemTagPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Page"
+        },
+        "position": {
+          "basis": "200px"
+        },
+        "propConfig": {
+          "custom.modelItem": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "currentModelItem": "{session.custom.CurrentModelItem}",
+                  "modelItems": "{session.custom.ModelItems}",
+                  "pageId": "{page.props.pageId}"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\tcurrentModelItem \u003d value[\u0027currentModelItem\u0027]\n\tmodelItems \u003d value[\u0027modelItems\u0027]\n\tpageId \u003d value[\u0027pageId\u0027]\n\tcurrentPageModelItem \u003d Standard.Navigation.Common.GetCurrentModelItem(CurrentModelItem\u003dcurrentModelItem,UseSession\u003dFalse,PerspectivePageID\u003dpageId)\n\tpath \u003d currentPageModelItem[\u0027Path\u0027]\n\t\n\treturn Standard.Navigation.Common.GetModelItemByPath(ModelItems\u003dmodelItems, Path\u003dpath)[\u0027data\u0027]",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Docked/Right/ContentBackground Standard/Docked/Right/Text",
+            "fontSize": 10
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Docked/Right/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

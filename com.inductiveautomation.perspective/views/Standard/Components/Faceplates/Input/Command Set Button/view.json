@@ -1,0 +1,274 @@
+{
+  "custom": {},
+  "params": {
+    "ButtonLabel": "Set",
+    "Enabled": true,
+    "Label": "Select",
+    "Prompt": {
+      "TagPath": "",
+      "parameters": {},
+      "popupIdentifier": "",
+      "viewPath": ""
+    },
+    "SetValue": true,
+    "ShowLabel": true,
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/100S100/Cmd/Select"
+  },
+  "propConfig": {
+    "params.ButtonLabel": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Enabled": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Prompt": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.SetValue": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowLabel": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 35,
+      "width": 300
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "75px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.params.ShowLabel"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "overlayOptOut": true,
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Text"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "OneShotButton"
+            },
+            "position": {
+              "basis": "100px",
+              "grow": 1
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.Prompt.viewPath}\u003d\"\""
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.Enabled"
+                  },
+                  "overlayOptOut": true,
+                  "type": "property"
+                }
+              },
+              "props.readyState.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.ButtonLabel"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.setValue": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.SetValue"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "disabledStyle": {
+                "classes": "Standard/Popups/Faceplates/Button/Disabled"
+              },
+              "readyState": {
+                "icon": {
+                  "style": {
+                    "height": "24px",
+                    "width": "2rem"
+                  }
+                },
+                "style": {
+                  "classes": "Standard/Popups/Faceplates/Button/UnSelected"
+                }
+              },
+              "writingState": {
+                "icon": {
+                  "path": "material/hourglass_empty",
+                  "style": {
+                    "height": "24px",
+                    "width": "2rem"
+                  }
+                },
+                "style": {
+                  "classes": "Standard/Popups/Faceplates/Button/Selected"
+                },
+                "text": "Sending Request..."
+              }
+            },
+            "type": "ia.input.oneshotbutton"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tviewPath \u003d self.view.params.Prompt.viewPath\n\tparameters \u003d self.view.params.Prompt.parameters\n\tjsonString \u003d system.util.jsonEncode(parameters)\n\tparameters \u003d system.util.jsonDecode(jsonString)\n\tpopupIdentifier \u003d self.view.params.Prompt.popupIdentifier\n\tsystem.perspective.openPopup(id\u003dpopupIdentifier, view\u003dviewPath,params\u003dparameters,showCloseIcon\u003dFalse,modal\u003dTrue)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button",
+              "tooltip": {}
+            },
+            "position": {
+              "basis": "80px",
+              "grow": 1
+            },
+            "propConfig": {
+              "meta.tooltip.text": {
+                "binding": {
+                  "config": {
+                    "expression": "\"T1 - Click \"+{this.props.text}+\" To Open Prompt Pupup:\" + {view.params.Prompt.viewPath}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "!{../OneShotButton.position.display}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.Enabled"
+                  },
+                  "overlayOptOut": true,
+                  "type": "property"
+                }
+              },
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.ButtonLabel} + \" Request\""
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "image": {
+                "height": 15,
+                "width": 10
+              },
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Button/UnSelected"
+              }
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "25px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "marginBottom": 4,
+            "marginLeft": 4,
+            "marginRight": 4,
+            "marginTop": 4
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,2251 @@
+{
+  "custom": {
+    "HMIEnumPrompt": {
+      "Complete": {
+        "parameters": {
+          "Label": "Complete",
+          "Message": "Would You Like to Complete the Squence?",
+          "SetValue": 60,
+          "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+        },
+        "popupIdentifier": "SequenceCompletePopup",
+        "viewPath": "Standard/Implementation Modules/Sequencer/Faceplates/Components/HMIEnumPrompts/Complete"
+      },
+      "Continue": {
+        "parameters": {
+          "Label": "Continue",
+          "Message": "Would You Like to Continue the Sequence?",
+          "SetValue": 41,
+          "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+        },
+        "popupIdentifier": "SequenceContinuePopup",
+        "viewPath": "Standard/Implementation Modules/Sequencer/Faceplates/Components/HMIEnumPrompts/Continue"
+      },
+      "Pause": {
+        "parameters": {
+          "Label": "Pause",
+          "Message": "Would You Like to Pause the Sequence?",
+          "SetValue": 40,
+          "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+        },
+        "popupIdentifier": "SequencePausePopup",
+        "viewPath": "Standard/Implementation Modules/Sequencer/Faceplates/Components/HMIEnumPrompts/Pause"
+      },
+      "Resume": {
+        "parameters": {
+          "Label": "Resume",
+          "Message": "Would You Like to Resume the Sequence?",
+          "SetValue": 30,
+          "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+        },
+        "popupIdentifier": "SequenceResumePopup",
+        "viewPath": "Standard/Implementation Modules/Sequencer/Faceplates/Components/HMIEnumPrompts/Resume"
+      },
+      "Shutdown": {
+        "parameters": {
+          "Label": "Shutdown",
+          "Message": "Would You Like to Shutdown the Squence?",
+          "SetValue": 50,
+          "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+        },
+        "popupIdentifier": "SequenceShutdownPopup",
+        "viewPath": "Standard/Implementation Modules/Sequencer/Faceplates/Components/HMIEnumPrompts/Shutdown"
+      },
+      "Start": {
+        "parameters": {
+          "Label": "Start",
+          "Message": "Would You Like to Start the Sequence?",
+          "SetValue": 20,
+          "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+        },
+        "popupIdentifier": "SequenceStartPopup",
+        "viewPath": "Model Views/StandardS71500/Standard/Examples/Material Handling/Wash Plant/Overview/Components/Sequence Start Prompt"
+      }
+    },
+    "IndexDesc": "Running",
+    "IndexNumber": 1030,
+    "ManualStartPrompt": {
+      "Start": {
+        "parameters": {
+          "Label": "Start",
+          "Message": "Would You Like to Start?",
+          "SetValue": 20,
+          "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+        },
+        "popupIdentifier": "SequenceStartPopup",
+        "viewPath": "Model Views/StandardS71500/Standard/Examples/Material Handling/Wash Plant/Overview/Components/Sequence Start Prompt"
+      }
+    },
+    "PromptActive": false,
+    "State": "Running",
+    "TagStatus": {
+      "Alarms": {
+        "Error": false,
+        "Source Tags": {
+          "ErrorCode": 0,
+          "WarningCode": 0
+        },
+        "Start": {
+          "Cfg": {
+            "ConditionSetpoint": 0,
+            "Delay": null,
+            "DisplayPath": "Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Alarms/Start/Cfg/DisplayPath",
+            "Enable": null,
+            "OperationActivePriority": "Critical",
+            "OperationPassivePriority": "Low"
+          },
+          "Cmd": {
+            "Acknowledge": null,
+            "OperationActive": true
+          },
+          "In": {
+            "Condition": null
+          },
+          "Sts": {
+            "Active": null,
+            "ElapsedTime": null,
+            "Priority": "Critical"
+          }
+        },
+        "Summary": {
+          "DisplayPath": "Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Alarms*",
+          "Information": {
+            "HighestActivePriority": 0,
+            "HighestActivePriorityName": null,
+            "HighestUnackedPriority": 0,
+            "HighestUnackedPriorityName": null,
+            "Overall": {
+              "ActiveAckCount": 0,
+              "ActiveUnackCount": 0,
+              "ClearUnackCount": 0,
+              "Detail": [],
+              "ShelvedCount": 0,
+              "Total": 0
+            },
+            "PriorityDetail": {
+              "Critical": {
+                "ActiveAckCount": 0,
+                "ActiveUnackCount": 0,
+                "ClearUnackCount": 0,
+                "Detail": [],
+                "ShelvedCount": 0,
+                "Total": 0
+              },
+              "High": {
+                "ActiveAckCount": 0,
+                "ActiveUnackCount": 0,
+                "ClearUnackCount": 0,
+                "Detail": [],
+                "ShelvedCount": 0,
+                "Total": 0
+              },
+              "Low": {
+                "ActiveAckCount": 0,
+                "ActiveUnackCount": 0,
+                "ClearUnackCount": 0,
+                "Detail": [],
+                "ShelvedCount": 0,
+                "Total": 0
+              },
+              "Medium": {
+                "ActiveAckCount": 0,
+                "ActiveUnackCount": 0,
+                "ClearUnackCount": 0,
+                "Detail": [],
+                "ShelvedCount": 0,
+                "Total": 0
+              }
+            }
+          },
+          "Update Trigger": null
+        },
+        "Warning": false
+      },
+      "Cfg": {
+        "MaterialGrade": {
+          "Enabled": true,
+          "Value": 1,
+          "ValueString": "1 m/s"
+        },
+        "StockpileHeight": {
+          "Enabled": true,
+          "Value": 50,
+          "ValueString": "50 m/s"
+        },
+        "Supplier": {
+          "Enabled": true,
+          "Value": 1,
+          "ValueString": "1 m/s"
+        }
+      },
+      "Cmd": {
+        "AlarmAcknowledge": false,
+        "Cmd": {
+          "AlarmAcknowledge": false,
+          "Complete": false,
+          "HMIEnum": 0,
+          "Mode": 2,
+          "NextStepTrigger": false,
+          "OperationActive": true,
+          "Pause": false,
+          "PauseContinue": false,
+          "Prepare": false,
+          "Resume": false,
+          "Shutdown": false,
+          "Start": false
+        },
+        "Complete": false,
+        "HMIEnum": 0,
+        "HMIEnumPrompt": {
+          "Complete": {
+            "parameters": {
+              "Label": "Complete",
+              "Message": "Would You Like to Complete the Squence?",
+              "SetValue": 60,
+              "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+            },
+            "popupIdentifier": "SequenceCompletePopup",
+            "viewPath": "Standard/Implementation Modules/Sequencer/Faceplates/Components/HMIEnumPrompts/Complete"
+          },
+          "Continue": {
+            "parameters": {
+              "Label": "Continue",
+              "Message": "Would You Like to Continue the Sequence?",
+              "SetValue": 41,
+              "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+            },
+            "popupIdentifier": "SequenceContinuePopup",
+            "viewPath": "Standard/Implementation Modules/Sequencer/Faceplates/Components/HMIEnumPrompts/Continue"
+          },
+          "Pause": {
+            "parameters": {
+              "Label": "Pause",
+              "Message": "Would You Like to Pause the Sequence?",
+              "SetValue": 40,
+              "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+            },
+            "popupIdentifier": "SequencePausePopup",
+            "viewPath": "Standard/Implementation Modules/Sequencer/Faceplates/Components/HMIEnumPrompts/Pause"
+          },
+          "Resume": {
+            "parameters": {
+              "Label": "Resume",
+              "Message": "Would You Like to Resume the Sequence?",
+              "SetValue": 30,
+              "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+            },
+            "popupIdentifier": "SequenceResumePopup",
+            "viewPath": "Standard/Implementation Modules/Sequencer/Faceplates/Components/HMIEnumPrompts/Resume"
+          },
+          "Shutdown": {
+            "parameters": {
+              "Label": "Shutdown",
+              "Message": "Would You Like to Shutdown the Squence?",
+              "SetValue": 50,
+              "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+            },
+            "popupIdentifier": "SequenceShutdownPopup",
+            "viewPath": "Standard/Implementation Modules/Sequencer/Faceplates/Components/HMIEnumPrompts/Shutdown"
+          },
+          "Start": {
+            "parameters": {
+              "Label": "Start",
+              "Message": "Would You Like to Start the Sequence?",
+              "SetValue": 20,
+              "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+            },
+            "popupIdentifier": "SequenceStartPopup",
+            "viewPath": "Model Views/StandardS71500/Standard/Examples/Material Handling/Wash Plant/Overview/Components/Sequence Start Prompt"
+          }
+        },
+        "ManualStopPrompt": {
+          "parameters": {
+            "Label": "Stop",
+            "Message": "Are You sure you would like to Stop The Group?",
+            "SetValue": true,
+            "TagPath": ""
+          },
+          "popupIdentifier": "GroupActionPopup",
+          "viewPath": "Standard/Implementation Modules/Group/Faceplates/Components/Prompt"
+        },
+        "Mode": 2,
+        "NextStepTrigger": false,
+        "OperationActive": true,
+        "Pause": false,
+        "PauseContinue": false,
+        "Prepare": false,
+        "Resume": false,
+        "Shutdown": false,
+        "Start": false
+      },
+      "Id": {
+        "Identify": false,
+        "Owner": "",
+        "Selected": false,
+        "Self": "\"DB200SEQ001\""
+      },
+      "Index": {
+        "Current": 1030,
+        "CurrentDuration": 6318.4062,
+        "CurrentStepDesc": "Running",
+        "CurrentTimeOut": 0,
+        "Next": 1030,
+        "Pause": 7000,
+        "Resume": 0,
+        "Timer": 0,
+        "TimerEnable": false
+      },
+      "Interlock": {
+        "Interlock": {
+          "Permissive": {
+            "FirstUpReason": "",
+            "FirstUpReasonCode": 0,
+            "Reason": "\"DB200SEQ001IL01\"",
+            "ReasonCode": 0,
+            "State": true
+          }
+        },
+        "Interlocked": false,
+        "Permissive": {
+          "FirstUpReason": "",
+          "FirstUpReasonCode": 0,
+          "Reason": "\"DB200SEQ001IL01\"",
+          "ReasonCode": 0,
+          "State": true
+        }
+      },
+      "Metadata": {
+        "Description": "Wash Plant Sequence",
+        "InstanceName": "200SEQ001",
+        "InstancePath": "Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001",
+        "ModelPath": "Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001",
+        "PathToParentFolder": "Standard/Examples/Material Handling/Wash Plant/Feed",
+        "StandardViewPath": "Standard/Implementation Modules/Sequencer"
+      },
+      "Prompt": {
+        "DispValue": 0,
+        "Id": 0,
+        "PromptList": {
+          "1000": "Are you sure you would like to Start The Sequence?"
+        },
+        "Response": 0,
+        "Type": 0
+      },
+      "Sts": {
+        "Completed": false,
+        "Completing": false,
+        "Enum": 50,
+        "Paused": false,
+        "Pausing": false,
+        "Preparing": false,
+        "Ready": false,
+        "Resuming": false,
+        "Running": true,
+        "ShutDown": false,
+        "ShuttingDown": false,
+        "Starting": false,
+        "Sts": {
+          "Completed": false,
+          "CompletedObtained": false,
+          "Completing": false,
+          "CompletingEnd": false,
+          "Enum": 50,
+          "ModeAuto": true,
+          "ModeSemiAuto": false,
+          "Paused": false,
+          "PausedObtained": false,
+          "Pausing": false,
+          "PausingContinue": false,
+          "PausingEnd": false,
+          "Preparing": false,
+          "PreparingEnd": false,
+          "ProcessDisabled": false,
+          "Ready": false,
+          "ResumeObtained": true,
+          "Resuming": false,
+          "ResumingEnd": false,
+          "Running": true,
+          "ShutDown": false,
+          "ShutDownObtained": false,
+          "ShuttingDown": false,
+          "ShuttingDownEnd": false,
+          "Starting": false,
+          "StartingEnd": false
+        }
+      }
+    }
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001"
+  },
+  "propConfig": {
+    "custom.HMIEnumPrompt": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cmd/HMIEnumPrompt"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.IndexDesc": {
+      "binding": {
+        "config": {
+          "expression": "tag({view.params.TagPath} + \"/Index/CurrentStepDesc\")\r\n"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.IndexNumber": {
+      "binding": {
+        "config": {
+          "expression": "tag({view.params.TagPath} + \"/Index/Current\")"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.PromptActive": {
+      "binding": {
+        "config": {
+          "expression": "{view.custom.TagStatus.Prompt.Id} \u003e 0"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.State": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Enum"
+        },
+        "transforms": [
+          {
+            "fallback": "",
+            "inputType": "scalar",
+            "mappings": [
+              {
+                "input": 10,
+                "output": "Preparing"
+              },
+              {
+                "input": 20,
+                "output": "Ready"
+              },
+              {
+                "input": 30,
+                "output": "Starting"
+              },
+              {
+                "input": 50,
+                "output": "Running"
+              },
+              {
+                "input": 60,
+                "output": "Completing"
+              },
+              {
+                "input": 70,
+                "output": "Completed"
+              },
+              {
+                "input": 80,
+                "output": "Pausing"
+              },
+              {
+                "input": 90,
+                "output": "Paused"
+              },
+              {
+                "input": 100,
+                "output": "Pausing"
+              },
+              {
+                "input": 110,
+                "output": "Paused"
+              },
+              {
+                "input": 120,
+                "output": "Resuming"
+              },
+              {
+                "input": 130,
+                "output": "Resuming"
+              },
+              {
+                "input": 200,
+                "output": "Shutting Down"
+              },
+              {
+                "input": 210,
+                "output": "Shut Down"
+              }
+            ],
+            "outputType": "scalar",
+            "type": "map"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.TagStatus": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 554,
+      "width": 325
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "params": {
+                "Title": "Status"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "StsEnum"
+            },
+            "position": {
+              "basis": "52px"
+            },
+            "propConfig": {
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.State"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Format": "",
+                "Label": "State",
+                "ShowLabel": true,
+                "ShowUnits": false,
+                "Units": ""
+              },
+              "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+              "style": {
+                "margin": 5,
+                "paddingLeft": 3
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "LabelIndex"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "propConfig": {
+              "props.params.IndexDesc": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.IndexDesc"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.params.IndexStep": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.IndexNumber"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Label": "Index",
+                "ShowDesc": true,
+                "ShowIndex": true,
+                "Showlabel": true
+              },
+              "path": "Standard/Implementation Modules/Sequencer/Faceplates/Components/LabelIndex",
+              "style": {
+                "margin": 5,
+                "overflow": "auto",
+                "paddingLeft": 3
+              }
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Status"
+        },
+        "position": {
+          "basis": "150px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "if({view.custom.PromptActive},false,true)"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "params": {
+                "Title": "Operation"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "CmdMode"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "propConfig": {
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.TagPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "CurrentValueOut": {
+                  "Alarms": {
+                    "Error": false,
+                    "Source Tags": {
+                      "ErrorCode": 0,
+                      "WarningCode": 0
+                    },
+                    "Start": {
+                      "Cfg": {
+                        "ConditionSetpoint": 0,
+                        "Delay": null,
+                        "DisplayPath": "Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Alarms/Start/Cfg/DisplayPath",
+                        "Enable": null,
+                        "OperationActivePriority": "Critical",
+                        "OperationPassivePriority": "Low"
+                      },
+                      "Cmd": {
+                        "Acknowledge": null,
+                        "OperationActive": true
+                      },
+                      "In": {
+                        "Condition": null
+                      },
+                      "Sts": {
+                        "Active": null,
+                        "ElapsedTime": null,
+                        "Priority": "Critical"
+                      }
+                    },
+                    "Summary": {
+                      "DisplayPath": "Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Alarms*",
+                      "Information": {
+                        "HighestActivePriority": 0,
+                        "HighestActivePriorityName": null,
+                        "HighestUnackedPriority": 0,
+                        "HighestUnackedPriorityName": null,
+                        "Overall": {
+                          "ActiveAckCount": 0,
+                          "ActiveUnackCount": 0,
+                          "ClearUnackCount": 0,
+                          "Detail": [],
+                          "ShelvedCount": 0,
+                          "Total": 0
+                        },
+                        "PriorityDetail": {
+                          "Critical": {
+                            "ActiveAckCount": 0,
+                            "ActiveUnackCount": 0,
+                            "ClearUnackCount": 0,
+                            "Detail": [],
+                            "ShelvedCount": 0,
+                            "Total": 0
+                          },
+                          "High": {
+                            "ActiveAckCount": 0,
+                            "ActiveUnackCount": 0,
+                            "ClearUnackCount": 0,
+                            "Detail": [],
+                            "ShelvedCount": 0,
+                            "Total": 0
+                          },
+                          "Low": {
+                            "ActiveAckCount": 0,
+                            "ActiveUnackCount": 0,
+                            "ClearUnackCount": 0,
+                            "Detail": [],
+                            "ShelvedCount": 0,
+                            "Total": 0
+                          },
+                          "Medium": {
+                            "ActiveAckCount": 0,
+                            "ActiveUnackCount": 0,
+                            "ClearUnackCount": 0,
+                            "Detail": [],
+                            "ShelvedCount": 0,
+                            "Total": 0
+                          }
+                        }
+                      },
+                      "Update Trigger": null
+                    },
+                    "Warning": false
+                  },
+                  "Cfg": {
+                    "MaterialGrade": {
+                      "Enabled": true,
+                      "Value": 1,
+                      "ValueString": "1 m/s"
+                    },
+                    "StockpileHeight": {
+                      "Enabled": true,
+                      "Value": 50,
+                      "ValueString": "50 m/s"
+                    },
+                    "Supplier": {
+                      "Enabled": true,
+                      "Value": 1,
+                      "ValueString": "1 m/s"
+                    }
+                  },
+                  "Cmd": {
+                    "AlarmAcknowledge": false,
+                    "Cmd": {
+                      "AlarmAcknowledge": false,
+                      "Complete": false,
+                      "HMIEnum": 0,
+                      "Mode": 2,
+                      "NextStepTrigger": false,
+                      "OperationActive": true,
+                      "Pause": false,
+                      "PauseContinue": false,
+                      "Prepare": false,
+                      "Resume": false,
+                      "Shutdown": false,
+                      "Start": false
+                    },
+                    "Complete": false,
+                    "HMIEnum": 0,
+                    "HMIEnumPrompt": {
+                      "Complete": {
+                        "parameters": {
+                          "Label": "Complete",
+                          "Message": "Would You Like to Complete the Squence?",
+                          "SetValue": 60,
+                          "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+                        },
+                        "popupIdentifier": "SequenceCompletePopup",
+                        "viewPath": "Standard/Implementation Modules/Sequencer/Faceplates/Components/HMIEnumPrompts/Complete"
+                      },
+                      "Continue": {
+                        "parameters": {
+                          "Label": "Continue",
+                          "Message": "Would You Like to Continue the Sequence?",
+                          "SetValue": 41,
+                          "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+                        },
+                        "popupIdentifier": "SequenceContinuePopup",
+                        "viewPath": "Standard/Implementation Modules/Sequencer/Faceplates/Components/HMIEnumPrompts/Continue"
+                      },
+                      "Pause": {
+                        "parameters": {
+                          "Label": "Pause",
+                          "Message": "Would You Like to Pause the Sequence?",
+                          "SetValue": 40,
+                          "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+                        },
+                        "popupIdentifier": "SequencePausePopup",
+                        "viewPath": "Standard/Implementation Modules/Sequencer/Faceplates/Components/HMIEnumPrompts/Pause"
+                      },
+                      "Resume": {
+                        "parameters": {
+                          "Label": "Resume",
+                          "Message": "Would You Like to Resume the Sequence?",
+                          "SetValue": 30,
+                          "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+                        },
+                        "popupIdentifier": "SequenceResumePopup",
+                        "viewPath": "Standard/Implementation Modules/Sequencer/Faceplates/Components/HMIEnumPrompts/Resume"
+                      },
+                      "Shutdown": {
+                        "parameters": {
+                          "Label": "Shutdown",
+                          "Message": "Would You Like to Shutdown the Squence?",
+                          "SetValue": 50,
+                          "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+                        },
+                        "popupIdentifier": "SequenceShutdownPopup",
+                        "viewPath": "Standard/Implementation Modules/Sequencer/Faceplates/Components/HMIEnumPrompts/Shutdown"
+                      },
+                      "Start": {
+                        "parameters": {
+                          "Label": "Start",
+                          "Message": "Would You Like to Start the Sequence?",
+                          "SetValue": 20,
+                          "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cmd/HMIEnum"
+                        },
+                        "popupIdentifier": "SequenceStartPopup",
+                        "viewPath": "Model Views/StandardS71500/Standard/Examples/Material Handling/Wash Plant/Overview/Components/Sequence Start Prompt"
+                      }
+                    },
+                    "ManualStopPrompt": {
+                      "parameters": {
+                        "Label": "Stop",
+                        "Message": "Are You sure you would like to Stop The Group?",
+                        "SetValue": true,
+                        "TagPath": ""
+                      },
+                      "popupIdentifier": "GroupActionPopup",
+                      "viewPath": "Standard/Implementation Modules/Group/Faceplates/Components/Prompt"
+                    },
+                    "Mode": 2,
+                    "NextStepTrigger": false,
+                    "OperationActive": true,
+                    "Pause": false,
+                    "PauseContinue": false,
+                    "Prepare": false,
+                    "Resume": false,
+                    "Shutdown": false,
+                    "Start": false
+                  },
+                  "Id": {
+                    "Identify": false,
+                    "Owner": "",
+                    "Selected": false,
+                    "Self": "\"DB200SEQ001\""
+                  },
+                  "Index": {
+                    "Current": 1030,
+                    "CurrentDuration": 6318.4062,
+                    "CurrentStepDesc": "Running",
+                    "CurrentTimeOut": 0,
+                    "Next": 1030,
+                    "Pause": 7000,
+                    "Resume": 0,
+                    "Timer": 0,
+                    "TimerEnable": false
+                  },
+                  "Interlock": {
+                    "Interlock": {
+                      "Permissive": {
+                        "FirstUpReason": "",
+                        "FirstUpReasonCode": 0,
+                        "Reason": "\"DB200SEQ001IL01\"",
+                        "ReasonCode": 0,
+                        "State": true
+                      }
+                    },
+                    "Interlocked": false,
+                    "Permissive": {
+                      "FirstUpReason": "",
+                      "FirstUpReasonCode": 0,
+                      "Reason": "\"DB200SEQ001IL01\"",
+                      "ReasonCode": 0,
+                      "State": true
+                    }
+                  },
+                  "Metadata": {
+                    "Description": "Wash Plant Sequence",
+                    "InstanceName": "200SEQ001",
+                    "InstancePath": "Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001",
+                    "ModelPath": "Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001",
+                    "PathToParentFolder": "Standard/Examples/Material Handling/Wash Plant/Feed",
+                    "StandardViewPath": "Standard/Implementation Modules/Sequencer"
+                  },
+                  "Prompt": {
+                    "DispValue": 0,
+                    "Id": 0,
+                    "PromptList": {
+                      "1000": "Are you sure you would like to Start The Sequence?"
+                    },
+                    "Response": 0,
+                    "Type": 0
+                  },
+                  "Sts": {
+                    "Completed": false,
+                    "Completing": false,
+                    "Enum": 50,
+                    "Paused": false,
+                    "Pausing": false,
+                    "Preparing": false,
+                    "Ready": false,
+                    "Resuming": false,
+                    "Running": true,
+                    "ShutDown": false,
+                    "ShuttingDown": false,
+                    "Starting": false,
+                    "Sts": {
+                      "Completed": false,
+                      "CompletedObtained": false,
+                      "Completing": false,
+                      "CompletingEnd": false,
+                      "Enum": 50,
+                      "ModeAuto": true,
+                      "ModeSemiAuto": false,
+                      "Paused": false,
+                      "PausedObtained": false,
+                      "Pausing": false,
+                      "PausingContinue": false,
+                      "PausingEnd": false,
+                      "Preparing": false,
+                      "PreparingEnd": false,
+                      "ProcessDisabled": false,
+                      "Ready": false,
+                      "ResumeObtained": true,
+                      "Resuming": false,
+                      "ResumingEnd": false,
+                      "Running": true,
+                      "ShutDown": false,
+                      "ShutDownObtained": false,
+                      "ShuttingDown": false,
+                      "ShuttingDownEnd": false,
+                      "Starting": false,
+                      "StartingEnd": false
+                    }
+                  }
+                },
+                "Label": "Mode",
+                "ModeTagname": "Cmd/Mode"
+              },
+              "path": "Standard/Components/Faceplates/Input/Mode Auto Manual",
+              "style": {
+                "marginLeft": 5,
+                "paddingLeft": 3
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "20px",
+                  "grow": 1
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "classes": "Standard/Popups/Faceplates/Text"
+                  },
+                  "text": "Commands"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "CmdPrepare"
+                    },
+                    "position": {
+                      "basis": "35px"
+                    },
+                    "propConfig": {
+                      "props.params.Enabled": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}"
+                            },
+                            "tagPath": "{TagPath}/Sts/Enum"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": false,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 0,
+                                  "output": true
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      },
+                      "props.params.Prompt": {
+                        "binding": {
+                          "config": {
+                            "struct": {
+                              "HMIEnumPrompt": "{view.custom.HMIEnumPrompt}",
+                              "command": "{this.props.params.ButtonLabel}",
+                              "tagPath": "{view.params.TagPath}"
+                            },
+                            "waitOnAll": true
+                          },
+                          "transforms": [
+                            {
+                              "code": "\thMIEnumPrompt \u003d value[\u0027HMIEnumPrompt\u0027]\n\tcommand \u003d value[\u0027command\u0027]\n\tif command in hMIEnumPrompt:\n\t\n\t\ttagPath \u003d value[\u0027tagPath\u0027]\n\t\tjsonString \u003d system.util.jsonEncode(hMIEnumPrompt[command])\n\t\tprompt \u003d system.util.jsonDecode(jsonString)\n\t\t\n\t\t#Alsway Add TagPath to Parameters\n\t\tprompt[\"parameters\"][\"TagPath\"]\u003dtagPath\n\t\tprompt[\"parameters\"][\"Command\"]\u003dcommand\n\t\treturn prompt\n\t\n\treturn {\"viewPath\":\"\"}",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "expr-struct"
+                        }
+                      },
+                      "props.params.TagPath": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.TagPath}+ \"/Cmd/HMIEnum\"\r\n"
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "ButtonLabel": "Prepare",
+                        "Label": "",
+                        "SetValue": 10,
+                        "ShowLabel": false
+                      },
+                      "path": "Standard/Components/Faceplates/Input/Command Set Button"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "custom": {
+                      "Command": "Start"
+                    },
+                    "meta": {
+                      "name": "CmdStart"
+                    },
+                    "position": {
+                      "basis": "35px"
+                    },
+                    "propConfig": {
+                      "props.params.Disabled": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}"
+                            },
+                            "tagPath": "{TagPath}/Sts/Enum"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": null,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 0,
+                                  "output": true
+                                },
+                                {
+                                  "input": 20,
+                                  "output": false
+                                },
+                                {
+                                  "input": 30,
+                                  "output": true
+                                },
+                                {
+                                  "input": 40,
+                                  "output": true
+                                },
+                                {
+                                  "input": 50,
+                                  "output": true
+                                },
+                                {
+                                  "input": 60,
+                                  "output": true
+                                },
+                                {
+                                  "input": 70,
+                                  "output": true
+                                },
+                                {
+                                  "input": 80,
+                                  "output": true
+                                },
+                                {
+                                  "input": 90,
+                                  "output": true
+                                },
+                                {
+                                  "input": 100,
+                                  "output": true
+                                },
+                                {
+                                  "input": 110,
+                                  "output": true
+                                },
+                                {
+                                  "input": 120,
+                                  "output": true
+                                },
+                                {
+                                  "input": 130,
+                                  "output": true
+                                },
+                                {
+                                  "input": 200,
+                                  "output": true
+                                },
+                                {
+                                  "input": 210,
+                                  "output": true
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      },
+                      "props.params.Enabled": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}"
+                            },
+                            "tagPath": "{TagPath}/Sts/Enum"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": false,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 20,
+                                  "output": true
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      },
+                      "props.params.Prompt": {
+                        "binding": {
+                          "config": {
+                            "struct": {
+                              "HMIEnumPrompt": "{view.custom.HMIEnumPrompt}",
+                              "command": "{this.props.params.ButtonLabel}",
+                              "tagPath": "{view.params.TagPath}"
+                            },
+                            "waitOnAll": true
+                          },
+                          "transforms": [
+                            {
+                              "code": "\thMIEnumPrompt \u003d value[\u0027HMIEnumPrompt\u0027]\n\tcommand \u003d value[\u0027command\u0027]\n\tif command in hMIEnumPrompt:\n\t\n\t\ttagPath \u003d value[\u0027tagPath\u0027]\n\t\tjsonString \u003d system.util.jsonEncode(hMIEnumPrompt[command])\n\t\tprompt \u003d system.util.jsonDecode(jsonString)\n\t\t\n\t\t#Alsway Add TagPath to Parameters\n\t\tprompt[\"parameters\"][\"TagPath\"]\u003dtagPath\n\t\tprompt[\"parameters\"][\"Command\"]\u003dcommand\n\t\treturn prompt\n\t\n\treturn {\"viewPath\":\"\"}",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "expr-struct"
+                        }
+                      },
+                      "props.params.TagPath": {
+                        "binding": {
+                          "config": {
+                            "path": "view.params.TagPath"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "ButtonLabel": "Start",
+                        "Label": "",
+                        "SetValue": 20,
+                        "ShowLabel": false
+                      },
+                      "path": "Standard/Components/Faceplates/Input/Command Set Button"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CmdNextTrigger"
+                    },
+                    "position": {
+                      "basis": "35px"
+                    },
+                    "propConfig": {
+                      "position.display": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.TagStatus.Cmd.Mode} \u003d 1"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.params.Disabled": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}"
+                            },
+                            "tagPath": "{TagPath}/Cmd/Mode"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": false,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 2,
+                                  "output": true
+                                },
+                                {
+                                  "input": 1,
+                                  "output": false
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      },
+                      "props.params.Enabled": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}"
+                            },
+                            "tagPath": "{TagPath}/Cmd/Mode"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": false,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 1,
+                                  "output": true
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      },
+                      "props.params.TagPath": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.TagPath}+ \"/Cmd/HMIEnum\"\r\n"
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "ButtonLabel": "Next Step Trigger",
+                        "Label": "",
+                        "Prompt": {
+                          "TagPath": "",
+                          "parameters": {},
+                          "popupIdentifier": "",
+                          "viewPath": ""
+                        },
+                        "SetValue": true,
+                        "ShowLabel": false
+                      },
+                      "path": "Standard/Components/Faceplates/Input/Command Set Button"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CmdPauseContinue"
+                    },
+                    "position": {
+                      "basis": "35px"
+                    },
+                    "propConfig": {
+                      "position.display": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.TagStatus.Sts.Enum"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": false,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 80,
+                                  "output": true
+                                },
+                                {
+                                  "input": 100,
+                                  "output": true
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      },
+                      "props.params.Enabled": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.TagStatus.Sts.Enum"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": false,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 80,
+                                  "output": true
+                                },
+                                {
+                                  "input": 100,
+                                  "output": true
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "property"
+                        }
+                      },
+                      "props.params.Prompt": {
+                        "binding": {
+                          "config": {
+                            "struct": {
+                              "HMIEnumPrompt": "{view.custom.HMIEnumPrompt}",
+                              "command": "{this.props.params.ButtonLabel}",
+                              "tagPath": "{view.params.TagPath}"
+                            },
+                            "waitOnAll": true
+                          },
+                          "transforms": [
+                            {
+                              "code": "\thMIEnumPrompt \u003d value[\u0027HMIEnumPrompt\u0027]\n\tcommand \u003d value[\u0027command\u0027]\n\tif command in hMIEnumPrompt:\n\t\n\t\ttagPath \u003d value[\u0027tagPath\u0027]\n\t\tjsonString \u003d system.util.jsonEncode(hMIEnumPrompt[command])\n\t\tprompt \u003d system.util.jsonDecode(jsonString)\n\t\t\n\t\t#Alsway Add TagPath to Parameters\n\t\tprompt[\"parameters\"][\"TagPath\"]\u003dtagPath\n\t\tprompt[\"parameters\"][\"Command\"]\u003dcommand\n\t\treturn prompt\n\t\n\treturn {\"viewPath\":\"\"}",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "expr-struct"
+                        }
+                      },
+                      "props.params.TagPath": {
+                        "binding": {
+                          "config": {
+                            "path": "view.params.TagPath"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "ButtonLabel": "Continue",
+                        "Label": "",
+                        "SetValue": 41,
+                        "ShowLabel": false
+                      },
+                      "path": "Standard/Components/Faceplates/Input/Command Set Button"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CmdPause"
+                    },
+                    "position": {
+                      "basis": "35px"
+                    },
+                    "propConfig": {
+                      "props.params.Disabled": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}"
+                            },
+                            "tagPath": "{TagPath}/Sts/Enum"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": null,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 0,
+                                  "output": true
+                                },
+                                {
+                                  "input": 20,
+                                  "output": true
+                                },
+                                {
+                                  "input": 30,
+                                  "output": true
+                                },
+                                {
+                                  "input": 40,
+                                  "output": true
+                                },
+                                {
+                                  "input": 50,
+                                  "output": false
+                                },
+                                {
+                                  "input": 60,
+                                  "output": false
+                                },
+                                {
+                                  "input": 70,
+                                  "output": true
+                                },
+                                {
+                                  "input": 80,
+                                  "output": true
+                                },
+                                {
+                                  "input": 90,
+                                  "output": true
+                                },
+                                {
+                                  "input": 100,
+                                  "output": true
+                                },
+                                {
+                                  "input": 110,
+                                  "output": true
+                                },
+                                {
+                                  "input": 120,
+                                  "output": false
+                                },
+                                {
+                                  "input": 130,
+                                  "output": false
+                                },
+                                {
+                                  "input": 200,
+                                  "output": true
+                                },
+                                {
+                                  "input": 210,
+                                  "output": true
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      },
+                      "props.params.Enabled": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}"
+                            },
+                            "tagPath": "{TagPath}/Sts/Enum"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": false,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 50,
+                                  "output": true
+                                },
+                                {
+                                  "input": 60,
+                                  "output": true
+                                },
+                                {
+                                  "input": 120,
+                                  "output": true
+                                },
+                                {
+                                  "input": 130,
+                                  "output": true
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      },
+                      "props.params.Prompt": {
+                        "binding": {
+                          "config": {
+                            "struct": {
+                              "HMIEnumPrompt": "{view.custom.HMIEnumPrompt}",
+                              "command": "{this.props.params.ButtonLabel}",
+                              "tagPath": "{view.params.TagPath}"
+                            },
+                            "waitOnAll": true
+                          },
+                          "transforms": [
+                            {
+                              "code": "\thMIEnumPrompt \u003d value[\u0027HMIEnumPrompt\u0027]\n\tcommand \u003d value[\u0027command\u0027]\n\tif command in hMIEnumPrompt:\n\t\n\t\ttagPath \u003d value[\u0027tagPath\u0027]\n\t\tjsonString \u003d system.util.jsonEncode(hMIEnumPrompt[command])\n\t\tprompt \u003d system.util.jsonDecode(jsonString)\n\t\t\n\t\t#Alsway Add TagPath to Parameters\n\t\tprompt[\"parameters\"][\"TagPath\"]\u003dtagPath\n\t\tprompt[\"parameters\"][\"Command\"]\u003dcommand\n\t\treturn prompt\n\t\n\treturn {\"viewPath\":\"\"}",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "expr-struct"
+                        }
+                      },
+                      "props.params.TagPath": {
+                        "binding": {
+                          "config": {
+                            "path": "view.params.TagPath"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "ButtonLabel": "Pause",
+                        "Label": "",
+                        "SetValue": 40,
+                        "ShowLabel": false,
+                        "Tag": {
+                          "Label": "Pause",
+                          "Name": "Cmd/Select",
+                          "Prompt": {
+                            "TagPath": "",
+                            "parameters": {},
+                            "popupIdentifier": "",
+                            "viewPath": ""
+                          }
+                        }
+                      },
+                      "path": "Standard/Components/Faceplates/Input/Command Set Button"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "Complete"
+                    },
+                    "position": {
+                      "basis": "35px"
+                    },
+                    "propConfig": {
+                      "props.params.Disabled": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}"
+                            },
+                            "tagPath": "{TagPath}/Sts/Enum"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": null,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 0,
+                                  "output": true
+                                },
+                                {
+                                  "input": 20,
+                                  "output": true
+                                },
+                                {
+                                  "input": 30,
+                                  "output": true
+                                },
+                                {
+                                  "input": 40,
+                                  "output": true
+                                },
+                                {
+                                  "input": 50,
+                                  "output": false
+                                },
+                                {
+                                  "input": 60,
+                                  "output": false
+                                },
+                                {
+                                  "input": 70,
+                                  "output": true
+                                },
+                                {
+                                  "input": 80,
+                                  "output": true
+                                },
+                                {
+                                  "input": 90,
+                                  "output": true
+                                },
+                                {
+                                  "input": 100,
+                                  "output": true
+                                },
+                                {
+                                  "input": 110,
+                                  "output": true
+                                },
+                                {
+                                  "input": 120,
+                                  "output": false
+                                },
+                                {
+                                  "input": 130,
+                                  "output": false
+                                },
+                                {
+                                  "input": 200,
+                                  "output": true
+                                },
+                                {
+                                  "input": 210,
+                                  "output": true
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      },
+                      "props.params.Enabled": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}"
+                            },
+                            "tagPath": "{TagPath}/Sts/Enum"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": false,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 50,
+                                  "output": true
+                                },
+                                {
+                                  "input": 60,
+                                  "output": true
+                                },
+                                {
+                                  "input": 120,
+                                  "output": true
+                                },
+                                {
+                                  "input": 130,
+                                  "output": true
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      },
+                      "props.params.Prompt": {
+                        "binding": {
+                          "config": {
+                            "struct": {
+                              "HMIEnumPrompt": "{view.custom.HMIEnumPrompt}",
+                              "command": "{this.props.params.ButtonLabel}",
+                              "tagPath": "{view.params.TagPath}"
+                            },
+                            "waitOnAll": true
+                          },
+                          "transforms": [
+                            {
+                              "code": "\thMIEnumPrompt \u003d value[\u0027HMIEnumPrompt\u0027]\n\tcommand \u003d value[\u0027command\u0027]\n\tif command in hMIEnumPrompt:\n\t\n\t\ttagPath \u003d value[\u0027tagPath\u0027]\n\t\tjsonString \u003d system.util.jsonEncode(hMIEnumPrompt[command])\n\t\tprompt \u003d system.util.jsonDecode(jsonString)\n\t\t\n\t\t#Alsway Add TagPath to Parameters\n\t\tprompt[\"parameters\"][\"TagPath\"]\u003dtagPath\n\t\tprompt[\"parameters\"][\"Command\"]\u003dcommand\n\t\treturn prompt\n\t\n\treturn {\"viewPath\":\"\"}",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "expr-struct"
+                        }
+                      },
+                      "props.params.TagPath": {
+                        "binding": {
+                          "config": {
+                            "path": "view.params.TagPath"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "ButtonLabel": "Complete",
+                        "Label": "",
+                        "SetValue": 60,
+                        "ShowLabel": false,
+                        "Tag": {
+                          "Label": "Complete",
+                          "Name": "Cmd/Complete",
+                          "Prompt": {
+                            "TagPath": "",
+                            "parameters": {},
+                            "popupIdentifier": "",
+                            "viewPath": ""
+                          }
+                        }
+                      },
+                      "path": "Standard/Components/Faceplates/Input/Command Set Button"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CmdResume"
+                    },
+                    "position": {
+                      "basis": "35px"
+                    },
+                    "propConfig": {
+                      "props.params.Disabled": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}"
+                            },
+                            "tagPath": "{TagPath}/Sts/Enum"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": null,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 0,
+                                  "output": true
+                                },
+                                {
+                                  "input": 20,
+                                  "output": true
+                                },
+                                {
+                                  "input": 30,
+                                  "output": true
+                                },
+                                {
+                                  "input": 40,
+                                  "output": true
+                                },
+                                {
+                                  "input": 50,
+                                  "output": true
+                                },
+                                {
+                                  "input": 60,
+                                  "output": true
+                                },
+                                {
+                                  "input": 70,
+                                  "output": true
+                                },
+                                {
+                                  "input": 80,
+                                  "output": false
+                                },
+                                {
+                                  "input": 90,
+                                  "output": false
+                                },
+                                {
+                                  "input": 100,
+                                  "output": false
+                                },
+                                {
+                                  "input": 110,
+                                  "output": false
+                                },
+                                {
+                                  "input": 120,
+                                  "output": true
+                                },
+                                {
+                                  "input": 130,
+                                  "output": true
+                                },
+                                {
+                                  "input": 200,
+                                  "output": true
+                                },
+                                {
+                                  "input": 210,
+                                  "output": true
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      },
+                      "props.params.Enabled": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}"
+                            },
+                            "tagPath": "{TagPath}/Sts/Enum"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": false,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 80,
+                                  "output": true
+                                },
+                                {
+                                  "input": 90,
+                                  "output": true
+                                },
+                                {
+                                  "input": 100,
+                                  "output": true
+                                },
+                                {
+                                  "input": 110,
+                                  "output": true
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      },
+                      "props.params.Prompt": {
+                        "binding": {
+                          "config": {
+                            "struct": {
+                              "HMIEnumPrompt": "{view.custom.HMIEnumPrompt}",
+                              "command": "{this.props.params.ButtonLabel}",
+                              "tagPath": "{view.params.TagPath}"
+                            },
+                            "waitOnAll": true
+                          },
+                          "transforms": [
+                            {
+                              "code": "\thMIEnumPrompt \u003d value[\u0027HMIEnumPrompt\u0027]\n\tcommand \u003d value[\u0027command\u0027]\n\tif command in hMIEnumPrompt:\n\t\n\t\ttagPath \u003d value[\u0027tagPath\u0027]\n\t\tjsonString \u003d system.util.jsonEncode(hMIEnumPrompt[command])\n\t\tprompt \u003d system.util.jsonDecode(jsonString)\n\t\t\n\t\t#Alsway Add TagPath to Parameters\n\t\tprompt[\"parameters\"][\"TagPath\"]\u003dtagPath\n\t\tprompt[\"parameters\"][\"Command\"]\u003dcommand\n\t\treturn prompt\n\t\n\treturn {\"viewPath\":\"\"}",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "expr-struct"
+                        }
+                      },
+                      "props.params.TagPath": {
+                        "binding": {
+                          "config": {
+                            "path": "view.params.TagPath"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "ButtonLabel": "Resume",
+                        "Label": "",
+                        "SetValue": 30,
+                        "ShowLabel": false
+                      },
+                      "path": "Standard/Components/Faceplates/Input/Command Set Button"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CmdShutdown"
+                    },
+                    "position": {
+                      "basis": "35px"
+                    },
+                    "propConfig": {
+                      "props.params.Disabled": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}"
+                            },
+                            "tagPath": "{TagPath}/Sts/Enum"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": null,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 0,
+                                  "output": true
+                                },
+                                {
+                                  "input": 20,
+                                  "output": true
+                                },
+                                {
+                                  "input": 30,
+                                  "output": false
+                                },
+                                {
+                                  "input": 40,
+                                  "output": true
+                                },
+                                {
+                                  "input": 50,
+                                  "output": false
+                                },
+                                {
+                                  "input": 60,
+                                  "output": false
+                                },
+                                {
+                                  "input": 70,
+                                  "output": true
+                                },
+                                {
+                                  "input": 80,
+                                  "output": false
+                                },
+                                {
+                                  "input": 90,
+                                  "output": false
+                                },
+                                {
+                                  "input": 100,
+                                  "output": false
+                                },
+                                {
+                                  "input": 110,
+                                  "output": false
+                                },
+                                {
+                                  "input": 120,
+                                  "output": false
+                                },
+                                {
+                                  "input": 130,
+                                  "output": false
+                                },
+                                {
+                                  "input": 200,
+                                  "output": true
+                                },
+                                {
+                                  "input": 210,
+                                  "output": true
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      },
+                      "props.params.Enabled": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 2.5,
+                            "mode": "indirect",
+                            "references": {
+                              "TagPath": "{view.params.TagPath}"
+                            },
+                            "tagPath": "{TagPath}/Sts/Enum"
+                          },
+                          "transforms": [
+                            {
+                              "fallback": false,
+                              "inputType": "scalar",
+                              "mappings": [
+                                {
+                                  "input": 30,
+                                  "output": true
+                                },
+                                {
+                                  "input": 50,
+                                  "output": true
+                                },
+                                {
+                                  "input": 60,
+                                  "output": true
+                                },
+                                {
+                                  "input": 80,
+                                  "output": true
+                                },
+                                {
+                                  "input": 90,
+                                  "output": true
+                                },
+                                {
+                                  "input": 100,
+                                  "output": true
+                                },
+                                {
+                                  "input": 110,
+                                  "output": true
+                                },
+                                {
+                                  "input": 120,
+                                  "output": true
+                                },
+                                {
+                                  "input": 130,
+                                  "output": true
+                                }
+                              ],
+                              "outputType": "scalar",
+                              "type": "map"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      },
+                      "props.params.Prompt": {
+                        "binding": {
+                          "config": {
+                            "struct": {
+                              "HMIEnumPrompt": "{view.custom.HMIEnumPrompt}",
+                              "command": "{this.props.params.ButtonLabel}",
+                              "tagPath": "{view.params.TagPath}"
+                            },
+                            "waitOnAll": true
+                          },
+                          "transforms": [
+                            {
+                              "code": "\thMIEnumPrompt \u003d value[\u0027HMIEnumPrompt\u0027]\n\tcommand \u003d value[\u0027command\u0027]\n\tif command in hMIEnumPrompt:\n\t\n\t\ttagPath \u003d value[\u0027tagPath\u0027]\n\t\tjsonString \u003d system.util.jsonEncode(hMIEnumPrompt[command])\n\t\tprompt \u003d system.util.jsonDecode(jsonString)\n\t\t\n\t\t#Alsway Add TagPath to Parameters\n\t\tprompt[\"parameters\"][\"TagPath\"]\u003dtagPath\n\t\tprompt[\"parameters\"][\"Command\"]\u003dcommand\n\t\treturn prompt\n\t\n\treturn {\"viewPath\":\"\"}",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "expr-struct"
+                        }
+                      },
+                      "props.params.TagPath": {
+                        "binding": {
+                          "config": {
+                            "path": "view.params.TagPath"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "ButtonLabel": "Shutdown",
+                        "Label": "",
+                        "SetValue": 50,
+                        "ShowLabel": false
+                      },
+                      "path": "Standard/Components/Faceplates/Input/Command Set Button"
+                    },
+                    "type": "ia.display.view"
+                  }
+                ],
+                "meta": {
+                  "name": "CmdHMIEnum"
+                },
+                "position": {
+                  "basis": "200px"
+                },
+                "props": {
+                  "direction": "column"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "CmdEnum"
+            },
+            "position": {
+              "basis": "309px"
+            },
+            "props": {
+              "style": {
+                "margin": 5,
+                "paddingLeft": 3
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Operation"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "if({view.custom.PromptActive},false,true)"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Prompt"
+        },
+        "position": {
+          "basis": "320px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.TagStatus.Prompt.Id} \u003e 0"
+              },
+              "type": "expr"
+            }
+          },
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "path": "view.params.TagPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Implementation Modules/Sequencer/Faceplates/Components/Prompt"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

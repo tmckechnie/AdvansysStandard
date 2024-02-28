@@ -1,0 +1,219 @@
+{
+  "custom": {
+    "AlarmSummary": null,
+    "alarmAck": null,
+    "alarmStyle": null
+  },
+  "params": {
+    "TagPath": "[default]SCVD/Sefateng/ROM/Surface/100WT100"
+  },
+  "propConfig": {
+    "custom.AlarmSummary": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Summary/Information"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.alarmAck": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cmd/AlarmAcknowledge"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.alarmStyle": {
+      "binding": {
+        "config": {
+          "path": "view.custom.AlarmSummary"
+        },
+        "transforms": [
+          {
+            "code": "\treturn Standard.Modules.Alarms.GetAlarmStyle(AlarmSummary\u003dvalue)\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 435
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tlogger \u003d system.util.getLogger(\"Alarm ACK Tag Write\")\n\t#Always Write Acknowlegde to Controller\n\tself.view.custom.alarmAck \u003d True\n\talarmIdArray \u003d self.custom.unackedEventIDs\n\tif len(alarmIdArray) \u003d\u003d 0:\n\t\treturn\n\t\n\tlogger.info(\"AlarmIdArray: \" + str(alarmIdArray))\t\n\tsystem.alarm.acknowledge(alarmIdArray,\"Acknowledge From Faceplate\",self.session.props.auth.user.userName)\n"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "ButtonAck"
+        },
+        "position": {
+          "basis": "60px",
+          "display": false,
+          "shrink": 0
+        },
+        "propConfig": {
+          "custom.allAlarms": {
+            "binding": {
+              "config": {
+                "path": "view.custom.AlarmSummary.PriorityDetail"
+              },
+              "transforms": [
+                {
+                  "code": "\tids \u003d []\n\tfor priority in value.values():\n\t\tdetail \u003d priority[\"Detail\"]\n\t\tfor alarm in detail:\n\t\t\tid \u003d alarm[\"EventID\"]\n\t\t\tstate \u003d alarm[\"State\"]\n\t\t\tids.append({\"EventID\":id,\"State\":state})\n\n\treturn ids",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "custom.unackedEventIDs": {
+            "binding": {
+              "config": {
+                "path": "this.custom.allAlarms"
+              },
+              "transforms": [
+                {
+                  "code": "\tids \u003d []\n\tfor alarm in value:\n\t\tif \u0027Unacknowledged\u0027 in alarm[\"State\"]:\n\t\t\tid \u003d alarm[\"EventID\"]\n\t\t\tids.append(id)\n\n\treturn ids",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "if(len({this.custom.allAlarms})\u003e0,True,False)"
+              },
+              "type": "expr"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Button/Default",
+            "marginRight": 3
+          },
+          "text": "ACK"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tself.view.custom.alarmAck \u003d not self.view.custom.alarmAck\n\t"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "266px"
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Text"
+          },
+          "text": "Alarms"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tself.view.custom.alarmAck \u003d not self.view.custom.alarmAck"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Value"
+        },
+        "position": {
+          "basis": "250px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.style": {
+            "binding": {
+              "config": {
+                "path": "view.custom.alarmStyle"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.classes": {
+            "persistent": true
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "\"Unacked: \" + if(isNull({view.custom.AlarmSummary.HighestUnackedPriorityName}),\"None\",{view.custom.AlarmSummary.HighestUnackedPriorityName}) + \"; \" +\r\n\"Active: \" + if(isNull({view.custom.AlarmSummary.HighestActivePriorityName}),\"None\",{view.custom.AlarmSummary.HighestActivePriorityName})"
+              },
+              "type": "expr"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "text": "Unacked: None; Active: None",
+          "textStyle": {
+            "paddingRight": 5,
+            "textAlign": "right"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

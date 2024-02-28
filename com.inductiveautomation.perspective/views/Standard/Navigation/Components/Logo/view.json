@@ -1,0 +1,176 @@
+{
+  "custom": {
+    "Logo": "data:imagef;base64,iVBORw0KGgoAAAANSUhEUgAAAOsAAAAoCAYAAAAfdg3PAAAAAXNSR0IArs4c6QAAAARnQU1BAACx\njwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABAlSURBVHhe7Z15lFTFFcafcYv7vmsSNe4xSlCJ\nmogLJiIIB4LsiLKqSJT8gQtC92xsghJEDKJEA+4RRRGnp7tnmBmRJcQoqIioATyEiJoooCCLk9/3\n+r5JT3cP09vgiO875556776qW/Vu1VdVr6p6xmkUDHl6H2fkvKlOIPwj0/jw4aPJIVCxh1MYLXUm\nLatxiiredO6YfYg98eHDR5NCYXSGM/7vNU5BuMYZ9zfCSKUzeM7e9tSHDx9NAsHwfc44iFoYFUlj\nErv/q8Xw4cPHt45A2V3OPYykheX/J6onsZH2TxbThw8f3xoCZf2cMQv0jZpMVIlG2nGLa4hXaCl8\n+PCx0zH8lfbOyOpvnJLK1ET1REQeu1CEvcVS+vDhY6ehIPJrp6RqC2SFkOFkgiZK8dwadwQOlHU3\nCz58+Gh0BOac6QQjf3RGvrrJJWEqciZKEd+zMWL/xRk+u4VZ8uHDR6NhWOkJTnHlWqew/EMnUDqW\nKfDX9X6veqLv1pGvMqqGJjsF0YVOSfVmCNvcLH5v0K1bt8O7d+9+8YABA/Y0lQ8fjYTA8wc7xRVv\nuN+fo+dr9Xce09qJTIdTrwS7AlFHv6brR51g9EU3naR47hpn2JyTzfL3ApD1pRtvvLGG0P9299GI\n0OGGwvJyd2XX+0bVN2gwUgphH3ZGz4uNoIlkVZyC8HPIEy5JpQuSXoQvKl/m3DnnCMthlwck/cfA\ngQNF1nGm8uGjEVAQfja2Z5pIRo2w0Wd4/qR7XeeZiFoe4tlDzqgEMouw7t5sBaPzi/taLrs0mAIv\nZApc07Vr11Gm8uEjzygomxwjaoqRUwTUNDcY/rNTGJkdG20hYozE851AeALftd+4C0yJaSXuSB19\nyXFqdrPcdln4ZPXRuAiEgy6hUk1xPdH3qrvSWzaJeHOdCW9Kt9QJlo1xiis3N7hirGOJBZFpluMu\nC5+sPhoPwbJbnTH6tmxgtVeiOMWVW9xRuKQ6xHfsJHRfNHhgQqKOIPYtvEt/y0HWeT5ZfeQfQ2ee\nwfT089ppbSqSxYviaAEpGNnIN+jpEG+ZS8B00mrBSiNzESPwsNmXWAnyjpYtW+7RpUuXSyFN227d\nul0dL7169Wpm0XLCtddeu9d11113ATavIZ/2ELOdxO6X9+vXL2Oyku4QbF7W0JYP8S4jn1PsNiP0\n6NHjF/igjl/QtcHmxT179tzPomUM0p7Yu3fvNvF2Pds8u5L6+IlFzQn4/SDstaC8bZFW2D8NdU6f\nVtRTM2SHZwKU7w033NCqT58+B5gqY5DHUfj+Vyo75b4Uf2XgEx0jHP3acnekK5r7ubs1k5JkcaKp\nrrsiHOnp2ghEL3enwOmccPJGZf1yZ2TVMicQ+r1rI8+gMnv079+/BufWXH/99XUEZ0kWdO7c+ZcW\nPWPQ8Fpj4y2I5eaRKFSEG2ZB1iduuummGsI7TZUEnnXUuxEuV6dk6rTQqVOn0/T+NLgkv9Bw5JcP\neLdeFj1tBAKBPSjPUtmVnUTbEurkK+SRbBs7Zd+H9KOQNfK7bCov8t2ObgkyNBvbkPBobGySTWz8\nzNRJIM70m2++WSv8Y0yVNpQHbWIa8l/PPwq530yerxH223FdDg+1gDgb3QWlooq3IM5oyLrJHfVS\nEU0ist2zqMYZwbQ5HoFXOjqjXq3Z4VTY+97Vfm1htModjV2ChzqYlbwBx7ai4a3DsRu53iDhej3y\npSqlb9++cpSenWtJ0gaN+SJsb5MN2VIeso2teNmWJVkf0/QZe29zm3K04NkLikPchZDkB6ZOCzT4\n40i3wt691i8KaTSuX6yz6W1J0gJp98PGWvmDcLNn07OPbJFddTJcRzUrsaRpQTMNfFmq2YrVnfKR\n7S1q9LLr+YT7H1qytICtA0m3VunJo9jUdUA+OuSyQflzfZep0wI+P4K076qM6sxIvx2pbSPSW+c7\nw5IkIBA+lRHyY1vdjU1rC6MLnGDoPgicekXX+94MhkvMSl0EQwPr/+71VpLLHuH+5dopt8g6snoT\nHUXep8Rt2rTRlPI4KuBYCZVyDHI81x0I15njIxY9LYgcpHlVabGxhutrlIdse/lIcPzrVvkZkRU7\nv1Hj0+iHjaSTX+R3OPKF8uf5EFNnBI1QiX5RiN0LuV5sDeoz7Kf91z94132Jv1pEwtbQeH/ommcn\nISV6L8Xhuq8lTQvE76hy0Smood/D/dmyrak1163J4zHeaSvP3tb7WbK0Qbop1pEsTdUBYr+n8ifc\nShl+auq0QJoRsk24EbmNPE4hPEZ2KHsXrl8WadHPtCRxCMw+GkK+Z4cYjEyEui+MlkGoKUl7pRKN\nwMHwVLOSGsHQ8JS/d3X3ZcNPOwVlT9XdoyVf5VVS+RmErXcKkm/gpAFyPuFXkONoUzcIHHwiabab\nc7uaOgk8m58NWTUqkOYj62mTenkq1m00PNtCQ837qTDsns07btU0jevWpm4QHlnViVD+PqZOAn6J\nyC+Es0yVFog/0tItMVUS6AhORQ6z24xAma9soJOcZfVZbaq0gb1ZdkDmaVMlgY7mrLZt2yacQQhU\n7M+oucidyqZaEHIJHHkOmVGHVO6WTuQFs7JjFEQm1tmrdW2Wvxw7/aTjiAmdgMqhvIorVzpFpSeY\nlUYFjrsQB6livqHRn2HqBkFlnacKpUGr4s4ydRKwm/XWDWV70Hr5txN7eXTuFJiwylR5BR3BAZT9\nE+sQ0v52pUy1ZKVsA02dBOJMsPJXmiotkO5OG53WMHIeauq8QZ0kZXI7ScKRpnZBXR9J/hs0I+BZ\n3c+/NECZH9c7Y2OBqdLAM8/szmhZGts6iSNLHbHpqs73ipwiUWykrIbo6X8LFESecvOJjdakbeBc\nsQg7lg5kJ/3xNRx3rsiK8zWtOt3UDUJkFVElpP+5qZOA/azJStpWXi9PRZ9varfRUNb12TaaNLEb\ntj8WWQl7mK5BZEDW+63hVpgqLRD/XPnDFqre1gyjefPmef2RBOX2Osl3+Kbe3dSq897yB3l+TTlO\nMnXaIE0X1ZnaG2Wv4D6NGUtBmf2RsxRkiRd3Ich+OVNYvtgprnjfuSOc2fRiyuI9GcGrnMKKlRB1\nLERt+Bc7mhK7I3i0wgkszsuxRBx0MpWsbZVucponVEjQpjzbuM6KrMg5pk4CdrMmq/Xyq20qPNrU\nstnLmwKT94mmzgpa9OD9fyu/gK7Y9HzTF1lv0/wmQ1aBGdDtIqv8ovLhgyW8Q/9svlFTgTLVdpK8\nwwWmFolfMhJnNBuIgzrAh1V3sqM8IH410smeJyAYud2ZsCQFQeoREVajYjAy3gnMOd6sZIY7Zh7m\nBMJ3QPxtaf8WVoSNlZP5ffbHEq+66qq9ccaDVOgmVax6tniRjudqNFqUaFJkFUj/gDWQd71eHlsv\nymYOjcYF6f9Ag1yXyi82grgjGPGaFFkFfHAlfg9plJJ/VF7ul1PmW/HTQRYtK1gnucr87m7PaMuF\n643yDWFOsxnK2QNZ7HU4NktYRNl71t22KYpe4pRUbkprL9RdHZ7HN2TVp05hOLcDBMWR45yiuSti\nxG8gX4lIrQWnQLjeRYp0gGMflUPUIGkYX3G/lvDfEl0j/2nKZCXd5V4v37lz53M0emDT/W4izHpv\nmncdqAZuI7TE9UmcaLtre1Mlqwfq7lLkedWD6ll+wVcrsTvAomQF0nud5HLdUw+1U2Dyymk2Y9gN\nW52wVaX69doo92+SVxuLAwJl7Rjltu/4WCCE0hS4pOpLJ1B6kaXMDfota9Hcf8VOPe2AsJom6+d0\nwdAgS5kVcPjFcoQaHI6ZJicTHti+ffuDJbqmMq7O9ZsVaTSyxvfy2Bqq8qpBqtFou8KiZQQtzGDr\nMyPqAsrWTKORRH5RKNvk9aniEDZZsnrgHVpQD08g7r63lTvrERD/XuF1ktg+i3I+qTrgeq5FyRuw\n3Zpylyovld3a44X2GIwI9XVHufq+H0XkkupvnOGhayxFfjA81NwprlzvHpxINbLX7uGGCixF1sAJ\nJdbIV5gqCXJKNmRllDvfiCr7Z5s6CTzLiawCad1eHluvI2VGhHJ7nDGw18am/9r2SbkCDmH3Jy93\nNZi8mjxZPVAf5/Be1dYRfaIO2R5lhMGDB+9N+VfJT4QzsbVGROK60f6IAHlcRvnfs3wS/FLAd2Sq\nvVCdXNLq792lOU1B68Xw0iuZhm+NHWmMJ6yI6i58TbaYOYGXn2xEqbc3JM4l2ZCVXrCZekKJGoip\nk4D9nMmqSlQZ1THQ+LwpfdazDt6zhxoEZfoieU8vBht9v3NkFeho3BV+1Q32Mz6Z5oHyT7KpqWdr\nM/Jje9wooH57Wv3WmCoOgbJ76/xVfRFXBA6W3W4xGgcjXunmbg3FLzi5W0nRZy1GzqAx3qZGg7N1\nhC4loVSZ2ZBVq6jE32g9+HhTJ4FnOf/qRotk5PVPj7DYzKnRYKOFbGmah91+pk6EVi7XNTWy4sej\nKPcI3uF3+kQwdR0Qp7PeTb7KZO88EZTN7STVQdq3e9azGQE7Z0LEIOEV9R0PpewFRtavTJWAguh0\ndyvHnYISauV3Z0DninUow+sgtFWTx/+Tg6N1/nW9GhwO0oLScMI+6PpL7Hqsek2eZURWgbRTNT21\nXnc6MgAb/WRbocmHari5kFXA5kRVYj4aDSPP7pTnNZULu1uRCV55VXakL89vI9ygPNE3GbJiM8gU\n1fPDh6SfTjiMUD6/BZmCbLT8l5BH1nuw+Gkv/PCBCGsEynUNZZbKLntcL0WmIlqH6EdblL+fJNxm\nZX/IkiVAhyQKIiHngfcY2cLTTbtzEAgXO/cv07fzEvePs+UZOLsDZNosUskJmv4p9K5FZDlPhEMy\n6oVx7iHIfNmSfdnz7HvXsq1nOP9eS5YVSN9SDUYNnOubTZ01aBSnMfKsVNl2VHbd847XW7IGMWTI\nEK1Wf6Y/EofvB5s6CeT/0KBBg2R7oanSAvF1KGKBRk6VW/7wyq+y6l4h76bz2rV7pNkCGxNlm3w3\nk29O/9IUW/pZ5grVo1d2z9/xZcc3bxD3cEuWAoHSQ/mOLHGmTNn5fzKzqLyQUVW/RWwU4OjmOGkG\n4bs4YRWyMl6o2I8IQ+3atcv4Z1XaSiH93cgi7CfZlo6GtZzrqy1JVtD+GzZeUD68S1bnXhMBmY7F\n1r1qHJRzdXy5JehXk98S4tV7nDIFdsPWNBrkMtKdZ7okYLsTDfM98hlmqoxAubTPOh47UfJ7Bzur\nCN/nvpJ3GtGhQ4djLGpOwK57EALbGf3Qoz5ojYDydUQmY7MKUdtQ2bVHrBXhwfWtI3yvoOmfvnO0\n0hcvIpxFyQmpbEuX6W9Nvw3UV3YeZXsgpfaYXn3I1zFBff+prIxMeR1o+N49ARJtspH1RlPnFWob\n35U24sNHkwUj3k1G1E2Metmd3vPhw0fjA7JG9R1JWGYqHz58NDXwPXwko+lmG1lzOrrow4ePRgAE\n1VnjWxlNH+db0p8C+/DRFKHVcUZUdwtF2ys2qkbtsQ8fPpoKtCsAOfVjgPcZWXUYQltaF9vjnQzH\n+R9S42EMbTSD+QAAAABJRU5ErkJggg\u003d\u003d",
+    "logoEdit": false,
+    "tagPath": "[AdvansysStandard]System/System Info/Logo"
+  },
+  "params": {
+    "LogoFit": {
+      "height": 100,
+      "mode": "cover",
+      "scroll": false,
+      "width": 100
+    }
+  },
+  "propConfig": {
+    "custom.Logo": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "tagPath": "{view.custom.tagPath}"
+          },
+          "tagPath": "{tagPath}"
+        },
+        "transforms": [
+          {
+            "expression": "\u0027data:imagef;base64,\u0027+{value}",
+            "type": "expression"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.logoEdit": {
+      "persistent": true
+    },
+    "custom.tagPath": {
+      "binding": {
+        "config": {
+          "expression": "{session.custom.SystemInfo.TagPath} + \"/Logo\""
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.LogoFit": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 60,
+      "width": 138
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Image"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "propConfig": {
+              "props.source": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Logo"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "fit": {
+                "mode": "contain"
+              }
+            },
+            "type": "ia.display.image"
+          },
+          {
+            "events": {
+              "component": {
+                "onFileReceived": {
+                  "config": {
+                    "script": "\tbytes \u003d event.file.getBytes()\n\tlogoTagPath \u003d self.view.custom.tagPath\n\tself.view.custom.logoEdit \u003d False\n\tStandard.Navigation.Common.SetLogoImage(TagPath\u003dlogoTagPath,Image\u003dbytes)\n\t\n\t\n"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "FileUpload",
+              "tooltip": {
+                "text": "Edit Photo"
+              }
+            },
+            "position": {
+              "height": 0.32,
+              "width": 0.17,
+              "x": 0.83
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.logoEdit}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "fileUploadIcon": {
+                "path": "material/edit"
+              },
+              "supportedFileTypes": [
+                "jpg",
+                "png",
+                "gif"
+              ]
+            },
+            "type": "ia.input.fileupload"
+          }
+        ],
+        "events": {
+          "dom": {
+            "onMouseLeave": {
+              "config": {
+                "script": "\tself.view.custom.logoEdit \u003d False"
+              },
+              "scope": "G",
+              "type": "script"
+            },
+            "onMouseOver": {
+              "config": {
+                "script": "\tself.view.custom.logoEdit \u003d True"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "Standard/Docked/Header/ContentBackground Standard/Docked/Header/ContentBorder Standard/Docked/Header/ContentText",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

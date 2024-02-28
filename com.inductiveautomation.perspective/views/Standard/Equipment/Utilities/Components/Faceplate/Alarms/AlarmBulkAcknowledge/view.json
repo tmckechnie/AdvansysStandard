@@ -1,0 +1,150 @@
+{
+  "custom": {
+    "AlarmSummary": null,
+    "CmdAlarmAcknowledgeEnabled": null,
+    "alarmAck": null,
+    "alarmStyle": null
+  },
+  "params": {
+    "TagPath": "[default]SCVD/Sefateng/ROM/Surface/100WT100"
+  },
+  "propConfig": {
+    "custom.AlarmSummary": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Summary/Information"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.CmdAlarmAcknowledgeEnabled": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cmd/AlarmAcknowledge.Enabled"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.alarmAck": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cmd/AlarmAcknowledge"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.alarmStyle": {
+      "binding": {
+        "config": {
+          "path": "view.custom.AlarmSummary"
+        },
+        "transforms": [
+          {
+            "code": "\treturn Standard.Alarms.GetAlarmStyle(AlarmSummary\u003dvalue)\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 435
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tlogger \u003d system.util.getLogger(\"Alarm ACK Tag Write\")\n\t#Always Write Acknowlegde to Controller if Enabled\n\tcmdAlarmAcknowledgeEnabled \u003d self.view.custom.CmdAlarmAcknowledgeEnabled\n\tif cmdAlarmAcknowledgeEnabled:\n\t\tself.view.custom.alarmAck \u003d not self.view.custom.alarmAck\n\talarmIdArray \u003d self.custom.unackedEventIDs\n\tif len(alarmIdArray) \u003d\u003d 0:\n\t\treturn\n\t\n\tlogger.info(\"AlarmIdArray: \" + str(alarmIdArray))\t\n\tsystem.alarm.acknowledge(alarmIdArray,\"Acknowledge From Faceplate\",self.session.props.auth.user.userName)\n"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "ButtonAck"
+        },
+        "position": {
+          "basis": "60px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "custom.allAlarms": {
+            "binding": {
+              "config": {
+                "path": "view.custom.AlarmSummary.PriorityDetail"
+              },
+              "transforms": [
+                {
+                  "code": "\tids \u003d []\n\tfor priority in value.values():\n\t\tdetail \u003d priority[\"Detail\"]\n\t\tfor alarm in detail:\n\t\t\tid \u003d alarm[\"EventID\"]\n\t\t\tstate \u003d alarm[\"State\"]\n\t\t\tids.append({\"EventID\":id,\"State\":state})\n\n\treturn ids",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "custom.unackedEventIDs": {
+            "binding": {
+              "config": {
+                "path": "this.custom.allAlarms"
+              },
+              "transforms": [
+                {
+                  "code": "\tids \u003d []\n\tfor alarm in value:\n\t\tif \u0027Unacknowledged\u0027 in alarm[\"State\"]:\n\t\t\tid \u003d alarm[\"EventID\"]\n\t\t\tids.append(id)\n\n\treturn ids",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "position.display": {
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Button/Default"
+          },
+          "text": "Acknowledge All Alarms"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

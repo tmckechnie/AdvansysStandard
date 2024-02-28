@@ -1,0 +1,255 @@
+{
+  "custom": {
+    "GetHtml": "\u003chtml\u003e\u003cbody\u003eHello World Send Me Somethng\u003c/body\u003e\u003c/html\u003e",
+    "GetJson": {
+      "value": "Hello World Send Me Somethng"
+    },
+    "PostViaHttpBinding": {
+      "value": "Hello World Take it net lekker"
+    },
+    "Put": {
+      "value": "Hello World Take it net lekker"
+    },
+    "PutViaScript": {
+      "value": "Hello World Take it net lekker"
+    },
+    "auth": "UmVtb3RlOnBhc3N3b3Jk",
+    "baseUrl": "http://ign01vs1:8088/system/webdev/AdvansysStandard/Example/API/V1/HelloWorld",
+    "body": {
+      "value": "Hello World Take it net lekker"
+    },
+    "jsonBody": "{\"value\":\"Hello World Take it net lekker\"}",
+    "password": "password",
+    "username": "Remote"
+  },
+  "params": {
+    "EndPoint": "Example/API/V1/HelloWorld",
+    "Project": "AdvansysStandard",
+    "Server": "ign01vs1:8088"
+  },
+  "propConfig": {
+    "custom.GetHtml": {
+      "binding": {
+        "config": {
+          "connectTimeout": 60000,
+          "enableCookies": true,
+          "enableValueCache": true,
+          "polling": {
+            "enabled": false,
+            "rate": ""
+          },
+          "request": {
+            "auth": {
+              "type": "None",
+              "value": ""
+            },
+            "method": "GET",
+            "url": "{view.custom.baseUrl}+\"?ReturnType\u003dhtml\""
+          },
+          "socketTimeout": 60000
+        },
+        "type": "http"
+      },
+      "persistent": true
+    },
+    "custom.GetJson": {
+      "binding": {
+        "config": {
+          "connectTimeout": 60000,
+          "enableCookies": true,
+          "enableValueCache": true,
+          "polling": {
+            "enabled": false,
+            "rate": ""
+          },
+          "request": {
+            "auth": {
+              "type": "None",
+              "value": ""
+            },
+            "method": "GET",
+            "url": "{view.custom.baseUrl}+\"?ReturnType\u003djson\""
+          },
+          "socketTimeout": 60000
+        },
+        "type": "http"
+      },
+      "persistent": true
+    },
+    "custom.PostViaHttpBinding": {
+      "binding": {
+        "config": {
+          "connectTimeout": 60000,
+          "enableCookies": true,
+          "enableValueCache": true,
+          "polling": {
+            "enabled": false,
+            "rate": ""
+          },
+          "request": {
+            "auth": {
+              "type": "Basic",
+              "value": "{view.custom.auth}"
+            },
+            "body": "{view.custom.jsonBody}",
+            "method": "POST",
+            "url": "{view.custom.baseUrl}"
+          },
+          "socketTimeout": 60000
+        },
+        "transforms": [
+          {
+            "code": "\tif quality.badOrError:\n\t\treturn quality\n\treturn value",
+            "type": "script"
+          }
+        ],
+        "type": "http"
+      },
+      "persistent": true
+    },
+    "custom.PostViaScript": {
+      "binding": {
+        "config": {
+          "struct": {
+            "auth": "{view.custom.auth}",
+            "baseUrl": "{view.custom.baseUrl}",
+            "data": "{view.custom.jsonBody}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseUrl \u003d value[\u0027baseUrl\u0027]\n\tauthorization \u003d value[\u0027auth\u0027]\n\tdata \u003d value[\u0027data\u0027]\n\t#data \u003d system.util.jsonEncode(data)\n\theaders \u003d {}\n\theaders[\"Content-Type\"] \u003d \u0027application/json\u0027\n\theaders[\"Authorization\"] \u003d \"Basic \"+authorization\n\tresponse \u003d Standard.InterfaceModules.WebService.Common.ClientPost(Url\u003dbaseUrl,Data\u003ddata,Headers\u003dheaders)\n\t#getStatusCode()\n\t\n\tif response.isGood():\n\t\treturn response.getJson()\n\telse:\n\t\treturn response",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Put": {
+      "binding": {
+        "config": {
+          "connectTimeout": 60000,
+          "enableCookies": true,
+          "enableValueCache": true,
+          "polling": {
+            "enabled": false,
+            "rate": ""
+          },
+          "request": {
+            "auth": {
+              "type": "Basic",
+              "value": "{view.custom.auth}"
+            },
+            "body": "{view.custom.jsonBody}",
+            "method": "PUT",
+            "url": "{view.custom.baseUrl}"
+          },
+          "socketTimeout": 60000
+        },
+        "transforms": [
+          {
+            "code": "\tif quality.badOrError:\n\t\treturn quality\n\treturn value",
+            "type": "script"
+          }
+        ],
+        "type": "http"
+      },
+      "persistent": true
+    },
+    "custom.PutViaScript": {
+      "binding": {
+        "config": {
+          "struct": {
+            "auth": "{view.custom.auth}",
+            "baseUrl": "{view.custom.baseUrl}",
+            "data": "{view.custom.jsonBody}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseUrl \u003d value[\u0027baseUrl\u0027]\n\tauthorization \u003d value[\u0027auth\u0027]\n\tdata \u003d value[\u0027data\u0027]\n\theaders \u003d {}\n\theaders[\"Content-Type\"] \u003d \u0027application/json\u0027\n\theaders[\"Authorization\"] \u003d \"Basic \" + authorization\n\tresponse \u003d Standard.InterfaceModules.WebService.Common.ClientPut(Url\u003dbaseUrl,Data\u003ddata,Headers\u003dheaders) \n\treturn response.getJson()",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.auth": {
+      "binding": {
+        "config": {
+          "struct": {
+            "password": "{view.custom.password}",
+            "username": "{view.custom.username}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tusername \u003d value[\u0027username\u0027]\n\tpassword \u003d value[\u0027password\u0027]\n\n\treturn Standard.InterfaceModules.WebService.Common.GetHttpBasicAuthenticationValue(Username\u003dusername,Password\u003dpassword)\n\t\n\n\t\n\t\n",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.baseUrl": {
+      "binding": {
+        "config": {
+          "expression": "\"http://\"+{view.params.Server}+\"/system/webdev/\"+{view.params.Project}+\"/\"+{view.params.EndPoint}"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.body": {
+      "persistent": true
+    },
+    "custom.jsonBody": {
+      "binding": {
+        "config": {
+          "path": "view.custom.body"
+        },
+        "transforms": [
+          {
+            "code": "\treturn system.util.jsonEncode(value)\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.password": {
+      "persistent": true
+    },
+    "custom.username": {
+      "persistent": true
+    },
+    "params.EndPoint": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Project": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Server": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

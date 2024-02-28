@@ -1,0 +1,629 @@
+{
+  "custom": {
+    "EnumerationGroup": {
+      "columns": [
+        {
+          "enumerationId": 2,
+          "id": 1,
+          "name": "State Type"
+        },
+        {
+          "enumerationId": 3,
+          "id": 2,
+          "name": "State Reason Gorp"
+        },
+        {
+          "enumerationId": 4,
+          "id": 3,
+          "name": "State Reason"
+        }
+      ],
+      "description": "",
+      "id": 1,
+      "name": "State Reasons",
+      "rows": [
+        {
+          "ordinal": 1,
+          "values": [
+            {
+              "columnId": 1,
+              "ordinalId": 3,
+              "value": "Running"
+            },
+            {
+              "columnId": 2,
+              "ordinalId": 9,
+              "value": "Running"
+            },
+            {
+              "columnId": 3,
+              "ordinalId": 14,
+              "value": "Running"
+            }
+          ]
+        },
+        {
+          "ordinal": 2,
+          "values": [
+            {
+              "columnId": 1,
+              "ordinalId": 4,
+              "value": "Stopped - Macro"
+            },
+            {
+              "columnId": 2,
+              "ordinalId": 6,
+              "value": "Undefined"
+            },
+            {
+              "columnId": 3,
+              "ordinalId": 10,
+              "value": "Undefined"
+            }
+          ]
+        },
+        {
+          "ordinal": 3,
+          "values": [
+            {
+              "columnId": 1,
+              "ordinalId": 4,
+              "value": "Stopped - Macro"
+            },
+            {
+              "columnId": 2,
+              "ordinalId": 7,
+              "value": "Production"
+            },
+            {
+              "columnId": 3,
+              "ordinalId": 10,
+              "value": "Undefined"
+            }
+          ]
+        },
+        {
+          "ordinal": 4,
+          "values": [
+            {
+              "columnId": 1,
+              "ordinalId": 4,
+              "value": "Stopped - Macro"
+            },
+            {
+              "columnId": 2,
+              "ordinalId": 7,
+              "value": "Production"
+            },
+            {
+              "columnId": 3,
+              "ordinalId": 11,
+              "value": "Block Shute"
+            }
+          ]
+        },
+        {
+          "ordinal": 5,
+          "values": [
+            {
+              "columnId": 1,
+              "ordinalId": 4,
+              "value": "Stopped - Macro"
+            },
+            {
+              "columnId": 2,
+              "ordinalId": 7,
+              "value": "Production"
+            },
+            {
+              "columnId": 3,
+              "ordinalId": 12,
+              "value": "Belt Tear"
+            }
+          ]
+        },
+        {
+          "ordinal": 6,
+          "values": [
+            {
+              "columnId": 1,
+              "ordinalId": 4,
+              "value": "Stopped - Macro"
+            },
+            {
+              "columnId": 2,
+              "ordinalId": 8,
+              "value": "Engineering"
+            },
+            {
+              "columnId": 3,
+              "ordinalId": 10,
+              "value": "Undefined"
+            }
+          ]
+        },
+        {
+          "ordinal": 8,
+          "values": [
+            {
+              "columnId": 1,
+              "ordinalId": 4,
+              "value": "Stopped - Macro"
+            },
+            {
+              "columnId": 2,
+              "ordinalId": 8,
+              "value": "Engineering"
+            },
+            {
+              "columnId": 3,
+              "ordinalId": 13,
+              "value": "Motor Trip"
+            }
+          ]
+        },
+        {
+          "ordinal": 9,
+          "values": [
+            {
+              "columnId": 1,
+              "ordinalId": 5,
+              "value": "Stopped - Micro"
+            },
+            {
+              "columnId": 2,
+              "ordinalId": 9,
+              "value": "Running"
+            },
+            {
+              "columnId": 3,
+              "ordinalId": 14,
+              "value": "Running"
+            }
+          ]
+        }
+      ]
+    },
+    "EnumerationGroups": [
+      {
+        "description": "",
+        "id": 1,
+        "name": "State Reasons"
+      },
+      {
+        "description": "",
+        "id": 2,
+        "name": "Downtime Reason"
+      },
+      {
+        "description": "",
+        "id": 3,
+        "name": "Section State Reasons"
+      }
+    ],
+    "connectionTagPath": "",
+    "enumerationGroupID": 1,
+    "selection1": {
+      "options": {
+        "Engineering": {
+          "options": {
+            "Motor Trip": {
+              "options": [],
+              "ordinals": [
+                8
+              ],
+              "value": "Motor Trip"
+            },
+            "Undefined": {
+              "options": [],
+              "ordinals": [
+                6
+              ],
+              "value": "Undefined"
+            }
+          },
+          "ordinals": [
+            6,
+            8
+          ],
+          "value": "Engineering"
+        },
+        "Production": {
+          "options": {
+            "Belt Tear": {
+              "options": [],
+              "ordinals": [
+                5
+              ],
+              "value": "Belt Tear"
+            },
+            "Block Shute": {
+              "options": [],
+              "ordinals": [
+                4
+              ],
+              "value": "Block Shute"
+            },
+            "Undefined": {
+              "options": [],
+              "ordinals": [
+                3
+              ],
+              "value": "Undefined"
+            }
+          },
+          "ordinals": [
+            3,
+            4,
+            5
+          ],
+          "value": "Production"
+        },
+        "Undefined": {
+          "options": {
+            "Undefined": {
+              "options": [],
+              "ordinals": [
+                2
+              ],
+              "value": "Undefined"
+            }
+          },
+          "ordinals": [
+            2
+          ],
+          "value": "Undefined"
+        }
+      },
+      "ordinals": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      "value": "Stopped - Macro"
+    },
+    "selection2": {
+      "options": {
+        "Belt Tear": {
+          "options": [],
+          "ordinals": [
+            5
+          ],
+          "value": "Belt Tear"
+        },
+        "Block Shute": {
+          "options": [],
+          "ordinals": [
+            4
+          ],
+          "value": "Block Shute"
+        },
+        "Undefined": {
+          "options": [],
+          "ordinals": [
+            3
+          ],
+          "value": "Undefined"
+        }
+      },
+      "ordinals": [
+        3,
+        4,
+        5
+      ],
+      "value": "Production"
+    },
+    "selection3": {
+      "options": [],
+      "ordinals": [
+        5
+      ],
+      "value": "Belt Tear"
+    }
+  },
+  "params": {
+    "ConnectionTagPath": "[AdvansysStandard]Standard/Interface Modules/Flow/Connection SCVD"
+  },
+  "propConfig": {
+    "custom.EnumerationGroup": {
+      "binding": {
+        "config": {
+          "struct": {
+            "connectionTagPath": "{view.params.ConnectionTagPath}",
+            "enumerationGroupID": "{view.custom.enumerationGroupID}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\t\n\tenumerationGroupID \u003d value[\u0027enumerationGroupID\u0027]\n\tconnectionTagPath \u003d value[\u0027connectionTagPath\u0027]\n\t\n\t\n\toptions \u003d Standard.InterfaceModules.Flow.PublicAPI.V1.Enumerations.GetEnumerationGroup(ConnectionTagPath\u003dconnectionTagPath,EnumerationGroupID\u003denumerationGroupID)\n\n\t\n\treturn options",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.EnumerationGroups": {
+      "binding": {
+        "config": {
+          "struct": {
+            "connectionTagPath": "{view.params.ConnectionTagPath}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tconnectionTagPath \u003d value[\u0027connectionTagPath\u0027]\n\tenumerationGroups \u003d Standard.InterfaceModules.Flow.PublicAPI.V1.Enumerations.GetEnumerationGroups(ConnectionTagPath\u003dconnectionTagPath)\n\treturn enumerationGroups",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.connectionTagPath": {
+      "persistent": true
+    },
+    "custom.enumerationGroupID": {
+      "persistent": true
+    },
+    "custom.options": {
+      "binding": {
+        "config": {
+          "struct": {
+            "connectionTagPath": "{view.params.ConnectionTagPath}",
+            "enumerationGroupID": "{view.custom.enumerationGroupID}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\t\n\tenumerationGroupID \u003d value[\u0027enumerationGroupID\u0027]\n\tconnectionTagPath \u003d value[\u0027connectionTagPath\u0027]\n\t\n\t\n\toptions \u003d Standard.InterfaceModules.Flow.PublicAPI.V1.Enumerations.GetEnumerationGroupOptions(ConnectionTagPath\u003dconnectionTagPath,EnumerationGroupID\u003denumerationGroupID)\n\n\t\n\treturn options",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.selection1": {
+      "persistent": true
+    },
+    "custom.selection2": {
+      "persistent": true
+    },
+    "custom.selection3": {
+      "persistent": true
+    },
+    "custom[\u0027Public API Status\u0027]": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "publishInitial": false,
+          "tagPath": "[AdvansysStandard]Standard/Interface Modules/Flow/Connection SCVD/Public API"
+        },
+        "type": "tag"
+      }
+    },
+    "params.ConnectionTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Dropdown"
+        },
+        "position": {
+          "basis": "36px"
+        },
+        "propConfig": {
+          "props.options": {
+            "binding": {
+              "config": {
+                "path": "view.custom.options"
+              },
+              "transforms": [
+                {
+                  "code": "\tselectionOptions \u003d []\n\tfor option in value.values():\n\t\tselectionOption \u003d {\"value\": option,\"label\": option[\u0027value\u0027]}\n\t\tselectionOptions.append(selectionOption)\n\treturn selectionOptions",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "view.custom.selection1"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "meta": {
+          "name": "Dropdown_0"
+        },
+        "position": {
+          "basis": "36px"
+        },
+        "propConfig": {
+          "props.options": {
+            "binding": {
+              "config": {
+                "path": "../Dropdown.props.value"
+              },
+              "transforms": [
+                {
+                  "code": "\tif \u0027options\u0027 in value:\n\t\toptions \u003d value[\u0027options\u0027]\n\t\tselectionOptions \u003d []\n\t\tfor option in options.values():\n\t\t\tselectionOption \u003d {\"value\": option,\"label\": option[\u0027value\u0027]}\n\t\t\tselectionOptions.append(selectionOption)\n\t\tself.props.value \u003d \"\"\n\t\treturn selectionOptions\n\t\t\n\treturn []",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "view.custom.selection2"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "meta": {
+          "name": "Dropdown_1"
+        },
+        "position": {
+          "basis": "36px"
+        },
+        "propConfig": {
+          "props.options": {
+            "binding": {
+              "config": {
+                "path": "../Dropdown_0.props.value"
+              },
+              "transforms": [
+                {
+                  "code": "\t\n\tif \u0027options\u0027 in value:\n\t\toptions \u003d value[\u0027options\u0027]\n\t\tselectionOptions \u003d []\n\t\tfor option in options.values():\n\t\t\tselectionOption \u003d {\"value\": option,\"label\": option[\u0027value\u0027]}\n\t\t\tselectionOptions.append(selectionOption)\n\t\tself.props.value \u003d \"\"\n\t\treturn selectionOptions\n\treturn []",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "view.custom.selection3"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "32px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.selection1"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif \u0027value\u0027 in value:\n\t\treturn value[\u0027value\u0027]\n\t\t\n\treturn \u0027Please Select..\u0027",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "value": ""
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "basis": "32px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.selection2"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif \u0027value\u0027 in value:\n\t\treturn value[\u0027value\u0027]\n\t\t\n\treturn \u0027Please Select..\u0027",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "value": ""
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label_1"
+            },
+            "position": {
+              "basis": "32px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.selection3"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif \u0027value\u0027 in value:\n\t\treturn value[\u0027value\u0027]\n\t\t\n\treturn \u0027Please Select..\u0027",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "value": ""
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "200px"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

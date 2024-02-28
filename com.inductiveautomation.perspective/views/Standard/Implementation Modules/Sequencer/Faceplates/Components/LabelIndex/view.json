@@ -1,0 +1,160 @@
+{
+  "custom": {},
+  "params": {
+    "IndexDesc": "Step Description",
+    "IndexStep": "Step Number",
+    "Label": "Index",
+    "ShowDesc": true,
+    "ShowIndex": true,
+    "Showlabel": true
+  },
+  "propConfig": {
+    "params.IndexDesc": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.IndexStep": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowDesc": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowIndex": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Showlabel": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 59,
+      "width": 338
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "70px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.params.Showlabel"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Text"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "IndexNumber"
+        },
+        "position": {
+          "basis": "70px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.params.ShowIndex"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.IndexStep"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/ValueDisplay"
+          },
+          "text": "Step Number",
+          "textStyle": {
+            "textAlign": "center",
+            "textIndent": "10"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "IndexDesc"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.params.ShowDesc"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.IndexDesc"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/ValueDisplay"
+          },
+          "text": "Step Description",
+          "textStyle": {
+            "textAlign": "center",
+            "textIndent": "10"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

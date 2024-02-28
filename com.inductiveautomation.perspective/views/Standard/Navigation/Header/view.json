@@ -1,0 +1,332 @@
+{
+  "custom": {
+    "HeaderView": "Standard/Navigation/Header Breadcrumb"
+  },
+  "params": {
+    "AllowedContentTypes": [
+      "Overview",
+      "Dashboard",
+      "Mimic",
+      "Alarms",
+      "Trend",
+      "Setpoints"
+    ],
+    "HeaderView": "Standard/Navigation/Header Breadcrumb",
+    "ShowOnlyConfiguredContentTypes": true
+  },
+  "propConfig": {
+    "custom.HeaderView": {
+      "binding": {
+        "config": {
+          "path": "view.params.HeaderView"
+        },
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.AllowedContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.HeaderView": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowOnlyConfiguredContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 120,
+      "width": 872
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "contextMenu": {
+            "enabled": true,
+            "items": [
+              {
+                "children": [],
+                "icon": {
+                  "color": "",
+                  "path": "material/disabled_by_default",
+                  "style": {}
+                },
+                "link": {
+                  "target": "self",
+                  "url": ""
+                },
+                "message": {
+                  "payload": {},
+                  "scope": "page",
+                  "type": ""
+                },
+                "method": {
+                  "name": "ChangeNavigationType",
+                  "params": {
+                    "NavigationType": "Default"
+                  }
+                },
+                "style": {
+                  "classes": ""
+                },
+                "text": "Default",
+                "type": "method"
+              },
+              {
+                "children": [],
+                "icon": {
+                  "color": "",
+                  "path": "material/double_arrow",
+                  "style": {}
+                },
+                "link": {
+                  "target": "self",
+                  "url": ""
+                },
+                "message": {
+                  "payload": {},
+                  "scope": "page",
+                  "type": ""
+                },
+                "method": {
+                  "name": "ChangeNavigationType",
+                  "params": {
+                    "NavigationType": "Breadcrumb"
+                  }
+                },
+                "style": {
+                  "classes": ""
+                },
+                "text": "Bread Crumb",
+                "type": "method"
+              },
+              {
+                "children": [],
+                "icon": {
+                  "color": "",
+                  "path": "material/power_input",
+                  "style": {}
+                },
+                "link": {
+                  "target": "self",
+                  "url": ""
+                },
+                "message": {
+                  "payload": {},
+                  "scope": "page",
+                  "type": ""
+                },
+                "method": {
+                  "name": "ChangeNavigationType",
+                  "params": {
+                    "NavigationType": "Menu Bar"
+                  }
+                },
+                "style": {
+                  "classes": ""
+                },
+                "text": "Menu Bar",
+                "type": "method"
+              }
+            ]
+          },
+          "name": "EmbeddedView"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.params.AllowedContentTypes": {
+            "binding": {
+              "config": {
+                "path": "view.params.AllowedContentTypes"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.ShowOnlyConfiguredContentTypes": {
+            "binding": {
+              "config": {
+                "path": "view.params.ShowOnlyConfiguredContentTypes"
+              },
+              "type": "property"
+            }
+          },
+          "props.path": {
+            "binding": {
+              "config": {
+                "path": "view.custom.HeaderView"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "InitialModelItemTagPath": "[StandardS71500]Standard/Model Item"
+          }
+        },
+        "scripts": {
+          "customMethods": [
+            {
+              "name": "ChangeNavigationType",
+              "params": [
+                "NavigationType"
+              ],
+              "script": "\tsystem.perspective.print(\"Change NavigationType: \"+NavigationType)\n\theaderViewPath \u003d self.view.custom.HeaderView\n\tsystem.perspective.print(\"Change NavigationType From: \" + self.view.custom.HeaderView)\n\t\n\tif NavigationType \u003d\u003d \"Default\":\n\t\tself.view.custom.HeaderView \u003d self.view.params.HeaderView\n\t\t\n\tif NavigationType \u003d\u003d \"Menu Bar\":\n\t\theaderViewPath \u003d \"Standard/Navigation/Header Menu Bar\"\n\t\t\n\tif NavigationType \u003d\u003d \"Breadcrumb\":\n\t\theaderViewPath \u003d \"Standard/Navigation/Header Breadcrumb\"\n\t\n\tsystem.perspective.print(\"Change NavigationType To: \" + headerViewPath)\n\tself.view.custom.HeaderView \u003d headerViewPath\n\t"
+            }
+          ],
+          "extensionFunctions": null,
+          "messageHandlers": []
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "contextMenu": {
+        "items": [
+          {
+            "children": [],
+            "icon": {
+              "color": "",
+              "path": "material/disabled_by_default",
+              "style": {}
+            },
+            "link": {
+              "target": "self",
+              "url": ""
+            },
+            "message": {
+              "payload": {},
+              "scope": "page",
+              "type": ""
+            },
+            "method": {
+              "name": "ChangeNavigationType",
+              "params": {
+                "NavigationType": "Default"
+              }
+            },
+            "style": {
+              "classes": ""
+            },
+            "text": "Default",
+            "type": "method"
+          },
+          {
+            "children": [],
+            "icon": {
+              "color": "",
+              "path": "",
+              "style": {}
+            },
+            "link": {
+              "target": "self",
+              "url": ""
+            },
+            "message": {
+              "payload": {},
+              "scope": "page",
+              "type": ""
+            },
+            "method": {
+              "name": "ChangeNavigationType",
+              "params": {
+                "NavigationType": "Default"
+              }
+            },
+            "style": {
+              "classes": ""
+            },
+            "text": "Default",
+            "type": "method"
+          },
+          {
+            "children": [],
+            "icon": {
+              "color": "",
+              "path": "material/double_arrow",
+              "style": {}
+            },
+            "link": {
+              "target": "self",
+              "url": ""
+            },
+            "message": {
+              "payload": {},
+              "scope": "page",
+              "type": ""
+            },
+            "method": {
+              "name": "ChangeNavigationType",
+              "params": {
+                "NavigationType": "Breadcrumb"
+              }
+            },
+            "style": {
+              "classes": ""
+            },
+            "text": "Bread Crumb",
+            "type": "method"
+          },
+          {
+            "children": [],
+            "icon": {
+              "color": "",
+              "path": "material/power_input",
+              "style": {}
+            },
+            "link": {
+              "target": "self",
+              "url": ""
+            },
+            "message": {
+              "payload": {},
+              "scope": "page",
+              "type": ""
+            },
+            "method": {
+              "name": "ChangeNavigationType",
+              "params": {
+                "NavigationType": "Menu Bar"
+              }
+            },
+            "style": {
+              "classes": ""
+            },
+            "text": "Menu Bar",
+            "type": "method"
+          }
+        ],
+        "style": {
+          "classes": "Standard/Popups/Navigation/Background Standard/Popups/Navigation/Text"
+        }
+      },
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "scripts": {
+      "customMethods": [],
+      "extensionFunctions": null,
+      "messageHandlers": [
+        {
+          "messageType": "PopupMessageHandler",
+          "pageScope": true,
+          "script": "\tlogger \u003d system.util.getLogger(\"PopupMessageHandler\" + str(self.session.props.id) )\n\tlogger.info(\u0027Message Received\u0027)\n\t\n\t#Initialisation\n\tId \u003d \u0027Not Specified\u0027\n\ttitle \u003d \u0027Not Specified\u0027\n\tparams \u003d {}\n\tpopupViewPath \u003d  \u0027Not Specified\u0027\n\tdescription \u003d \u0027\u0027\n\tproceed \u003d 1\n\t\n\t#Dictionary Validation\n\tif \u0027Id\u0027 in payload:\n\t\tId \u003d payload[\u0027Id\u0027]\n\telse:\n\t\tlogger.info(\u0027Id key not available\u0027)\n\t\tproceed \u003d 0\n\t\t\n\tif \u0027title\u0027 in payload:\n\t\ttitle \u003d payload[\u0027title\u0027]\n\telse:\n\t\tlogger.info(\u0027Title key not available\u0027)\n\t\tproceed \u003d 0\n\t\t\n\tif \u0027params\u0027 in payload:\n\t\ttry:\n\t\t\tparams \u003d dict(payload[\u0027params\u0027])\n\t\texcept:\n\t\t\tproceed \u003d 0\n\telse:\n\t\tlogger.info(\u0027Params key not available\u0027)\t\n\t\tproceed \u003d 0\t\n\t\t\t\n\tif \u0027view\u0027 in payload:\t\t\n\t\tpopupViewPath \u003d payload[\u0027view\u0027]\n\telse:\n\t\tlogger.info(\u0027View key not available\u0027)\t\t\n\t\tproceed \u003d 0\t\t\n\t\n\t#Open Popup\n\tif proceed \u003d\u003d 1:\n\t\tsystem.perspective.openPopup(\n\t\t\tid\u003dId, \n\t\t\tview \u003d popupViewPath,\n\t\t\tparams \u003d params,\n\t\t\tshowCloseIcon \u003d False,\n\t\t\ttitle \u003d \"\",\n\t\t\tmodal \u003d True,\n\t\t\tsessionId \u003d self.session.props.id\n\t\t\t)\n\t\tlogger.info(\u0027Complete\u0027)",
+          "sessionScope": true,
+          "viewScope": true
+        }
+      ]
+    },
+    "type": "ia.container.flex"
+  }
+}

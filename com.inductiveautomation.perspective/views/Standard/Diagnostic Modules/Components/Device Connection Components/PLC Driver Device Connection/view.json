@@ -1,0 +1,237 @@
+{
+  "custom": {},
+  "params": {
+    "PLCDeviceTagPath": ""
+  },
+  "propConfig": {
+    "params.PLCDeviceTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 383,
+      "width": 399
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "OPCServerTagPath",
+          "type": "Diagnostics/OPC Server Device Diagnostics"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "OPCServerTagPath": "{view.params.OPCServerTagPath}"
+                },
+                "tagPath": "{OPCServerTagPath}/Name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Components/Views/Header/Sub Header"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Connection Type"
+        },
+        "position": {
+          "basis": "100px"
+        },
+        "props": {
+          "params": {
+            "Label": "Connection Type",
+            "ShowLabel": true,
+            "Value": "PLC Driver"
+          },
+          "path": "Standard/Components/Views/Status/LabelDisplayLabel",
+          "useDefaultViewHeight": true
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Connected Label"
+        },
+        "position": {
+          "basis": "100px"
+        },
+        "propConfig": {
+          "props.params.Severity": {
+            "binding": {
+              "config": {
+                "path": "this.props.params.Value"
+              },
+              "transforms": [
+                {
+                  "fallback": 4,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 1,
+                      "output": 2
+                    },
+                    {
+                      "input": 0,
+                      "output": 3
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "PLCDeviceTagPath": "{view.params.PLCDeviceTagPath}"
+                },
+                "tagPath": "{PLCDeviceTagPath}/Connected"
+              },
+              "transforms": [
+                {
+                  "fallback": "None",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": 1
+                    },
+                    {
+                      "input": false,
+                      "output": 0
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "FlexType": "row",
+            "Label": "Connected"
+          },
+          "path": "Standard/Components/Views/Status/LabelDisplayLabel",
+          "style": {
+            "margin": 10
+          },
+          "useDefaultViewHeight": true
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Detail"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.instances[0].Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "PLCDeviceTagPath": "{view.params.PLCDeviceTagPath}"
+                },
+                "tagPath": "{PLCDeviceTagPath}/Status"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "instances": [
+            {
+              "Label": "Status",
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              }
+            }
+          ],
+          "path": "Standard/Components/Views/Status/LabelDisplayLabel",
+          "style": {
+            "margin": 10
+          },
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      },
+      {
+        "meta": {
+          "name": "OPC Server Diagnostics"
+        },
+        "position": {
+          "basis": "320px"
+        },
+        "propConfig": {
+          "props.params.Instances": {
+            "binding": {
+              "config": {
+                "path": "view.params.PLCDeviceTagPath"
+              },
+              "transforms": [
+                {
+                  "code": "\tDiagnosticsTagPath \u003d value + \"/Diagnostics\"\n\tdiagnosticTagsArray \u003d system.tag.browse(DiagnosticsTagPath)\n\tinstances \u003d []\n\tfor diagnosticTag in diagnosticTagsArray:\n\t\tinstanceObject \u003d {}\n\t\tTagPath \u003d diagnosticTag[\"fullPath\"]\n\t\tLabel \u003d diagnosticTag[\"name\"]\n\t\tinstanceObject[\"TagPath\"] \u003d TagPath\n\t\tinstanceObject[\"Label\"] \u003d Label\n\t\tinstances.append(instanceObject)\n\t\t\t\n\treturn instances",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "HeaderLabel": "Diagnostics",
+            "RepeaterViewPath": "Standard/Components/Views/Status/LabelDisplayLabel"
+          },
+          "path": "Standard/Components/Views/Details Card"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

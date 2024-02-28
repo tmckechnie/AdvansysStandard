@@ -1,0 +1,139 @@
+{
+  "custom": {},
+  "params": {
+    "height": 75,
+    "name": "value",
+    "width": 205
+  },
+  "propConfig": {
+    "params.height": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.name": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.width": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 75,
+      "width": 205
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Combined_FinishMilling_Conveyor_G_Manual"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "d": "M 100 L 350",
+                      "fill": {
+                        "opacity": "1.0",
+                        "paint": "rgb(204,204,204)"
+                      },
+                      "name": "Chord1",
+                      "stroke": {
+                        "opacity": "1.0",
+                        "paint": "rgb(126,126,126)",
+                        "width": "0.0"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "fill": {
+                    "opacity": "1.0",
+                    "paint": "rgb(0,0,0)"
+                  },
+                  "name": "Left",
+                  "stroke": {
+                    "opacity": "1.0",
+                    "paint": "rgb(0,0,0)",
+                    "width": "1.0"
+                  },
+                  "style": {
+                    "classes": "Standard/Body/Statics/Fill"
+                  },
+                  "type": "path"
+                }
+              ]
+            },
+            "type": "ia.shapes.svg"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "20px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.name"
+              },
+              "overlayOptOut": true,
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/Statics/Text",
+            "textAlign": "center"
+          }
+        },
+        "scripts": {
+          "customMethods": [],
+          "extensionFunctions": null,
+          "messageHandlers": [
+            {
+              "messageType": "DisplayEquipmentLabel",
+              "pageScope": true,
+              "script": "\t# Script to Show/Hide Equipment Labels\n\tself.meta.visible \u003d not self.meta.visible",
+              "sessionScope": false,
+              "viewScope": false
+            }
+          ]
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

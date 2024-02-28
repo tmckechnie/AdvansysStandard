@@ -1,0 +1,242 @@
+{
+  "custom": {
+    "Enabled": true,
+    "EngUnit": "",
+    "Format": "#,##0.##",
+    "Label": "Parameter 1",
+    "Value": false
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Modules/Implementation Modules/100SEQ100/Cfg/Parameter 1"
+  },
+  "propConfig": {
+    "custom.Enabled": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Enabled"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.EngUnit": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Value.EngUnit"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Format": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Value.FormatString"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Label": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}.Documentation"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Value": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Value"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 26,
+      "width": 300
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "266px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.params.ShowLabel"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Label"
+              },
+              "overlayOptOut": true,
+              "transforms": [
+                {
+                  "code": "\tif quality.isGood():\n\t\treturn value",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Text",
+            "paddingLeft": 2
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "NumericEntryField"
+            },
+            "position": {
+              "basis": "266px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Enabled"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.format": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Format"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.Value"
+                  },
+                  "type": "property"
+                },
+                "persistent": true
+              }
+            },
+            "props": {
+              "containerStyle": {
+                "classes": "Standard/Popups/Faceplates/ValueInput"
+              },
+              "style": {
+                "classes": "Standard/Popups/Faceplates/ValueInput"
+              },
+              "value": false
+            },
+            "type": "ia.input.numeric-entry-field"
+          },
+          {
+            "meta": {
+              "name": "Units"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.EngUnit"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif value \u003d\u003d \"\":\n\t\treturn False\n\treturn True",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.EngUnit"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Text",
+                "marginLeft": 2
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Value"
+        },
+        "position": {
+          "basis": "266px",
+          "grow": 1
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

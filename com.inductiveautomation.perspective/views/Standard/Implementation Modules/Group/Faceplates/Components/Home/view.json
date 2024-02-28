@@ -1,0 +1,546 @@
+{
+  "custom": {
+    "ManualStartPrompt": {
+      "parameters": {
+        "Label": "Start",
+        "Message": "Are You sure you would like to Start The Group?",
+        "SetValue": true,
+        "TagPath": ""
+      },
+      "popupIdentifier": "GroupActionPopup",
+      "viewPath": "Model Views/TPROM/ROM/Overview/Components/Group Start Prompt"
+    },
+    "ManualStopPrompt": {
+      "parameters": {
+        "Label": "Stop",
+        "Message": "Are You sure you would like to Stop The Group?",
+        "SetValue": true,
+        "TagPath": ""
+      },
+      "popupIdentifier": "GroupActionPopup",
+      "viewPath": "Standard/Implementation Modules/Group/Faceplates/Components/Prompt"
+    },
+    "Mode": 1
+  },
+  "params": {
+    "TagPath": "[TPROM]ROM/100G001"
+  },
+  "propConfig": {
+    "custom.ManualStartPrompt": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cmd/ManualStartPrompt"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ManualStopPrompt": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cmd/ManualStopPrompt"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Mode": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cmd/Mode"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 450,
+      "width": 360
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "params": {
+                "Title": "Status"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "OutStartRow"
+            },
+            "position": {
+              "basis": "52px"
+            },
+            "propConfig": {
+              "custom.Start": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Sts/Command"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Sts/Command"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Format": "",
+                "Label": "Command",
+                "ShowLabel": true,
+                "ShowUnits": false,
+                "Units": "",
+                "UnitsStyle": {
+                  "classes": "Standard/Popups/Faceplates/Text",
+                  "marginLeft": 2,
+                  "textAlign": "left"
+                },
+                "ValueStyle": {
+                  "classes": "Standard/Popups/Faceplates/ValueDisplay",
+                  "paddingRight": 0,
+                  "textAlign": "center"
+                }
+              },
+              "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+              "style": {
+                "margin": 5,
+                "paddingLeft": 3
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "StsRunningRow"
+            },
+            "position": {
+              "basis": "52px"
+            },
+            "propConfig": {
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Sts/Value"
+                  },
+                  "type": "tag"
+                },
+                "persistent": true
+              }
+            },
+            "props": {
+              "params": {
+                "Format": "",
+                "Label": "Feedback",
+                "ShowLabel": true,
+                "ShowUnits": false,
+                "Units": "",
+                "UnitsStyle": {
+                  "classes": "Standard/Popups/Faceplates/Text",
+                  "marginLeft": 2,
+                  "textAlign": "left"
+                },
+                "Value": "Started and Running",
+                "ValueStyle": {
+                  "classes": "Standard/Popups/Faceplates/ValueDisplay",
+                  "paddingRight": 0,
+                  "textAlign": "center"
+                }
+              },
+              "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+              "style": {
+                "margin": 5,
+                "paddingLeft": 3
+              }
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Status"
+        },
+        "position": {
+          "basis": "150px"
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "params": {
+                "Title": "Operation"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "CmdMode"
+            },
+            "position": {
+              "basis": "52px"
+            },
+            "propConfig": {
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.TagPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "CommandTagname": "Cmd/Mode",
+                "HasMaintenanceMode": false,
+                "Label": "Mode",
+                "StatusTagname": "Cmd/Mode"
+              },
+              "path": "Standard/Components/Faceplates/Input/Mode Auto Manual Maintenance",
+              "style": {
+                "margin": 5,
+                "paddingLeft": 3
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "CmdChildrenMode"
+            },
+            "position": {
+              "basis": "52px"
+            },
+            "propConfig": {
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.TagPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "CommandTagname": "Cmd/ChildrenModeCommand",
+                "HasMaintenanceMode": true,
+                "Label": "Children Mode",
+                "StatusTagname": "Sts/ChildrenMode"
+              },
+              "path": "Standard/Components/Faceplates/Input/Mode Auto Manual Maintenance",
+              "style": {
+                "margin": 5,
+                "paddingLeft": 3
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "CmdManual"
+            },
+            "position": {
+              "basis": "52px"
+            },
+            "propConfig": {
+              "props.params.OperMode": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Mode"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.params.Tag1.Enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.Mode}\u003d1"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Tag1.Label": {
+                "binding": {
+                  "config": {
+                    "expression": "if({view.custom.ManualStartPrompt.viewPath}\u003d\"\",\"Start\",\"Start Request\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Tag1.Prompt": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "manualStartPrompt": "{view.custom.ManualStartPrompt}",
+                      "tagPath": "{view.params.TagPath}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\ttagPath \u003d value[\u0027tagPath\u0027]\n\tmanualStartPrompt \u003d value[\u0027manualStartPrompt\u0027]\n\tjsonString \u003d system.util.jsonEncode(manualStartPrompt)\n\tprompt \u003d system.util.jsonDecode(jsonString)\n\t\n\t#Alsway Add TagPath to Parameters\n\tprompt[\"parameters\"][\"TagPath\"]\u003dtagPath + \"/Cmd/ManualStart\"\n\treturn prompt",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "props.params.Tag2.Label": {
+                "binding": {
+                  "config": {
+                    "expression": "if({view.custom.ManualStopPrompt.viewPath}\u003d\"\",\"Stop\",\"Stop Request\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Tag2.Prompt": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "manualStopPrompt": "{view.custom.ManualStopPrompt}",
+                      "tagPath": "{view.params.TagPath}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\ttagPath \u003d value[\u0027tagPath\u0027]\n\tmanualStartPrompt \u003d value[\u0027manualStopPrompt\u0027]\n\tjsonString \u003d system.util.jsonEncode(manualStartPrompt)\n\tprompt \u003d system.util.jsonDecode(jsonString)\n\t\n\t#Alsway Add TagPath to Parameters\n\tprompt[\"parameters\"][\"TagPath\"]\u003dtagPath + \"/Cmd/ManualStop\"\n\treturn prompt",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.TagPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Label": "Command",
+                "Tag1": {
+                  "Name": "Cmd/ManualStart"
+                },
+                "Tag2": {
+                  "Enabled": true,
+                  "Name": "Cmd/ManualStop"
+                }
+              },
+              "path": "Standard/Components/Faceplates/Input/Command Dual Push Buttons",
+              "style": {
+                "margin": 5,
+                "padding": 3
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "CmdManualImmediate"
+            },
+            "position": {
+              "basis": "52px"
+            },
+            "propConfig": {
+              "props.params.OperMode": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Cmd/Mode"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.Tag1.Enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.Mode}\u003d1"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Tag1.Label": {
+                "binding": {
+                  "config": {
+                    "expression": "\"Immediate \" + if({view.custom.ManualStartPrompt.viewPath}\u003d\"\",\"Start\",\"Start Request\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Tag1.Prompt": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "manualStartPrompt": "{view.custom.ManualStartPrompt}",
+                      "tagPath": "{view.params.TagPath}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\ttagPath \u003d value[\u0027tagPath\u0027]\n\tmanualStartPrompt \u003d value[\u0027manualStartPrompt\u0027]\n\tjsonString \u003d system.util.jsonEncode(manualStartPrompt)\n\tprompt \u003d system.util.jsonDecode(jsonString)\n\t\n\t#Alsway Add TagPath to Parameters\n\tprompt[\"parameters\"][\"TagPath\"]\u003dtagPath + \"/Cmd/ManualImmediateStart\"\n\treturn prompt",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "props.params.Tag2.Label": {
+                "binding": {
+                  "config": {
+                    "expression": "\"Immediate \" + if({view.custom.ManualStopPrompt.viewPath}\u003d\"\",\"Stop\",\"Stop Request\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Tag2.Prompt": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "manualStopPrompt": "{view.custom.ManualStopPrompt}",
+                      "tagPath": "{view.params.TagPath}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\ttagPath \u003d value[\u0027tagPath\u0027]\n\tmanualStartPrompt \u003d value[\u0027manualStopPrompt\u0027]\n\tjsonString \u003d system.util.jsonEncode(manualStartPrompt)\n\tprompt \u003d system.util.jsonDecode(jsonString)\n\t\n\t#Alsway Add TagPath to Parameters\n\tprompt[\"parameters\"][\"TagPath\"]\u003dtagPath + \"/Cmd/ManualImmediateStop\"\n\treturn prompt",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.TagPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Label": "Immediate Command",
+                "Tag1": {
+                  "Name": "Cmd/ManualImmediateStart"
+                },
+                "Tag2": {
+                  "Enabled": true,
+                  "Name": "Cmd/ManualImmediateStop"
+                }
+              },
+              "path": "Standard/Components/Faceplates/Input/Command Dual Push Buttons",
+              "style": {
+                "margin": 5,
+                "padding": 3
+              }
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Operation"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[TPROM]ROM/Level 2/120R001"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 450,
+      "width": 360
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "params": {
+                "Title": "Status"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "OutStartRow_0"
+            },
+            "position": {
+              "basis": "52px"
+            },
+            "propConfig": {
+              "custom.Start": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Sts/Command"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Sts/Command"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Format": "",
+                "Label": "Command",
+                "ShowLabel": true,
+                "ShowUnits": false,
+                "Units": "",
+                "UnitsStyle": {
+                  "classes": "Standard/Popups/Faceplates/Text",
+                  "marginLeft": 2,
+                  "textAlign": "left"
+                },
+                "ValueStyle": {
+                  "classes": "Standard/Popups/Faceplates/ValueDisplay",
+                  "paddingRight": 0,
+                  "textAlign": "center"
+                }
+              },
+              "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+              "style": {
+                "margin": 5,
+                "paddingLeft": 3
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "StsRunningRow_0"
+            },
+            "position": {
+              "basis": "52px"
+            },
+            "propConfig": {
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Sts/Value"
+                  },
+                  "type": "tag"
+                },
+                "persistent": true
+              }
+            },
+            "props": {
+              "params": {
+                "Format": "",
+                "Label": "Feedback",
+                "ShowLabel": true,
+                "ShowUnits": false,
+                "Units": "",
+                "UnitsStyle": {
+                  "classes": "Standard/Popups/Faceplates/Text",
+                  "marginLeft": 2,
+                  "textAlign": "left"
+                },
+                "Value": "Started and Running",
+                "ValueStyle": {
+                  "classes": "Standard/Popups/Faceplates/ValueDisplay",
+                  "paddingRight": 0,
+                  "textAlign": "center"
+                }
+              },
+              "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+              "style": {
+                "margin": 5,
+                "paddingLeft": 3
+              }
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Status"
+        },
+        "position": {
+          "basis": "150px"
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "params": {
+                "Title": "Operation"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "CmdModeCommandRow_0"
+            },
+            "position": {
+              "basis": "52px"
+            },
+            "propConfig": {
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.TagPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "CommandTagname": "Cmd/ChildrenModeCommand",
+                "HasMaintenanceMode": true,
+                "Label": "Children Mode",
+                "StatusTagname": "Sts/ChildrenMode"
+              },
+              "path": "Standard/Components/Faceplates/Input/Mode Auto Manual Maintenance",
+              "style": {
+                "margin": 5,
+                "paddingLeft": 3
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "CmdSelectRow"
+            },
+            "position": {
+              "basis": "52px"
+            },
+            "propConfig": {
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Cmd/Select"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Label": "Selected",
+                "ShowLabel": true
+              },
+              "path": "Standard/Components/Faceplates/Input/Command Toggle Switch",
+              "style": {
+                "margin": 5,
+                "padding": 3
+              }
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Operation"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

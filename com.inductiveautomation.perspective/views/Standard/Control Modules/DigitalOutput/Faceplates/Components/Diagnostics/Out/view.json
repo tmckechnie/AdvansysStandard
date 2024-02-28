@@ -1,0 +1,65 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[StandardS71500]Modules/Control Modules/100DO100"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 307,
+      "width": 314
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Output"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath}+\"/Out/\"+{this.meta.name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Output",
+            "MappedObject": {
+              "False": "False",
+              "True": "True"
+            },
+            "ShowLabel": true
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayEnumeration",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

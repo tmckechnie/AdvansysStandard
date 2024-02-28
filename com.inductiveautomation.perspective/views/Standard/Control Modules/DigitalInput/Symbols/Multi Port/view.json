@@ -1,0 +1,1241 @@
+{
+  "custom": {
+    "AlarmSummary": null,
+    "ModuleType": "DigitalInput",
+    "References": {},
+    "Styling": {
+      "Base": {},
+      "Default": {
+        "Container": "Standard/Body/Symbols/SVG/Container"
+      },
+      "Display": {},
+      "SVG": {
+        "Basic": "Standard/Body/Symbols/SVG/StaticBorder",
+        "PipePassive": "Standard/Body/Symbols/SVG/Valve/PipePassive",
+        "PortPassive": "Standard/Body/Symbols/SVG/Valve/PortPassive"
+      }
+    }
+  },
+  "params": {
+    "Cfg": {
+      "active": {
+        "bottom": false,
+        "left": {
+          "bottom": false,
+          "middle": true,
+          "top": false
+        },
+        "middle": {
+          "bottom": false,
+          "top": false
+        },
+        "right": {
+          "bottom": false,
+          "middle": true,
+          "top": false
+        },
+        "top": false
+      },
+      "passive": {
+        "bottom": true,
+        "left": {
+          "bottom": false,
+          "middle": false,
+          "top": false
+        },
+        "middle": {
+          "bottom": true,
+          "top": true
+        },
+        "right": {
+          "bottom": false,
+          "middle": false,
+          "top": false
+        },
+        "top": true
+      }
+    },
+    "TagPath": "[StandardS71500]Modules/Control Modules/100DI100"
+  },
+  "propConfig": {
+    "custom.AlarmSummary": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Summary/Information"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ModuleType": {
+      "persistent": true
+    },
+    "custom.References": {
+      "persistent": true
+    },
+    "custom.References.Active": {
+      "binding": {
+        "config": {
+          "path": "view.custom.References.State"
+        },
+        "type": "property"
+      }
+    },
+    "custom.References.Description": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/Description"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.Identify": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Id/Identify"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.InstanceName": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/InstanceName"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.Passive": {
+      "binding": {
+        "config": {
+          "expression": "!{view.custom.References.Active}"
+        },
+        "type": "expr"
+      }
+    },
+    "custom.References.ShortDescription": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/ShortDescription"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.Simulated": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sim/Active"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.State": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Styling": {
+      "persistent": true
+    },
+    "custom.Styling.Base.Alarm": {
+      "binding": {
+        "config": {
+          "path": "view.custom.AlarmSummary"
+        },
+        "transforms": [
+          {
+            "code": "\t \n\tstyle \u003d Standard.Modules.Alarms.GetAlarmStyle(AlarmSummary\u003dvalue,ComponentPart\u003d\"Outline\")\n\treturn style[\u0027classes\u0027]\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Styling.Base.Identify": {
+      "binding": {
+        "config": {
+          "path": "view.custom.References.Identify"
+        },
+        "transforms": [
+          {
+            "fallback": "Standard/Body/Symbols/Base/Basic",
+            "inputType": "scalar",
+            "mappings": [
+              {
+                "input": true,
+                "output": "Standard/Body/Symbols/Base/Basic Standard/Body/Symbols/Base/Identify"
+              }
+            ],
+            "outputType": "style-list",
+            "type": "map"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Styling.Base.Simulated": {
+      "binding": {
+        "config": {
+          "path": "view.custom.References.Simulated"
+        },
+        "transforms": [
+          {
+            "fallback": "{view.custom.Styling.Default.Container}",
+            "inputType": "scalar",
+            "mappings": [
+              {
+                "input": true,
+                "output": "\"Standard/Body/Symbols/Base/Simulated\""
+              }
+            ],
+            "outputType": "expression",
+            "type": "map"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Styling.Display.Selected": {
+      "binding": {
+        "config": {
+          "path": "view.custom.References.Selected"
+        },
+        "transforms": [
+          {
+            "fallback": "Standard/Body/Symbols/Displays/Container Standard/Body/Symbols/Displays/Selection/UnSelected",
+            "inputType": "scalar",
+            "mappings": [
+              {
+                "input": true,
+                "output": "Standard/Body/Symbols/Displays/Container Standard/Body/Symbols/Displays/Selection/Selected"
+              }
+            ],
+            "outputType": "style-list",
+            "type": "map"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Styling.Display.Simulated": {
+      "binding": {
+        "config": {
+          "path": "view.custom.References.Simulated"
+        },
+        "transforms": [
+          {
+            "fallback": "Standard/Body/Symbols/Displays/Container",
+            "inputType": "scalar",
+            "mappings": [
+              {
+                "input": true,
+                "output": "Standard/Body/Symbols/Base/Simulated"
+              }
+            ],
+            "outputType": "style-list",
+            "type": "map"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Styling.Display.State": {
+      "binding": {
+        "config": {
+          "struct": {
+            "interlocked": "{view.custom.References.Interlocked}",
+            "state": "{view.custom.References.State}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols/Displays\"\n\tstyle \u003d baseStyle + \"/Container \"\n\n\tif value[\"state\"]:\n\t\tstyle +\u003d baseStyle + \"/Fill/Active\"\t\n\telse:\n\t\tstyle +\u003d baseStyle + \"/Fill/Passive\"\n\t\t\t\t\n\tif value[\"interlocked\"]:\n\t\tstyle \u003d baseStyle + \"/Fill/Interlocked \" + baseStyle + \"/Fill/InterlockedText\"\n\t\t\n\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Styling.Display.StateText": {
+      "binding": {
+        "config": {
+          "struct": {
+            "interlocked": "{view.custom.References.Interlocked}",
+            "state": "{view.custom.References.State}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols/Displays\"\n\tstyle \u003d \"\"\n\n\tif value[\"interlocked\"]:\n\t\treturn baseStyle + \"/Text/Interlocked\"\n\t\t\n\n\tif value[\"state\"]:\n\t\tstyle +\u003d baseStyle + \"/Text/Active\"\t\n\telse:\n\t\tstyle +\u003d baseStyle + \"/Text/Passive\"\n\t\t\t\t\n\n\t\t\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Styling.SVG.Active": {
+      "binding": {
+        "config": {
+          "struct": {
+            "state": "{view.custom.References.Active}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols/SVG\"\n\tstyle \u003d \"\"\n\tif value[\"state\"]:\n\t\tstyle \u003d baseStyle + \"/Fill/Active\"\t\n\telse:\n\t\tstyle \u003d baseStyle + \"/Fill/Passive\"\n\t\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Styling.SVG.Passive": {
+      "binding": {
+        "config": {
+          "struct": {
+            "state": "{view.custom.References.Passive}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols/SVG\"\n\tstyle \u003d \"\"\n\tif value[\"state\"]:\n\t\tstyle \u003d baseStyle + \"/Fill/Active\"\t\n\telse:\n\t\tstyle \u003d baseStyle + \"/Fill/Passive\"\n\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Styling.SVG.State": {
+      "binding": {
+        "config": {
+          "struct": {
+            "basic": "{view.custom.Styling.SVG.Basic}",
+            "state": "{view.custom.References.State}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\t\n\tstyle \u003d value[\u0027basic\u0027]\n\n\tbaseStyle \u003d \"Standard/Body/Symbols/SVG\"\n\t#State\n\tif value[\"state\"]:\n\t\tstyle +\u003d \" \" + baseStyle + \"/Fill/Active\"\t\n\telse:\n\t\tstyle +\u003d \" \" + baseStyle + \"/Fill/Passive\"\n\t\t\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "params.Cfg": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 60,
+      "width": 50
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application Default/Control Modules/DI"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Quality"
+            },
+            "position": {
+              "height": 0.3,
+              "width": 0.3,
+              "x": 0.35,
+              "y": 0.6
+            },
+            "propConfig": {
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.TagPath} + \"/Id/Self\""
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Bad": true
+              },
+              "path": "Standard/Components/Symbols/Quality",
+              "style": {
+                "overflow": "hidden"
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "custom": {
+              "displays": {}
+            },
+            "meta": {
+              "name": "SVG"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "propConfig": {
+              "custom.actuatorStyleClasses": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.Styling.SVG.State}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "custom.displays.pipes": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "active": "{view.custom.References.Active}",
+                      "cfgActive": "{view.params.Cfg.active}",
+                      "cfgPassive": "{view.params.Cfg.passive}",
+                      "passive": "{view.custom.References.Passive}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\t\n\tcfgActive \u003d value[\u0027cfgActive\u0027]\n\tcfgPassive \u003d value[\u0027cfgPassive\u0027]\n\tactive \u003d value[\u0027active\u0027]\n\tpassive \u003d value[\u0027passive\u0027]\n\t\n\t\n\tdef getdisplay(activeCfg,passiveCfg):\n\t\tif active and activeCfg:\n\t\t\treturn \u0027inline\u0027 \n\t\tif passive and passiveCfg:\n\t\t\treturn \u0027inline\u0027\n\t\treturn \u0027none\u0027\n\t\n\t\n\treturn {\n\t  \"bottom\": getdisplay(cfgActive[\"bottom\"],cfgPassive[\"bottom\"]),\n\t  \"left\": {\n\t    \"bottom\": getdisplay(cfgActive[\"left\"][\"bottom\"],cfgPassive[\"left\"][\"bottom\"]),\n\t    \"middle\": getdisplay(cfgActive[\"left\"][\"middle\"],cfgPassive[\"left\"][\"middle\"]),\n\t    \"top\": getdisplay(cfgActive[\"left\"][\"top\"],cfgPassive[\"left\"][\"top\"])\n\t  },\n\t  \"middle\": {\n\t    \"bottom\": getdisplay(cfgActive[\"middle\"][\"bottom\"],cfgPassive[\"middle\"][\"bottom\"]),\n\t    \"top\": getdisplay(cfgActive[\"middle\"][\"top\"],cfgPassive[\"middle\"][\"top\"])\n\t  },\n\t  \"right\": {\n\t    \"bottom\": getdisplay(cfgActive[\"right\"][\"bottom\"],cfgPassive[\"right\"][\"bottom\"]),\n\t    \"middle\": getdisplay(cfgActive[\"right\"][\"middle\"],cfgPassive[\"right\"][\"middle\"]),\n\t    \"top\": getdisplay(cfgActive[\"right\"][\"top\"],cfgPassive[\"right\"][\"top\"])\n\t  },\n\t  \"top\": getdisplay(cfgActive[\"top\"],cfgPassive[\"top\"])\n\t}",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "custom.displays.pipes.bottom": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "Active": "{view.custom.References.Active}\u0026\u0026{view.params.Cfg.active.bottom}",
+                      "Passive": "{view.custom.References.Passive}\u0026\u0026{view.params.Cfg.passive.bottom}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "expression": "if({value}[\"Active\"]||{value}[\"Passive\"],\"inline\",\"none\")",
+                      "type": "expression"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "custom.displays.pipes.left.bottom": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "Active": "{view.custom.References.Active}\u0026\u0026{view.params.Cfg.active.left.bottom}",
+                      "Passive": "{view.custom.References.Passive}\u0026\u0026{view.params.Cfg.passive.left.bottom}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "expression": "if({value}[\"Active\"]||{value}[\"Passive\"],\"inline\",\"none\")",
+                      "type": "expression"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "custom.displays.pipes.left.middle": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "Active": "{view.custom.References.Active}\u0026\u0026{view.params.Cfg.active.left.middle}",
+                      "Passive": "{view.custom.References.Passive}\u0026\u0026{view.params.Cfg.passive.left.middle}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "expression": "if({value}[\"Active\"]||{value}[\"Passive\"],\"inline\",\"none\")",
+                      "type": "expression"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "custom.displays.pipes.left.top": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "Active": "{view.custom.References.Active}\u0026\u0026{view.params.Cfg.active.left.top}",
+                      "Passive": "{view.custom.References.Passive}\u0026\u0026{view.params.Cfg.passive.left.top}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "expression": "if({value}[\"Active\"]||{value}[\"Passive\"],\"inline\",\"none\")",
+                      "type": "expression"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "custom.displays.pipes.top": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "Active": "{view.custom.References.Active}\u0026\u0026{view.params.Cfg.active.top}",
+                      "Passive": "{view.custom.References.Passive}\u0026\u0026{view.params.Cfg.passive.top}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "expression": "if({value}[\"Active\"]||{value}[\"Passive\"],\"inline\",\"none\")",
+                      "type": "expression"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "custom.displays.ports": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "cfgActive": "{view.params.Cfg.active}",
+                      "cfgPassive": "{view.params.Cfg.passive}",
+                      "cfgPort": "{view.params.Cfg.port}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tcfgPort \u003d value[\u0027cfgPort\u0027]\n\tcfgActive \u003d value[\u0027cfgActive\u0027]\n\tcfgPassive \u003d value[\u0027cfgPassive\u0027]\n\t\t\n\tdef getdisplay(activeCfg,passiveCfg):\n\t\tif activeCfg or passiveCfg:\n\t\t\treturn \u0027inline\u0027 \n\t\treturn \u0027none\u0027\n\t\n\t\n\treturn {\n\t  \"bottom\": getdisplay(cfgActive[\"bottom\"],cfgPassive[\"bottom\"]),\n\t  \"left\": {\n\t    \"bottom\": getdisplay(cfgActive[\"left\"][\"bottom\"],cfgPassive[\"left\"][\"bottom\"]),\n\t    \"middle\": getdisplay(cfgActive[\"left\"][\"middle\"],cfgPassive[\"left\"][\"middle\"]),\n\t    \"top\": getdisplay(cfgActive[\"left\"][\"top\"],cfgPassive[\"left\"][\"top\"])\n\t  },\n\t  \"right\": {\n\t    \"bottom\": getdisplay(cfgActive[\"right\"][\"bottom\"],cfgPassive[\"right\"][\"bottom\"]),\n\t    \"middle\": getdisplay(cfgActive[\"right\"][\"middle\"],cfgPassive[\"right\"][\"middle\"]),\n\t    \"top\": getdisplay(cfgActive[\"right\"][\"top\"],cfgPassive[\"right\"][\"top\"])\n\t  },\n\t  \"top\": getdisplay(cfgActive[\"top\"],cfgPassive[\"top\"])\n\t}",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "custom.pipePassiveStyle": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Styling.SVG.PipePassive"
+                  },
+                  "type": "property"
+                }
+              },
+              "custom.portPassiveStyle": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Styling.SVG.PortPassive"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[0].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.actuatorStyleClasses"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[10].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.pipePassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[10].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.pipes.middle.top"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[11].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.pipePassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[11].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.pipes.middle.bottom"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[12].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.pipePassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[12].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.pipes.bottom"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[13].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.pipePassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[13].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.pipes.left.top"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[14].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.pipePassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[14].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.pipes.left.middle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[15].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.pipePassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[15].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.pipes.left.bottom"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[16].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.pipePassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[16].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.pipes.right.top"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[17].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.pipePassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[17].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.pipes.right.middle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[18].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.pipePassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[18].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.pipes.right.bottom"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[1].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.portPassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[1].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.ports.top"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[2].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.portPassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[2].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.ports.bottom"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[3].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.portPassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[3].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.ports.right.top"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[4].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.portPassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[4].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.ports.right.middle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[5].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.portPassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[5].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.ports.right.bottom"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[6].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.portPassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[6].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.ports.left.top"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[7].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.portPassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[7].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.ports.left.middle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[8].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.portPassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[8].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.ports.left.bottom"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[9].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.pipePassiveStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[9].style.display": {
+                "binding": {
+                  "config": {
+                    "path": "this.custom.displays.pipes.top"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "d": "M 25 25 L 475 25 L 475 475 L 25 475 Z",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "ValveBlock",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 250 25 L 250 75 L 275 75 L 225 75 ",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "portTop",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 250 475 L 250 425 L 275 425 L 225 425 ",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "portBottom",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 475 125 L 425 125 L 425 100 L 425 150 ",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "portRightTop",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 475 250 L 425 250 L 425 225 L 425 275 ",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "portRightMiddle",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 475 375 L 425 375 L 425 350 L 425 400 ",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "portRightBottom",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 25 125 L 75 125 L 75 100 L 75 150 ",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "portLeftTop",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 25 250 L 75 250 L 75 225 L 75 275 ",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "portLeftMiddle",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 25 375 L 75 375 L 75 350 L 75 400 ",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "portLeftBottom",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 250 75 L 250 125 ",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "pipeTop",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 250 125 L 250 250 ",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "pipeMidTop",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 250 250 L 250 375 ",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "pipeMidBottom",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 250 375 L 250 425",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "pipeBottom",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 75 125 L 250 125 ",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "pipeLeftTop",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 75 250 L 250 250 ",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "pipeLeftMiddle",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 75 375 L 250 375 ",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "pipeLeftBottom",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 425 125 L 250 125 ",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "pipeRightTop",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 425 250 L 250 250 ",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "pipeRightMiddle",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    },
+                    {
+                      "d": "M 425 375 L 250 375 ",
+                      "fill": {
+                        "opacity": "1"
+                      },
+                      "name": "pipeRightBottom",
+                      "stroke": {
+                        "opacity": "1"
+                      },
+                      "style": {
+                        "vector-effect": "non-scaling-stroke"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "name": "layer1",
+                  "style": {
+                    "classes": ""
+                  },
+                  "type": "group"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "0 0 500 500"
+            },
+            "type": "ia.shapes.svg"
+          }
+        ],
+        "meta": {
+          "name": "SymbolContainer",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.References.Description"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.Styling.Base.Simulated} +\" \"+ {view.custom.Styling.Base.Alarm}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "margin": 3,
+            "outline-offset": 1
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\ttagPath \u003d self.view.params.TagPath\n\tinstanceName \u003d self.view.custom.References.InstanceName\n\tdescription \u003d self.view.custom.References.ShortDescription\n\ttitle \u003d instanceName + \" - \" + description\n\tparamsObject \u003d {\"TagPath\":tagPath}\n\tmoduleType \u003d self.view.custom.ModuleType\n\tfaceplatePath \u003d \"Standard/Control Modules/\"+moduleType+\"/Faceplates/Faceplate\"\n\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003dfaceplatePath)"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.style.classes": {
+        "binding": {
+          "config": {
+            "path": "view.custom.Styling.Base.Identify"
+          },
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "direction": "column",
+      "style": {}
+    },
+    "type": "ia.container.flex"
+  }
+}

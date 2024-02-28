@@ -1,0 +1,90 @@
+{
+  "custom": {
+    "DriverModuleTagPath": "",
+    "DriverModuleViewPath": "Standard/Driver Modules/No Driver Module/No Driver Configured"
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
+  },
+  "propConfig": {
+    "custom.DriverModuleTagPath": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/DriverModuleTagPath"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.DriverModuleViewPath": {
+      "binding": {
+        "config": {
+          "expression": "if({view.custom.DriverModuleTagPath}!\u003d\" \" \u0026\u0026 {view.custom.DriverModuleTagPath}!\u003d\"\",\r\nif(isGood(tag({view.custom.DriverModuleTagPath} + \"/Metadata/StandardViewPath\")),tag({view.custom.DriverModuleTagPath} + \"/Metadata/StandardViewPath\"),\"Standard/Driver Modules/No Driver Module/No Driver Configured\")\r\n,\"Standard/Driver Modules/No Driver Module/No Driver Configured\")"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 450,
+      "width": 350
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "DriverModuleInfo"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "path": "view.custom.DriverModuleTagPath"
+              },
+              "type": "property"
+            }
+          },
+          "props.path": {
+            "binding": {
+              "config": {
+                "path": "view.custom.DriverModuleViewPath"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "path": "Standard/Driver Modules/No Driver Module/No Driver Configured"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Popups/Faceplates/Content"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

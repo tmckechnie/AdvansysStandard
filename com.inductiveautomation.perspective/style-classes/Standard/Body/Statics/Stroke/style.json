@@ -1,0 +1,8 @@
+{
+  "base": {
+    "style": {
+      "stroke": "var(--bodyContentBorder)",
+      "strokeWidth": "2px"
+    }
+  }
+}

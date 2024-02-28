@@ -1,0 +1,350 @@
+{
+  "custom": {
+    "Response": 0,
+    "TagData": {
+      "DispValue": 0,
+      "Id": 0,
+      "PromptList": {
+        "1000": "Are you sure you would like to Start The Sequence?"
+      },
+      "Response": 0,
+      "Type": 0
+    }
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001"
+  },
+  "propConfig": {
+    "custom.Response": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "strTagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{strTagPath}/Prompt/Response"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.TagData": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}"
+        },
+        "transforms": [
+          {
+            "expression": "{value}[\u0027Prompt\u0027]",
+            "type": "expression"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 320,
+      "width": 320
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "35px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "Title": "Prompt"
+          },
+          "path": "Standard/Components/Faceplates/Header"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.TagData.Id"
+              },
+              "transforms": [
+                {
+                  "code": "\tif int(value) in self.view.custom.TagData.PromptList:\n\t\tstrPrompt \u003d self.view.custom.TagData.PromptList[int(value)]\n\telse:\n\t\tstrPrompt \u003d \"Prompt message \" + str(value) + \" not found\"\n\t\n\tstrPrompt.replace(\"##\",str(self.view.custom.TagData.DispValue))\n\t\n\treturn strPrompt",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "custom": {
+              "WriteValue": 1
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tself.view.custom.Response \u003d self.custom.WriteValue\n\tsystem.perspective.closePopup(\u0027\u0027)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "btnOK"
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "props": {
+              "text": "OK"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "flexResponseType1"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.TagData.Type} \u003d 1"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "justify": "center"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "custom": {
+              "WriteValue": 2
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tself.view.custom.Response \u003d self.custom.WriteValue\n\tsystem.perspective.closePopup(\u0027\u0027)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "btnYes"
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "props": {
+              "text": "Yes"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "custom": {
+              "WriteValue": 3
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tself.view.custom.Response \u003d self.custom.WriteValue\n\tsystem.perspective.closePopup(\u0027\u0027)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "btnNo"
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "props": {
+              "text": "No"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "flexResponseType2"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.TagData.Type} \u003d 2"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "justify": "center"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "custom": {
+              "WriteValue": 6
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tself.view.custom.Response \u003d self.custom.WriteValue\n\tsystem.perspective.closePopup(\u0027\u0027)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "btnContinue"
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "props": {
+              "text": "Continue"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "custom": {
+              "WriteValue": 4
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tself.view.custom.Response \u003d self.custom.WriteValue\n\tsystem.perspective.closePopup(\u0027\u0027)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "btnRetry"
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "props": {
+              "text": "Retry"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "custom": {
+              "WriteValue": 5
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tself.view.custom.Response \u003d self.custom.WriteValue\n\tsystem.perspective.closePopup(\u0027\u0027)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "btnEnd"
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "props": {
+              "text": "End"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "flexResponseType3"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.TagData.Type} \u003d 3"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "justify": "center"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

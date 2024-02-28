@@ -1,0 +1,318 @@
+{
+  "custom": {
+    "AlarmSummary": {
+      "HighestActivePriority": 0,
+      "HighestActivePriorityName": null,
+      "HighestUnackedPriority": 0,
+      "HighestUnackedPriorityName": null,
+      "Overall": {
+        "ActiveAckCount": 0,
+        "ActiveUnackCount": 0,
+        "ClearUnackCount": 0,
+        "Detail": [],
+        "ShelvedCount": 0,
+        "Total": 0
+      },
+      "PriorityDetail": {
+        "Critical": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "High": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Low": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Medium": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        }
+      }
+    },
+    "Description": "Live Bottom Feed",
+    "InstanceName": "200G001",
+    "StateStyling": "Standard/Body/Symbols/Fill/Passive",
+    "alarmStyle": {
+      "classes": ""
+    },
+    "label": "200G001",
+    "styling": "Standard/Body/Symbols/ValueDisplay"
+  },
+  "params": {
+    "LabelOverwrite": "",
+    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200G001"
+  },
+  "propConfig": {
+    "custom.AlarmSummary": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Summary/Information"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Description": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}.Documentation"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.InstanceName": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/InstanceName"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.StateStyling": {
+      "binding": {
+        "config": {
+          "struct": {
+            "interlocked": "tag({view.params.TagPath}+\"/Interlock/Interlocked\")",
+            "running": "tag({view.params.TagPath}+\"/In/Running\")"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols\"\n\tstyle \u003d \"\"#baseStyle + \"/Basic\"\n\t#Fill Styles -- Running, Interlocked, Not Running\n\tif value[\"running\"]:\n\t\tstyle \u003d baseStyle + \"/Fill/Active\"\t\n\telse:\n\t\tstyle \u003d baseStyle + \"/Fill/Passive\"\n\t\t\t\t\n\tif value[\"interlocked\"]:\n\t\t\tstyle \u003d baseStyle + \"/Fill/Interlocked\"\n\t\t\n\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.alarmStyle": {
+      "binding": {
+        "config": {
+          "path": "view.custom.AlarmSummary"
+        },
+        "transforms": [
+          {
+            "code": "\treturn Standard.Modules.Alarms.GetAlarmStyle(AlarmSummary\u003dvalue)\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.label": {
+      "binding": {
+        "config": {
+          "expression": "if({view.params.LabelOverwrite}\u003d\"\",{view.custom.InstanceName},{view.params.LabelOverwrite})"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.styling": {
+      "binding": {
+        "config": {
+          "struct": {
+            "alarmStyleClasses": "{view.custom.alarmStyle.classes}",
+            "inAlarm": "{view.custom.AlarmSummary.Overall.Total}\u003e0",
+            "isSelected": "tag({view.params.TagPath}+\"/Id/Selected\")",
+            "isSimulation": "tag({view.params.TagPath}+\"/Sim/Simulation\")"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\t\n\tbaseStyle \u003d \"Standard/Body/Symbols\"\n\tstyleClasses \u003d baseStyle+\"/ValueDisplay\"\n\n\t#Selected\n\tif value[\"isSelected\"]:\n\t\tstyleClasses +\u003d \" \"+baseStyle+\"/Selected\"\n\n\t#Simulation\n\tif value[\"isSimulation\"]:\n\t\tstyleClasses +\u003d \" \"+baseStyle+\"/Simulation\"\n\n\t#Alarm\n\tif value[\"inAlarm\"]:\n\t\tstyleClasses +\u003d \" \"+value[\"alarmStyleClasses\"]\n\t\n\treturn styleClasses",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.LabelOverwrite": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 35,
+      "width": 150
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application/Implementation Modules/Group"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "LabelBlock"
+            },
+            "position": {
+              "basis": "25px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.StateStyling"
+                  },
+                  "type": "property"
+                },
+                "persistent": true
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Body/Symbols/Fill/Passive",
+                "margin": 2,
+                "marginRight": 0,
+                "textAlign": "center"
+              },
+              "text": "G"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "32px",
+              "grow": 1,
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.style.classes": {
+                "persistent": true
+              },
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.label"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Body/Symbols/ValueDisplay",
+                "margin": 2,
+                "marginRight": 0,
+                "textAlign": "center"
+              },
+              "textStyle": {
+                "classes": "Standard/Body/Symbols/Text"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "AlarmFlex"
+        },
+        "position": {
+          "basis": "34px",
+          "display": false,
+          "grow": 1
+        },
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.custom.styling"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/Symbols/ValueDisplay",
+            "margin": 2,
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\ttagPath \u003d self.view.params.TagPath\n\tinstanceName \u003d self.view.custom.InstanceName\n\tdescription \u003d self.view.custom.Description\n\ttitle \u003d instanceName + \" - \" + description\n\tparamsObject \u003d {\"TagPath\":tagPath}\n\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003d\"Standard/Implementation Modules/Group/Faceplates/Faceplate\")\n\t"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.style.classes": {
+        "persistent": true
+      }
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

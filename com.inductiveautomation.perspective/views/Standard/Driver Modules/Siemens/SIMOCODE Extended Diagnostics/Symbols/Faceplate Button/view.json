@@ -1,0 +1,98 @@
+{
+  "custom": {
+    "DriverModule": "Siemens",
+    "DriverModuleType": "SIMOCODE Extended Diagnostics",
+    "References": {}
+  },
+  "params": {
+    "TagPath": "[TPUtilities]Utilities/Chemical Dosing/XLMM560A_ED"
+  },
+  "propConfig": {
+    "custom.DriverModule": {
+      "persistent": true
+    },
+    "custom.DriverModuleType": {
+      "persistent": true
+    },
+    "custom.References": {
+      "persistent": true
+    },
+    "custom.References.Description": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/Description"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.InstanceName": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/InstanceName"
+        },
+        "type": "tag"
+      }
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 198
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\ttagPath \u003d self.view.params.TagPath\n\tinstanceName \u003d self.view.custom.References.InstanceName\n\tdescription \u003d self.view.custom.References.Description\n\ttitle \u003d instanceName + \" - \" + description\n\tparamsObject \u003d {\"TagPath\":tagPath}\n\tdriver \u003d self.view.custom.DriverModule\n\tdriverType \u003d self.view.custom.DriverModuleType\n\tfaceplatePath \u003d \"Standard/Driver Modules/\" + driver + \"/\" + driverType + \"/Faceplates/Faceplate\"\n\tposition \u003d {\"width\":1000,\"height\":700}\n\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003dfaceplatePath,Position \u003d position)\t"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "34px",
+          "grow": 1
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Button/Default"
+          },
+          "text": "Extended Driver Diagnostics"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "margin": 2
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

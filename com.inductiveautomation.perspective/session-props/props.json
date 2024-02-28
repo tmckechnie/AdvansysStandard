@@ -1,0 +1,104 @@
+{
+  "custom": {
+    "CurrentModelItem": {
+      "Session": {
+        "ContentType": "Overview",
+        "Path": "0",
+        "SearchModule": ""
+      }
+    },
+    "DefaultPopupHistoryDuration": 10,
+    "FlowInfo": {
+      "CurrentAuthenticatedUser": ""
+    },
+    "InitialModelItemTagPath": "[StandardS71500]Standard/Model Item",
+    "UseSessionModelItem": true
+  },
+  "propConfig": {
+    "custom.ModelItems": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "InitialModelItemTagPath": "{this.custom.InitialModelItemTagPath}"
+          },
+          "tagPath": "{InitialModelItemTagPath}"
+        },
+        "transforms": [
+          {
+            "code": "\tmodelItem\u003dvalue\n\tmodelItem \u003d Standard.Navigation.Common.GetModelItems(ModelItem\u003dmodelItem)\n\treturn modelItem",
+            "type": "script"
+          }
+        ],
+        "type": "tag"
+      }
+    },
+    "custom.SystemInfo": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[AdvansysStandard]System/System Info"
+        },
+        "type": "tag"
+      }
+    },
+    "props.auth": {
+      "access": "PRIVATE",
+      "persistent": false
+    },
+    "props.device.accelerometer": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.device.identifier": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.device.timezone": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.device.type": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.device.userAgent": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.gateway": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.geolocation.data": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.geolocation.permissionGranted": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.host": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.id": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.lastActivity": {
+      "access": "SYSTEM",
+      "persistent": false
+    }
+  },
+  "props": {
+    "address": "192.168.1.119",
+    "device": {},
+    "geolocation": {},
+    "locale": "en-ZA",
+    "theme": "standard",
+    "timeZoneId": "Africa/Harare"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--popupAccentSelected)",
+      "borderColor": "var(--popupAccentSelected)",
+      "borderStyle": "solid",
+      "borderWidth": "1px",
+      "color": "var(--popupAccentSelectedText)",
+      "fontSize": "10px"
+    }
+  },
+  "variants": [
+    {
+      "pseudo": "hover",
+      "style": {
+        "backgroundColor": "var(--popupAccentDisabled)",
+        "borderColor": "var(--popupAccentDisabled)"
+      }
+    }
+  ]
+}

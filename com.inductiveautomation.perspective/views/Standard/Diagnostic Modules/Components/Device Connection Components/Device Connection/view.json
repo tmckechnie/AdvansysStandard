@@ -1,0 +1,190 @@
+{
+  "custom": {},
+  "params": {
+    "DeviceTagPath": "[Standard]Systems/Devices/DNP3 Device 1"
+  },
+  "propConfig": {
+    "params.DeviceTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 249,
+      "width": 392
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "DeviceTagPath",
+          "type": "Diagnostics/Device Connection Diagnostics"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "DeviceTagPath": "{view.params.DeviceTagPath}"
+                },
+                "tagPath": "{DeviceTagPath}/Name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Components/Views/Header/Sub Header"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Enabled Label"
+        },
+        "position": {
+          "basis": "100px"
+        },
+        "propConfig": {
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "DeviceTagPath": "{view.params.DeviceTagPath}"
+                },
+                "tagPath": "{DeviceTagPath}/Enabled"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Enabled"
+          },
+          "path": "Standard/Components/Views/Status/LabelDisplayLabel",
+          "useDefaultViewHeight": true
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Connected Label"
+        },
+        "position": {
+          "basis": "100px"
+        },
+        "propConfig": {
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "DeviceTagPath": "{view.params.DeviceTagPath}"
+                },
+                "tagPath": "{DeviceTagPath}/Connected"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Connected"
+          },
+          "path": "Standard/Components/Views/Status/LabelDisplayLabel",
+          "useDefaultViewHeight": true
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Detail"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.instances[0].Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "DeviceTagPath": "{view.params.DeviceTagPath}"
+                },
+                "tagPath": "{DeviceTagPath}/Status"
+              },
+              "type": "tag"
+            }
+          },
+          "props.instances[1].Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "DeviceTagPath": "{view.params.DeviceTagPath}"
+                },
+                "tagPath": "{DeviceTagPath}/Description"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "instances": [
+            {
+              "Label": "Status",
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              }
+            },
+            {
+              "Label": "Description",
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              }
+            }
+          ],
+          "path": "Standard/Components/Views/Status/LabelDisplayLabel",
+          "style": {
+            "margin": 10
+          },
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

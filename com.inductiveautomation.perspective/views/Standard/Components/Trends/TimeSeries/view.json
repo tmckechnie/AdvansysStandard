@@ -1,0 +1,2329 @@
+{
+  "custom": {
+    "Alarms": {
+      "High": {},
+      "HighHigh": {},
+      "Low": {},
+      "LowLow": {}
+    },
+    "ControlLimits": {},
+    "Data": {
+      "data": [
+        {
+          "Value": 47.019676,
+          "dt": {
+            "$": [
+              "ts",
+              192,
+              1687175579346
+            ],
+            "$ts": 1687175455267
+          },
+          "time": 1687175455267
+        },
+        {
+          "Value": 47.019676208496094,
+          "dt": {
+            "$": [
+              "ts",
+              192,
+              1687175579346
+            ],
+            "$ts": 1687175579346
+          },
+          "time": 1687175579346
+        }
+      ],
+      "name": "Value"
+    },
+    "EngUnit": "%",
+    "FormatString": "#,##0.##",
+    "HistoryTag": [
+      {
+        "aggregate": "MinMax",
+        "alias": "Value",
+        "path": "[StandardS71500/default:default]CAN01VS1/StandardS71500//Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput01/Sts/Value"
+      }
+    ],
+    "SQLData": {
+      "data": [
+        {
+          "Value": 47.019676208496094,
+          "dt": {
+            "$": [
+              "ts",
+              192,
+              1687175579721
+            ],
+            "$ts": 1687175455267
+          },
+          "time": 1687175455267
+        },
+        {
+          "Value": 47.019676208496094,
+          "dt": {
+            "$": [
+              "ts",
+              192,
+              1687175579721
+            ],
+            "$ts": 1687175579721
+          },
+          "time": 1687175579721
+        }
+      ],
+      "name": "Value"
+    },
+    "ScaleEngineeringMax": 100,
+    "ScaleEngineeringMin": 0,
+    "Value": 47.019676,
+    "boundry": {
+      "$": [
+        "ds",
+        192,
+        1687174924516
+      ],
+      "$columns": [
+        {
+          "data": [
+            1687173124516
+          ],
+          "name": "t_stamp",
+          "type": "Date"
+        },
+        {
+          "data": [
+            null
+          ],
+          "name": "Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput01/Sts/Value",
+          "type": "Long"
+        }
+      ]
+    },
+    "historyDuration": 3,
+    "key": [
+      {
+        "t_stamp": 1687171321058,
+        "value": 61.48727035522461
+      },
+      {
+        "t_stamp": 1687174139239,
+        "value": 54.25347137451172
+      },
+      {
+        "t_stamp": 1687174533218,
+        "value": 43.40277862548828
+      }
+    ],
+    "key_1": {
+      "data": [
+        {
+          "Value": 47.019676208496094,
+          "dt": {
+            "$": [
+              "ts",
+              192,
+              1687175579714
+            ],
+            "$ts": 1687175399714
+          },
+          "time": 1687175399714
+        },
+        {
+          "Value": 47.019676208496094,
+          "dt": {
+            "$": [
+              "ts",
+              192,
+              1687175579714
+            ],
+            "$ts": 1687175579714
+          },
+          "time": 1687175579714
+        }
+      ],
+      "name": "Value"
+    }
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput01"
+  },
+  "propConfig": {
+    "custom.Alarms": {
+      "persistent": true
+    },
+    "custom.Alarms.High.Enable": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/High/Cfg/Enable"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.High.Priority": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/High/Sts/Active/Alarms/Alarm.Priority"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.High.Setpoint": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/High/Cfg/ConditionSetpoint"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.HighHigh.Enable": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/HighHigh/Cfg/Enable"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.HighHigh.Priority": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/HighHigh/Sts/Active/Alarms/Alarm.Priority"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.HighHigh.Setpoint": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/HighHigh/Cfg/ConditionSetpoint"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.Low.Enable": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/LowLow/Cfg/Enable"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.Low.Priority": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Low/Sts/Active/Alarms/Alarm.Priority"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.Low.Setpoint": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Low/Cfg/ConditionSetpoint"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.LowLow.Enable": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/HighHigh/Cfg/Enable"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.LowLow.Priority": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/LowLow/Sts/Active/Alarms/Alarm.Priority"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.LowLow.Setpoint": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/LowLow/Cfg/ConditionSetpoint"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.ControlLimits": {
+      "persistent": true
+    },
+    "custom.ControlLimits.High": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/ControlLimitHigh"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.ControlLimits.HighHigh": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/ControlLimitHighHigh"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.ControlLimits.Low": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/ControlLimitLow"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.ControlLimits.LowLow": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/ControlLimitLowLow"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Data": {
+      "binding": {
+        "config": {
+          "avoidScanClassValidation": true,
+          "dateRange": {
+            "mostRecent": "{view.custom.historyDuration}",
+            "mostRecentUnits": "MIN"
+          },
+          "enableValueCache": true,
+          "ignoreBadQuality": false,
+          "polling": {
+            "enabled": true,
+            "rate": "1"
+          },
+          "preventInterpolation": false,
+          "returnFormat": "Wide",
+          "returnSize": {
+            "type": "RAW"
+          },
+          "tags": "{view.custom.HistoryTag}",
+          "valueFormat": "DOCUMENT"
+        },
+        "transforms": [
+          {
+            "code": "\tcurrentValue \u003d self.custom.Value\n\tduration \u003d self.custom.historyDuration*60*1000 #duration in millis\n\tdata \u003d Standard.Tags.Common.GetTrendData(Name\u003d\u0027Value\u0027, RawData\u003dvalue, CurrentValue\u003dcurrentValue, Duration\u003dduration)\n\treturn data",
+            "type": "script"
+          }
+        ],
+        "type": "tag-history"
+      },
+      "persistent": true
+    },
+    "custom.EngUnit": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value.EngUnit"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.FormatString": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value.FormatString"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.HistoryTag": {
+      "binding": {
+        "config": {
+          "struct": {
+            "gatewayType": "{session.custom.SystemInfo.GatewayType}",
+            "historyPath": "tag({view.params.TagPath}+\"/Sts/Value.History Path\")\r\n"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\thistoryPath \u003d value[\u0027historyPath\u0027]\n\tgatewayType \u003d value[\u0027gatewayType\u0027]\n\tpath \u003d historyPath\n\tif gatewayType \u003d\u003d \"Edge\":\n\t\tpath \u003d self.params.TagPath + \"/Sts/Value\"\n\t\t\n\treturn [{\n\t    \"aggregate\": \"MinMax\",\n\t    \"alias\": \"Value\",\n\t    \"path\": path\n\t  }]",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.SQLData": {
+      "binding": {
+        "config": {
+          "avoidScanClassValidation": true,
+          "dateRange": {
+            "mostRecent": "{view.custom.historyDuration}",
+            "mostRecentUnits": "MIN"
+          },
+          "enableValueCache": true,
+          "ignoreBadQuality": false,
+          "polling": {
+            "enabled": true,
+            "rate": "1"
+          },
+          "preventInterpolation": false,
+          "returnFormat": "Wide",
+          "returnSize": {
+            "type": "RAW"
+          },
+          "tags": [
+            {
+              "alias": "Value",
+              "path": "[IGNStandard/advansysprimary:standards71500]standard/modules/control modules/cmtesting/aivalue"
+            }
+          ],
+          "valueFormat": "DOCUMENT"
+        },
+        "transforms": [
+          {
+            "code": "\tcurrentValue \u003d self.custom.Value\n\tduration \u003d self.custom.historyDuration*60*1000 #duration in millis\n\tdata \u003d Standard.Tags.Common.GetTrendData(Name\u003d\u0027Value\u0027, RawData\u003dvalue, CurrentValue\u003dcurrentValue, Duration\u003dduration)\n\treturn data",
+            "type": "script"
+          }
+        ],
+        "type": "tag-history"
+      },
+      "persistent": true
+    },
+    "custom.ScaleEngineeringMax": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/ScaleEngineeringMax"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ScaleEngineeringMin": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/ScaleEngineeringMin"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Value": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.boundry": {
+      "binding": {
+        "config": {
+          "struct": {
+            "tagHistoryPath": "{view.custom.HistoryTag[0].path}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\ttagHistoryPath \u003d value[\u0027tagHistoryPath\u0027]\n\ttagHistoryPath \u003d \u0027Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput01/Sts/Value\u0027\n\t#return tagHistoryPath\n\tendTime \u003d system.date.now()\n\tstartTime \u003d system.date.addMinutes(endTime, -30)\n\t#dataSet \u003d system.tag.queryTagHistory(paths, startDate, endDate, aggregationMode, columnNames, intervalHours, intervalMinutes, rangeHours, rangeMinutes, aggregationModes, validateSCExec, noInterpolation, ignoreBadQuality, intervalSeconds, rangeSeconds)\n\tdataSet \u003d system.tag.queryTagHistory(paths\u003d[tagHistoryPath], startDate\u003dstartTime, endDate\u003dendTime, returnSize\u003d1, aggregationMode\u003d\"Maximum\", returnFormat\u003d\u0027Wide\u0027)\n\treturn dataSet",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.historyDuration": {
+      "binding": {
+        "config": {
+          "path": "session.custom.DefaultPopupHistoryDuration"
+        },
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.key": {
+      "binding": {
+        "config": {
+          "avoidScanClassValidation": true,
+          "dateRange": {
+            "mostRecent": "1",
+            "mostRecentUnits": "HOUR"
+          },
+          "enableValueCache": true,
+          "ignoreBadQuality": false,
+          "polling": {
+            "enabled": false,
+            "rate": "30"
+          },
+          "preventInterpolation": false,
+          "returnFormat": "Wide",
+          "returnSize": {
+            "type": "RAW"
+          },
+          "tags": [
+            {
+              "path": "[IGNStandard/advansysprimary:standards71500]standard/modules/control modules/cmtesting/cms/analoginput01/sts/value"
+            }
+          ],
+          "valueFormat": "DOCUMENT"
+        },
+        "type": "tag-history"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 453,
+      "width": 350
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "35px"
+        },
+        "props": {
+          "params": {
+            "Title": "Status"
+          },
+          "path": "Standard/Components/Faceplates/Header"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "custom": {
+                      "alarmbaseStylePath": "Standard/Popups/Faceplates/Trend/Alarms/"
+                    },
+                    "meta": {
+                      "name": "TimeSeriesChart"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.plots[0].axes[0].max": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ScaleEngineeringMax"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].axes[0].min": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ScaleEngineeringMin"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[0].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ControlLimits.HighHigh"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[0].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.ControlLimits.HighHigh}\u003e{view.custom.ControlLimits.High}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[1].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ControlLimits.High"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[1].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.ControlLimits.High}\u003e{view.custom.ControlLimits.Low}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[2].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ControlLimits.Low"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[2].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.ControlLimits.Low}\u003c{view.custom.ControlLimits.High}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[3].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ControlLimits.LowLow"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[3].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.ControlLimits.LowLow}\u003c{view.custom.ControlLimits.Low}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[4].line.style.classes": {
+                        "binding": {
+                          "config": {
+                            "expression": "{this.custom.alarmbaseStylePath}+{view.custom.Alarms.HighHigh.Priority}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[4].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Alarms.HighHigh.Setpoint"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[4].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.Alarms.HighHigh.Setpoint}\u003e{view.custom.Alarms.High.Setpoint} \u0026\u0026 \r\n{view.custom.Alarms.HighHigh.Setpoint}\u003e{view.custom.ScaleEngineeringMin} \u0026\u0026\r\n{view.custom.Alarms.HighHigh.Enable}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[5].line.style.classes": {
+                        "binding": {
+                          "config": {
+                            "expression": "{this.custom.alarmbaseStylePath}+{view.custom.Alarms.High.Priority}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[5].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Alarms.High.Setpoint"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[5].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.Alarms.High.Setpoint}\u003e{view.custom.Alarms.Low.Setpoint} \u0026\u0026 \r\n{view.custom.Alarms.High.Setpoint}\u003e{view.custom.ScaleEngineeringMin} \u0026\u0026\r\n{view.custom.Alarms.High.Enable}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[6].line.style.classes": {
+                        "binding": {
+                          "config": {
+                            "expression": "{this.custom.alarmbaseStylePath}+{view.custom.Alarms.Low.Priority}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[6].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Alarms.Low.Setpoint"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[6].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.Alarms.Low.Setpoint}\u003c{view.custom.Alarms.High.Setpoint} \u0026\u0026 {view.custom.Alarms.Low.Setpoint}\u003e{view.custom.ScaleEngineeringMin} \u0026\u0026 {view.custom.Alarms.Low.Enable}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[7].line.style.classes": {
+                        "binding": {
+                          "config": {
+                            "expression": "{this.custom.alarmbaseStylePath}+{view.custom.Alarms.LowLow.Priority}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[7].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Alarms.LowLow.Setpoint"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[7].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.Alarms.LowLow.Setpoint}\u003c{view.custom.Alarms.Low.Setpoint} \u0026\u0026 \r\n{view.custom.Alarms.LowLow.Setpoint}\u003e{view.custom.ScaleEngineeringMin} \u0026\u0026 \r\n{view.custom.Alarms.LowLow.Enable}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[8].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ScaleEngineeringMax"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[9].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ScaleEngineeringMin"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.series[0]": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Data"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.title.text": {
+                        "binding": {
+                          "config": {
+                            "expression": "numberFormat({view.custom.Value},{view.custom.FormatString})+\" \"+{view.custom.EngUnit}"
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "defaultStyles": {
+                        "colors": [
+                          "#4768FF"
+                        ]
+                      },
+                      "plots": [
+                        {
+                          "axes": [
+                            {
+                              "alignment": "left",
+                              "label": {
+                                "font": {
+                                  "color": "",
+                                  "size": 10
+                                },
+                                "offset": 0,
+                                "style": {
+                                  "classes": ""
+                                },
+                                "text": "",
+                                "visible": true
+                              },
+                              "name": "Value",
+                              "style": {
+                                "classes": ""
+                              },
+                              "tick": {
+                                "color": "",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "style": {
+                                    "classes": ""
+                                  }
+                                },
+                                "style": {
+                                  "classes": ""
+                                }
+                              },
+                              "width": 60
+                            }
+                          ],
+                          "markers": [
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "dashArray": "5 3 2",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Control High High"
+                                },
+                                "style": {
+                                  "classes": "Standard/Popups/Faceplates/Trend/Control/HighHigh"
+                                }
+                              },
+                              "type": "line"
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "5 3 2",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "left",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Control High"
+                                },
+                                "style": {
+                                  "classes": "Standard/Popups/Faceplates/Trend/Control/High"
+                                }
+                              },
+                              "type": "line"
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "5 3 2",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "left",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Control Low"
+                                },
+                                "style": {
+                                  "classes": "Standard/Popups/Faceplates/Trend/Control/Low"
+                                }
+                              },
+                              "type": "line"
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "5 3 2",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Control Low Low"
+                                },
+                                "style": {
+                                  "classes": "Standard/Popups/Faceplates/Trend/Control/LowLow"
+                                }
+                              },
+                              "type": "line"
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "5 3 2",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Alarm High High"
+                                },
+                                "style": {}
+                              },
+                              "type": "line"
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "5 3 2",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Alarm High"
+                                },
+                                "style": {}
+                              },
+                              "type": "line"
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "5 3 2",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Alarm Low"
+                                },
+                                "style": {}
+                              },
+                              "type": "line"
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "5 3 2",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Alarm Low Low"
+                                },
+                                "style": {}
+                              },
+                              "type": "line"
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": ""
+                                },
+                                "style": {
+                                  "classes": ""
+                                }
+                              },
+                              "type": "line",
+                              "visible": true
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": ""
+                                },
+                                "style": {
+                                  "classes": ""
+                                }
+                              },
+                              "type": "line",
+                              "visible": true
+                            }
+                          ],
+                          "relativeWeight": 1,
+                          "trends": [
+                            {
+                              "axis": "Value",
+                              "baselines": [],
+                              "breakLine": true,
+                              "columns": [],
+                              "interpolation": "curveStep",
+                              "radius": 2,
+                              "series": "Value",
+                              "stack": true,
+                              "type": "line",
+                              "visible": true
+                            }
+                          ]
+                        }
+                      ],
+                      "series": [
+                        null
+                      ],
+                      "timeAxis": {
+                        "height": 0,
+                        "tick": {
+                          "label": {
+                            "style": {
+                              "classes": "Standard/Popups/Faceplates/Accent"
+                            }
+                          },
+                          "style": {
+                            "classes": "Standard/Popups/Faceplates/Accent"
+                          }
+                        }
+                      },
+                      "timeRange": {
+                        "dateFormat": "MM-DD",
+                        "timeFormat": "HH:mm:ss",
+                        "visible": false
+                      },
+                      "title": {
+                        "font": {
+                          "size": 15
+                        },
+                        "height": 20,
+                        "visible": true
+                      }
+                    },
+                    "type": "ia.chart.timeseries"
+                  },
+                  {
+                    "custom": {
+                      "alarmbaseStylePath": "Standard/Popups/Faceplates/Trend/Alarms/"
+                    },
+                    "meta": {
+                      "name": "TimeSeriesChart_0"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.plots[0].axes[0].max": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ScaleEngineeringMax"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].axes[0].min": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ScaleEngineeringMin"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[0].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ControlLimits.HighHigh"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[0].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.ControlLimits.HighHigh}\u003e{view.custom.ControlLimits.High}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[1].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ControlLimits.High"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[1].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.ControlLimits.High}\u003e{view.custom.ControlLimits.Low}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[2].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ControlLimits.Low"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[2].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.ControlLimits.Low}\u003c{view.custom.ControlLimits.High}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[3].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ControlLimits.LowLow"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[3].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.ControlLimits.LowLow}\u003c{view.custom.ControlLimits.Low}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[4].line.style.classes": {
+                        "binding": {
+                          "config": {
+                            "expression": "{this.custom.alarmbaseStylePath}+{view.custom.Alarms.HighHigh.Priority}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[4].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Alarms.HighHigh.Setpoint"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[4].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.Alarms.HighHigh.Setpoint}\u003e{view.custom.Alarms.High.Setpoint} \u0026\u0026 \r\n{view.custom.Alarms.HighHigh.Setpoint}\u003e{view.custom.ScaleEngineeringMin} \u0026\u0026\r\n{view.custom.Alarms.HighHigh.Enable}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[5].line.style.classes": {
+                        "binding": {
+                          "config": {
+                            "expression": "{this.custom.alarmbaseStylePath}+{view.custom.Alarms.High.Priority}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[5].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Alarms.High.Setpoint"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[5].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.Alarms.High.Setpoint}\u003e{view.custom.Alarms.Low.Setpoint} \u0026\u0026 \r\n{view.custom.Alarms.High.Setpoint}\u003e{view.custom.ScaleEngineeringMin} \u0026\u0026\r\n{view.custom.Alarms.High.Enable}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[6].line.style.classes": {
+                        "binding": {
+                          "config": {
+                            "expression": "{this.custom.alarmbaseStylePath}+{view.custom.Alarms.Low.Priority}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[6].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Alarms.Low.Setpoint"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[6].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.Alarms.Low.Setpoint}\u003c{view.custom.Alarms.High.Setpoint} \u0026\u0026 {view.custom.Alarms.Low.Setpoint}\u003e{view.custom.ScaleEngineeringMin} \u0026\u0026 {view.custom.Alarms.Low.Enable}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[7].line.style.classes": {
+                        "binding": {
+                          "config": {
+                            "expression": "{this.custom.alarmbaseStylePath}+{view.custom.Alarms.LowLow.Priority}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[7].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Alarms.LowLow.Setpoint"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[7].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.Alarms.LowLow.Setpoint}\u003c{view.custom.Alarms.Low.Setpoint} \u0026\u0026 \r\n{view.custom.Alarms.LowLow.Setpoint}\u003e{view.custom.ScaleEngineeringMin} \u0026\u0026 \r\n{view.custom.Alarms.LowLow.Enable}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[8].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ScaleEngineeringMax"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[9].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ScaleEngineeringMin"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.series[0]": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.SQLData"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.title.text": {
+                        "binding": {
+                          "config": {
+                            "expression": "numberFormat({view.custom.Value},{view.custom.FormatString})+\" \"+{view.custom.EngUnit}"
+                          },
+                          "type": "expr"
+                        }
+                      }
+                    },
+                    "props": {
+                      "defaultStyles": {
+                        "colors": [
+                          "#4768FF"
+                        ]
+                      },
+                      "plots": [
+                        {
+                          "axes": [
+                            {
+                              "alignment": "left",
+                              "label": {
+                                "font": {
+                                  "color": "",
+                                  "size": 10
+                                },
+                                "offset": 0,
+                                "style": {
+                                  "classes": ""
+                                },
+                                "text": "",
+                                "visible": true
+                              },
+                              "name": "Value",
+                              "style": {
+                                "classes": ""
+                              },
+                              "tick": {
+                                "color": "",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "style": {
+                                    "classes": ""
+                                  }
+                                },
+                                "style": {
+                                  "classes": ""
+                                }
+                              },
+                              "width": 60
+                            }
+                          ],
+                          "markers": [
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "dashArray": "5 3 2",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Control High High"
+                                },
+                                "style": {
+                                  "classes": "Standard/Popups/Faceplates/Trend/Control/HighHigh"
+                                }
+                              },
+                              "type": "line"
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "5 3 2",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "left",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Control High"
+                                },
+                                "style": {
+                                  "classes": "Standard/Popups/Faceplates/Trend/Control/High"
+                                }
+                              },
+                              "type": "line"
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "5 3 2",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "left",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Control Low"
+                                },
+                                "style": {
+                                  "classes": "Standard/Popups/Faceplates/Trend/Control/Low"
+                                }
+                              },
+                              "type": "line"
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "5 3 2",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Control Low Low"
+                                },
+                                "style": {
+                                  "classes": "Standard/Popups/Faceplates/Trend/Control/LowLow"
+                                }
+                              },
+                              "type": "line"
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "5 3 2",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Alarm High High"
+                                },
+                                "style": {}
+                              },
+                              "type": "line"
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "5 3 2",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Alarm High"
+                                },
+                                "style": {}
+                              },
+                              "type": "line"
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "5 3 2",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Alarm Low"
+                                },
+                                "style": {}
+                              },
+                              "type": "line"
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "5 3 2",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Alarm Low Low"
+                                },
+                                "style": {}
+                              },
+                              "type": "line"
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": ""
+                                },
+                                "style": {
+                                  "classes": ""
+                                }
+                              },
+                              "type": "line",
+                              "visible": true
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "",
+                                "dashArray": "",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": ""
+                                },
+                                "style": {
+                                  "classes": ""
+                                }
+                              },
+                              "type": "line",
+                              "visible": true
+                            }
+                          ],
+                          "relativeWeight": 1,
+                          "trends": [
+                            {
+                              "axis": "Value",
+                              "baselines": [],
+                              "breakLine": true,
+                              "columns": [],
+                              "interpolation": "curveStep",
+                              "radius": 2,
+                              "series": "Value",
+                              "stack": true,
+                              "type": "line",
+                              "visible": true
+                            }
+                          ]
+                        }
+                      ],
+                      "series": [
+                        null
+                      ],
+                      "timeAxis": {
+                        "height": 0,
+                        "tick": {
+                          "label": {
+                            "style": {
+                              "classes": "Standard/Popups/Faceplates/Accent"
+                            }
+                          },
+                          "style": {
+                            "classes": "Standard/Popups/Faceplates/Accent"
+                          }
+                        }
+                      },
+                      "timeRange": {
+                        "dateFormat": "MM-DD",
+                        "timeFormat": "HH:mm:ss",
+                        "visible": false
+                      },
+                      "title": {
+                        "font": {
+                          "size": 15
+                        },
+                        "height": 20,
+                        "visible": true
+                      }
+                    },
+                    "type": "ia.chart.timeseries"
+                  },
+                  {
+                    "meta": {
+                      "name": "DropdownSelector"
+                    },
+                    "position": {
+                      "basis": "25px"
+                    },
+                    "propConfig": {
+                      "props.params.Value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "path": "view.custom.historyDuration"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Enable": true,
+                        "Label": "Duration",
+                        "ShowLabel": true,
+                        "options": [
+                          {
+                            "label": "5 Min",
+                            "value": 5
+                          },
+                          {
+                            "label": "10 Min",
+                            "value": 10
+                          },
+                          {
+                            "label": "30 Min",
+                            "value": 30
+                          },
+                          {
+                            "label": "60 Min",
+                            "value": 60
+                          }
+                        ]
+                      },
+                      "path": "Standard/Components/Faceplates/Input/LabelDropdown",
+                      "style": {
+                        "margin": 2
+                      }
+                    },
+                    "type": "ia.display.view"
+                  }
+                ],
+                "meta": {
+                  "name": "Trend"
+                },
+                "position": {
+                  "basis": "200px",
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "LabelPlaceHolderTop",
+                      "visible": false
+                    },
+                    "position": {
+                      "basis": "34px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "style": {
+                        "classes": "Standard/Popups/Faceplates/ValueDisplay",
+                        "fontWeight": "bold"
+                      },
+                      "textStyle": {
+                        "textAlign": "center"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "MovingAnalogIndicator"
+                    },
+                    "position": {
+                      "basis": "71px",
+                      "display": false,
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.desiredHigh": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ControlLimits.High"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.desiredLow": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ControlLimits.Low"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.highAlarm": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Alarms.High.Setpoint"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.highHighAlarm": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Alarms.HighHigh.Setpoint"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.highInterlock": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ControlLimits.HighHigh"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.lowAlarm": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Alarms.Low.Setpoint"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.lowInterlock": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ControlLimits.LowLow"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.lowLowAlarm": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Alarms.LowLow.Setpoint"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.maxValue": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ScaleEngineeringMax"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.minValue": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ScaleEngineeringMin"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.processValue": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Value"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "desiredRangeColor": "#8AFFFF",
+                      "interlockColor": "var(--Framework-03)",
+                      "label": {
+                        "visible": true
+                      },
+                      "level1AlarmColor": "var(--AlarmCritical)",
+                      "level2AlarmColor": "var(--AlarmHigh)"
+                    },
+                    "type": "ia.display.moving-analog-indicator"
+                  },
+                  {
+                    "meta": {
+                      "name": "LinearScale"
+                    },
+                    "position": {
+                      "basis": "318px",
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.indicators[0].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Value"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.indicators[1].color": {
+                        "binding": {
+                          "config": {
+                            "expression": "\"var(--Alarm\"+{view.custom.Alarms.HighHigh.Priority}+\")\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[1].extent": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.ScaleEngineeringMax}-{view.custom.Alarms.HighHigh.Setpoint}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[1].value": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.Alarms.HighHigh.Enable}*{view.custom.Alarms.HighHigh.Setpoint}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[2].color": {
+                        "binding": {
+                          "config": {
+                            "expression": "\"var(--Alarm\"+{view.custom.Alarms.High.Priority}+\")\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[2].extent": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.Alarms.HighHigh.Setpoint}-{view.custom.Alarms.High.Setpoint}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[2].value": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.Alarms.High.Enable}*{view.custom.Alarms.High.Setpoint}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[3].extent": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.ControlLimits.HighHigh} - {view.custom.ControlLimits.High}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[3].value": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.ControlLimits.High}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[4].extent": {
+                        "binding": {
+                          "config": {
+                            "expression": "({view.custom.ControlLimits.High} - {view.custom.ControlLimits.Low})/2"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[4].value": {
+                        "binding": {
+                          "config": {
+                            "expression": " {view.custom.ControlLimits.Low} + ({view.custom.ControlLimits.High} - {view.custom.ControlLimits.Low})/2"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[5].extent": {
+                        "binding": {
+                          "config": {
+                            "expression": "({view.custom.ControlLimits.High} - {view.custom.ControlLimits.Low})/2"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[5].value": {
+                        "binding": {
+                          "config": {
+                            "expression": " {view.custom.ControlLimits.Low}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[6].extent": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.ControlLimits.Low}-{view.custom.ControlLimits.LowLow}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[6].value": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.ControlLimits.LowLow}"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[7].color": {
+                        "binding": {
+                          "config": {
+                            "expression": "\"var(--Alarm\"+{view.custom.Alarms.Low.Priority}+\")\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[7].extent": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.Alarms.Low.Enable}*({view.custom.Alarms.Low.Setpoint}-{view.custom.Alarms.LowLow.Setpoint})"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[7].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ScaleEngineeringMin"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.indicators[8].color": {
+                        "binding": {
+                          "config": {
+                            "expression": "\"var(--Alarm\"+{view.custom.Alarms.LowLow.Priority}+\")\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[8].extent": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.custom.Alarms.LowLow.Enable}*({view.custom.Alarms.LowLow.Setpoint}-{view.custom.ScaleEngineeringMin})"
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.indicators[8].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ScaleEngineeringMin"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.maxValue": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ScaleEngineeringMax"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.minValue": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ScaleEngineeringMin"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "fineTicks": {
+                        "color": "#D5D5D5",
+                        "span": 0
+                      },
+                      "indicators": [
+                        {
+                          "color": "var(--Framework-04)",
+                          "extent": 2,
+                          "indicatorStyle": "wedge",
+                          "label": "",
+                          "labelAngle": 270,
+                          "labelColor": "",
+                          "length": 30,
+                          "opacity": 1,
+                          "stroke": 2
+                        },
+                        {
+                          "indicatorStyle": "range",
+                          "label": "",
+                          "labelAngle": 270,
+                          "labelColor": "",
+                          "length": 30,
+                          "opacity": 0.4,
+                          "stroke": 1.5
+                        },
+                        {
+                          "indicatorStyle": "range",
+                          "label": "",
+                          "labelAngle": 270,
+                          "labelColor": "",
+                          "length": 30,
+                          "opacity": 0.4,
+                          "stroke": 1.5
+                        },
+                        {
+                          "color": "var(--controlLimitHighHigh)",
+                          "indicatorStyle": "range",
+                          "label": "",
+                          "labelAngle": 270,
+                          "labelColor": "",
+                          "length": 30,
+                          "opacity": 1,
+                          "stroke": 1.5
+                        },
+                        {
+                          "color": "var(--controlLimitHigh)",
+                          "indicatorStyle": "range",
+                          "label": "",
+                          "labelAngle": 270,
+                          "labelColor": "",
+                          "length": 30,
+                          "opacity": 0.4,
+                          "stroke": 1.5
+                        },
+                        {
+                          "color": "var(--controlLimitLow)",
+                          "indicatorStyle": "range",
+                          "label": "",
+                          "labelAngle": 270,
+                          "labelColor": "",
+                          "length": 30,
+                          "opacity": 0.4,
+                          "stroke": 1.5
+                        },
+                        {
+                          "color": "var(--controlLimitLowLow)",
+                          "indicatorStyle": "range",
+                          "label": "",
+                          "labelAngle": 0,
+                          "labelColor": "",
+                          "length": 30,
+                          "opacity": 1,
+                          "stroke": 1
+                        },
+                        {
+                          "indicatorStyle": "range",
+                          "label": "",
+                          "labelAngle": 270,
+                          "labelColor": "",
+                          "length": 30,
+                          "opacity": 0.4,
+                          "stroke": 1.5
+                        },
+                        {
+                          "indicatorStyle": "range",
+                          "label": "",
+                          "labelAngle": 270,
+                          "labelColor": "",
+                          "length": 30,
+                          "opacity": 0.4,
+                          "stroke": 1.5
+                        }
+                      ],
+                      "labels": {
+                        "style": {
+                          "fontSize": 10
+                        }
+                      },
+                      "majorTicks": {
+                        "span": 0
+                      },
+                      "minorTicks": {
+                        "span": 0
+                      },
+                      "mirror": true
+                    },
+                    "type": "ia.display.linear-scale"
+                  },
+                  {
+                    "meta": {
+                      "name": "AnalogueIndicator"
+                    },
+                    "position": {
+                      "basis": "320px",
+                      "display": false,
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.params.Max": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ScaleEngineeringMax"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.params.Min": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.ScaleEngineeringMin"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.params.Ranges": {
+                        "binding": {
+                          "config": {
+                            "struct": {
+                              "alarms": "{view.custom.Alarms}",
+                              "controlLimits": "{view.custom.ControlLimits}",
+                              "max": "{view.custom.ScaleEngineeringMax}",
+                              "min": "{view.custom.ScaleEngineeringMin}"
+                            },
+                            "waitOnAll": true
+                          },
+                          "transforms": [
+                            {
+                              "code": "\tbaseAlarmStyles \u003d \"Standard/Popups/Faceplates/Trend/Alarms/\"\n\tbaseControlLimitsStyles \u003d \"Standard/Popups/Faceplates/Trend/Control/\"\n\t\n\talarms \u003d value[\u0027alarms\u0027]\n\tcontrolLimits \u003d value[\"controlLimits\"]\n\tmax \u003d value[\u0027max\u0027]\n\tmin \u003d value[\u0027min\u0027]\n\t\n\t#Alarm Limits\n\taHH \u003d  alarms[\"HighHigh\"][\"Setpoint\"]\n\taH \u003d  alarms[\"High\"][\"Setpoint\"]\n\taL \u003d  alarms[\"Low\"][\"Setpoint\"]\n\taLL \u003d  alarms[\"LowLow\"][\"Setpoint\"]\n\t\n\t#Control Limits\n\tcHH \u003d  controlLimits[\"HighHigh\"]\n\tcH \u003d  controlLimits[\"High\"]\n\tcL \u003d  controlLimits[\"Low\"]\n\tcLL \u003d  controlLimits[\"LowLow\"]\n\tranges \u003d []\n\tnextMax \u003d max\n\t\n\t#Alarm High High Band\n\tif alarms[\"HighHigh\"][\"Enable\"]:\n\t\tranges.append({\"Label\": \"AHH\",\"Style\": {\"classes\": baseAlarmStyles+alarms[\"HighHigh\"][\"Priority\"]},\"Min\": aHH,\"Max\":max})\n\t\tnextMax \u003d aHH\n\t\t\n\t#Alarm High Band\n\tif alarms[\"High\"][\"Enable\"]:\n\t\tranges.append({\"Label\": \"AH\",\"Style\": {\"classes\": baseAlarmStyles+alarms[\"High\"][\"Priority\"]},\"Min\": aH,\"Max\":nextMax})\n\t\tnextMax \u003d aH\n\t#Control High Band\n\tif cHH\u003emin:\n\t\tranges.append({\"Label\": \"CHH\",\"Style\": {\"classes\": baseControlLimitsStyles+\"HighHigh\"},\"Min\": cH,\"Max\":cHH})\n\t\t\n\t#Control Band\n\tif cH\u003emin and cL\u003emin:\n\t\tranges.append({\"Label\": \"C\",\"Style\": {\"classes\": baseControlLimitsStyles+\"High\"},\"Min\": cL,\"Max\":cH})\n\t\t\n\t#Control Low Band\n\tif cLL\u003emin:\n\t\tranges.append({\"Label\": \"CLL\",\"Style\": {\"classes\": baseControlLimitsStyles+\"LowLow\"},\"Min\": cLL,\"Max\":cL})\n\t\n\t#Alarm Low Band\n\tif alarms[\"Low\"][\"Enable\"]:\n\t\tranges.append({\"Label\": \"AL\",\"Style\": {\"classes\": baseAlarmStyles+alarms[\"Low\"][\"Priority\"]},\"Min\": aLL,\"Max\":aL})\n\t\t\n\t#Alarm Low Low Band\n\tif alarms[\"LowLow\"][\"Enable\"]:\n\t\tranges.append({\"Label\": \"ALL\",\"Style\": {\"classes\": baseAlarmStyles+alarms[\"LowLow\"][\"Priority\"]},\"Min\": min,\"Max\":aLL})\n\n\treturn ranges",
+                              "type": "script"
+                            }
+                          ],
+                          "type": "expr-struct"
+                        }
+                      },
+                      "props.params.Value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Value"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "path": "Standard/Components/Trends/AnalogueIndicator"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "LabelPlaceHolderBottom"
+                    },
+                    "position": {
+                      "basis": "58px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "style": {
+                        "fontWeight": "bold"
+                      },
+                      "textStyle": {
+                        "textAlign": "center"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "MovingAnalogIndicator_0"
+                    },
+                    "position": {
+                      "basis": "223px",
+                      "display": false
+                    },
+                    "props": {
+                      "desiredHigh": 60,
+                      "desiredLow": 40,
+                      "desiredRangeColor": "#8AFF8A",
+                      "highAlarm": 80,
+                      "highHighAlarm": 90,
+                      "highInterlock": 95,
+                      "inactiveAlarmColor": "#FF4747",
+                      "interlockColor": "#00ACAC",
+                      "level1AlarmColor": "#FF4747",
+                      "level2AlarmColor": "#FFFFCC",
+                      "lowAlarm": 10,
+                      "lowInterlock": 30,
+                      "lowLowAlarm": 5
+                    },
+                    "type": "ia.display.moving-analog-indicator"
+                  }
+                ],
+                "meta": {
+                  "name": "ValueIndicator"
+                },
+                "position": {
+                  "basis": "30px",
+                  "shrink": 0
+                },
+                "props": {
+                  "direction": "column"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "custom": {
+              "Data": "value",
+              "EngineeringMax": "value",
+              "EngineeringMin": "value"
+            },
+            "meta": {
+              "name": "ValueRow"
+            },
+            "position": {
+              "basis": "500px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Content"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Status"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "custom": {
+      "UpdateRateSeconds": 5
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

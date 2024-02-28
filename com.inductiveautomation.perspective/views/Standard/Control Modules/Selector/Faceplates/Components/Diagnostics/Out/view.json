@@ -1,0 +1,65 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[StandardS71500]Modules/Control Modules/100S100"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 489,
+      "width": 330
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Selected"
+        },
+        "position": {
+          "basis": "25px"
+        },
+        "propConfig": {
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Out/{name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Selection",
+            "MappedObject": {
+              "False": "Deselected",
+              "True": "Selected"
+            },
+            "ShowLabel": true
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayEnumeration"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "custom": {},
+  "params": {
+    "style": {
+      "classes": "Standard/Body/Statics/Stroke Standard/Body/Statics/Fill",
+      "vector-effect": "non-scaling-stroke"
+    }
+  },
+  "propConfig": {
+    "params.style": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 103,
+      "width": 109
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Tank"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "props.elements[0].elements[0].style": {
+            "binding": {
+              "config": {
+                "path": "view.params.style"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[0].elements[1].style": {
+            "binding": {
+              "config": {
+                "path": "view.params.style"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "fill": {
+                    "opacity": 1
+                  },
+                  "height": 100,
+                  "name": "tank",
+                  "stroke": {
+                    "classes": {},
+                    "width": 1
+                  },
+                  "type": "rect",
+                  "width": 100,
+                  "x": "32.997517",
+                  "y": "40.497517"
+                },
+                {
+                  "fill": {},
+                  "height": "2.2859664",
+                  "name": "base",
+                  "stroke": {
+                    "width": 0.7
+                  },
+                  "type": "rect",
+                  "width": "109.28596",
+                  "x": "27.857014",
+                  "y": "140.35703"
+                }
+              ],
+              "name": "layer1",
+              "transform": "translate(-27.499997,-39.999996)",
+              "type": "group"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 109.99999 103"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "backgroundColor": "#FFFFFF00"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

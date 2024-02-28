@@ -1,0 +1,364 @@
+{
+  "custom": {
+    "TagProviders": [
+      "[TPPlant1]",
+      "[TPPlant2]",
+      "[TPROM]",
+      "[StandardS71500]",
+      "[TPJellyFactory]",
+      "[TPPackaging]",
+      "[Utilities]",
+      "[TPSite]",
+      "[default]",
+      "[TPWashPlant]",
+      "[AdvansysStandard]",
+      "[TOPSERVER]",
+      "[TPPSCV01003]",
+      "[TPJellyFactoryStandard]",
+      "[BATHeidelberg]"
+    ],
+    "selectedDestProvider": null,
+    "selectedSrcProvider": null,
+    "selectedSrcTagPath": null
+  },
+  "params": {},
+  "propConfig": {
+    "custom.TagProviders": {
+      "binding": {
+        "config": {
+          "expression": "True"
+        },
+        "transforms": [
+          {
+            "code": "\ttags\u003dsystem.tag.browse(filter\u003d{\"tagType\":\"Provider\"}).results\n\tarrTagProviders\u003d[]\n\tfor result in tags:\n\t\tprovider\u003dstr(result[\u0027fullPath\u0027])\n\t\tif provider !\u003d \"[System]\":\n\t\t\tarrTagProviders.append(provider)\n\treturn arrTagProviders\n\treturn value",
+            "type": "script"
+          }
+        ],
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.selectedDestProvider": {
+      "binding": {
+        "config": {
+          "path": "/root/FlexContainer/flexComparison/tblDestination.props.selection.data[0].provider"
+        },
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.selectedSrcProvider": {
+      "binding": {
+        "config": {
+          "path": "/root/FlexContainer/tblProviders.props.selection.data[0].provider"
+        },
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.selectedSrcTagPath": {
+      "binding": {
+        "config": {
+          "path": "/root/FlexContainer/flexComparison/tblSource.props.selection.data[0].UDT"
+        },
+        "type": "property"
+      },
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "tblProviders"
+            },
+            "position": {
+              "basis": "250px"
+            },
+            "propConfig": {
+              "props.data": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.TagProviders"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tlistEntries \u003d []\n\tfor provider in value:\n\t\tentry \u003d {\n\t\t  \"provider\": {\n\t\t    \"value\": provider,\n\t\t    \"editable\": False,\n\t\t    \"style\": {\n\t\t    },\n\t\t    \"align\": \"center\",\n\t\t    \"justify\": \"left\"\n\t\t  }\n\t\t}\n\t\tlistEntries.append(entry)\n\treturn listEntries",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "provider",
+                  "filter": {
+                    "boolean": {
+                      "condition": ""
+                    },
+                    "date": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "enabled": false,
+                    "number": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "string": {
+                      "condition": "",
+                      "value": ""
+                    },
+                    "visible": "on-hover"
+                  },
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Source Provider"
+                  },
+                  "justify": "auto",
+                  "nullFormat": {
+                    "includeNullStrings": false,
+                    "nullFormatValue": "",
+                    "strict": false
+                  },
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                }
+              ]
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "tblSource"
+                },
+                "position": {
+                  "basis": "40%",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.data": {
+                    "binding": {
+                      "config": {
+                        "path": ".../tblProviders.props.selection.data"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tlistEntries \u003d []\n\tif len(value) \u003e 0:\n\t\tstrProvider \u003d value[0][\"provider\"]\n\t\ttry:\n\t\t\tresults \u003d Standard.Utilities.TagManagement.getTypes(strProvider)\n\t\texcept Exception as e:\n\t\t\treturn [{\"UDT\":\"Script failed - \" + str(e)}]\n\t\t\n\t\tfor udt in results:\n\t\t\tentry \u003d {\n\t\t\t  \"UDT\": udt[\u0027typeId\u0027]\n\t\t\t}\n\t\t\tlistEntries.append(entry)\n\telse:\n\t\tstrProvider \u003d \"\"\n\treturn listEntries",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "emptyMessage": {
+                    "noData": {
+                      "text": "Please select a tag provider above"
+                    }
+                  }
+                },
+                "type": "ia.display.table"
+              },
+              {
+                "events": {
+                  "dom": {
+                    "onClick": {
+                      "config": {
+                        "script": "\ttry:\n\t\tstrSrcPath \u003d self.view.custom.selectedSrcProvider + \"_types_/\" + self.view.custom.selectedSrcTagPath\n\t\tstrDestProvider \u003d self.view.custom.selectedDestProvider\n\t\tresult \u003d Standard.Utilities.TagManagement.SyncType(strSrcPath,strDestProvider)\n\t\tself.parent.parent.parent.getChild(\"lblStatus\").props.text \u003d str(result)\n\texcept Exception as e:\n\t\tself.parent.parent.parent.getChild(\"lblStatus\").props.text \u003d \"ERROR: \" + str(e)"
+                      },
+                      "scope": "G",
+                      "type": "script"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "btnSync"
+                },
+                "position": {
+                  "basis": "80px"
+                },
+                "propConfig": {
+                  "props.enabled": {
+                    "binding": {
+                      "config": {
+                        "path": "../tblDestination.props.selection.data"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\treturn True if len(value) \u003e 0 else False",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  },
+                  "props.primary": {
+                    "binding": {
+                      "config": {
+                        "path": "../tblDestination.props.selection.data"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\treturn True if len(value) \u003e 0 else False",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  },
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "../tblDestination.props.selection.data"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\treturn \"Sync -\u003e\" if len(value) \u003e 0 else \"Waiting for selection\"",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "type": "ia.input.button"
+              },
+              {
+                "meta": {
+                  "name": "tblDestination"
+                },
+                "position": {
+                  "basis": "40%",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.data": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.TagProviders"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tlistEntries \u003d []\n\tfor provider in value:\n\t\tentry \u003d {\n\t\t  \"provider\": {\n\t\t    \"value\": provider,\n\t\t    \"editable\": False,\n\t\t    \"style\": {\n\t\t    },\n\t\t    \"align\": \"center\",\n\t\t    \"justify\": \"left\"\n\t\t  }\n\t\t}\n\t\tlistEntries.append(entry)\n\treturn listEntries",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "type": "ia.display.table"
+              }
+            ],
+            "meta": {
+              "name": "flexComparison"
+            },
+            "position": {
+              "basis": "400px",
+              "grow": 1
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "lblStatus"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "props": {
+          "text": "[Good]"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

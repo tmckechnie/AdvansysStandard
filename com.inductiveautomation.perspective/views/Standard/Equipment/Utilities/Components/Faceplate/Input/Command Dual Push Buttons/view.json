@@ -1,0 +1,309 @@
+{
+  "custom": {
+    "fullTagPath1": "[default]SCVD/Sefateng/ROM/Surface/100V100/Cmd//ManualOpen",
+    "fullTagPath2": "[default]SCVD/Sefateng/ROM/Surface/100V100/Cmd//ManualClose"
+  },
+  "params": {
+    "Label": "Command",
+    "OperMode": 1,
+    "Tag1": {
+      "Label": "Open",
+      "Name": "ManualOpen"
+    },
+    "Tag2": {
+      "Label": "Close",
+      "Name": "ManualClose"
+    },
+    "TagPath": "[default]SCVD/Sefateng/ROM/Surface/100V100/Cmd/"
+  },
+  "propConfig": {
+    "custom.fullTagPath1": {
+      "binding": {
+        "config": {
+          "expression": "{view.params.TagPath} + \"/\" +{view.params.Tag1.Name}"
+        },
+        "transforms": [
+          {
+            "code": "\tif quality.isGood() and self.params.TagPath!\u003d\"\":\n\t\treturn value\n\treturn \"\"",
+            "type": "script"
+          }
+        ],
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.fullTagPath2": {
+      "binding": {
+        "config": {
+          "expression": "{view.params.TagPath} + \"/\" + {view.params.Tag2.Name}"
+        },
+        "transforms": [
+          {
+            "code": "\tif quality.isGood() and self.params.TagPath!\u003d\"\":\n\t\treturn value\n\treturn \"\"",
+            "type": "script"
+          }
+        ],
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.OperMode": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Tag1": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Tag1.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Tag1.Name": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Tag2": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 300
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "100px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "overlayOptOut": true,
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Text"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "OneShotButton1"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.enabled": {
+            "binding": {
+              "config": {
+                "path": "view.params.OperMode"
+              },
+              "overlayOptOut": true,
+              "transforms": [
+                {
+                  "fallback": false,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": false
+                    },
+                    {
+                      "input": 1,
+                      "output": true
+                    },
+                    {
+                      "input": 2,
+                      "output": false
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.readyState.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Tag1.Label"
+              },
+              "type": "property"
+            }
+          },
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "fullTagPath1": "{view.custom.fullTagPath1}"
+                },
+                "tagPath": "{fullTagPath1}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "readyState": {
+            "icon": {
+              "style": {
+                "height": "24px",
+                "width": "2rem"
+              }
+            },
+            "style": {
+              "classes": "Standard/Popups/Button/UnSelected",
+              "margin": 4
+            }
+          },
+          "setValue": true,
+          "writingState": {
+            "icon": {
+              "path": "material/hourglass_empty",
+              "style": {
+                "height": "24px",
+                "width": "2rem"
+              }
+            },
+            "style": {
+              "classes": "Standard/Popups/Button/Selected",
+              "margin": 4
+            },
+            "text": "Sending Request..."
+          }
+        },
+        "type": "ia.input.oneshotbutton"
+      },
+      {
+        "meta": {
+          "name": "OneShotButton2"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.enabled": {
+            "binding": {
+              "config": {
+                "path": "view.params.OperMode"
+              },
+              "overlayOptOut": true,
+              "transforms": [
+                {
+                  "fallback": false,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": true
+                    },
+                    {
+                      "input": 1,
+                      "output": true
+                    },
+                    {
+                      "input": 2,
+                      "output": false
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.readyState.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Tag2.Label"
+              },
+              "type": "property"
+            }
+          },
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "fullTagPath2": "{view.custom.fullTagPath2}"
+                },
+                "tagPath": "{fullTagPath2}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "readyState": {
+            "icon": {
+              "style": {
+                "height": "24px",
+                "width": "2rem"
+              }
+            },
+            "style": {
+              "classes": "Standard/Popups/Button/UnSelected",
+              "margin": 4
+            }
+          },
+          "setValue": true,
+          "style": {
+            "margin": 4
+          },
+          "writingState": {
+            "icon": {
+              "path": "material/hourglass_empty",
+              "style": {
+                "height": "24px",
+                "width": "2rem"
+              }
+            },
+            "style": {
+              "classes": "Standard/Popups/Button/Selected",
+              "margin": 4
+            },
+            "text": "Sending Request..."
+          }
+        },
+        "type": "ia.input.oneshotbutton"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

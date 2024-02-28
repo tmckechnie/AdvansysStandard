@@ -1,0 +1,4035 @@
+{
+  "custom": {
+    "colums": [
+      {
+        "align": "center",
+        "boolean": "checkbox",
+        "dateFormat": "MM/DD/YYYY",
+        "editable": false,
+        "field": "InstanceName",
+        "filter": {
+          "boolean": {
+            "condition": ""
+          },
+          "date": {
+            "condition": "",
+            "value": ""
+          },
+          "enabled": false,
+          "number": {
+            "condition": "",
+            "value": ""
+          },
+          "string": {
+            "condition": "",
+            "value": ""
+          },
+          "visible": "on-hover"
+        },
+        "footer": {
+          "align": "center",
+          "justify": "left",
+          "style": {
+            "classes": ""
+          },
+          "title": ""
+        },
+        "header": {
+          "align": "center",
+          "justify": "center",
+          "style": {
+            "classes": ""
+          },
+          "title": "Instance"
+        },
+        "justify": "center",
+        "nullFormat": {
+          "includeNullStrings": false,
+          "nullFormatValue": "",
+          "strict": false
+        },
+        "number": "value",
+        "numberFormat": "0,0.##",
+        "progressBar": {
+          "bar": {
+            "color": "",
+            "style": {
+              "classes": ""
+            }
+          },
+          "max": 100,
+          "min": 0,
+          "track": {
+            "color": "",
+            "style": {
+              "classes": ""
+            }
+          },
+          "value": {
+            "enabled": true,
+            "format": "0,0.##",
+            "justify": "center",
+            "style": {
+              "classes": ""
+            }
+          }
+        },
+        "render": "string",
+        "resizable": true,
+        "sort": "none",
+        "sortable": false,
+        "strictWidth": true,
+        "style": {
+          "classes": ""
+        },
+        "toggleSwitch": {
+          "color": {
+            "selected": "",
+            "unselected": ""
+          }
+        },
+        "viewParams": {},
+        "viewPath": "",
+        "visible": true,
+        "width": 130
+      },
+      {
+        "align": "center",
+        "boolean": "checkbox",
+        "dateFormat": "MM/DD/YYYY",
+        "editable": false,
+        "field": "InstanceFullPath",
+        "filter": {
+          "boolean": {
+            "condition": ""
+          },
+          "date": {
+            "condition": "",
+            "value": ""
+          },
+          "enabled": false,
+          "number": {
+            "condition": "",
+            "value": ""
+          },
+          "string": {
+            "condition": "",
+            "value": ""
+          },
+          "visible": "on-hover"
+        },
+        "footer": {
+          "align": "center",
+          "justify": "left",
+          "style": {
+            "classes": ""
+          },
+          "title": ""
+        },
+        "header": {
+          "align": "center",
+          "justify": "center",
+          "style": {
+            "classes": ""
+          },
+          "title": "Tag Path"
+        },
+        "justify": "center",
+        "nullFormat": {
+          "includeNullStrings": false,
+          "nullFormatValue": "",
+          "strict": false
+        },
+        "number": "value",
+        "numberFormat": "0,0.##",
+        "progressBar": {
+          "bar": {
+            "color": "",
+            "style": {
+              "classes": ""
+            }
+          },
+          "max": 100,
+          "min": 0,
+          "track": {
+            "color": "",
+            "style": {
+              "classes": ""
+            }
+          },
+          "value": {
+            "enabled": true,
+            "format": "0,0.##",
+            "justify": "center",
+            "style": {
+              "classes": ""
+            }
+          }
+        },
+        "render": "string",
+        "resizable": true,
+        "sort": "none",
+        "sortable": false,
+        "strictWidth": true,
+        "style": {
+          "classes": ""
+        },
+        "toggleSwitch": {
+          "color": {
+            "selected": "",
+            "unselected": ""
+          }
+        },
+        "viewParams": {},
+        "viewPath": "",
+        "visible": false,
+        "width": 130
+      },
+      {
+        "align": "center",
+        "boolean": "checkbox",
+        "dateFormat": "MM/DD/YYYY",
+        "documentationOrder": 0,
+        "editable": false,
+        "field": "Enable",
+        "filter": {
+          "boolean": {
+            "condition": ""
+          },
+          "date": {
+            "condition": "",
+            "value": ""
+          },
+          "enabled": false,
+          "number": {
+            "condition": "",
+            "value": ""
+          },
+          "string": {
+            "condition": "",
+            "value": ""
+          },
+          "visible": "on-hover"
+        },
+        "footer": {
+          "align": "center",
+          "justify": "left",
+          "style": {
+            "classes": ""
+          },
+          "title": ""
+        },
+        "header": {
+          "align": "center",
+          "justify": "center",
+          "style": {
+            "classes": ""
+          },
+          "title": ""
+        },
+        "justify": "center",
+        "nullFormat": {
+          "includeNullStrings": false,
+          "nullFormatValue": "",
+          "strict": false
+        },
+        "number": "value",
+        "numberFormat": "0,0.##",
+        "progressBar": {
+          "bar": {
+            "color": "",
+            "style": {
+              "classes": ""
+            }
+          },
+          "max": 100,
+          "min": 0,
+          "track": {
+            "color": "",
+            "style": {
+              "classes": ""
+            }
+          },
+          "value": {
+            "enabled": true,
+            "format": "0,0.##",
+            "justify": "center",
+            "style": {
+              "classes": ""
+            }
+          }
+        },
+        "render": "boolean",
+        "resizable": true,
+        "sort": "none",
+        "sortable": false,
+        "strictWidth": true,
+        "style": {
+          "classes": ""
+        },
+        "toggleSwitch": {
+          "color": {
+            "selected": "",
+            "unselected": ""
+          }
+        },
+        "viewParams": {},
+        "viewPath": "",
+        "visible": true,
+        "width": 130
+      },
+      {
+        "align": "center",
+        "boolean": "checkbox",
+        "dateFormat": "MM/DD/YYYY",
+        "documentationOrder": 1,
+        "editable": false,
+        "field": "ConditionSetpoint",
+        "filter": {
+          "boolean": {
+            "condition": ""
+          },
+          "date": {
+            "condition": "",
+            "value": ""
+          },
+          "enabled": false,
+          "number": {
+            "condition": "",
+            "value": ""
+          },
+          "string": {
+            "condition": "",
+            "value": ""
+          },
+          "visible": "on-hover"
+        },
+        "footer": {
+          "align": "center",
+          "justify": "left",
+          "style": {
+            "classes": ""
+          },
+          "title": ""
+        },
+        "header": {
+          "align": "center",
+          "justify": "center",
+          "style": {
+            "classes": ""
+          },
+          "title": ""
+        },
+        "justify": "center",
+        "nullFormat": {
+          "includeNullStrings": false,
+          "nullFormatValue": "",
+          "strict": false
+        },
+        "number": "value",
+        "numberFormat": "0,0.##",
+        "progressBar": {
+          "bar": {
+            "color": "",
+            "style": {
+              "classes": ""
+            }
+          },
+          "max": 100,
+          "min": 0,
+          "track": {
+            "color": "",
+            "style": {
+              "classes": ""
+            }
+          },
+          "value": {
+            "enabled": true,
+            "format": "0,0.##",
+            "justify": "center",
+            "style": {
+              "classes": ""
+            }
+          }
+        },
+        "render": "number",
+        "resizable": true,
+        "sort": "none",
+        "sortable": false,
+        "strictWidth": true,
+        "style": {
+          "classes": ""
+        },
+        "toggleSwitch": {
+          "color": {
+            "selected": "",
+            "unselected": ""
+          }
+        },
+        "viewParams": {},
+        "viewPath": "",
+        "visible": true,
+        "width": 130
+      },
+      {
+        "align": "center",
+        "boolean": "checkbox",
+        "dateFormat": "MM/DD/YYYY",
+        "documentationOrder": 2,
+        "editable": false,
+        "field": "Delay",
+        "filter": {
+          "boolean": {
+            "condition": ""
+          },
+          "date": {
+            "condition": "",
+            "value": ""
+          },
+          "enabled": false,
+          "number": {
+            "condition": "",
+            "value": ""
+          },
+          "string": {
+            "condition": "",
+            "value": ""
+          },
+          "visible": "on-hover"
+        },
+        "footer": {
+          "align": "center",
+          "justify": "left",
+          "style": {
+            "classes": ""
+          },
+          "title": ""
+        },
+        "header": {
+          "align": "center",
+          "justify": "center",
+          "style": {
+            "classes": ""
+          },
+          "title": ""
+        },
+        "justify": "center",
+        "nullFormat": {
+          "includeNullStrings": false,
+          "nullFormatValue": "",
+          "strict": false
+        },
+        "number": "value",
+        "numberFormat": "0,0.##",
+        "progressBar": {
+          "bar": {
+            "color": "",
+            "style": {
+              "classes": ""
+            }
+          },
+          "max": 100,
+          "min": 0,
+          "track": {
+            "color": "",
+            "style": {
+              "classes": ""
+            }
+          },
+          "value": {
+            "enabled": true,
+            "format": "0,0.##",
+            "justify": "center",
+            "style": {
+              "classes": ""
+            }
+          }
+        },
+        "render": "number",
+        "resizable": true,
+        "sort": "none",
+        "sortable": false,
+        "strictWidth": true,
+        "style": {
+          "classes": ""
+        },
+        "toggleSwitch": {
+          "color": {
+            "selected": "",
+            "unselected": ""
+          }
+        },
+        "viewParams": {},
+        "viewPath": "",
+        "visible": true,
+        "width": 130
+      },
+      {
+        "align": "center",
+        "boolean": "checkbox",
+        "dateFormat": "MM/DD/YYYY",
+        "documentationOrder": 3,
+        "editable": false,
+        "field": "OperationPassivePriority",
+        "filter": {
+          "boolean": {
+            "condition": ""
+          },
+          "date": {
+            "condition": "",
+            "value": ""
+          },
+          "enabled": false,
+          "number": {
+            "condition": "",
+            "value": ""
+          },
+          "string": {
+            "condition": "",
+            "value": ""
+          },
+          "visible": "on-hover"
+        },
+        "footer": {
+          "align": "center",
+          "justify": "left",
+          "style": {
+            "classes": ""
+          },
+          "title": ""
+        },
+        "header": {
+          "align": "center",
+          "justify": "center",
+          "style": {
+            "classes": ""
+          },
+          "title": ""
+        },
+        "justify": "center",
+        "nullFormat": {
+          "includeNullStrings": false,
+          "nullFormatValue": "",
+          "strict": false
+        },
+        "number": "value",
+        "numberFormat": "0,0.##",
+        "progressBar": {
+          "bar": {
+            "color": "",
+            "style": {
+              "classes": ""
+            }
+          },
+          "max": 100,
+          "min": 0,
+          "track": {
+            "color": "",
+            "style": {
+              "classes": ""
+            }
+          },
+          "value": {
+            "enabled": true,
+            "format": "0,0.##",
+            "justify": "center",
+            "style": {
+              "classes": ""
+            }
+          }
+        },
+        "render": "number",
+        "resizable": true,
+        "sort": "none",
+        "sortable": false,
+        "strictWidth": true,
+        "style": {
+          "classes": ""
+        },
+        "toggleSwitch": {
+          "color": {
+            "selected": "",
+            "unselected": ""
+          }
+        },
+        "viewParams": {},
+        "viewPath": "",
+        "visible": true,
+        "width": 130
+      },
+      {
+        "align": "center",
+        "boolean": "checkbox",
+        "dateFormat": "MM/DD/YYYY",
+        "documentationOrder": 4,
+        "editable": false,
+        "field": "OperationActivePriority",
+        "filter": {
+          "boolean": {
+            "condition": ""
+          },
+          "date": {
+            "condition": "",
+            "value": ""
+          },
+          "enabled": false,
+          "number": {
+            "condition": "",
+            "value": ""
+          },
+          "string": {
+            "condition": "",
+            "value": ""
+          },
+          "visible": "on-hover"
+        },
+        "footer": {
+          "align": "center",
+          "justify": "left",
+          "style": {
+            "classes": ""
+          },
+          "title": ""
+        },
+        "header": {
+          "align": "center",
+          "justify": "center",
+          "style": {
+            "classes": ""
+          },
+          "title": ""
+        },
+        "justify": "center",
+        "nullFormat": {
+          "includeNullStrings": false,
+          "nullFormatValue": "",
+          "strict": false
+        },
+        "number": "value",
+        "numberFormat": "0,0.##",
+        "progressBar": {
+          "bar": {
+            "color": "",
+            "style": {
+              "classes": ""
+            }
+          },
+          "max": 100,
+          "min": 0,
+          "track": {
+            "color": "",
+            "style": {
+              "classes": ""
+            }
+          },
+          "value": {
+            "enabled": true,
+            "format": "0,0.##",
+            "justify": "center",
+            "style": {
+              "classes": ""
+            }
+          }
+        },
+        "render": "number",
+        "resizable": true,
+        "sort": "none",
+        "sortable": false,
+        "strictWidth": true,
+        "style": {
+          "classes": ""
+        },
+        "toggleSwitch": {
+          "color": {
+            "selected": "",
+            "unselected": ""
+          }
+        },
+        "viewParams": {},
+        "viewPath": "",
+        "visible": true,
+        "width": 130
+      },
+      {
+        "align": "center",
+        "boolean": "checkbox",
+        "dateFormat": "MM/DD/YYYY",
+        "documentationOrder": 5,
+        "editable": false,
+        "field": "DisplayPath",
+        "filter": {
+          "boolean": {
+            "condition": ""
+          },
+          "date": {
+            "condition": "",
+            "value": ""
+          },
+          "enabled": false,
+          "number": {
+            "condition": "",
+            "value": ""
+          },
+          "string": {
+            "condition": "",
+            "value": ""
+          },
+          "visible": "on-hover"
+        },
+        "footer": {
+          "align": "center",
+          "justify": "left",
+          "style": {
+            "classes": ""
+          },
+          "title": ""
+        },
+        "header": {
+          "align": "center",
+          "justify": "center",
+          "style": {
+            "classes": ""
+          },
+          "title": ""
+        },
+        "justify": "center",
+        "nullFormat": {
+          "includeNullStrings": false,
+          "nullFormatValue": "",
+          "strict": false
+        },
+        "number": "value",
+        "numberFormat": "0,0.##",
+        "progressBar": {
+          "bar": {
+            "color": "",
+            "style": {
+              "classes": ""
+            }
+          },
+          "max": 100,
+          "min": 0,
+          "track": {
+            "color": "",
+            "style": {
+              "classes": ""
+            }
+          },
+          "value": {
+            "enabled": true,
+            "format": "0,0.##",
+            "justify": "center",
+            "style": {
+              "classes": ""
+            }
+          }
+        },
+        "render": "number",
+        "resizable": true,
+        "sort": "none",
+        "sortable": false,
+        "strictWidth": true,
+        "style": {
+          "classes": ""
+        },
+        "toggleSwitch": {
+          "color": {
+            "selected": "",
+            "unselected": ""
+          }
+        },
+        "viewParams": {},
+        "viewPath": "",
+        "visible": true,
+        "width": 130
+      }
+    ],
+    "data": [
+      {
+        "Alarm": "High",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/High/Cfg/ConditionSetpoint",
+          "value": 80
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/High/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/High/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100AI100/Alarms/High"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/High/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100",
+        "InstanceName": "100AI100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/High/Cfg/OperationActivePriority",
+          "value": "High"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/High/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "LowLow",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowLow/Cfg/ConditionSetpoint",
+          "value": 20
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowLow/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowLow/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100AI100/Alarms/LowLow"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowLow/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100",
+        "InstanceName": "100AI100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowLow/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowLow/Cfg/OperationPassivePriority",
+          "value": "High"
+        }
+      },
+      {
+        "Alarm": "LowRate",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowRate/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowRate/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowRate/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100AI100/Alarms/LowRate"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowRate/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100",
+        "InstanceName": "100AI100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowRate/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowRate/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "HighRate",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighRate/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighRate/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighRate/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100AI100/Alarms/HighRate"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighRate/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100",
+        "InstanceName": "100AI100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighRate/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighRate/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "HighHigh",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighHigh/Cfg/ConditionSetpoint",
+          "value": 90
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighHigh/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighHigh/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100AI100/Alarms/HighHigh"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighHigh/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100",
+        "InstanceName": "100AI100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighHigh/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighHigh/Cfg/OperationPassivePriority",
+          "value": "Critical"
+        }
+      },
+      {
+        "Alarm": "Low",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Low/Cfg/ConditionSetpoint",
+          "value": 30
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Low/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Low/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100AI100/Alarms/Low"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Low/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100",
+        "InstanceName": "100AI100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Low/Cfg/OperationActivePriority",
+          "value": "High"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Low/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "Test",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Test/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Test/Cfg/Delay",
+          "value": 0
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Test/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100AI100/Alarms/Test"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Test/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100",
+        "InstanceName": "100AI100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Test/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Test/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "NoChange",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/NoChange/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/NoChange/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/NoChange/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100AI100/Alarms/NoChange"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/NoChange/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100",
+        "InstanceName": "100AI100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/NoChange/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/NoChange/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "BadData",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/BadData/Cfg/ConditionSetpoint",
+          "value": null
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/BadData/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/BadData/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100AI100/Alarms/BadData"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/BadData/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100",
+        "InstanceName": "100AI100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/BadData/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/BadData/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "Communication",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Communication/Cfg/ConditionSetpoint",
+          "value": null
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Communication/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Communication/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100AI100/Alarms/Communication"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Communication/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100",
+        "InstanceName": "100AI100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Communication/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Communication/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "DeviationPositive",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationPositive/Cfg/ConditionSetpoint",
+          "value": 80
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationPositive/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationPositive/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100C100/Alarms/DeviationPositive"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationPositive/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100C100",
+        "InstanceName": "100C100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationPositive/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationPositive/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "DeviationNegative",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationNegative/Cfg/ConditionSetpoint",
+          "value": 20
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationNegative/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationNegative/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100C100/Alarms/DeviationNegative"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationNegative/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100C100",
+        "InstanceName": "100C100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationNegative/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationNegative/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "Warning",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/Warning/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/Warning/Cfg/Delay",
+          "value": 5
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/Warning/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100DI100/Alarms/Warning"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/Warning/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100DI100",
+        "InstanceName": "100DI100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/Warning/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/Warning/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "State",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/State/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/State/Cfg/Delay",
+          "value": 5
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/State/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100DI100/Alarms/State"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/State/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100DI100",
+        "InstanceName": "100DI100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/State/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/State/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "Running",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Running/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Running/Cfg/Delay",
+          "value": 5
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Running/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100M100/Alarms/Running"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Running/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100",
+        "InstanceName": "100M100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Running/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Running/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "MotionSwitchMonitor",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchMonitor/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchMonitor/Cfg/Delay",
+          "value": 5
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchMonitor/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100M100/Alarms/MotionSwitchMonitor"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchMonitor/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100",
+        "InstanceName": "100M100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchMonitor/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchMonitor/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "Available",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Available/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Available/Cfg/Delay",
+          "value": 0
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Available/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100M100/Alarms/Available"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Available/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100",
+        "InstanceName": "100M100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Available/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Available/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "MotionSwitchProxy",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchProxy/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchProxy/Cfg/Delay",
+          "value": 5
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchProxy/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100M100/Alarms/MotionSwitchProxy"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchProxy/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100",
+        "InstanceName": "100M100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchProxy/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchProxy/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "LocalStop",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/LocalStop/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/LocalStop/Cfg/Delay",
+          "value": 0
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/LocalStop/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100M100/Alarms/LocalStop"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/LocalStop/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100",
+        "InstanceName": "100M100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/LocalStop/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/LocalStop/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "Running",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Running/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Running/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Running/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100MR100/Alarms/Running"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Running/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100",
+        "InstanceName": "100MR100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Running/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Running/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "MotionSwitchMonitor",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchMonitor/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchMonitor/Cfg/Delay",
+          "value": 5
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchMonitor/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100MR100/Alarms/MotionSwitchMonitor"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchMonitor/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100",
+        "InstanceName": "100MR100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchMonitor/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchMonitor/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "Available",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Available/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Available/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Available/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100MR100/Alarms/Available"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Available/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100",
+        "InstanceName": "100MR100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Available/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Available/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "MotionSwitchProxy",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchProxy/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchProxy/Cfg/Delay",
+          "value": 5
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchProxy/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100MR100/Alarms/MotionSwitchProxy"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchProxy/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100",
+        "InstanceName": "100MR100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchProxy/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchProxy/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "LocalStop",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/LocalStop/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/LocalStop/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/LocalStop/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100MR100/Alarms/LocalStop"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/LocalStop/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100",
+        "InstanceName": "100MR100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/LocalStop/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/LocalStop/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "CloseLimit",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/CloseLimit/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/CloseLimit/Cfg/Delay",
+          "value": 5
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/CloseLimit/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100P100/Alarms/CloseLimit"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/CloseLimit/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100",
+        "InstanceName": "100P100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/CloseLimit/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/CloseLimit/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "OvertravelForward",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelForward/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelForward/Cfg/Delay",
+          "value": 0
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelForward/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100P100/Alarms/OvertravelForward"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelForward/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100",
+        "InstanceName": "100P100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelForward/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelForward/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "Feedback",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Feedback/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Feedback/Cfg/Delay",
+          "value": 5
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Feedback/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100P100/Alarms/Feedback"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Feedback/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100",
+        "InstanceName": "100P100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Feedback/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Feedback/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "LocalStop",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/LocalStop/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/LocalStop/Cfg/Delay",
+          "value": 5
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/LocalStop/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100P100/Alarms/LocalStop"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/LocalStop/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100",
+        "InstanceName": "100P100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/LocalStop/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/LocalStop/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "OvertravelReverse",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelReverse/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelReverse/Cfg/Delay",
+          "value": 0
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelReverse/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100P100/Alarms/OvertravelReverse"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelReverse/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100",
+        "InstanceName": "100P100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelReverse/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelReverse/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "Available",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Available/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Available/Cfg/Delay",
+          "value": 0
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Available/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100P100/Alarms/Available"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Available/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100",
+        "InstanceName": "100P100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Available/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Available/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "OpenLimit",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OpenLimit/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OpenLimit/Cfg/Delay",
+          "value": 5
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OpenLimit/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100P100/Alarms/OpenLimit"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OpenLimit/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100",
+        "InstanceName": "100P100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OpenLimit/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OpenLimit/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "MidLimit",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/MidLimit/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/MidLimit/Cfg/Delay",
+          "value": 5
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/MidLimit/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100P100/Alarms/MidLimit"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/MidLimit/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100",
+        "InstanceName": "100P100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/MidLimit/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/MidLimit/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "Communication",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Communication/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Communication/Cfg/Delay",
+          "value": 0
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Communication/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100P100/Alarms/Communication"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Communication/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100",
+        "InstanceName": "100P100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Communication/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Communication/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "High",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/High/Cfg/ConditionSetpoint",
+          "value": 90
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/High/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/High/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100T100/Alarms/High"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/High/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100T100",
+        "InstanceName": "100T100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/High/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/High/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "NoFlow",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/NoFlow/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/NoFlow/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/NoFlow/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100T100/Alarms/NoFlow"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/NoFlow/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100T100",
+        "InstanceName": "100T100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/NoFlow/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/NoFlow/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "Low",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/Low/Cfg/ConditionSetpoint",
+          "value": 10
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/Low/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/Low/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100T100/Alarms/Low"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/Low/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100T100",
+        "InstanceName": "100T100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/Low/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/Low/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "Available",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/Available/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/Available/Cfg/Delay",
+          "value": 0
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/Available/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100XV100/Alarms/Available"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/Available/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100XV100",
+        "InstanceName": "100XV100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/Available/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/Available/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "CloseLimit",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/CloseLimit/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/CloseLimit/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/CloseLimit/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100XV100/Alarms/CloseLimit"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/CloseLimit/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100XV100",
+        "InstanceName": "100XV100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/CloseLimit/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/CloseLimit/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      },
+      {
+        "Alarm": "OpenLimit",
+        "ConditionSetpoint": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/OpenLimit/Cfg/ConditionSetpoint",
+          "value": 0
+        },
+        "Delay": {
+          "DataType": "Float4",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/OpenLimit/Cfg/Delay",
+          "value": 10
+        },
+        "DisplayPath": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/OpenLimit/Cfg/DisplayPath",
+          "value": "Modules/Control Modules/100XV100/Alarms/OpenLimit"
+        },
+        "Enable": {
+          "DataType": "Boolean",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/OpenLimit/Cfg/Enable",
+          "value": false
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100XV100",
+        "InstanceName": "100XV100",
+        "OperationActivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/OpenLimit/Cfg/OperationActivePriority",
+          "value": "Critical"
+        },
+        "OperationPassivePriority": {
+          "DataType": "String",
+          "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/OpenLimit/Cfg/OperationPassivePriority",
+          "value": "Low"
+        }
+      }
+    ],
+    "modules": [
+      {
+        "Alarms": {
+          "BadData": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/BadData/Cfg/ConditionSetpoint",
+                "value": null
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/BadData/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/BadData/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100AI100/Alarms/BadData"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/BadData/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/BadData/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/BadData/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "Communication": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Communication/Cfg/ConditionSetpoint",
+                "value": null
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Communication/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Communication/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100AI100/Alarms/Communication"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Communication/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Communication/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Communication/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "High": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/High/Cfg/ConditionSetpoint",
+                "value": 80
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/High/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/High/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100AI100/Alarms/High"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/High/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/High/Cfg/OperationActivePriority",
+                "value": "High"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/High/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "HighHigh": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighHigh/Cfg/ConditionSetpoint",
+                "value": 90
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighHigh/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighHigh/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100AI100/Alarms/HighHigh"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighHigh/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighHigh/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighHigh/Cfg/OperationPassivePriority",
+                "value": "Critical"
+              }
+            }
+          },
+          "HighRate": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighRate/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighRate/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighRate/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100AI100/Alarms/HighRate"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighRate/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighRate/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighRate/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "Low": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Low/Cfg/ConditionSetpoint",
+                "value": 30
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Low/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Low/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100AI100/Alarms/Low"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Low/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Low/Cfg/OperationActivePriority",
+                "value": "High"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Low/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "LowLow": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowLow/Cfg/ConditionSetpoint",
+                "value": 20
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowLow/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowLow/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100AI100/Alarms/LowLow"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowLow/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowLow/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowLow/Cfg/OperationPassivePriority",
+                "value": "High"
+              }
+            }
+          },
+          "LowRate": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowRate/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowRate/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowRate/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100AI100/Alarms/LowRate"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowRate/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowRate/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowRate/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "NoChange": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/NoChange/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/NoChange/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/NoChange/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100AI100/Alarms/NoChange"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/NoChange/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/NoChange/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/NoChange/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "Test": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Test/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Test/Cfg/Delay",
+                "value": 0
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Test/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100AI100/Alarms/Test"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Test/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Test/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Test/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          }
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100",
+        "Name": "100AI100"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/BadData",
+        "Name": "BadData"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Communication",
+        "Name": "Communication"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/High",
+        "Name": "High"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighHigh",
+        "Name": "HighHigh"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/HighRate",
+        "Name": "HighRate"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Low",
+        "Name": "Low"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowLow",
+        "Name": "LowLow"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/LowRate",
+        "Name": "LowRate"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/NoChange",
+        "Name": "NoChange"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Summary",
+        "Name": "Summary"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AI100/Alarms/Test",
+        "Name": "Test"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AO100",
+        "Name": "100AO100"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AO100/Alarms/Summary",
+        "Name": "Summary"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AO100/Interlock/Operation",
+        "Name": "Operation"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100AO100/Interlock/Protective",
+        "Name": "Protective"
+      },
+      {
+        "Alarms": {
+          "DeviationNegative": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationNegative/Cfg/ConditionSetpoint",
+                "value": 20
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationNegative/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationNegative/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100C100/Alarms/DeviationNegative"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationNegative/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationNegative/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationNegative/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "DeviationPositive": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationPositive/Cfg/ConditionSetpoint",
+                "value": 80
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationPositive/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationPositive/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100C100/Alarms/DeviationPositive"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationPositive/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationPositive/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationPositive/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          }
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100C100",
+        "Name": "100C100"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationNegative",
+        "Name": "DeviationNegative"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/DeviationPositive",
+        "Name": "DeviationPositive"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100C100/Alarms/Summary",
+        "Name": "Summary"
+      },
+      {
+        "Alarms": {
+          "State": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/State/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/State/Cfg/Delay",
+                "value": 5
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/State/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100DI100/Alarms/State"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/State/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/State/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/State/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "Warning": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/Warning/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/Warning/Cfg/Delay",
+                "value": 5
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/Warning/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100DI100/Alarms/Warning"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/Warning/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/Warning/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/Warning/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          }
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100DI100",
+        "Name": "100DI100"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/State",
+        "Name": "State"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/Summary",
+        "Name": "Summary"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100DI100/Alarms/Warning",
+        "Name": "Warning"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100DO100",
+        "Name": "100DO100"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100DO100/Alarms/Summary",
+        "Name": "Summary"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100DO100/Interlock/Operation",
+        "Name": "Operation"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100DO100/Interlock/Permissive",
+        "Name": "Permissive"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100DO100/Interlock/Protective",
+        "Name": "Protective"
+      },
+      {
+        "Alarms": {
+          "Available": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Available/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Available/Cfg/Delay",
+                "value": 0
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Available/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100M100/Alarms/Available"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Available/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Available/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Available/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "LocalStop": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/LocalStop/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/LocalStop/Cfg/Delay",
+                "value": 0
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/LocalStop/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100M100/Alarms/LocalStop"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/LocalStop/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/LocalStop/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/LocalStop/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "MotionSwitchMonitor": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchMonitor/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchMonitor/Cfg/Delay",
+                "value": 5
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchMonitor/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100M100/Alarms/MotionSwitchMonitor"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchMonitor/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchMonitor/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchMonitor/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "MotionSwitchProxy": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchProxy/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchProxy/Cfg/Delay",
+                "value": 5
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchProxy/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100M100/Alarms/MotionSwitchProxy"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchProxy/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchProxy/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchProxy/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "Running": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Running/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Running/Cfg/Delay",
+                "value": 5
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Running/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100M100/Alarms/Running"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Running/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Running/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Running/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          }
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100",
+        "Name": "100M100"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Available",
+        "Name": "Available"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/LocalStop",
+        "Name": "LocalStop"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchMonitor",
+        "Name": "MotionSwitchMonitor"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/MotionSwitchProxy",
+        "Name": "MotionSwitchProxy"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Running",
+        "Name": "Running"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/Summary",
+        "Name": "Summary"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100/Interlock/Hold",
+        "Name": "Hold"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100/Interlock/Operation",
+        "Name": "Operation"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100/Interlock/Permissive",
+        "Name": "Permissive"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100/Interlock/Protective",
+        "Name": "Protective"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100IL01",
+        "Name": "100M100IL01"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100M100IL02",
+        "Name": "100M100IL02"
+      },
+      {
+        "Alarms": {
+          "Available": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Available/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Available/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Available/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100MR100/Alarms/Available"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Available/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Available/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Available/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "LocalStop": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/LocalStop/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/LocalStop/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/LocalStop/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100MR100/Alarms/LocalStop"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/LocalStop/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/LocalStop/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/LocalStop/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "MotionSwitchMonitor": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchMonitor/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchMonitor/Cfg/Delay",
+                "value": 5
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchMonitor/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100MR100/Alarms/MotionSwitchMonitor"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchMonitor/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchMonitor/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchMonitor/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "MotionSwitchProxy": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchProxy/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchProxy/Cfg/Delay",
+                "value": 5
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchProxy/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100MR100/Alarms/MotionSwitchProxy"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchProxy/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchProxy/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchProxy/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "Running": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Running/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Running/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Running/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100MR100/Alarms/Running"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Running/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Running/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Running/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          }
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100",
+        "Name": "100MR100"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Available",
+        "Name": "Available"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/LocalStop",
+        "Name": "LocalStop"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchMonitor",
+        "Name": "MotionSwitchMonitor"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/MotionSwitchProxy",
+        "Name": "MotionSwitchProxy"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Running",
+        "Name": "Running"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100/Alarms/Summary",
+        "Name": "Summary"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100/Interlock/HoldForward",
+        "Name": "HoldForward"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100/Interlock/HoldReverse",
+        "Name": "HoldReverse"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100/Interlock/OperationForward",
+        "Name": "OperationForward"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100/Interlock/OperationReverse",
+        "Name": "OperationReverse"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100/Interlock/PermissiveForward",
+        "Name": "PermissiveForward"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100/Interlock/PermissiveReverse",
+        "Name": "PermissiveReverse"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100MR100/Interlock/Protective",
+        "Name": "Protective"
+      },
+      {
+        "Alarms": {
+          "Available": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Available/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Available/Cfg/Delay",
+                "value": 0
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Available/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100P100/Alarms/Available"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Available/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Available/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Available/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "CloseLimit": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/CloseLimit/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/CloseLimit/Cfg/Delay",
+                "value": 5
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/CloseLimit/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100P100/Alarms/CloseLimit"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/CloseLimit/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/CloseLimit/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/CloseLimit/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "Communication": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Communication/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Communication/Cfg/Delay",
+                "value": 0
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Communication/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100P100/Alarms/Communication"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Communication/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Communication/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Communication/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "Feedback": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Feedback/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Feedback/Cfg/Delay",
+                "value": 5
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Feedback/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100P100/Alarms/Feedback"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Feedback/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Feedback/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Feedback/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "LocalStop": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/LocalStop/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/LocalStop/Cfg/Delay",
+                "value": 5
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/LocalStop/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100P100/Alarms/LocalStop"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/LocalStop/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/LocalStop/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/LocalStop/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "MidLimit": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/MidLimit/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/MidLimit/Cfg/Delay",
+                "value": 5
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/MidLimit/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100P100/Alarms/MidLimit"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/MidLimit/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/MidLimit/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/MidLimit/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "OpenLimit": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OpenLimit/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OpenLimit/Cfg/Delay",
+                "value": 5
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OpenLimit/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100P100/Alarms/OpenLimit"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OpenLimit/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OpenLimit/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OpenLimit/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "OvertravelForward": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelForward/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelForward/Cfg/Delay",
+                "value": 0
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelForward/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100P100/Alarms/OvertravelForward"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelForward/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelForward/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelForward/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "OvertravelReverse": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelReverse/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelReverse/Cfg/Delay",
+                "value": 0
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelReverse/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100P100/Alarms/OvertravelReverse"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelReverse/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelReverse/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelReverse/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          }
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100",
+        "Name": "100P100"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Available",
+        "Name": "Available"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/CloseLimit",
+        "Name": "CloseLimit"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Communication",
+        "Name": "Communication"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Feedback",
+        "Name": "Feedback"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/LocalStop",
+        "Name": "LocalStop"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/MidLimit",
+        "Name": "MidLimit"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OpenLimit",
+        "Name": "OpenLimit"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelForward",
+        "Name": "OvertravelForward"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/OvertravelReverse",
+        "Name": "OvertravelReverse"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100/Alarms/Summary",
+        "Name": "Summary"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100/Interlock/HoldForward",
+        "Name": "HoldForward"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100/Interlock/HoldReverse",
+        "Name": "HoldReverse"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100/Interlock/OperationForward",
+        "Name": "OperationForward"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100/Interlock/OperationReverse",
+        "Name": "OperationReverse"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100/Interlock/PermissiveForward",
+        "Name": "PermissiveForward"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100/Interlock/PermissiveReverse",
+        "Name": "PermissiveReverse"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100P100/Interlock/Protective",
+        "Name": "Protective"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100S100",
+        "Name": "100S100"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100S100/Interlock/Deselection",
+        "Name": "Deselection"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100S100/Interlock/Selection",
+        "Name": "Selection"
+      },
+      {
+        "Alarms": {
+          "High": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/High/Cfg/ConditionSetpoint",
+                "value": 90
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/High/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/High/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100T100/Alarms/High"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/High/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/High/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/High/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "Low": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/Low/Cfg/ConditionSetpoint",
+                "value": 10
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/Low/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/Low/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100T100/Alarms/Low"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/Low/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/Low/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/Low/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "NoFlow": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/NoFlow/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/NoFlow/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/NoFlow/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100T100/Alarms/NoFlow"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/NoFlow/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/NoFlow/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/NoFlow/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          }
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100T100",
+        "Name": "100T100"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/High",
+        "Name": "High"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/Low",
+        "Name": "Low"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/NoFlow",
+        "Name": "NoFlow"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100T100/Alarms/Summary",
+        "Name": "Summary"
+      },
+      {
+        "Alarms": {
+          "Available": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/Available/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/Available/Cfg/Delay",
+                "value": 0
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/Available/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100XV100/Alarms/Available"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/Available/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/Available/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/Available/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "CloseLimit": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/CloseLimit/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/CloseLimit/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/CloseLimit/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100XV100/Alarms/CloseLimit"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/CloseLimit/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/CloseLimit/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/CloseLimit/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          },
+          "OpenLimit": {
+            "Configuration": {
+              "ConditionSetpoint": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/OpenLimit/Cfg/ConditionSetpoint",
+                "value": 0
+              },
+              "Delay": {
+                "DataType": "Float4",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/OpenLimit/Cfg/Delay",
+                "value": 10
+              },
+              "DisplayPath": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/OpenLimit/Cfg/DisplayPath",
+                "value": "Modules/Control Modules/100XV100/Alarms/OpenLimit"
+              },
+              "Enable": {
+                "DataType": "Boolean",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/OpenLimit/Cfg/Enable",
+                "value": false
+              },
+              "OperationActivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/OpenLimit/Cfg/OperationActivePriority",
+                "value": "Critical"
+              },
+              "OperationPassivePriority": {
+                "DataType": "String",
+                "FullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/OpenLimit/Cfg/OperationPassivePriority",
+                "value": "Low"
+              }
+            }
+          }
+        },
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100XV100",
+        "Name": "100XV100"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/Available",
+        "Name": "Available"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/CloseLimit",
+        "Name": "CloseLimit"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/OpenLimit",
+        "Name": "OpenLimit"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100XV100/Alarms/Summary",
+        "Name": "Summary"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100XV100/Interlock/Hold",
+        "Name": "Hold"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100XV100/Interlock/Operation",
+        "Name": "Operation"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/100XV100/Interlock/Protective",
+        "Name": "Protective"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/Model Item",
+        "Name": "Model Item"
+      },
+      {
+        "Alarms": {},
+        "InstanceFullPath": "[StandardS71500]Modules/Control Modules/Model Item/Alarm Summary",
+        "Name": "Alarm Summary"
+      }
+    ]
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Modules/Control Modules",
+    "Type": "Application/Control Modules/AI"
+  },
+  "propConfig": {
+    "custom.colums": {
+      "binding": {
+        "config": {
+          "path": "view.custom.modules[0].Alarms"
+        },
+        "transforms": [
+          {
+            "code": "\tcolumns \u003d []\n\t\n\tinstanceNameCol \u003d self.getChild(\"root\").GetDefaultColumn(Field\u003d\u0027InstanceName\u0027,Header\u003d\u0027Instance\u0027,Render\u003d\u0027string\u0027)\n\tcolumns.append(instanceNameCol)\n\n\tinstanceTagPathCol \u003d self.getChild(\"root\").GetDefaultColumn(Field\u003d\u0027InstanceFullPath\u0027,Header\u003d\u0027Tag Path\u0027,Render\u003d\u0027string\u0027)\n\tinstanceTagPathCol[\u0027visible\u0027] \u003d False\n\tcolumns.append(instanceTagPathCol)\n\t\n\talarms \u003d value.values()[0][\u0027Configuration\u0027]\n\talarmsColumns \u003d []\n\tfor alarm in alarms:\n\t\tfield \u003d alarm\n\t\tdataType \u003d alarms[alarm][\u0027DataType\u0027]\n\t\tif dataType \u003d\u003d \u0027Boolean\u0027:\n\t\t\trender \u003d \u0027boolean\u0027\n\t\telse:\n\t\t\trender \u003d \u0027number\u0027\n\t\t\t\n\t\talarmFullPath \u003d alarms[alarm][\u0027FullPath\u0027]\n\t\ttagPathDocumentation \u003d alarmFullPath+ \".Documentation\"\n\t\ttagPathDocumentationOrder \u003d alarmFullPath + \".DocumentationOrder\"\n\t\tmetadata \u003d system.tag.readBlocking(tagPaths\u003d[tagPathDocumentation,tagPathDocumentationOrder])\n\t\t\n\t\theader \u003d metadata[0].value\n\t\tdocumentationOrder \u003d metadata[1].value\n\t\t\n\t\talarmCol \u003d self.getChild(\"root\").GetDefaultColumn(Field\u003dfield,Header\u003dheader,Render\u003drender)\n\t\talarmCol[\u0027documentationOrder\u0027] \u003d documentationOrder\n\t\talarmsColumns.append(alarmCol)\n\talarmsColumns \u003d sorted(alarmsColumns,key\u003dlambda row: row[\u0027documentationOrder\u0027],reverse\u003dFalse)\n\tcolumns.extend(alarmsColumns)\n\treturn columns\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.data": {
+      "binding": {
+        "config": {
+          "path": "view.custom.modules"
+        },
+        "transforms": [
+          {
+            "code": "\tdata \u003d []\n\tfor module in value:\n\t\tinstanseName \u003d module[\u0027Name\u0027]\n\t\tinstanceFullPath \u003d module[\u0027InstanceFullPath\u0027]\n\t\t\n\t\talarms \u003d  module[\u0027Alarms\u0027]\n\t\tfor alarm in alarms:\n\t\t\trow \u003d {}\n\t\t\trow[\u0027InstanceName\u0027] \u003d instanseName\n\t\t\trow[\u0027InstanceFullPath\u0027] \u003d instanceFullPath\n\t\t\tconfiguration \u003d alarms[alarm][\u0027Configuration\u0027]\n\t\t\talarmName \u003d alarm\n\t\t\trow[\u0027Alarm\u0027] \u003d alarmName\n\t\t\tfor cfg in configuration:\n\t\t\t\tconfigurationName \u003d cfg\n\t\t\t\trow[configurationName] \u003d configuration[cfg]\n\t\t\tdata.append(row)\n\treturn data",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.modules": {
+      "binding": {
+        "config": {
+          "struct": {
+            "tagPath": "{view.params.TagPath}",
+            "type": "{view.params.Type}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tudtInstanceFilter \u003d {\"tagType\":\"UdtInstance\",\"typeID\":value[\u0027type\u0027],\u0027recursive\u0027:True}\n\tudtInstanceFilter \u003d {\"tagType\":\"UdtInstance\",\u0027recursive\u0027:True}\n\tcfgAlarms \u003d {\u0027recursive\u0027:True,\"tagType\":\"UdtInstance\",\u0027typeID\u0027:\u0027Standard/Alarms/Alarm Primitive\u0027}\n\tcfgFilter \u003d {\u0027recursive\u0027:True,\u0027tagType\u0027:\u0027AtomicTag\u0027}\n\t\n\t\n\tudtInstances \u003d system.tag.browse(path\u003dvalue[\u0027tagPath\u0027], filter\u003dudtInstanceFilter)\n\t\n\tmodules \u003d []\n\tfor udtInstance in udtInstances:\n\t\tfullPath \u003d str(udtInstance[\u0027fullPath\u0027])\n\t\tname \u003d udtInstance[\u0027name\u0027]\n\t\tmodule \u003d {}\n\t\tmodule[\u0027Name\u0027] \u003d name\n\t\tmodule[\u0027InstanceFullPath\u0027] \u003d fullPath\n\t\t\n\t\t#Alarms\n\t\talarmTags \u003d system.tag.browse(path\u003dfullPath+\"/Alarms\", filter\u003dcfgAlarms)\n\t\t\n\t\t\n\t\talarms \u003d {}\n\t\tfor alarmTag in alarmTags:\n\t\t\talarmName \u003d alarmTag[\u0027name\u0027]\n\t\t\talarms[alarmName] \u003d {}\n\t\t\talarmTagPath \u003d str(alarmTag[\u0027fullPath\u0027])\n\t\t\t#alarms[alarmName][\u0027FullPath\u0027] \u003d alarmTagPath\n\t\t\t\n\t\t\t#Configuration\n\t\t\tcfgs \u003d system.tag.browse(path\u003dalarmTagPath+\"/Cfg\", filter\u003dcfgFilter)\n\t\t\tsetpoints \u003d {}\n\t\t\tfor cfg in cfgs:\n\t\t\t\tsetpointName \u003d cfg[\u0027name\u0027]\n\t\t\t\tsetpoints[setpointName] \u003d {}\n\t\t\t\tsetpoints[setpointName][\u0027DataType\u0027] \u003d cfg[\u0027dataType\u0027]\n\t\t\t\tsetpoints[setpointName][\u0027value\u0027] \u003d cfg[\u0027value\u0027]\n\t\t\t\tsetpoints[setpointName][\u0027FullPath\u0027] \u003d str(cfg[\u0027fullPath\u0027])\n\t\t\talarms[alarmName][\u0027Configuration\u0027] \u003d setpoints\n\t\t\t\n\t\tmodule[\u0027Alarms\u0027] \u003d alarms\n\t\n\t\t\n\t\tmodules.append(module)\n\t\t\n\t\t\n\treturn modules",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Type": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 785,
+      "width": 968
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.columns": {
+            "binding": {
+              "config": {
+                "path": "view.custom.colums"
+              },
+              "type": "property"
+            }
+          },
+          "props.data": {
+            "binding": {
+              "config": {
+                "path": "view.custom.data"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.table"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "scripts": {
+      "customMethods": [
+        {
+          "name": "GetDefaultColumn",
+          "params": [
+            "Field",
+            "Header",
+            "Render\u003d\u0027number\u0027",
+            "Width\u003d130"
+          ],
+          "script": "\twidth \u003d Width\n\tstrictWidth \u003d True\n\tif Width \u003d\u003d 0:\n\t\tstrictWidth \u003d False\n\treturn {\n\t  \"field\": Field,\n\t  \"visible\": True,\n\t  \"editable\": False,\n\t  \"render\": Render,\n\t  \"justify\": \"center\",\n\t  \"align\": \"center\",\n\t  \"resizable\": True,\n\t  \"sortable\": False,\n\t  \"sort\": \"none\",\n\t  \"filter\": {\n\t    \"enabled\": False,\n\t    \"visible\": \"on-hover\",\n\t    \"string\": {\n\t      \"condition\": \"\",\n\t      \"value\": \"\"\n\t    },\n\t    \"number\": {\n\t      \"condition\": \"\",\n\t      \"value\": \"\"\n\t    },\n\t    \"boolean\": {\n\t      \"condition\": \"\"\n\t    },\n\t    \"date\": {\n\t      \"condition\": \"\",\n\t      \"value\": \"\"\n\t    }\n\t  },\n\t  \"viewPath\": \"\",\n\t  \"viewParams\": {},\n\t  \"boolean\": \"checkbox\",\n\t  \"number\": \"value\",\n\t  \"progressBar\": {\n\t    \"max\": 100,\n\t    \"min\": 0,\n\t    \"bar\": {\n\t      \"color\": \"\",\n\t      \"style\": {\n\t        \"classes\": \"\"\n\t      }\n\t    },\n\t    \"track\": {\n\t      \"color\": \"\",\n\t      \"style\": {\n\t        \"classes\": \"\"\n\t      }\n\t    },\n\t    \"value\": {\n\t      \"enabled\": True,\n\t      \"format\": \"0,0.##\",\n\t      \"justify\": \"center\",\n\t      \"style\": {\n\t        \"classes\": \"\"\n\t      }\n\t    }\n\t  },\n\t  \"toggleSwitch\": {\n\t    \"color\": {\n\t      \"selected\": \"\",\n\t      \"unselected\": \"\"\n\t    }\n\t  },\n\t  \"nullFormat\": {\n\t    \"includeNullStrings\": False,\n\t    \"strict\": False,\n\t    \"nullFormatValue\": \"\"\n\t  },\n\t  \"numberFormat\": \"0,0.##\",\n\t  \"dateFormat\": \"MM/DD/YYYY\",\n\t  \"width\": width,\n\t  \"strictWidth\": strictWidth,\n\t  \"header\": {\n\t    \"title\": Header,\n\t    \"justify\": \"center\",\n\t    \"align\": \"center\",\n\t    \"style\": {\n\t      \"classes\": \"\"\n\t    }\n\t  },\n\t  \"footer\": {\n\t    \"title\": \"\",\n\t    \"justify\": \"left\",\n\t    \"align\": \"center\",\n\t    \"style\": {\n\t      \"classes\": \"\"\n\t    }\n\t  },\n\t  \"style\": {\n\t    \"classes\": \"\"\n\t  }\n\t}"
+        }
+      ],
+      "extensionFunctions": null,
+      "messageHandlers": []
+    },
+    "type": "ia.container.flex"
+  }
+}

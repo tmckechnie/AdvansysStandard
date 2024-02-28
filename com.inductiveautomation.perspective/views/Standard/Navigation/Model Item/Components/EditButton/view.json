@@ -1,0 +1,97 @@
+{
+  "custom": {
+    "popupIdentifier": "ViewPathEditorPopup",
+    "popupViewPath": "Standard/Navigation/Model Item/Components/ViewPath"
+  },
+  "params": {
+    "rowData": {
+      "ContentType": [
+        "Overview"
+      ],
+      "Label": "Overview",
+      "Order": 0,
+      "PagePath": "",
+      "Roles": [],
+      "ViewPath": "*Overview/Overview"
+    }
+  },
+  "propConfig": {
+    "custom.popupIdentifier": {
+      "persistent": true
+    },
+    "custom.popupViewPath": {
+      "persistent": true
+    },
+    "params.rowData": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 30,
+      "width": 30
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Icon",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "30px",
+          "grow": 1
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "expression": "\"Edit: \" + {view.params.rowData.Label}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "color": "var(--dockedFooterAccent)",
+          "path": "material/edit"
+        },
+        "type": "ia.display.icon"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "draggable": true,
+            "id": "{view.custom.popupIdentifier}",
+            "modal": true,
+            "overlayDismiss": true,
+            "resizable": true,
+            "showCloseIcon": true,
+            "title": "View Path Editor: {view.params.rowData.Label}",
+            "type": "open",
+            "viewParams": {
+              "ViewPath": "{view.params.rowData}"
+            },
+            "viewPath": "{view.custom.popupViewPath}",
+            "viewportBound": false
+          },
+          "scope": "C",
+          "type": "popup"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

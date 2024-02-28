@@ -1,0 +1,87 @@
+{
+  "custom": {},
+  "params": {
+    "Visible": true
+  },
+  "propConfig": {
+    "params.Visible": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Navigate to Site Popup"
+        },
+        "position": {
+          "basis": "150px",
+          "grow": 1
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "view.params.Visible"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "backgroundColor": "#D5D5D5"
+          },
+          "text": "Navigate to Popup View (Path Required)",
+          "textStyle": {
+            "fontSize": 15,
+            "fontWeight": "bold",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "draggable": true,
+            "id": "EwFPd8Se",
+            "modal": false,
+            "overlayDismiss": false,
+            "position": {
+              "relativeLocation": "right"
+            },
+            "positionType": "relative",
+            "resizable": true,
+            "showCloseIcon": true,
+            "type": "open",
+            "viewPath": "Model Views/FMG/Mimic/Navigation/Site Popup",
+            "viewportBound": false
+          },
+          "enabled": false,
+          "scope": "C",
+          "type": "popup"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignContent": "center",
+      "alignItems": "center",
+      "direction": "column",
+      "justify": "center"
+    },
+    "type": "ia.container.flex"
+  }
+}

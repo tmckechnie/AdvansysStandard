@@ -1,0 +1,447 @@
+{
+  "custom": {
+    "childModelItems": [
+      {
+        "AllowedContentTypes": [
+          "Mimic",
+          "Alarms",
+          "Trend",
+          "Setpoints"
+        ],
+        "ChildrenCount": 1,
+        "ContentType": "",
+        "ContentTypes": [],
+        "Label": "Examples",
+        "MenuInstanceItemPosition": 2,
+        "MenuItemPosition": {
+          "height": null,
+          "left": 0,
+          "top": 50,
+          "width": 200
+        },
+        "ModelItem": {
+          "BaseViewPath": "Model Views/StandardS71500/Standard/Examples",
+          "ModelItemTagPath": "[StandardS71500]Standard/Examples/Model Item",
+          "Name": "Examples",
+          "Order": 0,
+          "Path": "0/0",
+          "TagFolderName": "Examples",
+          "ViewPaths": [
+            {
+              "ContentType": [
+                "Overview"
+              ],
+              "Label": "Overview",
+              "Order": 0,
+              "PagePath": "",
+              "Roles": [],
+              "ViewPath": "*Overview/Overview",
+              "key": "k0"
+            }
+          ]
+        },
+        "ModelItemTagPath": "[StandardS71500]Standard/Examples/Model Item",
+        "OpenPopups": [],
+        "Path": "0/0",
+        "ShowOnlyConfiguredContentTypes": true,
+        "instancePosition": {
+          "grow": 1
+        },
+        "instanceStyle": {
+          "classes": "Standard/Popups/Navigation/MenuItem/Children"
+        }
+      },
+      {
+        "AllowedContentTypes": [
+          "Mimic",
+          "Alarms",
+          "Trend",
+          "Setpoints"
+        ],
+        "ChildrenCount": 2,
+        "ContentType": "",
+        "ContentTypes": [],
+        "Label": "Modules",
+        "MenuInstanceItemPosition": 3,
+        "MenuItemPosition": {
+          "height": null,
+          "left": 0,
+          "top": 50,
+          "width": 200
+        },
+        "ModelItem": {
+          "BaseViewPath": "Model Views/StandardS71500/Standard/Modules",
+          "ModelItemTagPath": "[StandardS71500]Standard/Modules/Model Item",
+          "Name": "Modules",
+          "Order": 0,
+          "Path": "0/1",
+          "TagFolderName": "Modules",
+          "ViewPaths": [
+            {
+              "ContentType": [
+                "Footer Alarms"
+              ],
+              "Koos": {
+                "key": "value",
+                "pirt": 6546
+              },
+              "Label": "Alarms",
+              "Order": 0,
+              "PagePath": "",
+              "Roles": [],
+              "ViewPath": "*Alarms/Alarms",
+              "key": "kNew1"
+            },
+            {
+              "ContentType": [
+                "Overview"
+              ],
+              "Koos": {
+                "key": "value",
+                "pirt": 6546
+              },
+              "Label": "Overview",
+              "Order": 0,
+              "PagePath": "",
+              "Roles": [],
+              "ViewPath": "*Overview/Overview",
+              "key": "k0"
+            }
+          ]
+        },
+        "ModelItemTagPath": "[StandardS71500]Standard/Modules/Model Item",
+        "OpenPopups": [],
+        "Path": "0/1",
+        "ShowOnlyConfiguredContentTypes": true,
+        "instancePosition": {
+          "grow": 1
+        },
+        "instanceStyle": {
+          "classes": "Standard/Popups/Navigation/MenuItem/Children"
+        }
+      }
+    ],
+    "contentTypes": [
+      {
+        "ContentType": "Overview",
+        "Label": "Overview",
+        "ModelItem": {
+          "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Model Item",
+          "Name": "Cooling Water",
+          "Path": "0",
+          "TagFolderName": "Cooling Water",
+          "ViewPaths": [
+            {
+              "ContentType": [
+                "Overview"
+              ],
+              "ContentTypeParams": {},
+              "Label": "Overview",
+              "Order": 0,
+              "PagePath": "",
+              "Roles": [],
+              "ViewPath": "*Overview/Overview"
+            },
+            {
+              "ContentType": [
+                "Alarms",
+                "Footer Alarms"
+              ],
+              "ContentTypeParams": {},
+              "Label": "Alarms",
+              "Order": 2,
+              "PagePath": "",
+              "Roles": [],
+              "ViewPath": "Application/Content Types/Alarms/Alarms Status"
+            },
+            {
+              "ContentType": [
+                "Trend"
+              ],
+              "ContentTypeParams": {},
+              "Label": "Trend",
+              "Order": 3,
+              "PagePath": "",
+              "Roles": [],
+              "ViewPath": "Application/Content Types/Trends/Trends Chart"
+            },
+            {
+              "ContentType": [
+                "Footer CM Legend"
+              ],
+              "ContentTypeParams": {},
+              "Label": "Control Module Legend",
+              "Order": 2,
+              "PagePath": "",
+              "Roles": [],
+              "ViewPath": "Application/Navigation/Footer Components/Styling Legend"
+            }
+          ]
+        },
+        "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Model Item",
+        "OpenPopups": [],
+        "Path": "0",
+        "instancePosition": {
+          "grow": 1
+        },
+        "instanceStyle": {
+          "classes": "Standard/Popups/Navigation/MenuItem/ContentType"
+        }
+      }
+    ]
+  },
+  "params": {
+    "AllowedContentTypes": [
+      "Mimic",
+      "Alarms",
+      "Trend",
+      "Setpoints"
+    ],
+    "ChildrenCount": 4,
+    "ContentTypes": [
+      {
+        "contentType": "Overview",
+        "label": "Overview",
+        "order": 0
+      }
+    ],
+    "Label": "Standard",
+    "MenuItemPosition": {
+      "height": null,
+      "left": 0,
+      "top": 50,
+      "width": 200
+    },
+    "ModelItem": {
+      "ModelItemTagPath": "[FMMM01]Utilities/Cooling Water/Model Item",
+      "Name": "Cooling Water",
+      "Path": "0",
+      "TagFolderName": "Cooling Water",
+      "ViewPaths": [
+        {
+          "ContentType": [
+            "Overview"
+          ],
+          "ContentTypeParams": {},
+          "Label": "Overview",
+          "Order": 0,
+          "PagePath": "",
+          "Roles": [],
+          "ViewPath": "*Overview/Overview"
+        },
+        {
+          "ContentType": [
+            "Alarms",
+            "Footer Alarms"
+          ],
+          "ContentTypeParams": {},
+          "Label": "Alarms",
+          "Order": 2,
+          "PagePath": "",
+          "Roles": [],
+          "ViewPath": "Application/Content Types/Alarms/Alarms Status"
+        },
+        {
+          "ContentType": [
+            "Trend"
+          ],
+          "ContentTypeParams": {},
+          "Label": "Trend",
+          "Order": 3,
+          "PagePath": "",
+          "Roles": [],
+          "ViewPath": "Application/Content Types/Trends/Trends Chart"
+        },
+        {
+          "ContentType": [
+            "Footer CM Legend"
+          ],
+          "ContentTypeParams": {},
+          "Label": "Control Module Legend",
+          "Order": 2,
+          "PagePath": "",
+          "Roles": [],
+          "ViewPath": "Application/Navigation/Footer Components/Styling Legend"
+        }
+      ]
+    },
+    "OpenPopups": [],
+    "ShowOnlyConfiguredContentTypes": true
+  },
+  "propConfig": {
+    "custom.childModelItems": {
+      "binding": {
+        "config": {
+          "struct": {
+            "Path": "{view.params.ModelItem.Path}",
+            "allowedContentTypes": "{view.params.AllowedContentTypes}",
+            "contentTypes": "{view.params.ContentTypes}",
+            "menuItemPosition": "{view.params.MenuItemPosition}",
+            "modelItems": "{session.custom.ModelItems}",
+            "openPopups": "{view.params.OpenPopups}",
+            "showOnlyConfiguredContentTypes": "{view.params.ShowOnlyConfiguredContentTypes}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tpath \u003d value[\"Path\"]\n\tmodelItems \u003d value[\"modelItems\"]\n\tmenuItemPosition \u003d value[\"menuItemPosition\"]\n\tcontentTypes \u003d value[\"contentTypes\"]\n\tallowedContentTypes \u003d value[\"allowedContentTypes\"]\n\tshowOnlyConfiguredContentTypes \u003d value[\"showOnlyConfiguredContentTypes\"]\n\topenPopups \u003d value[\"openPopups\"]\n\t\n\t#Get ModelItem Children \n\tinstances \u003d Standard.Navigation.MenuBar.GetPopupMenuBarItems(modelItems,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t menuItemPosition,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t path,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t contentTypes,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t AllowedContentTypes \u003d allowedContentTypes,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t ShowOnlyConfiguredContentTypes \u003d showOnlyConfiguredContentTypes,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t OpenPopups \u003d openPopups)\n\treturn instances       \n",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.contentTypes": {
+      "binding": {
+        "config": {
+          "struct": {
+            "contentTypes": "{view.params.ContentTypes}",
+            "modelItem": "{view.params.ModelItem}",
+            "openPopups": "{view.params.OpenPopups}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tmodelItem \u003d value[\"modelItem\"]\n\tcontentTypes \u003d value[\"contentTypes\"]\n\topenPopups \u003d value[\"openPopups\"]\t\n\tinstances \u003d Standard.Navigation.MenuBar.GetPopupContentTypeMenuItems(ModelItem \u003d modelItem,ContentTypes\u003dcontentTypes,OpenPopups \u003d openPopups)\n\treturn instances  \n",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.AllowedContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ChildrenCount": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.MenuItemPosition": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ModelItem": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.OpenPopups": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowOnlyConfiguredContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 611,
+      "width": 200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Content Types"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.basis": {
+            "binding": {
+              "config": {
+                "expression": "50*len({this.props.instances}) + \"px\""
+              },
+              "type": "expr"
+            }
+          },
+          "props.instances": {
+            "binding": {
+              "config": {
+                "path": "view.custom.contentTypes"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "path": "Standard/Navigation/Menu Bar/Components/Menu Item",
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      },
+      {
+        "meta": {
+          "name": "ChildModelItems"
+        },
+        "position": {
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.basis": {
+            "binding": {
+              "config": {
+                "expression": "50*len({this.props.instances}) + \"px\""
+              },
+              "type": "expr"
+            }
+          },
+          "props.instances": {
+            "binding": {
+              "config": {
+                "path": "view.custom.childModelItems"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "path": "Standard/Navigation/Menu Bar/Components/Menu Item",
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "enabled": true
+      }
+    },
+    "propConfig": {
+      "meta.tooltip.text": {
+        "binding": {
+          "config": {
+            "path": "view.custom.RequiredModelItemTagPath"
+          },
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Popups/Navigation/Popup/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

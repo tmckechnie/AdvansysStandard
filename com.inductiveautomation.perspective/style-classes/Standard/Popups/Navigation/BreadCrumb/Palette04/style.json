@@ -1,0 +1,8 @@
+{
+  "base": {
+    "style": {
+      "stroke": "var(--Framework-05)",
+      "fill": "var(--Framework-05)"
+    }
+  }
+}

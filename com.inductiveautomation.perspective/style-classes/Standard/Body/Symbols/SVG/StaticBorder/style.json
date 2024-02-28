@@ -1,0 +1,8 @@
+{
+  "base": {
+    "style": {
+      "stroke": "var(--bodyAccent)",
+      "strokeWidth": "2px"
+    }
+  }
+}

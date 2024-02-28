@@ -1,0 +1,665 @@
+{
+  "custom": {
+    "currentModelItem": {
+      "ContentType": "Overview",
+      "Path": "0",
+      "SearchModule": ""
+    }
+  },
+  "params": {},
+  "propConfig": {
+    "custom.currentModelItem": {
+      "binding": {
+        "config": {
+          "struct": {
+            "currentModelItem": "{session.custom.CurrentModelItem}",
+            "pageId": "{page.props.pageId}",
+            "useSessionModelItem": "{session.custom.UseSessionModelItem}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tcurrentModelItem \u003d value[\u0027currentModelItem\u0027]\n\tuseSessionModelItem \u003d value[\u0027useSessionModelItem\u0027]\n\tpageId \u003d value[\u0027pageId\u0027]\n\tcurrentModelItem \u003d Standard.Navigation.Common.GetCurrentModelItem(CurrentModelItem\u003dcurrentModelItem,UseSession\u003duseSessionModelItem,PerspectivePageID\u003dpageId)\t\n\treturn currentModelItem",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "onChange": {
+        "enabled": null,
+        "script": "\t#Change Script to Update History Table\n\tif currentValue is not None and previousValue is not None:\n\t\tcurrentPath \u003d currentValue.value[\"Path\"].value\n\t\tpreviousPath \u003d previousValue.value[\"Path\"].value\n\t\t#If currentModelItemTagPath is different to previous then add value to history \n\t\tif currentPath!\u003d previousPath:\t\t\n\t\t\t#Check if not in list\n\t\t\tcurrentHistory \u003d self.getChild(\"root\").getChild(\"Model Item Selection Tab Container\").getChild(\"Current Tab History\").props.data\n\t\t\t\n\t\t\tinsert \u003d True\n\t\t\tfor row in currentHistory:\n\t\t\t\tpath \u003d row[\"ModelItem\"][\"Path\"]\n\t\t\t\tif currentPath \u003d\u003d path:\n\t\t\t\t\tinsert \u003d False\n\t\t\t\t\tbreak\n\t\t\t\t\t\t\t\t\n\t\t\tif \tinsert:\t\n\t\t\t\tmodelItems \u003d self.session.custom.ModelItems\n\t\t\t\tcurrentModelItem \u003d Standard.Navigation.Common.GetModelItemByPath(ModelItems\u003dmodelItems, Path\u003dcurrentPath)[\"data\"]\n\t\t\t\trowObject \u003d self.getChild(\"root\").getChild(\"Model Item Selection Tab Container\").getRowObject(currentModelItem)\n\t\t\t\tcurrentHistory.insert(0,rowObject)\n\t\t\t\tif len(currentHistory) \u003e 10:\n\t\t\t\t\tcurrentHistory.pop(-1)\n\t\t\t\t\t\n\t\t\t#Update Styling to Highlight row that is the same as the current model item\n\t\t\tfor row in currentHistory:\n\t\t\t\trowModelItemPath \u003d row[\"ModelItem\"][\"Path\"]\n\t\t\t\tstyle \u003d {\"background-color\":\"\"}\n\t\t\t\tif rowModelItemPath \u003d\u003d currentPath:\n\t\t\t\t\tstyle \u003d {\"background-color\":\"var(--callToAction)\"}\n\t\t\t\trow[\"Name\"][\"style\"] \u003d style\t\t\t\n\t\t\n\t\t\n\t"
+      },
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 341,
+      "width": 302
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tcurrentValue \u003d self.props.selected\n\t#Used to update ModelItemTagPaths session property if UseSessionModelItemTagPath set to True\n\t#Also used to write back to UseSessionModelItemTagPath regardless\n\tif currentValue:\n\t\t#Update ModelItemTagPaths Object\n\t\tuseSessionModelItem \u003d True\n\t\tmodelItemPath \u003d self.view.custom.currentModelItem.Path\n\t\tcontentType \u003d self.view.custom.currentModelItem.ContentType\n\t\tcurrentModelItem\u003d self.session.custom.CurrentModelItem\n\t\tperspectivePageID \u003d self.page.props.pageId\n\t\tself.session.custom.CurrentModelItem \u003d Standard.Navigation.Common.UpdateCurrentModelItem(Path \u003d modelItemPath,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t CurrentModelItem \u003d currentModelItem,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t UseSession \u003d useSessionModelItem,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t PerspectivePageID \u003d perspectivePageID,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t ContentType \u003d contentType)\n\t\tself.session.custom.UseSessionModelItem \u003d currentValue\n\t\t\n\t\t\n\telse:\n\t\tself.session.custom.UseSessionModelItem \u003d currentValue"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "UseSessionModelItemTagPath",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "36px"
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "this.props.selected"
+              },
+              "transforms": [
+                {
+                  "fallback": "Not Syncing Areas",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "Syncing Areas"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.selected": {
+            "binding": {
+              "config": {
+                "path": "session.custom.UseSessionModelItem"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "color": {
+            "selected": "var(--valueSwitchSelected)",
+            "unselected": "var(--valueSwitchUnselected)"
+          },
+          "label": {
+            "position": "left",
+            "text": "Sync Areas"
+          },
+          "style": {
+            "classes": "Standard/Docked/Header/ContentText"
+          }
+        },
+        "type": "ia.input.toggle-switch"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onRowClick": {
+                  "config": {
+                    "script": "\t#Update ModelItemTagPath based on row clicked\n\t#system.perspective.print(\"Current Tab Click Event: \" + str(self.props.data[event.row]))\n\t#modelItemTagPath \u003d event.value[\"ModelItemTagPath\"]\n\tmodelItem \u003d self.props.data[event.row][\"ModelItem\"]\n\tself.parent.updateCurrentModelItemTagPaths(modelItem)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Current Tabs"
+            },
+            "propConfig": {
+              "props.data": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "CurrentModelItem": "{session.custom.CurrentModelItem}",
+                      "ModelItems": "{session.custom.ModelItems}",
+                      "currentModelItem": "{view.custom.currentModelItem}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tdata \u003d []\n\tmodelItems \u003d value[\"ModelItems\"]\n\tCurrentModelItem\u003d value[\"CurrentModelItem\"] \n\tcurrentModelItem \u003d value[\"currentModelItem\"]\t\n\tcurrentModelItemPath \u003d currentModelItem[\"Path\"]\n\tCurrentModelItemSet \u003d set()\n\ti\u003d0\n\tfor modelItemKey in CurrentModelItem:\n\t\tmodelItem \u003d CurrentModelItem[modelItemKey]\n\t\t#Get RowObject from local script function and add to data array\n\t\tmodelItemPath \u003d modelItem[\u0027Path\u0027]\n\t\t\n\t\tmodelItemData \u003d Standard.Navigation.Common.GetModelItemByPath(ModelItems \u003d modelItems,Path \u003d modelItemPath)[\"data\"]\n\t\trowObject \u003d self.parent.getRowObject(modelItemData)\n\t\tif modelItemPath \u003d\u003d currentModelItemPath:\n\t\t\trowObject[\u0027Name\u0027][\"style\"] \u003d {\"background-color\":\"var(--callToAction)\"}\n\t\trowObject[\u0027Index\u0027] \u003d i\n\t\ti\u003di+1 \n\t\tif (modelItemPath in CurrentModelItemSet) \u003d\u003d False:\n\t\t\tdata.append(rowObject)\t\t\n\t\t\tCurrentModelItemSet.add(modelItemPath)\n\n\treturn data",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              }
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Standard/Docked/Left/Background"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Name",
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Area Name"
+                  },
+                  "justify": "auto",
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": false,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "ModelItemTagPath",
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "justify": "auto",
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": false,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "ModelItem",
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "justify": "auto",
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": false,
+                  "width": ""
+                }
+              ],
+              "enableHeaderGroups": true,
+              "headerGroupStyle": {
+                "classes": "Standard/Docked/Header/HeadingBackground Standard/Docked/Header/HeadingBorder Standard/Docked/Header/HeadingText"
+              },
+              "headerGroups": [
+                [
+                  {
+                    "align": "center",
+                    "justify": "center",
+                    "span": 2,
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Click to Select Different Area"
+                  }
+                ]
+              ],
+              "headerStyle": {
+                "classes": "Standard/Docked/Header/HeadingBackground Standard/Docked/Header/HeadingBorder Standard/Docked/Header/HeadingText"
+              },
+              "pager": {
+                "bottom": false
+              },
+              "rows": {
+                "highlight": {
+                  "color": "var(--callToActionHighlight)"
+                },
+                "style": {
+                  "classes": "Standard/Docked/Left/Background Standard/Docked/Left/Text"
+                }
+              },
+              "selection": {
+                "enableRowSelection": false
+              },
+              "style": {
+                "classes": "Standard/Docked/Header/HeadingBorder"
+              }
+            },
+            "type": "ia.display.table"
+          },
+          {
+            "events": {
+              "component": {
+                "onRowClick": {
+                  "config": {
+                    "script": "\t#Update ModelItemTagPath based on row clicked\n\t#system.perspective.print(\"Current Tab Click Event: \" + str(event.value))\n\tmodelItem \u003d self.props.data[event.row][\"ModelItem\"]\n\tself.parent.updateCurrentModelItemTagPaths(modelItem)\t"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Current Tab History"
+            },
+            "position": {
+              "tabIndex": 1
+            },
+            "props": {
+              "bodyStyle": {
+                "classes": "Standard/Docked/Left/Background"
+              },
+              "columns": [
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "Name",
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Area Name"
+                  },
+                  "justify": "auto",
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": false,
+                  "sort": "none",
+                  "sortable": false,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": true,
+                  "width": ""
+                },
+                {
+                  "align": "center",
+                  "boolean": "checkbox",
+                  "dateFormat": "MM/DD/YYYY",
+                  "editable": false,
+                  "field": "ModelItemTagPath",
+                  "footer": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "header": {
+                    "align": "center",
+                    "justify": "left",
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": ""
+                  },
+                  "justify": "auto",
+                  "number": "value",
+                  "numberFormat": "0,0.##",
+                  "progressBar": {
+                    "bar": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "max": 100,
+                    "min": 0,
+                    "track": {
+                      "color": "",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "value": {
+                      "enabled": true,
+                      "format": "0,0.##",
+                      "justify": "center",
+                      "style": {
+                        "classes": ""
+                      }
+                    }
+                  },
+                  "render": "auto",
+                  "resizable": true,
+                  "sort": "none",
+                  "sortable": true,
+                  "strictWidth": false,
+                  "style": {
+                    "classes": ""
+                  },
+                  "toggleSwitch": {
+                    "color": {
+                      "selected": "",
+                      "unselected": ""
+                    }
+                  },
+                  "viewParams": {},
+                  "viewPath": "",
+                  "visible": false,
+                  "width": ""
+                }
+              ],
+              "enableHeaderGroups": true,
+              "headerGroupStyle": {
+                "classes": "Standard/Docked/Header/HeadingBackground Standard/Docked/Header/HeadingBorder Standard/Docked/Header/HeadingText"
+              },
+              "headerGroups": [
+                [
+                  {
+                    "align": "center",
+                    "justify": "center",
+                    "span": 2,
+                    "style": {
+                      "classes": ""
+                    },
+                    "title": "Click to Select Different Area"
+                  }
+                ]
+              ],
+              "headerStyle": {
+                "classes": "Standard/Docked/Header/HeadingBackground Standard/Docked/Header/HeadingBorder Standard/Docked/Header/HeadingText"
+              },
+              "pager": {
+                "bottom": false
+              },
+              "rows": {
+                "highlight": {
+                  "color": "var(--callToActionHighlight)"
+                },
+                "style": {
+                  "classes": "Standard/Docked/Left/Background Standard/Docked/Left/ContentBackground Standard/Docked/Left/Text"
+                }
+              },
+              "selection": {
+                "enableRowSelection": false
+              },
+              "style": {
+                "classes": "Standard/Docked/Header/HeadingBorder"
+              }
+            },
+            "type": "ia.display.table"
+          }
+        ],
+        "meta": {
+          "name": "Model Item Selection Tab Container"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1
+        },
+        "props": {
+          "menuType": "modern",
+          "tabSize": {
+            "width": 107
+          },
+          "tabStyle": {
+            "active": {
+              "backgroundColor": "var(--callToAction)",
+              "classes": "Standard/Docked/Left/Text"
+            },
+            "disabled": {
+              "classes": "Standard/Docked/Left/Text"
+            },
+            "inactive": {
+              "classes": "Standard/Docked/Left/Text",
+              "key": "value"
+            }
+          },
+          "tabs": [
+            "Current Areas",
+            "History"
+          ]
+        },
+        "scripts": {
+          "customMethods": [
+            {
+              "name": "updateCurrentModelItemTagPaths",
+              "params": [
+                "modelItem"
+              ],
+              "script": "\t# Function that calls Update Model Item Script\n\t#Update ModelItemTagPaths Object\n\tmodelItemPath \u003d modelItem[\"Path\"]\n\tuseSessionModelItem \u003d self.session.custom.UseSessionModelItem\n\tcurrentModelItem\u003d self.session.custom.CurrentModelItem\n\tperspectivePageID \u003d self.page.props.pageId\n\tcontentType \u003d self.view.custom.currentModelItem.ContentType\n\tself.session.custom.CurrentModelItem \u003d Standard.Navigation.Common.UpdateCurrentModelItem(Path \u003d modelItemPath,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t CurrentModelItem \u003d currentModelItem,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t UseSession \u003d useSessionModelItem,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t PerspectivePageID \u003d perspectivePageID,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t ContentType \u003d contentType)"
+            },
+            {
+              "name": "getRowObject",
+              "params": [
+                "modelItem"
+              ],
+              "script": "\trowObject \u003d {}\n\t#Get Standard Row Object for both Open Tabs and History Table\n\tpath \u003d modelItem[\u0027Path\u0027]\n\tmodelItemName \u003d modelItem[\u0027Name\u0027]\n\n\t#modelItemNameTagPath \u003d str(modelItemTagPath) + \"/ModelPath\"\n\t#modelItemName \u003d system.tag.readBlocking([modelItemNameTagPath])[0].value\n\trowObject[\"Name\"] \u003d {\"value\":modelItemName}\n\trowObject[\"ModelItem\"] \u003d {\"Path\": modelItem[\"Path\"]}\n\treturn rowObject"
+            }
+          ],
+          "extensionFunctions": null,
+          "messageHandlers": []
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Docked/Left/Background Standard/Docked/Left/ContentBackground Standard/Docked/Left/Text"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

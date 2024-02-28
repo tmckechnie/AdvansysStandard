@@ -1,0 +1,131 @@
+{
+  "custom": {
+    "AlarmSummary": null,
+    "alarmLabel": "Unacked: None: Active: None",
+    "alarmStyle": null
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Modules/Control Modules/100AI100"
+  },
+  "propConfig": {
+    "custom.AlarmSummary": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Summary/Information"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.alarmLabel": {
+      "binding": {
+        "config": {
+          "expression": "\"Unacked: \" + if(isNull({view.custom.AlarmSummary.HighestUnackedPriorityName}),\"None\",{view.custom.AlarmSummary.HighestUnackedPriorityName}) + \": \" +\r\n\"Active: \" + if(isNull({view.custom.AlarmSummary.HighestActivePriorityName}),\"None\",{view.custom.AlarmSummary.HighestActivePriorityName})"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.alarmStyle": {
+      "binding": {
+        "config": {
+          "path": "view.custom.AlarmSummary"
+        },
+        "transforms": [
+          {
+            "code": "\treturn Standard.Modules.Alarms.GetAlarmStyle(AlarmSummary\u003dvalue)\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 48,
+      "width": 445
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onDoubleClick": {
+              "config": {
+                "draggable": true,
+                "id": "5TEjGHmQ",
+                "modal": false,
+                "overlayDismiss": false,
+                "resizable": true,
+                "showCloseIcon": true,
+                "type": "open",
+                "viewParams": {
+                  "Msg": "{view.custom.Details.TagPath}"
+                },
+                "viewPath": "Common Components/Views/MsgBox"
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Summary"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.custom.alarmStyle.classes"
+              },
+              "transforms": [
+                {
+                  "code": "\tstyleClasses \u003d value\n\tstyleClasses +\u003d \" Standard/Popups/Faceplates/HeaderText Standard/Popups/Faceplates/HeaderBackground\"\n\treturn styleClasses",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "\"Alarms: \" + {view.custom.alarmLabel}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "borderWidth": 6
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

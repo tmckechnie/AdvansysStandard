@@ -1,0 +1,1128 @@
+{
+  "custom": {
+    "Description": "Jibeng",
+    "InstanceName": "Borehole",
+    "Level": "22,9",
+    "Mode": 3,
+    "ModeDescription": "Running okay",
+    "StateStyling": "Standard/Body/Symbols/BasicSVG Standard/Body/Symbols/Fill/Active",
+    "faceplatePath": "Standard/Equipment/Utilities/Borehole/Faceplates/Faceplate",
+    "history": [
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685924820087,
+        "ts": "Jun 5, 2023, 2:27:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685925108087,
+        "ts": "Jun 5, 2023, 2:31:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685925396087,
+        "ts": "Jun 5, 2023, 2:36:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685925684087,
+        "ts": "Jun 5, 2023, 2:41:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685925972087,
+        "ts": "Jun 5, 2023, 2:46:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685926260087,
+        "ts": "Jun 5, 2023, 2:51:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685926548087,
+        "ts": "Jun 5, 2023, 2:55:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685926836087,
+        "ts": "Jun 5, 2023, 3:00:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685927124087,
+        "ts": "Jun 5, 2023, 3:05:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685927412087,
+        "ts": "Jun 5, 2023, 3:10:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685927700087,
+        "ts": "Jun 5, 2023, 3:15:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685927988087,
+        "ts": "Jun 5, 2023, 3:19:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685928276087,
+        "ts": "Jun 5, 2023, 3:24:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685928564087,
+        "ts": "Jun 5, 2023, 3:29:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685928852087,
+        "ts": "Jun 5, 2023, 3:34:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685929140087,
+        "ts": "Jun 5, 2023, 3:39:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685929428087,
+        "ts": "Jun 5, 2023, 3:43:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685929716087,
+        "ts": "Jun 5, 2023, 3:48:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685930004087,
+        "ts": "Jun 5, 2023, 3:53:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685930292087,
+        "ts": "Jun 5, 2023, 3:58:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685930580087,
+        "ts": "Jun 5, 2023, 4:03:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685930868087,
+        "ts": "Jun 5, 2023, 4:07:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685931156087,
+        "ts": "Jun 5, 2023, 4:12:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685931444087,
+        "ts": "Jun 5, 2023, 4:17:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685931732087,
+        "ts": "Jun 5, 2023, 4:22:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685932020087,
+        "ts": "Jun 5, 2023, 4:27:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685932308087,
+        "ts": "Jun 5, 2023, 4:31:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685932596087,
+        "ts": "Jun 5, 2023, 4:36:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685932884087,
+        "ts": "Jun 5, 2023, 4:41:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685933172087,
+        "ts": "Jun 5, 2023, 4:46:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685933460087,
+        "ts": "Jun 5, 2023, 4:51:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685933748087,
+        "ts": "Jun 5, 2023, 4:55:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685934036087,
+        "ts": "Jun 5, 2023, 5:00:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685934324087,
+        "ts": "Jun 5, 2023, 5:05:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685934612087,
+        "ts": "Jun 5, 2023, 5:10:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685934900087,
+        "ts": "Jun 5, 2023, 5:15:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685935188087,
+        "ts": "Jun 5, 2023, 5:19:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685935476087,
+        "ts": "Jun 5, 2023, 5:24:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685935764087,
+        "ts": "Jun 5, 2023, 5:29:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685936052087,
+        "ts": "Jun 5, 2023, 5:34:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685936340087,
+        "ts": "Jun 5, 2023, 5:39:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685936628087,
+        "ts": "Jun 5, 2023, 5:43:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685936916087,
+        "ts": "Jun 5, 2023, 5:48:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685937204087,
+        "ts": "Jun 5, 2023, 5:53:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685937492087,
+        "ts": "Jun 5, 2023, 5:58:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685937780087,
+        "ts": "Jun 5, 2023, 6:03:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685938068087,
+        "ts": "Jun 5, 2023, 6:07:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685938356087,
+        "ts": "Jun 5, 2023, 6:12:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685938644087,
+        "ts": "Jun 5, 2023, 6:17:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685938932087,
+        "ts": "Jun 5, 2023, 6:22:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685939220087,
+        "ts": "Jun 5, 2023, 6:27:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685939508087,
+        "ts": "Jun 5, 2023, 6:31:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685939796087,
+        "ts": "Jun 5, 2023, 6:36:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685940084087,
+        "ts": "Jun 5, 2023, 6:41:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685940372087,
+        "ts": "Jun 5, 2023, 6:46:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685940660087,
+        "ts": "Jun 5, 2023, 6:51:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685940948087,
+        "ts": "Jun 5, 2023, 6:55:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685941236087,
+        "ts": "Jun 5, 2023, 7:00:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685941524087,
+        "ts": "Jun 5, 2023, 7:05:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685941812087,
+        "ts": "Jun 5, 2023, 7:10:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685942100087,
+        "ts": "Jun 5, 2023, 7:15:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685942388087,
+        "ts": "Jun 5, 2023, 7:19:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685942676087,
+        "ts": "Jun 5, 2023, 7:24:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685942964087,
+        "ts": "Jun 5, 2023, 7:29:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685943252087,
+        "ts": "Jun 5, 2023, 7:34:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685943540087,
+        "ts": "Jun 5, 2023, 7:39:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685943828087,
+        "ts": "Jun 5, 2023, 7:43:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685944116087,
+        "ts": "Jun 5, 2023, 7:48:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685944404087,
+        "ts": "Jun 5, 2023, 7:53:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685944692087,
+        "ts": "Jun 5, 2023, 7:58:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685944980087,
+        "ts": "Jun 5, 2023, 8:03:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685945268087,
+        "ts": "Jun 5, 2023, 8:07:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685945556087,
+        "ts": "Jun 5, 2023, 8:12:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685945844087,
+        "ts": "Jun 5, 2023, 8:17:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685946132087,
+        "ts": "Jun 5, 2023, 8:22:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685946420087,
+        "ts": "Jun 5, 2023, 8:27:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685946708087,
+        "ts": "Jun 5, 2023, 8:31:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685946996087,
+        "ts": "Jun 5, 2023, 8:36:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685947284087,
+        "ts": "Jun 5, 2023, 8:41:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685947572087,
+        "ts": "Jun 5, 2023, 8:46:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685947860087,
+        "ts": "Jun 5, 2023, 8:51:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685948148087,
+        "ts": "Jun 5, 2023, 8:55:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685948436087,
+        "ts": "Jun 5, 2023, 9:00:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685948724087,
+        "ts": "Jun 5, 2023, 9:05:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685949012087,
+        "ts": "Jun 5, 2023, 9:10:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685949300087,
+        "ts": "Jun 5, 2023, 9:15:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685949588087,
+        "ts": "Jun 5, 2023, 9:19:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685949876087,
+        "ts": "Jun 5, 2023, 9:24:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685950164087,
+        "ts": "Jun 5, 2023, 9:29:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685950452087,
+        "ts": "Jun 5, 2023, 9:34:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685950740087,
+        "ts": "Jun 5, 2023, 9:39:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685951028087,
+        "ts": "Jun 5, 2023, 9:43:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685951316087,
+        "ts": "Jun 5, 2023, 9:48:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685951604087,
+        "ts": "Jun 5, 2023, 9:53:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685951892087,
+        "ts": "Jun 5, 2023, 9:58:12 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685952180087,
+        "ts": "Jun 5, 2023, 10:03:00 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685952468087,
+        "ts": "Jun 5, 2023, 10:07:48 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685952756087,
+        "ts": "Jun 5, 2023, 10:12:36 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685953044087,
+        "ts": "Jun 5, 2023, 10:17:24 AM"
+      },
+      {
+        "Level": null,
+        "duration": 288,
+        "t_stamp": 1685953332087,
+        "ts": "Jun 5, 2023, 10:22:12 AM"
+      }
+    ],
+    "historyProvider": "[TPPSCV01003]",
+    "historyTags": [
+      {
+        "alias": "Level",
+        "path": "[TPPSCV01003]/Utilities/Water/Jibeng/Borehole/Level/Value"
+      }
+    ],
+    "key": "[Canary/default:default]CAN01VS1/SefatengUtilities/Utilities/Water/Jibeng/Borehole/Level/Value",
+    "myViewFolderPath": "Standard/Equipment/Utilities/Borehole"
+  },
+  "params": {
+    "TagPath": "[TPPSCV01003]Utilities/Water/Jibeng/Borehole"
+  },
+  "propConfig": {
+    "custom.Description": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/Description"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.InstanceName": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/InstanceName"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Level": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Level/Value"
+        },
+        "transforms": [
+          {
+            "formatType": "numeric",
+            "formatValue": "00.0",
+            "type": "format"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Mode": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Pump/Mode"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ModeDescription": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Pump/ModeDescription"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.StateStyling": {
+      "binding": {
+        "config": {
+          "struct": {
+            "mode": "{view.custom.ModeDescription}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols/BasicSVG Standard/Body/Symbols\"\n\tstyle \u003d \"\"#baseStyle + \"/Basic\"\n\t#Fill Styles -- Running, Interlocked, Not Running\n\tif value[\"mode\"]\u003d\u003d\"Running okay\":\n\t\tstyle \u003d baseStyle + \"/Fill/Active\"\t\n\telse:\n\t\tstyle \u003d baseStyle + \"/Fill/Passive\"\n\t\t\t\t\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.faceplatePath": {
+      "binding": {
+        "config": {
+          "expression": "{view.custom.myViewFolderPath} + \"/Faceplates/Faceplate\""
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.history": {
+      "binding": {
+        "config": {
+          "aggregate": "MinMax",
+          "avoidScanClassValidation": true,
+          "dateRange": {
+            "mostRecent": "8",
+            "mostRecentUnits": "HOUR"
+          },
+          "enableValueCache": true,
+          "ignoreBadQuality": false,
+          "polling": {
+            "enabled": false,
+            "rate": "1"
+          },
+          "preventInterpolation": false,
+          "returnFormat": "Wide",
+          "returnSize": {
+            "numRows": "100",
+            "type": "FIXED"
+          },
+          "tags": "{view.custom.historyTags}",
+          "valueFormat": "DOCUMENT"
+        },
+        "transforms": [
+          {
+            "code": "\thistCount \u003d len(value)\n\t#return histCount\n\ti\u003d0\n\tnow \u003d system.date.now()\n\tfor point in value:\n\t\trow\u003dpoint\n\t\tts \u003d system.date.fromMillis(point[\u0027t_stamp\u0027])\n\t\trow[\u0027ts\u0027] \u003d ts\n\t\tduration \u003d 0\n\t\tif (i+1)\u003chistCount:\n\t\t\t#return [1,histCount]\n\t\t\ttsNext \u003d system.date.fromMillis(value[i+1][\u0027t_stamp\u0027])\n\t\telse:\n\t\t\ttsNext \u003d now\n\t\tduration \u003d system.date.secondsBetween(ts, tsNext)\n\t\trow[\u0027duration\u0027] \u003d duration\n\t\ti+\u003d1\n\treturn value",
+            "type": "script"
+          }
+        ],
+        "type": "tag-history"
+      },
+      "persistent": true
+    },
+    "custom.historyProvider": {
+      "persistent": true
+    },
+    "custom.historyTags": {
+      "binding": {
+        "config": {
+          "path": "view.params.TagPath"
+        },
+        "transforms": [
+          {
+            "code": "\t#tagname \u003d value\n\tpath \u003d value.split(\u0027]\u0027)\n\tpath \u003d path[1]\n\ttagname \u003d \"[TPPSCV01003]/\"+path+\"/Level/Value\"\n\ttag \u003d {\n\t    \"alias\": \"Level\",\n\t    \"path\": tagname\n\t  }\n\treturn [tag]",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.key": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Level/Value.History Path"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.myViewFolderPath": {
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 200,
+      "width": 200
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application/Equipment/Reservoir"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "EmbeddedView"
+            },
+            "position": {
+              "basis": "71px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.params.Label": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Description"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.TagPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "path": "Standard/Equipment/Utilities/Borehole/Components/Trends",
+              "style": {
+                "borderColor": "#555555",
+                "borderWidth": 1,
+                "paddingBottom": 4
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "MovingAnalogIndicator"
+            },
+            "position": {
+              "basis": "40px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.desiredHigh": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Level"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.processValue": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Level"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "desiredLow": 0,
+              "desiredRangeColor": "#808080",
+              "highAlarm": 100,
+              "highHighAlarm": null,
+              "highInterlock": null,
+              "indicatorColor": "#000000",
+              "label": {
+                "format": "#,##0%",
+                "style": {
+                  "fontSize": 16,
+                  "fontWeight": "bold"
+                }
+              },
+              "lowAlarm": 0,
+              "lowInterlock": null,
+              "lowLowAlarm": null,
+              "reverseIndicator": true
+            },
+            "type": "ia.display.moving-analog-indicator"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "200px",
+              "grow": 1
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF00",
+                "classes": "Standard/Body/Symbols/Text",
+                "fontSize": 10,
+                "textAlign": "left"
+              },
+              "text": "Level"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "LabelValue"
+            },
+            "position": {
+              "basis": "40px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.Level} + \" %\""
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF00",
+                "classes": "Standard/Body/Symbols/Text",
+                "fontSize": 10
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_1"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "custom.bodyClasses": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.StateStyling}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label_0"
+            },
+            "position": {
+              "basis": "200px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.ModeDescription"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFFFFF00",
+                "classes": "Standard/Body/Symbols/Text",
+                "fontSize": 10,
+                "textAlign": "left"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Symbol"
+            },
+            "position": {
+              "basis": "40px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.elements[0].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.bodyClasses"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "elements": [
+                {
+                  "cx": 200,
+                  "cy": 200,
+                  "fill": {
+                    "opacity": 1
+                  },
+                  "name": "Center",
+                  "r": 190,
+                  "stroke": {
+                    "dasharray": "none",
+                    "opacity": 1,
+                    "width": 2
+                  },
+                  "style": {
+                    "vector-effect": "non-scaling-stroke"
+                  },
+                  "type": "circle"
+                },
+                {
+                  "d": "M 130 330 L 130 70 L 340 200 Z",
+                  "fill": {
+                    "opacity": 1,
+                    "paint": "var(--bodySymbolActiveText)"
+                  },
+                  "name": "Triangle",
+                  "stroke": {},
+                  "style": {
+                    "dominant-baseline": "middle",
+                    "fontSize": 250,
+                    "fontWeight": "bold",
+                    "text-anchor": "middle",
+                    "vector-effect": "non-scaling-stroke"
+                  },
+                  "type": "path"
+                }
+              ],
+              "style": {
+                "transform": ""
+              },
+              "viewBox": "0 0 400 400"
+            },
+            "type": "ia.shapes.svg"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer_0"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "custom.bodyClasses": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.StateStyling}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\ttagPath \u003d self.view.params.TagPath\n\tinstanceName \u003d self.view.custom.InstanceName\n\tdescription \u003d self.view.custom.Description\n\ttitle \u003d instanceName + \" - \" + description\n\tparamsObject \u003d {\"TagPath\":tagPath}\n\tfaceplatePath \u003d self.view.custom.faceplatePath\n\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003dfaceplatePath)"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Body/Statics/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

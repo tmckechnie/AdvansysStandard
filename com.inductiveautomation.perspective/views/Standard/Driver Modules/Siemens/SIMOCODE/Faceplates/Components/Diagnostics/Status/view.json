@@ -1,0 +1,396 @@
+{
+  "custom": {
+    "ExtendedDiagnosticsTagPath": null
+  },
+  "params": {
+    "TagPath": "[TPUtilities]Utilities/Chemical Dosing/XLMM560A_DM"
+  },
+  "propConfig": {
+    "custom.ExtendedDiagnosticsTagPath": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/ExtendedDiagnosticsTagPath"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 489,
+      "width": 330
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "RunningForward"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}!\u003d\" \" // Done to hide rows if Motor does not have a Driver Module associated"
+              },
+              "type": "expr"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Sts/Structure[\u0027{name}\u0027]"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Running Forward",
+            "MappedObject": {
+              "False": "False",
+              "True": "True"
+            },
+            "ShowLabel": true
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayEnumeration",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "BusError"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}!\u003d\" \" // Done to hide rows if Motor does not have a Driver Module associated"
+              },
+              "type": "expr"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Sts/Structure[\u0027{name}\u0027]"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Bus Error",
+            "MappedObject": {
+              "False": "False",
+              "True": "True"
+            },
+            "ShowLabel": true
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayEnumeration",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Fault"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}!\u003d\" \" // Done to hide rows if Motor does not have a Driver Module associated"
+              },
+              "type": "expr"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Sts/Structure[\u0027{name}\u0027]"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Fault",
+            "MappedObject": {
+              "False": "False",
+              "True": "True"
+            },
+            "ShowLabel": true
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayEnumeration",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "RunningReverse"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}!\u003d\" \" // Done to hide rows if Motor does not have a Driver Module associated"
+              },
+              "type": "expr"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Sts/Structure[\u0027{name}\u0027]"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Running Reverse",
+            "MappedObject": {
+              "False": "False",
+              "True": "True"
+            },
+            "ShowLabel": true
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayEnumeration",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "kWh"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}!\u003d\" \" // Done to hide rows if Motor does not have a Driver Module associated"
+              },
+              "type": "expr"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Sts/Structure[\u0027{name}\u0027]"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Format": "#,##0.##",
+            "Label": "kWh",
+            "ShowLabel": true,
+            "ShowUnits": true,
+            "Units": "kWh"
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Stopped"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}!\u003d\" \" // Done to hide rows if Motor does not have a Driver Module associated"
+              },
+              "type": "expr"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Sts/Structure[\u0027{name}\u0027]"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Stopped",
+            "MappedObject": {
+              "False": "False",
+              "True": "True"
+            },
+            "ShowLabel": true
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayEnumeration",
+          "style": {
+            "margin": 5,
+            "padding": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Extended Diagnostics Button"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.ExtendedDiagnosticsTagPath}!\u003d\" \" \u0026\u0026 {view.params.TagPath} !\u003d \" \""
+              },
+              "type": "expr"
+            }
+          },
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "path": "view.custom.ExtendedDiagnosticsTagPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Driver Modules/Siemens/SIMOCODE Extended Diagnostics/Symbols/Faceplate Button"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "No Driver Configured Label"
+        },
+        "position": {
+          "basis": "320px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}\u003d\" \" // Done to hide rows if Motor does not have a Driver Module associated"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Command",
+            "MappedObject": {
+              "False": "",
+              "True": "No Driver Configured."
+            },
+            "ShowLabel": false,
+            "Value": true
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayEnumeration"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Popups/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "custom": {},
+  "params": {
+    "Cfg": {
+      "ExpandedIconPath": "material/keyboard_arrow_up",
+      "RetractedIconPath": "material/keyboard_arrow_down",
+      "ShowIcon": false
+    },
+    "Expanded": false,
+    "Title": "value"
+  },
+  "propConfig": {
+    "params.Cfg": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Expanded": {
+      "paramDirection": "inout",
+      "persistent": true
+    },
+    "params.Title": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 35,
+      "width": 350
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.Title"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/HeaderBackground"
+              },
+              "textStyle": {
+                "classes": "Standard/Popups/Faceplates/HeaderText"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Icon"
+            },
+            "position": {
+              "height": 1,
+              "width": 0.1
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.Cfg.ShowIcon"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.path": {
+                "binding": {
+                  "config": {
+                    "expression": "if({view.params.Expanded},{view.params.Cfg.ExpandedIconPath},{view.params.Cfg.RetractedIconPath})"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/HeaderBackground Standard/Popups/Faceplates/HeaderText"
+              }
+            },
+            "type": "ia.display.icon"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\tself.view.params.Expanded \u003d not self.view.params.Expanded"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

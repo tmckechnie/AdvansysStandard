@@ -1,0 +1,10 @@
+{
+  "base": {
+    "style": {
+      "borderColor": "var(--bodySymbolMaintenance)",
+      "borderStyle": "solid",
+      "borderWidth": "2px",
+      "stroke": "var(--bodySymbolMaintenance)"
+    }
+  }
+}

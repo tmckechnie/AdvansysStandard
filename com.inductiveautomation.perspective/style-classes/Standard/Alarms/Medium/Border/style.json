@@ -1,0 +1,10 @@
+{
+  "base": {
+    "style": {
+      "borderColor": "var(--AlarmMedium)",
+      "borderWidth": "2px",
+      "stroke": "var(--AlarmMedium)",
+      "strokeWidth": "2"
+    }
+  }
+}

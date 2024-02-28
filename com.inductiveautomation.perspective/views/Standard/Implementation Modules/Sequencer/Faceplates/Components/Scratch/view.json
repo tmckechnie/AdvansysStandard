@@ -1,0 +1,450 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "CmdEnumButtons"
+        },
+        "position": {
+          "height": 64,
+          "width": 320,
+          "x": 8,
+          "y": 200
+        },
+        "props": {
+          "instances": [
+            {
+              "ButtonLabel": "Prepare",
+              "Label": "Command",
+              "ShowLabel": false,
+              "TagPath": "[Standard]Demo/Implementation Modules/SEQMM001/Cmd/HMIEnum",
+              "WriteValue": 10,
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              }
+            },
+            {
+              "ButtonLabel": "Start",
+              "Label": "Command",
+              "ShowLabel": false,
+              "TagPath": "[Standard]Demo/Implementation Modules/SEQMM001/Cmd/HMIEnum",
+              "WriteValue": 20,
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              }
+            },
+            {
+              "ButtonLabel": "Resume",
+              "Label": "Command",
+              "ShowLabel": false,
+              "TagPath": "[Standard]Demo/Implementation Modules/SEQMM001/Cmd/HMIEnum",
+              "WriteValue": 30,
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              }
+            },
+            {
+              "ButtonLabel": "Pause",
+              "Label": "Command",
+              "ShowLabel": false,
+              "TagPath": "[Standard]Demo/Implementation Modules/SEQMM001/Cmd/HMIEnum",
+              "WriteValue": 40,
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              }
+            },
+            {
+              "ButtonLabel": "ShutDown",
+              "Label": "Command",
+              "ShowLabel": false,
+              "TagPath": "[Standard]Demo/Implementation Modules/SEQMM001/Cmd/HMIEnum",
+              "WriteValue": 50,
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              }
+            }
+          ],
+          "path": "Standard/Components/Faceplates/Input/Command Push Button",
+          "useDefaultViewHeight": false,
+          "useDefaultViewWidth": false,
+          "wrap": "wrap"
+        },
+        "type": "ia.display.flex-repeater"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "StepNumber"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "params": {
+                    "Title": "Step Number"
+                  },
+                  "path": "Standard/Components/Faceplates/Header"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "Current"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "propConfig": {
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/Index/\"+{this.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Format": "#,##0.##",
+                    "Label": "Current",
+                    "ShowLabel": true,
+                    "ShowUnits": false,
+                    "Units": "EU"
+                  },
+                  "path": "Standard/Components/Faceplates/Status/LabelDisplayField"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "Next"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "propConfig": {
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/Index/\"+{this.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Format": "#,##0.##",
+                    "Label": "Next",
+                    "ShowLabel": true,
+                    "ShowUnits": false,
+                    "Units": "EU"
+                  },
+                  "path": "Standard/Components/Faceplates/Status/LabelDisplayField"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "Pause"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "propConfig": {
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/Index/\"+{this.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Format": "#,##0.##",
+                    "Label": "Pause",
+                    "ShowLabel": true,
+                    "ShowUnits": false,
+                    "Units": "EU"
+                  },
+                  "path": "Standard/Components/Faceplates/Status/LabelDisplayField"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "Resume"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "propConfig": {
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/Index/\"+{this.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Format": "#,##0.##",
+                    "Label": "Resume",
+                    "ShowLabel": true,
+                    "ShowUnits": false,
+                    "Units": "EU"
+                  },
+                  "path": "Standard/Components/Faceplates/Status/LabelDisplayField"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "IndexStep"
+            },
+            "position": {
+              "basis": "150px"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "marginLeft": 2
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "StepDuration"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "params": {
+                    "Title": "Step Duration"
+                  },
+                  "path": "Standard/Components/Faceplates/Header"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "CurrentDuration"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "propConfig": {
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/Index/\"+{this.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Format": "#,##0.##",
+                    "Label": "Current",
+                    "ShowLabel": false,
+                    "ShowUnits": true,
+                    "Units": "s"
+                  },
+                  "path": "Standard/Components/Faceplates/Status/LabelDisplayField"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "IndexStepDuration"
+            },
+            "position": {
+              "basis": "150px"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "marginLeft": 2
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "StepTimeout"
+                },
+                "position": {
+                  "basis": "35px"
+                },
+                "props": {
+                  "params": {
+                    "Title": "Step Timeout"
+                  },
+                  "path": "Standard/Components/Faceplates/Header"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "CurrentTimeout"
+                },
+                "position": {
+                  "basis": "30px"
+                },
+                "propConfig": {
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath}+\"/Index/\"+{this.meta.name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Format": "#,##0.##",
+                    "Label": "Current",
+                    "ShowLabel": false,
+                    "ShowUnits": true,
+                    "Units": "s"
+                  },
+                  "path": "Standard/Components/Faceplates/Status/LabelDisplayField"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "IndexStepTimeout"
+            },
+            "position": {
+              "basis": "150px"
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "marginLeft": 2
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "IndexStatus"
+        },
+        "position": {
+          "height": 200,
+          "width": 200,
+          "x": 43,
+          "y": 371
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "StepDesc"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "params": {
+                "Title": "Step Description"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Index"
+            },
+            "position": {
+              "basis": "56px"
+            },
+            "propConfig": {
+              "props.params.IndexDesc": {
+                "binding": {
+                  "config": {
+                    "expression": "tag({view.params.TagPath} + \"/Index/CurrentStepDesc\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.IndexStep": {
+                "binding": {
+                  "config": {
+                    "expression": "tag({view.params.TagPath} + \"/Index/Current\")"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Label": "Index",
+                "ShowDesc": true,
+                "ShowIndex": true,
+                "Showlabel": false
+              },
+              "path": "Standard/Implementation Modules/Sequencer/Faceplates/Components/LabelIndex"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "IndexStepDesc"
+        },
+        "position": {
+          "height": 200,
+          "width": 200
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

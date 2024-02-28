@@ -1,0 +1,210 @@
+{
+  "custom": {
+    "Value": null,
+    "popName": "SequenceCompletePopup"
+  },
+  "params": {
+    "Label": "",
+    "Message": "",
+    "SetValue": true,
+    "TagPath": ""
+  },
+  "propConfig": {
+    "custom.Value": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.popName": {
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Message": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.SetValue": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 92,
+      "width": 376
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "LabelMessage"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Message"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/HeaderBackground Standard/Popups/Faceplates/HeaderText"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tpath \u003d self.view.params.TagPath + \"/Cmd/HMIEnum\"\n\tvalue \u003d self.view.params.SetValue\n\tresult \u003d system.tag.writeBlocking([path], [value])\n\t\n\tif str(result[0]) \u003d\u003d \"Good\":\n\t\tsystem.perspective.closePopup(id\u003dself.view.custom.popName)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "ButtonAction",
+              "tooltip": {
+                "enabled": true
+              }
+            },
+            "position": {
+              "basis": "34px",
+              "grow": 1
+            },
+            "propConfig": {
+              "meta.tooltip.text": {
+                "binding": {
+                  "config": {
+                    "expression": "\"Excute Action:\" + {view.params.TagPath} + \" \u003d \" + toStr({view.params.SetValue})"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "isGood({view.custom.Value})"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.Label"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Button/Default",
+                "margin": 10
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "draggable": false,
+                    "id": "{view.custom.popName}",
+                    "modal": false,
+                    "overlayDismiss": false,
+                    "resizable": false,
+                    "showCloseIcon": false,
+                    "type": "close",
+                    "viewPath": "Standard/Implementation Modules/Group/Faceplates/Components/Prompt",
+                    "viewportBound": false
+                  },
+                  "scope": "C",
+                  "type": "popup"
+                }
+              }
+            },
+            "meta": {
+              "name": "ButtonCancel",
+              "tooltip": {
+                "enabled": true
+              }
+            },
+            "position": {
+              "basis": "34px",
+              "grow": 1
+            },
+            "propConfig": {
+              "meta.tooltip.text": {
+                "binding": {
+                  "config": {
+                    "expression": "\"Cancel and Close Popup: \" + {view.custom.popName}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Button/Default",
+                "margin": 10
+              },
+              "text": "Cancel"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Popups/Faceplates/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "base": {
+    "style": {}
+  },
+  "variants": [
+    {
+      "pseudo": "hover",
+      "style": {
+        "backgroundColor": "var(--callToAction--hover)",
+        "cursor": "pointer"
+      }
+    }
+  ]
+}

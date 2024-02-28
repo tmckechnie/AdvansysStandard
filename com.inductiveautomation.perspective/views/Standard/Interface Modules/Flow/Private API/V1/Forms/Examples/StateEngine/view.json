@@ -1,0 +1,423 @@
+{
+  "custom": {
+    "enumGroups": {
+      "columns": [
+        {
+          "enumerationId": 5,
+          "id": 82,
+          "name": "Equipment"
+        },
+        {
+          "enumerationId": 6,
+          "id": 83,
+          "name": "Reason"
+        },
+        {
+          "enumerationId": 12,
+          "id": 80,
+          "name": "PackML Modes"
+        },
+        {
+          "enumerationId": 13,
+          "id": 81,
+          "name": "PackML States"
+        }
+      ],
+      "description": "",
+      "id": 9,
+      "name": "State Test",
+      "rows": [
+        {
+          "ordinal": 1,
+          "values": [
+            {
+              "columnId": 80,
+              "ordinalId": 115,
+              "value": "Undefined"
+            },
+            {
+              "columnId": 81,
+              "ordinalId": 123,
+              "value": "Undefined"
+            },
+            {
+              "columnId": 82,
+              "ordinalId": 31,
+              "value": "Capping Device"
+            },
+            {
+              "columnId": 83,
+              "ordinalId": 38,
+              "value": "No Packaging Material - Production"
+            }
+          ]
+        },
+        {
+          "ordinal": 2,
+          "values": [
+            {
+              "columnId": 80,
+              "ordinalId": 116,
+              "value": "Production"
+            },
+            {
+              "columnId": 81,
+              "ordinalId": 129,
+              "value": "Execute"
+            },
+            {
+              "columnId": 82,
+              "ordinalId": 31,
+              "value": "Capping Device"
+            },
+            {
+              "columnId": 83,
+              "ordinalId": 44,
+              "value": "Running Adjustment / Short Stop"
+            }
+          ]
+        },
+        {
+          "ordinal": 3,
+          "values": [
+            {
+              "columnId": 80,
+              "ordinalId": 116,
+              "value": "Production"
+            },
+            {
+              "columnId": 81,
+              "ordinalId": 128,
+              "value": "Suspended"
+            },
+            {
+              "columnId": 82,
+              "ordinalId": 36,
+              "value": "Crate Packer"
+            },
+            {
+              "columnId": 83,
+              "ordinalId": 51,
+              "value": "CIP - Main"
+            }
+          ]
+        },
+        {
+          "ordinal": 4,
+          "values": [
+            {
+              "columnId": 80,
+              "ordinalId": 116,
+              "value": "Production"
+            },
+            {
+              "columnId": 81,
+              "ordinalId": 134,
+              "value": "Held"
+            },
+            {
+              "columnId": 82,
+              "ordinalId": 35,
+              "value": "Video Jet"
+            },
+            {
+              "columnId": 83,
+              "ordinalId": 49,
+              "value": "Planned Maintenance"
+            }
+          ]
+        },
+        {
+          "ordinal": 5,
+          "values": [
+            {
+              "columnId": 80,
+              "ordinalId": 116,
+              "value": "Production"
+            },
+            {
+              "columnId": 81,
+              "ordinalId": 140,
+              "value": "Complete"
+            },
+            {
+              "columnId": 82,
+              "ordinalId": 35,
+              "value": "Video Jet"
+            },
+            {
+              "columnId": 83,
+              "ordinalId": 50,
+              "value": "No Labour"
+            }
+          ]
+        },
+        {
+          "ordinal": 6,
+          "values": [
+            {
+              "columnId": 80,
+              "ordinalId": 117,
+              "value": "Maintenance"
+            },
+            {
+              "columnId": 81,
+              "ordinalId": 123,
+              "value": "Undefined"
+            },
+            {
+              "columnId": 82,
+              "ordinalId": 31,
+              "value": "Capping Device"
+            },
+            {
+              "columnId": 83,
+              "ordinalId": 51,
+              "value": "CIP - Main"
+            }
+          ]
+        }
+      ]
+    },
+    "eventAttributeValues": {
+      "Excute": "value"
+    },
+    "eventAttributes": {
+      "Equipment": {
+        "eventAttributeID": 238
+      },
+      "Mode": {
+        "eventAttributeID": 235
+      },
+      "Reason Level 1": {
+        "eventAttributeID": 239
+      },
+      "State": {
+        "eventAttributeID": 237
+      },
+      "Work Order": {
+        "eventAttributeID": 234
+      }
+    },
+    "stateEventAttributeID": null
+  },
+  "params": {
+    "formID": 9
+  },
+  "propConfig": {
+    "custom.enumGroups": {
+      "binding": {
+        "config": {
+          "expression": "1"
+        },
+        "transforms": [
+          {
+            "code": "\tusername \u003d \u0027Advansys\\\\Visitor1\u0027\n\tresponse \u003d Flow.Config.GetEnumGroup(Connection\u003dNone,Username\u003dusername,Name\u003d\u0027State Test\u0027)\n\treturn response",
+            "type": "script"
+          }
+        ],
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.eventAttributeValues": {
+      "persistent": true
+    },
+    "custom.eventAttributes": {
+      "binding": {
+        "config": {
+          "path": "view.params.formID"
+        },
+        "transforms": [
+          {
+            "code": "\tdefinition \u003d Flow.Event.GetDefinitionFromForm(Connection\u003dNone,FormID\u003dvalue)\n\teventAttributesList \u003d  definition[0][\u0027event\u0027][\u0027eventAttributes\u0027]\n\teventAttributes \u003d {}\n\t\n\tfor eventAttribute in eventAttributesList:\n\t\teventAttributeObject \u003d {}\n\t\teventAttributeObject[\u0027eventAttributeID\u0027] \u003d eventAttribute[\u0027eventAttributeID\u0027]\n\t\tname \u003d eventAttribute[\u0027name\u0027]\n\t\teventAttributes[name] \u003d eventAttributeObject\n\treturn eventAttributes\n\t",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.stateEventAttributeID": {
+      "binding": {
+        "config": {
+          "path": "view.custom.eventAttributes"
+        },
+        "transforms": [
+          {
+            "code": "\tfor eventAttribute in value:\n\t\t\n\t\tname \u003d eventAttribute[\u0027name\u0027]\n\t\tif name  \u003d\u003d \u0027State\u0027:\n\t\t\treturn eventAttribute[\u0027eventAttributeID\u0027]\n\t\n\treturn value",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.formID": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "custom": {
+          "key": []
+        },
+        "meta": {
+          "name": "StateChange"
+        },
+        "position": {
+          "basis": "68px"
+        },
+        "propConfig": {
+          "props.params.eventAttributesDefinition": {
+            "binding": {
+              "config": {
+                "path": "view.custom.eventAttributes"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.formID": {
+            "binding": {
+              "config": {
+                "path": "view.params.formID"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "eventAttributeValues": [
+              {
+                "name": "Mode",
+                "value": "Production"
+              },
+              {
+                "name": "State",
+                "value": "Execute"
+              }
+            ],
+            "text": "Execute",
+            "timestamp": {
+              "action": "now",
+              "value": ""
+            }
+          },
+          "path": "Flow/Forms/Components/Manual Event Trigger"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "custom": {
+          "key": []
+        },
+        "meta": {
+          "name": "StateChange_0"
+        },
+        "position": {
+          "basis": "68px"
+        },
+        "propConfig": {
+          "props.params.eventAttributesDefinition": {
+            "binding": {
+              "config": {
+                "path": "view.custom.eventAttributes"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.formID": {
+            "binding": {
+              "config": {
+                "path": "view.params.formID"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "eventAttributeValues": [
+              {
+                "name": "Mode",
+                "value": "Production"
+              },
+              {
+                "name": "State",
+                "value": "Held"
+              }
+            ],
+            "text": "Held",
+            "timestamp": {
+              "action": "now",
+              "value": ""
+            }
+          },
+          "path": "Flow/Forms/Components/Manual Event Trigger"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "custom": {
+          "key": []
+        },
+        "meta": {
+          "name": "StateChange_1"
+        },
+        "position": {
+          "basis": "68px"
+        },
+        "propConfig": {
+          "props.params.eventAttributesDefinition": {
+            "binding": {
+              "config": {
+                "path": "view.custom.eventAttributes"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.formID": {
+            "binding": {
+              "config": {
+                "path": "view.params.formID"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "eventAttributeValues": [
+              {
+                "name": "Mode",
+                "value": "Production"
+              },
+              {
+                "name": "State",
+                "value": "Suspended"
+              }
+            ],
+            "text": "Suspended",
+            "timestamp": {
+              "action": "now",
+              "value": ""
+            }
+          },
+          "path": "Flow/Forms/Components/Manual Event Trigger"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

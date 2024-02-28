@@ -1,0 +1,182 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/100R001"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 360,
+      "width": 435
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "SirenOnTimeElapsed"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.params.Format": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Sts/{name}.FormatString"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Sts/{name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Siren on Time Elapsed",
+            "ShowLabel": true,
+            "ShowUnits": true,
+            "Units": "s"
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "style": {
+            "marginBottom": 5
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "StartOnTimeElapsed"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.params.Format": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Sts/{name}.FormatString"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Sts/{name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Start on Time Elapsed",
+            "ShowLabel": true,
+            "ShowUnits": true,
+            "Units": "s"
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "style": {
+            "marginBottom": 5
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "StopOnTimeElapsed"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.params.Format": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Sts/{name}.FormatString"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Sts/{name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Stop on Time Elapsed",
+            "ShowLabel": true,
+            "ShowUnits": true,
+            "Units": "s"
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+          "style": {
+            "marginBottom": 5
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

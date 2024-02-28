@@ -1,0 +1,331 @@
+{
+  "custom": {
+    "CmdValue": 0,
+    "Description": "Setpoint 1 Description",
+    "Enable": true,
+    "Enabled": true,
+    "EngUnit": "EU",
+    "FormatString": "##",
+    "StsValue": 0,
+    "label": "Setpoint 1 Description"
+  },
+  "params": {
+    "EngStyle": {
+      "classes": "Standard/Body/Symbols/Text",
+      "paddingLeft": 2,
+      "textAlign": "left"
+    },
+    "Label": "",
+    "LabelStyle": {
+      "classes": "Standard/Body/Symbols/Text",
+      "paddingLeft": 2,
+      "textAlign": "left"
+    },
+    "ShowLabel": true,
+    "TagPath": "[Standard]Standard/Test/Setpoints/Setpoint 1",
+    "ValueStyle": {
+      "classes": "Standard/Body/Symbols/Text",
+      "paddingLeft": 2,
+      "textAlign": "right"
+    }
+  },
+  "propConfig": {
+    "custom.CmdValue": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cmd/Value"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Description": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/MetaData/Description"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Enabled": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cmd/Value.Enabled"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.EngUnit": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value.EngUnit"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.FormatString": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value.FormatString"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.StsValue": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.label": {
+      "binding": {
+        "config": {
+          "expression": "if({view.params.Label}\u003d\"\",{view.custom.Description},{view.params.Label})"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.EngStyle": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.LabelStyle": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowLabel": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ValueStyle": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 22,
+      "width": 499
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "350px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.params.ShowLabel"
+              },
+              "type": "property"
+            }
+          },
+          "props.style": {
+            "binding": {
+              "config": {
+                "path": "view.params.LabelStyle"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.label"
+              },
+              "overlayOptOut": true,
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "NumericEntryField"
+            },
+            "position": {
+              "basis": "266px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.containerStyle": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.ValueStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Enabled"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.format": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.FormatString"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.style": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.ValueStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.CmdValue"
+                  },
+                  "type": "property"
+                },
+                "persistent": true
+              }
+            },
+            "props": {
+              "value": 0
+            },
+            "type": "ia.input.numeric-entry-field"
+          },
+          {
+            "meta": {
+              "name": "EngUnit"
+            },
+            "position": {
+              "basis": "50px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.Units"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tif value \u003d\u003d \"\":\n\t\treturn False\n\treturn True",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.style": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.EngStyle"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.EngUnit"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Value"
+        },
+        "position": {
+          "basis": "150px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}.Enabled"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

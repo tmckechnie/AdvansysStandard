@@ -1,0 +1,170 @@
+{
+  "custom": {
+    "Interlocked": false,
+    "Label": "Protective",
+    "Reason": "Protective",
+    "reasonDetail": {
+      "instanceExists": false
+    }
+  },
+  "params": {
+    "ShowBlock": false,
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor/Interlock/Protective"
+  },
+  "propConfig": {
+    "custom.Interlocked": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/State"
+        },
+        "transforms": [
+          {
+            "expression": "!{value}",
+            "type": "expression"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Label": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}.Documentation"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Reason": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Reason"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.reasonDetail": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/ReasonModuleInfo"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.ShowBlock": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 89,
+      "width": 457
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tif self.view.custom.reasonDetail.instanceExists:\n\t\ttagPath \u003d self.view.custom.reasonDetail.fullPath\n\t\tinstanceName \u003d self.view.custom.reasonDetail.instanceName\n\t\tdescription \u003d self.view.custom.reasonDetail.description\n\t\tstandardViewPath \u003d self.view.custom.reasonDetail.standardViewPath\n\t\ttitle \u003d instanceName + \" - \" + description\n\t\tparamsObject \u003d {\"TagPath\":tagPath}\n\t\tfaceplatePath \u003d standardViewPath + \"/Faceplates/Faceplate\"\n\t\tposition\u003d{\"right\":5,\"width\":350,\"height\":400,\"bottom\":45}\n\t\t#Smaller Faceplace if it is interlock Faceplate\n\t\tif \"Interlock\" in standardViewPath:\n\t\t\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003dfaceplatePath,Position\u003dposition)\n\t\telse:\n\t\t\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003dfaceplatePath)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Enumeration",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "320px"
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "expression": "\"Reason: \" + {view.custom.Reason} + if({view.custom.reasonDetail.instanceExists}\u003dtrue,\r\n\" -Navigate To:\" + {view.custom.reasonDetail.fullPath},\r\n\"\")\r\n\r\n\r\n"
+              },
+              "type": "expr"
+            }
+          },
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "!{view.params.ShowBlock}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Label"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Interlocked"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "MappedObject": {
+              "False": "Healthy",
+              "True": "Interlocked"
+            },
+            "ShowLabel": true
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayEnumeration"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

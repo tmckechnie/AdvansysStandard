@@ -1,0 +1,351 @@
+{
+  "custom": {
+    "AlarmSummary": null,
+    "ControlStyling": "",
+    "Description": null,
+    "InstanceName": null,
+    "ModeStyling": "",
+    "StateStyling": "Standard/Body/Symbols/Fill/Passive",
+    "alarmStyle": null
+  },
+  "params": {
+    "Direction": "",
+    "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M104",
+    "Text": "MR"
+  },
+  "propConfig": {
+    "custom.AlarmSummary": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Summary/Information"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ControlStyling": {
+      "binding": {
+        "config": {
+          "struct": {
+            "isSelected": "tag({view.params.TagPath}+\"/Id/Selected\")",
+            "isSimulation": "tag({view.params.TagPath}+\"/Sim/Simulation\")"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\t\n\tbaseStyle \u003d \"Standard/Body/Symbols\"\n\tstyleClasses \u003d \"\"#baseStyle+\"/BasicSVG\"\n\n\t#Selected\n\tif value[\"isSelected\"]:\n\t\tstyleClasses +\u003d \" \"+baseStyle+\"/Selected\"\n\n\t#Simulation\n\tif value[\"isSimulation\"]:\n\t\tstyleClasses +\u003d \" \"+baseStyle+\"/Simulation\"\n\t\n\treturn styleClasses",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.Description": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/Description"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.InstanceName": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/InstanceName"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ModeStyling": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/Mode"
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols\"\n\tstyle \u003d \"\"#baseStyle + \"/BasicSVG\"\t\t\t\n\tmode \u003d value\n\tif mode \u003d\u003d 0:#Maintenance\n\t\tstyle +\u003d  \" \" + baseStyle + \"/ModeMaintenance\"\t\t\t\n\telif mode \u003d\u003d 1:#Manual\n\t\tstyle +\u003d \" \" + baseStyle + \"/ModeManual\"\n\telif mode \u003d\u003d 2:#Auto\n\t\tstyle +\u003d \" \" + baseStyle + \"/ModeAuto\"\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.StateStyling": {
+      "binding": {
+        "config": {
+          "struct": {
+            "interlocked": "tag({view.params.TagPath}+\"/Interlock/InterlockedForward\") || tag({view.params.TagPath}+\"/Interlock/InterlockedReverse\")",
+            "running": "tag({view.params.TagPath}+\"/In/RunningForward\") || tag({view.params.TagPath}+\"/In/RunningReverse\")"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols\"\n\tstyle \u003d \"\"#baseStyle + \"/Basic\"\n\t#Fill Styles -- Running, Interlocked, Not Running\n\tif value[\"running\"]:\n\t\tstyle \u003d baseStyle + \"/Fill/Active\"\t\n\telse:\n\t\tstyle \u003d baseStyle + \"/Fill/Passive\"\n\t\t\t\t\n\tif value[\"interlocked\"]:\n\t\t\tstyle \u003d baseStyle + \"/Fill/Interlocked\"\n\t\t\n\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.alarmStyle": {
+      "binding": {
+        "config": {
+          "path": "view.custom.AlarmSummary"
+        },
+        "transforms": [
+          {
+            "code": "\treturn Standard.Modules.Alarms.GetAlarmStyle(AlarmSummary\u003dvalue)\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.Direction": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Text": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 50
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application Default/Control Modules/Motor Reverse"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Motor"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "propConfig": {
+              "custom.borderStrokeWidth": {
+                "binding": {
+                  "config": {
+                    "path": "this.props.viewBox"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\t\n\treturn value.split(\" \")",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.elements[0].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.bodyClasses"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[1].text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.Text"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "elements": [
+                {
+                  "cx": 200,
+                  "cy": 200,
+                  "fill": {
+                    "opacity": 1
+                  },
+                  "name": "Center",
+                  "r": 190,
+                  "stroke": {
+                    "dasharray": "none",
+                    "opacity": 1,
+                    "width": 2
+                  },
+                  "style": {
+                    "vector-effect": "non-scaling-stroke"
+                  },
+                  "type": "circle"
+                },
+                {
+                  "fill": {
+                    "opacity": 1,
+                    "paint": "var(--bodySymbolActiveText)"
+                  },
+                  "name": "Text",
+                  "stroke": {},
+                  "style": {
+                    "dominant-baseline": "middle",
+                    "fontSize": 200,
+                    "fontWeight": "bold",
+                    "text-anchor": "middle",
+                    "vector-effect": "non-scaling-stroke"
+                  },
+                  "type": "text",
+                  "x": 200,
+                  "y": 220
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "0 0 400 400"
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Quality"
+            },
+            "position": {
+              "height": 0.3,
+              "width": 0.3,
+              "x": 0.35,
+              "y": 0.05
+            },
+            "propConfig": {
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.TagPath} + \"/Id/Self\""
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Bad": true
+              },
+              "path": "Standard/Components/Symbols/Quality",
+              "style": {
+                "overflow": "hidden"
+              }
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "propConfig": {
+          "custom.bodyClasses": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.StateStyling} + \" \" + {view.custom.ModeStyling}"
+              },
+              "type": "expr"
+            }
+          },
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Description"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.ControlStyling} + \" \" +  {view.custom.alarmStyle.classes}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "mode": "percent",
+          "style": {}
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\ttagPath \u003d self.view.params.TagPath\n\tinstanceName \u003d self.view.custom.InstanceName\n\tdescription \u003d self.view.custom.Description\n\ttitle \u003d instanceName + \" - \" + description\n\tparamsObject \u003d {\"TagPath\":tagPath}\n\tfaceplatePath \u003d \"Standard/Control Modules/MotorReverse/Faceplates/Faceplate\"\n\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003dfaceplatePath)"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.style.classes": {
+        "persistent": true
+      }
+    },
+    "props": {
+      "direction": "column",
+      "justify": "center",
+      "style": {
+        "margin": 4
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

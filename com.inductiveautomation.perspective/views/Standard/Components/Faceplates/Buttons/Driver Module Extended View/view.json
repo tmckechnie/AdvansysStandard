@@ -1,0 +1,146 @@
+{
+  "custom": {
+    "DriverModuleTagPath": "[StandardS71500]Standard/Modules/Driver Modules/Simocode DM",
+    "DriverModuleViewPath": "Standard/Driver Modules/Siemens/SIMOCODE/Faceplates/Components/Diagnostics View",
+    "References": {}
+  },
+  "params": {
+    "Icon": "material/mediation",
+    "Label": "Algorithm",
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
+  },
+  "propConfig": {
+    "custom.DriverModuleTagPath": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/DriverModuleTagPath"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.DriverModuleViewPath": {
+      "binding": {
+        "config": {
+          "expression": "if({view.custom.DriverModuleTagPath}!\u003d\" \",tag({view.custom.DriverModuleTagPath} + \"/Metadata/StandardViewPath\"),\"Standard/Driver Modules/No Driver Module/No Driver Configured\")"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.References": {
+      "persistent": true
+    },
+    "custom.References.InstanceName": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "DriverModuleTagPath": "{view.custom.DriverModuleTagPath}"
+          },
+          "tagPath": "{DriverModuleTagPath}/Metadata/InstanceName"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.ShortDescription": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "DriverModuleTagPath": "{view.custom.DriverModuleTagPath}"
+          },
+          "tagPath": "{DriverModuleTagPath}/Metadata/ShortDescription"
+        },
+        "type": "tag"
+      }
+    },
+    "params.Icon": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\ttagPath \u003d self.view.custom.DriverModuleTagPath\n\tinstanceName \u003d self.view.custom.References.InstanceName\n\tdescription \u003d self.view.custom.References.ShortDescription\n\ttitle \u003d instanceName + \" - \" + description\n\tparamsObject \u003d {\"TagPath\":tagPath}\n\tdriverModuleViewPath \u003d self.view.custom.DriverModuleViewPath\n\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003ddriverModuleViewPath)\t"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Extended View Button"
+        },
+        "position": {
+          "basis": "30px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.image.icon.path": {
+            "binding": {
+              "config": {
+                "path": "view.params.Icon"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "image": {
+            "icon": {},
+            "position": "right"
+          },
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Button/Default Standard/Popups/Faceplates/Text"
+          },
+          "textStyle": {
+            "classes": "Standard/Popups/Faceplates/Text"
+          }
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

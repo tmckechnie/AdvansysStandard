@@ -1,0 +1,742 @@
+{
+  "custom": {
+    "AlarmSummary": {
+      "HighestActivePriority": 0,
+      "HighestActivePriorityName": null,
+      "HighestUnackedPriority": 0,
+      "HighestUnackedPriorityName": null,
+      "Overall": {
+        "ActiveAckCount": 0,
+        "ActiveUnackCount": 0,
+        "ClearUnackCount": 0,
+        "Detail": [],
+        "ShelvedCount": 0,
+        "Total": 0
+      },
+      "PriorityDetail": {
+        "Critical": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "High": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Low": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Medium": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        }
+      }
+    },
+    "Description": "Wash Plant Sequencer",
+    "InstanceName": "200SEQ001",
+    "ModeStyling": "Standard/Body/Symbols/BasicSVG Standard/Body/Symbols/ModeAuto",
+    "StateStyling": "Standard/Body/Symbols/Sequencer/SeqShutdown",
+    "StepDesc": "Stop Sand Filter Pumps",
+    "StepIndex": 9000,
+    "TagData": {
+      "Alarms": {
+        "Error": false,
+        "Source Tags": {
+          "ErrorCode": 0,
+          "WarningCode": 0
+        },
+        "Summary": {
+          "DisplayPath": "Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Alarms*",
+          "Information": {
+            "HighestActivePriority": 0,
+            "HighestActivePriorityName": null,
+            "HighestUnackedPriority": 0,
+            "HighestUnackedPriorityName": null,
+            "Overall": {
+              "ActiveAckCount": 0,
+              "ActiveUnackCount": 0,
+              "ClearUnackCount": 0,
+              "Detail": [],
+              "ShelvedCount": 0,
+              "Total": 0
+            },
+            "PriorityDetail": {
+              "Critical": {
+                "ActiveAckCount": 0,
+                "ActiveUnackCount": 0,
+                "ClearUnackCount": 0,
+                "Detail": [],
+                "ShelvedCount": 0,
+                "Total": 0
+              },
+              "High": {
+                "ActiveAckCount": 0,
+                "ActiveUnackCount": 0,
+                "ClearUnackCount": 0,
+                "Detail": [],
+                "ShelvedCount": 0,
+                "Total": 0
+              },
+              "Low": {
+                "ActiveAckCount": 0,
+                "ActiveUnackCount": 0,
+                "ClearUnackCount": 0,
+                "Detail": [],
+                "ShelvedCount": 0,
+                "Total": 0
+              },
+              "Medium": {
+                "ActiveAckCount": 0,
+                "ActiveUnackCount": 0,
+                "ClearUnackCount": 0,
+                "Detail": [],
+                "ShelvedCount": 0,
+                "Total": 0
+              }
+            }
+          },
+          "Update Trigger": null
+        },
+        "Warning": false
+      },
+      "Cfg": {
+        "Parameter 1": {
+          "Enabled": true,
+          "Value": false
+        },
+        "Parameter 2": {
+          "Enabled": true,
+          "Value": false
+        },
+        "Parameter 3": {
+          "Enabled": true,
+          "Value": 0
+        },
+        "Parameter 4": {
+          "Enabled": true,
+          "Value": 0
+        },
+        "Parameter 5": {
+          "Enabled": true,
+          "Value": 0
+        },
+        "Parameter 6": {
+          "Enabled": true,
+          "Value": 0
+        },
+        "Parameters": {
+          "Parameter 1": {
+            "Enabled": true,
+            "Value": false
+          },
+          "Parameter 2": {
+            "Enabled": true,
+            "Value": false
+          },
+          "Parameter 3": {
+            "Enabled": true,
+            "Value": 0
+          },
+          "Parameter 4": {
+            "Enabled": true,
+            "Value": 0
+          },
+          "Parameter 5": {
+            "Enabled": true,
+            "Value": 0
+          },
+          "Parameter 6": {
+            "Enabled": true,
+            "Value": 0
+          }
+        }
+      },
+      "Cmd": {
+        "AlarmAcknowledge": false,
+        "Cmd": {
+          "AlarmAcknowledge": false,
+          "Complete": false,
+          "HMIEnum": 0,
+          "Mode": 2,
+          "NextStepTrigger": false,
+          "OperationActive": true,
+          "Pause": false,
+          "PauseContinue": false,
+          "Prepare": false,
+          "Resume": false,
+          "Shutdown": false,
+          "Start": false
+        },
+        "Complete": false,
+        "HMIEnum": 0,
+        "Mode": 2,
+        "NextStepTrigger": false,
+        "OperationActive": true,
+        "Pause": false,
+        "PauseContinue": false,
+        "Prepare": false,
+        "Resume": false,
+        "Shutdown": false,
+        "Start": false
+      },
+      "Id": {
+        "Owner": "",
+        "Selected": false,
+        "Self": "\"DB200SEQ001\""
+      },
+      "Index": {
+        "Current": 9000,
+        "CurrentDuration": 1572.4753,
+        "CurrentStepDesc": "Stop Sand Filter Pumps",
+        "CurrentTimeOut": 0,
+        "Next": 9000,
+        "Pause": 7000,
+        "Resume": 7000,
+        "Timer": 0,
+        "TimerEnable": false
+      },
+      "Interlock": {
+        "Interlock": {
+          "Permissive": {
+            "FirstUpReason": "",
+            "FirstUpReasonCode": 0,
+            "Reason": "\"DB200SEQ001IL01\"",
+            "ReasonCode": 0,
+            "State": true
+          }
+        },
+        "Interlocked": false,
+        "Permissive": {
+          "FirstUpReason": "",
+          "FirstUpReasonCode": 0,
+          "Reason": "\"DB200SEQ001IL01\"",
+          "ReasonCode": 0,
+          "State": true
+        }
+      },
+      "Metadata": {
+        "Description": "Wash Plant Sequence",
+        "InstanceName": "200SEQ001",
+        "InstancePath": "Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001",
+        "ModelPath": "Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001",
+        "PathToParentFolder": "Standard/Examples/Material Handling/Wash Plant/Feed",
+        "StandardViewPath": "Standard/Implementation Modules/Sequencer"
+      },
+      "Prompt": {
+        "DispValue": 0,
+        "Id": 0,
+        "PromptList": {
+          "0": "None"
+        },
+        "Response": 0,
+        "Type": 0
+      },
+      "Sts": {
+        "Completed": false,
+        "Completing": false,
+        "Enum": 200,
+        "Paused": false,
+        "Pausing": false,
+        "Preparing": false,
+        "Ready": false,
+        "Resuming": false,
+        "Running": false,
+        "ShutDown": false,
+        "ShuttingDown": true,
+        "Starting": false,
+        "Sts": {
+          "Completed": false,
+          "CompletedObtained": false,
+          "Completing": false,
+          "CompletingEnd": false,
+          "Enum": 200,
+          "ModeAuto": true,
+          "ModeSemiAuto": false,
+          "Paused": false,
+          "PausedObtained": false,
+          "Pausing": false,
+          "PausingContinue": false,
+          "PausingEnd": false,
+          "Preparing": false,
+          "PreparingEnd": false,
+          "ProcessDisabled": false,
+          "Ready": false,
+          "ResumeObtained": false,
+          "Resuming": false,
+          "ResumingEnd": false,
+          "Running": false,
+          "ShutDown": false,
+          "ShutDownObtained": false,
+          "ShuttingDown": true,
+          "ShuttingDownEnd": false,
+          "Starting": false,
+          "StartingEnd": false
+        }
+      }
+    },
+    "label": "Wash Plant Sequencer"
+  },
+  "params": {
+    "LabelOverwrite": "",
+    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001"
+  },
+  "propConfig": {
+    "custom.AlarmSummary": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Summary/Information"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Description": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}.Documentation"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.InstanceName": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/InstanceName"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ModeStyling": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cmd/Mode"
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols\"\n\tstyle \u003d baseStyle + \"/BasicSVG\"\t\t\t\n\tmode \u003d value\n\tif mode \u003d\u003d 1:#Manual\n\t\tstyle +\u003d \" \" + baseStyle + \"/ModeManual\"\n\telif mode \u003d\u003d 2:#Auto\n\t\tstyle +\u003d \" \" + baseStyle + \"/ModeAuto\"\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.StateStyling": {
+      "binding": {
+        "config": {
+          "struct": {
+            "completed": "tag({view.params.TagPath}+\"/Sts/Completed\")",
+            "completing": "tag({view.params.TagPath}+\"/Sts/Completing\")",
+            "paused": "tag({view.params.TagPath}+\"/Sts/Paused\")",
+            "pausing": "tag({view.params.TagPath}+\"/Sts/Pausing\")",
+            "resuming": "tag({view.params.TagPath}+\"/Sts/Resuming\")",
+            "running": "tag({view.params.TagPath}+\"/Sts/Running\")",
+            "shutdown": "tag({view.params.TagPath}+\"/Sts/ShutDown\")",
+            "shuttingdown": "tag({view.params.TagPath}+\"/Sts/ShuttingDown\")",
+            "starting": "tag({view.params.TagPath}+\"/Sts/Starting\")"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbaseStyle \u003d \"Standard/Body/Symbols\"\n\tstyle \u003d \"\"#baseStyle + \"/Basic\"\n\t#Fill Styles -- Running, Not Running\n\tif value[\"starting\"] or value[\"running\"] or value[\"resuming\"]:\n\t\tstyle \u003d baseStyle + \"/Fill/Active\"\t\n\t\t\n\telif value[\"paused\"] or value[\"pausing\"]:\n\t\t\tstyle \u003d baseStyle + \"/Sequencer/SeqPaused\"\n\t\t\t\n\telif value[\"shutdown\"] or value[\"shuttingdown\"]:\n\t\t\tstyle \u003d baseStyle + \"/Sequencer/SeqShutdown\"\n\t\t\t\n\telif value[\"completed\"]or value[\"completing\"]:\n\t\tstyle \u003d baseStyle + \"/Sequencer/SeqCompleted\"\n\t\t\t\n\telse:\n\t\tstyle \u003d baseStyle + \"/Fill/Passive\"\t\n\t\t\n\treturn style",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.StepDesc": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Index/CurrentStepDesc"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.StepIndex": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Index/Current"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.TagData": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.alarmStyle": {
+      "binding": {
+        "config": {
+          "path": "view.custom.AlarmSummary"
+        },
+        "transforms": [
+          {
+            "code": "\treturn Standard.Modules.Alarms.GetAlarmStyle(AlarmSummary\u003dvalue)\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.alarmborderstyling": {
+      "binding": {
+        "config": {
+          "struct": {
+            "alarmStyleClasses": "{view.custom.alarmStyle.classes}",
+            "inAlarm": "{view.custom.AlarmSummary.Overall.Total}\u003e0"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\t\n\tbaseStyle \u003d \"Standard/Body/Symbols\"\n\tstyleClasses \u003d baseStyle+\"/ValueDisplay\"\n\n\t#Alarm\n\tif value[\"inAlarm\"]:\n\t\tstyleClasses +\u003d \" \"+value[\"alarmStyleClasses\"]\n\t\n\treturn styleClasses",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.label": {
+      "binding": {
+        "config": {
+          "expression": "if({view.params.LabelOverwrite}\u003d\"\",{view.custom.Description},{view.params.LabelOverwrite})"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.LabelOverwrite": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 92,
+      "width": 234
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application/Implementation Modules/Sequence"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "SEQDesc"
+                    },
+                    "position": {
+                      "basis": "18px"
+                    },
+                    "propConfig": {
+                      "props.style.classes": {
+                        "persistent": true
+                      },
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.label"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "margin": 2,
+                        "marginRight": 0,
+                        "textAlign": "center"
+                      },
+                      "textStyle": {
+                        "classes": "Standard/Body/Symbols/Text"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "SEQStep"
+                    },
+                    "position": {
+                      "basis": "18px"
+                    },
+                    "propConfig": {
+                      "props.style.classes": {
+                        "persistent": true
+                      },
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.StepIndex"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "borderBottomColor": "#AAAAAA",
+                        "borderBottomStyle": "solid",
+                        "borderBottomWidth": 1,
+                        "margin": 2,
+                        "marginRight": 0,
+                        "outlineStyle": "none",
+                        "textAlign": "center"
+                      },
+                      "textStyle": {
+                        "classes": "Standard/Body/Symbols/Text"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "SEQStepDesc"
+                    },
+                    "position": {
+                      "basis": "20px",
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.style.classes": {
+                        "persistent": true
+                      },
+                      "props.text": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.StepDesc"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "style": {
+                        "margin": 2,
+                        "marginRight": 0,
+                        "textAlign": "center"
+                      },
+                      "textStyle": {
+                        "classes": "Standard/Body/Symbols/Text"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "SeqState"
+                },
+                "position": {
+                  "basis": "60px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.style.classes": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.StateStyling"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {}
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "SeqMode"
+            },
+            "position": {
+              "basis": "90px"
+            },
+            "propConfig": {
+              "props.style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.ModeStyling"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "margin": 2,
+                "overflow": "hidden"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\ttagPath \u003d self.view.params.TagPath\n\tinstanceName \u003d self.view.custom.InstanceName\n\tdescription \u003d self.view.custom.Description\n\ttitle \u003d instanceName + \" - \" + description\n\tparamsObject \u003d {\"TagPath\":tagPath}\n\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003d\"Standard/Implementation Modules/Sequencer/Faceplates/Faceplate\")\n"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "AlarmFlex"
+        },
+        "position": {
+          "basis": "175px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.custom.alarmborderstyling"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "backgroundColor": "",
+            "classes": "Standard/Body/Symbols/ValueDisplay",
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\ttagPath \u003d self.view.params.TagPath\n\tinstanceName \u003d self.view.custom.InstanceName\n\tdescription \u003d self.view.custom.Description\n\ttitle \u003d instanceName + \" - \" + description\n\tparamsObject \u003d {\"TagPath\":tagPath}\n\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003d\"Standard/Implementation Modules/Sequencer/Faceplates/Components/Prompt\")"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "PromptAnnunciator"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.TagData.Prompt.Id} \u003e 0"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Implementation Modules/Sequencer/Symbols/PromptAnnunciator",
+          "style": {
+            "classes": "Standard/Body/Symbols/ModeAuto",
+            "margin": 2
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.style.classes": {
+        "persistent": true
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

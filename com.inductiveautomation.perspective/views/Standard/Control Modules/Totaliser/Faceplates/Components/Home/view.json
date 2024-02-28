@@ -1,0 +1,1121 @@
+{
+  "custom": {
+    "Alarms": {
+      "High": {},
+      "Low": {},
+      "NoChange": {}
+    },
+    "EngUnit": "L",
+    "FormatString": "#,##0.##",
+    "Target": 0,
+    "Value": 0,
+    "ValueFormatString": "#,##0.##",
+    "ValueTrendMax": 0,
+    "ValueTrendMin": 0,
+    "valueLabel": "0 L"
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Totaliser01"
+  },
+  "propConfig": {
+    "custom.Alarms": {
+      "persistent": true
+    },
+    "custom.Alarms.High.Enable": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/High/Cfg/Enable"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.High.Priority": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/High/Sts/Priority"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.High.Setpoint": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/High/Cfg/ConditionSetpoint"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.Low.Enable": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Low/Cfg/Enable"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.Low.Priority": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Low/Sts/Priority"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.Low.Setpoint": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Low/Cfg/ConditionSetpoint"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.NoChange.Enable": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/NoChange/Cfg/Enable"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.NoChange.Priority": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/NoChange/Sts/Priority"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Alarms.NoChange.Setpoint": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/NoChange/Cfg/ConditionSetpoint"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.EngUnit": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value.EngUnit"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.FormatString": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sim/Delay.FormatString"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Target": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/Target"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Value": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ValueFormatString": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value.FormatString"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ValueTrendMax": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/ValueTrendMax"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ValueTrendMin": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/ValueTrendMin"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.valueLabel": {
+      "binding": {
+        "config": {
+          "expression": "numberFormat({view.custom.Value},{view.custom.ValueFormatString})+\" \"+{view.custom.EngUnit}"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 540,
+      "width": 380
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "params": {
+                "Title": "Status"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "TimeSeriesChart"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.plots[0].axes[0].max": {
+                        "binding": {
+                          "config": {
+                            "path": "parent.custom.trendMax"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].axes[0].min": {
+                        "binding": {
+                          "config": {
+                            "path": "parent.custom.trendMin"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[0].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Target"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[1].line.color": {
+                        "binding": {
+                          "config": {
+                            "expression": "\"var(--Alarm\"+{view.custom.Alarms.High.Priority}+\")\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.plots[0].markers[1].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Alarms.High.Setpoint"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[1].visible": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Alarms.High.Enable"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[2].value": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Alarms.Low.Setpoint"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.plots[0].markers[2].visible": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.Alarms.Low.Enable"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.series": {
+                        "binding": {
+                          "config": {
+                            "path": "parent.custom.History.data"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.series[0].data": {
+                        "binding": {
+                          "config": {
+                            "path": "parent.custom.Data.data"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.title.text": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.valueLabel"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "plots": [
+                        {
+                          "axes": [
+                            {
+                              "alignment": "left",
+                              "label": {
+                                "font": {
+                                  "color": "",
+                                  "size": 10
+                                },
+                                "offset": 0,
+                                "style": {
+                                  "classes": ""
+                                },
+                                "text": "",
+                                "visible": true
+                              },
+                              "name": "Value",
+                              "style": {
+                                "classes": ""
+                              },
+                              "tick": {
+                                "color": "",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "style": {
+                                    "classes": ""
+                                  }
+                                },
+                                "style": {
+                                  "classes": ""
+                                }
+                              },
+                              "width": 60
+                            }
+                          ],
+                          "markers": [
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "var(--controlTarget)",
+                                "dashArray": 4,
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Target"
+                                },
+                                "opacity": 0.5,
+                                "style": {
+                                  "classes": ""
+                                },
+                                "width": 1
+                              },
+                              "type": "line",
+                              "visible": true
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "dashArray": 4,
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Alarm High"
+                                },
+                                "opacity": 0.5,
+                                "style": {
+                                  "classes": ""
+                                },
+                                "width": 1
+                              },
+                              "type": "line"
+                            },
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "var(--AlarmLow)",
+                                "dashArray": 4,
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": "Alarm Low"
+                                },
+                                "opacity": 0.5,
+                                "style": {
+                                  "classes": ""
+                                },
+                                "width": 1
+                              },
+                              "type": "line"
+                            }
+                          ],
+                          "relativeWeight": 1,
+                          "trends": [
+                            {
+                              "axis": "Value",
+                              "baselines": [],
+                              "breakLine": true,
+                              "columns": [],
+                              "interpolation": "curveStepAfter",
+                              "radius": 2,
+                              "series": "Value",
+                              "stack": true,
+                              "type": "line",
+                              "visible": true
+                            }
+                          ]
+                        }
+                      ],
+                      "timeRange": {
+                        "dateFormat": "YYYY-MM-DD",
+                        "timeFormat": "HH:mm:ss",
+                        "visible": false
+                      },
+                      "title": {
+                        "font": {
+                          "size": 15
+                        },
+                        "height": 20,
+                        "visible": true
+                      }
+                    },
+                    "type": "ia.chart.timeseries"
+                  },
+                  {
+                    "meta": {
+                      "name": "TrendDurationSelector"
+                    },
+                    "position": {
+                      "basis": "25px"
+                    },
+                    "propConfig": {
+                      "props.params.Run": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "path": "parent.custom.History.run"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "DetailTrendPopup": {
+                          "Identity": "",
+                          "TagPath": "",
+                          "Title": "",
+                          "ViewPath": ""
+                        }
+                      },
+                      "path": "Standard/Components/Faceplates/TrendController"
+                    },
+                    "type": "ia.display.view"
+                  }
+                ],
+                "custom": {
+                  "History": {
+                    "firstTimestamp": {
+                      "$": [
+                        "ts",
+                        192,
+                        1689243968693
+                      ],
+                      "$ts": 1689243369068
+                    },
+                    "run": true
+                  }
+                },
+                "meta": {
+                  "name": "Trend"
+                },
+                "position": {
+                  "basis": "200px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "custom.History.config": {
+                    "binding": {
+                      "config": {
+                        "struct": {
+                          "currentValue": "{view.custom.Value}*{this.custom.History.run}",
+                          "gatewayType": "{session.custom.SystemInfo.GatewayType}",
+                          "historyPath": "tag({view.params.TagPath}+\"/Sts/Value.History Path\")\r\n"
+                        },
+                        "waitOnAll": true
+                      },
+                      "transforms": [
+                        {
+                          "code": "\thistoryPath \u003d value[\u0027historyPath\u0027]\n\tgatewayType \u003d value[\u0027gatewayType\u0027]\n\tcurrentValue \u003d value[\u0027currentValue\u0027]\n\tpath \u003d historyPath\n\tif gatewayType \u003d\u003d \"Edge\":\n\t\tpath \u003d self.params.TagPath + \"/Sts/Value\"\n\tseries \u003d {\"seriesName\": \"Value\",\"tags\": [{\"alias\":\"Value\", \"currentValue\": currentValue,\"path\": path,\"isBool\":False}]}\n\treturn [series]\n",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr-struct"
+                    }
+                  },
+                  "custom.History.data": {
+                    "binding": {
+                      "config": {
+                        "struct": {
+                          "config": "{this.custom.History.config}",
+                          "duration": "{this.custom.History.duration}",
+                          "periodEnd": "now(1000*{this.custom.History.run})"
+                        },
+                        "waitOnAll": true
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tconfig \u003d value[\u0027config\u0027] \n\tduration \u003d value[\u0027duration\u0027] \n\tperiodEnd \u003d value[\u0027periodEnd\u0027]\n\tdata \u003d Standard.Tags.Common.GetTrendData(HistoryConfig\u003dconfig,PeriodEnd\u003dperiodEnd,HistoryDuration\u003dduration) \n\treturn data\n\t\n\t\n",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr-struct"
+                    }
+                  },
+                  "custom.History.duration": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "path": "session.custom.DefaultPopupHistoryDuration"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "custom.History.firstTimestamp": {
+                    "binding": {
+                      "config": {
+                        "path": "this.custom.History.data[0].data[0].time"
+                      },
+                      "enabled": false,
+                      "transforms": [
+                        {
+                          "expression": "fromMillis({value})",
+                          "type": "expression"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  },
+                  "custom.trendMax": {
+                    "binding": {
+                      "config": {
+                        "path": "parent.custom.EngineeringMax"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "custom.trendMin": {
+                    "binding": {
+                      "config": {
+                        "path": "parent.custom.EngineeringMin"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "direction": "column"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Label",
+                      "visible": false
+                    },
+                    "position": {
+                      "basis": "43px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "style": {
+                        "classes": "Standard/Popups/ValueDisplay",
+                        "fontWeight": "bold"
+                      },
+                      "textStyle": {
+                        "classes": "Standard/Popups/ValueDisplay",
+                        "textAlign": "center"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "Bar"
+                    },
+                    "position": {
+                      "basis": "318px",
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.params.TagPath": {
+                        "binding": {
+                          "config": {
+                            "path": "view.params.TagPath"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Cfg": {
+                          "ShowAlarmOutLine": false,
+                          "ValueWedgeExtent": 0.5
+                        }
+                      },
+                      "path": "Standard/Control Modules/Totaliser/Symbols/Bar"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "Label_0",
+                      "visible": false
+                    },
+                    "position": {
+                      "basis": "87px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "textStyle": {
+                        "textAlign": "center"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "ValueIndicator"
+                },
+                "position": {
+                  "basis": "40px"
+                },
+                "props": {
+                  "direction": "column"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "ValueRow"
+            },
+            "position": {
+              "basis": "500px",
+              "grow": 1
+            },
+            "propConfig": {
+              "custom.EngineeringMax": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.ValueTrendMax"
+                  },
+                  "type": "property"
+                }
+              },
+              "custom.EngineeringMin": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.ValueTrendMin"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Content"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Status"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "25px"
+            },
+            "props": {
+              "params": {
+                "Expanded": false,
+                "Title": "Operation"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "CmdSelectRow"
+            },
+            "position": {
+              "basis": "40px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.params.TagPath": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.TagPath} + \"/Cmd/Reset\""
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "ButtonLabel": "Reset",
+                "Enabled": true,
+                "Label": "Reset",
+                "Prompt": {
+                  "TagPath": "",
+                  "parameters": {},
+                  "popupIdentifier": "",
+                  "viewPath": ""
+                },
+                "SetValue": true,
+                "ShowLabel": true
+              },
+              "path": "Standard/Components/Faceplates/Input/Command Set Button",
+              "style": {
+                "margin": 5
+              }
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Operation"
+        },
+        "position": {
+          "basis": "100px",
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "HeaderSimulation"
+        },
+        "position": {
+          "basis": "25px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "ExpandedIconPath": "material/keyboard_arrow_down",
+              "RetractedIconPath": "material/keyboard_arrow_up",
+              "ShowIcon": true
+            },
+            "Expanded": false,
+            "Title": "Simulation"
+          },
+          "path": "Standard/Components/Faceplates/Header"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Mode"
+            },
+            "position": {
+              "basis": "25px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Sim/Mode"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Enable": true,
+                "Label": "Mode",
+                "ShowLabel": true,
+                "options": [
+                  {
+                    "label": "Off",
+                    "value": 0
+                  },
+                  {
+                    "label": "On",
+                    "value": 1
+                  },
+                  {
+                    "label": "On For Time",
+                    "value": 2
+                  }
+                ]
+              },
+              "path": "Standard/Components/Faceplates/Input/LabelDropdown",
+              "style": {
+                "margin": 2
+              }
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Value"
+            },
+            "position": {
+              "basis": "25px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "custom.ElapsedTime": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Sim/ElapsedTime"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.Format": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.FormatString"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.params.Label": {
+                "binding": {
+                  "config": {
+                    "expression": "{this.meta.name}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Units": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Sim/Value.EngUnit"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Sim/Value"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Enable": true,
+                "ShowLabel": true
+              },
+              "path": "Standard/Components/Faceplates/Input/LabelNumericEntryField"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Duration"
+            },
+            "position": {
+              "basis": "25px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "custom.ElapsedTime": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Sim/ElapsedTime"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.Format": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.FormatString"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.params.Label": {
+                "binding": {
+                  "config": {
+                    "expression": "if({this.props.params.Value}\u003d{this.custom.ElapsedTime},\"Duration\",\"Duration [\" + {this.custom.ElapsedTime} + \" Remaining]\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Units": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Sim/Delay.EngUnit"
+                  },
+                  "type": "tag"
+                }
+              },
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Sim/Delay"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Enable": true,
+                "ShowLabel": true
+              },
+              "path": "Standard/Components/Faceplates/Input/LabelNumericEntryField"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Simulation"
+        },
+        "position": {
+          "basis": "90px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "../HeaderSimulation.props.params.Expanded"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "custom": {
+      "UpdateRateSeconds": 5
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

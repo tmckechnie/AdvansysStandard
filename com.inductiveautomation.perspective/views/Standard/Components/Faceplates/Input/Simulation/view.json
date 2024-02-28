@@ -1,0 +1,59 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[StandardS71500]Modules/Control Modules/100M100"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 435
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Command Toggle Switch"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Sim/Simulation"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Simulation",
+            "ShowLabel": true
+          },
+          "path": "Standard/Components/Faceplates/Input/Command Toggle Switch"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

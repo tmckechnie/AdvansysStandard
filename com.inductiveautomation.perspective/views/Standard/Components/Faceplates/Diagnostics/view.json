@@ -1,0 +1,73 @@
+{
+  "custom": {},
+  "params": {
+    "PathToFolder": "Standard/Control Modules/AnalogInput",
+    "TagPath": "[StandardS71500]Modules/Control Modules/100AI100"
+  },
+  "propConfig": {
+    "params.PathToFolder": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 520,
+      "width": 435
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Accordion"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.items": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "pathToFolder": "{view.params.PathToFolder}",
+                  "tagPath": "{view.params.TagPath}"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\t\n\tdata \u003d []\n\t#Create Accordion Sections based on In/Out/Sts tags available\n\t\n\tPathToFolder \u003d value[\"pathToFolder\"]\n\tpathToDiagnostics \u003d PathToFolder+ \"/Faceplates/Components/Diagnostics\" \n\n\tviewPathObject \u003d {\n\t\t\t\t\t\t\"Sts\":{\"viewPath\":pathToDiagnostics + \"/Status\",\"viewHeader\":\"Status\"},\n\t\t\t\t\t\t\"Out\":{\"viewPath\":pathToDiagnostics + \"/Out\",\"viewHeader\":\"Command\"},\n\t\t\t\t\t\t\"In\":{\"viewPath\":pathToDiagnostics + \"/In\"\t,\"viewHeader\":\"Feedback\"}\n\t\t\t\t\t\t}\n\t\n\ttagPath \u003d value[\"tagPath\"]\n\t#Check which tags Exist\n\tstatusExists \u003d system.tag.exists(tagPath + \"/Sts\")\n\toutExists \u003d    system.tag.exists(tagPath + \"/Out\")\n\tinExists \u003d     system.tag.exists(tagPath + \"/In\")\n\texistsObject \u003d {\"Sts\":statusExists,\"Out\":outExists,\"In\":inExists}\n\texistsArray \u003d [statusExists,outExists,inExists]\n\texistsArrayKeys \u003d [\"Sts\",\"Out\",\"In\"]\n\tfor i in range(len(existsArray)):\n\t\n\t\ttype \u003d existsArrayKeys[i]\n\t\tif existsObject[type]:\n\t\t\tinstanceObject \u003d {\n\t\t\t\t\t\t\t  \"expanded\": False,\n\t\t\t\t\t\t\t  \"header\": {\n\t\t\t\t\t\t\t\t\"toggle\": {\n\t\t\t\t\t\t\t\t  \"enabled\": True,\n\t\t\t\t\t\t\t\t  \"expandedIcon\": {\n\t\t\t\t\t\t\t\t\t\"path\": \"material/expand_less\",\n\t\t\t\t\t\t\t\t\t\"color\": \"\",\n\t\t\t\t\t\t\t\t\t\"style\": {\n\t\t\t\t\t\t\t\t\t  \"classes\": \"\"\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t  },\n\t\t\t\t\t\t\t\t  \"collapsedIcon\": {\n\t\t\t\t\t\t\t\t\t\"path\": \"material/expand_more\",\n\t\t\t\t\t\t\t\t\t\"color\": \"\",\n\t\t\t\t\t\t\t\t\t\"style\": {\n\t\t\t\t\t\t\t\t\t  \"classes\": \"\"\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t  }\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\"content\": {\n\t\t\t\t\t\t\t\t  \"type\": \"view\",\n\t\t\t\t\t\t\t\t  \"text\": \"Status\",\n\t\t\t\t\t\t\t\t  \"useDefaultViewWidth\": False,\n\t\t\t\t\t\t\t\t  \"useDefaultViewHeight\": False,\n\t\t\t\t\t\t\t\t  \"viewPath\": \"Standard/Components/Faceplates/Header\",\n\t\t\t\t\t\t\t\t  \"viewParams\": {\n\t\t\t\t\t\t\t\t\t\"Title\": viewPathObject[type][\"viewHeader\"]\n\t\t\t\t\t\t\t\t  },\n\t\t\t\t\t\t\t\t  \"style\": {\n\t\t\t\t\t\t\t\t\t\"classes\": \"\"\n\t\t\t\t\t\t\t\t  }\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\"height\": \"30px\",\n\t\t\t\t\t\t\t\t\"reverse\": False,\n\t\t\t\t\t\t\t\t\"style\": {\n\t\t\t\t\t\t\t\t  \"classes\": \"Standard/Popups/Faceplates/HeaderBackground Standard/Popups/Faceplates/HeaderText\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t  },\n\t\t\t\t\t\t\t  \"body\": {\n\t\t\t\t\t\t\t\t\"viewPath\": viewPathObject[type][\"viewPath\"],\n\t\t\t\t\t\t\t\t\"viewParams\": {\n\t\t\t\t\t\t\t\t  \"TagPath\": tagPath\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\"useDefaultViewWidth\": False,\n\t\t\t\t\t\t\t\t\"useDefaultViewHeight\":False,\n\t\t\t\t\t\t\t\t\"height\": \"auto\",\n\t\t\t\t\t\t\t\t\"style\": {\n\t\t\t\t\t\t\t\t  \"classes\": \"\",\n\t\t\t\t\t\t\t\t  \"margin\": \"0px\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t  }\n\t\t\t\t\t\t\t}\t\n\t\t\tdata.append(instanceObject)\t\t\t\n\t\n\treturn data",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          }
+        },
+        "props": {
+          "expansionMode": "single",
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Content"
+          },
+          "unusedSpaceStyle": {
+            "classes": "Standard/Popups/Faceplates/Content"
+          }
+        },
+        "type": "ia.display.accordion"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

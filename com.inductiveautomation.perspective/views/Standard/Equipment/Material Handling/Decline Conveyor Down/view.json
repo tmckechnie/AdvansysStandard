@@ -1,0 +1,516 @@
+{
+  "custom": {},
+  "params": {
+    "Name": {
+      "Bottom": "Bottom Name",
+      "Top": "Top Name"
+    },
+    "height": 130,
+    "width": 260
+  },
+  "propConfig": {
+    "params.Name": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.height": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.width": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 130,
+      "width": 260
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Combined_FinishMilling_AirSlide_G_Manual"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "propConfig": {
+              "custom.GradientMiddleLine1": {
+                "binding": {
+                  "config": {
+                    "expression": "{this.props.elements[0].elements[0].elements[2]}"
+                  },
+                  "overlayOptOut": true,
+                  "transforms": [
+                    {
+                      "code": "\t#Conveyor Line\n\ty2 \u003d float(self.props.elements[0].elements[0].elements[2].y2)\n\ty1 \u003d float(self.props.elements[0].elements[0].elements[2].y1)\n\tx2 \u003d float(self.props.elements[0].elements[0].elements[2].x2)\n\tx1 \u003d float(self.props.elements[0].elements[0].elements[2].x1)\n\tgradient \u003d (y2-y1)/(x2-x1)\n\t\n\treturn gradient",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              },
+              "props.elements[0].elements[0].elements[0].points": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.height} + {view.params.width}"
+                  },
+                  "overlayOptOut": true,
+                  "transforms": [
+                    {
+                      "code": "\twidth \u003d self.view.params.width\n\theight \u003d self.view.params.height\n\t#\"40.00006,20.00025 224.00006,52.00024493333299 224.00006,68.00023999999999 40.00006,36.000245066667\"\n\tpoint1 \u003d \"40.00006,20.00025 \"\n\tpoint2 \u003d \" %s,%s \"%(width - 46,height-78)\n\tpoint3 \u003d \" %s,%s \"%(width - 46,height - 62)\n\tpoint4 \u003d \" 40.00006,36.000245066667\"\n\t#return height - 52.00024493333299\n\treturn point1 + point2 + point3 + point4 ",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              },
+              "props.elements[0].elements[0].elements[1].x2": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.width"
+                  },
+                  "overlayOptOut": true,
+                  "transforms": [
+                    {
+                      "code": "\treturn value - 46",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[0].elements[1].y2": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.height"
+                  },
+                  "overlayOptOut": true,
+                  "transforms": [
+                    {
+                      "code": "\treturn value - 62",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[0].elements[2].x2": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.width"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn value - 46",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.elements[0].elements[0].elements[2].y2": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.height"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\treturn value - 78",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.elements[1].elements[0].elements[0].points": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.height} + {view.params.width} + {this.custom.GradientMiddleLine1}"
+                  },
+                  "overlayOptOut": true,
+                  "transforms": [
+                    {
+                      "code": "\twidth \u003d self.view.params.width\n\theight \u003d self.view.params.height\n\tline1gradient \u003d self.custom.GradientMiddleLine1\n\t#-792.3503000000001,-16.5004875 -768.3503000000001,-12.500487271428998 -752.3503000000001,-12.500487271428998 -752.3503000000001,11.4995225 -768.3503000000001,11.4995225 -768.3503000000001,3.4995192428569997 -792.3503000000001,-0.5004809857140007\n\t#218.85000000000002,67.000092228572        1\n\t#242.85000000000002,71.00009388571401      2\n\t#242.85000000000002,79.0001                3 \n\t#258.85,79.0001                            4\n\t#258.85,55.000081657142005                 5\n\t#242.85000000000002,55.000081657142005     6\n\t#218.85000000000002,51.00008               7\n\tL1 \u003d 242.85000000000002 - 218.85000000000002\n\tH2 \u003d 71.00009388571401 - 67.000092228572  \n\th1 \u003d 79.0001 - 71.00009388571401 \n\tw1 \u003d 258.85 - 242.85000000000002\n\th2 \u003d 79.0001  - 55.000081657142005 \n\tw2 \u003d 258.85 - 242.85000000000002\n\t#Point 1 Based on Gradient Required\n\tx1 \u003d float(self.props.elements[0].elements[0].elements[2].x1)\n\ty1 \u003d float(self.props.elements[0].elements[0].elements[2].y1)\n\t\n\tpoint1 \u003d \"%s,%s \"%(x1,y1)#(width - 51.15,height- 63)\"-791.3503000000001,-0.5004809857140007 \"#\n\t#Point 2\n\tpoint2x \u003d x1-L1\n\tpoint2y \u003d y1-H2\n\tpoint2 \u003d \"%s,%s \"%(point2x,point2y)\n\t#Point 3\n\tpoint3x \u003d point2x\n\tpoint3y \u003d point2y - h1\n\tpoint3 \u003d \"%s,%s \"%(point3x,point3y)\n\t#Point 4\n\tpoint4x \u003d point3x - w1\n\tpoint4y \u003d point3y\n\tpoint4 \u003d \"%s,%s \"%(point4x,point4y)\n\t#Point 5\n\tpoint5x \u003d point4x\n\tpoint5y \u003d point4y + h2\n\tpoint5 \u003d \"%s,%s \"%(point5x,point5y)\t\n\t#Point 6\n\tpoint6x \u003d point5x + w2\n\tpoint6y \u003d point5y\n\tpoint6 \u003d \"%s,%s \"%(point6x,point6y)\t\t\n\t#Point 7\n\tx1 \u003d float(self.props.elements[0].elements[0].elements[1].x1)\n\ty1 \u003d float(self.props.elements[0].elements[0].elements[1].y1)\n\tpoint7 \u003d \" %s,%s\"%(x1,y1)#(x2,y2)\" -791.3503000000001,-16.5004875\"#\n\treturn point1 + point2 +point3 + point4 + point5 + point6 + point7",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              },
+              "props.elements[1].elements[0].elements[1].points": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.height} + {view.params.width} + {this.custom.GradientMiddleLine1}"
+                  },
+                  "overlayOptOut": true,
+                  "transforms": [
+                    {
+                      "code": "\twidth \u003d self.view.params.width\n\theight \u003d self.view.params.height\n\tline1gradient \u003d self.custom.GradientMiddleLine1\n\t#-792.3503000000001,-16.5004875 -768.3503000000001,-12.500487271428998 -752.3503000000001,-12.500487271428998 -752.3503000000001,11.4995225 -768.3503000000001,11.4995225 -768.3503000000001,3.4995192428569997 -792.3503000000001,-0.5004809857140007\n\t#218.85000000000002,67.000092228572        1\n\t#242.85000000000002,71.00009388571401      2\n\t#242.85000000000002,79.0001                3 \n\t#258.85,79.0001                            4\n\t#258.85,55.000081657142005                 5\n\t#242.85000000000002,55.000081657142005     6\n\t#218.85000000000002,51.00008               7\n\tL1 \u003d 242.85000000000002 - 218.85000000000002\n\tH2 \u003d 71.00009388571401 - 67.000092228572  \n\th1 \u003d 79.0001 - 71.00009388571401 \n\tw1 \u003d 258.85 - 242.85000000000002\n\th2 \u003d 79.0001  - 55.000081657142005 \n\tw2 \u003d 258.85 - 242.85000000000002\n\t#Point 1 Based on Gradient Required\n\tx1 \u003d float(self.props.elements[0].elements[0].elements[2].x1)\n\ty1 \u003d float(self.props.elements[0].elements[0].elements[2].y1)\n\t\n\tpoint1 \u003d \"%s,%s \"%(x1,y1)#(width - 51.15,height- 63)\"-791.3503000000001,-0.5004809857140007 \"#\n\t#Point 2\n\tpoint2x \u003d x1-L1\n\tpoint2y \u003d y1-H2\n\tpoint2 \u003d \"%s,%s \"%(point2x,point2y)\n\t#Point 3\n\tpoint3x \u003d point2x\n\tpoint3y \u003d point2y - h1\n\tpoint3 \u003d \"%s,%s \"%(point3x,point3y)\n\t#Point 4\n\tpoint4x \u003d point3x - w1\n\tpoint4y \u003d point3y\n\tpoint4 \u003d \"%s,%s \"%(point4x,point4y)\n\t#Point 5\n\tpoint5x \u003d point4x\n\tpoint5y \u003d point4y + h2\n\tpoint5 \u003d \"%s,%s \"%(point5x,point5y)\t\n\t#Point 6\n\tpoint6x \u003d point5x + w2\n\tpoint6y \u003d point5y\n\tpoint6 \u003d \"%s,%s \"%(point6x,point6y)\t\t\n\t#Point 7\n\tx1 \u003d float(self.props.elements[0].elements[0].elements[1].x1)\n\ty1 \u003d float(self.props.elements[0].elements[0].elements[1].y1)\n\tpoint7 \u003d \" %s,%s\"%(x1,y1)#(x2,y2)\" -791.3503000000001,-16.5004875\"#\n\treturn point1 + point2 +point3 + point4 + point5 + point6 + point7",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              },
+              "props.elements[2].elements[0].elements[0].elements[0].points": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.height} + {view.params.width} + {this.custom.GradientMiddleLine1}"
+                  },
+                  "overlayOptOut": true,
+                  "transforms": [
+                    {
+                      "code": "\twidth \u003d self.view.params.width\n\theight \u003d self.view.params.height\n\tline1gradient \u003d self.custom.GradientMiddleLine1\n\t#218.85000000000002,67.000092228572        1\n\t#242.85000000000002,71.00009388571401      2\n\t#242.85000000000002,79.0001                3 \n\t#258.85,79.0001                            4\n\t#258.85,55.000081657142005                 5\n\t#242.85000000000002,55.000081657142005     6\n\t#218.85000000000002,51.00008               7\n  \t#return 79.0001 - 71.00009388571401 \t\n\t#Point 2 Based on Gradient Required\n\tpoint1 \u003d \"%s,%s \"%(self.props.elements[0].elements[0].elements[1].x2,self.props.elements[0].elements[0].elements[1].y2 + 2)#(width - 51.15,height- 63)\n\tx2 \u003d width - 51.15\n\tx1 \u003d width - 27.15\n\ty2 \u003d height- 63\n\ty1 \u003d (-line1gradient * (x2-x1)) + y2\n\tpoint2 \u003d \" %s,%s \"%(x1,y1) #point2 \u003d \" %s,%s \"%(width - 27.15,height- 59)\n\tpoint3 \u003d \" %s,%s \"%(width - 27.15,y1+8)\n\tpoint4 \u003d \" %s,%s \"%(width - 11.15,y1+8)\n\t\n\t#Point 6 Based on Gradient Required\t\n\tx2 \u003d width - 51.15\n\tx1 \u003d width - 27.15\n\ty2 \u003d height- 79\n\ty1 \u003d (-line1gradient * (x2-x1)) + y2\t\n\tpoint6 \u003d \" %s,%s \"%(x1,y1)\n\tpoint5 \u003d \" %s,%s \"%(width - 11.15,y1)\n\tpoint7 \u003d \" %s,%s\"%(self.props.elements[0].elements[0].elements[2].x2 - 1,self.props.elements[0].elements[0].elements[2].y2 + 2)#(x2,y2)\n\treturn point1 + point2 + point3 + point4 + point5 + point6 + point7",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              },
+              "props.elements[2].elements[0].elements[0].elements[1].points": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.params.height} + {view.params.width} + {this.custom.GradientMiddleLine1}"
+                  },
+                  "overlayOptOut": true,
+                  "transforms": [
+                    {
+                      "code": "\twidth \u003d self.view.params.width\n\theight \u003d self.view.params.height\n\tline1gradient \u003d self.custom.GradientMiddleLine1\n\t#218.85000000000002,67.000092228572        1\n\t#242.85000000000002,71.00009388571401      2\n\t#242.85000000000002,79.0001                3 \n\t#258.85,79.0001                            4\n\t#258.85,55.000081657142005                 5\n\t#242.85000000000002,55.000081657142005     6\n\t#218.85000000000002,51.00008               7\n  \t#return 79.0001 - 71.00009388571401 \t\n\t#Point 2 Based on Gradient Required\n\tpoint1 \u003d \"%s,%s \"%(self.props.elements[0].elements[0].elements[1].x2,self.props.elements[0].elements[0].elements[1].y2 + 2)#(width - 51.15,height- 63)\n\tx2 \u003d width - 51.15\n\tx1 \u003d width - 27.15\n\ty2 \u003d height- 63\n\ty1 \u003d (-line1gradient * (x2-x1)) + y2\n\tpoint2 \u003d \" %s,%s \"%(x1,y1) #point2 \u003d \" %s,%s \"%(width - 27.15,height- 59)\n\tpoint3 \u003d \" %s,%s \"%(width - 27.15,y1+8)\n\tpoint4 \u003d \" %s,%s \"%(width - 11.15,y1+8)\n\t\n\t#Point 6 Based on Gradient Required\t\n\tx2 \u003d width - 51.15\n\tx1 \u003d width - 27.15\n\ty2 \u003d height- 79\n\ty1 \u003d (-line1gradient * (x2-x1)) + y2\t\n\tpoint6 \u003d \" %s,%s \"%(x1,y1)\n\tpoint5 \u003d \" %s,%s \"%(width - 11.15,y1)\n\tpoint7 \u003d \" %s,%s\"%(self.props.elements[0].elements[0].elements[2].x2 - 1,self.props.elements[0].elements[0].elements[2].y2 + 2)#(x2,y2)\n\treturn point1 + point2 + point3 + point4 + point5 + point6 + point7",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "fill": {
+                            "opacity": "1.0",
+                            "paint": "rgb(204,204,204)"
+                          },
+                          "name": "Polygon1",
+                          "stroke": {
+                            "opacity": "1.0",
+                            "paint": "rgb(0,0,0)",
+                            "width": "0.0"
+                          },
+                          "type": "polygon"
+                        },
+                        {
+                          "fill": {
+                            "paint": "none"
+                          },
+                          "name": "Line3",
+                          "stroke": {
+                            "opacity": "1.0",
+                            "paint": "rgb(126,126,126)",
+                            "width": "1.0"
+                          },
+                          "type": "line",
+                          "x1": "40.00006",
+                          "y1": "36.00023"
+                        },
+                        {
+                          "fill": {
+                            "paint": "none"
+                          },
+                          "name": "Line4",
+                          "stroke": {
+                            "opacity": "1.0",
+                            "paint": "rgb(126,126,126)",
+                            "width": "1.0"
+                          },
+                          "type": "line",
+                          "x1": "40.00006",
+                          "y1": "20.00023"
+                        }
+                      ],
+                      "fill": {
+                        "opacity": "1.0",
+                        "paint": "rgb(126,126,126)"
+                      },
+                      "name": "AirSlide",
+                      "stroke": {
+                        "opacity": "1.0",
+                        "paint": "rgb(0,0,0)",
+                        "width": "1.0"
+                      },
+                      "type": "group"
+                    }
+                  ],
+                  "fill": {
+                    "opacity": "1.0",
+                    "paint": "rgb(0,0,0)"
+                  },
+                  "name": "Middle",
+                  "stroke": {
+                    "opacity": "1.0",
+                    "paint": "rgb(0,0,0)",
+                    "width": "1.0"
+                  },
+                  "style": {
+                    "classes": "Standard/Body/Statics/Fill"
+                  },
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "fill": {
+                            "opacity": "1.0",
+                            "paint": "rgb(204,204,204)"
+                          },
+                          "name": "Polygon2",
+                          "stroke": {
+                            "opacity": "1.0",
+                            "paint": "rgb(0,0,0)",
+                            "width": "0.0"
+                          },
+                          "transform": "translate (0,0) scale (1,1)",
+                          "type": "polygon"
+                        },
+                        {
+                          "fill": {
+                            "paint": "none"
+                          },
+                          "name": "PolyLine2",
+                          "stroke": {
+                            "opacity": "1.0",
+                            "paint": "rgb(126,126,126)",
+                            "width": "1.0"
+                          },
+                          "transform": "translate (0,0) scale (1,1)",
+                          "type": "polyline"
+                        }
+                      ],
+                      "fill": {
+                        "opacity": "1.0",
+                        "paint": "rgb(224,224,224)"
+                      },
+                      "name": "Group1",
+                      "stroke": {
+                        "opacity": "1.0",
+                        "paint": "rgb(0,0,0)",
+                        "width": "1.0"
+                      },
+                      "type": "group"
+                    }
+                  ],
+                  "fill": {
+                    "opacity": "1.0",
+                    "paint": "rgb(0,0,0)"
+                  },
+                  "name": "Left",
+                  "stroke": {
+                    "opacity": "1.0",
+                    "paint": "rgb(0,0,0)",
+                    "width": "1.0"
+                  },
+                  "style": {
+                    "classes": "Standard/Body/Statics/Fill"
+                  },
+                  "type": "group"
+                },
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "elements": [
+                            {
+                              "fill": {
+                                "opacity": "1.0",
+                                "paint": "rgb(204,204,204)"
+                              },
+                              "name": "Polygon2",
+                              "stroke": {
+                                "opacity": "1.0",
+                                "paint": "rgb(0,0,0)",
+                                "width": "0.0"
+                              },
+                              "type": "polygon"
+                            },
+                            {
+                              "fill": {
+                                "paint": "none"
+                              },
+                              "name": "PolyLine2",
+                              "stroke": {
+                                "opacity": "1.0",
+                                "paint": "rgb(126,126,126)",
+                                "width": "1.0"
+                              },
+                              "type": "polyline"
+                            }
+                          ],
+                          "fill": {
+                            "opacity": "1.0",
+                            "paint": "rgb(255,255,255)"
+                          },
+                          "name": "AirSlide_Top",
+                          "stroke": {
+                            "opacity": "1.0",
+                            "paint": "rgb(0,0,0)",
+                            "width": "1.0"
+                          },
+                          "type": "group"
+                        }
+                      ],
+                      "fill": {
+                        "opacity": "1.0",
+                        "paint": "rgb(255,255,255)"
+                      },
+                      "name": "Group1",
+                      "stroke": {
+                        "opacity": "1.0",
+                        "paint": "rgb(0,0,0)",
+                        "width": "1.0"
+                      },
+                      "type": "group"
+                    }
+                  ],
+                  "fill": {
+                    "opacity": "1.0",
+                    "paint": "rgb(0,0,0)"
+                  },
+                  "name": "Right",
+                  "stroke": {
+                    "opacity": "1.0",
+                    "paint": "rgb(0,0,0)",
+                    "width": "1.0"
+                  },
+                  "style": {
+                    "classes": "Standard/Body/Statics/Fill"
+                  },
+                  "transform": "translate (0,-2)",
+                  "type": "group"
+                }
+              ]
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "LabelBot"
+            },
+            "position": {
+              "height": 0.8154,
+              "width": 1,
+              "y": 0.1846
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.Name.Bottom"
+                  },
+                  "overlayOptOut": true,
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Body/Statics/Text",
+                "textAlign": "center"
+              },
+              "textStyle": {
+                "classes": "Standard/Body/Statics/Text"
+              }
+            },
+            "scripts": {
+              "customMethods": [],
+              "extensionFunctions": null,
+              "messageHandlers": [
+                {
+                  "messageType": "DisplayEquipmentLabel",
+                  "pageScope": true,
+                  "script": "\t# Script to Show/Hide Equipment Labels\n\tself.meta.visible \u003d not self.meta.visible",
+                  "sessionScope": false,
+                  "viewScope": false
+                }
+              ]
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "LabelTop"
+            },
+            "position": {
+              "height": 0.2692,
+              "width": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.Name.Top"
+                  },
+                  "overlayOptOut": true,
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Body/Statics/Text",
+                "textAlign": "center"
+              },
+              "textStyle": {
+                "classes": "Standard/Body/Statics/Text"
+              }
+            },
+            "scripts": {
+              "customMethods": [],
+              "extensionFunctions": null,
+              "messageHandlers": [
+                {
+                  "messageType": "DisplayEquipmentLabel",
+                  "pageScope": true,
+                  "script": "\t# Script to Show/Hide Equipment Labels\n\tself.meta.visible \u003d not self.meta.visible",
+                  "sessionScope": false,
+                  "viewScope": false
+                }
+              ]
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "20px",
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

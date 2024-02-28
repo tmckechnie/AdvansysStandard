@@ -1,0 +1,52 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": ""
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 332,
+      "width": 349
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Home"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "path": "view.params.TagPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/Home"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

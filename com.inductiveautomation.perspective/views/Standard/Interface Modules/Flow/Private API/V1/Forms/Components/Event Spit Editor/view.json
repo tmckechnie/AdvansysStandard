@@ -1,0 +1,424 @@
+{
+  "custom": {
+    "timeStamp": {
+      "$": [
+        "ts",
+        192,
+        1646384653045
+      ],
+      "$ts": 1636552800000
+    },
+    "username": "Advansys\\\\Visitor1"
+  },
+  "params": {
+    "editable": {
+      "Mode": {
+        "name": "Mode",
+        "type": "Dropdown"
+      },
+      "WorkOrder": {
+        "name": "Raw Reason",
+        "type": "TextField"
+      }
+    },
+    "enumerationGroup": {
+      "pid125": {
+        "enumerationFilterOrder": [
+          "Work Order"
+        ],
+        "enumerationGroup": []
+      },
+      "pid126": {
+        "enumerationFilterOrder": [
+          "Mode"
+        ],
+        "enumerationGroup": [
+          {
+            "Mode": "Change Over"
+          },
+          {
+            "Mode": "Manual"
+          },
+          {
+            "Mode": "Maintenance"
+          },
+          {
+            "Mode": "Production"
+          },
+          {
+            "Mode": "Undefined"
+          },
+          {
+            "Mode": "Empty Out"
+          },
+          {
+            "Mode": "Setup"
+          },
+          {
+            "Mode": "Clean"
+          }
+        ]
+      }
+    },
+    "rowData": {
+      "Mode": {
+        "displayOrder": 1,
+        "eventAttributeID": 235,
+        "pending": false,
+        "preferred": true,
+        "quality": 192,
+        "readOnly": false,
+        "title": "Mode",
+        "value": "Undefined",
+        "version": 1,
+        "versionType": "manual"
+      },
+      "WorkOrder": {
+        "displayOrder": 2,
+        "eventAttributeID": 234,
+        "pending": false,
+        "preferred": true,
+        "quality": 192,
+        "readOnly": false,
+        "title": "Work Order",
+        "value": "None",
+        "version": 1,
+        "versionType": "manual"
+      },
+      "edit": {
+        "value": true
+      },
+      "eventPeriodID": {
+        "value": 28599
+      },
+      "eventSchemeID": {
+        "value": 45
+      },
+      "formGroup": {
+        "value": "Production"
+      },
+      "index": {
+        "value": 112
+      },
+      "periodEnd": {
+        "value": "2021-11-10T16:00:00Z"
+      },
+      "periodEndFormated": {
+        "displayOrder": -1,
+        "title": "Period End",
+        "value": "2021-11-10 18:00:00"
+      },
+      "periodStart": {
+        "value": "2021-11-10T12:00:00Z"
+      },
+      "periodStartFormated": {
+        "displayOrder": -2,
+        "title": "Period Start",
+        "value": "2021-11-10 14:00:00"
+      }
+    },
+    "tilte": "Title"
+  },
+  "propConfig": {
+    "custom.Changes": {
+      "persistent": true
+    },
+    "custom.EventAttributeFilterIDs": {
+      "persistent": true
+    },
+    "custom.FlowEnumGroupsFromDefinition": {
+      "persistent": true
+    },
+    "custom.attributes": {
+      "persistent": true
+    },
+    "custom.chartDataUrl": {
+      "persistent": true
+    },
+    "custom.chartDefUrl": {
+      "persistent": true
+    },
+    "custom.data": {
+      "persistent": true
+    },
+    "custom.editable": {
+      "persistent": true
+    },
+    "custom.enumGroupEdited": {
+      "persistent": true
+    },
+    "custom.filters": {
+      "persistent": true
+    },
+    "custom.flowConnection": {
+      "persistent": true
+    },
+    "custom.flowDefinition": {
+      "persistent": true
+    },
+    "custom.flowReportData": {
+      "persistent": true
+    },
+    "custom.flowReportDef": {
+      "persistent": true
+    },
+    "custom.itemMaster": {
+      "persistent": true
+    },
+    "custom.latestEventData": {
+      "persistent": true
+    },
+    "custom.microStoppedArray": {
+      "persistent": true
+    },
+    "custom.optionsObject": {
+      "persistent": true
+    },
+    "custom.testOptions": {
+      "persistent": true
+    },
+    "custom.timeStamp": {
+      "binding": {
+        "config": {
+          "path": "view.params.rowData.periodStartFormated.value"
+        },
+        "transforms": [
+          {
+            "code": "\tperiodStart \u003d system.date.parse(value)\n\tperiodEnd \u003d self.params.rowData.periodEndFormated.value\n\tperiodEnd \u003d system.date.parse(periodEnd)\n\tduration \u003d system.date.millisBetween(periodStart,periodEnd)\n\ttimeStamp \u003d system.date.addMillis(periodStart,duration/2)\n\treturn timeStamp",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.username": {
+      "binding": {
+        "config": {
+          "path": "session.custom.flowUser"
+        },
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.Editable": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.EnumerationFilterOrder": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.editable": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.editableArray": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.enumGroup": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.enumerationGroup": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.filePath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.filters": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.rowData": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tilte": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.username": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 113
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "title"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.tilte"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "PackML/Title"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "labelPeriodStart"
+            },
+            "position": {
+              "basis": "32px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.rowData.periodStartFormated.value"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "DateTimeInputTimeStamp"
+            },
+            "position": {
+              "basis": "32px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.timeStamp"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "format": "YYYY-MM-DD HH:mm:ss.000",
+              "formattedValue": "2021-11-10 16:00:00.000"
+            },
+            "type": "ia.input.date-time-input"
+          },
+          {
+            "meta": {
+              "name": "labelPeriodEnd"
+            },
+            "position": {
+              "basis": "32px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.rowData.periodEndFormated.value"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "textAlign": "end"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\t#Submit Changes to Flow\n\tlogger \u003d system.util.getLogger(\"EventSpitEditorSubmit\")\n\tusername \u003d self.view.custom.username\n\teventPeriod \u003d self.view.params.rowData\n\tsplitTimeStamp \u003d self.view.custom.timeStamp\n\n\teventPeriods \u003d Flow.Event.SplitEvent(\n\tConnection\u003dNone,\n\tUsername\u003dusername, \n\tEventPeriod\u003deventPeriod ,\n\tSplitTimeStamp\u003dsplitTimeStamp\n\t)\n\n\tlogger.info(str(eventPeriods))\n\t#refresh\n\tpayload \u003d {}\n\tpayload[\u0027action\u0027] \u003d \u0027refresh\u0027\n\tsystem.perspective.sendMessage(messageType\u003d\"refresh\",payload \u003d payload,scope\u003d\u0027page\u0027)\n\tsystem.perspective.closePopup(\"EventSpitEditorPopup\")\n\t\n\t\t\n\t\n\t\t\n\t"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Submit Changes Button"
+            },
+            "position": {
+              "basis": "160px"
+            },
+            "propConfig": {
+              "custom.username": {
+                "binding": {
+                  "config": {
+                    "path": "session.custom.flowUser"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#555555"
+              },
+              "text": "Split"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "SubmissionFlex"
+        },
+        "position": {
+          "basis": "40px"
+        },
+        "props": {
+          "justify": "center"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

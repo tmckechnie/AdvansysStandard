@@ -1,0 +1,156 @@
+{
+  "custom": {
+    "DeselectionInterlocked": true,
+    "Interlocked": false,
+    "Selection": "Unselected",
+    "SelectionInterlocked": true,
+    "interlockLabel": "Healthy",
+    "interlockStyle": "Standard/Popups/Faceplates/Interlocked"
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/100S100"
+  },
+  "propConfig": {
+    "custom.DeselectionInterlocked": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Interlock/Deselection/State"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Interlocked": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Interlock/Interlocked"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Selection": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Out/Selection"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.SelectionInterlocked": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Interlock/Selection/State"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.interlockLabel": {
+      "binding": {
+        "config": {
+          "expression": "switch(true,\r\n!{view.custom.SelectionInterlocked}\u0026\u0026!{view.custom.DeselectionInterlocked},\r\n!{view.custom.SelectionInterlocked},\r\n!{view.custom.DeselectionInterlocked},\r\n\"Selection and Deselection Interlocked\",\r\n\"Selection Interlocked\",\r\n\"Deselection Interlocked\",\r\n\"Healthy\")"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.interlockStyle": {
+      "binding": {
+        "config": {
+          "expression": "if({view.custom.Interlocked},\"Standard/Popups/Faceplates/Interlocked\",\"Standard/Popups/Faceplates/Interlocked\")"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 48,
+      "width": 445
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onDoubleClick": {
+              "config": {
+                "draggable": true,
+                "id": "5TEjGHmQ",
+                "modal": false,
+                "overlayDismiss": false,
+                "resizable": true,
+                "showCloseIcon": true,
+                "type": "open",
+                "viewParams": {
+                  "Msg": "{view.custom.Details.TagPath}"
+                },
+                "viewPath": "Common Components/Views/MsgBox"
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Summary 2"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.Selection} + \" [Interlock: \" + {view.custom.interlockLabel} + \"]\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/HeaderText Standard/Popups/Faceplates/HeaderBackground"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "custom": {
+    "Description": null,
+    "Ordinal": null,
+    "Value": null,
+    "editAllowed": true,
+    "label": "[] ",
+    "popupHeader": "Edit - "
+  },
+  "params": {
+    "EditAllowedRoles": [
+      "Administrator",
+      "Engineer"
+    ],
+    "ShowOrdinal": true,
+    "TagPath": "[Standard]Standard/Test/Steps",
+    "style": {
+      "classes": "Standard/Body/Statics/Fill Standard/Body/Symbols/Text"
+    }
+  },
+  "propConfig": {
+    "custom.Description": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/Description"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Ordinal": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Ordinal"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Value": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.editAllowed": {
+      "binding": {
+        "config": {
+          "struct": {
+            "allowedRoles": "{view.params.EditAllowedRoles}",
+            "roles": "{session.props.auth.user.roles}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tallowedRoles\u003d value[\u0027allowedRoles\u0027]\n\troles \u003d value[\u0027roles\u0027]\n\tfor role in roles:\n\t\tfor allowedRole in allowedRoles:\n\t\t\tif role.upper() \u003d\u003d allowedRole.upper():\n\t\t\t\treturn True\n\treturn False",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.label": {
+      "binding": {
+        "config": {
+          "expression": "if({view.params.ShowOrdinal},\"[\" +{view.custom.Ordinal}+\"] \"+{view.custom.Value},{view.custom.Value})"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.popupHeader": {
+      "binding": {
+        "config": {
+          "expression": "\"Edit - \"+{view.custom.Description}"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.EditAllowedRoles": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowOrdinal": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.style": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 35,
+      "width": 300
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application/Implementation Modules/Primitives/Enumeration"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.style": {
+            "binding": {
+              "config": {
+                "path": "view.params.style"
+              },
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "draggable": true,
+                "id": "StdEnumerationEditPopup",
+                "modal": true,
+                "overlayDismiss": true,
+                "resizable": true,
+                "showCloseIcon": true,
+                "title": "{view.custom.popupHeader}",
+                "type": "open",
+                "viewParams": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "viewPath": "Standard/Implementation Modules/Primitives/Enumeration/Components/Edit",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Edit"
+        },
+        "position": {
+          "basis": "15px",
+          "display": false
+        },
+        "props": {
+          "image": {
+            "height": 10,
+            "icon": {
+              "path": "material/edit"
+            },
+            "position": "top",
+            "width": 10
+          },
+          "style": {
+            "classes": "Standard/Body/Symbols/Basic Standard/Body/Symbols/Fill/Passive",
+            "marginBottom": 20
+          },
+          "text": ""
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onMouseLeave": {
+          "config": {
+            "script": "\tself.getChild(\"Edit\").position.display \u003d False"
+          },
+          "scope": "G",
+          "type": "script"
+        },
+        "onMouseOver": {
+          "config": {
+            "script": "\tif self.view.custom.editAllowed:\n\t\tself.getChild(\"Edit\").position.display \u003d True"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "Standard/Body/Symbols/Basic"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

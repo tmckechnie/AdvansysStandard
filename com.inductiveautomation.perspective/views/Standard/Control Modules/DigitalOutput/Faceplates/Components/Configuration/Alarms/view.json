@@ -1,0 +1,116 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/100DO100"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 586,
+      "width": 395
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Available"
+        },
+        "position": {
+          "basis": "64px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.AlarmPrimitiveTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}+\"/Alarms/\"+{this.meta.name}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ShowHeader": true
+          },
+          "path": "Standard/Components/Faceplates/Alarms/Alarm Primitive Config",
+          "style": {
+            "marginTop": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "LocalOff"
+        },
+        "position": {
+          "basis": "64px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.AlarmPrimitiveTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}+\"/Alarms/\"+{this.meta.name}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ShowHeader": false
+          },
+          "path": "Standard/Components/Faceplates/Alarms/Alarm Primitive Config",
+          "style": {
+            "marginTop": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Communication"
+        },
+        "position": {
+          "basis": "64px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.AlarmPrimitiveTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}+\"/Alarms/\"+{this.meta.name}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ShowHeader": false
+          },
+          "path": "Standard/Components/Faceplates/Alarms/Alarm Primitive Config",
+          "style": {
+            "marginTop": 3
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

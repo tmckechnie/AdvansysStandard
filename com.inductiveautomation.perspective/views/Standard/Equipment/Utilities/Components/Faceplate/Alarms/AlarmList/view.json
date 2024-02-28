@@ -1,0 +1,205 @@
+{
+  "custom": {},
+  "events": {
+    "system": {
+      "onStartup": {
+        "config": {
+          "script": "\tself.getChild(\"root\").getChild(\"AlarmStatusTable\").props.refreshRate\u003d1000"
+        },
+        "scope": "G",
+        "type": "script"
+      }
+    }
+  },
+  "params": {
+    "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M100"
+  },
+  "propConfig": {
+    "custom.DisplayPathFilter": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/InstancePath"
+        },
+        "transforms": [
+          {
+            "expression": "{value}+\"/*\"",
+            "type": "expression"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": false
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 580,
+      "width": 442
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "35px"
+        },
+        "props": {
+          "params": {
+            "Title": "Alarms"
+          },
+          "path": "Standard/Control Modules/Components/Faceplate/Header"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "AlarmStatusTable"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.filters.active.conditions.displayPath": {
+            "persistent": true
+          }
+        },
+        "props": {
+          "activeSortOrder": [
+            "priority",
+            "state",
+            "activeTime"
+          ],
+          "columns": {
+            "active": {
+              "activeTime": {
+                "sort": "descending",
+                "width": 100
+              },
+              "displayPath": {
+                "enabled": false
+              },
+              "isAcked": {
+                "sort": "descending"
+              },
+              "isActive": {
+                "sort": "descending"
+              },
+              "priority": {
+                "strictWidth": true,
+                "width": 70
+              },
+              "source": {
+                "enabled": false
+              }
+            }
+          },
+          "enableAcknowledge": false,
+          "enableDetails": false,
+          "enableShelve": false,
+          "enableUnshelve": false,
+          "filters": {
+            "active": {
+              "states": {
+                "activeAcked": false,
+                "activeUnacked": false,
+                "clearUnacked": false
+              }
+            }
+          },
+          "pager": {
+            "enabled": false
+          },
+          "responsive": {
+            "enabled": true
+          },
+          "rowStyles": {
+            "activeAcked": {
+              "base": {
+                "classes": "Standard/Popups/Button/Default"
+              }
+            },
+            "activeUnacked": {
+              "base": {
+                "classes": "Standard/Popups/Button/Default",
+                "fontWeight": "normal"
+              }
+            },
+            "clearAcked": {
+              "base": {
+                "classes": "Standard/Popups/Button/Default"
+              }
+            },
+            "clearUnacked": {
+              "base": {
+                "classes": "Standard/Popups/Button/Default"
+              }
+            }
+          },
+          "toolbar": {
+            "enabled": false
+          }
+        },
+        "scripts": {
+          "customMethods": [],
+          "extensionFunctions": [
+            {
+              "enabled": true,
+              "name": "filterAlarm",
+              "script": "\talarmDisplayPath \u003d str(alarmEvent.get(\u0027displayPath\u0027))\n\t#system.perspective.print(str(alarmDisplayPath))\n\trequiredDisplayPath \u003d self.view.custom.DisplayPathFilter\n\tif requiredDisplayPath in alarmDisplayPath:\n\t\treturn True\n\telse:\n\t\treturn False"
+            },
+            {
+              "enabled": false,
+              "name": "filterShelvedAlarm",
+              "script": "\treturn True"
+            }
+          ],
+          "messageHandlers": []
+        },
+        "type": "ia.display.alarmstatustable"
+      },
+      {
+        "meta": {
+          "name": "AlarmBulkAcknowledge"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "path": "view.params.TagPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Control Modules/Components/Faceplate/Alarms/AlarmBulkAcknowledge"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-between"
+    },
+    "type": "ia.container.flex"
+  }
+}

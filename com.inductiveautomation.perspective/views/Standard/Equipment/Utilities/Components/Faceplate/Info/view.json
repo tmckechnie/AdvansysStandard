@@ -1,0 +1,189 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[default]SCVD/Sefateng/ROM/Surface/100WT100"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 520,
+      "width": 435
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "params": {
+                "Title": "Short Description"
+              },
+              "path": "Standard/Control Modules/Components/Faceplate/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "TextField"
+                },
+                "position": {
+                  "basis": "500px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}"
+                        },
+                        "tagPath": "{TagPath}/Parameters.Description"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "enabled": false,
+                  "style": {
+                    "classes": "Standard/Popups/Text",
+                    "marginRight": 5
+                  }
+                },
+                "type": "ia.input.text-field"
+              }
+            ],
+            "meta": {
+              "name": "Description Row"
+            },
+            "position": {
+              "basis": "52px"
+            },
+            "props": {
+              "style": {
+                "margin": 5,
+                "paddingLeft": 3
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Short Description"
+        },
+        "position": {
+          "basis": "130px"
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "params": {
+                "Title": "Identification"
+              },
+              "path": "Standard/Control Modules/Components/Faceplate/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Identity Row"
+            },
+            "position": {
+              "basis": "52px"
+            },
+            "props": {
+              "style": {
+                "margin": 5,
+                "paddingLeft": 3
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Identification"
+        },
+        "position": {
+          "basis": "130px"
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "params": {
+                "Title": "IO Config"
+              },
+              "path": "Standard/Control Modules/Components/Faceplate/Header"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "IO Config"
+        },
+        "position": {
+          "basis": "130px"
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

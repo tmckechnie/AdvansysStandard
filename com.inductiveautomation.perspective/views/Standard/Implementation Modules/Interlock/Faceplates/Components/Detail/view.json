@@ -1,0 +1,533 @@
+{
+  "custom": {
+    "Interlocks": {
+      "Interlock1": {
+        "Description": "ROM Primary Stockpile Conveyor Drive Motor 1",
+        "Inverted": false,
+        "Reason": "ROM Primary Stockpile Conveyor Drive Motor 1 Running",
+        "ReasonCode": 0,
+        "ReasonModuleInfo": {
+          "description": "ROM Primary Stockpile Conveyor Drive Motor 1",
+          "fullPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV02/100M002",
+          "instanceName": "100M002",
+          "standardViewPath": "Standard/Control Modules/Motor",
+          "typeId": "S71500/Control Modules/Motor"
+        },
+        "State": false
+      },
+      "Interlock2": {
+        "Description": "ROM Secondary Conveyor Drive Motor 1 ",
+        "Inverted": false,
+        "Reason": "ROM Secondary Conveyor Drive Motor 1  Running",
+        "ReasonCode": 0,
+        "ReasonModuleInfo": {
+          "description": "ROM Secondary Conveyor Drive Motor 1 ",
+          "fullPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV04/100M004",
+          "instanceName": "100M004",
+          "standardViewPath": "Standard/Control Modules/Motor",
+          "typeId": "S71500/Control Modules/Motor"
+        },
+        "State": false
+      },
+      "Interlock3": {
+        "Description": "Healthy",
+        "Inverted": false,
+        "Reason": "Always Healthy",
+        "ReasonCode": 0,
+        "ReasonModuleInfo": {
+          "fullPath": "",
+          "typeId": ""
+        },
+        "State": true
+      },
+      "Interlock4": {
+        "Description": "Healthy",
+        "Inverted": false,
+        "Reason": "Always Healthy",
+        "ReasonCode": 0,
+        "ReasonModuleInfo": {
+          "fullPath": "",
+          "typeId": ""
+        },
+        "State": true
+      }
+    }
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/SCR01/100M006IL01"
+  },
+  "propConfig": {
+    "custom.Interlocks": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}"
+        },
+        "transforms": [
+          {
+            "code": "\t\n\tsts \u003d value[\u0027Sts\u0027]\n\t\n\ttagPath \u003d self.view.params.TagPath\n\tbrowseTagPath \u003d tagPath.split(\u0027/\u0027)[0]\n\tinterlocks \u003d{}\n\tfor i in range(1,5):\n\t\tkey \u003d \u0027Interlock\u0027+str(i)\n\t\tinterlock \u003d sts[key]\n\t\tinterlock \u003d {}\n\t\tinterlock[\u0027Inverted\u0027] \u003d sts[key][\u0027Inverted\u0027]\n\t\tinterlock[\u0027State\u0027] \u003d sts[key][\u0027State\u0027]\n\t\treason \u003d sts[key][\u0027Reason\u0027]\n\t\treasonModuleInfo \u003d sts[key][\u0027ReasonModuleInfo\u0027]\n\t\tinterlock[\u0027ReasonModuleInfo\u0027] \u003d sts[key][\u0027ReasonModuleInfo\u0027]\n\t\tinterlock[\u0027ReasonCode\u0027] \u003d sts[key][\u0027ReasonCode\u0027]\n\t\tif reason !\u003d \u0027true\u0027:\n\t\t\tinfo \u003d reasonModuleInfo\n\t\t\tif \u0027description\u0027 in info:\n\t\t\t\tdescription \u003d info[\u0027description\u0027]\n\t\t\t\treason \u003d description + \" \" + reason.split(\u0027.\u0027)[-1]\n\t\t\telse:\n\t\t\t\tdescription \u003d \"Not Found\"\n\t\t\t\treason \u003d description + \" \" + reason\n\t\t\t\n\t\t\t\n\t\telse:\n\t\t\tdescription \u003d \"Healthy\"\n\t\t\treason \u003d \"Always Healthy\"\n\n\t\tinterlock[\u0027Reason\u0027] \u003d reason\t\t\n\t\tinterlock[\u0027Description\u0027] \u003d description\n\t\tinterlocks[key] \u003d interlock\n\n\t\n\treturn interlocks",
+            "type": "script"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 164,
+      "width": 350
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onRowClick": {
+              "config": {
+                "script": "\t\n\treason \u003d event.value[\u0027Reason\u0027]\n\tinputKey \u003d event.value[\u0027Input\u0027]\n\tinfo \u003d self.view.custom.Interlocks[inputKey][\u0027ReasonModuleInfo\u0027]\n\t\n\n\tmoduleTagPath \u003d str(info[\u0027fullPath\u0027])\n\tif len(moduleTagPath)\u003e0:\n\t\tstandardViewPath \u003d info[\u0027standardViewPath\u0027]\n\t\tdescription \u003d info[\u0027description\u0027]\n\t\tinstanceName \u003d info[\u0027instanceName\u0027]\n\t\ttitle \u003d instanceName + \" - \" + description\n\t\tparamsObject \u003d {\"TagPath\":moduleTagPath}\n\t\tfaceplatePath \u003d standardViewPath + \"/Faceplates/Faceplate\"\n\t\tposition\u003d{\"right\":5,\"width\":350,\"height\":400,\"bottom\":45}\n\t\tif \"Interlock\" in standardViewPath:\n\t\t\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003dfaceplatePath,Position\u003dposition)\n\t\telse:\n\t\t\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003dfaceplatePath)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "basis": "400px"
+        },
+        "propConfig": {
+          "props.data": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Interlocks"
+              },
+              "transforms": [
+                {
+                  "code": "\trows \u003d []\n\ti\u003d1\n\t\n\tinterlocks \u003d value.values()\n\tfor interlock in value:\n\t\trow \u003d {}\n\t\trow[\u0027Input\u0027] \u003d interlock.replace(\"interlock\",\"\")\n\t\trow[\u0027State\u0027] \u003d value[interlock][\u0027State\u0027]\n\t\trow[\u0027Reason\u0027] \u003d value[interlock][\u0027Reason\u0027]\n\t\trow[\u0027ReasonCode\u0027] \u003d value[interlock][\u0027ReasonCode\u0027]\n\t\ti +\u003d1\n\t\trows.append(row)\n\t\t\n\trowsSorted \u003d sorted(rows,key\u003dlambda r: r[\u0027Input\u0027])\n\treturn rowsSorted",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "columns": [
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Input",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Input"
+              },
+              "justify": "center",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "number",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": true,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 50
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "State",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "center",
+                "style": {
+                  "classes": ""
+                },
+                "title": "State"
+              },
+              "justify": "center",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "boolean",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": true,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 70
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Reason",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Reason"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "string",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "ReasonCode",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "ReasonCode"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "string",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": false,
+              "width": ""
+            }
+          ],
+          "headerStyle": {
+            "classes": "Standard/Popups/Faceplates/SubHeaderBackground Standard/Popups/Faceplates/SubHeaderText"
+          },
+          "pager": {
+            "bottom": false
+          },
+          "rows": {
+            "style": {
+              "classes": "Standard/Popups/Faceplates/Text"
+            }
+          },
+          "selection": {
+            "data": [
+              {
+                "Input": "Interlock4",
+                "Reason": "Always Healthy",
+                "ReasonCode": 0,
+                "State": true
+              }
+            ],
+            "selectedColumn": "Reason",
+            "selectedRow": 3
+          }
+        },
+        "type": "ia.display.table"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "justify": "center"
+    },
+    "type": "ia.container.flex"
+  }
+}

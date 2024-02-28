@@ -1,0 +1,94 @@
+{
+  "custom": {
+    "ViewPerspective": ""
+  },
+  "params": {},
+  "propConfig": {
+    "custom.ViewPerspective": {
+      "binding": {
+        "config": {
+          "expression": "try(\"/\" + split({page.props.path},\"/\")[1,0],\"\")"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Logo"
+        },
+        "position": {
+          "basis": "150px"
+        },
+        "props": {
+          "path": "Standard/Navigation/Components/Logo"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Current Model Path"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "props": {
+          "params": {
+            "ContentType": ""
+          },
+          "path": "Standard/Navigation/Header Components/Current Model Path"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "User Summary"
+        },
+        "position": {
+          "basis": "200px"
+        },
+        "props": {
+          "path": "Standard/Navigation/Header Components/User Summary"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "draggable": true,
+            "id": "breadcrumbpopup",
+            "modal": false,
+            "overlayDismiss": false,
+            "resizable": true,
+            "showCloseIcon": true,
+            "type": "close",
+            "viewPath": "Standard/Navigation/Header Components/BreadCrumb Popup",
+            "viewportBound": false
+          },
+          "scope": "C",
+          "type": "popup"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "Standard/Docked/Header/Background Standard/Docked/Header/Border \nStandard/Docked/Header/Text"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

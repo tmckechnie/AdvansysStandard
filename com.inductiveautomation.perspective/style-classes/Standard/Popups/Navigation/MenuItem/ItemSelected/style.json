@@ -1,0 +1,17 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--callToAction--active)",
+      "color": "var(--popupContentText)",
+      "textAlign": "center"
+    }
+  },
+  "variants": [
+    {
+      "pseudo": "hover",
+      "style": {
+        "backgroundColor": "var(--callToAction--hover)"
+      }
+    }
+  ]
+}

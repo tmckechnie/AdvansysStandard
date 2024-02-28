@@ -1,0 +1,259 @@
+{
+  "custom": {
+    "AlarmSummary": null
+  },
+  "params": {
+    "AlarmSummaryTagPath": ""
+  },
+  "propConfig": {
+    "custom.AlarmSummary": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "AlarmSummaryTagPath": "{view.params.AlarmSummaryTagPath}"
+          },
+          "tagPath": "{AlarmSummaryTagPath}/Information"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.AlarmSummaryTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 25,
+      "width": 100
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Critical"
+        },
+        "position": {
+          "basis": "",
+          "display": false,
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "this.props.params.AlarmCount"
+              },
+              "transforms": [
+                {
+                  "fallback": false,
+                  "inputType": "range",
+                  "mappings": [
+                    {
+                      "input": {
+                        "exclusiveMax": true,
+                        "exclusiveMin": true,
+                        "min": 0
+                      },
+                      "output": true
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.params.AlarmCount": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.AlarmSummary.PriorityDetail}[{this.meta.name}][\u0027Total\u0027]"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Components/Alarms/Summary Symbols/Critical"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "High"
+        },
+        "position": {
+          "basis": "",
+          "display": false,
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "this.props.params.AlarmCount"
+              },
+              "transforms": [
+                {
+                  "fallback": false,
+                  "inputType": "range",
+                  "mappings": [
+                    {
+                      "input": {
+                        "exclusiveMax": true,
+                        "exclusiveMin": true,
+                        "min": 0
+                      },
+                      "output": true
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.params.AlarmCount": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.AlarmSummary.PriorityDetail}[{this.meta.name}][\u0027Total\u0027]"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Components/Alarms/Summary Symbols/High"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Medium"
+        },
+        "position": {
+          "basis": "",
+          "display": false,
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "this.props.params.AlarmCount"
+              },
+              "transforms": [
+                {
+                  "fallback": false,
+                  "inputType": "range",
+                  "mappings": [
+                    {
+                      "input": {
+                        "exclusiveMax": true,
+                        "exclusiveMin": true,
+                        "min": 0
+                      },
+                      "output": true
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.params.AlarmCount": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.AlarmSummary.PriorityDetail}[{this.meta.name}][\u0027Total\u0027]"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Components/Alarms/Summary Symbols/Medium"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Low"
+        },
+        "position": {
+          "basis": "",
+          "display": false,
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "this.props.params.AlarmCount"
+              },
+              "transforms": [
+                {
+                  "fallback": false,
+                  "inputType": "range",
+                  "mappings": [
+                    {
+                      "input": {
+                        "exclusiveMax": true,
+                        "exclusiveMin": true,
+                        "min": 0
+                      },
+                      "output": true
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.params.AlarmCount": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.AlarmSummary.PriorityDetail}[{this.meta.name}][\u0027Total\u0027]"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Components/Alarms/Summary Symbols/Low"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "enabled": true
+      }
+    },
+    "propConfig": {
+      "meta.tooltip.text": {
+        "binding": {
+          "config": {
+            "path": "view.params.AlarmSummaryTagPath"
+          },
+          "type": "property"
+        }
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

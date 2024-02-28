@@ -1,0 +1,580 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[StandardS71500]Modules/Implementation Modules/100G100"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 586,
+      "width": 350
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "InputType"
+                },
+                "position": {
+                  "basis": "25px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "name": "{this.meta.name}"
+                        },
+                        "tagPath": "{TagPath}/Cfg/{name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Enable": true,
+                    "Label": "Input Type",
+                    "ShowLabel": true,
+                    "options": [
+                      {
+                        "label": "Word",
+                        "value": 0
+                      },
+                      {
+                        "label": "Real",
+                        "value": 1
+                      }
+                    ]
+                  },
+                  "path": "Standard/Components/Faceplates/Input/LabelDropdown"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "ScaleRawMin"
+                },
+                "position": {
+                  "basis": "25px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Format": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "name": "{this.meta.name}"
+                        },
+                        "tagPath": "{TagPath}/Cfg/{name}.FormatString"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Units": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "name": "{this.meta.name}"
+                        },
+                        "tagPath": "{TagPath}/Cfg/{name}.EngUnit"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "name": "{this.meta.name}"
+                        },
+                        "tagPath": "{TagPath}/Cfg/{name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Enable": true,
+                    "Label": "Minimum Raw Value",
+                    "ShowLabel": true
+                  },
+                  "path": "Standard/Components/Faceplates/Input/LabelNumericEntryField",
+                  "style": {
+                    "marginBottom": 3,
+                    "marginTop": 3
+                  }
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "ScaleRawMax"
+                },
+                "position": {
+                  "basis": "25px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Format": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "name": "{this.meta.name}"
+                        },
+                        "tagPath": "{TagPath}/Cfg/{name}.FormatString"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Units": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "name": "{this.meta.name}"
+                        },
+                        "tagPath": "{TagPath}/Cfg/{name}.EngUnit"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "name": "{this.meta.name}"
+                        },
+                        "tagPath": "{TagPath}/Cfg/{name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "CategoryName": "Cfg",
+                    "Enable": true,
+                    "Label": "Maximum Raw Value",
+                    "ShowLabel": true,
+                    "TagName": "ScaleRawMax"
+                  },
+                  "path": "Standard/Components/Faceplates/Input/LabelNumericEntryField",
+                  "style": {
+                    "marginBottom": 3,
+                    "marginTop": 3
+                  }
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "ScaleEngineeringMin"
+                },
+                "position": {
+                  "basis": "25px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Format": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "name": "{this.meta.name}"
+                        },
+                        "tagPath": "{TagPath}/Cfg/{name}.FormatString"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Units": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "name": "{this.meta.name}"
+                        },
+                        "tagPath": "{TagPath}/Cfg/{name}.EngUnit"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "name": "{this.meta.name}"
+                        },
+                        "tagPath": "{TagPath}/Cfg/{name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "CategoryName": "Cfg",
+                    "Enable": true,
+                    "Label": "Minimum Engineering Value",
+                    "ShowLabel": true,
+                    "TagName": "ScaleEngineeringMin"
+                  },
+                  "path": "Standard/Components/Faceplates/Input/LabelNumericEntryField",
+                  "style": {
+                    "marginBottom": 3,
+                    "marginTop": 3
+                  }
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "ScaleEngineeringMax"
+                },
+                "position": {
+                  "basis": "25px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Format": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "name": "{this.meta.name}"
+                        },
+                        "tagPath": "{TagPath}/Cfg/{name}.FormatString"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Units": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "name": "{this.meta.name}"
+                        },
+                        "tagPath": "{TagPath}/Cfg/{name}.EngUnit"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "name": "{this.meta.name}"
+                        },
+                        "tagPath": "{TagPath}/Cfg/{name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "CategoryName": "Cfg",
+                    "Enable": true,
+                    "Label": "Maximum Engineering Value",
+                    "ShowLabel": true,
+                    "TagName": "ScaleEngineeringMax"
+                  },
+                  "path": "Standard/Components/Faceplates/Input/LabelNumericEntryField",
+                  "style": {
+                    "marginBottom": 3,
+                    "marginTop": 3
+                  }
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "DSPWindowPeriod",
+                  "tooltip": {
+                    "enabled": true,
+                    "text": "Signal Processing Period, used in rate of change calculation"
+                  }
+                },
+                "position": {
+                  "basis": "25px",
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "expression",
+                        "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Format": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "name": "{this.meta.name}"
+                        },
+                        "tagPath": "{TagPath}/Cfg/{name}.FormatString"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Units": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "name": "{this.meta.name}"
+                        },
+                        "tagPath": "{TagPath}/Cfg/{name}.EngUnit"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}",
+                          "name": "{this.meta.name}"
+                        },
+                        "tagPath": "{TagPath}/Cfg/{name}"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Enable": true,
+                    "Label": "Signal Processing Period",
+                    "ShowLabel": true
+                  },
+                  "path": "Standard/Components/Faceplates/Input/LabelNumericEntryField",
+                  "style": {
+                    "marginBottom": 3,
+                    "marginTop": 3
+                  }
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "Body"
+            },
+            "position": {
+              "basis": "52px",
+              "grow": 1
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Content"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Scaling"
+        },
+        "position": {
+          "basis": "188px",
+          "display": false,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "SirenEnable"
+        },
+        "position": {
+          "basis": "25px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Cfg/{name}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Format": null,
+            "Label": "Siren Enable",
+            "ShowLabel": true,
+            "Units": null,
+            "options": [
+              {
+                "label": "Enabled",
+                "value": true
+              },
+              {
+                "label": "Disabled",
+                "value": false
+              }
+            ]
+          },
+          "path": "Standard/Components/Faceplates/Input/LabelDropdown"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

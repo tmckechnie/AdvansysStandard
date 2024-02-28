@@ -1,0 +1,9 @@
+{
+  "base": {
+    "style": {
+      "stroke": "var(--bodySparklineDesired)",
+      "strokeWidth": "1",
+      "fill": "var(--bodySparklineDesired)"
+    }
+  }
+}

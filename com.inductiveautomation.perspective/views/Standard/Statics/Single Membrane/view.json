@@ -1,0 +1,89 @@
+{
+  "custom": {},
+  "params": {
+    "style": {
+      "classes": "Standard/Body/Statics/Stroke Standard/Body/Statics/Fill"
+    }
+  },
+  "propConfig": {
+    "params.style": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 120,
+      "width": 20
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "MembraneRect"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.params.style.classes"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "fill": {
+                    "opacity": 1,
+                    "paint": "",
+                    "rule": "evenodd"
+                  },
+                  "height": "118.50005",
+                  "name": "rect853",
+                  "stroke": {
+                    "dasharray": "none",
+                    "dashoffset": "0",
+                    "linecap": "butt",
+                    "miterlimit": "4",
+                    "opacity": "1",
+                    "paint": "",
+                    "width": 2
+                  },
+                  "style": {
+                    "vector-effect": "non-scaling-stroke"
+                  },
+                  "type": "rect",
+                  "width": "18.500046",
+                  "x": "0.48644829",
+                  "y": "0.48644829"
+                }
+              ],
+              "name": "layer1",
+              "transform": "translate(0.26352853,0.26352853)",
+              "type": "group"
+            }
+          ],
+          "style": {},
+          "viewBox": "0 0 19.999994 119.99999"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

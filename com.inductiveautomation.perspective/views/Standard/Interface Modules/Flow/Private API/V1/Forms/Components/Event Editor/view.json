@@ -1,0 +1,764 @@
+{
+  "custom": {
+    "Changes": {
+      "Cause": {
+        "eaid": 35,
+        "name": "Cause",
+        "value": ""
+      },
+      "Conveyor": {
+        "eaid": 27,
+        "name": "Conveyor",
+        "value": "Sacrificial Conveyor"
+      },
+      "Description": {
+        "eaid": 40,
+        "name": "Description",
+        "value": null
+      },
+      "FailureMode": {
+        "eaid": 34,
+        "name": "Failure Mode",
+        "value": "Clean"
+      },
+      "ObjectType": {
+        "eaid": 33,
+        "name": "Object Type",
+        "value": "Magnet"
+      },
+      "Shift": {
+        "eaid": 28,
+        "name": "Shift",
+        "value": "Morning"
+      }
+    },
+    "editableCopy": {
+      "Cause": {
+        "name": "Cause",
+        "type": "Dropdown"
+      },
+      "Conveyor": {
+        "name": "Conveyor",
+        "type": "Dropdown"
+      },
+      "Description": {
+        "name": "Description",
+        "type": "TextField"
+      },
+      "FailureMode": {
+        "name": "Failure Mode",
+        "type": "Dropdown"
+      },
+      "ObjectType": {
+        "name": "Object Type",
+        "type": "Dropdown"
+      },
+      "Shift": {
+        "name": "Shift",
+        "type": "Dropdown"
+      }
+    },
+    "optionsObject": {
+      "Cause": [
+        "Stripped"
+      ],
+      "Conveyor": [
+        "Sacrificial Conveyor",
+        "SC 1",
+        "DC 1",
+        "Waste Conveyor",
+        "Slew Conveyor"
+      ],
+      "Description": [],
+      "FailureMode": [
+        "Gears"
+      ],
+      "ObjectType": [
+        "Chute",
+        "Magnet",
+        "Belting",
+        "Pullswitch",
+        "Conveyor",
+        "Isolated",
+        "Feeder",
+        "Tip",
+        "Electrical",
+        "Gearbox"
+      ],
+      "Shift": [
+        "Afternoon",
+        "Night",
+        "Morning"
+      ]
+    },
+    "username": "Advansys\\\\Visitor1"
+  },
+  "events": {
+    "system": {
+      "onStartup": {
+        "config": {
+          "script": "\tlogger \u003d system.util.getLogger(\u0027Event Editor\u0027)\n\tlogger.info(\u0027Initialise.....\u0027)\n\tself.custom.Changes \u003d {}\n\tlogger.info(\u0027Initialised!\u0027)"
+        },
+        "scope": "G",
+        "type": "script"
+      }
+    }
+  },
+  "params": {
+    "editable": {
+      "Cause": {
+        "name": "Cause",
+        "type": "Dropdown"
+      },
+      "Conveyor": {
+        "name": "Conveyor",
+        "type": "Dropdown"
+      },
+      "Description": {
+        "name": "Description",
+        "type": "TextField"
+      },
+      "FailureMode": {
+        "name": "Failure Mode",
+        "type": "Dropdown"
+      },
+      "ObjectType": {
+        "name": "Object Type",
+        "type": "Dropdown"
+      },
+      "Shift": {
+        "name": "Shift",
+        "type": "Dropdown"
+      }
+    },
+    "enumerationGroup": {
+      "pid40": {
+        "enumerationFilterOrder": [
+          "Conveyor"
+        ],
+        "enumerationGroup": [
+          {
+            "Conveyor": "Slew Conveyor"
+          },
+          {
+            "Conveyor": "Waste Conveyor"
+          },
+          {
+            "Conveyor": "DC 1"
+          },
+          {
+            "Conveyor": "Sacrificial Conveyor"
+          },
+          {
+            "Conveyor": "SC 1"
+          }
+        ]
+      },
+      "pid41": {
+        "enumerationFilterOrder": [
+          "Shift"
+        ],
+        "enumerationGroup": [
+          {
+            "Shift": "Afternoon"
+          },
+          {
+            "Shift": "Morning"
+          },
+          {
+            "Shift": "Night"
+          }
+        ]
+      },
+      "pid42": {
+        "enumerationFilterOrder": [
+          "Object Type",
+          "Failure Mode",
+          "Cause"
+        ],
+        "enumerationGroup": [
+          {
+            "Cause": "Spillage",
+            "FailureMode": "Cleaning",
+            "ObjectType": "Feeder"
+          },
+          {
+            "Cause": "Tramp Metal",
+            "FailureMode": "Clean",
+            "ObjectType": "Magnet"
+          },
+          {
+            "Cause": "Loose Bolts",
+            "FailureMode": "Cracked",
+            "ObjectType": "Feeder"
+          },
+          {
+            "Cause": "Big Rocks",
+            "FailureMode": "Blockage",
+            "ObjectType": "Feeder"
+          },
+          {
+            "Cause": "Damage",
+            "FailureMode": "Damaged",
+            "ObjectType": "Tip"
+          },
+          {
+            "Cause": "Rain",
+            "FailureMode": "Stopped",
+            "ObjectType": "Conveyor"
+          },
+          {
+            "Cause": "Metal Object",
+            "FailureMode": "Torn",
+            "ObjectType": "Belting"
+          },
+          {
+            "Cause": "Rock",
+            "FailureMode": "Pulled",
+            "ObjectType": "Pullswitch"
+          },
+          {
+            "Cause": "Stripped",
+            "FailureMode": "Gears",
+            "ObjectType": "Gearbox"
+          },
+          {
+            "Cause": "Big Rocks",
+            "FailureMode": "Blockage",
+            "ObjectType": "Tip"
+          },
+          {
+            "Cause": "Big Rocks",
+            "FailureMode": "Blocked",
+            "ObjectType": "Chute"
+          },
+          {
+            "Cause": "Damaged",
+            "FailureMode": "Skirting",
+            "ObjectType": "Tip"
+          },
+          {
+            "Cause": "Loose rele",
+            "FailureMode": "Tripped",
+            "ObjectType": "Electrical"
+          },
+          {
+            "Cause": "Maintenance",
+            "FailureMode": "Isolated",
+            "ObjectType": "Isolated"
+          },
+          {
+            "Cause": "Minisub",
+            "FailureMode": "Tripped",
+            "ObjectType": "Electrical"
+          }
+        ]
+      },
+      "pid45": {
+        "enumerationFilterOrder": [
+          "Description"
+        ],
+        "enumerationGroup": []
+      }
+    },
+    "rowData": {
+      "Cause": {
+        "displayOrder": 5,
+        "eventAttributeID": 35,
+        "name": "Cause",
+        "pending": false,
+        "preferred": true,
+        "quality": 192,
+        "readOnly": false,
+        "title": "Cause",
+        "value": "Stripped",
+        "version": 10,
+        "versionType": "manual"
+      },
+      "Conveyor": {
+        "displayOrder": 1,
+        "eventAttributeID": 27,
+        "name": "Conveyor",
+        "pending": false,
+        "preferred": true,
+        "quality": 192,
+        "readOnly": false,
+        "title": "Conveyor",
+        "value": "Sacrificial Conveyor",
+        "version": 2,
+        "versionType": "manual"
+      },
+      "Description": {
+        "displayOrder": 6,
+        "eventAttributeID": 40,
+        "name": "Description",
+        "pending": false,
+        "preferred": true,
+        "quality": 192,
+        "readOnly": false,
+        "title": "Description",
+        "value": null,
+        "version": 3,
+        "versionType": "manual"
+      },
+      "FailureMode": {
+        "displayOrder": 4,
+        "eventAttributeID": 34,
+        "name": "Failure Mode",
+        "pending": false,
+        "preferred": true,
+        "quality": 192,
+        "readOnly": false,
+        "title": "Failure Mode",
+        "value": "Gears",
+        "version": 9,
+        "versionType": "manual"
+      },
+      "ObjectType": {
+        "displayOrder": 3,
+        "eventAttributeID": 33,
+        "name": "Object Type",
+        "pending": false,
+        "preferred": true,
+        "quality": 192,
+        "readOnly": false,
+        "title": "Object Type",
+        "value": "Gearbox",
+        "version": 8,
+        "versionType": "manual"
+      },
+      "Shift": {
+        "displayOrder": 2,
+        "eventAttributeID": 28,
+        "name": "Shift",
+        "pending": false,
+        "preferred": true,
+        "quality": 192,
+        "readOnly": false,
+        "title": "Shift",
+        "value": "Morning",
+        "version": 2,
+        "versionType": "manual"
+      },
+      "edit": {
+        "value": true
+      },
+      "eventPeriodID": {
+        "value": 988
+      },
+      "eventSchemeID": {
+        "value": 9
+      },
+      "formGroup": {
+        "value": "Downtime"
+      },
+      "index": {
+        "value": 8
+      },
+      "periodEnd": {
+        "value": "2022-02-10T08:41:58.028Z"
+      },
+      "periodEndFormated": {
+        "displayOrder": -1,
+        "name": "Period End",
+        "title": "Period End",
+        "value": "10:41:58"
+      },
+      "periodStart": {
+        "value": "2022-02-10T07:03:29.509Z"
+      },
+      "periodStartFormated": {
+        "displayOrder": -2,
+        "name": "Period Start",
+        "title": "Period Start",
+        "value": "09:03:29"
+      }
+    },
+    "tilte": "Title"
+  },
+  "propConfig": {
+    "custom.Changes": {
+      "persistent": true
+    },
+    "custom.EventAttributeFilterIDs": {
+      "persistent": true
+    },
+    "custom.FlowEnumGroupsFromDefinition": {
+      "persistent": true
+    },
+    "custom.attributes": {
+      "persistent": true
+    },
+    "custom.chartDataUrl": {
+      "persistent": true
+    },
+    "custom.chartDefUrl": {
+      "persistent": true
+    },
+    "custom.data": {
+      "persistent": true
+    },
+    "custom.editable": {
+      "persistent": true
+    },
+    "custom.editableCopy": {
+      "persistent": true
+    },
+    "custom.enumGroupEdited": {
+      "persistent": true
+    },
+    "custom.filters": {
+      "persistent": true
+    },
+    "custom.flowConnection": {
+      "persistent": true
+    },
+    "custom.flowDefinition": {
+      "persistent": true
+    },
+    "custom.flowReportData": {
+      "persistent": true
+    },
+    "custom.flowReportDef": {
+      "persistent": true
+    },
+    "custom.itemMaster": {
+      "persistent": true
+    },
+    "custom.latestEventData": {
+      "persistent": true
+    },
+    "custom.microStoppedArray": {
+      "persistent": true
+    },
+    "custom.optionsObject": {
+      "persistent": true
+    },
+    "custom.testOptions": {
+      "persistent": true
+    },
+    "custom.username": {
+      "binding": {
+        "config": {
+          "path": "session.custom.flowUser"
+        },
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.Editable": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.EnumerationFilterOrder": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.editable": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.editableArray": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.enumGroup": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.enumerationGroup": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.filePath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.filters": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.rowData": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tilte": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.username": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 556
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "title"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.tilte"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "PackML/Title"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "basis": "272px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.data": {
+            "binding": {
+              "config": {
+                "path": "view.params.rowData"
+              },
+              "transforms": [
+                {
+                  "code": "\t# row data\n\tevent \u003d value\n\t# parameters\n\teditable \u003d self.view.params.editable\n\tenumGroups \u003d self.view.params.enumerationGroup\n\toptionsObject \u003d {}\n\tdata \u003d []\n\tfor colKey in event:\n\t\tcol \u003d event[colKey]\n\t\tif \u0027title\u0027 in col:\n\t\t\t#return col\n\t\t\trow \u003d {}\t\n\t\t\tname \u003d col[\u0027title\u0027]\n\t\t\tkey \u003d name.replace(\u0027 \u0027,\u0027\u0027)\n\t\t\tif key in editable:\n\t\t\t\tif \"type\" in editable[key]:\n\t\t\t\t\trow[\"editType\"] \u003d editable[key][\u0027type\u0027]\t\n\t\t\t\t\n\t\t\t\t#Get attribute values to filter options by \n\t\t\t\t#First Find Correct enumGroup to loop through\n\t\t\t\tenumGroupKey \u003d None\n\t\t\t\tfor enumGroupKey in enumGroups:\n\t\t\t\t\tattributeFilterOrder \u003d enumGroups[enumGroupKey][\"enumerationFilterOrder\"]\n\t\t\t\t\tif name in attributeFilterOrder:\n\t\t\t\t\t\tfor attributeIndex in range(len(attributeFilterOrder)):\n\t\t\t\t\t\t\tif name \u003d\u003d attributeFilterOrder[attributeIndex]:\n\t\t\t\t\t\t\t\tbreak\n\t\t\t\t\t\tbreak\n\n\t\t\t\tattributeFilterObject \u003d {}\n\t\t\t\tfor i in range(attributeIndex):\n\t\t\t\t\tattributeAlias \u003d attributeFilterOrder[i]\n\t\t\t\t\t#attributeName \u003d attribute[\"name\"]\n\t\t\t\t\tattributeKey \u003d attributeAlias.replace(\" \",\"\")\n\t\t\t\t\tattributeValue \u003d event[attributeKey][\"value\"]\n\t\t\t\t\tattributeFilterObject[attributeKey] \u003d attributeValue\n\t\t\t\t\t\n\t\t\t\n\t\t\t\tattributeFilter \u003d attributeFilterObject.items()\n\n\t\t\t\toptions \u003d []\n\t\t\t\t\n\t\t\t\tif enumGroupKey is not None:\n\t\t\t\t\tenumGroup \u003d enumGroups[enumGroupKey][\"enumerationGroup\"]\n\t\t\t\t\t#return enumGroup\n\t\t\t\t\tfor object in enumGroup:\n\t\t\t\t\t\t\n\t\t\t\t\t\tobjectList \u003d object.items()\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\tif all(item in objectList for item in attributeFilter):\n\t\t\t\t\t\t\t#return key\n\t\t\t\t\t\t\tif key in object:\n\t\t\t\t\t\t\t\t#return object\n\t\t\t\t\t\t\t\toptions.append(object[key])\n\t\t\t\t\t\t\n\t\t\t\t\toptions \u003d list(set(options))\n\t\t\t\t\toptionsObject[key] \u003d options\t\n\t\t\t\t\trow[\"options\"] \u003d options\n\t\t\t\t\n\t\t\t\trow[\"enumGroupID\"] \u003d enumGroupKey\t \n\t\t\trow[\"name\"] \u003d col[\u0027title\u0027]\n\t\t\trow[\"value\"] \u003d col[\u0027value\u0027]\n\t\t\trow[\"displayOrder\"] \u003d col[\u0027displayOrder\u0027]\n\t\t\t\n\t\t\tdata.append(row)\n\t\t\t\n\tself.view.custom.optionsObject \u003d optionsObject\n\tdataSorted \u003d sorted(data, key \u003d lambda row:row[\"displayOrder\"])\n\treturn dataSorted",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "columns": [
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "name",
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "string",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "YYYY/MM/DD HH:mm:ss",
+              "editable": true,
+              "field": "value",
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "Flow/Private API/V1/Forms/Components/Event Cell Editor",
+              "visible": true,
+              "width": ""
+            }
+          ],
+          "enableHeader": false,
+          "pager": {
+            "bottom": false
+          },
+          "selection": {
+            "enableRowSelection": false
+          }
+        },
+        "scripts": {
+          "customMethods": [],
+          "extensionFunctions": null,
+          "messageHandlers": [
+            {
+              "messageType": "rowUpdate",
+              "pageScope": true,
+              "script": "\tlogger \u003d system.util.getLogger(\"rowUpdate Message Received\")\n\t\n\tif \u0027name\u0027 not in payload:\n\t\tsystem.perspective.print(\u0027rowUpdate Message Received: no name in payload\u0027)\n\t\treturn\n\t#Add all cahnges to newValuesObject and loop through that object to update the table\n\tnewValuesObject \u003d {}\n\t\t\n\t#Add Updated Value from Dropdown to Table\n\tfieldName \u003d payload[\u0027name\u0027]\n\tfieldNameKey \u003d fieldName.replace(\" \",\"\")\n\t\n\trowData \u003d self.view.params.rowData\n\tlogMessage \u003d str(payload)\n\tsystem.perspective.print(logMessage)\n\tlogger.info(logMessage)\n\t#logger.info(str(rowData))\n\t#Check if field is Editable\n#\tif \u0027editType\u0027 not in rowData:\n#\t\tlogMessage \u003d \u0027Not a Editble Field:\u0027 + str(payload) + \"rowData:\" + str(rowData)\n#\t\tsystem.perspective.print(logMessage)\n#\t\treturn\n\t\t\n\tdata \u003d self.props.data\n\tdataLength \u003d len(data)\n\t\t\n\tfor index in range(dataLength):\n\t\trow \u003d data[index]\n\t\tlogMessage \u003d \"fieldName:\" + fieldName + \"--------row[\u0027name\u0027]:\" + row[\u0027name\u0027]\n\t\tsystem.perspective.print(logMessage)\n\t\tif fieldName \u003d\u003d row[\u0027name\u0027]:\n\t\t\tupdatedrowValue \u003d payload[\u0027value\u0027]\n#\t\t\tlogMessage \u003d \"Updated Value:\" + updatedrowValue\n#\t\t\tsystem.perspective.print(logMessage)\n\t\t\tEventAttributeID \u003d rowData[fieldNameKey][\"eventAttributeID\"]\n\t\t\t#row[\u0027value\u0027] \u003d payload[\u0027value\u0027]\n\t\t\tnewValuesObject[fieldNameKey] \u003d {\"index\":index,\"name\":fieldName,\"value\":updatedrowValue,\"eaid\":EventAttributeID}\n\t\t\tbreak\n\t\t\t\n\tlogger.info(\"data\" + str(data))\n\t\n\t#Based on Updated Value, update options list for each eventAttribute in the Filter Array\n\t#If new options list only has 1 value then update the value to that option\n\t#If new options list excludes current value then set current value to \"\"\t\t\n\trowData \u003d self.view.params.rowData\n\tenumGroups \u003d self.view.params.enumerationGroup\n\tenumGroupKey \u003d data[index][\"enumGroupID\"]\n\tenumGroup \u003d enumGroups[enumGroupKey][\"enumerationGroup\"]\n\tlogger.info(\"enumGroup: \" + str(enumGroup))\n\tattributeFilterOrder \u003d enumGroups[enumGroupKey][\"enumerationFilterOrder\"]\n\tlogger.info(\"attributeFilterOrder: \" + str(attributeFilterOrder))\n\tattributeFilterOrderLength \u003d len(attributeFilterOrder)\n\t\n\t# Need to update options in the order of the attributeFilterOrderArray\n\tattributeFilterObject \u003d {}\t\n\tfor attribute in attributeFilterOrder:\n\t\tkey \u003d attribute.replace(\" \",\"\")\n\t\tif key in newValuesObject:\n\t\t\tattributeFilterObject[fieldNameKey] \u003d updatedrowValue\n\t\t\tcontinue\n\t\telse:\n\t\t\tnewValueObject \u003d {}\n\t\t\teventAttributeID \u003d rowData[key][\"eventAttributeID\"]\n\t\t\tnewValueObject[\"eaid\"] \u003d eventAttributeID\n\t\t\tnewValueObject[\"name\"] \u003d rowData[key][\"name\"]\n\t\t\t\n\t\tlogger.info(\"key: \" + str(key))\n\t\trowValue \u003d None\n\t\tfor index in range(dataLength):\n\t\t\trow \u003d data[index]\n\t\t\trowKey \u003d row[\"name\"].replace(\" \",\"\")\n\t\t\tif key \u003d\u003d rowKey and (\"options\" in row):\n\t\t\t\trowValue \u003d row[\"value\"]\t\n\t\t\t\tnewValueObject[\"index\"] \u003d index\t\t\t\n\t\t\t\tbreak\n\t\tif \trowValue is None:\n\t\t\treturn\t\n\t\tlogger.info(\"attributeFilterObject: \" + str(attributeFilterObject))\n\t\tattributeFilter \u003d attributeFilterObject.items()\n\t\tnewOptions \u003d []\n\t\tfor object in enumGroup:\n\t\t\tobjectList \u003d object.items()\n\t\t\tif all(item in objectList for item in attributeFilter):\n\t\t\t\tnewOptions.append(object[key])\t\n\t\t\t\t\n\t\tnewOptions \u003d list(set(newOptions))\t\t\n\t\t#logger.info(\"currentOptions: \" + str(row[\"options\"]))\n\t\tlogger.info(\"newOptions: \" + str(newOptions))\n\t\tnewOptionsSet \u003d set(newOptions)\n\t\tnewValueObject[\u0027options\u0027] \u003d newOptions\n\t\tattributeFilterObject[key] \u003d rowValue\n\t\tif len(newOptions) \u003d\u003d 1:\n\t\t\tnewValueObject[\u0027value\u0027] \u003d newOptions[0]\n\t\t\tattributeFilterObject[key] \u003d newOptions[0]\n\t\telif (rowValue in newOptionsSet) \u003d\u003d False:\n\t\t\tnewValueObject[\u0027value\u0027] \u003d \"\"\n\t\t\tattributeFilterObject[key] \u003d \"\"\t\t\n\t\telse:\n\t\t\tpass\n\t\tlogger.info(\"newValueObject: \" + str(newValueObject))\n\t\tnewValuesObject[key] \u003d newValueObject\n\t\t\n\tlogger.info(\"newValuesObject: \" + str(newValuesObject))\t\t\t\n\t\n\t#Update Table with new values/options\t\n\t#Update Changes Object with new Changes\n\tChangesObject \u003d self.view.custom.Changes#self.getSibling(\"SubmissionFlex\").custom.Changes\n\tfor updatedAttributeKey in newValuesObject:\n\t\tupdatedAttribute \u003d newValuesObject[updatedAttributeKey]\n\t\trowIndex \u003d updatedAttribute[\"index\"]\t\n\t\t#If Updated Attribute has been populated with a new value then update table with new value\t\n\t\tif \"value\" in updatedAttribute:\n\t\t\tupdatedValue \u003d updatedAttribute[\"value\"]\t\n\t\t\tdata[rowIndex][\"value\"] \u003d updatedValue\n\t\t\tChangeObject \u003d {}\n\t\t\tChangeObject[\"name\"] \u003d updatedAttribute[\"name\"]\n\t\t\tChangeObject[\"value\"] \u003d updatedValue\n\t\t\tChangeObject[\"eaid\"] \u003d updatedAttribute[\"eaid\"]\n\t\t\t\n\t\t\t#eventAttributeValues \u003d [{\u0027name\u0027:\u0027Mode\u0027,\u0027value\u0027:\u0027Production\u0027},{\u0027name\u0027:\u0027Work Order\u0027,\u0027value\u0027:\u0027WO563\u0027}]\n\t\t\tChangesObject[updatedAttributeKey] \u003d ChangeObject\n\t\t#If Updated Attribute has been populated with new options then update table with new options\t\t\n\t\tif \"options\" in updatedAttribute:\n\t\t\tdata[rowIndex][\"options\"] \u003d updatedAttribute[\"options\"]\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t",
+              "sessionScope": false,
+              "viewScope": false
+            }
+          ]
+        },
+        "type": "ia.display.table"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\t#Submit Changes to Flow\n\tlogger \u003d system.util.getLogger(\"EventEditorSubmit\")\n\tusername \u003d self.view.custom.username\n\teventPeriod \u003d self.view.params.rowData\n\tChangesObject \u003d self.view.custom.Changes\n\t\n\tlogger.info(\"ChangesObject: \" + str(ChangesObject))\n\teventAttributeValues \u003d []\n\tfor changeKey in ChangesObject:\n\t\tchangeObject \u003d ChangesObject[changeKey]\n\t\teventAttributeValue \u003d {}\n\t\teventAttributeValue[\u0027name\u0027] \u003d changeObject[\u0027name\u0027]\n\t\teventAttributeValue[\u0027value\u0027] \u003d changeObject[\u0027value\u0027]\n\t\teventAttributeValue[\u0027eventAttributeID\u0027] \u003d changeObject[\u0027eaid\u0027]\n\t\teventAttributeValues.append(eventAttributeValue)\n\t\t\n\tresponses \u003d Flow.PrivateAPI.V1.Event.UpdateEventAttributeValues(\n\tConnection\u003dNone,\n\tUsername\u003dusername,\n\tEventPeriod \u003d eventPeriod,\n\tEventAttributeValues\u003deventAttributeValues\n\t)\n\t\n\tlogger.info(str(responses))\n\t#refresh\n\tpayload \u003d {}\n\tpayload[\u0027action\u0027] \u003d \u0027refresh\u0027\n\tsystem.perspective.sendMessage(messageType\u003d\"refresh\",payload \u003d payload,scope\u003d\u0027page\u0027)\n\tsystem.perspective.closePopup(\"EventEditorPopup\")\n\t\n\t\t\n\t\n\t\t\n\t"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Submit Changes Button"
+            },
+            "position": {
+              "basis": "160px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#555555"
+              },
+              "text": "Submit Changes"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "SubmissionFlex"
+        },
+        "position": {
+          "basis": "40px"
+        },
+        "props": {
+          "justify": "center"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

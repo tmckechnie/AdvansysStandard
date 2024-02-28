@@ -1,0 +1,17 @@
+{
+  "base": {
+    "animation": {
+      "duration": "1s",
+      "keyframes": {
+        "0%": {
+          "color": "var(--bodySymbolPassiveText)",
+          "fill": "var(--bodySymbolPassive)"
+        },
+        "100%": {
+          "color": "var(--bodySymbolActiveText)",
+          "fill": "var(--bodySymbolActive)"
+        }
+      }
+    }
+  }
+}

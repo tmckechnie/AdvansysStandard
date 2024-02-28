@@ -1,0 +1,263 @@
+{
+  "custom": {
+    "CurrentValue": 2
+  },
+  "params": {
+    "Label": "Mode",
+    "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100M100"
+  },
+  "propConfig": {
+    "custom.CurrentValue": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/Mode"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 56,
+      "width": 500
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "100px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Text"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "custom": {
+          "OperMode": 2
+        },
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tself.view.custom.CurrentValue \u003d int(self.custom.OperMode)\t\t"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Auto"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.enabled": {
+            "binding": {
+              "config": {
+                "path": "view.custom.CurrentValue"
+              },
+              "transforms": [
+                {
+                  "code": "\tif value \u003d\u003d self.getSibling(\"Maintenance\").custom.OperMode:\n\t\treturn False\n\t\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.custom.CurrentValue"
+              },
+              "transforms": [
+                {
+                  "code": "\tvalidOperMode \u003d self.custom.OperMode\n\tif value \u003d\u003d validOperMode:\n\t\treturn \"Standard/Popups/Button/Selected\"\n\t\t\n\treturn \"Standard/Popups/Button/UnSelected\"",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Button/Selected",
+            "margin": 4
+          },
+          "text": "Auto"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "custom": {
+          "OperMode": 1
+        },
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tself.view.custom.CurrentValue \u003d int(self.custom.OperMode)\n#\t#logger \u003d system.util.getLogger(\"Mode Row Tag Write\")\n#\t#Write Back to tag\n#\ttagPath \u003d self.view.params.TagPath+\"/Cfg/Mode\"\n#\tnewValue \u003d int(self.custom.OperMode)\n#\t#logger.info(str(newValue))\n#\ttagWrite \u003d system.tag.writeBlocking([tagPath],[newValue])\n#\tif tagWrite[0].isGood() \u003d\u003d False:\n#\t\t#logger.info(\"Mode Row Write Failed %s: \"%(self.getSibling(\"Label\").props.text) + str(OPCPath) + str(OPCServer) + str(newValue))\n#\t\tmessage \u003d \"Tag Write Failed. \"\n#\t\treason \u003d str(tagWrite[0])#\"Tag Write response is not good.\"\n#\t\tStandard.ControlModules.Common.ThrownException(message,reason)\n#\t\treturn\n#\t#logger.info(\"Mode Row Write Good %s: \"%(self.getSibling(\"Label\").props.text) + str(OPCPath) + str(OPCServer) + str(newValue))\t\t\t"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Manual"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.enabled": {
+            "binding": {
+              "config": {
+                "path": "view.custom.CurrentValue"
+              },
+              "transforms": [
+                {
+                  "code": "\tif value \u003d\u003d self.getSibling(\"Maintenance\").custom.OperMode:\n\t\treturn False\n\t\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.custom.CurrentValue"
+              },
+              "transforms": [
+                {
+                  "code": "\tvalidOperMode \u003d self.custom.OperMode\n\tif value \u003d\u003d validOperMode:\n\t\treturn \"Standard/Popups/Button/Selected\"\n\t\t\n\treturn \"Standard/Popups/Button/UnSelected\"",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Button/UnSelected",
+            "margin": 4
+          },
+          "text": "Manual"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "custom": {
+          "OperMode": 0
+        },
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "#\tself.view.custom.CurrentValue \u003d int(self.custom.OperMode)\n#\tlogger \u003d system.util.getLogger(\"Mode Row Tag Write\")\n#\t#Write Back to tag\n#\ttagPath \u003d self.view.params.TagPath\n#\t#logger.info(str(newValue))\n\tcurrentValue \u003d self.view.custom.CurrentValue\n\tnewValue \u003d int(self.custom.OperMode)\n\tif newValue \u003d\u003d currentValue:\n\t\tnewValue \u003d self.getSibling(\"Manual\").custom.OperMode\t\n\tself.view.custom.CurrentValue \u003d newValue\n#\tlogger.info(str(newValue))\t\n#\ttagWrite \u003d system.tag.writeBlocking([tagPath],[newValue])\n#\tif tagWrite[0].isGood() \u003d\u003d False:\n#\t\t#logger.info(\"Mode Row Write Failed %s: \"%(self.getSibling(\"Label\").props.text) + str(OPCPath) + str(OPCServer) + str(newValue))\n#\t\tmessage \u003d \"Tag Write Failed. \"\n#\t\treason \u003d str(tagWrite[0])#\"Tag Write response is not good.\"\n#\t\tStandard.ControlModules.Common.ThrownException(message,reason)\n#\t\treturn\n\t\t"
+              },
+              "permissions": {
+                "securityLevels": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "children": [],
+                            "name": "Engineer"
+                          }
+                        ],
+                        "name": "Roles"
+                      }
+                    ],
+                    "name": "Authenticated"
+                  }
+                ],
+                "type": "AllOf"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Maintenance"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.custom.CurrentValue"
+              },
+              "transforms": [
+                {
+                  "code": "\tvalidOperMode \u003d self.custom.OperMode\n\tif value \u003d\u003d validOperMode:\n\t\treturn \"Standard/Popups/Button/Selected\"\n\t\t\n\treturn \"Standard/Popups/Button/UnSelected\"",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Button/UnSelected",
+            "margin": 4
+          },
+          "text": "Maintenance"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

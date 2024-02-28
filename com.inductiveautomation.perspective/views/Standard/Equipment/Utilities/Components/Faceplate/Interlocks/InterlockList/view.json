@@ -1,0 +1,136 @@
+{
+  "custom": {
+    "Interlocks": [
+      {
+        "TagPath": "[FMG]FMG/Standard/HV201A/Interlock/Hold",
+        "instancePosition": {},
+        "instanceStyle": {
+          "classes": ""
+        }
+      },
+      {
+        "TagPath": "[FMG]FMG/Standard/HV201A/Interlock/Operation",
+        "instancePosition": {},
+        "instanceStyle": {
+          "classes": ""
+        }
+      },
+      {
+        "TagPath": "[FMG]FMG/Standard/HV201A/Interlock/Protective",
+        "instancePosition": {},
+        "instanceStyle": {
+          "classes": ""
+        }
+      }
+    ]
+  },
+  "params": {
+    "TagPath": "[FMG]FMG/Standard/HV201A"
+  },
+  "propConfig": {
+    "custom.Interlocks": {
+      "binding": {
+        "config": {
+          "path": "view.params.TagPath"
+        },
+        "transforms": [
+          {
+            "code": "\ttags \u003d system.tag.browse(path\u003dvalue+\"/Interlock\")\n\n\tinstances \u003d []\n\tfor tag in tags:\n\t\tif tag[\u0027name\u0027]!\u003d\u0027Interlocked\u0027:\n\t\t\tinstance \u003d {\n\t\t\t\t\t\t\t  \"instanceStyle\": {\n\t\t\t\t\t\t\t\t\"classes\": \"\"\n\t\t\t\t\t\t\t  },\n\t\t\t\t\t\t\t  \"instancePosition\": {},\n\t\t\t\t\t\t\t  \"TagPath\": tag[\u0027fullPath\u0027],\n\t\t\t\t\t\t\t}\n\t\t\tinstances.append(instance)\n\t\t\n\treturn instances",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 256,
+      "width": 383
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px",
+              "shrink": 0
+            },
+            "props": {
+              "params": {
+                "Title": "Interlocks"
+              },
+              "path": "Standard/Control Modules/Components/Faceplate/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "InterlockStatusRepeater"
+            },
+            "position": {
+              "basis": "120px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.instances": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Interlocks"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "direction": "column",
+              "elementPosition": {
+                "basis": "30px",
+                "grow": 0
+              },
+              "elementStyle": {
+                "margin": 5
+              },
+              "path": "Standard/Control Modules/Components/Faceplate/Interlocks/InterlockRow",
+              "style": {
+                "classes": "Standard/Popups/Content"
+              },
+              "useDefaultViewHeight": false,
+              "useDefaultViewWidth": false
+            },
+            "type": "ia.display.flex-repeater"
+          }
+        ],
+        "meta": {
+          "name": "Interlocks"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

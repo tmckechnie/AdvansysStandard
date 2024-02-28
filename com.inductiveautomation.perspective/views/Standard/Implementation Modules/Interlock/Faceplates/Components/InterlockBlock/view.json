@@ -1,0 +1,672 @@
+{
+  "custom": {
+    "Color": "#555555",
+    "Interlock": {
+      "Description": "ROM Gate - Diverter Valve Opened",
+      "Inverted": false,
+      "ModuleInfo": {
+        "description": "ROM Gate - Diverter Valve",
+        "fullPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/G01/100V001",
+        "instanceExists": true,
+        "instanceName": "100V001",
+        "standardViewPath": "Standard/Control Modules/Valve",
+        "typeId": "Application Default/Control Modules/Valve"
+      },
+      "Reason": "\"DB100V001\".CM.In.Opened",
+      "ReasonCode": 0,
+      "State": false
+    }
+  },
+  "params": {
+    "Cfg": {
+      "LeftDown": true,
+      "LeftUp": false,
+      "Linked": false,
+      "RightDown": true,
+      "RightUp": false,
+      "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV01/100M001IL01/Sts/InterLock2",
+      "Used": true
+    }
+  },
+  "propConfig": {
+    "custom.Color": {
+      "persistent": true
+    },
+    "custom.Interlock": {
+      "binding": {
+        "config": {
+          "struct": {
+            "Inverted": "if({view.params.Cfg.TagPath}\u003d\"\",0,tag({view.params.Cfg.TagPath}+\"/Inverted\"))",
+            "Reason": "if({view.params.Cfg.TagPath}\u003d\"\",\"true\",tag({view.params.Cfg.TagPath}+\"/Reason\"))",
+            "ReasonCode": "if({view.params.Cfg.TagPath}\u003d\"\",0,tag({view.params.Cfg.TagPath}+\"/ReasonCode\"))",
+            "State": "if({view.params.Cfg.TagPath}\u003d\"\",0,tag({view.params.Cfg.TagPath}+\"/State\"))",
+            "moduleInfo": "if({view.params.Cfg.TagPath}\u003d\"\",0,tag({view.params.Cfg.TagPath}+\"/ReasonModuleInfo\"))"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\t#return value\n\treason \u003d value[\u0027Reason\u0027]\n\t#tagPath \u003d self.params.Cfg.TagPath\n\t#browseTagPath \u003d tagPath.split(\u0027/\u0027)[0]\n\t#info \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dbrowseTagPath)\n\tinfo\u003dvalue[\u0027moduleInfo\u0027]\n\tinterlock \u003d {}\n\tinterlock[\u0027ModuleInfo\u0027] \u003d info\n\tinterlock[\u0027State\u0027] \u003d value[\u0027State\u0027]\n\treason \u003d value[\u0027Reason\u0027]\n\tinterlock[\u0027Reason\u0027] \u003d reason\n\tinterlock[\u0027ReasonCode\u0027] \u003d value[\u0027ReasonCode\u0027]\n\tinterlock[\u0027Inverted\u0027] \u003d value[\u0027Inverted\u0027]\n\t\n\tif reason !\u003d \u0027true\u0027:\n\t\tif \u0027description\u0027 in info:\n\t\t\tdescription \u003d info[\u0027description\u0027] + \" \" + reason.split(\u0027.\u0027)[-1]\n\t\telse:\n\t\t\tdescription \u003d \"Not Found\" + \" \" + reason\t\n\telse:\n\t\tdescription \u003d \"Healthy\"\n\t\treason \u003d \"Always Healthy\"\n\n\tinterlock[\u0027Description\u0027] \u003d description\n\treturn interlock",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.Interlock.Interlock57r.ReasonCode": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "publishInitial": false,
+          "tagPath": "[StandardS71500]Modules/Control Modules/100M100IL01/Sts/Interlock1/ReasonCode"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Interlock.Interlock57r.ReasonString": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "publishInitial": false,
+          "tagPath": "[StandardS71500]Modules/Control Modules/100M100IL01/Sts/Interlock1/Reason"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Interlock.Interlock57r.State": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "publishInitial": false,
+          "tagPath": "[StandardS71500]Modules/Control Modules/100M100IL01/Sts/Interlock1/State"
+        },
+        "type": "tag"
+      }
+    },
+    "params.Cfg": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 100
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 1,
+          "width": 0.5,
+          "x": 0.25
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "view.params.Cfg.Used"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Interlock.State"
+              },
+              "transforms": [
+                {
+                  "fallback": "{}",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "Standard/Body/Symbols/Displays/Fill/Active"
+                    },
+                    {
+                      "input": false,
+                      "output": "Standard/Body/Symbols/Displays/Fill/Passive"
+                    }
+                  ],
+                  "outputType": "style-list",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {},
+          "text": " "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Off"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "custom.Color": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Color"
+              },
+              "type": "property"
+            }
+          },
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Cfg.Used} \u0026\u0026 !{../ON.meta.visible} \u0026\u0026 !{view.params.Cfg.Linked}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[0].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "this.custom.Color"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M 0 150 L 150 150 L 150 175 L 150 125 L 150 150 L 350 50 ",
+              "fill": {
+                "opacity": 0,
+                "rule": "nonzero"
+              },
+              "name": "ports",
+              "stroke": {
+                "dasharray": "none",
+                "miterlimit": "4",
+                "opacity": "1",
+                "width": 2
+              },
+              "style": {
+                "classes": " ",
+                "vector-effect": "non-scaling-stroke"
+              },
+              "type": "path"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 500 300"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "ON"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "custom.Color": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Color"
+              },
+              "type": "property"
+            }
+          },
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Cfg.Used} \u0026\u0026 {view.custom.Interlock.State} \u0026\u0026 !{view.params.Cfg.Linked}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[0].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "this.custom.Color"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M 0 150 L 150 150 L 150 175 L 150 125 L 150 150 L 350 150 L 350 175 L 350 125 ",
+              "fill": {
+                "opacity": 0,
+                "rule": "nonzero"
+              },
+              "name": "ports",
+              "stroke": {
+                "dasharray": "none",
+                "miterlimit": "4",
+                "opacity": 1,
+                "width": 2
+              },
+              "style": {
+                "classes": " ",
+                "vector-effect": "non-scaling-stroke"
+              },
+              "type": "path"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 500 300"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Base"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "custom.Color": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Color"
+              },
+              "type": "property"
+            }
+          },
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Cfg.Used} \u0026\u0026 !{view.params.Cfg.Linked}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[0].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "this.custom.Color"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M 350 150 L 350 125 L 350 175 L 350 150 L 500 150 ",
+              "fill": {
+                "opacity": 0
+              },
+              "name": "ports",
+              "stroke": {
+                "dasharray": "none",
+                "miterlimit": "4",
+                "opacity": "1",
+                "width": 2
+              },
+              "style": {
+                "classes": " ",
+                "vector-effect": "non-scaling-stroke"
+              },
+              "type": "path"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 500 300"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "LeftUp"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "custom.Color": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Color"
+              },
+              "type": "property"
+            }
+          },
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "view.params.Cfg.LeftUp"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[0].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "this.custom.Color"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M 0 150 L 0 0 ",
+              "fill": {
+                "opacity": 0
+              },
+              "name": "ports",
+              "stroke": {
+                "dasharray": "none",
+                "miterlimit": "4",
+                "opacity": "1",
+                "width": 2
+              },
+              "style": {
+                "classes": " ",
+                "vector-effect": "non-scaling-stroke"
+              },
+              "type": "path"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 500 300"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "LeftDown"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "custom.Color": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Color"
+              },
+              "type": "property"
+            }
+          },
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "view.params.Cfg.LeftDown"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[0].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "this.custom.Color"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M 0 150 L 0 300 ",
+              "fill": {
+                "opacity": 0
+              },
+              "name": "ports",
+              "stroke": {
+                "dasharray": "none",
+                "miterlimit": "4",
+                "opacity": "1",
+                "width": 2
+              },
+              "style": {
+                "classes": " ",
+                "vector-effect": "non-scaling-stroke"
+              },
+              "type": "path"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 500 300"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "RightUp"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "custom.Color": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Color"
+              },
+              "type": "property"
+            }
+          },
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "view.params.Cfg.RightUp"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[0].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "this.custom.Color"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M 500 150 L 500 0 ",
+              "fill": {
+                "opacity": 0
+              },
+              "name": "ports",
+              "stroke": {
+                "dasharray": "none",
+                "miterlimit": "4",
+                "opacity": "1",
+                "width": 2
+              },
+              "style": {
+                "classes": " ",
+                "vector-effect": "non-scaling-stroke"
+              },
+              "type": "path"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 500 300"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "RightDown"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "custom.Color": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Color"
+              },
+              "type": "property"
+            }
+          },
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "path": "view.params.Cfg.RightDown"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[0].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "this.custom.Color"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M 500 150 L 500 300 ",
+              "fill": {
+                "opacity": 0
+              },
+              "name": "ports",
+              "stroke": {
+                "dasharray": "none",
+                "miterlimit": "4",
+                "opacity": "1",
+                "width": 2
+              },
+              "style": {
+                "classes": " ",
+                "vector-effect": "non-scaling-stroke"
+              },
+              "type": "path"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 500 300"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Line"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "custom.Color": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Color"
+              },
+              "type": "property"
+            }
+          },
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Cfg.Used} \u0026\u0026 {view.params.Cfg.Linked}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.elements[0].stroke.paint": {
+            "binding": {
+              "config": {
+                "path": "this.custom.Color"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M 0 150 L 500 150 ",
+              "fill": {
+                "opacity": 0
+              },
+              "name": "ports",
+              "stroke": {
+                "dasharray": "none",
+                "miterlimit": "4",
+                "opacity": "1",
+                "width": 2
+              },
+              "style": {
+                "classes": " ",
+                "vector-effect": "non-scaling-stroke"
+              },
+              "type": "path"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 500 300"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\ttagPath \u003d self.view.custom.Interlock.ModuleInfo.fullPath\n\tif len(tagPath)\u003e0:\n\t\tstandardViewPath \u003d self.view.custom.Interlock.ModuleInfo.standardViewPath\n\t\tdescription \u003d self.view.custom.Interlock.ModuleInfo.description\n\t\tinstanceName \u003d self.view.custom.Interlock.ModuleInfo.instanceName\n\t\ttitle \u003d instanceName + \" - \" + description\n\t\tparamsObject \u003d {\"TagPath\":tagPath}\n\t\tfaceplatePath \u003d standardViewPath + \"/Faceplates/Faceplate\"\n\t\tposition\u003d{\"right\":5,\"width\":350,\"height\":400,\"bottom\":45}\n\t\tif \"Interlock\" in standardViewPath:\n\t\t\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003dfaceplatePath,Position\u003dposition)\n\t\telse:\n\t\t\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003dfaceplatePath)"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "enabled": true
+      }
+    },
+    "propConfig": {
+      "meta.tooltip.text": {
+        "binding": {
+          "config": {
+            "expression": "\"Reason:\" + {view.custom.Interlock.Description}\r\n//+\" View:\" + {view.custom.Interlock.ModuleInfo.standardViewPath}"
+          },
+          "type": "expr"
+        }
+      }
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

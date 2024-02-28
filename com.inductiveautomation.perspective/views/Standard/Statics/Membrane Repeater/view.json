@@ -1,0 +1,57 @@
+{
+  "custom": {},
+  "params": {
+    "NumberOfMembranes": 4
+  },
+  "propConfig": {
+    "params.NumberOfMembranes": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 130,
+      "width": 170
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "FlexRepeater"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.instances": {
+            "binding": {
+              "config": {
+                "path": "view.params.NumberOfMembranes"
+              },
+              "transforms": [
+                {
+                  "code": "\tinstances \u003d []\n\t\n\tfor i in range(value):\n\t\tinstance \u003d {\"instanceStyle\": {},\"instancePosition\": {}}\n\t\tinstances.append(instance)\n\treturn instances",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Statics/Single Membrane",
+          "useDefaultViewHeight": false,
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,776 @@
+{
+  "custom": {
+    "ButtonEx": "value",
+    "config": {
+      "markers": [
+        {
+          "event": {
+            "stopPropagation": false
+          },
+          "icon": {
+            "color": "#1A1A92",
+            "path": "material/location_on",
+            "size": {
+              "height": 40,
+              "width": 40
+            },
+            "style": {
+              "classes": ""
+            }
+          },
+          "lat": -22,
+          "lng": 116,
+          "name": "Site",
+          "opacity": 1,
+          "popup": {
+            "autoClose": true,
+            "closeButton": true,
+            "closeOnClick": false,
+            "closeOnEscapeKey": true,
+            "content": {
+              "style": "value",
+              "text": "",
+              "view": {
+                "params": {
+                  "ModelItemTagPath": "[Standard]Standard/Model Item"
+                },
+                "path": "Standard/Components/Map/Components/Map Popup"
+              }
+            },
+            "enabled": true,
+            "height": {
+              "max": null
+            },
+            "pan": {
+              "auto": true
+            },
+            "width": {
+              "max": 300,
+              "min": 50
+            }
+          },
+          "properties": {},
+          "tooltip": {
+            "content": {
+              "text": "",
+              "view": {}
+            },
+            "direction": "auto",
+            "opacity": 1,
+            "permanent": false,
+            "sticky": false
+          }
+        },
+        {
+          "event": {
+            "stopPropagation": false
+          },
+          "icon": {
+            "color": "#1A1A92",
+            "path": "material/location_on",
+            "size": {
+              "height": 40,
+              "width": 40
+            },
+            "style": {
+              "classes": ""
+            }
+          },
+          "lat": -21,
+          "lng": 118,
+          "name": "Site",
+          "opacity": 1,
+          "popup": {
+            "autoClose": true,
+            "closeButton": true,
+            "closeOnClick": false,
+            "closeOnEscapeKey": true,
+            "content": {
+              "style": "value",
+              "text": "",
+              "view": {
+                "params": {
+                  "ModelItemTagPath": "[Standard]Standard/Model Item"
+                },
+                "path": "Standard/Components/Map/Components/Map Popup"
+              }
+            },
+            "enabled": true,
+            "height": {
+              "max": null
+            },
+            "pan": {
+              "auto": true
+            },
+            "width": {
+              "max": 300,
+              "min": 50
+            }
+          },
+          "properties": {},
+          "tooltip": {
+            "content": {
+              "text": "",
+              "view": {}
+            },
+            "direction": "auto",
+            "opacity": 1,
+            "permanent": false,
+            "sticky": false
+          }
+        }
+      ],
+      "vectors": [
+        {
+          "circles": [
+            {
+              "lat": -22,
+              "lng": 116,
+              "name": -22,
+              "properties": {}
+            }
+          ],
+          "event": {
+            "stopPropagation": false
+          },
+          "fill": {
+            "color": "#DC720B2E",
+            "enabled": true,
+            "opacity": 1,
+            "rule": "nonzero"
+          },
+          "radius": 30000,
+          "stroke": {
+            "color": "",
+            "dashArray": "",
+            "dashOffset": "",
+            "enabled": true,
+            "lineCap": "round",
+            "lineJoin": "round",
+            "opacity": 1,
+            "weight": 3
+          }
+        },
+        {
+          "circles": [
+            {
+              "lat": -21,
+              "lng": 118,
+              "name": -21,
+              "properties": {}
+            }
+          ],
+          "event": {
+            "stopPropagation": false
+          },
+          "fill": {
+            "color": "#DC720B2E",
+            "enabled": true,
+            "opacity": 1,
+            "rule": "nonzero"
+          },
+          "radius": 30000,
+          "stroke": {
+            "color": "",
+            "dashArray": "",
+            "dashOffset": "",
+            "enabled": true,
+            "lineCap": "round",
+            "lineJoin": "round",
+            "opacity": 1,
+            "weight": 3
+          }
+        }
+      ],
+      "views": [
+        {
+          "lat": -22.35,
+          "lng": 116,
+          "params": {
+            "DefaultHeight": 50,
+            "DefaultWidth": 200,
+            "ModelItemTagPath": "[Standard]Standard/Model Item",
+            "Visible": true
+          },
+          "path": "Standard/Components/Map/Components/Label",
+          "shadow": false,
+          "transparentBackground": true
+        },
+        {
+          "lat": -21.35,
+          "lng": 118,
+          "params": {
+            "DefaultHeight": 50,
+            "DefaultWidth": 200,
+            "ModelItemTagPath": "[Standard]Standard/Model Item",
+            "Visible": true
+          },
+          "path": "Standard/Components/Map/Components/Label",
+          "shadow": false,
+          "transparentBackground": true
+        }
+      ]
+    },
+    "defaultMarker": {
+      "event": {
+        "stopPropagation": false
+      },
+      "icon": {
+        "color": "#1A1A92",
+        "path": "material/location_on",
+        "size": {
+          "height": 40,
+          "width": 40
+        },
+        "style": {
+          "classes": ""
+        }
+      },
+      "lat": 0,
+      "lng": 0,
+      "name": "Site",
+      "opacity": 1,
+      "popup": {
+        "autoClose": true,
+        "closeButton": true,
+        "closeOnClick": false,
+        "closeOnEscapeKey": true,
+        "content": {
+          "style": "value",
+          "text": "",
+          "view": {
+            "params": {
+              "ModelItemTagPath": ""
+            },
+            "path": ""
+          }
+        },
+        "enabled": true,
+        "height": {
+          "max": null
+        },
+        "pan": {
+          "auto": true
+        },
+        "width": {
+          "max": 300,
+          "min": 50
+        }
+      },
+      "properties": {},
+      "tooltip": {
+        "content": {
+          "text": "",
+          "view": {}
+        },
+        "direction": "auto",
+        "opacity": 1,
+        "permanent": false,
+        "sticky": false
+      }
+    },
+    "defaultVector": {
+      "circles": [
+        {
+          "lat": -22.1075861,
+          "lng": 117.884254,
+          "name": "Solomon Hub",
+          "properties": {}
+        }
+      ],
+      "event": {
+        "stopPropagation": false
+      },
+      "fill": {
+        "color": "#DC720B2E",
+        "enabled": true,
+        "opacity": 1,
+        "rule": "nonzero"
+      },
+      "radius": 50000,
+      "stroke": {
+        "color": "",
+        "dashArray": "",
+        "dashOffset": "",
+        "enabled": true,
+        "lineCap": "round",
+        "lineJoin": "round",
+        "opacity": 1,
+        "weight": 3
+      }
+    },
+    "defaultView": {
+      "lat": 0,
+      "lng": 0,
+      "params": {
+        "DefaultHeight": 50,
+        "DefaultWidth": 200,
+        "ModelItemTagPath": "",
+        "Visible": false
+      },
+      "path": "",
+      "shadow": false,
+      "transparentBackground": true
+    },
+    "lat": -19.32232118910101,
+    "lng": 109.39086914062501,
+    "userZoomFactor": 7
+  },
+  "params": {
+    "Center": {
+      "lat": -22,
+      "lng": 116
+    },
+    "InitialLocation": {
+      "Center": {
+        "lat": -22,
+        "lng": 116
+      },
+      "Zoom": 9
+    },
+    "ModelItems": [
+      {
+        "Lat": -22,
+        "Lng": 116,
+        "Marker": {
+          "Icon": {
+            "color": "#1A1A92",
+            "path": "material/location_on",
+            "size": {
+              "height": 40,
+              "width": 40
+            },
+            "style": {
+              "classes": ""
+            }
+          },
+          "PopupViewPath": "Standard/Components/Map/Components/Map Popup"
+        },
+        "TagPath": "[Standard]Standard/Model Item",
+        "Vector": {
+          "Fill": "#DC720B2E",
+          "Name": "value",
+          "Radius": 30000
+        },
+        "View": {
+          "LatOffset": -0.35,
+          "LngOffset": 0,
+          "Params": {
+            "DefaultHeight": 50,
+            "DefaultWidth": 200,
+            "ModelItemTagPath": "[Standard]Standard/Model Item",
+            "Visible": true
+          },
+          "ViewPath": "Standard/Components/Map/Components/Label",
+          "VisiblaAtZoomFactorMax": 9,
+          "VisiblaAtZoomFactorMin": 7
+        },
+        "VisibleZoomSetpoints": {
+          "Enable": true,
+          "Max": 7,
+          "Min": 0
+        },
+        "name": "Test"
+      },
+      {
+        "Lat": -21,
+        "Lng": 118,
+        "Marker": {
+          "Icon": {
+            "color": "#1A1A92",
+            "path": "material/location_on",
+            "size": {
+              "height": 40,
+              "width": 40
+            },
+            "style": {
+              "classes": ""
+            }
+          },
+          "PopupViewPath": "Standard/Components/Map/Components/Map Popup"
+        },
+        "TagPath": "[Standard]Standard/Model Item",
+        "Vector": {
+          "Fill": "#DC720B2E",
+          "Name": "value",
+          "Radius": 30000
+        },
+        "View": {
+          "LatOffset": -0.35,
+          "LngOffset": 0,
+          "Params": {
+            "DefaultHeight": 50,
+            "DefaultWidth": 200,
+            "ModelItemTagPath": "[Standard]Standard/Model Item",
+            "Visible": true
+          },
+          "ViewPath": "Standard/Components/Map/Components/Label",
+          "VisiblaAtZoomFactorMax": 9,
+          "VisiblaAtZoomFactorMin": 7
+        },
+        "VisibleZoomSetpoints": {
+          "Enable": true,
+          "Max": 7,
+          "Min": 0
+        },
+        "name": "Test"
+      }
+    ],
+    "ZoomFactor": 7
+  },
+  "propConfig": {
+    "custom.ButtonEx": {
+      "persistent": true
+    },
+    "custom.config": {
+      "binding": {
+        "config": {
+          "struct": {
+            "defaultMarker": "{view.custom.defaultMarker}",
+            "defaultVector": "{view.custom.defaultVector}",
+            "defaultView": "{view.custom.defaultView}",
+            "modelItems": "{view.params.ModelItems}",
+            "zoomFactor": "{view.custom.userZoomFactor}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tdef copyDefault(defaultObject):\n\t\tstrObject \u003d str(defaultObject)\n\t\treturn system.util.jsonDecode(strObject)\n\n\tmodelItems \u003d value[\"modelItems\"]\n\tdefaultMarker \u003d value[\"defaultMarker\"]\n\tdefaultView \u003d value[\"defaultView\"]\n\tdefaultVector \u003d value[\"defaultVector\"]\n\tzoomFactor \u003d value[\"zoomFactor\"]\n\t\n\tmarkers \u003d []\n\tviews \u003d []\n\tvectors \u003d []\n\t\n\tfor modelItem in modelItems:\n\t\tlng \u003d modelItem[\"Lng\"]\n\t\tlat \u003d modelItem[\"Lat\"]\n\t\tmodelItemTagPath \u003d modelItem[\"TagPath\"]\n\n\t\t\n\t\t#Build Marker\n\t\ticon \u003d modelItem[\"Marker\"][\"Icon\"]\n\t\tpopupViewPath \u003d modelItem[\"Marker\"][\"PopupViewPath\"]\n\t\tmarker \u003d copyDefault(defaultMarker)\n\t\tmarker[\"lat\"]\u003dlat\n\t\tmarker[\"lng\"]\u003dlng\n\t\tmarker[\"icon\"]\u003dicon\n\t\tmarker[\"popup\"][\"content\"][\"view\"][\"path\"]\u003dpopupViewPath\n\t\tmarker[\"popup\"][\"content\"][\"view\"][\"params\"]\u003d{\"ModelItemTagPath\":modelItemTagPath}\n\t\tmarkers.append(marker)\n\t\n\t\t#Build View\n\t\tvisiblaAtZoomFactorMin \u003d modelItem[\"View\"][\"VisiblaAtZoomFactorMin\"]\n\t\tvisiblaAtZoomFactorMax \u003d modelItem[\"View\"][\"VisiblaAtZoomFactorMax\"]\n\t\tif zoomFactor\u003e\u003dvisiblaAtZoomFactorMin and zoomFactor\u003c\u003dvisiblaAtZoomFactorMax:\n\t\t\tlatOffset \u003d modelItem[\"View\"][\"LatOffset\"]\n\t\t\tlngOffset \u003d modelItem[\"View\"][\"LngOffset\"]\n\t\t\tlat \u003d lat+latOffset\n\t\t\tlng \u003d lng+lngOffset\n\t\t\tviewPath \u003d modelItem[\"View\"][\"ViewPath\"]\n\t\t\tparams \u003d modelItem[\"View\"][\"Params\"]\n\t\t\t\n\t\t\tview \u003d copyDefault(defaultView)\n\t\t\tview[\"lat\"]\u003dlat\n\t\t\tview[\"lng\"]\u003dlng\n\t\t\tview[\"path\"] \u003d viewPath\n\t\t\tview[\"params\"] \u003d params\n\t\t\tviews.append(view)\n\t\t\n\t\t#Build Vector\n\t\tradius \u003d modelItem[\"Vector\"][\"Radius\"]\n\t\tname \u003d modelItem[\"Vector\"][\"Name\"]\n\t\tfill \u003d modelItem[\"Vector\"][\"Fill\"]\n\t\tlat \u003d  modelItem[\"Lat\"]\n\t\tlng \u003d  modelItem[\"Lng\"]\n\t\t\n\t\tvector \u003d copyDefault(defaultVector)\n\t\t\n\t\tvector[\"radius\"] \u003d radius\n\t\tvector[\"fill\"][\"color\"] \u003d fill\n\t\tvector[\"circles\"][0][\"name\"] \u003d lat\n\t\tvector[\"circles\"][0][\"lat\"] \u003d lat\n\t\tvector[\"circles\"][0][\"lng\"] \u003d lng\n\t\t\n\t\tvectors.append(vector)\n\t\t\n\treturn {\"markers\":markers,\"views\":views,\"vectors\":vectors}\n\t\n\t",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.defaultMarker": {
+      "persistent": true
+    },
+    "custom.defaultVector": {
+      "persistent": true
+    },
+    "custom.defaultView": {
+      "persistent": true
+    },
+    "custom.lat": {
+      "persistent": true
+    },
+    "custom.userZoomFactor": {
+      "binding": {
+        "config": {
+          "path": "view.params.ZoomFactor"
+        },
+        "enabled": false,
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.Center": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.InitialLocation": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ModelItems": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ZoomFactor": {
+      "binding": {
+        "config": {
+          "path": "view.custom.userZoomFactor"
+        },
+        "type": "property"
+      },
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 880,
+      "width": 1920
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onMapMouseMove": {
+              "config": {
+                "script": "\tself.view.custom.lat \u003d event[\"lat\"]\n\tself.view.custom.lng \u003d event[\"lng\"]"
+              },
+              "scope": "G",
+              "type": "script"
+            },
+            "onZoom": {
+              "config": {
+                "script": "\tself.view.custom.userZoomFactor \u003d event[\"zoom\"]"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Map"
+        },
+        "position": {
+          "height": 1,
+          "width": 1,
+          "y": 0.0022
+        },
+        "propConfig": {
+          "props.init.center": {
+            "binding": {
+              "config": {
+                "path": "view.params.InitialLocation.Center"
+              },
+              "type": "property"
+            }
+          },
+          "props.init.zoom": {
+            "binding": {
+              "config": {
+                "path": "view.params.InitialLocation.Zoom"
+              },
+              "type": "property"
+            }
+          },
+          "props.layers.ui.marker": {
+            "binding": {
+              "config": {
+                "path": "view.custom.config.markers"
+              },
+              "type": "property"
+            }
+          },
+          "props.layers.ui.view": {
+            "binding": {
+              "config": {
+                "path": "view.custom.config.views"
+              },
+              "type": "property"
+            }
+          },
+          "props.layers.vector.circle": {
+            "binding": {
+              "config": {
+                "path": "view.custom.config.vectors"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "customControls": [
+            {
+              "enabled": true,
+              "params": {},
+              "path": "",
+              "position": "top-right"
+            }
+          ],
+          "init": {},
+          "layers": {
+            "raster": {
+              "image": [
+                {
+                  "bounds": {
+                    "corner1": {
+                      "lat": null,
+                      "lng": null
+                    },
+                    "corner2": {
+                      "lat": null,
+                      "lng": null
+                    }
+                  },
+                  "options": {
+                    "alt": "",
+                    "crossOrigin": false,
+                    "errorOverlayUrl": "",
+                    "opacity": 1,
+                    "zIndex": 1
+                  },
+                  "source": ""
+                }
+              ],
+              "tile": [
+                {
+                  "WMS": {
+                    "format": "image/jpeg",
+                    "layers": "",
+                    "styles": "",
+                    "transparent": false,
+                    "uppercase": false,
+                    "version": "1.1.1"
+                  },
+                  "options": {
+                    "attribution": "Map data \u0026copy; \u003ca href\u003d\u0027https://www.openstreetmap.org/\u0027\u003eOpenStreetMap\u003c/a\u003e contributors, \u003ca href\u003d\u0027https://creativecommons.org/licenses/by-sa/2.0/\u0027\u003eCC-BY-SA\u003c/a\u003e",
+                    "crossOrigin": false,
+                    "detectRetina": false,
+                    "errorTileUrl": "",
+                    "opacity": 1,
+                    "subdomains": [
+                      "a",
+                      "b",
+                      "c"
+                    ],
+                    "tileSize": {
+                      "height": 256,
+                      "width": 256
+                    },
+                    "tms": false,
+                    "update": {
+                      "interval": 200,
+                      "whenIdle": false,
+                      "whenZooming": true
+                    },
+                    "zIndex": 1,
+                    "zoom": {
+                      "max": 18,
+                      "min": 0,
+                      "native": {
+                        "max": null,
+                        "min": null
+                      },
+                      "offset": 0,
+                      "reverse": false
+                    }
+                  },
+                  "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                  "urlTemplateParams": {}
+                }
+              ]
+            },
+            "ui": {
+              "popup": [
+                {
+                  "autoClose": true,
+                  "closeButton": true,
+                  "closeOnClick": null,
+                  "closeOnEscapeKey": true,
+                  "content": {
+                    "text": "",
+                    "view": {
+                      "params": {},
+                      "path": ""
+                    }
+                  },
+                  "enabled": false,
+                  "height": {
+                    "max": null
+                  },
+                  "lat": null,
+                  "lng": null,
+                  "pan": {
+                    "auto": true
+                  },
+                  "width": {
+                    "max": 300,
+                    "min": 50
+                  }
+                }
+              ]
+            },
+            "vector": {
+              "rectangle": [
+                {
+                  "event": {
+                    "stopPropagation": false
+                  },
+                  "fill": {
+                    "color": "",
+                    "enabled": true,
+                    "opacity": 1,
+                    "rule": "nonzero"
+                  },
+                  "noClip": false,
+                  "rectangles": [
+                    {
+                      "corner1": {
+                        "lat": null,
+                        "lng": null
+                      },
+                      "corner2": {
+                        "lat": null,
+                        "lng": null
+                      },
+                      "name": "",
+                      "properties": {}
+                    }
+                  ],
+                  "smoothFactor": 1,
+                  "stroke": {
+                    "color": "",
+                    "dashArray": "",
+                    "dashOffset": "",
+                    "enabled": true,
+                    "lineCap": "round",
+                    "lineJoin": "round",
+                    "opacity": 1,
+                    "weight": 3
+                  }
+                }
+              ]
+            }
+          },
+          "location": {
+            "enabled": true
+          },
+          "trackResize": true,
+          "zoom": {
+            "max": 9,
+            "min": 4
+          }
+        },
+        "type": "ia.display.map"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tduration \u003d 3\n\t\n\tmap \u003d self.getSibling(\"Map\")\n\tsystem.perspective.print(map.getCenter())\n\tzoomPanOptions \u003d { \u0027animate\u0027: True, \u0027duration\u0027: duration, \u0027easeLinearity\u0027: 0.25, \u0027noMoveStart\u0027: False }\n\tlatLng \u003d {\u0027lat\u0027: -22, \u0027lng\u0027: 118 }\n\tmap.flyTo(latLng \u003d latLng, options \u003d zoomPanOptions)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 0.0386,
+          "rotate": {
+            "anchor": "-150% -532%"
+          },
+          "width": 0.0417,
+          "x": 0.0244,
+          "y": 0.0194
+        },
+        "props": {
+          "text": "Home"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 0.0599,
+      "y": 0.0511
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

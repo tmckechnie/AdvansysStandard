@@ -1,0 +1,245 @@
+{
+  "custom": {
+    "Interlocked": false,
+    "Label": "Operation"
+  },
+  "params": {
+    "ShowBlock": false,
+    "TagPath": "[default]SCVD/Sefateng/ROM/Surface/100M100/Interlock/Operation"
+  },
+  "propConfig": {
+    "custom.Interlocked": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}"
+        },
+        "transforms": [
+          {
+            "expression": "!{value}",
+            "type": "expression"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Label": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}.Documentation"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.ShowBlock": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 89,
+      "width": 457
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Enumeration"
+        },
+        "position": {
+          "basis": "320px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "!{view.params.ShowBlock}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Label"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "path": "view.custom.Interlocked"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "MappedObject": {
+              "False": "Healthy",
+              "True": "Interlocked"
+            },
+            "ShowLabel": true
+          },
+          "path": "Standard/Control Modules/Components/Faceplate/Status/LabelDisplayEnumeration"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "110px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Label"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "InterlockDisplayBlock"
+            },
+            "position": {
+              "basis": "60px"
+            },
+            "propConfig": {
+              "props.elements[0].elements[1].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Interlocked"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "Standard/Popups/Background Standard/Popups/Interlock/Healthy",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": false,
+                          "output": "Standard/Popups/Interlock/Healthy"
+                        },
+                        {
+                          "input": true,
+                          "output": "Standard/Popups/Interlock/Interlocked"
+                        }
+                      ],
+                      "outputType": "style-list",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "Line",
+                      "stroke": {
+                        "opacity": "1.0",
+                        "paint": "rgb(126,126,126)",
+                        "width": "1.0"
+                      },
+                      "type": "line",
+                      "x1": "0",
+                      "x2": "50",
+                      "y1": "10",
+                      "y2": "10"
+                    },
+                    {
+                      "fill": {
+                        "opacity": "1.0",
+                        "paint": "#000000"
+                      },
+                      "height": "20.0",
+                      "name": "Square1",
+                      "stroke": {
+                        "opacity": "1.0",
+                        "paint": "rgb(126,126,126)",
+                        "width": "1.0"
+                      },
+                      "style": {},
+                      "type": "rect",
+                      "width": "20",
+                      "x": "15",
+                      "y": "0"
+                    }
+                  ],
+                  "fill": {
+                    "opacity": "1.0",
+                    "paint": "rgb(0,0,0)"
+                  },
+                  "name": "block",
+                  "stroke": {
+                    "opacity": "1.0",
+                    "paint": "rgb(0,0,0)",
+                    "width": "1.0"
+                  },
+                  "type": "group"
+                }
+              ],
+              "viewBox": "0 0 50 20"
+            },
+            "type": "ia.shapes.svg"
+          }
+        ],
+        "meta": {
+          "name": "Block"
+        },
+        "position": {
+          "basis": "200px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.params.ShowBlock"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

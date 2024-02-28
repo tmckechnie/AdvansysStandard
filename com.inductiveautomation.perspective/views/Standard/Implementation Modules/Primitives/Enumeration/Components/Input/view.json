@@ -1,0 +1,145 @@
+{
+  "custom": {},
+  "params": {
+    "Deleted": false,
+    "Ordinal": 0,
+    "Selected": false,
+    "Value": "Value"
+  },
+  "propConfig": {
+    "params.Deleted": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Ordinal": {
+      "paramDirection": "inout",
+      "persistent": true
+    },
+    "params.Selected": {
+      "paramDirection": "inout",
+      "persistent": true
+    },
+    "params.Value": {
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 29,
+      "width": 350
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Ordinal"
+        },
+        "position": {
+          "basis": "55px"
+        },
+        "propConfig": {
+          "props.enabled": {
+            "binding": {
+              "config": {
+                "expression": "!{view.params.Deleted}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "view.params.Ordinal"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "containerStyle": {
+            "classes": "Standard/Popups/Faceplates/ValueInput"
+          },
+          "style": {
+            "classes": "Standard/Popups/Faceplates/ValueInput"
+          }
+        },
+        "type": "ia.input.numeric-entry-field"
+      },
+      {
+        "meta": {
+          "name": "Value"
+        },
+        "position": {
+          "basis": "129px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.enabled": {
+            "binding": {
+              "config": {
+                "expression": "!{view.params.Deleted}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "view.params.Value"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/ValueInput"
+          }
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "Checkbox"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.enabled": {
+            "binding": {
+              "config": {
+                "expression": "!{view.params.Deleted}"
+              },
+              "type": "expr"
+            }
+          },
+          "props.selected": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "view.params.Selected"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/ValueInput"
+          },
+          "text": ""
+        },
+        "type": "ia.input.checkbox"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

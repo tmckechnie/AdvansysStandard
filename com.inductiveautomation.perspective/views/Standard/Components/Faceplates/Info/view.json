@@ -1,0 +1,403 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[TPROM]ROM/100R001"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 520,
+      "width": 435
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "params": {
+                "Title": "Description"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "50px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}"
+                        },
+                        "tagPath": "{TagPath}/Metadata/Description"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "classes": "Standard/Popups/Faceplates/ValueDisplay",
+                    "padding": "5px",
+                    "textAlign": "left"
+                  },
+                  "textStyle": {
+                    "overflowWrap": "normal"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "Description Row"
+            },
+            "position": {
+              "basis": "52px"
+            },
+            "props": {
+              "style": {
+                "margin": 5
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Short Description"
+        },
+        "position": {
+          "basis": "130px"
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "params": {
+                "Title": "Identification"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "LabelTextField"
+                },
+                "position": {
+                  "basis": "500px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}"
+                        },
+                        "tagPath": "{TagPath}/Id/Self"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Format": "",
+                    "Label": "Identity",
+                    "ShowLabel": true,
+                    "ShowUnits": true,
+                    "Units": ""
+                  },
+                  "path": "Standard/Components/Faceplates/Status/LabelDisplayField"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "ToggleSwitch",
+                  "tooltip": {
+                    "enabled": true,
+                    "text": "Identify Self and Children"
+                  }
+                },
+                "position": {
+                  "basis": "60px"
+                },
+                "propConfig": {
+                  "props.selected": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}"
+                        },
+                        "tagPath": "{TagPath}/Id/SelfIdentifyRequest"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "color": {
+                    "selected": "var(--valueSwitchSelected)",
+                    "unselected": "var(--valueSwitchUnselected)"
+                  }
+                },
+                "type": "ia.input.toggle-switch"
+              }
+            ],
+            "meta": {
+              "name": "Identity Row"
+            },
+            "position": {
+              "basis": "52px"
+            },
+            "props": {
+              "style": {
+                "margin": 5,
+                "paddingLeft": 3
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "LabelTextField"
+                },
+                "position": {
+                  "basis": "500px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}"
+                        },
+                        "tagPath": "{TagPath}/Id/Owner"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Format": "",
+                    "Label": "Owner",
+                    "ShowLabel": true,
+                    "ShowUnits": true,
+                    "Units": ""
+                  },
+                  "path": "Standard/Components/Faceplates/Status/LabelDisplayField"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "ToggleSwitch",
+                  "tooltip": {
+                    "enabled": true,
+                    "text": "Identify Owner"
+                  }
+                },
+                "position": {
+                  "basis": "60px"
+                },
+                "propConfig": {
+                  "props.selected": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "OwnerTagPath": "{parent.custom.OwnerTagPath}"
+                        },
+                        "tagPath": "{OwnerTagPath}/Id/SelfIdentifyRequest"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "color": {
+                    "selected": "var(--valueSwitchSelected)",
+                    "unselected": "var(--valueSwitchUnselected)"
+                  }
+                },
+                "type": "ia.input.toggle-switch"
+              }
+            ],
+            "meta": {
+              "name": "Owner Row"
+            },
+            "position": {
+              "basis": "52px"
+            },
+            "propConfig": {
+              "custom.OwnerTagPath": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Id/OwnerTagPath"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "margin": 5,
+                "paddingLeft": 3
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Identification"
+        },
+        "position": {
+          "basis": "130px"
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "params": {
+                "Title": "IO Config"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "LabelTextField"
+            },
+            "position": {
+              "basis": "77px"
+            },
+            "propConfig": {
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Parameters.OPCPath"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Format": "",
+                "Label": "PLC IO Path",
+                "ShowLabel": true,
+                "ShowUnits": false,
+                "Units": ""
+              },
+              "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+              "style": {
+                "margin": 5
+              }
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "IO Config"
+        },
+        "position": {
+          "basis": "130px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

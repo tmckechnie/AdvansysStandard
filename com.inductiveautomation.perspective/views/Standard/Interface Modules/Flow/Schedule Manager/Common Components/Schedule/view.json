@@ -1,0 +1,22 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[AdvansysStandard]Standard/Interface Modules/Flow/Schedule"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

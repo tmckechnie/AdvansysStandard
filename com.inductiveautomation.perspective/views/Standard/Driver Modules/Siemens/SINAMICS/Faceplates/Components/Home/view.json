@@ -1,0 +1,1563 @@
+{
+  "custom": {
+    "ValarmHigh": 440,
+    "VdesiredHigh": 400,
+    "VdesiredLow": 360,
+    "Vmax": 525
+  },
+  "params": {
+    "TagPath": "[Standard]Demo/Driver Modules/100M100SCED"
+  },
+  "propConfig": {
+    "custom.ValarmHigh": {
+      "persistent": true
+    },
+    "custom.VdesiredHigh": {
+      "persistent": true
+    },
+    "custom.VdesiredLow": {
+      "persistent": true
+    },
+    "custom.Vmax": {
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Header"
+                    },
+                    "position": {
+                      "basis": "35px"
+                    },
+                    "props": {
+                      "params": {
+                        "Title": "Status"
+                      },
+                      "path": "Standard/Components/Faceplates/Header"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "LabelDisplayField"
+                            },
+                            "position": {
+                              "basis": "30px"
+                            },
+                            "propConfig": {
+                              "custom.MemberPath": {
+                                "binding": {
+                                  "config": {
+                                    "expression": "{view.params.TagPath}+\"/Sts/MeasuredValues/Il1\""
+                                  },
+                                  "type": "expr"
+                                }
+                              },
+                              "props.params.Label": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}.Documentation"
+                                  },
+                                  "type": "tag"
+                                }
+                              },
+                              "props.params.Units": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}.EngUnit"
+                                  },
+                                  "type": "tag"
+                                }
+                              },
+                              "props.params.Value": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}"
+                                  },
+                                  "type": "tag"
+                                }
+                              }
+                            },
+                            "props": {
+                              "params": {
+                                "Format": "#,##0.##",
+                                "ShowLabel": true,
+                                "ShowUnits": true
+                              },
+                              "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+                              "style": {
+                                "margin": 5
+                              }
+                            },
+                            "type": "ia.display.view"
+                          },
+                          {
+                            "meta": {
+                              "name": "LabelDisplayField_0"
+                            },
+                            "position": {
+                              "basis": "30px"
+                            },
+                            "propConfig": {
+                              "custom.MemberPath": {
+                                "binding": {
+                                  "config": {
+                                    "expression": "{view.params.TagPath}+\"/Sts/MeasuredValues/Il2\""
+                                  },
+                                  "type": "expr"
+                                }
+                              },
+                              "props.params.Label": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}.Documentation"
+                                  },
+                                  "type": "tag"
+                                }
+                              },
+                              "props.params.Units": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}.EngUnit"
+                                  },
+                                  "type": "tag"
+                                }
+                              },
+                              "props.params.Value": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}"
+                                  },
+                                  "type": "tag"
+                                }
+                              }
+                            },
+                            "props": {
+                              "params": {
+                                "Format": "#,##0.##",
+                                "ShowLabel": true,
+                                "ShowUnits": true
+                              },
+                              "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+                              "style": {
+                                "margin": 5
+                              }
+                            },
+                            "type": "ia.display.view"
+                          },
+                          {
+                            "meta": {
+                              "name": "LabelDisplayField_1"
+                            },
+                            "position": {
+                              "basis": "30px"
+                            },
+                            "propConfig": {
+                              "custom.MemberPath": {
+                                "binding": {
+                                  "config": {
+                                    "expression": "{view.params.TagPath}+\"/Sts/MeasuredValues/Il3\""
+                                  },
+                                  "type": "expr"
+                                }
+                              },
+                              "props.params.Label": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}.Documentation"
+                                  },
+                                  "type": "tag"
+                                }
+                              },
+                              "props.params.Units": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}.EngUnit"
+                                  },
+                                  "type": "tag"
+                                }
+                              },
+                              "props.params.Value": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}"
+                                  },
+                                  "type": "tag"
+                                }
+                              }
+                            },
+                            "props": {
+                              "params": {
+                                "Format": "#,##0.##",
+                                "ShowLabel": true,
+                                "ShowUnits": true
+                              },
+                              "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+                              "style": {
+                                "margin": 5
+                              }
+                            },
+                            "type": "ia.display.view"
+                          }
+                        ],
+                        "meta": {
+                          "name": "flexColValues"
+                        },
+                        "position": {
+                          "basis": "75%",
+                          "grow": 1
+                        },
+                        "props": {
+                          "direction": "column"
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "MovingAnalogIndicator"
+                            },
+                            "position": {
+                              "grow": 1
+                            },
+                            "propConfig": {
+                              "props.processValue": {
+                                "binding": {
+                                  "config": {
+                                    "path": ".../flexColValues/LabelDisplayField.props.params.Value"
+                                  },
+                                  "type": "property"
+                                }
+                              }
+                            },
+                            "props": {
+                              "desiredHigh": 120,
+                              "desiredLow": 0,
+                              "highAlarm": 140,
+                              "highHighAlarm": null,
+                              "highInterlock": null,
+                              "lowAlarm": 10,
+                              "lowInterlock": null,
+                              "lowLowAlarm": null,
+                              "maxValue": 150
+                            },
+                            "type": "ia.display.moving-analog-indicator"
+                          },
+                          {
+                            "meta": {
+                              "name": "MovingAnalogIndicator_0"
+                            },
+                            "position": {
+                              "grow": 1
+                            },
+                            "propConfig": {
+                              "props.processValue": {
+                                "binding": {
+                                  "config": {
+                                    "path": ".../flexColValues/LabelDisplayField.props.params.Value"
+                                  },
+                                  "type": "property"
+                                }
+                              }
+                            },
+                            "props": {
+                              "desiredHigh": 120,
+                              "desiredLow": 0,
+                              "highAlarm": 140,
+                              "highHighAlarm": null,
+                              "highInterlock": null,
+                              "lowAlarm": 10,
+                              "lowInterlock": null,
+                              "lowLowAlarm": null,
+                              "maxValue": 150
+                            },
+                            "type": "ia.display.moving-analog-indicator"
+                          },
+                          {
+                            "meta": {
+                              "name": "MovingAnalogIndicator_1"
+                            },
+                            "position": {
+                              "grow": 1
+                            },
+                            "propConfig": {
+                              "props.processValue": {
+                                "binding": {
+                                  "config": {
+                                    "path": ".../flexColValues/LabelDisplayField.props.params.Value"
+                                  },
+                                  "type": "property"
+                                }
+                              }
+                            },
+                            "props": {
+                              "desiredHigh": 120,
+                              "desiredLow": 0,
+                              "highAlarm": 140,
+                              "highHighAlarm": null,
+                              "highInterlock": null,
+                              "lowAlarm": 10,
+                              "lowInterlock": null,
+                              "lowLowAlarm": null,
+                              "maxValue": 150
+                            },
+                            "type": "ia.display.moving-analog-indicator"
+                          }
+                        ],
+                        "meta": {
+                          "name": "flexRowBars"
+                        },
+                        "position": {
+                          "basis": "25%"
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "SimpleGauge"
+                            },
+                            "position": {
+                              "grow": 1
+                            },
+                            "propConfig": {
+                              "props.value": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "TagPath": "{view.params.TagPath}"
+                                    },
+                                    "tagPath": "{TagPath}/Sts/MeasuredValues/Iavg"
+                                  },
+                                  "type": "tag"
+                                }
+                              }
+                            },
+                            "props": {
+                              "animate": true,
+                              "endAngle": 405,
+                              "label": {
+                                "offsetY": 12
+                              },
+                              "startAngle": 135,
+                              "style": {
+                                "classes": []
+                              }
+                            },
+                            "type": "ia.chart.simple-gauge"
+                          },
+                          {
+                            "meta": {
+                              "name": "Label"
+                            },
+                            "position": {
+                              "basis": "32px"
+                            },
+                            "props": {
+                              "text": "Average Current",
+                              "textStyle": {
+                                "textAlign": "center"
+                              }
+                            },
+                            "type": "ia.display.label"
+                          }
+                        ],
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "300px"
+                        },
+                        "props": {
+                          "direction": "column"
+                        },
+                        "type": "ia.container.flex"
+                      }
+                    ],
+                    "meta": {
+                      "name": "flexCurrent"
+                    },
+                    "position": {
+                      "basis": "90px",
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "overflow": "hidden"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "Vl1"
+                            },
+                            "position": {
+                              "basis": "30px"
+                            },
+                            "propConfig": {
+                              "custom.MemberPath": {
+                                "binding": {
+                                  "config": {
+                                    "expression": "{view.params.TagPath}+\"/Sts/MeasuredValues/Vl1\""
+                                  },
+                                  "type": "expr"
+                                }
+                              },
+                              "props.params.Label": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}.Documentation"
+                                  },
+                                  "type": "tag"
+                                }
+                              },
+                              "props.params.Units": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}.EngUnit"
+                                  },
+                                  "type": "tag"
+                                }
+                              },
+                              "props.params.Value": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}"
+                                  },
+                                  "type": "tag"
+                                }
+                              }
+                            },
+                            "props": {
+                              "params": {
+                                "Format": "#,##0.##",
+                                "ShowLabel": true,
+                                "ShowUnits": true
+                              },
+                              "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+                              "style": {
+                                "margin": 5
+                              }
+                            },
+                            "type": "ia.display.view"
+                          },
+                          {
+                            "meta": {
+                              "name": "Vl2"
+                            },
+                            "position": {
+                              "basis": "30px"
+                            },
+                            "propConfig": {
+                              "custom.MemberPath": {
+                                "binding": {
+                                  "config": {
+                                    "expression": "{view.params.TagPath}+\"/Sts/MeasuredValues/Vl2\""
+                                  },
+                                  "type": "expr"
+                                }
+                              },
+                              "props.params.Label": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}.Documentation"
+                                  },
+                                  "type": "tag"
+                                }
+                              },
+                              "props.params.Units": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}.EngUnit"
+                                  },
+                                  "type": "tag"
+                                }
+                              },
+                              "props.params.Value": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}"
+                                  },
+                                  "type": "tag"
+                                }
+                              }
+                            },
+                            "props": {
+                              "params": {
+                                "Format": "#,##0.##",
+                                "ShowLabel": true,
+                                "ShowUnits": true
+                              },
+                              "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+                              "style": {
+                                "margin": 5
+                              }
+                            },
+                            "type": "ia.display.view"
+                          },
+                          {
+                            "meta": {
+                              "name": "Vl3"
+                            },
+                            "position": {
+                              "basis": "30px"
+                            },
+                            "propConfig": {
+                              "custom.MemberPath": {
+                                "binding": {
+                                  "config": {
+                                    "expression": "{view.params.TagPath}+\"/Sts/MeasuredValues/Vl3\""
+                                  },
+                                  "type": "expr"
+                                }
+                              },
+                              "props.params.Label": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}.Documentation"
+                                  },
+                                  "type": "tag"
+                                }
+                              },
+                              "props.params.Units": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}.EngUnit"
+                                  },
+                                  "type": "tag"
+                                }
+                              },
+                              "props.params.Value": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "MemberPath": "{this.custom.MemberPath}"
+                                    },
+                                    "tagPath": "{MemberPath}"
+                                  },
+                                  "type": "tag"
+                                }
+                              }
+                            },
+                            "props": {
+                              "params": {
+                                "Format": "#,##0.##",
+                                "ShowLabel": true,
+                                "ShowUnits": true
+                              },
+                              "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+                              "style": {
+                                "margin": 5
+                              }
+                            },
+                            "type": "ia.display.view"
+                          }
+                        ],
+                        "meta": {
+                          "name": "flexColValues"
+                        },
+                        "position": {
+                          "basis": "75%",
+                          "grow": 1
+                        },
+                        "props": {
+                          "direction": "column"
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "MovingAnalogIndicator"
+                            },
+                            "position": {
+                              "grow": 1
+                            },
+                            "propConfig": {
+                              "props.desiredHigh": {
+                                "binding": {
+                                  "config": {
+                                    "path": "view.custom.VdesiredHigh"
+                                  },
+                                  "type": "property"
+                                }
+                              },
+                              "props.desiredLow": {
+                                "binding": {
+                                  "config": {
+                                    "path": "view.custom.VdesiredLow"
+                                  },
+                                  "type": "property"
+                                }
+                              },
+                              "props.highAlarm": {
+                                "binding": {
+                                  "config": {
+                                    "path": "view.custom.ValarmHigh"
+                                  },
+                                  "type": "property"
+                                }
+                              },
+                              "props.maxValue": {
+                                "binding": {
+                                  "config": {
+                                    "path": "view.custom.Vmax"
+                                  },
+                                  "type": "property"
+                                }
+                              },
+                              "props.processValue": {
+                                "binding": {
+                                  "config": {
+                                    "path": ".../flexColValues/Vl1.props.params.Value"
+                                  },
+                                  "type": "property"
+                                }
+                              }
+                            },
+                            "props": {
+                              "highHighAlarm": null,
+                              "highInterlock": null,
+                              "lowAlarm": 10,
+                              "lowInterlock": null,
+                              "lowLowAlarm": null
+                            },
+                            "type": "ia.display.moving-analog-indicator"
+                          },
+                          {
+                            "meta": {
+                              "name": "MovingAnalogIndicator_0"
+                            },
+                            "position": {
+                              "grow": 1
+                            },
+                            "propConfig": {
+                              "props.desiredHigh": {
+                                "binding": {
+                                  "config": {
+                                    "path": "view.custom.VdesiredHigh"
+                                  },
+                                  "type": "property"
+                                }
+                              },
+                              "props.desiredLow": {
+                                "binding": {
+                                  "config": {
+                                    "path": "view.custom.VdesiredLow"
+                                  },
+                                  "type": "property"
+                                }
+                              },
+                              "props.highAlarm": {
+                                "binding": {
+                                  "config": {
+                                    "path": "view.custom.ValarmHigh"
+                                  },
+                                  "type": "property"
+                                }
+                              },
+                              "props.maxValue": {
+                                "binding": {
+                                  "config": {
+                                    "path": "view.custom.Vmax"
+                                  },
+                                  "type": "property"
+                                }
+                              },
+                              "props.processValue": {
+                                "binding": {
+                                  "config": {
+                                    "path": ".../flexColValues/Vl2.props.params.Value"
+                                  },
+                                  "type": "property"
+                                }
+                              }
+                            },
+                            "props": {
+                              "highHighAlarm": null,
+                              "highInterlock": null,
+                              "lowAlarm": 10,
+                              "lowInterlock": null,
+                              "lowLowAlarm": null
+                            },
+                            "type": "ia.display.moving-analog-indicator"
+                          },
+                          {
+                            "meta": {
+                              "name": "MovingAnalogIndicator_1"
+                            },
+                            "position": {
+                              "grow": 1
+                            },
+                            "propConfig": {
+                              "props.desiredHigh": {
+                                "binding": {
+                                  "config": {
+                                    "path": "view.custom.VdesiredHigh"
+                                  },
+                                  "type": "property"
+                                }
+                              },
+                              "props.desiredLow": {
+                                "binding": {
+                                  "config": {
+                                    "path": "view.custom.VdesiredLow"
+                                  },
+                                  "type": "property"
+                                }
+                              },
+                              "props.highAlarm": {
+                                "binding": {
+                                  "config": {
+                                    "path": "view.custom.ValarmHigh"
+                                  },
+                                  "type": "property"
+                                }
+                              },
+                              "props.maxValue": {
+                                "binding": {
+                                  "config": {
+                                    "path": "view.custom.Vmax"
+                                  },
+                                  "type": "property"
+                                }
+                              },
+                              "props.processValue": {
+                                "binding": {
+                                  "config": {
+                                    "path": ".../flexColValues/Vl2.props.params.Value"
+                                  },
+                                  "type": "property"
+                                }
+                              }
+                            },
+                            "props": {
+                              "highHighAlarm": null,
+                              "highInterlock": null,
+                              "lowAlarm": 10,
+                              "lowInterlock": null,
+                              "lowLowAlarm": null
+                            },
+                            "type": "ia.display.moving-analog-indicator"
+                          }
+                        ],
+                        "meta": {
+                          "name": "flexRowBars"
+                        },
+                        "position": {
+                          "basis": "25%"
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "SimpleGauge"
+                            },
+                            "position": {
+                              "grow": 1
+                            },
+                            "propConfig": {
+                              "props.maxValue": {
+                                "binding": {
+                                  "config": {
+                                    "path": "view.custom.Vmax"
+                                  },
+                                  "type": "property"
+                                }
+                              },
+                              "props.value": {
+                                "binding": {
+                                  "config": {
+                                    "fallbackDelay": 2.5,
+                                    "mode": "indirect",
+                                    "references": {
+                                      "TagPath": "{view.params.TagPath}"
+                                    },
+                                    "tagPath": "{TagPath}/Sts/MeasuredValues/Vavg"
+                                  },
+                                  "type": "tag"
+                                }
+                              }
+                            },
+                            "props": {
+                              "animate": true,
+                              "endAngle": 405,
+                              "label": {
+                                "offsetY": 12
+                              },
+                              "startAngle": 135,
+                              "style": {
+                                "classes": []
+                              }
+                            },
+                            "type": "ia.chart.simple-gauge"
+                          },
+                          {
+                            "meta": {
+                              "name": "Label"
+                            },
+                            "position": {
+                              "basis": "32px"
+                            },
+                            "props": {
+                              "style": {
+                                "textAlign": "center"
+                              },
+                              "text": "Average Voltage"
+                            },
+                            "type": "ia.display.label"
+                          }
+                        ],
+                        "meta": {
+                          "name": "FlexContainer"
+                        },
+                        "position": {
+                          "basis": "300px"
+                        },
+                        "props": {
+                          "direction": "column"
+                        },
+                        "type": "ia.container.flex"
+                      }
+                    ],
+                    "meta": {
+                      "name": "flexVoltage"
+                    },
+                    "position": {
+                      "basis": "90px",
+                      "grow": 1
+                    },
+                    "props": {
+                      "style": {
+                        "overflow": "hidden"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "Status"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "classes": "Standard/Popups/Content"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "TimeSeriesChart"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "propConfig": {
+                      "props.series[0].data": {
+                        "binding": {
+                          "config": {
+                            "path": "parent.custom.Data.PV"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "plots": [
+                        {
+                          "axes": [
+                            {
+                              "alignment": "left",
+                              "label": {
+                                "font": {
+                                  "color": "",
+                                  "size": 10
+                                },
+                                "offset": 0,
+                                "style": {
+                                  "classes": ""
+                                },
+                                "text": "% Rated Current",
+                                "visible": true
+                              },
+                              "max": 150,
+                              "min": 0,
+                              "name": "Value",
+                              "style": {
+                                "classes": ""
+                              },
+                              "tick": {
+                                "color": "",
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "style": {
+                                    "classes": ""
+                                  }
+                                },
+                                "style": {
+                                  "classes": ""
+                                }
+                              },
+                              "width": 60
+                            }
+                          ],
+                          "markers": [
+                            {
+                              "axis": "Value",
+                              "line": {
+                                "color": "#4EB700",
+                                "dashArray": 0,
+                                "label": {
+                                  "font": {
+                                    "color": "",
+                                    "size": 10
+                                  },
+                                  "position": "right",
+                                  "style": {
+                                    "classes": ""
+                                  },
+                                  "text": ""
+                                },
+                                "opacity": 0.5,
+                                "style": {
+                                  "classes": ""
+                                },
+                                "width": 1
+                              },
+                              "type": "line",
+                              "value": 0,
+                              "visible": false
+                            }
+                          ],
+                          "trends": [
+                            {
+                              "axis": "Value",
+                              "baselines": [],
+                              "breakLine": true,
+                              "columns": [],
+                              "interpolation": "curveStep",
+                              "radius": 2,
+                              "series": "Iavg",
+                              "stack": true,
+                              "type": "line",
+                              "visible": true
+                            }
+                          ]
+                        }
+                      ],
+                      "series": [
+                        {
+                          "name": "Iavg"
+                        }
+                      ],
+                      "timeRange": {
+                        "dateFormat": "YYYY-MM-DD",
+                        "timeFormat": "HH:mm:ss",
+                        "visible": false
+                      },
+                      "title": {
+                        "font": {
+                          "size": 15
+                        },
+                        "height": 20,
+                        "text": "Running",
+                        "visible": true
+                      }
+                    },
+                    "type": "ia.chart.timeseries"
+                  },
+                  {
+                    "meta": {
+                      "name": "DropdownSelector"
+                    },
+                    "position": {
+                      "basis": "25px"
+                    },
+                    "propConfig": {
+                      "props.params.Value": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "path": "parent.custom.historyDuration"
+                          },
+                          "type": "property"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Enable": true,
+                        "Label": "Duration",
+                        "ShowLabel": true,
+                        "options": [
+                          {
+                            "label": "5 Min",
+                            "value": 5
+                          },
+                          {
+                            "label": "10 Min",
+                            "value": 10
+                          },
+                          {
+                            "label": "30 Min",
+                            "value": 30
+                          },
+                          {
+                            "label": "60 Min",
+                            "value": 60
+                          }
+                        ]
+                      },
+                      "path": "Standard/Components/Faceplates/Input/LabelDropdown",
+                      "style": {
+                        "margin": 2
+                      }
+                    },
+                    "type": "ia.display.view"
+                  }
+                ],
+                "meta": {
+                  "name": "Trend"
+                },
+                "position": {
+                  "basis": "300px"
+                },
+                "propConfig": {
+                  "custom.Data": {
+                    "binding": {
+                      "config": {
+                        "avoidScanClassValidation": true,
+                        "dateRange": {
+                          "mostRecent": "{this.custom.historyDuration}",
+                          "mostRecentUnits": "MIN"
+                        },
+                        "enableValueCache": true,
+                        "ignoreBadQuality": false,
+                        "polling": {
+                          "enabled": true,
+                          "rate": "1"
+                        },
+                        "preventInterpolation": false,
+                        "returnFormat": "Wide",
+                        "returnSize": {
+                          "type": "RAW"
+                        },
+                        "tags": "{this.custom.HistoryTags}",
+                        "valueFormat": "DOCUMENT"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\t\n\tdata \u003d []\n\tnow \u003d system.date.now()\n\tnow \u003d system.date.toMillis(now)\n\tnowValue \u003d {\n\t\t\t  \"time\": now,\n\t\t\t  \"Iavg\": self.custom.Iavg\n\t\t\t}\n\tfor row in value:\n\t\tdataPoint \u003d {\n\t\t  \"time\": row[\"t_stamp\"],\n\t\t  \"Iavg\": row[\"Iavg\"]\n\t\t}\n\t\tdata.append(dataPoint)\n\tdata.append(nowValue)\n\treturn {\u0027PV\u0027:data}",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "tag-history"
+                    }
+                  },
+                  "custom.HistoryTags": {
+                    "binding": {
+                      "config": {
+                        "struct": {
+                          "gatewayType": "{session.custom.SystemInfo.GatewayType}",
+                          "historyPath": "tag({view.params.TagPath}+\"/Sts/MeasuredValues/Iavg.History Path\")\r\n"
+                        },
+                        "waitOnAll": true
+                      },
+                      "transforms": [
+                        {
+                          "code": "\thistoryPath \u003d value[\u0027historyPath\u0027]\n\tgatewayType \u003d value[\u0027gatewayType\u0027]\n\tpath \u003d historyPath\n\tif gatewayType \u003d\u003d \"Edge\":\n\t\tpath \u003d self.view.params.TagPath + \"/Sts/MeasuredValues/Iavg\"\n\t\t\n\treturn [{\n\t    \"aggregate\": \"MinMax\",\n\t    \"alias\": \"Iavg\",\n\t    \"path\": path\n\t  }]",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr-struct"
+                    }
+                  },
+                  "custom.Iavg": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "TagPath": "{view.params.TagPath}"
+                        },
+                        "tagPath": "{TagPath}/Sts/MeasuredValues/Iavg"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "custom.historyDuration": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "path": "session.custom.DefaultPopupHistoryDuration"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "classes": "Standard/Popups/Content"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "flexMeasVal"
+            },
+            "position": {
+              "tabIndex": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Image"
+                        },
+                        "position": {
+                          "shrink": 0
+                        },
+                        "props": {
+                          "fit": {
+                            "mode": "contain"
+                          },
+                          "source": "/system/images/SINAMICS/G120X.svg"
+                        },
+                        "type": "ia.display.image"
+                      },
+                      {
+                        "meta": {
+                          "name": "FlexRepeater"
+                        },
+                        "position": {
+                          "basis": "320px",
+                          "grow": 1
+                        },
+                        "propConfig": {
+                          "props.instances": {
+                            "binding": {
+                              "config": {
+                                "path": "view.params.TagPath"
+                              },
+                              "transforms": [
+                                {
+                                  "code": "\timport re\n\t\n\t#Get data from structure\n\tstrPath \u003d value + \"/Sts/Diagnostics/Structure\"\n\tdata \u003d system.tag.readBlocking([strPath])[0].value\n\tgeneralData \u003d data[\"General\"]\n\n\t#Initialise\n\tarrInstances \u003d []\n\tfilteredMembers \u003d [\"Reserved\"]\n\tfor bit in generalData:\n\t\tif bit not in filteredMembers:\n\t\t\tspacedLabel \u003d re.sub(r\u0027((?\u003c\u003d[a-z])[A-Z]|(?\u003c!\\A)[A-Z](?\u003d[a-z]))\u0027, r\u0027 \\1\u0027, bit)\n\t\t\tinstance \u003d {\n\t\t\t  \"instanceStyle\": {\n\t\t\t    \"classes\": \"\"\n\t\t\t  },\n\t\t\t  \"instancePosition\": {},\n\t\t\t  \"Label\": spacedLabel,\n\t\t\t  \"ShowLabel\": True,\n\t\t\t  \"Value\": generalData[bit]\n\t\t\t}\n\t\t\tarrInstances.append(instance)\n\treturn arrInstances",
+                                  "type": "script"
+                                }
+                              ],
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "props": {
+                          "direction": "column",
+                          "path": "Standard/Components/Faceplates/Status/LabelDisplayIndicatorSmall",
+                          "wrap": "wrap"
+                        },
+                        "type": "ia.display.flex-repeater"
+                      }
+                    ],
+                    "meta": {
+                      "name": "flexRowBasic"
+                    },
+                    "position": {
+                      "basis": "200px",
+                      "shrink": 0
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "Header"
+                        },
+                        "position": {
+                          "basis": "35px",
+                          "shrink": 0
+                        },
+                        "props": {
+                          "params": {
+                            "Title": "Received Signals"
+                          },
+                          "path": "Standard/Components/Faceplates/Header"
+                        },
+                        "type": "ia.display.view"
+                      },
+                      {
+                        "meta": {
+                          "name": "FlexRepeater"
+                        },
+                        "position": {
+                          "grow": 1
+                        },
+                        "propConfig": {
+                          "props.instances": {
+                            "binding": {
+                              "config": {
+                                "path": "view.params.TagPath"
+                              },
+                              "transforms": [
+                                {
+                                  "code": "\timport re\n\t\n\t#Get data from structure\n\tstrPath \u003d value + \"/Sts/Diagnostics/Structure\"\n\tdata \u003d system.tag.readBlocking([strPath])[0].value\n\tgeneralData \u003d data[\"Receive\"]\n\n\t#Initialise\n\tarrInstances \u003d []\n\tfilteredMembers \u003d [\"Reserved\"]\n\tfor bit in generalData:\n\t\tif bit not in filteredMembers:\n\t\t\tspacedLabel \u003d re.sub(r\u0027((?\u003c\u003d[a-z])[A-Z]|(?\u003c!\\A)[A-Z](?\u003d[a-z]))\u0027, r\u0027 \\1\u0027, bit)\n\t\t\tinstance \u003d {\n\t\t\t  \"instanceStyle\": {\n\t\t\t    \"classes\": \"\"\n\t\t\t  },\n\t\t\t  \"instancePosition\": {},\n\t\t\t  \"Label\": spacedLabel,\n\t\t\t  \"ShowLabel\": True,\n\t\t\t  \"Value\": generalData[bit]\n\t\t\t}\n\t\t\tarrInstances.append(instance)\n\treturn arrInstances",
+                                  "type": "script"
+                                }
+                              ],
+                              "type": "property"
+                            }
+                          }
+                        },
+                        "props": {
+                          "direction": "column",
+                          "path": "Standard/Components/Faceplates/Status/LabelDisplayIndicatorSmall",
+                          "wrap": "wrap"
+                        },
+                        "type": "ia.display.flex-repeater"
+                      }
+                    ],
+                    "meta": {
+                      "name": "flexReceivedSignals"
+                    },
+                    "position": {
+                      "basis": "300px",
+                      "grow": 1
+                    },
+                    "props": {
+                      "direction": "column"
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "meta": {
+                      "name": "Header"
+                    },
+                    "position": {
+                      "basis": "35px",
+                      "shrink": 0
+                    },
+                    "props": {
+                      "params": {
+                        "Title": "Events"
+                      },
+                      "path": "Standard/Components/Faceplates/Header"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "Header"
+                            },
+                            "position": {
+                              "basis": "35px"
+                            },
+                            "props": {
+                              "params": {
+                                "Title": "Protection"
+                              },
+                              "path": "Standard/Components/Faceplates/Header"
+                            },
+                            "type": "ia.display.view"
+                          },
+                          {
+                            "meta": {
+                              "name": "FlexRepeater"
+                            },
+                            "position": {
+                              "grow": 1
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "config": {
+                                    "path": "view.params.TagPath"
+                                  },
+                                  "transforms": [
+                                    {
+                                      "code": "\timport re\n\t\n\t#Get data from structure\n\tstrPath \u003d value + \"/Sts/Diagnostics/Structure\"\n\tdata \u003d system.tag.readBlocking([strPath])[0].value\n\tgeneralData \u003d data[\"Events\"][\"Protection\"]\n\n\t#Initialise\n\tarrInstances \u003d []\n\tfilteredMembers \u003d [\"Reserved\"]\n\tfor bit in generalData:\n\t\tif bit not in filteredMembers:\n\t\t\tspacedLabel \u003d re.sub(r\u0027((?\u003c\u003d[a-z])[A-Z]|(?\u003c!\\A)[A-Z](?\u003d[a-z]))\u0027, r\u0027 \\1\u0027, bit)\n\t\t\tinstance \u003d {\n\t\t\t  \"instanceStyle\": {\n\t\t\t    \"classes\": \"\"\n\t\t\t  },\n\t\t\t  \"instancePosition\": {},\n\t\t\t  \"Label\": spacedLabel,\n\t\t\t  \"ShowLabel\": True,\n\t\t\t  \"Value\": generalData[bit]\n\t\t\t}\n\t\t\tarrInstances.append(instance)\n\treturn arrInstances",
+                                      "type": "script"
+                                    }
+                                  ],
+                                  "type": "property"
+                                }
+                              }
+                            },
+                            "props": {
+                              "direction": "column",
+                              "path": "Standard/Components/Faceplates/Status/LabelDisplayIndicatorSmall",
+                              "wrap": "wrap"
+                            },
+                            "type": "ia.display.flex-repeater"
+                          }
+                        ],
+                        "meta": {
+                          "name": "flexProtection"
+                        },
+                        "position": {
+                          "basis": "50%",
+                          "grow": 1
+                        },
+                        "props": {
+                          "direction": "column"
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "Header"
+                            },
+                            "position": {
+                              "basis": "35px"
+                            },
+                            "props": {
+                              "params": {
+                                "Title": "Level Monitoring"
+                              },
+                              "path": "Standard/Components/Faceplates/Header"
+                            },
+                            "type": "ia.display.view"
+                          },
+                          {
+                            "meta": {
+                              "name": "FlexRepeater"
+                            },
+                            "position": {
+                              "grow": 1
+                            },
+                            "propConfig": {
+                              "props.instances": {
+                                "binding": {
+                                  "config": {
+                                    "path": "view.params.TagPath"
+                                  },
+                                  "transforms": [
+                                    {
+                                      "code": "\timport re\n\t\n\t#Get data from structure\n\tstrPath \u003d value + \"/Sts/Diagnostics/Structure\"\n\tdata \u003d system.tag.readBlocking([strPath])[0].value\n\tgeneralData \u003d data[\"Events\"][\"Level\"]\n\n\t#Initialise\n\tarrInstances \u003d []\n\tfilteredMembers \u003d [\"Reserved\"]\n\tfor bit in generalData:\n\t\tif bit not in filteredMembers:\n\t\t\tspacedLabel \u003d re.sub(r\u0027((?\u003c\u003d[a-z])[A-Z]|(?\u003c!\\A)[A-Z](?\u003d[a-z]))\u0027, r\u0027 \\1\u0027, bit)\n\t\t\tinstance \u003d {\n\t\t\t  \"instanceStyle\": {\n\t\t\t    \"classes\": \"\"\n\t\t\t  },\n\t\t\t  \"instancePosition\": {},\n\t\t\t  \"Label\": spacedLabel,\n\t\t\t  \"ShowLabel\": True,\n\t\t\t  \"Value\": generalData[bit]\n\t\t\t}\n\t\t\tarrInstances.append(instance)\n\treturn arrInstances",
+                                      "type": "script"
+                                    }
+                                  ],
+                                  "type": "property"
+                                }
+                              }
+                            },
+                            "props": {
+                              "direction": "column",
+                              "path": "Standard/Components/Faceplates/Status/LabelDisplayIndicatorSmall",
+                              "wrap": "wrap"
+                            },
+                            "type": "ia.display.flex-repeater"
+                          }
+                        ],
+                        "meta": {
+                          "name": "flexLevelMonitoring"
+                        },
+                        "position": {
+                          "basis": "50%",
+                          "grow": 1
+                        },
+                        "props": {
+                          "direction": "column"
+                        },
+                        "type": "ia.container.flex"
+                      }
+                    ],
+                    "meta": {
+                      "name": "flexEvents"
+                    },
+                    "position": {
+                      "grow": 1
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "meta": {
+                  "name": "FlexContainer"
+                },
+                "position": {
+                  "basis": "320px",
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "flexDiag"
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "TabContainer"
+        },
+        "position": {
+          "basis": "300px",
+          "grow": 1
+        },
+        "props": {
+          "tabSize": {
+            "width": 130
+          },
+          "tabs": [
+            "Diagnostics",
+            "Measured Values"
+          ]
+        },
+        "type": "ia.container.tab"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

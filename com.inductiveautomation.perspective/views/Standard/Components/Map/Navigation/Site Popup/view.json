@@ -1,0 +1,139 @@
+{
+  "custom": {
+    "instances": null
+  },
+  "events": {
+    "system": {
+      "onStartup": {
+        "config": {
+          "script": "\t\n\t\n\t\n\tself.props.defaultSize.height \u003d 77 + self.custom.instanceNum*70\n\t"
+        },
+        "enabled": false,
+        "scope": "G",
+        "type": "script"
+      }
+    }
+  },
+  "params": {
+    "ModelItemTagPath": ""
+  },
+  "propConfig": {
+    "custom.instances": {
+      "binding": {
+        "config": {
+          "path": "view.params.targetMarker"
+        },
+        "transforms": [
+          {
+            "code": "\tinstances \u003d Standard.Navigation.BreadCrumb.GetChildBreadCrumbItems(value,items\u003d[])\t\n\treturn instances",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.ModelItemTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "props.defaultSize.height": {
+      "binding": {
+        "config": {
+          "expression": "77 + (len({view.custom.instances})*70)\r\n\t"
+        },
+        "type": "expr"
+      }
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Logo"
+        },
+        "position": {
+          "basis": "45px",
+          "shrink": 0
+        },
+        "props": {
+          "path": "Standard/Navigation/Components/Logo",
+          "style": {
+            "classes": "Standard/Popups/HeaderBackground Standard/Popups/HeaderText"
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "ModelItemTagPath": "{view.params.ModelItemTagPath}"
+                },
+                "tagPath": "{ModelItemTagPath}/Name"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/HeaderBackground Standard/Popups/HeaderText",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "FlexRepeater"
+        },
+        "position": {
+          "basis": "354px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.instances": {
+            "binding": {
+              "config": {
+                "path": "view.custom.instances"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "alignContent": "flex-start",
+          "alignItems": "center",
+          "direction": "column",
+          "path": "Standard/Navigation/Components/Menu Item"
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

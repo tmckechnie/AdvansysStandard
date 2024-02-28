@@ -1,0 +1,10 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--bodyDisplayBackground)",
+      "borderColor": "var(--bodySymbolSimulated)",
+      "borderStyle": "dotted",
+      "borderWidth": "2px"
+    }
+  }
+}

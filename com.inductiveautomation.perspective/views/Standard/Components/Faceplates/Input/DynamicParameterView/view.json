@@ -1,0 +1,153 @@
+{
+  "custom": {
+    "type": "Boolean",
+    "updateTrigger": "value"
+  },
+  "params": {
+    "Format": "value",
+    "Label": "value",
+    "ParameterTagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cfg/Parameter 1",
+    "Units": "value",
+    "Value": "value"
+  },
+  "propConfig": {
+    "custom.type": {
+      "binding": {
+        "config": {
+          "path": "view.params.ParameterTagPath"
+        },
+        "transforms": [
+          {
+            "code": "\tdataType \u003d system.tag.browse(value,filter\u003d{\"name\":\"Value\"})[0][\u0027dataType\u0027]\n\treturn dataType",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.updateTrigger": {
+      "persistent": true
+    },
+    "params.Format": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ParameterTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Units": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Value": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 36,
+      "width": 316
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "LabelNumericEntryField"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.Units": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "ParameterTagPath": "{view.params.ParameterTagPath}"
+                },
+                "tagPath": "{ParameterTagPath}/Value.EngUnit"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "ParameterTagPath": "{view.params.ParameterTagPath}"
+                },
+                "tagPath": "{ParameterTagPath}/Value"
+              },
+              "type": "tag"
+            }
+          },
+          "props.path": {
+            "binding": {
+              "config": {
+                "path": "view.custom.type"
+              },
+              "transforms": [
+                {
+                  "fallback": "Standard/Components/Faceplates/Input/LabelNumericEntryField",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "Boolean",
+                      "output": "Standard/Components/Faceplates/Input/Command Toggle Switch"
+                    },
+                    {
+                      "input": "Integer",
+                      "output": "Standard/Components/Faceplates/Input/LabelNumericEntryField"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Format": "value",
+            "Position": "right",
+            "ShowLabel": true
+          },
+          "style": {
+            "marginBottom": 3,
+            "marginTop": 3
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

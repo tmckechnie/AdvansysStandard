@@ -1,0 +1,287 @@
+{
+  "custom": {
+    "Styles": {
+      "baseCrumbFill": "var(--Framework-01)",
+      "currentCrumbFill": "var(--Framework-01)",
+      "nextCrumbFill": "var(--Framework-01)"
+    },
+    "currentModelItem": {
+      "ContentType": "Overview",
+      "Path": "0",
+      "SearchModule": ""
+    },
+    "selected": true
+  },
+  "params": {
+    "AllowedContentTypes": [
+      "Mimic",
+      "Alarms",
+      "Trend",
+      "Setpoints"
+    ],
+    "ChildrenCount": 0,
+    "ContentTypes": [
+      {
+        "contentType": "Overview",
+        "label": "Overview",
+        "order": 0
+      }
+    ],
+    "Label": "Standard",
+    "MenuItemPosition": {
+      "height": null,
+      "left": 0,
+      "top": 50,
+      "width": 200
+    },
+    "ModelItem": {
+      "ModelItemTagPath": "[StandardS71500]Standard/Model Item",
+      "Name": "Standard",
+      "Path": "0",
+      "TagFolderName": "Standard",
+      "ViewPaths": [
+        {
+          "ContentType": [
+            "Overview"
+          ],
+          "Label": "Overview",
+          "Order": 0,
+          "PagePath": "",
+          "Roles": [],
+          "ViewPath": "*Overview/Overview",
+          "key": "kNew0"
+        }
+      ]
+    },
+    "OpenPopups": [],
+    "ShowOnlyConfiguredContentTypes": true
+  },
+  "propConfig": {
+    "custom.Styles": {
+      "persistent": true
+    },
+    "custom.Styles.baseCrumbFill": {
+      "persistent": true
+    },
+    "custom.Styles.currentCrumbFill": {
+      "persistent": true
+    },
+    "custom.Styles.nextCrumbFill": {
+      "persistent": true
+    },
+    "custom.currentModelItem": {
+      "binding": {
+        "config": {
+          "struct": {
+            "currentModelItem": "{session.custom.CurrentModelItem}",
+            "pageId": "{page.props.pageId}",
+            "useSessionModelItem": "{session.custom.UseSessionModelItem}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tcurrentModelItem \u003d value[\u0027currentModelItem\u0027]\n\tuseSessionModelItem \u003d value[\u0027useSessionModelItem\u0027]\n\tpageId \u003d value[\u0027pageId\u0027]\n\treturn Standard.Navigation.Common.GetCurrentModelItem(CurrentModelItem\u003dcurrentModelItem,UseSession\u003duseSessionModelItem,PerspectivePageID\u003dpageId)",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.selected": {
+      "binding": {
+        "config": {
+          "struct": {
+            "CurrentModelItem": "{view.custom.currentModelItem.Path}",
+            "ModelItemPath": "{view.params.ModelItem.Path}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tcurrentModelItemTagPath \u003d str(value[\"CurrentModelItem\"])\n\tmodelItemTagPath \u003d str(value[\"ModelItemPath\"])\n\t\n\tif modelItemTagPath in currentModelItemTagPath and modelItemTagPath!\u003d\"\":\n\t\treturn True\n\telse:\n\t\treturn False",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.AllowedContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ChildrenCount": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.MenuItemPosition": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ModelItem": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.OpenPopups": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowOnlyConfiguredContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 180
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t#system.perspective.print(\"Menubar - Opening Popup..\")\n\tmodelItem \u003d self.view.params.ModelItem\n\tchildrenCount \u003d self.view.params.ChildrenCount\n\tshowOnlyConfiguredContentTypes \u003d self.view.params.ShowOnlyConfiguredContentTypes\n\tmenuItemPosition \u003d  self.view.params.MenuItemPosition\n\tallowedContentTypes \u003d self.view.params.AllowedContentTypes\n\tcontentTypes \u003d self.view.params.ContentTypes\n\n\t#Position Calculation\n\t#Current Screen Size\n\tcurrentScreenHeight \u003d self.page.props.dimensions.viewport.height\n\tcurrentScreenWidth \u003d self.page.props.dimensions.viewport.width\n\t#Current Position\n\ttop \u003d menuItemPosition[\"top\"]#50\n\twidth \u003d menuItemPosition[\"width\"]#200\n\theight \u003d menuItemPosition[\"height\"] #70 * (childrenCount + len(contentTypes))  \n\t#New Position\n\t#Top stays the same since this view is only for the base Items\n\t#Height is adjusted based on amount of children and contentTypes this item has\n\theight \u003d 50 * (childrenCount + len(contentTypes))  \n\t#Left is increased by 1 incremnet of width\n\tleft \u003d menuItemPosition[\"left\"] + width #left \u003d width * menuItemPosition - 20 # 20px is the width of the arrow head\n\t\t\n\t#If Screen width too small then header becomes stacked and top must move down.\n\t#Width limit must be same as limit on basis binding on Standard/Framework/Overview/Overview Column and the setpoints on the overview column container (Navigation/Overview Column)\n\tif currentScreenWidth \u003c\u003d 996:\n\t\ttop \u003d 100\n\t\n\t#If Screen height too small then make popup equal to height available\n\tif (height + top) \u003e\u003d  currentScreenHeight:\n\t\theight \u003d currentScreenHeight - top\t\n\t#If Screen width too small then open popup to left of current popup\t\n\tif (currentScreenWidth - left) \u003c width:\n\t\tleft \u003d menuItemPosition[\"left\"] + width#left \u003d currentScreenWidth - width\n\t\t\n\t#Popup Details\n\t#system.perspective.print(\"Menubar - Opening Popup..Position Calculation..Popup Details..\")\n\tid \u003d \"menubarpopup\"\n\tview \u003d \"Standard/Navigation/Menu Bar/Components/Popup\"\t\n\t\t\n\tposition \u003d {\"top\":top,\"left\":left,\"height\":height,\"width\":width}\n\tshowCloseIcon \u003d False\n\tdraggable \u003d False\n\tresizable \u003d False\n\tmodal \u003d True\n\toverlayDismiss \u003d True\n\t\n\tparams \u003d {\"ModelItem\":modelItem,\"ShowOnlyConfiguredContentTypes\":showOnlyConfiguredContentTypes,\"MenuItemPosition\":position,\"ContentTypes\":contentTypes,\"AllowedContentTypes\":allowedContentTypes,\"OpenPopups\":[id]}\n\tsystem.perspective.print(\"Opening Popup[\"+view+\"] With Params: \" + str(params))\n\tsystem.perspective.openPopup(id\u003did,view \u003d view,params \u003d params,position\u003dposition,showCloseIcon \u003d showCloseIcon,draggable \u003d draggable,resizable \u003d resizable,modal \u003d modal,overlayDismiss \u003d overlayDismiss)\n\t\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.custom.selected"
+              },
+              "transforms": [
+                {
+                  "fallback": "Standard/Popups/Navigation/MenuItem/Item",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "Standard/Popups/Navigation/MenuItem/ItemSelected"
+                    },
+                    {
+                      "input": false,
+                      "output": "Standard/Popups/Navigation/MenuItem/Item"
+                    }
+                  ],
+                  "outputType": "style-list",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "style": {
+            "borderBottomLeftRadius": 2,
+            "borderBottomRightRadius": 2,
+            "borderTopLeftRadius": 2,
+            "borderTopRightRadius": 2
+          },
+          "text": "Standard"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Alarm Summary"
+        },
+        "position": {
+          "height": 0.28,
+          "width": 0.6056,
+          "x": 0.1799,
+          "y": 0.671
+        },
+        "propConfig": {
+          "custom.key": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "publishInitial": false,
+                "tagPath": "[StandardS71500]Standard/Model Item/Alarm Summary/Information"
+              },
+              "type": "tag"
+            }
+          },
+          "meta.visible": {
+            "persistent": false
+          },
+          "props.params.AlarmSummaryTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.ModelItem.ModelItemTagPath}+\"/Alarm Summary\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Components/Alarms/Alarm Summary Symbols"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "enabled": true
+      }
+    },
+    "position": {
+      "x": 0.12,
+      "y": 0.1867
+    },
+    "propConfig": {
+      "meta.tooltip.text": {
+        "binding": {
+          "config": {
+            "path": "view.params.ModelItem.ModelItemTagPath"
+          },
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "backgroundColor": ""
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

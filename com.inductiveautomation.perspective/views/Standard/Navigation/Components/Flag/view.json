@@ -1,0 +1,126 @@
+{
+  "custom": {},
+  "params": {
+    "Label": "value"
+  },
+  "propConfig": {
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 71,
+      "width": 201
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Flag"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "d": "m 168.84116,164.1481 44.60497,-0.0487 4.95611,9.78774 -4.95611,9.70909 -44.56982,0.0787 z",
+                      "fill": {
+                        "opacity": 1,
+                        "paint": ""
+                      },
+                      "name": "path484-9-3-4-9",
+                      "stroke": {
+                        "dasharray": "none",
+                        "dashoffset": "0",
+                        "linecap": "butt",
+                        "miterlimit": "4",
+                        "opacity": "1",
+                        "paint": "",
+                        "width": 1
+                      },
+                      "style": {
+                        "display": "inline"
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "fill": {
+                    "opacity": 1,
+                    "paint": ""
+                  },
+                  "name": "g1758",
+                  "stroke": {
+                    "dasharray": "none",
+                    "miterlimit": "4",
+                    "opacity": "0.48583",
+                    "paint": "",
+                    "width": ""
+                  },
+                  "style": {
+                    "classes": "Standard/Body/Statics/Fill",
+                    "display": "inline"
+                  },
+                  "transform": "matrix(4.0354242,0,0,3.5758961,-739.22667,-357.77674)",
+                  "type": "group"
+                }
+              ],
+              "name": "layer1",
+              "transform": "translate(58.41308,-228.55468)",
+              "type": "group"
+            }
+          ],
+          "viewBox": "0 0 201.12795 70.942548"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/Statics/Text"
+          },
+          "textStyle": {
+            "classes": "Standard/Body/Statics/Text"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": -2.07,
+      "y": 4.8
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

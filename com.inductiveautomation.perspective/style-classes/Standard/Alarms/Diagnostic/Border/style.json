@@ -1,0 +1,9 @@
+{
+  "base": {
+    "style": {
+      "borderColor": "var(--AlarmDiagnostic)",
+      "borderStyle": "solid",
+      "borderWidth": "2px"
+    }
+  }
+}

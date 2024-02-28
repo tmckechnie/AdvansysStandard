@@ -1,0 +1,212 @@
+{
+  "custom": {},
+  "params": {
+    "CurrentView": "Home",
+    "TagPath": ""
+  },
+  "propConfig": {
+    "params.CurrentView": {
+      "paramDirection": "output",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 339,
+      "width": 67
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "custom": {
+          "view": "Home"
+        },
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tself.view.params.CurrentView \u003d self.custom.view"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Home",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "34px",
+          "grow": 1
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "this.custom.view"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "expression": "if({this.props.enabled},\r\n\tif({this.custom.view}\u003d{view.params.CurrentView},\r\n\t\t\"Standard/Popups/Faceplates/Button/Selected\",\r\n\t\t\"Standard/Popups/Faceplates/Button/UnSelected\"\r\n\t\t),\r\n\"Standard/Popups/Faceplates/Button/Disabled\")"
+              },
+              "type": "expr"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "image": {
+            "icon": {
+              "path": "material/home"
+            }
+          },
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Button/Selected",
+            "margin": 2
+          },
+          "text": ""
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "custom": {
+          "view": "Config"
+        },
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tself.view.params.CurrentView \u003d self.custom.view"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Config",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "34px",
+          "grow": 1
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "this.custom.view"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "expression": "if({this.props.enabled},\r\n\tif({this.custom.view}\u003d{view.params.CurrentView},\r\n\t\t\"Standard/Popups/Faceplates/Button/Selected\",\r\n\t\t\"Standard/Popups/Faceplates/Button/UnSelected\"\r\n\t\t),\r\n\"Standard/Popups/Faceplates/Button/Disabled\")"
+              },
+              "type": "expr"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "image": {
+            "icon": {
+              "path": "material/construction"
+            }
+          },
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Button/UnSelected",
+            "margin": 2
+          },
+          "text": ""
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "custom": {
+          "view": "History"
+        },
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tself.view.params.CurrentView \u003d self.custom.view"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "History",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "34px",
+          "grow": 1
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "this.custom.view"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "expression": "if({this.props.enabled},\r\n\tif({this.custom.view}\u003d{view.params.CurrentView},\r\n\t\t\"Standard/Popups/Faceplates/Button/Selected\",\r\n\t\t\"Standard/Popups/Faceplates/Button/UnSelected\"\r\n\t\t),\r\n\"Standard/Popups/Faceplates/Button/Disabled\")"
+              },
+              "type": "expr"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "image": {
+            "icon": {
+              "path": "material/history"
+            }
+          },
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Button/UnSelected",
+            "margin": 2
+          },
+          "text": ""
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "box-shadow": "0px 2px 4px rgba(0, 0, 40, 0.15)",
+        "classes": "Standard/Popups/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "pages": {
+    "/": {
+      "title": "",
+      "viewPath": "Screens/Main"
+    },
+    "/Home/:ContentType": {
+      "title": "",
+      "viewPath": "Screens/Main"
+    },
+    "/MapTest": {
+      "title": "MapTest",
+      "viewPath": "Standard/Components/Map/Map"
+    },
+    "/WebDev/Test": {
+      "title": "",
+      "viewPath": "WebDev/Test"
+    }
+  },
+  "sharedDocks": {
+    "bottom": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "cover",
+        "handle": "show",
+        "iconUrl": "",
+        "id": "Footer",
+        "modal": false,
+        "resizable": true,
+        "show": "onDemand",
+        "size": 300,
+        "viewParams": {
+          "AllowedContentTypes": [
+            "Footer Alarms",
+            "Footer Trend",
+            "Footer Setpoints"
+          ]
+        },
+        "viewPath": "Standard/Navigation/Footer"
+      }
+    ],
+    "cornerPriority": "top-bottom",
+    "left": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "cover",
+        "handle": "show",
+        "iconUrl": "",
+        "id": "DockLeft",
+        "modal": true,
+        "resizable": false,
+        "show": "onDemand",
+        "size": 370,
+        "viewParams": {
+          "ModelItemTagPath": "[StandardS71500]Standard/Model Item"
+        },
+        "viewPath": "Standard/Navigation/Tree/View"
+      }
+    ],
+    "top": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "Header",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 120,
+        "viewParams": {
+          "AllowedContentTypes": [
+            "Overview",
+            "Dashboard",
+            "Mimic",
+            "Alarms",
+            "Trend",
+            "Setpoints",
+            "Sequence"
+          ],
+          "HeaderView": "Standard/Navigation/Header Breadcrumb",
+          "InitialModelItemTagPath": "[StandardS71500]Standard/Model Item",
+          "ShowOnlyConfiguredContentTypes": true
+        },
+        "viewPath": "Standard/Navigation/Header"
+      }
+    ]
+  }
+}

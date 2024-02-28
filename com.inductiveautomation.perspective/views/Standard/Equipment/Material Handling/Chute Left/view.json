@@ -1,0 +1,185 @@
+{
+  "custom": {},
+  "params": {
+    "Label": "SE5C1",
+    "Mirror": false
+  },
+  "propConfig": {
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Mirror": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 80,
+      "width": 65
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "SVG"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "propConfig": {
+              "props.elements[0].transform": {
+                "binding": {
+                  "config": {
+                    "expression": "if({view.params.Mirror},\"translate(65,0) scale(-1, 1)\",\"\")"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "elements": [
+                        {
+                          "fill": {
+                            "opacity": "1.0",
+                            "paint": "rgb(204,204,204)"
+                          },
+                          "height": 50,
+                          "name": "Rectangle2",
+                          "stroke": {
+                            "opacity": "1.0",
+                            "paint": "rgb(124,124,124)",
+                            "width": "1.0"
+                          },
+                          "type": "rect",
+                          "width": 30,
+                          "x": 35,
+                          "y": 0
+                        },
+                        {
+                          "fill": {
+                            "opacity": "1.0",
+                            "paint": "rgb(204,204,204)"
+                          },
+                          "name": "Polygon2",
+                          "points": "35,25 0,60 0,70 35,50",
+                          "stroke": {
+                            "opacity": "1.0",
+                            "paint": "rgb(124,124,124)",
+                            "width": "1.0"
+                          },
+                          "type": "polygon"
+                        }
+                      ],
+                      "fill": {
+                        "opacity": "1.0",
+                        "paint": "rgb(224,224,224)"
+                      },
+                      "name": "Group1",
+                      "stroke": {
+                        "opacity": "1.0",
+                        "paint": "rgb(0,0,0)",
+                        "width": "1.0"
+                      },
+                      "type": "group"
+                    }
+                  ],
+                  "fill": {
+                    "opacity": "1.0",
+                    "paint": "rgb(0,0,0)",
+                    "style": "value"
+                  },
+                  "name": "EmbeddedSymbol110",
+                  "stroke": {
+                    "opacity": "1.0",
+                    "paint": "rgb(0,0,0)",
+                    "width": "1.0"
+                  },
+                  "style": {
+                    "classes": "Standard/Body/Statics/Fill"
+                  },
+                  "type": "group"
+                }
+              ]
+            },
+            "type": "ia.shapes.svg"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 0.6125,
+              "width": 0.4154
+            },
+            "propConfig": {
+              "position.x": {
+                "binding": {
+                  "config": {
+                    "expression": "if({view.params.Mirror},0,0.5538)"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.Label"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Body/Statics/Text",
+                "overflowWrap": "break-word",
+                "textAlign": "center"
+              }
+            },
+            "scripts": {
+              "customMethods": [],
+              "extensionFunctions": null,
+              "messageHandlers": [
+                {
+                  "messageType": "DisplayEquipmentLabel",
+                  "pageScope": true,
+                  "script": "\t# Script to Show/Hide Equipment Labels\n\tself.meta.visible \u003d not self.meta.visible",
+                  "sessionScope": false,
+                  "viewScope": false
+                }
+              ]
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

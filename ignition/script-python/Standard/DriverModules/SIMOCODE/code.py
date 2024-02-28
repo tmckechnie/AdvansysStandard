@@ -1,0 +1,66 @@
+def getErrorText(intType,intError):
+	
+	if intType==255:
+		strText = "Number of power ons: " + str(intError)
+	elif intType==71:
+		dictErrors = {
+			0:"HW fault - Basic Unit",
+			1:"HW Fault - Module (e.g. IM, UM, DM)",
+			2:"HW Fault - Temporary components (e.g. memory module)",
+			3:"Configuration fault",
+			4:"Parameterization",
+			5:"Bus",
+			6:"PLC/PCS",
+			8:"Execution ON command",
+			9:"Execution STOP command",
+			10:"FB ON",
+			11:"FB OFF",
+			12:"Stalled positioner",
+			13:"Double 0",
+			14:"Double 1",
+			15:"End position",
+			16:"Antivalence",
+			17:"Cold starting (TPF) fault",
+			18:"UVO fault",
+			19:"OPO fault",
+			25:"Unbalance",
+			26:"Overload",
+			27:"Overload + phase failure",
+			28:"Int. ground fault",
+			29:"Ext. ground fault",
+			31:"Thermistor overload",
+			32:"Thermistor short circuit",
+			33:"Thermistor open circuit",
+			35:"TM1 trip T>",
+			36:"TM1 sensor fault",
+			37:"TM1 out of range",
+			38:"EM+ open circuit",
+			39:"EM+ short-circuit",
+			40:"Trip I>",
+			41:"Trip I<",
+			42:"Trip P>",
+			43:"Trip P<",
+			44:"Trip cos phi<",
+			45:"Trip U<",
+			46:"Trip 0/4-20 mA>",
+			47:"Trip 0/4-20 mA<",
+			48:"Stalled rotor",
+			52:"Number of starts >",
+			56:"External fault 1",
+			57:"External fault 2",
+			58:"External fault 3",
+			59:"External fault 4",
+			60:"External fault 5",
+			61:"External fault 6",
+			62:"Dry running pump",
+			63:"Dry-running protection - Error",
+			64:"AM1 open circuit",
+			65:"Test trip",
+			66:"DM-F safety-related tripping",
+			67:"DM-F wiring",
+			68:"DM-FL cross circuit"
+			}
+		strText = "Error: " + dictErrors.get(intError,str(intError))
+	else:
+		strText = ""
+	return strText

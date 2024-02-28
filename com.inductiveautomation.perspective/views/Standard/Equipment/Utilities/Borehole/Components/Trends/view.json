@@ -1,0 +1,365 @@
+{
+  "custom": {
+    "History": [],
+    "HistoryPath": "[Canary/default:default]CAN01VS1/SefatengUtilities/Utilities/Water/Jibeng/Borehole/Level/Value",
+    "Level": 23.25925925925926,
+    "ModeDescription": "Running okay",
+    "distoryDuration": 60,
+    "highAlarm": 100,
+    "historyTags": [
+      {
+        "alias": "Level",
+        "path": "[Canary/default:default]CAN01VS1/SefatengUtilities/Utilities/Water/Jibeng/Borehole/Level/Value"
+      }
+    ],
+    "lowAlarm": 0
+  },
+  "params": {
+    "Label": "value",
+    "TagPath": "[TPPSCV01003]Utilities/Water/Jibeng/Borehole"
+  },
+  "propConfig": {
+    "custom.History": {
+      "binding": {
+        "config": {
+          "avoidScanClassValidation": true,
+          "dateRange": {
+            "mostRecent": "{view.custom.distoryDuration}",
+            "mostRecentUnits": "MIN"
+          },
+          "enableValueCache": true,
+          "ignoreBadQuality": false,
+          "polling": {
+            "enabled": false,
+            "rate": ""
+          },
+          "preventInterpolation": false,
+          "returnFormat": "Wide",
+          "returnSize": {
+            "type": "RAW"
+          },
+          "tags": "{view.custom.historyTags}",
+          "valueFormat": "DOCUMENT"
+        },
+        "transforms": [
+          {
+            "code": "\thistCount \u003d len(value)\n\t#return histCount\n\ti\u003d0\n\tnow \u003d system.date.now()\n\tfor point in value:\n\t\trow\u003dpoint\n\t\tts \u003d system.date.fromMillis(point[\u0027t_stamp\u0027])\n\t\trow[\u0027ts\u0027] \u003d ts\n\t\tduration \u003d 0\n\t\tif (i+1)\u003chistCount:\n\t\t\t#return [1,histCount]\n\t\t\ttsNext \u003d system.date.fromMillis(value[i+1][\u0027t_stamp\u0027])\n\t\telse:\n\t\t\ttsNext \u003d now\n\t\tduration \u003d system.date.secondsBetween(ts, tsNext)\n\t\trow[\u0027duration\u0027] \u003d duration\n\t\ti+\u003d1\n\treturn value",
+            "type": "script"
+          }
+        ],
+        "type": "tag-history"
+      },
+      "persistent": true
+    },
+    "custom.HistoryPath": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Level/Value.History Path"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Level": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Level/Value"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ModeDescription": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Pump/ModeDescription"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.distoryDuration": {
+      "binding": {
+        "config": {
+          "path": "session.custom.DefaultPopupHistoryDuration"
+        },
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.highAlarm": {
+      "persistent": true
+    },
+    "custom.historyTags": {
+      "binding": {
+        "config": {
+          "path": "view.custom.HistoryPath"
+        },
+        "transforms": [
+          {
+            "code": "\ttag \u003d {\n\t    \"alias\": \"Level\",\n\t    \"path\": value\n\t  }\n\treturn [tag]",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.lowAlarm": {
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 339,
+      "width": 337
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "custom": {
+                  "ShowMarker": false
+                },
+                "meta": {
+                  "name": "Sparkline"
+                },
+                "position": {
+                  "height": 0.5573,
+                  "width": 1,
+                  "y": 0.4426
+                },
+                "propConfig": {
+                  "props.marker.first.size": {
+                    "binding": {
+                      "config": {
+                        "path": "this.custom.ShowMarker"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": 0,
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": true,
+                              "output": 5
+                            },
+                            {
+                              "input": false,
+                              "output": 0
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  },
+                  "props.marker.high.size": {
+                    "binding": {
+                      "config": {
+                        "path": "this.custom.ShowMarker"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": 0,
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": true,
+                              "output": 5
+                            },
+                            {
+                              "input": false,
+                              "output": 0
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  },
+                  "props.marker.last.size": {
+                    "binding": {
+                      "config": {
+                        "path": "this.custom.ShowMarker"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": 0,
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": true,
+                              "output": 5
+                            },
+                            {
+                              "input": false,
+                              "output": 0
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  },
+                  "props.marker.low.size": {
+                    "binding": {
+                      "config": {
+                        "path": "this.custom.ShowMarker"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": 0,
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": true,
+                              "output": 5
+                            },
+                            {
+                              "input": false,
+                              "output": 0
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  },
+                  "props.points": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.History"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tpoints \u003d []\n\tfor v in value:\n\t\tpoint \u003d v[\u0027Level\u0027]\n\t\tpoints.append(point)\n\treturn points",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "color": "#000000",
+                  "marker": {
+                    "first": {},
+                    "high": {},
+                    "last": {
+                      "shape": "square"
+                    },
+                    "low": {}
+                  },
+                  "range": {
+                    "high": 110,
+                    "low": 0
+                  },
+                  "style": {
+                    "paddingBottom": 6,
+                    "paddingTop": 6
+                  },
+                  "width": 0.5
+                },
+                "type": "ia.display.sparkline"
+              },
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "height": 0.3438,
+                  "width": 0.8224,
+                  "x": 0.0853,
+                  "y": 0.0886
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "view.params.Label"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "backgroundColor": "#FFFFFF00",
+                    "classes": "Standard/Body/Symbols/Text",
+                    "fontSize": 10
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "CoordinateContainer"
+            },
+            "position": {
+              "basis": "200px",
+              "grow": 1
+            },
+            "props": {
+              "mode": "percent"
+            },
+            "type": "ia.container.coord"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

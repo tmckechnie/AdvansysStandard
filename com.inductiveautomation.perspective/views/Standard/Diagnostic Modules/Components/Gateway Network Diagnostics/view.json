@@ -1,0 +1,84 @@
+{
+  "custom": {},
+  "params": {
+    "SystemGatewayNetworkFolderPath": "[System]Gateway/Gateway Network"
+  },
+  "propConfig": {
+    "params.SystemGatewayNetworkFolderPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 501,
+      "width": 698
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "50px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "label": "Gateway Network Connections"
+          },
+          "path": "Standard/Components/Views/Header/Header",
+          "style": {
+            "margin": 5
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Gateway Connections"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.instances": {
+            "binding": {
+              "config": {
+                "path": "view.params.SystemGatewayNetworkFolderPath"
+              },
+              "transforms": [
+                {
+                  "code": "\tgatewayNetworkConnectionFolderPaths \u003d []\n\tgatewayNetworkFolderPath \u003d value\n\tgatewayConnections \u003d system.tag.browse(gatewayNetworkFolderPath)\n\tfor gatewayConnection in gatewayConnections:\n\t\tfolderHasChild \u003d gatewayConnection[\"hasChildren\"]\n\t\tif folderHasChild:\n\t\t\tfullPath \u003d gatewayConnection[\"fullPath\"].toString()\n\t\t\tgatewayNetworkConnectionFolderPaths.append({\"GatewayNetworkFolderPath\":fullPath})\n\t\n\treturn gatewayNetworkConnectionFolderPaths",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "alignContent": "center",
+          "alignItems": "flex-start",
+          "elementStyle": {
+            "margin": 5
+          },
+          "justify": "center",
+          "path": "Standard/Diagnostic Modules/Components/Gateway Network Diagnostics Components/Gateway Network Connection",
+          "wrap": "wrap"
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

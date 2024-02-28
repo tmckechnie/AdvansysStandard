@@ -1,0 +1,773 @@
+{
+  "custom": {
+    "popupId": "ModulesFoundPopup"
+  },
+  "params": {
+    "Modules": [
+      {
+        "SearchResult": {
+          "tag": "InstanceName",
+          "value": "100M002"
+        },
+        "instance": {
+          "fullPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV02/100M002",
+          "name": "100M002"
+        },
+        "modelItemTagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/Model Item"
+      },
+      {
+        "SearchResult": {
+          "tag": "InstanceName",
+          "value": "100M001"
+        },
+        "instance": {
+          "fullPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV01/100M001",
+          "name": "100M001"
+        },
+        "modelItemTagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/Model Item"
+      },
+      {
+        "SearchResult": {
+          "tag": "InstanceName",
+          "value": "100M001IL01"
+        },
+        "instance": {
+          "fullPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV01/100M001IL01",
+          "name": "100M001IL01"
+        },
+        "modelItemTagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/Model Item"
+      },
+      {
+        "SearchResult": {
+          "tag": "InstanceName",
+          "value": "100M004"
+        },
+        "instance": {
+          "fullPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV04/100M004",
+          "name": "100M004"
+        },
+        "modelItemTagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/Model Item"
+      },
+      {
+        "SearchResult": {
+          "tag": "InstanceName",
+          "value": "100M006"
+        },
+        "instance": {
+          "fullPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/SCR01/100M006",
+          "name": "100M006"
+        },
+        "modelItemTagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/Model Item"
+      },
+      {
+        "SearchResult": {
+          "tag": "InstanceName",
+          "value": "100M006IL01"
+        },
+        "instance": {
+          "fullPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/SCR01/100M006IL01",
+          "name": "100M006IL01"
+        },
+        "modelItemTagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/Model Item"
+      },
+      {
+        "SearchResult": {
+          "tag": "InstanceName",
+          "value": "100M003"
+        },
+        "instance": {
+          "fullPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV03/100M003",
+          "name": "100M003"
+        },
+        "modelItemTagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/Model Item"
+      },
+      {
+        "SearchResult": {
+          "tag": "InstanceName",
+          "value": "100M005"
+        },
+        "instance": {
+          "fullPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV05/100M005",
+          "name": "100M005"
+        },
+        "modelItemTagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/Model Item"
+      }
+    ]
+  },
+  "propConfig": {
+    "custom.popupId": {
+      "persistent": true
+    },
+    "params.Modules": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 416,
+      "width": 675
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onRowClick": {
+              "config": {
+                "script": "\t#Update ModelItemTagPath based on row clicked\n\t#system.perspective.print(\"Current Tab Click Event: \" + str(event.value))\n\tmodelItemTagPath \u003d event.value[\"modelItemTagPath\"]\n\tmodelItemTagPath \u003d modelItemTagPath + \"/Model Item\"\n\tmoduleName \u003d event.value[\"name\"]\n\t\n\t#Write to instance SelfIdentifyRequest\n\tfullPath \u003d str(event.value[\u0027fullPath\u0027])\n\tidentifyTagPath \u003d fullPath + \"/Id/SelfIdentifyRequest\"\n\tif system.tag.exists(identifyTagPath):\n\t\tsystem.tag.writeBlocking(tagPaths\u003d[identifyTagPath], values\u003d[True])\n\t\n\tuseSessionModelItemTagPath \u003d self.session.custom.UseSessionModelItemTagPath\n\tcurrentModelItemTagPaths \u003d self.session.custom.CurrentModelItemTagPaths\n\tmodelItemTagPath \u003d modelItemTagPath\n\tperspectivePageID \u003d self.page.props.pageId\n\tself.session.custom.CurrentModelItemTagPaths \u003d Standard.Navigation.Common.UpdateCurrentModelItemTagPaths(UpdatedModelItemTagPath \u003d modelItemTagPath,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t CurrentModelItemTagPaths \u003d currentModelItemTagPaths,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t UseSessionModelItemTagPath \u003d useSessionModelItemTagPath,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t PerspectivePageID \u003d perspectivePageID,SearchModule\u003dmoduleName)\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \n\tsystem.perspective.closePopup(id\u003dself.view.custom.popupId)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "grow": 1
+        },
+        "propConfig": {
+          "props.data": {
+            "binding": {
+              "config": {
+                "path": "view.params.Modules"
+              },
+              "transforms": [
+                {
+                  "code": "\ti\u003d0\n\tdata \u003d []\n\tfor module in value:\n\t\ti +\u003d1\n\t\trow \u003d {}\n\t\trow[\"style\"] \u003d {\"background-color\":\"var(--callToAction)\"}\n\t\trow[\u0027index\u0027] \u003d i\n\t\tname \u003d module[\u0027instance\u0027][\u0027name\u0027]\n\t\tfullPath \u003d module[\u0027instance\u0027][\u0027fullPath\u0027]\n\t\ttagName \u003d module[\u0027SearchResult\u0027][\u0027tag\u0027]\n\t\ttagValue \u003d module[\u0027SearchResult\u0027][\u0027value\u0027]\n\t\tmodelItemTagPath \u003d module[\u0027modelItemTagPath\u0027]\n\t\tmodelItemTagPath \u003d \u0027/\u0027.join(modelItemTagPath.split(\u0027/\u0027)[0:-1])\n\t\trow[\u0027name\u0027] \u003d name\n\t\trow[\u0027fullPath\u0027] \u003d fullPath\n\t\trow[\u0027tagName\u0027] \u003d tagName\n\t\trow[\u0027tagValue\u0027] \u003d tagValue\n\t\trow[\u0027modelItemTagPath\u0027] \u003d modelItemTagPath\n\t\tdata.append(row)\n\t\t\n\treturn data",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "bodyStyle": {
+            "classes": "Standard/Docked/Left/Background",
+            "fontSize": 8
+          },
+          "columns": [
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "name",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Name"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "string",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": true,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 100
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "tagName",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Found In"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "string",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": true,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": 100
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "tagValue",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Value"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "string",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "modelItemTagPath",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Location Path"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "string",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "index",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "string",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": false,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "fullpath",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "string",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": false,
+              "width": ""
+            }
+          ],
+          "enableHeaderGroups": true,
+          "headerGroupStyle": {
+            "classes": "Standard/Docked/Header/HeadingBackground Standard/Docked/Header/HeadingBorder Standard/Docked/Header/HeadingText"
+          },
+          "headerGroups": [
+            [
+              {
+                "align": "center",
+                "justify": "center",
+                "span": 4,
+                "style": {
+                  "classes": ""
+                },
+                "title": "Click to Navigate"
+              }
+            ]
+          ],
+          "headerStyle": {
+            "classes": "Standard/Docked/Header/HeadingBackground Standard/Docked/Header/HeadingBorder Standard/Docked/Header/HeadingText"
+          },
+          "pager": {
+            "bottom": false
+          },
+          "rows": {
+            "highlight": {
+              "color": "var(--callToActionHighlight)"
+            },
+            "style": {
+              "classes": "Standard/Docked/Left/Background Standard/Docked/Left/Text",
+              "fontSize": 10
+            }
+          },
+          "selection": {
+            "enableRowSelection": false
+          },
+          "style": {
+            "classes": "Standard/Docked/Header/HeadingBorder"
+          }
+        },
+        "type": "ia.display.table"
+      }
+    ],
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "enabled": true
+      }
+    },
+    "propConfig": {
+      "meta.tooltip.text": {
+        "binding": {
+          "config": {
+            "path": "view.custom.RequiredModelItemTagPath"
+          },
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Docked/Left/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

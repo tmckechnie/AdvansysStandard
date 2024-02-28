@@ -1,0 +1,75 @@
+{
+  "custom": {},
+  "params": {
+    "Mirror": false
+  },
+  "propConfig": {
+    "params.Mirror": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 131,
+      "width": 145
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Vibrating screen"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "props.elements[0].transform": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Mirror},\"translate(636,0) scale(-1, 1)\",\"\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "d": "M 50 100 L 300 100 L 250 200 L 250 200 L 450 250 L 450 350 L 50 350 L 50 200 L 100 200 L 50 100  ",
+                  "fill": {},
+                  "name": "path",
+                  "stroke": {},
+                  "style": {
+                    "classes": "Standard/Body/Statics/Fill Standard/Body/Statics/Stroke",
+                    "vector-effect": "non-scaling-stroke"
+                  },
+                  "type": "path"
+                }
+              ],
+              "type": "group"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 500 400"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "backgroundColor": "#FAFAFB00",
+        "classes": "Standard/Body/Statics/Background"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

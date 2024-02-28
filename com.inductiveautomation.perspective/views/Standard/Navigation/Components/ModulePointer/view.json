@@ -1,0 +1,52 @@
+{
+  "custom": {
+    "ModelItemTagPath": "[StandardS71500]Standard/Model Item"
+  },
+  "params": {
+    "ClearSearchModule": false
+  },
+  "propConfig": {
+    "custom.ModelItemTagPath": {
+      "binding": {
+        "config": {
+          "expression": "runScript(\"Standard.Navigation.Common.GetCurrentModelItemTagPath\",0,{session.custom.CurrentModelItemTagPaths},{session.custom.UseSessionModelItemTagPath},{page.props.pageId})[\u0027ModelItemTagPath\u0027]"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.ClearSearchModule": {
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 45,
+      "width": 144
+    }
+  },
+  "root": {
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\tmodelItemTagPath \u003d self.view.custom.ModelItemTagPath\n\tuseSessionModelItemTagPath \u003d self.session.custom.UseSessionModelItemTagPath\n\tcurrentModelItemTagPaths \u003d self.session.custom.CurrentModelItemTagPaths\n\tperspectivePageID \u003d self.page.props.pageId\n\tself.session.custom.CurrentModelItemTagPaths \u003d Standard.Navigation.Common.UpdateCurrentModelItemTagPaths(UpdatedModelItemTagPath \u003d modelItemTagPath,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t CurrentModelItemTagPaths \u003d currentModelItemTagPaths,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t UseSessionModelItemTagPath \u003d useSessionModelItemTagPath,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t PerspectivePageID \u003d perspectivePageID,SearchModule\u003d\"\")\n\tself.view.params.ClearSearchModule \u003d True"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Body/Navigation/Identify"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "custom": {},
+  "params": {
+    "Message": "value",
+    "Reason": "value"
+  },
+  "propConfig": {
+    "params.Message": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Reason": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 350,
+      "width": 350
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/HeaderBackground Standard/Popups/HeaderText",
+            "textAlign": "center"
+          },
+          "text": "Something went wrong!"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "LineStatus Changes"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Message} + \" \" + {view.params.Reason}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Text",
+            "margin": 5,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Message} + {view.params.Reason}"
+              },
+              "transforms": [
+                {
+                  "code": "\tdate \u003d system.date.now()  \t\n\thour \u003d system.date.getHour24(date) \t\n\tminutes \u003d system.date.getMinute(date) \t\n\tif hour \u003d\u003d 0 and minutes \u003c 30:\t\t\n\t\treturn True\t\n\t\n\telse: \t\t\n\t\treturn False",
+                  "type": "script"
+                }
+              ],
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Flow/Navigation/Detail",
+            "fontSize": 13,
+            "fontWeight": "normal",
+            "margin": 5,
+            "textAlign": "center"
+          },
+          "text": "Note this could be due to the Daily Flow Maintenance which starts at 00:00."
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "draggable": true,
+                "id": "ThrownException",
+                "modal": false,
+                "overlayDismiss": false,
+                "resizable": true,
+                "showCloseIcon": true,
+                "type": "close",
+                "viewPath": "Flow/Forms/Production Run/State/PopUp/SavedChangesSummary"
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Button/Default"
+          },
+          "text": "OK"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Popups/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

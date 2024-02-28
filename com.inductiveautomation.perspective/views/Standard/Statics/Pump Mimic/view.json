@@ -1,0 +1,204 @@
+{
+  "custom": {},
+  "params": {
+    "Direction": "right"
+  },
+  "propConfig": {
+    "params.Direction": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 50
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Symbol"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "propConfig": {
+              "props.elements[0].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.bodyClasses"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[1].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.bodyClasses"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.elements[2].style.classes": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.bodyClasses"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.style.transform": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.Direction"
+                  },
+                  "transforms": [
+                    {
+                      "fallback": "",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": "right",
+                          "output": ""
+                        },
+                        {
+                          "input": "left",
+                          "output": "scaleX(-1)"
+                        },
+                        {
+                          "input": "down",
+                          "output": "rotate(90deg)"
+                        },
+                        {
+                          "input": "up",
+                          "output": "rotate(-90deg)"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "elements": [
+                {
+                  "d": "M 210 260 L 310 360 L 310 390 L 10 390 L 10 360 L 110 260 Z",
+                  "fill": {
+                    "opacity": 1
+                  },
+                  "name": "Base",
+                  "stroke": {
+                    "dasharray": "none",
+                    "opacity": 1,
+                    "width": 2
+                  },
+                  "style": {
+                    "vector-effect": "non-scaling-stroke"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M 310 160 A 150 150 0 1 1 160 10 L 390 10 L 390 160 Z",
+                  "fill": {
+                    "opacity": 1
+                  },
+                  "name": "Body",
+                  "stroke": {
+                    "dasharray": "none",
+                    "opacity": 1,
+                    "width": 2
+                  },
+                  "style": {
+                    "vector-effect": "non-scaling-stroke"
+                  },
+                  "type": "path"
+                },
+                {
+                  "cx": 160,
+                  "cy": 160,
+                  "fill": {
+                    "opacity": 1
+                  },
+                  "name": "Center",
+                  "r": 80,
+                  "stroke": {
+                    "dasharray": "none",
+                    "opacity": 1,
+                    "width": 2
+                  },
+                  "style": {
+                    "vector-effect": "non-scaling-stroke"
+                  },
+                  "type": "circle"
+                }
+              ],
+              "preserveAspectRatio": "none",
+              "viewBox": "0 0 400 400"
+            },
+            "type": "ia.shapes.svg"
+          }
+        ],
+        "custom": {
+          "bodyClasses": " Standard/Body/Symbols/ModeAuto Standard/Body/Symbols/Fill/Passive"
+        },
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\ttagPath \u003d self.view.params.TagPath\n\tinstanceName \u003d self.view.custom.InstanceName\n\tdescription \u003d self.view.custom.Description\n\ttitle \u003d instanceName + \" - \" + description\n\tparamsObject \u003d {\"ControlModuleType\":\"Motor\",\"TagPath\":tagPath}\n\tStandard.ControlModules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle)"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root",
+      "tooltip": {
+        "enabled": true
+      }
+    },
+    "propConfig": {
+      "meta.tooltip.text": {
+        "binding": {
+          "config": {
+            "path": "view.custom.Description"
+          },
+          "type": "property"
+        }
+      },
+      "props.style.classes": {
+        "persistent": true
+      }
+    },
+    "props": {
+      "direction": "column",
+      "justify": "center",
+      "style": {
+        "margin": 4
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

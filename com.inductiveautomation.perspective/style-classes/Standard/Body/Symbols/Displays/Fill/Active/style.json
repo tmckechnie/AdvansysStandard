@@ -1,0 +1,8 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--bodySymbolActive)",
+      "color": "var(--bodySymbolActiveText)"
+    }
+  }
+}

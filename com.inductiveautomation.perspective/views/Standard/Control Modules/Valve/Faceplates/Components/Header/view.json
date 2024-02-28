@@ -1,0 +1,259 @@
+{
+  "custom": {
+    "AlarmSummary": {
+      "HighestActivePriority": 0,
+      "HighestActivePriorityName": null,
+      "HighestUnackedPriority": 1,
+      "HighestUnackedPriorityName": "Low",
+      "Overall": {
+        "ActiveAckCount": 0,
+        "ActiveUnackCount": 0,
+        "ClearUnackCount": 6,
+        "Detail": [],
+        "ShelvedCount": 0,
+        "Total": 6
+      },
+      "PriorityDetail": {
+        "Critical": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "High": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Low": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 6,
+          "Detail": [
+            {
+              "EventID": "3c4f460c-6e24-4dd0-8b0d-60a83f67b133",
+              "Label": "Available",
+              "State": "Cleared, Unacknowledged"
+            },
+            {
+              "EventID": "92f2f6ce-b8ba-4be2-94ff-0be506f4ba1f",
+              "Label": "CloseLimit",
+              "State": "Cleared, Unacknowledged"
+            },
+            {
+              "EventID": "c3ef4fdb-8eb7-4327-8bba-011b12cc4017",
+              "Label": "CloseLimit",
+              "State": "Cleared, Unacknowledged"
+            },
+            {
+              "EventID": "9499b46f-5726-4009-9e53-3a76c8a554d0",
+              "Label": "CloseLimit",
+              "State": "Cleared, Unacknowledged"
+            },
+            {
+              "EventID": "21ed137a-1cc8-4145-8812-c27a09e9a1aa",
+              "Label": "CloseLimit",
+              "State": "Cleared, Unacknowledged"
+            },
+            {
+              "EventID": "ed9d86e9-cb16-4e2a-89e9-0c22ad8dd740",
+              "Label": "CloseLimit",
+              "State": "Cleared, Unacknowledged"
+            }
+          ],
+          "ShelvedCount": 0,
+          "Total": 6
+        },
+        "Medium": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        }
+      }
+    },
+    "Interlocked": false,
+    "State": "Closed",
+    "alarmLabel": "Unacked: Low; Active: None",
+    "alarmStyle": {
+      "classes": "Standard/Alarms/Low/Text Standard/Alarms/Low/Border Standard/Alarms/BorderAnimation Standard/Alarms/Low/ClearUnacked/Border"
+    },
+    "interlockLabel": "Healthy",
+    "interlockStyle": "Standard/Popups/Faceplates/Interlocked"
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Modules/Control Modules/100XV100"
+  },
+  "propConfig": {
+    "custom.AlarmSummary": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Summary/Information"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Interlocked": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Interlock/Interlocked"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.State": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.alarmLabel": {
+      "binding": {
+        "config": {
+          "expression": "\"Unacked: \" + if(isNull({view.custom.AlarmSummary.HighestUnackedPriorityName}),\"None\",{view.custom.AlarmSummary.HighestUnackedPriorityName}) + \"; \" +\r\n\"Active: \" + if(isNull({view.custom.AlarmSummary.HighestActivePriorityName}),\"None\",{view.custom.AlarmSummary.HighestActivePriorityName})"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.alarmStyle": {
+      "binding": {
+        "config": {
+          "path": "view.custom.AlarmSummary"
+        },
+        "transforms": [
+          {
+            "code": "\treturn Standard.Modules.Alarms.GetAlarmStyle(AlarmSummary\u003dvalue)\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.interlockLabel": {
+      "binding": {
+        "config": {
+          "expression": "if({view.custom.Interlocked},\"Interlocked\",\"Healthy\")"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.interlockStyle": {
+      "binding": {
+        "config": {
+          "expression": "if({view.custom.Interlocked},\"Standard/Popups/Faceplates/Interlocked\",\"Standard/Popups/Faceplates/Interlocked\")"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 48,
+      "width": 445
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onDoubleClick": {
+              "config": {
+                "draggable": true,
+                "id": "5TEjGHmQ",
+                "modal": false,
+                "overlayDismiss": false,
+                "resizable": true,
+                "showCloseIcon": true,
+                "type": "open",
+                "viewParams": {
+                  "Msg": "{view.custom.Details.TagPath}"
+                },
+                "viewPath": "Common Components/Views/MsgBox"
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Summary 2"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "path": "view.custom.alarmStyle.classes"
+              },
+              "transforms": [
+                {
+                  "code": "\tstyleClasses \u003d value\n\tstyleClasses +\u003d \" Standard/Popups/Faceplates/HeaderText Standard/Popups/Faceplates/HeaderBackground\"\n\treturn styleClasses",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "\"[State:\" + {view.custom.State} + \"] [Alarms: \" + {view.custom.alarmLabel} + \"] [Interlock: \" + {view.custom.interlockLabel} + \"]\"\r\n"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {}
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

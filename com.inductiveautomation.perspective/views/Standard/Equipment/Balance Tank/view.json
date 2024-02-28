@@ -1,0 +1,1921 @@
+{
+  "custom": {
+    "AlarmConfig": {},
+    "AlarmStyle": {
+      "classes": ""
+    },
+    "AlarmSummary": {
+      "HighestActivePriority": 0,
+      "HighestActivePriorityName": null,
+      "HighestUnackedPriority": 0,
+      "HighestUnackedPriorityName": null,
+      "Overall": {
+        "ActiveAckCount": 0,
+        "ActiveUnackCount": 0,
+        "ClearUnackCount": 0,
+        "Detail": [],
+        "ShelvedCount": 0,
+        "Total": 0
+      },
+      "PriorityDetail": {
+        "Critical": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "High": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Low": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Medium": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        }
+      }
+    },
+    "Data": [
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      80.03192,
+      79.664734,
+      77.91278,
+      75.60126,
+      73.849304,
+      71.49188,
+      69.1452,
+      67.40692,
+      65.05243,
+      63.271175,
+      63.193054,
+      63.193054,
+      63.193054,
+      63.193054,
+      63.193054,
+      63.193054,
+      63.193054,
+      63.193054,
+      62.80243,
+      60.453796,
+      58.084656,
+      56.301453,
+      53.934265,
+      52.195007,
+      49.84442,
+      47.544617,
+      46.255554,
+      46.255554,
+      46.255554,
+      46.408875,
+      46.408875,
+      46.408875,
+      46.408875,
+      46.408875,
+      46.408875,
+      46.43036,
+      46.487,
+      46.487,
+      46.487,
+      46.487,
+      46.794617,
+      46.82196,
+      46.917664,
+      46.96161,
+      47.09735,
+      47.17743,
+      47.33954,
+      47.33954,
+      47.374695,
+      47.374695,
+      47.374695,
+      47.485046,
+      47.485046,
+      47.485046,
+      47.585632,
+      47.585632,
+      47.612976,
+      47.689148,
+      47.865906,
+      47.882507,
+      47.965515,
+      48.014343,
+      48.195984,
+      48.28192,
+      48.371765,
+      48.400085,
+      48.44989,
+      48.491882,
+      48.517273,
+      48.517273,
+      48.517273,
+      48.538757,
+      48.593445,
+      48.605164,
+      48.666687,
+      48.666687,
+      48.666687,
+      48.682312,
+      48.682312,
+      48.874695,
+      48.88739,
+      48.88739,
+      48.88739,
+      48.97235,
+      48.97235,
+      49.007507,
+      49.0495,
+      49.0495,
+      49.0495,
+      49.067078,
+      49.067078,
+      49.067078,
+      49.067078,
+      49.141296,
+      49.164734,
+      49.207703,
+      49.30829,
+      49.47235,
+      49.47235,
+      49.47235,
+      49.639343,
+      49.706726,
+      49.706726,
+      49.706726,
+      49.743835,
+      49.834656,
+      49.834656,
+      49.863953,
+      49.89618,
+      49.93036,
+      50.0036,
+      50.074886,
+      50.074886,
+      50.119812,
+      50.119812,
+      50.324894,
+      50.324894,
+      50.39227,
+      50.39227,
+      50.403015,
+      50.51434,
+      50.51434,
+      50.52899,
+      50.61493,
+      50.633484,
+      50.658875,
+      50.804382,
+      50.804382,
+      50.804382,
+      50.91864,
+      50.940125,
+      51.005554,
+      51.02997,
+      51.230164,
+      51.230164,
+      51.24774,
+      51.24774,
+      51.297546,
+      51.297546,
+      51.55536,
+      51.58856,
+      51.630558,
+      51.716496,
+      51.767273,
+      51.767273,
+      51.817078,
+      51.817078,
+      51.817078,
+      51.852234,
+      51.852234,
+      51.852234,
+      52.01239,
+      52.01239,
+      52.048523,
+      52.125668,
+      52.15595,
+      52.184265,
+      52.200867,
+      52.244812,
+      52.282898,
+      52.294617,
+      52.294617,
+      52.294617,
+      52.31024,
+      52.331726,
+      52.416687,
+      52.428406,
+      52.445984,
+      52.55926,
+      52.803402,
+      52.864925,
+      52.89325,
+      52.89325,
+      52.963562,
+      53.0163,
+      53.153015,
+      53.16571,
+      53.221375,
+      53.221375,
+      53.238953,
+      53.318054,
+      53.41571,
+      53.4411,
+      53.465515,
+      53.75067,
+      53.906925,
+      54.056335,
+      54.306335,
+      54.416687,
+      54.55829,
+      54.65301,
+      54.69989,
+      54.69989,
+      54.815125,
+      54.83661,
+      54.885437,
+      54.97235,
+      55.097355,
+      55.097355,
+      55.097355,
+      55.212585,
+      55.230164,
+      55.240906,
+      55.292667,
+      55.397152,
+      55.520203,
+      55.73895,
+      55.73895,
+      55.788757,
+      55.85907,
+      55.882507,
+      55.882507,
+      56.06024,
+      56.117855,
+      56.144226,
+      56.144226,
+      56.144226,
+      56.21942,
+      56.39813,
+      56.439148,
+      56.439148,
+      56.439148,
+      56.57196,
+      56.639343,
+      56.67157,
+      56.71551,
+      56.88446,
+      56.925476,
+      57.04559,
+      57.04559,
+      57.04559,
+      57.04559,
+      57.04559,
+      57.04559,
+      57.04559,
+      57.191105,
+      57.207703,
+      57.255554,
+      57.255554,
+      57.255554,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.358093,
+      57.249695,
+      57.20868,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.882507,
+      56.88250732421875
+    ],
+    "EngUnits": "%",
+    "HistoryTag": [
+      {
+        "aggregate": "MinMax",
+        "alias": "Value",
+        "path": "[StandardS71500/default:default]CAN01VS1/StandardS71500/Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput03/Sts/Value"
+      }
+    ],
+    "InstanceName": "AnalogInput03",
+    "ScaleEngineeringMax": 100,
+    "ScaleEngineeringMin": 0,
+    "TankLevel": 56.882507,
+    "historyDuration": 60
+  },
+  "params": {
+    "HistoryDuration": 60,
+    "LevelTagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput03",
+    "ShowLevelTrend": true,
+    "ShowMajorTicks": true,
+    "ShowMinorTicks": true,
+    "ShowTankLevel": true
+  },
+  "propConfig": {
+    "custom.AlarmConfig": {
+      "persistent": true
+    },
+    "custom.AlarmConfig.AlarmHigh": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "LevelTagPath": "{view.params.LevelTagPath}"
+          },
+          "tagPath": "{LevelTagPath}/Alarms/High/Cfg/ConditionSetpoint"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.AlarmConfig.AlarmHighHigh": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "LevelTagPath": "{view.params.LevelTagPath}"
+          },
+          "tagPath": "{LevelTagPath}/Alarms/HighHigh/Cfg/ConditionSetpoint"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.AlarmConfig.AlarmLow": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "LevelTagPath": "{view.params.LevelTagPath}"
+          },
+          "tagPath": "{LevelTagPath}/Alarms/Low/Cfg/ConditionSetpoint"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.AlarmConfig.AlarmLowLow": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "LevelTagPath": "{view.params.LevelTagPath}"
+          },
+          "tagPath": "{LevelTagPath}/Alarms/LowLow/Cfg/ConditionSetpoint"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.AlarmStyle": {
+      "binding": {
+        "config": {
+          "path": "view.custom.AlarmSummary"
+        },
+        "transforms": [
+          {
+            "code": "\treturn Standard.Modules.Alarms.GetAlarmStyle(AlarmSummary\u003dvalue)\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.AlarmSummary": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "LevelTagPath": "{view.params.LevelTagPath}"
+          },
+          "tagPath": "{LevelTagPath}/Alarms/Summary/Information"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Data": {
+      "binding": {
+        "config": {
+          "aggregate": "MinMax",
+          "avoidScanClassValidation": true,
+          "dateRange": {
+            "mostRecent": "{view.custom.historyDuration}",
+            "mostRecentUnits": "MIN"
+          },
+          "enableValueCache": true,
+          "ignoreBadQuality": false,
+          "polling": {
+            "enabled": true,
+            "rate": "1"
+          },
+          "preventInterpolation": false,
+          "returnFormat": "Wide",
+          "returnSize": {
+            "numRows": "1000",
+            "type": "FIXED"
+          },
+          "tags": "{view.custom.HistoryTag}",
+          "valueFormat": "DOCUMENT"
+        },
+        "transforms": [
+          {
+            "code": "\t\n\tdata \u003d []\n\tnowValue \u003d self.custom.TankLevel\n\tfor row in value:\n\t\tpointValue \u003d row[\"Value\"]\n\t\tdata.append(pointValue)\n\tdata.append(nowValue)\n\treturn data",
+            "type": "script"
+          }
+        ],
+        "type": "tag-history"
+      },
+      "persistent": true
+    },
+    "custom.EngUnits": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "LevelTagPath": "{view.params.LevelTagPath}"
+          },
+          "tagPath": "{LevelTagPath}/Sts/Value.EngUnit"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.HistoryTag": {
+      "binding": {
+        "config": {
+          "struct": {
+            "gatewayType": "{session.custom.SystemInfo.GatewayType}",
+            "historyPath": "tag({view.params.LevelTagPath}+\"/Sts/Value.History Path\")\r\n"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\thistoryPath \u003d value[\u0027historyPath\u0027]\n\tgatewayType \u003d value[\u0027gatewayType\u0027]\n\tpath \u003d historyPath\n\tif gatewayType \u003d\u003d \"Edge\":\n\t\tpath \u003d self.params.LevelTagPath + \"/Sts/Value\"\n\t\t\n\treturn [{\n\t    \"aggregate\": \"MinMax\",\n\t    \"alias\": \"Value\",\n\t    \"path\": path\n\t  }]",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.InstanceName": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "LevelTagPath": "{view.params.LevelTagPath}"
+          },
+          "tagPath": "{LevelTagPath}/Metadata/InstanceName"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ScaleEngineeringMax": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "LevelTagPath": "{view.params.LevelTagPath}"
+          },
+          "tagPath": "{LevelTagPath}/Cfg/ScaleEngineeringMax"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ScaleEngineeringMin": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "LevelTagPath": "{view.params.LevelTagPath}"
+          },
+          "tagPath": "{LevelTagPath}/Cfg/ScaleEngineeringMin"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.TankLevel": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "LevelTagPath": "{view.params.LevelTagPath}"
+          },
+          "tagPath": "{LevelTagPath}/Sts/Value"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.historyDuration": {
+      "binding": {
+        "config": {
+          "path": "view.params.HistoryDuration"
+        },
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.HistoryDuration": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.LevelTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowLevelTrend": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowMajorTicks": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowMinorTicks": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowTankLevel": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 221,
+      "width": 367
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Basic Tank"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "params": {
+                "style": {
+                  "classes": "Standard/Body/Statics/Stroke Standard/Body/Statics/Fill",
+                  "vector-effect": "non-scaling-stroke"
+                }
+              },
+              "path": "Standard/Statics/Basic Tank"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "SparklineLow"
+                },
+                "position": {
+                  "height": 1,
+                  "width": 0.9
+                },
+                "propConfig": {
+                  "props.points": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.AlarmConfig.AlarmLow}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\t\n\treturn [value]*100\n",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "color": "var(--AlarmHigh)",
+                  "dashArray": "5,5,5",
+                  "marker": {
+                    "first": {
+                      "size": 0,
+                      "style": {
+                        "stroke": "#FF0000"
+                      }
+                    },
+                    "high": {
+                      "shape": "circle",
+                      "size": 0
+                    },
+                    "last": {
+                      "size": 0,
+                      "style": {
+                        "opacity": "0,00"
+                      }
+                    },
+                    "low": {
+                      "shape": "circle",
+                      "size": 0
+                    }
+                  },
+                  "range": {
+                    "high": 100,
+                    "low": 0
+                  },
+                  "width": 0.5
+                },
+                "type": "ia.display.sparkline"
+              },
+              {
+                "meta": {
+                  "name": "SparklineHigh"
+                },
+                "position": {
+                  "height": 1,
+                  "width": 0.9
+                },
+                "propConfig": {
+                  "props.points": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.AlarmConfig.AlarmHigh}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\t\n\treturn [value]*100\n",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "color": "var(--AlarmHigh)",
+                  "dashArray": "5,5,5",
+                  "marker": {
+                    "first": {
+                      "size": 0
+                    },
+                    "high": {
+                      "shape": "circle",
+                      "size": 0
+                    },
+                    "last": {
+                      "size": 0
+                    },
+                    "low": {
+                      "shape": "circle",
+                      "size": 0
+                    }
+                  },
+                  "range": {
+                    "high": 100,
+                    "low": 0
+                  },
+                  "width": 0.5
+                },
+                "type": "ia.display.sparkline"
+              },
+              {
+                "meta": {
+                  "name": "SparklinePV"
+                },
+                "position": {
+                  "height": 1,
+                  "width": 0.9
+                },
+                "propConfig": {
+                  "props.points": {
+                    "binding": {
+                      "config": {
+                        "path": "parent.custom.History.data[0].data"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tdata \u003d []\n\tfor row in value:\n\t\tpointValue \u003d row[\"Value\"]\n\t\tdata.append(pointValue)\n\treturn data",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "marker": {
+                    "first": {
+                      "size": 2
+                    },
+                    "high": {
+                      "size": 0
+                    },
+                    "last": {
+                      "size": 2
+                    },
+                    "low": {
+                      "size": 0
+                    }
+                  },
+                  "range": {
+                    "high": 100,
+                    "low": 0
+                  },
+                  "style": {
+                    "borderStyle": "none"
+                  }
+                },
+                "type": "ia.display.sparkline"
+              },
+              {
+                "meta": {
+                  "name": "LinearScale"
+                },
+                "position": {
+                  "height": 1,
+                  "width": 0.1,
+                  "x": 0.9
+                },
+                "propConfig": {
+                  "props.indicators[0].extent": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({this.props.indicators[0].value}\u003e0,{this.props.maxValue}-{this.props.indicators[0].value},0)"
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.indicators[0].value": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.AlarmConfig.AlarmHigh"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.indicators[1].extent": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({this.props.indicators[1].value}\u003e0,{this.props.maxValue}-{this.props.indicators[1].value},0)"
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.indicators[1].value": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.AlarmConfig.AlarmHighHigh"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.indicators[2].value": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.TankLevel"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.indicators[3].extent": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.AlarmConfig.AlarmLow"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.indicators[3].value": {
+                    "binding": {
+                      "config": {
+                        "path": "this.props.minValue"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.indicators[4].extent": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.AlarmConfig.AlarmLowLow}\r\n"
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.indicators[4].value": {
+                    "binding": {
+                      "config": {
+                        "path": "this.props.minValue"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.majorTicks.stroke": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({view.params.ShowMajorTicks},0.3,0)"
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.maxValue": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.ScaleEngineeringMax"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.minValue": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.ScaleEngineeringMin"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.minorTicks.stroke": {
+                    "binding": {
+                      "config": {
+                        "expression": "if({view.params.ShowMinorTicks},0.3,0)"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "fineTicks": {
+                    "span": 0,
+                    "stroke": 0.3
+                  },
+                  "indicators": [
+                    {
+                      "color": "var(--AlarmHigh)",
+                      "indicatorStyle": "range",
+                      "label": "",
+                      "labelAngle": 270,
+                      "labelColor": "#D5D5D5",
+                      "length": 50,
+                      "opacity": 0.5,
+                      "stroke": 0
+                    },
+                    {
+                      "color": "var(--AlarmCritical)",
+                      "indicatorStyle": "range",
+                      "label": "",
+                      "labelAngle": 270,
+                      "labelColor": "#D5D5D5",
+                      "length": 50,
+                      "opacity": 0.5,
+                      "stroke": 0
+                    },
+                    {
+                      "color": "var(--bodyContentText)",
+                      "extent": 0,
+                      "indicatorStyle": "line",
+                      "label": "",
+                      "labelAngle": 270,
+                      "labelColor": "",
+                      "length": 10,
+                      "opacity": 1,
+                      "stroke": 3
+                    },
+                    {
+                      "color": "var(--AlarmHigh)",
+                      "indicatorStyle": "range",
+                      "label": "",
+                      "labelAngle": 270,
+                      "labelColor": "",
+                      "length": 50,
+                      "opacity": 0.5,
+                      "stroke": 0
+                    },
+                    {
+                      "color": "var(--AlarmCritical)",
+                      "indicatorStyle": "range",
+                      "label": "",
+                      "labelAngle": 270,
+                      "labelColor": "",
+                      "length": 50,
+                      "opacity": 0.5,
+                      "stroke": 0
+                    }
+                  ],
+                  "labels": {
+                    "style": {
+                      "fontSize": 0
+                    }
+                  },
+                  "majorTicks": {},
+                  "minorTicks": {},
+                  "style": {
+                    "borderStyle": "none",
+                    "borderWidth": 0.5
+                  }
+                },
+                "type": "ia.display.linear-scale"
+              },
+              {
+                "meta": {
+                  "name": "SparklineLowLow"
+                },
+                "position": {
+                  "height": 1,
+                  "width": 0.9
+                },
+                "propConfig": {
+                  "props.points": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.AlarmConfig.AlarmLowLow}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\t\n\treturn [value]*100\n",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "color": "var(--AlarmCritical)",
+                  "dashArray": "2,2,2",
+                  "marker": {
+                    "first": {
+                      "size": 0,
+                      "style": {
+                        "stroke": "#FF0000"
+                      }
+                    },
+                    "high": {
+                      "shape": "circle",
+                      "size": 0
+                    },
+                    "last": {
+                      "size": 0,
+                      "style": {
+                        "opacity": "0,00"
+                      }
+                    },
+                    "low": {
+                      "shape": "circle",
+                      "size": 0
+                    }
+                  },
+                  "range": {
+                    "high": 100,
+                    "low": 0
+                  },
+                  "width": 0.5
+                },
+                "type": "ia.display.sparkline"
+              },
+              {
+                "meta": {
+                  "name": "SparklineHighHigh"
+                },
+                "position": {
+                  "height": 1,
+                  "width": 0.9
+                },
+                "propConfig": {
+                  "props.points": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.AlarmConfig.AlarmHighHigh}"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\t\n\treturn [value]*100\n",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "color": "var(--AlarmCritical)",
+                  "dashArray": "2,2,2",
+                  "marker": {
+                    "first": {
+                      "size": 0
+                    },
+                    "high": {
+                      "shape": "circle",
+                      "size": 0
+                    },
+                    "last": {
+                      "size": 0
+                    },
+                    "low": {
+                      "shape": "circle",
+                      "size": 0
+                    }
+                  },
+                  "range": {
+                    "high": 100,
+                    "low": 0
+                  },
+                  "width": 0.5
+                },
+                "type": "ia.display.sparkline"
+              }
+            ],
+            "custom": {
+              "History": {}
+            },
+            "meta": {
+              "name": "SparklineCoordinate",
+              "tooltip": {
+                "style": {
+                  "borderStyle": "solid",
+                  "borderWidth": 1
+                }
+              }
+            },
+            "position": {
+              "height": 0.96,
+              "width": 0.888,
+              "x": 0.06,
+              "y": 0.008
+            },
+            "propConfig": {
+              "custom.History.config": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "currentValue": "{view.custom.TankLevel}",
+                      "gatewayType": "{session.custom.SystemInfo.GatewayType}",
+                      "historyPath": "tag({view.params.LevelTagPath}+\"/Sts/Value.History Path\")\r\n"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\thistoryPath \u003d value[\u0027historyPath\u0027]\n\tgatewayType \u003d value[\u0027gatewayType\u0027]\n\tcurrentValue \u003d value[\u0027currentValue\u0027]\n\tpath \u003d historyPath\n\tif gatewayType \u003d\u003d \"Edge\":\n\t\tpath \u003d self.params.LevelTagPath + \"/Sts/Value\"\n\tseries \u003d {\"seriesName\": \"Level\",\"tags\": [{\"alias\":\"Value\", \"currentValue\": currentValue,\"path\": path,\"isBool\":False}]}\n\treturn [series]\n",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "custom.History.data": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "config": "{this.custom.History.config}",
+                      "duration": "{this.custom.History.duration}",
+                      "periodEnd": "now(1000)"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tconfig \u003d value[\u0027config\u0027] \n\tduration \u003d value[\u0027duration\u0027] \n\tperiodEnd \u003d value[\u0027periodEnd\u0027]\n\tdata \u003d Standard.Tags.Common.GetTrendData(HistoryConfig\u003dconfig,PeriodEnd\u003dperiodEnd,HistoryDuration\u003dduration) \n\treturn data\n\t\n\t\n",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "custom.History.duration": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.HistoryDuration"
+                  },
+                  "type": "property"
+                }
+              },
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "expression": "if({view.params.ShowLevelTrend},true,false)"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "mode": "percent",
+              "style": {
+                "borderStyle": "none"
+              }
+            },
+            "type": "ia.container.coord"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "160px",
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent",
+          "style": {
+            "backgroundColor": "#FFFFFF00"
+          }
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "props": {
+      "direction": "column",
+      "justify": "flex-end",
+      "style": {
+        "backgroundColor": "#FFFFFF00"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

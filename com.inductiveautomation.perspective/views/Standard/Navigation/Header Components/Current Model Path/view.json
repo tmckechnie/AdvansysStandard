@@ -1,0 +1,106 @@
+{
+  "custom": {
+    "CurrentModelPath": "Standard",
+    "ModelItemTagPath": "[StandardS71500]Standard/Model Item"
+  },
+  "params": {},
+  "propConfig": {
+    "custom.CurrentModelPath": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "ModelItemTagPath": "{view.custom.ModelItemTagPath}"
+          },
+          "tagPath": "{ModelItemTagPath}/ModelPath"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ModelItemTagPath": {
+      "binding": {
+        "config": {
+          "struct": {
+            "currentModelItem": "{session.custom.CurrentModelItem}",
+            "modelItems": "{session.custom.ModelItems}",
+            "pageId": "{page.props.pageId}",
+            "useSessionModelItem": "{session.custom.UseSessionModelItem}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tcurrentModelItem \u003d value[\u0027currentModelItem\u0027]\n\tuseSessionModelItem \u003d value[\u0027useSessionModelItem\u0027]\n\tpageId \u003d value[\u0027pageId\u0027]\n\tcurrentModelItem \u003d Standard.Navigation.Common.GetCurrentModelItem(CurrentModelItem\u003dcurrentModelItem,UseSession\u003duseSessionModelItem,PerspectivePageID\u003dpageId)\n\tpath \u003d currentModelItem[\u0027Path\u0027]\n\tmodelItems \u003d value[\u0027modelItems\u0027]\n\treturn Standard.Navigation.Common.GetModelItemByPath(ModelItems\u003dmodelItems, Path\u003dpath)[\u0027data\u0027][\u0027ModelItemTagPath\u0027]\n\t",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 70,
+      "width": 175
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "currentModelItemTagPaths": "{session.custom.CurrentModelItemTagPaths}",
+                  "pageId": "{page.props.pageId}",
+                  "useSessionModelItemTagPath": "{session.custom.UseSessionModelItemTagPath}"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\tcurrentModelItemTagPaths \u003d value[\u0027currentModelItemTagPaths\u0027]\n\tuseSessionModelItemTagPath \u003d value[\u0027useSessionModelItemTagPath\u0027]\n\tpageId \u003d value[\u0027pageId\u0027]\n\treturn \"currentModelItemTagPaths:\" + str(currentModelItemTagPaths) + \"; useSessionModelItemTagPath:\" + str(useSessionModelItemTagPath) + \"; pageId:\"+pageId",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.CurrentModelPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "Standard/Docked/Header/HeadingBackground Standard/Docked/Header/HeadingBorder Standard/Docked/Header/HeadingText",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

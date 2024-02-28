@@ -1,0 +1,211 @@
+{
+  "custom": {
+    "childModelItems": [
+      {
+        "BreadcrumbPosition": 1,
+        "ContentType": "",
+        "Label": "Examples",
+        "ModelItemTagPath": "[StandardS71500]Standard/Examples/Model Item",
+        "Path": "0/0",
+        "instancePosition": {
+          "grow": 1
+        },
+        "instanceStyle": {
+          "classes": "Standard/Popups/Navigation/MenuItem/Children"
+        }
+      },
+      {
+        "BreadcrumbPosition": 1,
+        "ContentType": "",
+        "Label": "Modules",
+        "ModelItemTagPath": "[StandardS71500]Standard/Modules/Model Item",
+        "Path": "0/1",
+        "instancePosition": {
+          "grow": 1
+        },
+        "instanceStyle": {
+          "classes": "Standard/Popups/Navigation/MenuItem/Children"
+        }
+      }
+    ],
+    "contentTypes": [
+      {
+        "BreadcrumbPosition": 1,
+        "ContentType": "Overview",
+        "Label": "Overview",
+        "ModelItemTagPath": "[StandardS71500]Standard/Model Item",
+        "Path": "0",
+        "instancePosition": {
+          "grow": 1
+        },
+        "instanceStyle": {
+          "classes": "Standard/Popups/Navigation/MenuItem/ContentType"
+        }
+      }
+    ]
+  },
+  "params": {
+    "BreadcrumbPosition": 1,
+    "ContentTypes": [
+      {
+        "contentType": "Overview",
+        "label": "Overview",
+        "order": 0
+      }
+    ],
+    "ModelItem": {
+      "ModelItemTagPath": "[StandardS71500]Standard/Model Item",
+      "Path": "0",
+      "TagFolderName": "Standard",
+      "ViewPaths": [
+        {
+          "ContentType": [
+            "Overview"
+          ],
+          "Label": "Overview",
+          "Order": 0,
+          "PagePath": "",
+          "Roles": [],
+          "ViewPath": "*Overview/Overview",
+          "key": "kNew0"
+        }
+      ]
+    }
+  },
+  "propConfig": {
+    "custom.childModelItems": {
+      "binding": {
+        "config": {
+          "struct": {
+            "Path": "{view.params.ModelItem.Path}",
+            "breadcrumbPosition": "{view.params.BreadcrumbPosition}",
+            "modelItems": "{session.custom.ModelItems}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tpath \u003d value[\"Path\"]\n\tmodelItems \u003d value[\"modelItems\"]\n\tbreadcrumbPosition \u003d value[\"breadcrumbPosition\"]\n\t\n\t#Get ModelItem Children \n\tinstances \u003d Standard.Navigation.BreadCrumb.GetPopupModelItemMenuItems(ModelItems\u003dmodelItems,BreadcrumbPosition\u003dbreadcrumbPosition,Path\u003dpath)\n\treturn instances\n",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.contentTypes": {
+      "binding": {
+        "config": {
+          "struct": {
+            "breadcrumbPosition": "{view.params.BreadcrumbPosition}",
+            "contentTypes": "{view.params.ContentTypes}",
+            "modelItemTagPath": "{view.params.ModelItem.ModelItemTagPath}",
+            "path": "{view.params.ModelItem.Path}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tmodelItemTagPath \u003d value[\"modelItemTagPath\"]\n\tpath \u003d value[\"path\"]\n\tcontentTypes \u003d value[\"contentTypes\"]\n\tbreadcrumbPosition \u003d value[\"breadcrumbPosition\"]\n\tinstances \u003d Standard.Navigation.BreadCrumb.GetPopupContentTypeMenuItems(ModelItemTagPath\u003dmodelItemTagPath,Path\u003dpath,BreadcrumbPosition\u003dbreadcrumbPosition,ContentTypes\u003dcontentTypes)\n\treturn instances  \n",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.BreadcrumbPosition": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ModelItem": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 611,
+      "width": 200
+    },
+    "loading": {
+      "mode": "blocking"
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Content Types"
+        },
+        "position": {
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.basis": {
+            "binding": {
+              "config": {
+                "expression": "70*len({this.props.instances}) + \"px\""
+              },
+              "type": "expr"
+            }
+          },
+          "props.instances": {
+            "binding": {
+              "config": {
+                "path": "view.custom.contentTypes"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "path": "Standard/Navigation/Breadcrumb/Components/Menu Item",
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      },
+      {
+        "meta": {
+          "name": "ChildModelItems"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.instances": {
+            "binding": {
+              "config": {
+                "path": "view.custom.childModelItems"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "path": "Standard/Navigation/Breadcrumb/Components/Menu Item",
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Popups/Navigation/Popup/Background",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "custom": {},
+  "params": {
+    "SystemGatewayAgentsTagPath": "[StandardS71500]System/Diagnostics/Gateway/Agents"
+  },
+  "propConfig": {
+    "params.SystemGatewayAgentsTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 705,
+      "width": 504
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "EAM Agents Repeater"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "this.props.instances"
+              },
+              "overlayOptOut": true,
+              "transforms": [
+                {
+                  "code": "\tinstances \u003d value\t\t\n\tif len(instances) \u003d\u003d 0:\n\t\treturn False\n\telse:\n\t\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.instances": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "RequiredUDTType": "\"Standard/Diagnostic Modules/EAM Agent\"",
+                  "SystemGatewayAgentsTagPath": "{view.params.SystemGatewayAgentsTagPath}"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\tinstances \u003d []\n\t \n\tGatewayTagPath \u003d value[\"SystemGatewayAgentsTagPath\"]\n\tGatewayTagsArray \u003d system.tag.browse(GatewayTagPath)\n\trequiredtypeId \u003dvalue[\"RequiredUDTType\"]\n\tif GatewayTagPath \u003d\u003d \"\":\n\t\treturn []\n\tfor GatewayTag in GatewayTagsArray:\n\t\tinstanceObject \u003d {}\n\t\tTagPath \u003d GatewayTag[\"fullPath\"]\n\t\ttypeId \u003d GatewayTag[\"typeId\"]\n\t\tinstanceObject[\"AgentTagPath\"] \u003d TagPath\n\t\tif typeId \u003d\u003d requiredtypeId:\n\t\t\tinstances.append(instanceObject)\n\n\treturn instances",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          }
+        },
+        "props": {
+          "elementStyle": {
+            "padding": 5
+          },
+          "path": "Standard/Diagnostic Modules/Components/EAM Agents Components/EAM Agent Detail",
+          "useDefaultViewHeight": false
+        },
+        "type": "ia.display.flex-repeater"
+      },
+      {
+        "meta": {
+          "name": "No Agents Found Label"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "!{../EAM Agents Repeater.position.display}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Synergy/Overview/Card/Status/Value/BackgroundDefault Synergy/Overview/Card/Status/Value/Text",
+            "paddingLeft": 20,
+            "textAlign": "center"
+          },
+          "text": "No Gateway Agents Found"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

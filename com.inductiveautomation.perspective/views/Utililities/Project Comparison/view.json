@@ -1,0 +1,1059 @@
+{
+  "custom": {
+    "Projects": [
+      {
+        "label": "AdvansysStandard",
+        "value": "AdvansysStandard"
+      },
+      {
+        "label": "AdvansysStandardDemo",
+        "value": "AdvansysStandardDemo"
+      },
+      {
+        "label": "AdvansysStandardDemoMenuBar",
+        "value": "AdvansysStandardDemoMenuBar"
+      },
+      {
+        "label": "AdvansysStandardDevelopment",
+        "value": "AdvansysStandardDevelopment"
+      },
+      {
+        "label": "BATHeidelberg",
+        "value": "BATHeidelberg"
+      },
+      {
+        "label": "Calendar445",
+        "value": "Calendar445"
+      },
+      {
+        "label": "conversion-report.txt",
+        "value": "conversion-report.txt"
+      },
+      {
+        "label": "FlowInterfaces",
+        "value": "FlowInterfaces"
+      },
+      {
+        "label": "GatewayScripting",
+        "value": "GatewayScripting"
+      },
+      {
+        "label": "Hall-Longmore",
+        "value": "Hall-Longmore"
+      },
+      {
+        "label": "JellyFactory",
+        "value": "JellyFactory"
+      },
+      {
+        "label": "JellyFactoryStandard",
+        "value": "JellyFactoryStandard"
+      },
+      {
+        "label": "Multotec_PUCasting",
+        "value": "Multotec_PUCasting"
+      },
+      {
+        "label": "Packaging",
+        "value": "Packaging"
+      },
+      {
+        "label": "Plant1",
+        "value": "Plant1"
+      },
+      {
+        "label": "Plant2",
+        "value": "Plant2"
+      },
+      {
+        "label": "SimpleSVGEditor",
+        "value": "SimpleSVGEditor"
+      },
+      {
+        "label": "Site",
+        "value": "Site"
+      },
+      {
+        "label": "StyleTest",
+        "value": "StyleTest"
+      },
+      {
+        "label": "ThemeBuilder",
+        "value": "ThemeBuilder"
+      },
+      {
+        "label": "TheOffice",
+        "value": "TheOffice"
+      },
+      {
+        "label": "Training",
+        "value": "Training"
+      }
+    ],
+    "comparison": {
+      "MismatchedCount": {
+        "Project1": 0,
+        "Project2": 0
+      },
+      "TotalCount": {
+        "Project1": 0,
+        "Project2": 0
+      },
+      "resourseFilesNotMatched": []
+    },
+    "config": {
+      "basePath": "C:\\Program Files\\Inductive Automation\\Ignition\\data\\projects",
+      "project1": "AdvansysStandard",
+      "project1Resourse": "Standard",
+      "project2": "AdvansysStandardDevelopment",
+      "project2Resourse": "Standard",
+      "resourses": {
+        "Options": {
+          "Queries": "\\\\ignition\\\\named-query\\\\",
+          "Scripting": "\\\\ignition\\\\script-python\\\\",
+          "Styles": "\\\\com.inductiveautomation.perspective\\\\style-classes\\\\",
+          "Views": "\\\\com.inductiveautomation.perspective\\\\views\\\\"
+        },
+        "value": "Views"
+      }
+    },
+    "startCommand": false
+  },
+  "params": {},
+  "propConfig": {
+    "custom.Projects": {
+      "binding": {
+        "config": {
+          "struct": {
+            "basePath": "{view.custom.config.basePath}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tbasePath \u003d value[\u0027basePath\u0027] #\"C:\\Program Files\\Inductive Automation\\Ignition\\data\\projects\"\n\timport os\n\tlistdir \u003d os.listdir(basePath)\n\tprojects \u003d []\n\tfor folder in listdir:\n\t\tif \".\" not in folder[0]:\n\t\t\toption \u003d {\u0027label\u0027:folder,\u0027value\u0027:folder}\n\t\t\tprojects.append(option)\n\treturn projects",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.comparison": {
+      "binding": {
+        "config": {
+          "struct": {
+            "config": "{view.custom.config}",
+            "startCommand": "{view.custom.startCommand}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\t#return\n\tresult \u003d {\u0027TotalCount\u0027:{\u0027Project1\u0027:0,\u0027Project2\u0027:0},\n\t\t\t\t\u0027MismatchedCount\u0027:{\u0027Project1\u0027:0,\u0027Project2\u0027:0},\n\t\t\u0027resourseFilesNotMatched\u0027:[]}\n\t\t\n\tstartCommand \u003d value[\u0027startCommand\u0027]\n\tif not startCommand:\n\t\treturn result\n\timport os\n\tconfig \u003d value[\u0027config\u0027]\n\tbasePath \u003d config[\u0027basePath\u0027]\n\tresoures \u003d config[\u0027resourses\u0027][\u0027value\u0027]\n\tresouresOptions \u003d config[\u0027resourses\u0027][\u0027Options\u0027]\n\t\n\tresouresFolderPaths \u003d resouresOptions[resoures]\n\t\t\n\t#return resouresFolderPaths\n\t\n\t#Get current Project Name\n\tcurrentProject \u003d system.perspective.getProjectInfo()\n\tcurrentProjectName \u003d currentProject[\u0027name\u0027]\n\t#return\n\t\n\t#This is only for resoures \u003d \"Views\"\n\tdef getViewsFromCurrentProject(RootViewPath,ViewPaths,ViewStartPath):\n\t\tviewPathsFilter \u003d []\n\t\tfor viewPath in ViewPaths:\n\t\t\tpath \u003d viewPath[\u0027path\u0027]#.split(\"\\\\\")\n\t\t\t#path \u003d path[0:-1]\n\t\t\t#path \u003d \"\\\\\".join(path)\n\t\t\tif ViewStartPath \u003d\u003d path[0:len(ViewStartPath)]:\n\t\t\t\tfilepath \u003d RootViewPath.replace(\"\\\\\"+ViewStartPath,\"\") + \"\\\\\" + path.replace(\"/\",\"\\\\\") + \"\\\\resource.json\"\n\t\t\t\tviewPathsFilter.append(filepath)\n\t\t\t#viewPathsFilter.append(path)\n\t\treturn viewPathsFilter\n\t\t\t\n\t\t\t\n\tdef getFile(FilePath):\n\t\tfilepath \u003d FilePath\n\t\texists \u003d system.file.fileExists(filepath)\n\t\tif exists:\n\t\t\t#return system.file.readFileAsString(filepath)\n\t\t\tfileJsonStr \u003d system.file.readFileAsString(filepath)\n\t\t\t# convert it to Python objects (lists and dicts)\n\t\t\tfileJsonObj \u003d system.util.jsonDecode(fileJsonStr)\n\t\t\treturn fileJsonObj\n\t\telse:\n\t\t\treturn {}\n\t#return None\n\tdef searchForResourseFile(FolderPath,ResourseFiles\u003d[]):\n\t\t#system.perspective.print(\"---------------------------------------------------------------------------------Start\")\n\t\troot\u003d\"\" \n\t\tsubdir\u003d[] \n\t\tfiles\u003d[]\n\t\ti\u003d0\n\t\tfor root, subdirs, files in os.walk(FolderPath):\n\t\t\t#Check Files\n\t\t\t#system.perspective.print(\"------------------------------------------------------------------------------Get\")\n\t\t\t#system.perspective.print(\"collection:\" + str([root[-50:], subdirs, files]))\n\t\t\t# Process Root Files\n\t\t\tfor fileName in files:\n\t\t\t\t#system.perspective.print(\"FileName:\" + str(fileName))\n\t\t\t\tif(fileName \u003d\u003d \"resource.json\"):\n\t\t\t\t\tfilePath \u003d root + \"\\\\resource.json\"\n\t\t\t\t\tsystem.perspective.print(\"Add File:\" + str(fileName))\n\t\t\t\t\tResourseFiles.append(filePath)\n\t\t\t\n#\t\t\t#Check Subdirs \n#\t\t\tfor subdir in subdirs:\t\n#\t\t\t\tfolderPath \u003d root + \"\\\\\" + subdir\n#\t\t\t\tsystem.perspective.print(\"subdir:\" + str(subdir))\n#\t\t\t\tsystem.perspective.print(\"Check Sub----------------\")\n#\t\t\t\tResourseFiles \u003d searchForResourseFile(folderPath,ResourseFiles)\n\t\t\ti+\u003d1\n\t\t#system.perspective.print(\"------------------------------------------------------------------------------Done\")\n\t\t\n\t\treturn ResourseFiles\n\t#Project 1\n\tproject1ResourseTotalCount\u003d0\n\tproject1ResourseMismatchedCount \u003d 0\n\tproject1Name \u003d config[\u0027project1\u0027]\n\tproject1Resourse \u003d config[\u0027project1Resourse\u0027]\n\t\n\tproject1RootResoursePath \u003d basePath + \"\\\\\" + project1Name + resouresFolderPaths + project1Resourse \n\t\n\tproject1ResourseFiles \u003d []\n\tif resoures \u003d\u003d \"Views\" and project1Name \u003d\u003d currentProjectName:\n\t\t#Get View from currentProject\n\t\tproject1ViewPaths \u003d currentProject[\u0027views\u0027]\n\t\tproject1ResourseFiles \u003d getViewsFromCurrentProject(RootViewPath \u003d project1RootResoursePath,ViewPaths \u003d project1ViewPaths,ViewStartPath \u003d project1Resourse)\n\telse:\n\t\t#system.perspective.print(\"------------------------------------------------------------------------------Init\")\n\t\tproject1ResourseFiles \u003d searchForResourseFile(project1RootResoursePath,ResourseFiles\u003d[])\n\t\t#system.perspective.print(\"-------------------------------------------------------------------------------Finish\")\n\t\n\tproject1ResourseTotalCount \u003d len(project1ResourseFiles)\n\t#return project1ResourseFiles\n\t#Project 2\n\tproject2Name \u003d config[\u0027project2\u0027]\n\tproject2Resourse \u003d config[\u0027project2Resourse\u0027]\n\tproject2ResourseTotalCount\u003d0\n\tproject2ResourseMismatchedCount \u003d 0\n\t#return project2View\n\tproject2RootResoursePath \u003d basePath + \"\\\\\" + project2Name + resouresFolderPaths + project2Resourse\n\t#return project1RootViewPath\n\tproject2ResourseFiles \u003d []\n\tif resoures \u003d\u003d \"Views\" and project2Name \u003d\u003d currentProjectName:\n\t\t#Get View from currentProject\n\t\tproject2ViewPaths \u003d currentProject[\u0027views\u0027]\n\t\tproject2ResourseFiles \u003d getViewsFromCurrentProject(RootViewPath \u003d project2RootResoursePath,ViewPaths \u003d project2ViewPaths,ViewStartPath \u003d project2Resourse)\n\n\telse:\n\t\tproject2ResourseFiles \u003d searchForResourseFile(project2RootResoursePath,ResourseFiles\u003d[])\n\t\n\tproject2ResourseTotalCount \u003d len(project2ResourseFiles)\n\t#return {\"Project1\":project1ResourseFiles,\"Project2\":project2ResourseFiles}\t\n\tresourseFiles \u003d {}\n\tfor projectResourseFile in project1ResourseFiles:\n\t\tkey \u003d projectResourseFile.replace(project1RootResoursePath+\"\\\\\",\"\").replace(\"\\\\resource.json\",\"\")\n\t\t#return [projectResourseFile,project1RootViewPath,key]\n\t\tfileData \u003d getFile(projectResourseFile)\n\t\tresourseFiles[key] \u003d {\"Resourse\":project1Resourse + \"/\" + key,\"Project1\":fileData}\n\t\t\n\t\n\tfor projectResourseFile in project2ResourseFiles:\n\t\tkey \u003d projectResourseFile.replace(project2RootResoursePath+\"\\\\\",\"\").replace(\"\\\\resource.json\",\"\")\n\t\t#return key\n\t\tfileData \u003d getFile(projectResourseFile)\n\t\tif key in resourseFiles:\n\t\t\tresourseFiles[key][\u0027Project2\u0027] \u003d fileData\n\t\telse:\n\t\t\tresourseFiles[key] \u003d {\"Resourse\":project2Resourse + \"/\" + key,\"Project2\":fileData}\n\t#return resourseFiles\n\tresourseFiles \u003d resourseFiles.values()\n\tresourseFilesNotMatched \u003d []\n\tfor resourse in resourseFiles:\n\t\tmatch \u003d False\n\t\tproject1LastModSig \u003d \u0027A\u0027\n\t\tproject2LastModSig \u003d \u0027B\u0027\n\t\tproject1Empty \u003d False\n\t\tstrProject1Timestamp \u003d \"\"\n\t\tstrProject2Timestamp \u003d \"\"\n\t\tif \"Project1\" in resourse:\n\t\t\tproject1 \u003d resourse[\"Project1\"]\n\t\t\tproject1LastModSig \u003d project1[\u0027attributes\u0027][\u0027lastModificationSignature\u0027]\n\t\t\tproject1Timestamp \u003d project1[\u0027attributes\u0027][\u0027lastModification\u0027][\u0027timestamp\u0027]\n\t\t\tproject1Timestamp \u003d str(project1Timestamp.replace(\"T\",\" \").replace(\"Z\",\"\"))\n\t\t\tproject1Timestamp \u003d system.date.parse(project1Timestamp)\n\t\t\tstrProject1Timestamp \u003d system.date.format(project1Timestamp,\u0027yyyy-MM-dd HH:mm:ss\u0027)\n\t\telse:\n\t\t\tproject1Empty \u003d True\n\t\t\tresourse[\u0027Project1\u0027] \u003d {}\n\t\tproject2Empty \u003d False\t\n\t\tif \"Project2\" in resourse:\n\t\t\tproject2 \u003d resourse[\"Project2\"]\n\t\t\tproject2LastModSig \u003d project2[\u0027attributes\u0027][\u0027lastModificationSignature\u0027]\n\t\t\tproject2Timestamp \u003d project2[\u0027attributes\u0027][\u0027lastModification\u0027][\u0027timestamp\u0027]\n\t\t\tproject2Timestamp \u003d str(project2Timestamp.replace(\"T\",\" \").replace(\"Z\",\"\"))\n\t\t\tproject2Timestamp \u003d system.date.parse(project2Timestamp)\n\t\t\tstrProject2Timestamp \u003d system.date.format(project2Timestamp,\u0027yyyy-MM-dd HH:mm:ss\u0027)\n\t\telse:\n\t\t\tproject2Empty \u003d True\n\t\t\tresourse[\u0027Project2\u0027] \u003d {}\n\t\t\t\n\t\tresourse[\u0027Match\u0027] \u003d  (project1LastModSig\u003d\u003dproject2LastModSig)\n\t\tif not resourse[\u0027Match\u0027]:\n\t\t\tresourse[\u0027Project1\u0027][\u0027Latest\u0027]\u003dFalse\n\t\t\tresourse[\u0027Project2\u0027][\u0027Latest\u0027]\u003dFalse \n\t\t\t\n\t\t\tif project1Empty or (not project2Empty and project2Timestamp\u003e\u003dproject1Timestamp):\n\t\t\t\tproject1ResourseMismatchedCount +\u003d1\n\t\t\t\tresourse[\u0027Project2\u0027][\u0027Latest\u0027]\u003dTrue\n\t\t\tif project2Empty or (not project1Empty and project1Timestamp\u003e\u003dproject2Timestamp):\n\t\t\t\tproject2ResourseMismatchedCount +\u003d1\n\t\t\t\tresourse[\u0027Project1\u0027][\u0027Latest\u0027]\u003dTrue\n\t\t\t\t\n\t\t\tresourse[\u0027Project1\u0027][\u0027LatestTimestamp\u0027] \u003d strProject1Timestamp\n\t\t\tresourse[\u0027Project2\u0027][\u0027LatestTimestamp\u0027] \u003d strProject2Timestamp\n\n\t\t\tresourseFilesNotMatched.append(resourse)\n\t\t\t\n\tresourseFilesNotMatched \u003d sorted(resourseFilesNotMatched,key\u003dlambda row: row[\u0027Resourse\u0027],reverse\u003dFalse)\n\treturn {\u0027TotalCount\u0027:{\u0027Project1\u0027:project1ResourseTotalCount,\u0027Project2\u0027:project2ResourseTotalCount},\n\t\t\t\u0027MismatchedCount\u0027:{\u0027Project1\u0027:project1ResourseMismatchedCount,\u0027Project2\u0027:project2ResourseMismatchedCount},\n\t\u0027resourseFilesNotMatched\u0027:resourseFilesNotMatched}\n\t\t\t\n\t\n\t",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.config": {
+      "persistent": true
+    },
+    "custom.startCommand": {
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 940
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "150px"
+            },
+            "props": {
+              "text": "Projects"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "DropdownProject1"
+            },
+            "position": {
+              "basis": "256px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "!{view.custom.startCommand}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.options": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Projects"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.config.project1"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "DropdownProject2"
+            },
+            "position": {
+              "basis": "256px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "!{view.custom.startCommand}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.options": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Projects"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.config.project2"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainerProjectSelection"
+        },
+        "position": {
+          "basis": "42px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "150px"
+            },
+            "props": {
+              "text": "Resources"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "DropdownProject1"
+            },
+            "position": {
+              "basis": "256px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "!{view.custom.startCommand}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.options": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.config.resourses.Options"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toptions \u003d []\n\tfor resources in value:\n\t\toption \u003d {\"value\": resources,\"label\": resources}\n\t\toptions.append(option)\n\treturn options",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.config.resourses.value"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "dropdownOptionStyle": {
+                "textAlign": "center"
+              },
+              "style": {
+                "textAlign": "center"
+              },
+              "textAlign": "center"
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainerResourceSelection"
+        },
+        "position": {
+          "basis": "42px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "150px"
+            },
+            "props": {
+              "text": "Views"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "DropdownProject1"
+            },
+            "position": {
+              "basis": "256px",
+              "grow": 1
+            },
+            "propConfig": {
+              "custom.key": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "basePath": "{view.custom.basePath}",
+                      "project": "{view.custom.project1}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tbasePath \u003d value[\u0027basePath\u0027]\n\tproject \u003d value[\u0027project\u0027]\n\tviewsPath \u003d basePath + \"\\\\\" + project + \"\\\\com.inductiveautomation.perspective\\\\views\"\n\timport os\n\tlistdir \u003d os.listdir(viewsPath)\n\tviews \u003d []\n\tfor folder in listdir:\n\t\tif \".\" not in folder[0]:\n\t\t\toption \u003d {\u0027label\u0027:folder,\u0027value\u0027:folder}\n\t\t\tviews.append(option)\n\treturn views",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "!{view.custom.startCommand}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.options": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "config": "{view.custom.config}",
+                      "project": "{view.custom.config.project1}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tconfig \u003d value[\u0027config\u0027]\n\tbasePath \u003d config[\u0027basePath\u0027]\n\tproject \u003d value[\u0027project\u0027]\n\tresoures \u003d config[\u0027resourses\u0027][\u0027value\u0027]\n\tresouresOptions \u003d config[\u0027resourses\u0027][\u0027Options\u0027]\n\tresouresFolderPaths \u003d resouresOptions[resoures]\n\t\n\tresouresPath \u003d basePath + \"\\\\\" + project + resouresFolderPaths\n\timport os\n\tlistdir \u003d os.listdir(resouresPath)\n\tresoures \u003d []\n\tfor folder in listdir:\n\t\tif \".\" not in folder[0]:\n\t\t\toption \u003d {\u0027label\u0027:folder,\u0027value\u0027:folder}\n\t\t\tresoures.append(option)\n\treturn resoures",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.config.project1Resourse"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "meta": {
+              "name": "DropdownProject2"
+            },
+            "position": {
+              "basis": "256px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "!{view.custom.startCommand}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.options": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "config": "{view.custom.config}",
+                      "project": "{view.custom.config.project2}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tconfig \u003d value[\u0027config\u0027]\n\tbasePath \u003d config[\u0027basePath\u0027]\n\tproject \u003d value[\u0027project\u0027]\n\tresoures \u003d config[\u0027resourses\u0027][\u0027value\u0027]\n\tresouresOptions \u003d config[\u0027resourses\u0027][\u0027Options\u0027]\n\tresouresFolderPaths \u003d resouresOptions[resoures]\n\t\n\tresouresPath \u003d basePath + \"\\\\\" + project + resouresFolderPaths\n\timport os\n\tlistdir \u003d os.listdir(resouresPath)\n\tresoures \u003d []\n\tfor folder in listdir:\n\t\tif \".\" not in folder[0]:\n\t\t\toption \u003d {\u0027label\u0027:folder,\u0027value\u0027:folder}\n\t\t\tresoures.append(option)\n\treturn resoures",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.config.project2Resourse"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainerResoursePath"
+        },
+        "position": {
+          "basis": "42px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tself.view.custom.startCommand \u003d True"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "basis": "40px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "!{view.custom.startCommand}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "text": "Compare"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "150px"
+                },
+                "props": {
+                  "text": "Total Count"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Project1"
+                },
+                "position": {
+                  "basis": "256px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.comparison.TotalCount.Project1"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "textStyle": {
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Project2"
+                },
+                "position": {
+                  "basis": "256px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.comparison.TotalCount.Project2"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "textStyle": {
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainerResultNumberOfResources"
+            },
+            "position": {
+              "basis": "42px"
+            },
+            "props": {
+              "style": {
+                "fontSize": 12
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "150px"
+                },
+                "props": {
+                  "text": "Total Mismatch Count"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Project1"
+                },
+                "position": {
+                  "basis": "256px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.comparison.MismatchedCount.Project1"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "textStyle": {
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Project2"
+                },
+                "position": {
+                  "basis": "256px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.comparison.MismatchedCount.Project2"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "textStyle": {
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainerResultTotalMissmatchResources"
+            },
+            "position": {
+              "basis": "42px"
+            },
+            "props": {
+              "style": {
+                "fontSize": 12
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tself.view.custom.startCommand \u003d False"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button_0"
+            },
+            "position": {
+              "basis": "40px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.startCommand}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "text": "Clear"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainerResult"
+        },
+        "position": {
+          "basis": "150px"
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.columns[0].header.title": {
+            "binding": {
+              "config": {
+                "path": "view.custom.config.resourses.value"
+              },
+              "type": "property"
+            }
+          },
+          "props.columns[1].header.title": {
+            "binding": {
+              "config": {
+                "path": "view.custom.config.project1"
+              },
+              "type": "property"
+            }
+          },
+          "props.columns[2].header.title": {
+            "binding": {
+              "config": {
+                "path": "view.custom.config.project2"
+              },
+              "type": "property"
+            }
+          },
+          "props.data": {
+            "binding": {
+              "config": {
+                "path": "view.custom.comparison.resourseFilesNotMatched"
+              },
+              "transforms": [
+                {
+                  "code": "\t#return value\n\tdata \u003d []\n\tfor resource in value:\n\t\tproject1Actor \u003d \"\"\n\t\tproject2Actor \u003d \"\"\n\t\trow \u003d {}\n\t\trow[\"Resourse\"] \u003d resource[\u0027Resourse\u0027]\n\t\tproject1Empty \u003d False\n\t\tproject1Latest \u003d resource[\u0027Project1\u0027][\u0027Latest\u0027]\n\t\tproject2Latest \u003d resource[\u0027Project2\u0027][\u0027Latest\u0027]\n\t\tproject1LatestTimestamp \u003d resource[\u0027Project1\u0027][\u0027LatestTimestamp\u0027]\n\t\tproject2LatestTimestamp \u003d resource[\u0027Project2\u0027][\u0027LatestTimestamp\u0027]\n\n\t\t\t\n\t\tproject1Style \u003d {\"classes\": \"\",\"fontSize\": 10}\n\t\tproject2Style \u003d {\"classes\": \"\",\"fontSize\": 10}\n\t\t\n\t\tif project1Latest:\n\t\t\tproject1Style[\u0027backgroundColor\u0027] \u003d \"#CCFFCC\"\n\t\t\t\n\t\tif project2Latest:\n\t\t\tproject2Style[\u0027backgroundColor\u0027] \u003d \"#CCFFCC\"\n\t\t\n\t\trow[\"Project1\"] \u003d {\u0027value\u0027:project1Actor + \" - \" + project1LatestTimestamp,\u0027style\u0027:project1Style}\t\n\t\t\n\t\trow[\"Project2\"] \u003d {\u0027value\u0027:project2Actor + \" - \" + project2LatestTimestamp,\u0027style\u0027:project2Style}\n\t\t\n\t\t\n\t\tdata.append(row)\n\treturn data",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "bodyStyle": {
+            "fontSize": 10
+          },
+          "columns": [
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Resourse",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                }
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": false,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Project1",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                }
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": false,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Project2",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                }
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": false,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            }
+          ]
+        },
+        "type": "ia.display.table"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

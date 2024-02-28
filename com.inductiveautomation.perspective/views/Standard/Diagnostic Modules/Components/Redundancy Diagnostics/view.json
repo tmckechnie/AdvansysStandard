@@ -1,0 +1,273 @@
+{
+  "custom": {},
+  "params": {
+    "RedundancyTagPath": "[SynergyConsulting]CentralSCADA/Systems/Gateway/ADVN21 Agent"
+  },
+  "propConfig": {
+    "params.RedundancyTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 406,
+      "width": 334
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "RedundancyTagPath",
+          "type": "Diagnostics/Redundancy Diagnostics"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "label": "Redundancy"
+          },
+          "path": "Standard/Components/Views/Header/Header"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Redundancy Status"
+        },
+        "position": {
+          "basis": "320px"
+        },
+        "propConfig": {
+          "props.instances[0].Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "RedundancyTagPath": "{view.params.RedundancyTagPath}"
+                },
+                "tagPath": "{RedundancyTagPath}/Role"
+              },
+              "transforms": [
+                {
+                  "expression": "if(isGood({value}),{value},\"Peer Gateway Unavailable\")",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.instances[1].Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "RedundancyTagPath": "{view.params.RedundancyTagPath}"
+                },
+                "tagPath": "{RedundancyTagPath}/IsActive"
+              },
+              "transforms": [
+                {
+                  "fallback": "None",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": 1
+                    },
+                    {
+                      "input": false,
+                      "output": 0
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                },
+                {
+                  "expression": "if(isGood({value}),{value},\"None\")",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.instances[2].Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "RedundancyTagPath": "{view.params.RedundancyTagPath}"
+                },
+                "tagPath": "{RedundancyTagPath}/IsMaster"
+              },
+              "transforms": [
+                {
+                  "fallback": "None",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": 1
+                    },
+                    {
+                      "input": false,
+                      "output": 0
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                },
+                {
+                  "expression": "if(isGood({value}),{value},\"None\")",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "instances": [
+            {
+              "Label": "Role",
+              "ShowLabel": true,
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              }
+            },
+            {
+              "Label": "IsActive",
+              "ShowLabel": true,
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              }
+            },
+            {
+              "Label": "IsMaster",
+              "ShowLabel": true,
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              }
+            }
+          ],
+          "path": "Standard/Components/Views/Status/LabelDisplayLabel",
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      },
+      {
+        "meta": {
+          "name": "Sub Header"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "params": {
+            "label": "Peer Gateway Diagnostics"
+          },
+          "path": "Standard/Components/Views/Header/Sub Header"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Peer Gateway Diagnostics"
+        },
+        "position": {
+          "basis": "320px"
+        },
+        "propConfig": {
+          "props.instances[0].Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "RedundancyTagPath": "{view.params.RedundancyTagPath}"
+                },
+                "tagPath": "{RedundancyTagPath}/Peer Gateway/IsConnected"
+              },
+              "transforms": [
+                {
+                  "expression": "if(isGood({value}),{value},\"None\")",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.instances[1].Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "RedundancyTagPath": "{view.params.RedundancyTagPath}"
+                },
+                "tagPath": "{RedundancyTagPath}/Peer Gateway/PeerId"
+              },
+              "transforms": [
+                {
+                  "expression": "if(isGood({value}),{value},\"Peer Gateway Unavailable\")",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "instances": [
+            {
+              "Label": "Connected",
+              "ShowLabel": true,
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              }
+            },
+            {
+              "Label": "Gateway Id",
+              "ShowLabel": true,
+              "instancePosition": {},
+              "instanceStyle": {
+                "classes": ""
+              }
+            }
+          ],
+          "path": "Standard/Components/Views/Status/LabelDisplayLabel",
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

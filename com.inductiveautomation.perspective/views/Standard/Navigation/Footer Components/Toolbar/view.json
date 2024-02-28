@@ -1,0 +1,187 @@
+{
+  "custom": {
+    "CurrentModelItemTagPath": "[StandardS71500]Standard/Model Item",
+    "currentModelItem": {
+      "ContentType": "Overview",
+      "Path": "0",
+      "SearchModule": ""
+    }
+  },
+  "params": {},
+  "propConfig": {
+    "custom.CurrentModelItemTagPath": {
+      "binding": {
+        "config": {
+          "struct": {
+            "modelItems": "{session.custom.ModelItems}",
+            "path": "{view.custom.currentModelItem.Path}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tmodelItems \u003d value[\"modelItems\"]\n\tpath \u003d value[\"path\"]\n\t\n\treturn Standard.Navigation.Common.GetModelItemByPath(ModelItems \u003d modelItems,Path \u003d path)[\"data\"][\"ModelItemTagPath\"]",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.currentModelItem": {
+      "binding": {
+        "config": {
+          "struct": {
+            "currentModelItem": "{session.custom.CurrentModelItem}",
+            "pageId": "{page.props.pageId}",
+            "useSessionModelItem": "{session.custom.UseSessionModelItem}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tcurrentModelItem \u003d value[\u0027currentModelItem\u0027]\n\tuseSessionModelItem \u003d value[\u0027useSessionModelItem\u0027]\n\tpageId \u003d value[\u0027pageId\u0027]\n\treturn Standard.Navigation.Common.GetCurrentModelItem(CurrentModelItem\u003dcurrentModelItem,UseSession\u003duseSessionModelItem,PerspectivePageID\u003dpageId)",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 45,
+      "width": 200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "page": "/GatewayDiagnostics"
+              },
+              "scope": "C",
+              "type": "nav"
+            }
+          }
+        },
+        "meta": {
+          "name": "System Diagnostics Button",
+          "tooltip": {
+            "enabled": true,
+            "text": "System Diagnostics"
+          }
+        },
+        "position": {
+          "basis": "80px"
+        },
+        "props": {
+          "image": {
+            "icon": {
+              "color": "var(--toolbar-icon)",
+              "path": "material/show_chart"
+            }
+          },
+          "style": {
+            "borderBottomLeftRadius": 0,
+            "borderBottomRightRadius": 0,
+            "borderStyle": "none",
+            "borderTopLeftRadius": 0,
+            "borderTopRightRadius": 0,
+            "classes": "Standard/Docked/Footer/ContentBackground Standard/Docked/Footer/ContentBorder Standard/Docked/Footer/ContentText Standard/Docked/Footer/Hover"
+          },
+          "text": ""
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Alarms"
+        },
+        "position": {
+          "basis": "80px",
+          "display": false
+        },
+        "props": {
+          "image": {
+            "icon": {
+              "color": "var(--toolbar-icon)",
+              "path": "material/notifications"
+            }
+          },
+          "style": {
+            "borderBottomLeftRadius": 0,
+            "borderBottomRightRadius": 0,
+            "borderStyle": "none",
+            "borderTopLeftRadius": 0,
+            "borderTopRightRadius": 0,
+            "classes": "Standard/Docked/Footer/ContentBackground Standard/Docked/Footer/ContentBorder Standard/Docked/Footer/ContentText Standard/Docked/Footer/Hover"
+          },
+          "text": ""
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "draggable": true,
+                "id": "ModelItemEditorPopup",
+                "modal": false,
+                "overlayDismiss": false,
+                "resizable": true,
+                "showCloseIcon": true,
+                "title": "Model Item Editor",
+                "type": "open",
+                "viewParams": {
+                  "TagPath": "{view.custom.CurrentModelItemTagPath}"
+                },
+                "viewPath": "Standard/Navigation/Model Item/Editor",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Navigation Settings Button",
+          "tooltip": {
+            "enabled": true,
+            "text": "Navigation Settings"
+          }
+        },
+        "position": {
+          "basis": "80px"
+        },
+        "props": {
+          "image": {
+            "icon": {
+              "color": "var(--toolbar-icon)",
+              "path": "material/notes"
+            }
+          },
+          "style": {
+            "borderBottomLeftRadius": 0,
+            "borderBottomRightRadius": 0,
+            "borderStyle": "none",
+            "borderTopLeftRadius": 0,
+            "borderTopRightRadius": 0,
+            "classes": "Standard/Docked/Footer/ContentBackground Standard/Docked/Footer/ContentBorder Standard/Docked/Footer/ContentText Standard/Docked/Footer/Hover"
+          },
+          "text": ""
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

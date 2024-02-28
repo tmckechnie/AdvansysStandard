@@ -1,0 +1,433 @@
+{
+  "custom": {},
+  "params": {
+    "AgentTagPath": "[CSAZNFLWPBGW01]System/Diagnostics/Gateway/Agents/Ignition-CSAZNFLWPFGW01"
+  },
+  "propConfig": {
+    "params.AgentTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 271,
+      "width": 799
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "AgentTagPath",
+          "type": "Diagnostics/EAM Agent"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Header"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "propConfig": {
+              "props.params.label": {
+                "binding": {
+                  "config": {
+                    "expression": "\"Agent: \" + tag({view.params.AgentTagPath} + \"/AgentName\")"
+                  },
+                  "transforms": [
+                    {
+                      "expression": "if(isGood({value}),{value},\"Agent: Not Found\")",
+                      "type": "expression"
+                    }
+                  ],
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "path": "Standard/Components/Views/Header/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "EAM Agent Gateway Navigation"
+            },
+            "position": {
+              "height": 0.7813,
+              "width": 0.1539,
+              "x": 0.8299,
+              "y": 0.0938
+            },
+            "props": {
+              "params": {
+                "GatewayURL": "https://csaznflwpfgw01.internal.ccbagroup.com:8044/web/home?2"
+              },
+              "path": "Standard/Diagnostic Modules/Components/EAM Agents Components/EAM Agent Gateway Navigation"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "Agent Group"
+        },
+        "position": {
+          "basis": "40px"
+        },
+        "propConfig": {
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "AgentTagPath": "{view.params.AgentTagPath}"
+                },
+                "tagPath": "{AgentTagPath}/AgentGroup"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Label": "Agent Group",
+            "Severity": 0
+          },
+          "path": "Standard/Components/Views/Status/LabelDisplayLabel",
+          "useDefaultViewHeight": true
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Boolean Diagnostics"
+                },
+                "position": {
+                  "basis": "80px"
+                },
+                "propConfig": {
+                  "props.instances[0].Value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "AgentTagPath": "{view.params.AgentTagPath}"
+                        },
+                        "tagPath": "{AgentTagPath}/IsRunning"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "direction": "column",
+                  "instances": [
+                    {
+                      "Label": "Running",
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": "Synergy/Overview/Card/Status/Label/Background Synergy/Overview/Card/Status/Label/Text",
+                        "textAlign": "center"
+                      }
+                    }
+                  ],
+                  "path": "Standard/Components/Views/Status/LabelDisplayLabel",
+                  "useDefaultViewWidth": false
+                },
+                "type": "ia.display.flex-repeater"
+              },
+              {
+                "meta": {
+                  "name": "Diagnostic Metrics"
+                },
+                "position": {
+                  "basis": "320px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.HeaderLabel": {
+                    "binding": {
+                      "config": {
+                        "path": "../Boolean Diagnostics.props.instances[0].Value"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": "Unknown Diagnostic Metrics",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": true,
+                              "output": "Diagnostic Metrics"
+                            },
+                            {
+                              "input": false,
+                              "output": "Last Known Diagnostic Metrics"
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  },
+                  "props.params.Instances[0].Value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "AgentTagPath": "{view.params.AgentTagPath}"
+                        },
+                        "tagPath": "{AgentTagPath}/Metrics/Logging/Errors Per Hour"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.params.Instances[1].Value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "publishInitial": true,
+                        "references": {
+                          "AgentTagPath": "{view.params.AgentTagPath}"
+                        },
+                        "tagPath": "{AgentTagPath}/Metrics/Logging/Errors Per Minute"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "Instances": [
+                      {
+                        "Label": "Errors Per Hour"
+                      },
+                      {
+                        "Label": "Errors Per Minute"
+                      }
+                    ],
+                    "RepeaterViewPath": "Standard/Components/Views/Status/LabelDisplayLabel"
+                  },
+                  "path": "Standard/Components/Views/Details Card"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "Agent Info"
+            },
+            "position": {
+              "basis": "175px",
+              "shrink": 0
+            },
+            "props": {
+              "direction": "column",
+              "justify": "center"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "System Metric Values"
+                },
+                "position": {
+                  "basis": "320px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.instances[0].Value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "AgentTagPath": "{view.params.AgentTagPath}"
+                        },
+                        "tagPath": "{AgentTagPath}/Metrics/System/CPU Usage"
+                      },
+                      "type": "tag"
+                    }
+                  },
+                  "props.instances[1].Value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "AgentTagPath": "{view.params.AgentTagPath}"
+                        },
+                        "tagPath": "{AgentTagPath}/Metrics/System/Memory Usage"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "instances": [
+                    {
+                      "Label": "CPU",
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": "",
+                        "textAlign": "center"
+                      }
+                    },
+                    {
+                      "Label": "Memory",
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": "",
+                        "textAlign": "center"
+                      }
+                    }
+                  ],
+                  "path": "Standard/Diagnostic Modules/Components/EAM Agents Components/Gauge",
+                  "style": {
+                    "margin": 10
+                  },
+                  "useDefaultViewHeight": false,
+                  "useDefaultViewWidth": false
+                },
+                "type": "ia.display.flex-repeater"
+              }
+            ],
+            "meta": {
+              "name": "System Metrics"
+            },
+            "position": {
+              "basis": "300px",
+              "grow": 1
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "basis": "150px"
+                },
+                "props": {
+                  "style": {
+                    "classes": "Standard/Popups/Text"
+                  },
+                  "text": "Last Communication:"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "DateTime"
+                },
+                "position": {
+                  "basis": "50px"
+                },
+                "propConfig": {
+                  "props.style.borderStyle": {
+                    "binding": {
+                      "config": {
+                        "expression": "now(60000)"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "if(dateDiff({this.props.value},{value},\"minute\")\u003e5,\"solid\",\"none\")",
+                          "type": "expression"
+                        }
+                      ],
+                      "type": "expr"
+                    }
+                  },
+                  "props.value": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "AgentTagPath": "{view.params.AgentTagPath}"
+                        },
+                        "tagPath": "{AgentTagPath}/LastCommunication"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "enabled": false,
+                  "formattedValue": null,
+                  "style": {
+                    "borderColor": "#E72929"
+                  }
+                },
+                "type": "ia.input.date-time-input"
+              }
+            ],
+            "meta": {
+              "name": "Last Communication"
+            },
+            "position": {
+              "basis": "250px",
+              "shrink": 0
+            },
+            "props": {
+              "alignItems": "center",
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Body"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

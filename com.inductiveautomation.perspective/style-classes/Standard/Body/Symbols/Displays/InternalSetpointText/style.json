@@ -1,0 +1,10 @@
+{
+  "base": {
+    "style": {
+      "color": "var(--bodyDisplayInternalSetpointText)",
+      "fontSize": "10px",
+      "fontWeight": "bold",
+      "textAlign": "center"
+    }
+  }
+}

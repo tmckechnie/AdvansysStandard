@@ -1,0 +1,220 @@
+{
+  "custom": {
+    "ContentType": "",
+    "ContentTypes": [
+      {
+        "contentType": "Overview",
+        "label": "Overview",
+        "order": 0
+      }
+    ],
+    "ModelItemViewPaths": [
+      {
+        "ContentType": [
+          "Footer Alarms"
+        ],
+        "Label": "Alarms",
+        "Order": 0,
+        "PagePath": "",
+        "Roles": [],
+        "ViewPath": "*Alarms/Alarms",
+        "key": "kNew1"
+      },
+      {
+        "ContentType": [
+          "Overview"
+        ],
+        "Label": "Overview",
+        "Order": 0,
+        "PagePath": "",
+        "Roles": [],
+        "ViewPath": "*Overview/Overview",
+        "key": "k0"
+      }
+    ],
+    "currentModelItem": {
+      "ContentType": "Overview",
+      "Path": "0",
+      "SearchModule": ""
+    }
+  },
+  "params": {
+    "AllowedContentTypes": [
+      "Overview",
+      "Mimic",
+      "Alarms",
+      "Setpoints"
+    ],
+    "GetOnlyConfiguredContentTypes": false
+  },
+  "propConfig": {
+    "custom.ContentType": {
+      "binding": {
+        "config": {
+          "expression": "try(split({page.props.path},\"/\")[2,0],\"\")"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.ContentTypes": {
+      "binding": {
+        "config": {
+          "struct": {
+            "allowedContentTypes": "{view.params.AllowedContentTypes}",
+            "getOnlyConfiguredContentTypes": "{view.params.GetOnlyConfiguredContentTypes}",
+            "viewPaths": "{view.custom.ModelItemViewPaths}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tallowedContentTypes \u003d value[\"allowedContentTypes\"]\n\tgetOnlyConfiguredContentTypes \u003d value[\"getOnlyConfiguredContentTypes\"]\n\tviewPaths \u003d value[\"viewPaths\"]\n\treturn Standard.Navigation.Common.GetContentTypes(viewPaths,getOnlyConfiguredContentTypes,allowedContentTypes)",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.ModelItemViewPaths": {
+      "binding": {
+        "config": {
+          "struct": {
+            "currentModelItemPath": "{view.custom.currentModelItem.Path}",
+            "modelItems": "{session.custom.ModelItems}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tcurrentModelItemPath \u003d value[\"currentModelItemPath\"]\n\tmodelItems \u003d value[\"modelItems\"]\n\treturn Standard.Navigation.Common.GetModelItemByPath(ModelItems \u003d modelItems,Path \u003d currentModelItemPath)[\"data\"][\"ViewPaths\"]\n\t",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.currentModelItem": {
+      "binding": {
+        "config": {
+          "struct": {
+            "currentModelItem": "{session.custom.CurrentModelItem}",
+            "pageId": "{page.props.pageId}",
+            "useSessionModelItem": "{session.custom.UseSessionModelItem}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tcurrentModelItem \u003d value[\u0027currentModelItem\u0027]\n\tuseSessionModelItem \u003d value[\u0027useSessionModelItem\u0027]\n\tpageId \u003d value[\u0027pageId\u0027]\n\treturn Standard.Navigation.Common.GetCurrentModelItem(CurrentModelItem\u003dcurrentModelItem,UseSession\u003duseSessionModelItem,PerspectivePageID\u003dpageId)",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.AllowedContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.GetOnlyConfiguredContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\tmodelItemPath \u003d self.view.custom.currentModelItem.Path\n\t#Navigate to ContentType Page\t\t\n\tContentType \u003d self.props.value\n\tcontentTypePage \u003d \t\"/Home/\" + ContentType\n\t#system.perspective.print(\"MenuBarPopup - MenuItem - SendMessage with Action to Navigate to ContentType Page\")\n\tsystem.perspective.navigate(page \u003d contentTypePage)\n\t\n\t#Update ModelItemTagPaths Object\n\tuseSessionModelItem \u003d self.session.custom.UseSessionModelItem\n\tcurrentModelItem\u003d self.session.custom.CurrentModelItem\n\tperspectivePageID \u003d self.page.props.pageId\n\tself.session.custom.CurrentModelItem \u003d Standard.Navigation.Common.UpdateCurrentModelItem(Path \u003d modelItemPath,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t CurrentModelItem \u003d currentModelItem,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t UseSession \u003d useSessionModelItem,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t PerspectivePageID \u003d perspectivePageID,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t ContentType \u003d ContentType)"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Dropdown",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "36px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "if(len(split({page.props.path},\"/\"))\u003e1,\r\nsplit({page.props.path},\"/\")[1,0]\u003d\u0027Home\u0027,false)"
+              },
+              "enabled": false,
+              "type": "expr"
+            }
+          },
+          "props.options": {
+            "binding": {
+              "config": {
+                "path": "view.custom.ContentTypes"
+              },
+              "transforms": [
+                {
+                  "code": "\toptions\u003d []\n\tcontentTypes \u003d value\n\tfor contentType in contentTypes:\n\t\toption \u003d {\"label\":contentType[\"label\"],\"value\":contentType[\"label\"]}\n\t\toptions.append(option)\n\treturn options",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.value": {
+            "binding": {
+              "config": {
+                "path": "view.custom.ContentType"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "dropdownOptionStyle": {
+            "borderStyle": "none",
+            "classes": "Standard/Docked/Header/ContentBackground Standard/Docked/Header/ContentText\nStandard/Docked/Header/ContentBorder"
+          },
+          "placeholder": {
+            "color": "var(--dockedNavigationContentText)",
+            "text": "Select a Content Type..."
+          },
+          "style": {
+            "borderStyle": "none",
+            "classes": "Standard/Docked/Header/ContentBackground Standard/Docked/Header/ContentText\nStandard/Docked/Header/ContentBorder",
+            "margin": "3px"
+          }
+        },
+        "type": "ia.input.dropdown"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Docked/Header/ContentBackground Standard/Docked/Header/ContentBorder"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

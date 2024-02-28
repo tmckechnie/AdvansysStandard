@@ -1,0 +1,106 @@
+{
+  "custom": {},
+  "params": {
+    "SystemsTagPath": ""
+  },
+  "propConfig": {
+    "params.SystemsTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1376,
+      "width": 2301
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Gateway Diagnostics"
+        },
+        "position": {
+          "height": 427,
+          "width": 307,
+          "x": 34,
+          "y": 36
+        },
+        "propConfig": {
+          "props.params.GatewayDiagnosticTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.SystemsTagPath} + \"/Gateway/Diagnostics\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Diagnostic Modules/Components/Gateway Diagnostics"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Gateway Device Connections"
+        },
+        "position": {
+          "height": 1304,
+          "width": 1535,
+          "x": 704,
+          "y": 35
+        },
+        "propConfig": {
+          "props.params.DevicesTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.SystemsTagPath} + \"/Devices\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Diagnostic Modules/Components/Gateway Device Connections"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView"
+        },
+        "position": {
+          "height": 262,
+          "width": 300,
+          "x": 366,
+          "y": 35
+        },
+        "propConfig": {
+          "props.params.RedundancyTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.SystemsTagPath} + \"/Gateway/Redundancy\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Diagnostic Modules/Components/Redundancy Diagnostics"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

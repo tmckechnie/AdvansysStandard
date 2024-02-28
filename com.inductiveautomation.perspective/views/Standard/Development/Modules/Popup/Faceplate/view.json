@@ -1,0 +1,247 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 605,
+      "width": 470
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/HeaderText"
+          },
+          "text": "Header"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Text"
+          },
+          "text": "Text"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/HeaderText"
+          },
+          "text": "Buttons"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "props": {
+          "image": {
+            "icon": {
+              "path": "material/account_circle"
+            }
+          },
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Button/Default"
+          },
+          "text": "Button Default"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Button_0"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "props": {
+          "image": {
+            "icon": {
+              "path": "material/account_circle"
+            }
+          },
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Button/Selected"
+          },
+          "text": "Button Selected"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Button_1"
+        },
+        "position": {
+          "basis": "34px"
+        },
+        "props": {
+          "image": {
+            "icon": {
+              "path": "material/account_circle"
+            }
+          },
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Button/Disabled"
+          },
+          "text": "Button Disabled"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Label_2"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/HeaderText"
+          },
+          "text": "Swithes and Selections"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "ToggleSwitch"
+        },
+        "position": {
+          "basis": "36px"
+        },
+        "props": {
+          "color": {
+            "selected": "var(--valueSwitchSelected)",
+            "unselected": "var(--valueSwitchUnselected)"
+          },
+          "label": {
+            "position": "left",
+            "text": "Toggle Switch Selected"
+          },
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Text"
+          }
+        },
+        "type": "ia.input.toggle-switch"
+      },
+      {
+        "meta": {
+          "name": "Dropdown"
+        },
+        "position": {
+          "basis": "36px"
+        },
+        "props": {
+          "dropdownOptionStyle": {
+            "classes": "Standard/Popups/Faceplates/ValueInput"
+          },
+          "options": [
+            {
+              "label": "V1",
+              "value": 1
+            }
+          ],
+          "style": {
+            "classes": "Standard/Popups/ValueInput"
+          },
+          "value": 1
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "meta": {
+          "name": "Checkbox"
+        },
+        "position": {
+          "basis": "36px"
+        },
+        "props": {
+          "textPosition": "left"
+        },
+        "type": "ia.input.checkbox"
+      },
+      {
+        "meta": {
+          "name": "RadioGroup"
+        },
+        "position": {
+          "basis": "35px"
+        },
+        "props": {
+          "justify": "end",
+          "radios": [
+            {
+              "selected": true,
+              "text": "Radio button",
+              "value": "Radio button"
+            },
+            {
+              "selected": false,
+              "text": "Radio button",
+              "value": "Radio button"
+            },
+            {
+              "selected": false,
+              "text": "Radio button",
+              "value": "Radio button"
+            }
+          ],
+          "textPosition": "left"
+        },
+        "type": "ia.input.radio-group"
+      },
+      {
+        "meta": {
+          "name": "AlarmSummary"
+        },
+        "position": {
+          "basis": "320px"
+        },
+        "props": {
+          "params": {
+            "TagPath": "[default]SCVD/Sefateng/ROM/Surface/100WT100"
+          },
+          "path": "Standard/Control Modules/Components/Faceplate/Alarms/AlarmSummary"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Popups/Faceplates/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--bodySymbolInterlocked)",
+      "color": "var(--bodySymbolInterlockedText)"
+    }
+  }
+}

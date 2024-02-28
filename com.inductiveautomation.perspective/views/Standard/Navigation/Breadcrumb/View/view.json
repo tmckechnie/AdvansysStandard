@@ -1,0 +1,184 @@
+{
+  "custom": {
+    "currentModelItem": {
+      "ContentType": "Overview",
+      "Path": "0",
+      "SearchModule": ""
+    },
+    "instances": [
+      {
+        "BreadcrumbPosition": 1,
+        "ChildrenCount": 2,
+        "ContentTypes": [
+          {
+            "contentType": "Overview",
+            "label": "Overview",
+            "order": 0
+          }
+        ],
+        "Label": "Standard",
+        "ModelItem": {
+          "BaseViewPath": "Model Views/StandardS71500/Standard",
+          "ModelItemTagPath": "[StandardS71500]Standard/Model Item",
+          "Name": "Standard",
+          "Order": 0,
+          "Path": "0",
+          "TagFolderName": "Standard",
+          "ViewPaths": [
+            {
+              "ContentType": [
+                "Footer Alarms"
+              ],
+              "Label": "Alarms",
+              "Order": 0,
+              "PagePath": "",
+              "Roles": [],
+              "ViewPath": "*Alarms/Alarms",
+              "key": "kNew1"
+            },
+            {
+              "ContentType": [
+                "Overview"
+              ],
+              "Label": "Overview",
+              "Order": 0,
+              "PagePath": "",
+              "Roles": [],
+              "ViewPath": "*Overview/Overview",
+              "key": "k0"
+            }
+          ]
+        },
+        "StyleClasses": {
+          "Base": "Standard/Popups/Navigation/BreadCrumb/Palette01",
+          "Current": "Standard/Popups/Navigation/BreadCrumb/Palette01",
+          "Next": ""
+        },
+        "instancePosition": {
+          "grow": 1
+        },
+        "instanceStyle": {
+          "classes": "Standard/Docked/Navigation/Background"
+        }
+      }
+    ]
+  },
+  "params": {
+    "AllowedContentTypes": [
+      "Mimic",
+      "Alarms",
+      "Trend",
+      "Setpoints",
+      "Overview"
+    ],
+    "LimitItems": 0,
+    "ShowOnlyConfiguredContentTypes": true
+  },
+  "propConfig": {
+    "custom.currentModelItem": {
+      "binding": {
+        "config": {
+          "struct": {
+            "currentModelItem": "{session.custom.CurrentModelItem}",
+            "pageId": "{page.props.pageId}",
+            "useSessionModelItem": "{session.custom.UseSessionModelItem}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tcurrentModelItem \u003d value[\u0027currentModelItem\u0027]\n\tuseSessionModelItem \u003d value[\u0027useSessionModelItem\u0027]\n\tpageId \u003d value[\u0027pageId\u0027]\n\treturn Standard.Navigation.Common.GetCurrentModelItem(CurrentModelItem\u003dcurrentModelItem,UseSession\u003duseSessionModelItem,PerspectivePageID\u003dpageId)",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.instances": {
+      "binding": {
+        "config": {
+          "struct": {
+            "ModelItems": "{session.custom.ModelItems}",
+            "allowedContentTypes": "{view.params.AllowedContentTypes}",
+            "currentPath": "{view.custom.currentModelItem.Path}",
+            "limitItemCount": "{view.params.LimitItems}",
+            "showOnlyConfiguredContentTypes": "{view.params.ShowOnlyConfiguredContentTypes}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tcurrentPath \u003d value[\"currentPath\"]\n\tallowedContentTypes \u003d value[\u0027allowedContentTypes\u0027]\n\tshowOnlyConfiguredContentTypes \u003d value[\u0027showOnlyConfiguredContentTypes\u0027]\n\tmodelItems \u003d value[\u0027ModelItems\u0027]\n\tlimitItemCount \u003d value[\u0027limitItemCount\u0027] \n\n\t#Get BreadCrumb MenuItems up to current Model Item\n\tinstances \u003d Standard.Navigation.BreadCrumb.GetBreadCrumbMenuItems(ModelItems\u003dmodelItems,\n\tCurrentPath\u003dcurrentPath,\n\tLimitItemCount \u003d limitItemCount,\n\tGetOnlyConfiguredContentTypes\u003dshowOnlyConfiguredContentTypes,\n\tAllowedContentTypes\u003dallowedContentTypes)\n\treturn instances\n\t",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.AllowedContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.LimitItems": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowOnlyConfiguredContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 70,
+      "width": 1000
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "CurrentBreadCrumb"
+        },
+        "position": {
+          "basis": "50px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.currentModelItemTagPath.ModelItemTagPath}!\u003d\"\""
+              },
+              "type": "expr"
+            },
+            "persistent": true
+          },
+          "props.instances": {
+            "binding": {
+              "config": {
+                "path": "view.custom.instances"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Navigation/Breadcrumb/Components/Breadcrumb"
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "Standard/Docked/Header/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,275 @@
+{
+  "custom": {},
+  "events": {
+    "system": {
+      "onStartup": {
+        "config": {
+          "script": "\tself.getChild(\"root\").getChild(\"AlarmStatusTable\").props.refreshRate\u003d1000"
+        },
+        "scope": "G",
+        "type": "script"
+      }
+    }
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
+  },
+  "propConfig": {
+    "custom.DisplayPathFilter": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/InstancePath"
+        },
+        "transforms": [
+          {
+            "expression": "{value}+\"/Alarms\"",
+            "type": "expression"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": false
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 503,
+      "width": 349
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "35px"
+        },
+        "props": {
+          "params": {
+            "Title": "Alarms"
+          },
+          "path": "Standard/Components/Faceplates/Header"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "AlarmStatusTable"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.filters.active.conditions.displayPath": {
+            "persistent": true
+          },
+          "props.rowStyles.activeAcked": {
+            "binding": {
+              "config": {
+                "expression": "\"ActiveAcked\""
+              },
+              "transforms": [
+                {
+                  "code": "\tbob\u003d {\n\t  \"base\": {\n\t    \"classes\": \"\"\n\t  },\n\t  \"priorities\": {\n\t    \"diagnostic\": {\n\t      \"backgroundColor\": \"var(--AlarmDiagnostic)\",\n\t      \"color\": \"#222222\"\n\t    },\n\t    \"low\": {\n\t      \"classes\": \"Standard/Alarms/Low/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"medium\": {\n\t      \"classes\": \"Standard/Alarms/Medium/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"high\": {\n\t      \"classes\": \"Standard/Alarms/High/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"critical\": {\n\t      \"classes\": \"Standard/Alarms/Critical/\"+value+\"/RowBaseStyle\"\n\t    }\n\t  }\n\t}\n\treturn bob",
+                  "type": "script"
+                }
+              ],
+              "type": "expr"
+            }
+          },
+          "props.rowStyles.activeUnacked": {
+            "binding": {
+              "config": {
+                "expression": "\"ActiveUnacked\""
+              },
+              "transforms": [
+                {
+                  "code": "\tbob\u003d {\n\t  \"base\": {\n\t    \"classes\": \"\"\n\t  },\n\t  \"priorities\": {\n\t    \"diagnostic\": {\n\t      \"backgroundColor\": \"var(--AlarmDiagnostic)\",\n\t      \"color\": \"#222222\"\n\t    },\n\t    \"low\": {\n\t      \"classes\": \"Standard/Alarms/Low/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"medium\": {\n\t      \"classes\": \"Standard/Alarms/Medium/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"high\": {\n\t      \"classes\": \"Standard/Alarms/High/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"critical\": {\n\t      \"classes\": \"Standard/Alarms/Critical/\"+value+\"/RowBaseStyle\"\n\t    }\n\t  }\n\t}\n\treturn bob",
+                  "type": "script"
+                }
+              ],
+              "type": "expr"
+            }
+          },
+          "props.rowStyles.clearUnacked": {
+            "binding": {
+              "config": {
+                "expression": "\"ClearUnacked\""
+              },
+              "transforms": [
+                {
+                  "code": "\tbob\u003d {\n\t  \"base\": {\n\t    \"classes\": \"\"\n\t  },\n\t  \"priorities\": {\n\t    \"diagnostic\": {\n\t      \"backgroundColor\": \"var(--AlarmDiagnostic)\",\n\t      \"color\": \"#222222\"\n\t    },\n\t    \"low\": {\n\t      \"classes\": \"Standard/Alarms/Low/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"medium\": {\n\t      \"classes\": \"Standard/Alarms/Medium/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"high\": {\n\t      \"classes\": \"Standard/Alarms/High/\"+value+\"/RowBaseStyle\"\n\t    },\n\t    \"critical\": {\n\t      \"classes\": \"Standard/Alarms/Critical/\"+value+\"/RowBaseStyle\"\n\t    }\n\t  }\n\t}\n\treturn bob",
+                  "type": "script"
+                }
+              ],
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "activeSortOrder": [
+            "activeTime",
+            "priority",
+            "state"
+          ],
+          "columns": {
+            "active": {
+              "activeTime": {
+                "order": 3,
+                "sort": "descending",
+                "width": 100
+              },
+              "displayPath": {
+                "enabled": false
+              },
+              "isAcked": {
+                "sort": "descending"
+              },
+              "isActive": {
+                "sort": "descending"
+              },
+              "label": {
+                "enabled": true,
+                "order": 0
+              },
+              "name": {
+                "enabled": false
+              },
+              "priority": {
+                "order": 1,
+                "strictWidth": true,
+                "width": 70
+              },
+              "source": {
+                "enabled": false
+              },
+              "state": {
+                "order": 2
+              }
+            }
+          },
+          "enableAcknowledge": false,
+          "enableDetails": false,
+          "enableShelve": false,
+          "enableUnshelve": false,
+          "filters": {
+            "active": {
+              "priorities": {
+                "diagnostic": true
+              },
+              "states": {
+                "activeAcked": false,
+                "activeUnacked": false,
+                "clearUnacked": false
+              }
+            }
+          },
+          "pager": {
+            "enabled": false
+          },
+          "refreshRate": 1000,
+          "responsive": {
+            "enabled": true
+          },
+          "rowStyles": {
+            "clearAcked": {
+              "base": {
+                "backgroundColor": null,
+                "classes": "Standard/Alarms/RowBaseStyle",
+                "color": null
+              },
+              "priorities": {
+                "critical": {
+                  "backgroundColor": null,
+                  "classes": "Standard/Alarms/Critical/ClearAcked/RowBaseStyle"
+                },
+                "diagnostic": {
+                  "backgroundColor": null,
+                  "classes": "Standard/Alarms/Diagnostic/ClearAcked/RowBaseStyle",
+                  "color": null
+                },
+                "high": {
+                  "backgroundColor": null,
+                  "classes": "Standard/Alarms/High/ClearAcked/RowBaseStyle"
+                },
+                "low": {
+                  "backgroundColor": null,
+                  "classes": "Standard/Alarms/Low/ClearAcked/RowBaseStyle"
+                },
+                "medium": {
+                  "backgroundColor": null,
+                  "classes": "Standard/Alarms/Medium/ClearAcked/RowBaseStyle"
+                }
+              }
+            }
+          },
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Background"
+          },
+          "toolbar": {
+            "enabled": false
+          }
+        },
+        "scripts": {
+          "customMethods": [],
+          "extensionFunctions": [
+            {
+              "enabled": true,
+              "name": "filterAlarm",
+              "script": "\talarmDisplayPath \u003d str(alarmEvent.get(\u0027displayPath\u0027))\n\t#system.perspective.print(str(alarmDisplayPath))\n\trequiredDisplayPath \u003d self.view.custom.DisplayPathFilter\n\tif requiredDisplayPath in alarmDisplayPath:\n\t\tsystem.perspective.print(str(alarmDisplayPath))\n\t\treturn True\n\telse:\n\t\treturn False"
+            },
+            {
+              "enabled": false,
+              "name": "filterShelvedAlarm",
+              "script": null
+            }
+          ],
+          "messageHandlers": []
+        },
+        "type": "ia.display.alarmstatustable"
+      },
+      {
+        "meta": {
+          "name": "AlarmBulkAcknowledge"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "path": "view.params.TagPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Components/Faceplates/Alarms/AlarmBulkAcknowledge"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-between"
+    },
+    "type": "ia.container.flex"
+  }
+}

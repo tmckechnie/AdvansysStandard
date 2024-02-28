@@ -1,0 +1,270 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 977,
+      "width": 678
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Dropdown"
+        },
+        "position": {
+          "basis": "36px"
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "session.props.theme"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "options": [
+            {
+              "label": "standard",
+              "value": "standard"
+            },
+            {
+              "label": "standard-Impala",
+              "value": "standard-Impala"
+            }
+          ]
+        },
+        "type": "ia.input.dropdown"
+      },
+      {
+        "meta": {
+          "name": "ToggleSwitch"
+        },
+        "position": {
+          "basis": "36px"
+        },
+        "propConfig": {
+          "props.selected": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[AdvansysStandard]Standard/Control Modules/Application/Sim/DB100V001/Out/Open"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "label": {
+            "position": "left",
+            "text": "Open"
+          }
+        },
+        "type": "ia.input.toggle-switch"
+      },
+      {
+        "meta": {
+          "name": "MultiStateButton"
+        },
+        "position": {
+          "basis": "120px"
+        },
+        "propConfig": {
+          "props.controlValue": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[AdvansysStandard]Standard/Control Modules/Application/DB100V001/Alarms/Test"
+              },
+              "type": "tag"
+            }
+          },
+          "props.indicatorValue": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "publishInitial": false,
+                "tagPath": "[AdvansysStandard]Standard/Control Modules/Application/DB100V001/Alarms/Test"
+              },
+              "type": "tag"
+            }
+          },
+          "props.states[1].selectedStyle.classes": {
+            "binding": {
+              "config": {
+                "expression": "\u0027Standard/Alarms/\u0027+{this.props.states[1].text}+\u0027/Active/RowBaseStyle\u0027"
+              },
+              "type": "expr"
+            }
+          },
+          "props.states[1].unselectedStyle.classes": {
+            "binding": {
+              "config": {
+                "expression": "\u0027Standard/Alarms/\u0027+{this.props.states[1].text}+\u0027/Text\u0027"
+              },
+              "type": "expr"
+            }
+          },
+          "props.states[2].selectedStyle.classes": {
+            "binding": {
+              "config": {
+                "expression": "\u0027Standard/Alarms/\u0027+{this.props.states[2].text}+\u0027/Active/RowBaseStyle\u0027"
+              },
+              "type": "expr"
+            }
+          },
+          "props.states[2].unselectedStyle.classes": {
+            "binding": {
+              "config": {
+                "expression": "\u0027Standard/Alarms/\u0027+{this.props.states[2].text}+\u0027/Text\u0027"
+              },
+              "type": "expr"
+            }
+          },
+          "props.states[3].selectedStyle.classes": {
+            "binding": {
+              "config": {
+                "expression": "\u0027Standard/Alarms/\u0027+{this.props.states[3].text}+\u0027/Active/RowBaseStyle\u0027"
+              },
+              "type": "expr"
+            }
+          },
+          "props.states[3].unselectedStyle.classes": {
+            "binding": {
+              "config": {
+                "expression": "\u0027Standard/Alarms/\u0027+{this.props.states[3].text}+\u0027/Text\u0027"
+              },
+              "type": "expr"
+            }
+          },
+          "props.states[4].selectedStyle.classes": {
+            "binding": {
+              "config": {
+                "expression": "\u0027Standard/Alarms/\u0027+{this.props.states[4].text}+\u0027/Active/RowBaseStyle\u0027"
+              },
+              "type": "expr"
+            }
+          },
+          "props.states[4].unselectedStyle.classes": {
+            "binding": {
+              "config": {
+                "expression": "\u0027Standard/Alarms/\u0027+{this.props.states[4].text}+\u0027/Text\u0027"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "orientation": "row",
+          "states": [
+            {
+              "selectedStyle": {
+                "backgroundColor": "",
+                "classes": ""
+              },
+              "text": "Clear",
+              "unselectedStyle": {
+                "classes": ""
+              },
+              "value": 0
+            },
+            {
+              "selectedStyle": {},
+              "text": "Critical",
+              "unselectedStyle": {},
+              "value": 1
+            },
+            {
+              "selectedStyle": {},
+              "text": "High",
+              "unselectedStyle": {},
+              "value": 2
+            },
+            {
+              "selectedStyle": {},
+              "text": "Medium",
+              "unselectedStyle": {},
+              "value": 3
+            },
+            {
+              "selectedStyle": {},
+              "text": "Low",
+              "unselectedStyle": {},
+              "value": 4
+            }
+          ]
+        },
+        "type": "ia.input.multi-state-button"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Butterfly With Actuator"
+            },
+            "position": {
+              "height": 50,
+              "width": 50,
+              "x": 20,
+              "y": 28
+            },
+            "props": {
+              "params": {
+                "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/DB100V001"
+              },
+              "path": "Standard/Control Modules/Valve/Symbols/Butterfly With Actuator"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Symbols"
+        },
+        "position": {
+          "basis": "150px",
+          "x": -109,
+          "y": -63
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/Background"
+          }
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "Faceplate"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "props": {
+          "params": {
+            "TagPath": "[TPPlant1]Plant 1/Area 1/DB100V001"
+          },
+          "path": "Standard/Control Modules/Valve/Faceplates/Faceplate"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

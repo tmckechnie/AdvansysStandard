@@ -1,0 +1,147 @@
+{
+  "custom": {},
+  "params": {
+    "Label": "value",
+    "Value": 0
+  },
+  "propConfig": {
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Value": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 234,
+      "width": 233
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "custom": {
+          "asd": "#77B6D8",
+          "key": "#E8767E"
+        },
+        "meta": {
+          "name": "SimpleGauge"
+        },
+        "position": {
+          "basis": "175px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.arc.color": {
+            "binding": {
+              "config": {
+                "path": "this.props.value"
+              },
+              "transforms": [
+                {
+                  "fallback": "#77B6D8",
+                  "inputType": "range",
+                  "mappings": [
+                    {
+                      "input": {
+                        "exclusiveMax": true,
+                        "exclusiveMin": true,
+                        "min": 85
+                      },
+                      "output": "#F33F3C"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.arcBackground.color": {
+            "binding": {
+              "config": {
+                "path": "this.props.value"
+              },
+              "transforms": [
+                {
+                  "fallback": "#77B6D8",
+                  "inputType": "range",
+                  "mappings": [
+                    {
+                      "input": {
+                        "exclusiveMax": true,
+                        "exclusiveMin": true,
+                        "min": 85
+                      },
+                      "output": "#E8767E"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.value": {
+            "binding": {
+              "config": {
+                "path": "view.params.Value"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "arc": {},
+          "arcBackground": {},
+          "endAngle": 405,
+          "startAngle": 135,
+          "style": {
+            "classes": []
+          }
+        },
+        "type": "ia.chart.simple-gauge"
+      },
+      {
+        "meta": {
+          "name": "Name"
+        },
+        "position": {
+          "basis": "50px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "persistent": true
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Synergy/Overview/Card/Status/Label/Background Synergy/Overview/Card/Status/Label/Text"
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

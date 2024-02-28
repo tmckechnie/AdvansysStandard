@@ -1,0 +1,14 @@
+{
+  "base": {
+    "animation": {
+      "duration": "1s",
+      "keyframes": {
+        "0%": {},
+        "100%": {
+          "strokeWidth": "0",
+          "fill": "var(--bodySymbolActiveText)"
+        }
+      }
+    }
+  }
+}

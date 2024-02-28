@@ -1,0 +1,131 @@
+{
+  "custom": {},
+  "params": {
+    "BinLevelSetpoint": 80,
+    "Mirror": false,
+    "SetPointPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/200SEQ001/Cfg/BinLevel/Value",
+    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/Wash Plant/Feed/SP201/200AI001"
+  },
+  "propConfig": {
+    "params.BinLevelSetpoint": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Mirror": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.SetPointPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 142,
+      "width": 161
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Vibrating screen"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "propConfig": {
+          "props.elements[0].transform": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Mirror},\"translate(636,0) scale(-1, 1)\",\"\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "d": "M 200 50 L 600 50 L 600 400 L 450 550 L 350 550 L 200 400 L 600 400 L 200 400 L 200 50 ",
+                  "fill": {
+                    "paint": ""
+                  },
+                  "name": "path",
+                  "stroke": {},
+                  "style": {
+                    "classes": "Standard/Body/Statics/Fill Standard/Body/Statics/Stroke",
+                    "vector-effect": "non-scaling-stroke"
+                  },
+                  "type": "path"
+                }
+              ],
+              "type": "group"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 800 600"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Trends"
+        },
+        "position": {
+          "height": 0.5267,
+          "width": 0.5379,
+          "x": 0.2626,
+          "y": 0.117
+        },
+        "propConfig": {
+          "props.params.BinLevelSetpoint": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.SetPointPath}"
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "path": "view.params.TagPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Equipment/Material Handling/Bin/Trends"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": -0.1058,
+      "y": -0.1155
+    },
+    "props": {
+      "mode": "percent",
+      "style": {
+        "backgroundColor": "#FAFAFB00",
+        "classes": "Standard/Body/Statics/Background"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

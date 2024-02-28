@@ -1,0 +1,8 @@
+{
+  "base": {
+    "style": {
+      "borderColor": "var(--AlarmHigh)",
+      "borderWidth": "2px"
+    }
+  }
+}

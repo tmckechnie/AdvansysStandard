@@ -1,0 +1,716 @@
+{
+  "custom": {
+    "Cfg": {
+      "R0C0": {
+        "LeftDown": false,
+        "LeftUp": false,
+        "Linked": true,
+        "RightDown": true,
+        "RightUp": false,
+        "TagPath": "",
+        "Used": true
+      },
+      "R0C1": {
+        "LeftDown": true,
+        "LeftUp": false,
+        "Linked": false,
+        "RightDown": true,
+        "RightUp": false,
+        "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV01/100M001IL01/Sts/InterLock1",
+        "Used": true
+      },
+      "R0C2": {
+        "LeftDown": true,
+        "LeftUp": false,
+        "Linked": false,
+        "RightDown": true,
+        "RightUp": false,
+        "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV01/100M001IL01/Sts/InterLock2",
+        "Used": true
+      },
+      "R0C3": {
+        "LeftDown": true,
+        "LeftUp": false,
+        "Linked": true,
+        "RightDown": false,
+        "RightUp": false,
+        "TagPath": "",
+        "Used": true
+      },
+      "R1C0": {
+        "LeftDown": false,
+        "LeftUp": false,
+        "Linked": false,
+        "RightDown": false,
+        "RightUp": true,
+        "TagPath": "",
+        "Used": false
+      },
+      "R1C1": {
+        "LeftDown": false,
+        "LeftUp": true,
+        "Linked": false,
+        "RightDown": false,
+        "RightUp": true,
+        "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV01/100M001IL01/Sts/InterLock3",
+        "Used": true
+      },
+      "R1C2": {
+        "LeftDown": false,
+        "LeftUp": true,
+        "Linked": false,
+        "RightDown": false,
+        "RightUp": true,
+        "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV01/100M001IL01/Sts/InterLock4",
+        "Used": true
+      },
+      "R1C3": {
+        "LeftDown": false,
+        "LeftUp": true,
+        "Linked": false,
+        "RightDown": false,
+        "RightUp": false,
+        "TagPath": "",
+        "Used": false
+      },
+      "R2C0": {
+        "LeftDown": false,
+        "LeftUp": false,
+        "Linked": false,
+        "RightDown": false,
+        "RightUp": false,
+        "TagPath": "",
+        "Used": false
+      },
+      "R2C1": {
+        "LeftDown": false,
+        "LeftUp": false,
+        "Linked": false,
+        "RightDown": false,
+        "RightUp": false,
+        "TagPath": "",
+        "Used": false
+      },
+      "R2C2": {
+        "LeftDown": false,
+        "LeftUp": false,
+        "Linked": false,
+        "RightDown": false,
+        "RightUp": false,
+        "TagPath": "",
+        "Used": false
+      },
+      "R2C3": {
+        "LeftDown": false,
+        "LeftUp": false,
+        "Linked": false,
+        "RightDown": false,
+        "RightUp": false,
+        "TagPath": "",
+        "Used": false
+      },
+      "R3C0": {
+        "LeftDown": false,
+        "LeftUp": false,
+        "Linked": false,
+        "RightDown": false,
+        "RightUp": false,
+        "TagPath": "",
+        "Used": false
+      },
+      "R3C1": {
+        "LeftDown": false,
+        "LeftUp": false,
+        "Linked": false,
+        "RightDown": false,
+        "RightUp": false,
+        "TagPath": "",
+        "Used": false
+      },
+      "R3C2": {
+        "LeftDown": false,
+        "LeftUp": false,
+        "Linked": false,
+        "RightDown": false,
+        "RightUp": false,
+        "TagPath": "",
+        "Used": false
+      },
+      "R3C3": {
+        "LeftDown": false,
+        "LeftUp": false,
+        "Linked": false,
+        "RightDown": false,
+        "RightUp": false,
+        "TagPath": "",
+        "Used": false
+      }
+    },
+    "Mode": 4
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/CV01/100M001IL01"
+  },
+  "propConfig": {
+    "custom.Cfg": {
+      "binding": {
+        "config": {
+          "struct": {
+            "mode": "{view.custom.Mode}",
+            "tagPath": "{view.params.TagPath}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tmode \u003d value[\u0027mode\u0027]\n\tdef getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse,interLockNumber\u003d0):\n\t\ttagPath \u003d \"\"\n\t\tif interLockNumber\u003e0:\n\t\t\ttagPath \u003d value[\u0027tagPath\u0027]+\"/Sts/InterLock\"+str(interLockNumber)\n\t\treturn {\"LeftDown\": leftDown,\"LeftUp\": leftUp,\"RightDown\": rightDown,\"RightUp\": rightUp,\"Used\": used,\"Linked\":linked,\"TagPath\":tagPath}\n\tcfg\u003d{}\n\t\n\tif mode \u003d\u003d 0:\n\t\t# Row 0\n\t\tcfg[\"R0C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d1)\n\t\tcfg[\"R0C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d2)\n\t\tcfg[\"R0C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d3)\n\t\tcfg[\"R0C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d4)\n\n\t\t# Row 1\n\t\tcfg[\"R1C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R1C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R1C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R1C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\t\n\t\t\t\n\t\t# Row 2\n\t\tcfg[\"R2C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\t\n\t\t# Row 3\n\t\tcfg[\"R3C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\t\n\t\t\t\n\t\treturn cfg\t\n\telif mode \u003d\u003d 1:\n\t\t# Row 0\n\t\tcfg[\"R0C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dTrue,rightUp\u003dFalse,used\u003dTrue,linked\u003dTrue)\n\t\tcfg[\"R0C1\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dFalse,rightDown\u003dTrue,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d1)\n\t\tcfg[\"R0C2\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dTrue)\n\t\tcfg[\"R0C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dTrue)\n\n\t\t# Row 1\n\t\tcfg[\"R1C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dTrue,rightUp\u003dTrue,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R1C1\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dTrue,rightDown\u003dTrue,rightUp\u003dTrue,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d2)\n\t\tcfg[\"R1C2\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dTrue,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R1C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\t\n\t\t\t\n\t\t# Row 2\n\t\tcfg[\"R2C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dTrue,rightUp\u003dTrue,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C1\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dTrue,rightDown\u003dTrue,rightUp\u003dTrue,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d3)\n\t\tcfg[\"R2C2\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dTrue,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\t\n\t\t# Row 3\n\t\tcfg[\"R3C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dTrue,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dTrue,rightDown\u003dFalse,rightUp\u003dTrue,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d4)\n\t\tcfg[\"R3C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dTrue,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\t\t\n\t\treturn cfg\t\n\telif mode \u003d\u003d 2:\n\t\t# Row 0\n\t\tcfg[\"R0C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dTrue,rightUp\u003dFalse,used\u003dTrue,linked\u003dTrue)\n\t\tcfg[\"R0C1\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d1)\n\t\tcfg[\"R0C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dTrue,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d2)\n\t\tcfg[\"R0C3\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dTrue)\n\n\t\t# Row 1\n\t\tcfg[\"R1C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dTrue,used\u003dFalse,linked\u003dFalse)\t\n\t\tcfg[\"R1C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dTrue,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d3)\n\t\tcfg[\"R1C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dTrue,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d4)\n\t\tcfg[\"R1C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dTrue,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\t\t\n\t\t# Row 2\n\t\tcfg[\"R2C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\t\n\t\t# Row 3\n\t\tcfg[\"R3C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\t\n\t\t\t\n\t\treturn cfg\t\n\tif mode \u003d\u003d 3:\n\t\t# Row 0\n\t\tcfg[\"R0C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dTrue,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d1)\n\t\tcfg[\"R0C1\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dFalse,rightDown\u003dTrue,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d2)\n\t\tcfg[\"R0C2\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dTrue)\n\t\tcfg[\"R0C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dTrue)\n\n\t\t# Row 1\n\t\tcfg[\"R1C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dTrue,rightUp\u003dTrue,used\u003dFalse,linked\u003dTrue)\n\t\tcfg[\"R1C1\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dTrue,rightDown\u003dTrue,rightUp\u003dTrue,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d3)\n\t\tcfg[\"R1C2\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dTrue,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R1C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\t\n\t\t\t\n\t\t# Row 2\n\t\tcfg[\"R2C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dTrue,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dTrue,rightDown\u003dFalse,rightUp\u003dTrue,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d4)\n\t\tcfg[\"R2C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dTrue,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\t\n\t\t# Row 3\n\t\tcfg[\"R3C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\t\n\t\t\t\n\t\treturn cfg\t\n\tif mode \u003d\u003d 4:\n\t\t# Row 0\n\t\tcfg[\"R0C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dTrue,rightUp\u003dFalse,used\u003dTrue,linked\u003dTrue)\n\t\tcfg[\"R0C1\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dFalse,rightDown\u003dTrue,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d1)\n\t\tcfg[\"R0C2\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dFalse,rightDown\u003dTrue,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d2)\n\t\tcfg[\"R0C3\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dTrue)\n\n\t\t# Row 1\n\t\tcfg[\"R1C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dTrue,used\u003dFalse,linked\u003dFalse)\t\n\t\tcfg[\"R1C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dTrue,rightDown\u003dFalse,rightUp\u003dTrue,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d3)\n\t\tcfg[\"R1C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dTrue,rightDown\u003dFalse,rightUp\u003dTrue,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d4)\n\t\tcfg[\"R1C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dTrue,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\t\t\n\t\t# Row 2\n\t\tcfg[\"R2C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\t\n\t\t# Row 3\n\t\tcfg[\"R3C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\t\n\t\t\t\n\t\treturn cfg\t\n\tif mode \u003d\u003d 5:\n\t\t# Row 0\n\t\tcfg[\"R0C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dTrue,rightUp\u003dFalse,used\u003dTrue,linked\u003dTrue)\n\t\tcfg[\"R0C1\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d1)\n\t\tcfg[\"R0C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dTrue)\n\t\tcfg[\"R0C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dTrue)\n\n\t\t# Row 1\n\t\tcfg[\"R1C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dTrue,used\u003dFalse,linked\u003dFalse)\t\n\t\tcfg[\"R1C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dTrue,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d2)\n\t\tcfg[\"R1C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d3)\n\t\tcfg[\"R1C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d4)\n\t\t\t\n\t\t# Row 2\n\t\tcfg[\"R2C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\t\n\t\t# Row 3\n\t\tcfg[\"R3C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\t\n\t\t\t\n\t\treturn cfg\t\n\tif mode \u003d\u003d 6:\n\t\t# Row 0\n\t\tcfg[\"R0C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dTrue,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d1)\n\t\tcfg[\"R0C1\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d2)\n\t\tcfg[\"R0C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dTrue,rightUp\u003dFalse,used\u003dTrue,linked\u003dTrue)\n\t\tcfg[\"R0C3\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dTrue)\n\n\t\t# Row 1\n\t\tcfg[\"R1C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dTrue,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R1C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dTrue,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d3)\n\t\tcfg[\"R1C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dTrue,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d4)\n\t\tcfg[\"R1C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dTrue,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\t\n\t\t\t\n\t\t# Row 2\n\t\tcfg[\"R2C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\t\n\t\t# Row 3\n\t\tcfg[\"R3C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\t\n\t\t\n\t\treturn cfg\n\tif mode \u003d\u003d 7:\n\t\t# Row 0\n\t\tcfg[\"R0C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d1)\n\t\tcfg[\"R0C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dTrue,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d2)\n\t\tcfg[\"R0C2\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dFalse,rightDown\u003dTrue,rightUp\u003dFalse,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d3)\n\t\tcfg[\"R0C3\"] \u003d getCfg(leftDown\u003dTrue,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dTrue,linked\u003dTrue)\n\n\t\t# Row 1\n\t\tcfg[\"R1C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\t\n\t\tcfg[\"R1C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dTrue,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R1C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dTrue,rightDown\u003dFalse,rightUp\u003dTrue,used\u003dTrue,linked\u003dFalse,interLockNumber\u003d4)\n\t\tcfg[\"R1C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dTrue,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\t\t\n\t\t# Row 2\n\t\tcfg[\"R2C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R2C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\t\n\t\t# Row 3\n\t\tcfg[\"R3C0\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C1\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C2\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\n\t\tcfg[\"R3C3\"] \u003d getCfg(leftDown\u003dFalse,leftUp\u003dFalse,rightDown\u003dFalse,rightUp\u003dFalse,used\u003dFalse,linked\u003dFalse)\t\n\t\t\t\n\t\treturn cfg\t\t",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.Mode": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Mode"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 321,
+      "width": 350
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Input"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "props": {
+          "justify": "center",
+          "style": {
+            "border-right-color": "#555555",
+            "border-right-style": "solid",
+            "border-right-width": 2
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "C0"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Cfg": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.Cfg}[{parent.meta.name}+{this.meta.name}]"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/InterlockBlock"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "C1"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Cfg": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.Cfg}[{parent.meta.name}+{this.meta.name}]"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/InterlockBlock"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "C2"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Cfg": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.Cfg}[{parent.meta.name}+{this.meta.name}]"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/InterlockBlock"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "C3"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Cfg": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.Cfg}[{parent.meta.name}+{this.meta.name}]"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/InterlockBlock"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "R0"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "props": {
+              "justify": "center"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "C0"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Cfg": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.Cfg}[{parent.meta.name}+{this.meta.name}]"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/InterlockBlock"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "C1"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Cfg": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.Cfg}[{parent.meta.name}+{this.meta.name}]"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/InterlockBlock"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "C2"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Cfg": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.Cfg}[{parent.meta.name}+{this.meta.name}]"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/InterlockBlock"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "C3"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Cfg": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.Cfg}[{parent.meta.name}+{this.meta.name}]"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/InterlockBlock"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "R1"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.Mode}!\u003d0"
+                  },
+                  "enabled": false,
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "justify": "center"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "C0"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Cfg": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.Cfg}[{parent.meta.name}+{this.meta.name}]"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/InterlockBlock"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "C1"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Cfg": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.Cfg}[{parent.meta.name}+{this.meta.name}]"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/InterlockBlock"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "C2"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Cfg": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.Cfg}[{parent.meta.name}+{this.meta.name}]"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/InterlockBlock"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "C3"
+                },
+                "position": {
+                  "basis": "100px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Cfg": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.Cfg}[{parent.meta.name}+{this.meta.name}]"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/InterlockBlock"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "R2"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.Mode}!\u003d0"
+                  },
+                  "enabled": false,
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "justify": "center"
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "C0"
+                },
+                "position": {
+                  "basis": "10px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Cfg": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.Cfg}[{parent.meta.name}+{this.meta.name}]"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/InterlockBlock"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "C1"
+                },
+                "position": {
+                  "basis": "10px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Cfg": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.Cfg}[{parent.meta.name}+{this.meta.name}]"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/InterlockBlock"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "C2"
+                },
+                "position": {
+                  "basis": "10px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Cfg": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.Cfg}[{parent.meta.name}+{this.meta.name}]"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/InterlockBlock"
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "C3"
+                },
+                "position": {
+                  "basis": "10px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.params.Cfg": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.Cfg}[{parent.meta.name}+{this.meta.name}]"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "path": "Standard/Implementation Modules/Interlock/Faceplates/Components/InterlockBlock"
+                },
+                "type": "ia.display.view"
+              }
+            ],
+            "meta": {
+              "name": "R3"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.Mode}!\u003d0"
+                  },
+                  "enabled": false,
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "justify": "center"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Logic"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Output"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "props": {
+          "justify": "center",
+          "style": {
+            "border-left-color": "#555555",
+            "border-left-style": "solid",
+            "border-left-width": 2
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "justify": "center"
+    },
+    "type": "ia.container.flex"
+  }
+}

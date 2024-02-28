@@ -1,0 +1,197 @@
+{
+  "custom": {
+    "instances": [
+      {
+        "AllowedContentTypes": [
+          "Mimic",
+          "Alarms",
+          "Trend",
+          "Setpoints",
+          "Overview"
+        ],
+        "ChildrenCount": 2,
+        "ContentTypes": [
+          {
+            "contentType": "Overview",
+            "label": "Overview",
+            "order": 0
+          }
+        ],
+        "Label": "Standard",
+        "MenuItemPosition": {
+          "height": null,
+          "left": 0,
+          "top": 60,
+          "width": 180
+        },
+        "ModelItem": {
+          "BaseViewPath": "Model Views/StandardS71500/Standard",
+          "ModelItemTagPath": "[StandardS71500]Standard/Model Item",
+          "Name": "Standard",
+          "Order": 0,
+          "Path": "0",
+          "TagFolderName": "Standard",
+          "ViewPaths": [
+            {
+              "ContentType": [
+                "Footer Alarms"
+              ],
+              "Label": "Alarms",
+              "Order": 0,
+              "PagePath": "",
+              "Roles": [],
+              "ViewPath": "*Alarms/Alarms",
+              "key": "kNew1"
+            },
+            {
+              "ContentType": [
+                "Overview"
+              ],
+              "Label": "Overview",
+              "Order": 0,
+              "PagePath": "",
+              "Roles": [],
+              "ViewPath": "*Overview/Overview",
+              "key": "k0"
+            }
+          ]
+        },
+        "OpenPopups": [],
+        "ShowOnlyConfiguredContentTypes": true,
+        "instancePosition": {
+          "grow": 1
+        },
+        "instanceStyle": {
+          "classes": "Standard/Popups/Navigation/MenuItem/Item"
+        }
+      }
+    ]
+  },
+  "params": {
+    "AllowedContentTypes": [
+      "Mimic",
+      "Alarms",
+      "Trend",
+      "Setpoints",
+      "Overview"
+    ],
+    "ShowOnlyConfiguredContentTypes": true
+  },
+  "propConfig": {
+    "custom.instances": {
+      "binding": {
+        "config": {
+          "struct": {
+            "ModelItems": "{session.custom.ModelItems}",
+            "allowedContentTypes": "{view.params.AllowedContentTypes}",
+            "showOnlyConfiguredContentTypes": "{view.params.ShowOnlyConfiguredContentTypes}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\t\n\tshowOnlyConfiguredContentTypes \u003d value[\"showOnlyConfiguredContentTypes\"]\n\tallowedContentTypes \u003d value[\"allowedContentTypes\"]\n\tmodelItems \u003d value[\"ModelItems\"]\n\t \n\treturn Standard.Navigation.MenuBar.GetMenuBarMenuItems(ModelItems \u003d modelItems,InstanceStyleClass \u003d \"Standard/Popups/Navigation/MenuItem/Item\", GetOnlyConfiguredContentTypes\u003dshowOnlyConfiguredContentTypes, AllowedContentTypes \u003d allowedContentTypes)",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.AllowedContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowOnlyConfiguredContentTypes": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 56,
+      "width": 1000
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Menu Bar Items"
+        },
+        "position": {
+          "basis": "50px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.instances": {
+            "binding": {
+              "config": {
+                "path": "view.custom.instances"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elementStyle": {
+            "marginBottom": 2,
+            "marginLeft": 2,
+            "marginRight": 1,
+            "marginTop": 2
+          },
+          "path": "Standard/Navigation/Menu Bar/Components/Item"
+        },
+        "type": "ia.display.flex-repeater"
+      },
+      {
+        "meta": {
+          "name": "Dropdown Selection"
+        },
+        "position": {
+          "basis": "150px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.params.AllowedContentTypes": {
+            "binding": {
+              "config": {
+                "path": "view.params.AllowedContentTypes"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.GetOnlyConfiguredContentTypes": {
+            "binding": {
+              "config": {
+                "path": "view.params.ShowOnlyConfiguredContentTypes"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "Standard/Navigation/Content Type/Dropdown Selection",
+          "style": {
+            "marginBottom": 2,
+            "marginLeft": 2,
+            "marginRight": 1,
+            "marginTop": 2
+          },
+          "useDefaultViewHeight": true
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignItems": "center",
+      "style": {
+        "classes": "Standard/Docked/Header/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

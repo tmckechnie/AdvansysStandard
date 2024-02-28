@@ -1,0 +1,212 @@
+{
+  "custom": {
+    "FullTagPath": "[AdvansysStandard]Standard/Control Modules/Application/100NS102/Cfg/InternalExternalSelect//"
+  },
+  "params": {
+    "CategoryName": "",
+    "Label": "Command",
+    "LabelButton1": "Open",
+    "LabelButton2": "Close",
+    "OperMode": "",
+    "TagName": "",
+    "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100NS102/Cfg/InternalExternalSelect"
+  },
+  "propConfig": {
+    "custom.FullTagPath": {
+      "binding": {
+        "config": {
+          "expression": "{view.params.TagPath} +\"/\" +{view.params.CategoryName} + \"/\" +{view.params.TagName}"
+        },
+        "transforms": [
+          {
+            "code": "\tif quality.isGood():\n\t\treturn value",
+            "type": "script"
+          }
+        ],
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "params.CategoryName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.LabelButton1": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.LabelButton2": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.OperMode": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 50,
+      "width": 300
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "100px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Label"
+              },
+              "overlayOptOut": true,
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Text"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "MultiStateButton"
+        },
+        "position": {
+          "basis": "160px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.controlValue": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}"
+              },
+              "type": "tag"
+            }
+          },
+          "props.enabled": {
+            "binding": {
+              "config": {
+                "path": "view.params.OperMode"
+              },
+              "overlayOptOut": true,
+              "transforms": [
+                {
+                  "fallback": false,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": 0,
+                      "output": true
+                    },
+                    {
+                      "input": 1,
+                      "output": true
+                    },
+                    {
+                      "input": 2,
+                      "output": false
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.indicatorValue": {
+            "binding": {
+              "config": {
+                "path": "this.props.controlValue"
+              },
+              "overlayOptOut": true,
+              "type": "property"
+            }
+          },
+          "props.states[0].text": {
+            "binding": {
+              "config": {
+                "path": "view.params.LabelButton1"
+              },
+              "type": "property"
+            }
+          },
+          "props.states[1].text": {
+            "binding": {
+              "config": {
+                "path": "view.params.LabelButton2"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "defaultSelectedStyle": {
+            "classes": "Standard/Popups/Button/Selected"
+          },
+          "defaultUnselectedStyle": {
+            "classes": "Standard/Popups/Button/UnSelected"
+          },
+          "orientation": "row",
+          "states": [
+            {
+              "selectedStyle": {
+                "backgroundColor": "",
+                "classes": ""
+              },
+              "unselectedStyle": {
+                "classes": ""
+              },
+              "value": 1
+            },
+            {
+              "selectedStyle": {
+                "backgroundColor": "",
+                "classes": "",
+                "color": ""
+              },
+              "unselectedStyle": {
+                "classes": ""
+              },
+              "value": 0
+            }
+          ]
+        },
+        "type": "ia.input.multi-state-button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

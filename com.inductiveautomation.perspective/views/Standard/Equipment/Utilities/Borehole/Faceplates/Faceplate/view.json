@@ -1,0 +1,55 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[TPPSCV01003]Utilities/Water/Hallcore Dam/DAM010/PumpSet"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 554,
+      "width": 471
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Main Page"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "path": "view.params.TagPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ControlModuleType": "Borehole"
+          },
+          "path": "Standard/Equipment/Utilities/Components/Faceplate/Main Page"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

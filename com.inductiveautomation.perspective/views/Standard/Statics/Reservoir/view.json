@@ -1,0 +1,135 @@
+{
+  "custom": {},
+  "params": {
+    "LabelText": "Label",
+    "Style": {
+      "classes": "Standard/Body/Statics/Stroke Standard/Body/Statics/Fill",
+      "vector-effect": "non-scaling-stroke"
+    }
+  },
+  "propConfig": {
+    "params.LabelText": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Style": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 330,
+      "width": 273
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "250px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "!isNull({view.params.LabelText})"
+              },
+              "type": "expr"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.LabelText"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/Statics/Text"
+          },
+          "textStyle": {
+            "classes": "Standard/Body/Statics/Text",
+            "fontSize": 10
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Tank"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.elements[0].style": {
+            "binding": {
+              "config": {
+                "path": "view.params.Style"
+              },
+              "type": "property"
+            }
+          },
+          "props.elements[1].style": {
+            "binding": {
+              "config": {
+                "path": "view.params.Style"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M999,704 l0,-624 -23,25 -27,11 -36,11 -29,6 -32,6 -36,5 -38,5 -41,4 -44,3 -46,3 -48,2 -49,2 -51,0 -51,0 -50,-2 -47,-2 -46,-3 -44,-3 -41,-4 -38,-5 -36,-5 -32,-6 -29,-6 -36,-11 -27,-11 -22,-21 0,-4 0,626 22,24 27,11 36,10 29,6 32,6 36,5 38,4 41,4 44,4 46,3 47,2 50,1 25,0 26,0 26,0 50,-1 49,-1 46,-3 45,-3 43,-4 39,-4 37,-5 34,-6 31,-6 27,-6 33,-11 29,-16 10,-12 1,-4z",
+              "fill": {
+                "paint": ""
+              },
+              "name": "path",
+              "stroke": {},
+              "type": "path"
+            },
+            {
+              "cx": "499",
+              "cy": "81",
+              "fill": {
+                "paint": ""
+              },
+              "name": "ellipse",
+              "rx": "499",
+              "ry": "81",
+              "stroke": {
+                "width": 1
+              },
+              "type": "ellipse"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 999 788"
+        },
+        "type": "ia.shapes.svg"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#FFFFFF00",
+        "classes": "Standard/Body/Statics/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

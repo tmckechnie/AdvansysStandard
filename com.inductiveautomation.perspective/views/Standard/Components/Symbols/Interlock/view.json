@@ -1,0 +1,64 @@
+{
+  "custom": {},
+  "params": {
+    "Interlocked": false
+  },
+  "propConfig": {
+    "params.Interlocked": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 15,
+      "width": 15
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "bind",
+          "param": "Value",
+          "type": "Application/Control Modules/Motor"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Icon"
+        },
+        "position": {
+          "basis": "25px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.params.Interlocked"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "material/lock"
+        },
+        "type": "ia.display.icon"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "Standard/Body/Symbols/SVG/Basic Standard/Body/Symbols/SVG/Fill/Active",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

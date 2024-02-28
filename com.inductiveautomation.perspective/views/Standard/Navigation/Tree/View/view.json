@@ -1,0 +1,935 @@
+{
+  "custom": {
+    "CurrentModelItem": {
+      "ContentType": "Overview",
+      "Path": "0",
+      "SearchModule": ""
+    },
+    "CurrentModelItemPath": "0",
+    "items": [
+      {
+        "data": {
+          "BaseViewPath": "Model Views/StandardS71500/Standard",
+          "ModelItemTagPath": "[StandardS71500]Standard/Model Item",
+          "Name": "Standard",
+          "Order": 0,
+          "Path": "0",
+          "TagFolderName": "Standard",
+          "ViewPaths": [
+            {
+              "ContentType": [
+                "Footer Alarms"
+              ],
+              "Label": "Alarms",
+              "Order": 0,
+              "PagePath": "",
+              "Roles": [],
+              "ViewPath": "*Alarms/Alarms",
+              "key": "kNew1"
+            },
+            {
+              "ContentType": [
+                "Overview"
+              ],
+              "Label": "Overview",
+              "Order": 0,
+              "PagePath": "",
+              "Roles": [],
+              "ViewPath": "*Overview/Overview",
+              "key": "k0"
+            }
+          ]
+        },
+        "dataV0": {
+          "ModelItemTagPath": "[StandardS71500]Standard/Model Item",
+          "TagFolderName": "Standard"
+        },
+        "expanded": true,
+        "items": [
+          {
+            "data": {
+              "BaseViewPath": "Model Views/StandardS71500/Standard/Examples",
+              "ModelItemTagPath": "[StandardS71500]Standard/Examples/Model Item",
+              "Name": "Examples",
+              "Order": 0,
+              "Path": "0/0",
+              "TagFolderName": "Examples",
+              "ViewPaths": [
+                {
+                  "ContentType": [
+                    "Overview"
+                  ],
+                  "Label": "Overview",
+                  "Order": 0,
+                  "PagePath": "",
+                  "Roles": [],
+                  "ViewPath": "*Overview/Overview",
+                  "key": "k0"
+                }
+              ]
+            },
+            "dataV0": {
+              "ModelItemTagPath": "[StandardS71500]Standard/Examples/Model Item",
+              "TagFolderName": "Examples"
+            },
+            "expanded": false,
+            "items": [
+              {
+                "data": {
+                  "BaseViewPath": "Model Views/StandardS71500/Standard/Examples/Material Handling",
+                  "ModelItemTagPath": "[StandardS71500]Standard/Examples/Material Handling/Model Item",
+                  "Name": "Material Handling",
+                  "Order": 0,
+                  "Path": "0/0/0",
+                  "TagFolderName": "Material Handling",
+                  "ViewPaths": [
+                    {
+                      "ContentType": [
+                        "Overview"
+                      ],
+                      "Label": "Overview",
+                      "Order": 0,
+                      "PagePath": "",
+                      "Roles": [],
+                      "ViewPath": "*Overview/Overview",
+                      "key": "k0"
+                    }
+                  ]
+                },
+                "dataV0": {
+                  "ModelItemTagPath": "[StandardS71500]Standard/Examples/Material Handling/Model Item",
+                  "TagFolderName": "Material Handling"
+                },
+                "expanded": false,
+                "items": [
+                  {
+                    "data": {
+                      "BaseViewPath": "Model Views/TPROM/ROM",
+                      "ModelItemTagPath": "[TPROM]ROM/Model Item",
+                      "Name": "ROM",
+                      "Order": 0,
+                      "Path": "0/0/0/0",
+                      "TagFolderName": "ROM",
+                      "ViewPaths": [
+                        {
+                          "ContentType": [
+                            "Overview"
+                          ],
+                          "Label": "Overview",
+                          "Order": 0,
+                          "PagePath": "",
+                          "Roles": [],
+                          "ViewPath": "*Overview/Overview",
+                          "key": "k0"
+                        },
+                        {
+                          "ContentType": [
+                            "Dashboard"
+                          ],
+                          "Label": "Dashboard",
+                          "Order": 1,
+                          "PagePath": "",
+                          "Roles": [],
+                          "ViewPath": "*Dashboard/Dashboard",
+                          "key": "k1"
+                        },
+                        {
+                          "ContentType": [
+                            "Sequence"
+                          ],
+                          "Label": "Sequence",
+                          "Order": 2,
+                          "PagePath": "",
+                          "Roles": [],
+                          "ViewPath": "*Sequence/Sequence",
+                          "key": "k2"
+                        },
+                        {
+                          "ContentType": [
+                            "Footer Alarms"
+                          ],
+                          "Label": "Alarms",
+                          "Order": 3,
+                          "PagePath": "",
+                          "Roles": [],
+                          "ViewPath": "*Alarms/Alarms",
+                          "key": "k3"
+                        },
+                        {
+                          "ContentType": [
+                            "Header Status"
+                          ],
+                          "Label": "Plant Status",
+                          "Order": 0,
+                          "PagePath": "",
+                          "Roles": [],
+                          "ViewPath": "*Header/Status",
+                          "key": "k4"
+                        }
+                      ]
+                    },
+                    "dataV0": {
+                      "ModelItemTagPath": "[TPROM]ROM/Model Item",
+                      "TagFolderName": "ROM"
+                    },
+                    "expanded": false,
+                    "items": [
+                      {
+                        "data": {
+                          "BaseViewPath": "Model Views/TPROM/ROM/CV01",
+                          "ModelItemTagPath": "[TPROM]ROM/CV01/Model Item",
+                          "Name": "CV01",
+                          "Order": 0,
+                          "Path": "0/0/0/0/0",
+                          "TagFolderName": "CV01",
+                          "ViewPaths": [
+                            {
+                              "ContentType": [
+                                "Overview"
+                              ],
+                              "Label": "Overview",
+                              "Order": 0,
+                              "PagePath": "",
+                              "Roles": [],
+                              "ViewPath": "*Overview/Overview",
+                              "key": "k0"
+                            },
+                            {
+                              "ContentType": [
+                                "Dashboard"
+                              ],
+                              "Label": "Dashboard",
+                              "Order": 1,
+                              "PagePath": "",
+                              "Roles": [],
+                              "ViewPath": "*Dashboard/Dashboard",
+                              "key": "k1"
+                            },
+                            {
+                              "ContentType": [
+                                "Sequence"
+                              ],
+                              "Label": "Sequence",
+                              "Order": 2,
+                              "PagePath": "",
+                              "Roles": [],
+                              "ViewPath": "*Sequence/Sequence",
+                              "key": "k2"
+                            },
+                            {
+                              "ContentType": [
+                                "Footer Alarms"
+                              ],
+                              "Label": "Alarms",
+                              "Order": 3,
+                              "PagePath": "",
+                              "Roles": [],
+                              "ViewPath": "*Alarms/Alarms",
+                              "key": "k3"
+                            },
+                            {
+                              "ContentType": [
+                                "Header Status"
+                              ],
+                              "Label": "Plant Status",
+                              "Order": 0,
+                              "PagePath": "",
+                              "Roles": [],
+                              "ViewPath": "*Header/Status",
+                              "key": "k4"
+                            }
+                          ]
+                        },
+                        "dataV0": {
+                          "ModelItemTagPath": "[TPROM]ROM/CV01/Model Item",
+                          "TagFolderName": "CV01"
+                        },
+                        "expanded": false,
+                        "items": [],
+                        "label": "CV01"
+                      },
+                      {
+                        "data": {
+                          "BaseViewPath": "Model Views/TPROM/ROM/Level 2",
+                          "ModelItemTagPath": "[TPROM]ROM/Level 2/Model Item",
+                          "Name": "Level 2",
+                          "Order": 0,
+                          "Path": "0/0/0/0/1",
+                          "TagFolderName": "Level 2",
+                          "ViewPaths": [
+                            {
+                              "ContentType": [
+                                "Overview"
+                              ],
+                              "Label": "Overview",
+                              "Order": 0,
+                              "PagePath": "",
+                              "Roles": [],
+                              "ViewPath": "*Overview/Overview",
+                              "key": "k0"
+                            },
+                            {
+                              "ContentType": [
+                                "Dashboard"
+                              ],
+                              "Label": "Dashboard",
+                              "Order": 1,
+                              "PagePath": "",
+                              "Roles": [],
+                              "ViewPath": "*Dashboard/Dashboard",
+                              "key": "k1"
+                            },
+                            {
+                              "ContentType": [
+                                "Sequence"
+                              ],
+                              "Label": "Sequence",
+                              "Order": 2,
+                              "PagePath": "",
+                              "Roles": [],
+                              "ViewPath": "*Sequence/Sequence",
+                              "key": "k2"
+                            },
+                            {
+                              "ContentType": [
+                                "Footer Alarms"
+                              ],
+                              "Label": "Alarms",
+                              "Order": 3,
+                              "PagePath": "",
+                              "Roles": [],
+                              "ViewPath": "*Alarms/Alarms",
+                              "key": "k3"
+                            },
+                            {
+                              "ContentType": [
+                                "Header Status"
+                              ],
+                              "Label": "Plant Status",
+                              "Order": 0,
+                              "PagePath": "",
+                              "Roles": [],
+                              "ViewPath": "*Header/Status",
+                              "key": "k4"
+                            }
+                          ]
+                        },
+                        "dataV0": {
+                          "ModelItemTagPath": "[TPROM]ROM/Level 2/Model Item",
+                          "TagFolderName": "Level 2"
+                        },
+                        "expanded": false,
+                        "items": [
+                          {
+                            "data": {
+                              "BaseViewPath": "Model Views/TPROM/ROM/Level 2/CV20",
+                              "ModelItemTagPath": "[TPROM]ROM/Level 2/CV20/Model Item",
+                              "Name": "CV20",
+                              "Order": 0,
+                              "Path": "0/0/0/0/1/0",
+                              "TagFolderName": "CV20",
+                              "ViewPaths": [
+                                {
+                                  "ContentType": [
+                                    "Overview"
+                                  ],
+                                  "Label": "Overview",
+                                  "Order": 0,
+                                  "PagePath": "",
+                                  "Roles": [],
+                                  "ViewPath": "*Overview/Overview",
+                                  "key": "k0"
+                                },
+                                {
+                                  "ContentType": [
+                                    "Dashboard"
+                                  ],
+                                  "Label": "Dashboard",
+                                  "Order": 1,
+                                  "PagePath": "",
+                                  "Roles": [],
+                                  "ViewPath": "*Dashboard/Dashboard",
+                                  "key": "k1"
+                                },
+                                {
+                                  "ContentType": [
+                                    "Sequence"
+                                  ],
+                                  "Label": "Sequence",
+                                  "Order": 2,
+                                  "PagePath": "",
+                                  "Roles": [],
+                                  "ViewPath": "*Sequence/Sequence",
+                                  "key": "k2"
+                                },
+                                {
+                                  "ContentType": [
+                                    "Footer Alarms"
+                                  ],
+                                  "Label": "Alarms",
+                                  "Order": 3,
+                                  "PagePath": "",
+                                  "Roles": [],
+                                  "ViewPath": "*Alarms/Alarms",
+                                  "key": "k3"
+                                },
+                                {
+                                  "ContentType": [
+                                    "Header Status"
+                                  ],
+                                  "Label": "Plant Status",
+                                  "Order": 0,
+                                  "PagePath": "",
+                                  "Roles": [],
+                                  "ViewPath": "*Header/Status",
+                                  "key": "k4"
+                                }
+                              ]
+                            },
+                            "dataV0": {
+                              "ModelItemTagPath": "[TPROM]ROM/Level 2/CV20/Model Item",
+                              "TagFolderName": "CV20"
+                            },
+                            "expanded": false,
+                            "items": [],
+                            "label": "CV20"
+                          }
+                        ],
+                        "label": "Level 2"
+                      }
+                    ],
+                    "label": "ROM"
+                  }
+                ],
+                "label": "Material Handling"
+              }
+            ],
+            "label": "Examples"
+          },
+          {
+            "data": {
+              "BaseViewPath": "Model Views/StandardS71500/Standard/Modules",
+              "ModelItemTagPath": "[StandardS71500]Standard/Modules/Model Item",
+              "Name": "Modules",
+              "Order": 0,
+              "Path": "0/1",
+              "TagFolderName": "Modules",
+              "ViewPaths": [
+                {
+                  "ContentType": [
+                    "Footer Alarms"
+                  ],
+                  "Koos": {
+                    "key": "value",
+                    "pirt": 6546
+                  },
+                  "Label": "Alarms",
+                  "Order": 0,
+                  "PagePath": "",
+                  "Roles": [],
+                  "ViewPath": "*Alarms/Alarms",
+                  "key": "kNew1"
+                },
+                {
+                  "ContentType": [
+                    "Overview"
+                  ],
+                  "Koos": {
+                    "key": "value",
+                    "pirt": 6546
+                  },
+                  "Label": "Overview",
+                  "Order": 0,
+                  "PagePath": "",
+                  "Roles": [],
+                  "ViewPath": "*Overview/Overview",
+                  "key": "k0"
+                }
+              ]
+            },
+            "dataV0": {
+              "ModelItemTagPath": "[StandardS71500]Standard/Modules/Model Item",
+              "TagFolderName": "Modules"
+            },
+            "expanded": false,
+            "items": [
+              {
+                "data": {
+                  "BaseViewPath": "Model Views/StandardS71500/Standard/Modules/Control Modules",
+                  "ModelItemTagPath": "[StandardS71500]Standard/Modules/Control Modules/Model Item",
+                  "Name": "Control Modules",
+                  "Order": 0,
+                  "Path": "0/1/0",
+                  "TagFolderName": "Control Modules",
+                  "ViewPaths": [
+                    {
+                      "ContentType": [
+                        "Overview"
+                      ],
+                      "Label": "Testing",
+                      "Order": "1",
+                      "PagePath": "",
+                      "Roles": [],
+                      "ViewPath": "*Testing/Testing",
+                      "key": "k0"
+                    },
+                    {
+                      "ContentType": [
+                        "Footer Alarms"
+                      ],
+                      "Label": "Alarms",
+                      "Order": "10",
+                      "PagePath": "",
+                      "Roles": [],
+                      "ViewPath": "*Alarms/Alarms",
+                      "key": "k1"
+                    },
+                    {
+                      "ContentType": [
+                        "Overview"
+                      ],
+                      "Label": "Level Controller",
+                      "Order": "3",
+                      "PagePath": "",
+                      "Roles": [],
+                      "ViewPath": "Model Views/StandardS71500/Standard/Modules/Control Modules/Testing/Components/LevelControl",
+                      "key": "kNew3"
+                    },
+                    {
+                      "ContentType": [
+                        "Overview"
+                      ],
+                      "Label": "Overview",
+                      "Order": 0,
+                      "PagePath": "",
+                      "Roles": [],
+                      "ViewPath": "*Overview/Overview",
+                      "key": "k2"
+                    }
+                  ]
+                },
+                "dataV0": {
+                  "ModelItemTagPath": "[StandardS71500]Standard/Modules/Control Modules/Model Item",
+                  "TagFolderName": "Control Modules"
+                },
+                "expanded": false,
+                "items": [],
+                "label": "Control Modules"
+              },
+              {
+                "data": {
+                  "BaseViewPath": "Model Views/StandardS71500/Standard/Modules/Implementation Modules",
+                  "ModelItemTagPath": "[StandardS71500]Standard/Modules/Implementation Modules/Model Item",
+                  "Name": "Implementation Modules",
+                  "Order": 0,
+                  "Path": "0/1/1",
+                  "TagFolderName": "Implementation Modules",
+                  "ViewPaths": [
+                    {
+                      "ContentType": [
+                        "Overview"
+                      ],
+                      "Label": "Testing",
+                      "Order": "1",
+                      "PagePath": "",
+                      "Roles": [],
+                      "ViewPath": "*Testing/Testing",
+                      "key": "k0"
+                    },
+                    {
+                      "ContentType": [
+                        "Footer Alarms"
+                      ],
+                      "Label": "Alarms",
+                      "Order": 0,
+                      "PagePath": "",
+                      "Roles": [],
+                      "ViewPath": "*Alarms/Alarms",
+                      "key": "kNew2"
+                    },
+                    {
+                      "ContentType": [
+                        "Overview"
+                      ],
+                      "Label": "Overview",
+                      "Order": 0,
+                      "PagePath": "",
+                      "Roles": [],
+                      "ViewPath": "*Overview/Overview",
+                      "key": "k1"
+                    }
+                  ]
+                },
+                "dataV0": {
+                  "ModelItemTagPath": "[StandardS71500]Standard/Modules/Implementation Modules/Model Item",
+                  "TagFolderName": "Implementation Modules"
+                },
+                "expanded": false,
+                "items": [],
+                "label": "Implementation Modules"
+              }
+            ],
+            "label": "Modules"
+          }
+        ],
+        "label": "Standard"
+      }
+    ]
+  },
+  "params": {
+    "ModelItemTagPath": "[StandardS71500]Standard/Model Item"
+  },
+  "propConfig": {
+    "custom.CurrentModelItem": {
+      "binding": {
+        "config": {
+          "struct": {
+            "currentModelItem": "{session.custom.CurrentModelItem}",
+            "pageId": "{page.props.pageId}",
+            "useSessionModelItem": "{session.custom.UseSessionModelItem}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tcurrentModelItem \u003d value[\u0027currentModelItem\u0027]\n\tuseSessionModelItem \u003d value[\u0027useSessionModelItem\u0027]\n\tpageId \u003d value[\u0027pageId\u0027]\n\treturn Standard.Navigation.Common.GetCurrentModelItem(CurrentModelItem\u003dcurrentModelItem,UseSession\u003duseSessionModelItem,PerspectivePageID\u003dpageId)",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.CurrentModelItemPath": {
+      "binding": {
+        "config": {
+          "struct": {
+            "Path": "{view.custom.CurrentModelItem.Path}",
+            "modelItems": "{session.custom.ModelItems}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\treturn value[\"Path\"]\n\tmodelItems \u003d value[\"modelItems\"]\n\tmodelItemTagPath \u003d value[\"Path\"]\n\treturn Standard.Navigation.Common.SearchModelItem(modelItems,modelItemTagPath)[\"data\"][\"Path\"]",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.items": {
+      "binding": {
+        "config": {
+          "path": "session.custom.ModelItems"
+        },
+        "transforms": [
+          {
+            "code": "\tmodelItems \u003d value\t\n\ttreeItems \u003d Standard.Navigation.TreeView.GetTreeItems(ModelItems \u003d modelItems)\n\t#Make sure the highest level folder is expanded by default\t\t\n\ttreeItems[0][\"expanded\"] \u003d True\n\treturn treeItems",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.ModelItemTagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "width": 300
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "custom": {
+              "key": "value"
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tif self.props.value is not None:\n\t\t#Update ModelItemTagPaths Object\n\t\tuseSessionModelItemTagPath \u003d self.session.custom.UseSessionModelItemTagPath\n\t\tcurrentModelItemTagPaths \u003d self.session.custom.CurrentModelItemTagPaths\n\t\tmodelItemTagPath \u003d self.props.value\n\t\tperspectivePageID \u003d self.page.props.pageId\n\t\tself.session.custom.CurrentModelItemTagPaths \u003d Standard.Navigation.Common.UpdateCurrentModelItemTagPaths(UpdatedModelItemTagPath \u003d modelItemTagPath,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t CurrentModelItemTagPaths \u003d currentModelItemTagPaths,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t UseSessionModelItemTagPath \u003d useSessionModelItemTagPath,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t PerspectivePageID \u003d perspectivePageID)\n\t\tself.props.value \u003d None"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              },
+              "dom": {
+                "onKeyDown": {
+                  "config": {
+                    "script": "\tkey \u003d event[\u0027key\u0027]\n\tif key \u003d\u003d \"Enter\":\n\t\t#system.perspective.print(self.props.search.searchParam)\n\t\tsearchParam \u003d self.props.search.searchParam\n\t\tif len(searchParam)\u003e0:\n\t\t\tself.getSibling(\"IconSearch\").custom.searchString\u003dsearchParam"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.options": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.items"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toptions\u003d []\n\tdef getOptions(path,items):\n\t\ti\u003d0\n\t\tfor item in items:\n\t\t\toption \u003d {}\n\t\t\toptionPath \u003d path + item[\"data\"][\"TagFolderName\"] + \"/\"\n\t\t\toption[\"label\"] \u003d optionPath[0:-1]\n\t\t\toptionValue \u003d item[\"data\"][\"ModelItemTagPath\"]\n\t\t\toption[\"value\"] \u003d optionValue\n\t\t\toptions.append(option)\n\t\t\tgetOptions(path\u003doptionPath,items\u003ditem[\"items\"])\n\t\t\ti \u003d+1\n\t\treturn \n\t\n\tgetOptions(path\u003d\u0027\u0027,items\u003dvalue)\n\t\n\treturn options",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "dropdownOptionStyle": {
+                "borderStyle": "none",
+                "classes": "Standard/Docked/Left/Background Standard/Docked/Left/Text"
+              },
+              "placeholder": {
+                "color": "var(--dockedNavigationContentText)",
+                "text": "Search for an Area..."
+              },
+              "style": {
+                "borderStyle": "none",
+                "classes": "Standard/Docked/Left/Background Standard/Docked/Left/Text"
+              },
+              "value": null
+            },
+            "type": "ia.input.dropdown"
+          },
+          {
+            "custom": {
+              "searchString": "100M005"
+            },
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tsearchParam \u003d self.getSibling(\"Dropdown\").props.search.searchParam\n\tself.custom.searchString \u003d searchParam"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "IconSearch",
+              "tooltip": {
+                "enabled": true
+              }
+            },
+            "position": {
+              "basis": "30px"
+            },
+            "propConfig": {
+              "custom.results": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "searchString": "{this.custom.searchString}",
+                      "tagProviders": "{this.custom.tagProviders}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tsearchString \u003d value[\u0027searchString\u0027]\n\ttagProviders \u003d value[\u0027tagProviders\u0027]\n\tif len(searchString)\u003d\u003d0: \n\t\t\treturn \u0027\u0027\n\ttagProviderModules \u003d {}\n\tallModules \u003d []\n\tfor tagProvider in tagProviders:\n\t\t#return tagProvider\n\t\tlimit \u003d 10000\n\t\tmodules \u003d Standard.Navigation.Common.SearchModule(Provider\u003dtagProvider,SearchString\u003dsearchString,Limit\u003dlimit)\n\t\tallModules.extend(modules)\n\t\n\tmodulesLen \u003d len(allModules)\n\tif modulesLen\u003e0:\n\t\tif modulesLen\u003d\u003d1:\n\t\t\tmodelItemTagPath \u003d allModules[0][\u0027modelItemTagPath\u0027]\n\t\t\tinstanceName \u003d allModules[0][\u0027instance\u0027][\u0027name\u0027]\n\t\t\t\n\t\t\t#Write to instance SelfIdentifyRequest\n\t\t\tfullPath \u003d str(allModules[0][\u0027instance\u0027][\u0027fullPath\u0027])\n\t\t\tidentifyTagPath \u003d fullPath + \"/Id/SelfIdentifyRequest\"\n\t\t\tif system.tag.exists(identifyTagPath):\n\t\t\t\tsystem.tag.writeBlocking(tagPaths\u003d[identifyTagPath], values\u003d[True])\n\t\t\t\n\t\t\tuseSessionModelItemTagPath \u003d self.session.custom.UseSessionModelItemTagPath\n\t\t\tcurrentModelItemTagPaths \u003d self.session.custom.CurrentModelItemTagPaths\n\t\t\tperspectivePageID \u003d self.page.props.pageId\n\t\t\tself.session.custom.CurrentModelItemTagPaths \u003d Standard.Navigation.Common.UpdateCurrentModelItemTagPaths(\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tUpdatedModelItemTagPath \u003d modelItemTagPath,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t \tCurrentModelItemTagPaths \u003d currentModelItemTagPaths,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t \tUseSessionModelItemTagPath \u003d useSessionModelItemTagPath,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t \tPerspectivePageID \u003d perspectivePageID,SearchModule\u003dinstanceName)\n\t\telse:\n\t\t\t#Show Result Popup\n\t\t\tpopup \u003d \u0027ModulesFoundPopup\u0027\n\t\t\tparams\u003d{\u0027Modules\u0027:allModules}\n\t\t\tsystem.perspective.openPopup(\n\t\t\tid\u003dpopup,\n\t\t\ttitle\u003d\"Results for: \" + searchString,\n\t\t\tview\u003d\u0027Standard/Navigation/Components/ModulesFoundPopup\u0027,\n\t\t\tparams\u003dparams,\n\t\t\tshowCloseButton\u003dTrue,\n\t\t\tviewportBound\u003dTrue,\n\t\t\tmodal\u003dTrue,\n\t\t\toverlayDismiss\u003dTrue\n\t\t\t)\n\t\t\t\n\t\t\n\t\t\t\t\t\t\t\t\n\treturn allModules\n\t",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "custom.tagProviders": {
+                "binding": {
+                  "config": {
+                    "path": "session.custom.ModelItems"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\ttagProviders \u003d Standard.Model.Common.GetTagProvidersList(StartModelItemTagPath\u003dself.session.custom.InitialModelItemTagPath,ModelItems\u003dvalue)\n\treturn tagProviders",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "meta.tooltip.text": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.CurrentModelItemTagPath.SearchModule}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "path": "material/search",
+              "style": {
+                "classes": "Standard/Docked/Left/Background Standard/Docked/Left/Text"
+              }
+            },
+            "type": "ia.display.icon"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "36px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "events": {
+          "component": {
+            "onItemClicked": {
+              "config": {
+                "script": "\timport Standard.Navigation as Navigation\n\t#return\n\t#Update ModelItemTagPaths Object\n\tuseSessionModelItem \u003d self.session.custom.UseSessionModelItem\n\tcurrentModelItem \u003d self.session.custom.CurrentModelItem\n\tpath \u003d event.data[\"Path\"]\n\t#modelItemTagPath \u003d event.data[\"ModelItemTagPath\"]\n\t#modelItemData \u003d event.data\n\tperspectivePageID \u003d self.page.props.pageId\n\tcontentType \u003d \"Overview\"#self.view.custom.CurrentModelItem.ContentType\n\tcurrentModelItem \u003d Navigation.Common.UpdateCurrentModelItem(Path \u003d path,CurrentModelItem \u003d currentModelItem,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t UseSession \u003d useSessionModelItem,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t PerspectivePageID \u003d perspectivePageID,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t ContentType \u003d contentType)\n\tself.session.custom.CurrentModelItem \u003d currentModelItem\n\t\t\t\n\t\t\t\n\t\t\t"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Tree"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "propConfig": {
+          "custom.setTreePath": {
+            "binding": {
+              "config": {
+                "path": "view.custom.CurrentModelItemPath"
+              },
+              "transforms": [
+                {
+                  "code": "\tpath \u003d value\n\tcurrentPath \u003d str(self.props.selection[0])\n\tpath \u003d str(path)\n\n\t#Update the Expanded items to show the newly selected path (applicable when a navigation was done on the breadcrumb/menu bar and not the tree directly\n\tpathArray \u003d path.split(\"/\")\n\tcurrentMenuTree \u003d self.props.items\n\t\n\tfor pathIndexString in pathArray:\n\t\tpathIndexInt \u003d int(pathIndexString)\n\t\tif currentMenuTree[pathIndexInt][\"expanded\"] \u003d\u003d False:\n\t\t\tcurrentMenuTree[pathIndexInt][\"expanded\"] \u003d True\n\t\t\t\n\t\tcurrentMenuTree \u003d currentMenuTree[pathIndexInt][\"items\"]\n\t\t\n\tif currentPath !\u003d path:\n\t\t#Update selection to the new path\n\t\tself.props.selection \u003d [path]\n\t\t\t\n\treturn path",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.items": {
+            "binding": {
+              "config": {
+                "path": "view.custom.items"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "appearance": {
+            "defaultNodeIcons": {
+              "collapsed": {
+                "path": "material/folder"
+              },
+              "empty": {
+                "path": "material/stop"
+              },
+              "expanded": {
+                "path": "material/folder_open"
+              }
+            },
+            "expandIcons": {
+              "collapsed": {
+                "path": "material/arrow_right"
+              },
+              "expanded": {
+                "path": "material/arrow_drop_down"
+              }
+            },
+            "selectedStyle": {
+              "classes": "Standard/Docked/Left/Text"
+            },
+            "unselectedStyle": {
+              "classes": "Standard/Docked/Left/Text"
+            }
+          },
+          "selection": [
+            "0"
+          ],
+          "selectionData": [
+            {
+              "itemPath": "0",
+              "value": {
+                "BaseViewPath": "Model Views/StandardS71500/Standard",
+                "ModelItemTagPath": "[StandardS71500]Standard/Model Item",
+                "Name": "Standard",
+                "Order": 0,
+                "Path": "0",
+                "TagFolderName": "Standard",
+                "ViewPaths": [
+                  {
+                    "ContentType": [
+                      "Footer Alarms"
+                    ],
+                    "Label": "Alarms",
+                    "Order": 0,
+                    "PagePath": "",
+                    "Roles": [],
+                    "ViewPath": "*Alarms/Alarms",
+                    "key": "kNew1"
+                  },
+                  {
+                    "ContentType": [
+                      "Overview"
+                    ],
+                    "Label": "Overview",
+                    "Order": 0,
+                    "PagePath": "",
+                    "Roles": [],
+                    "ViewPath": "*Overview/Overview",
+                    "key": "k0"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "type": "ia.display.tree"
+      },
+      {
+        "meta": {
+          "name": "ModelItemTagPaths Toolbar"
+        },
+        "position": {
+          "basis": "500px"
+        },
+        "props": {
+          "path": "Standard/Navigation/Tree/Components/ModelItemTagPaths Toolbar"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Docked/Left/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

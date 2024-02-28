@@ -1,0 +1,11 @@
+{
+  "base": {
+    "style": {
+      "backgroundColor": "var(--AlarmCritical-50)",
+      "fontSize": "10px",
+      "textAlign": "center",
+      "stroke": "var(--AlarmCritical)",
+      "strokeWidth": "2"
+    }
+  }
+}

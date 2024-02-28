@@ -1,0 +1,10 @@
+{
+  "base": {
+    "style": {
+      "color": "var(--popupHeadingText)",
+      "fontSize": "14px",
+      "fontWeight": "bold",
+      "textAlign": "center"
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "custom": {
+    "url": "http://can01vs1#chart\u003dNew\u0026sourcetag[]\u003dSefateng.ROM.Surface.100M100.In.Running\u0026sourcetag[]\u003dSefateng.ROM.Surface.100WT100.Sts.Value\u0026timeduration\u003d24h"
+  },
+  "params": {
+    "AxiomServer": "can01vs1",
+    "relativeDuration": "24h",
+    "tags": [
+      "Sefateng.ROM.Surface.100M100.In.Running",
+      "Sefateng.ROM.Surface.100WT100.Sts.Value"
+    ]
+  },
+  "propConfig": {
+    "custom.url": {
+      "binding": {
+        "config": {
+          "struct": {
+            "relativeDuration": "{view.params.relativeDuration}",
+            "server": "{view.params.AxiomServer}",
+            "tags": "{view.params.tags}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tserver \u003d value[\u0027server\u0027]\n\ttags \u003d value[\u0027tags\u0027]\n\trelativeDuration \u003d value[\u0027relativeDuration\u0027]\n\turl \u003d \u0027http://\u0027+server+\u0027#chart\u003dNew\u0027\n\tfor tag in tags:\n\t\turl \u003d url + \u0027\u0026sourcetag[]\u003d\u0027 + tag\n\t\n\turl \u003d url + \u0027\u0026timeduration\u003d\u0027+relativeDuration\n\treturn url",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.AxiomServer": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.relativeDuration": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.tags": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "IFrame"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.src": {
+            "binding": {
+              "config": {
+                "path": "view.custom.url"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.iframe"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,353 @@
+{
+  "custom": {},
+  "params": {
+    "height": 400,
+    "name": "value"
+  },
+  "propConfig": {
+    "params.height": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.name": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 400,
+      "width": 90
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Combined_FinishMilling_BucketElevat_G - Left - Long"
+        },
+        "position": {
+          "width": 90
+        },
+        "propConfig": {
+          "position.height": {
+            "binding": {
+              "config": {
+                "path": "view.params.height"
+              },
+              "overlayOptOut": true,
+              "type": "property"
+            }
+          },
+          "props.elements[0].elements[0].height": {
+            "binding": {
+              "config": {
+                "path": "this.position.height"
+              },
+              "overlayOptOut": true,
+              "type": "property"
+            }
+          },
+          "props.elements[0].elements[1].y2": {
+            "binding": {
+              "config": {
+                "path": "this.position.height"
+              },
+              "overlayOptOut": true,
+              "transforms": [
+                {
+                  "code": "\theight \u003d value - 15.0002\n\treturn height",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[0].elements[2].y2": {
+            "binding": {
+              "config": {
+                "path": "this.position.height"
+              },
+              "overlayOptOut": true,
+              "transforms": [
+                {
+                  "code": "\theight \u003d value - 15.0002\n\treturn height",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[0].elements[3].height": {
+            "binding": {
+              "config": {
+                "path": "this.position.height"
+              },
+              "overlayOptOut": true,
+              "type": "property"
+            }
+          },
+          "props.elements[0].elements[4].y2": {
+            "binding": {
+              "config": {
+                "path": "this.position.height"
+              },
+              "overlayOptOut": true,
+              "transforms": [
+                {
+                  "code": "\theight \u003d value - 15.0002\n\treturn height",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[0].elements[5].y2": {
+            "binding": {
+              "config": {
+                "path": "this.position.height"
+              },
+              "overlayOptOut": true,
+              "transforms": [
+                {
+                  "code": "\theight \u003d value - 15.0002\n\treturn height",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.elements[1].transform": {
+            "binding": {
+              "config": {
+                "path": "this.position.height"
+              },
+              "overlayOptOut": true,
+              "transforms": [
+                {
+                  "code": "\theight \u003d value - 220\n\treturn \"scale(-1,1) translate(-90,%s)\"%height",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "elements": [
+            {
+              "elements": [
+                {
+                  "fill": {
+                    "opacity": "1.0",
+                    "paint": "rgb(204,204,204)"
+                  },
+                  "name": "Rectangle3",
+                  "stroke": {
+                    "opacity": "1.0",
+                    "paint": "rgb(0,0,0)",
+                    "width": "0.0"
+                  },
+                  "type": "rect",
+                  "width": "5.000002",
+                  "x": "29.99906",
+                  "y": "24.99987"
+                },
+                {
+                  "name": "Line5",
+                  "stroke": {
+                    "opacity": "1.0",
+                    "paint": "rgb(126,126,126)",
+                    "width": "1.0"
+                  },
+                  "type": "line",
+                  "x1": "29.99906",
+                  "x2": "29.99906",
+                  "y1": "24.99987"
+                },
+                {
+                  "name": "Line6",
+                  "stroke": {
+                    "opacity": "1.0",
+                    "paint": "rgb(126,126,126)",
+                    "width": "1.0"
+                  },
+                  "type": "line",
+                  "x1": "34.99906",
+                  "x2": "34.99906",
+                  "y1": "24.99987"
+                },
+                {
+                  "fill": {
+                    "opacity": "1.0",
+                    "paint": "rgb(204,204,204)"
+                  },
+                  "name": "Rectangle4",
+                  "stroke": {
+                    "opacity": "1.0",
+                    "paint": "rgb(0,0,0)",
+                    "width": "0.0"
+                  },
+                  "type": "rect",
+                  "width": "5.0",
+                  "x": "54.99907",
+                  "y": "24.99987"
+                },
+                {
+                  "name": "Line7",
+                  "stroke": {
+                    "opacity": "1.0",
+                    "paint": "rgb(126,126,126)",
+                    "width": "1.0"
+                  },
+                  "type": "line",
+                  "x1": "54.99907",
+                  "x2": "54.99907",
+                  "y1": "24.99987"
+                },
+                {
+                  "name": "Line8",
+                  "stroke": {
+                    "opacity": "1.0",
+                    "paint": "rgb(126,126,126)",
+                    "width": "1.0"
+                  },
+                  "type": "line",
+                  "x1": "59.99907",
+                  "x2": "59.99907",
+                  "y1": "24.99987"
+                }
+              ],
+              "fill": {
+                "opacity": "1.0",
+                "paint": "rgb(0,0,0)"
+              },
+              "name": "PPC_S_Bucket_Elevator_Conveyor1",
+              "stroke": {
+                "opacity": "1.0",
+                "paint": "rgb(0,0,0)",
+                "width": "1.0"
+              },
+              "style": {
+                "classes": "Standard/Body/Statics/Fill"
+              },
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "fill": {
+                    "opacity": "1.0",
+                    "paint": "rgb(204,204,204)"
+                  },
+                  "name": "Polygon1",
+                  "points": "4.998997,199.9997 59.999007000000006,199.9997 59.999007000000006,219.9997 32.499002000000004,219.9997",
+                  "stroke": {
+                    "opacity": "1.0",
+                    "paint": "rgb(126,126,126)",
+                    "width": "1.0"
+                  },
+                  "type": "polygon"
+                }
+              ],
+              "fill": {
+                "opacity": "1.0",
+                "paint": "rgb(0,0,0)"
+              },
+              "name": "PPC_S_Bucket_Elevator1",
+              "stroke": {
+                "opacity": "1.0",
+                "paint": "rgb(0,0,0)",
+                "width": "1.0"
+              },
+              "style": {
+                "classes": "Standard/Body/Statics/Fill"
+              },
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "fill": {
+                    "opacity": "1.0",
+                    "paint": "rgb(204,204,204)"
+                  },
+                  "name": "Polygon1",
+                  "points": "85.0,30.00019999999995 29.999879999999848,30.00019999999995 29.999879999999848,10.000139999999988 57.499939999999924,10.000139999999988",
+                  "stroke": {
+                    "opacity": "1.0",
+                    "paint": "rgb(126,126,126)",
+                    "width": "1.0"
+                  },
+                  "type": "polygon"
+                }
+              ],
+              "fill": {
+                "opacity": "1.0",
+                "paint": "rgb(0,0,0)"
+              },
+              "name": "EmbeddedSymbol117",
+              "stroke": {
+                "opacity": "1.0",
+                "paint": "rgb(0,0,0)",
+                "width": "1.0"
+              },
+              "style": {
+                "classes": "Standard/Body/Statics/Fill"
+              },
+              "transform": "scale(-1,1) translate(-90,0)",
+              "type": "group"
+            }
+          ]
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 32,
+          "width": 89,
+          "x": 1,
+          "y": 184
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.name"
+              },
+              "overlayOptOut": true,
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/Statics/Text",
+            "textAlign": "center"
+          }
+        },
+        "scripts": {
+          "customMethods": [],
+          "extensionFunctions": null,
+          "messageHandlers": [
+            {
+              "messageType": "DisplayEquipmentLabel",
+              "pageScope": true,
+              "script": "\t# Script to Show/Hide Equipment Labels\n\tself.meta.visible \u003d not self.meta.visible",
+              "sessionScope": false,
+              "viewScope": false
+            }
+          ]
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

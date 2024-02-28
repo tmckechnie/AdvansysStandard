@@ -1,0 +1,19 @@
+{
+  "base": {
+    "animation": {
+      "duration": "0.5s",
+      "keyframes": {
+        "0%": {
+          "backgroundColor": "#FFFFFF00",
+          "borderColor": "var(--bodySymbolIdentified)",
+          "borderStyle": "solid",
+          "borderWidth": "5px"
+        },
+        "100%": {
+          "backgroundColor": "#FFFFFF00",
+          "borderStyle": "none"
+        }
+      }
+    }
+  }
+}
