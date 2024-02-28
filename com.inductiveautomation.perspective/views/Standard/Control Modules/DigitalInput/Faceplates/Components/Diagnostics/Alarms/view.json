@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100DI100"
+    "TagPath": "[TPOpnim]Control Modules/Rh_FSL_7075"
   },
   "propConfig": {
     "params.TagPath": {
@@ -30,8 +30,12 @@
             "binding": {
               "config": {
                 "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Alarms/{name}/Sts/Active"
               },
               "transforms": [
                 {
@@ -75,7 +79,7 @@
         },
         "props": {
           "params": {
-            "Label": "High Alarm Elapsed Time",
+            "Label": "Communication Elapsed Time",
             "ShowLabel": true,
             "ShowUnits": true
           },
@@ -96,8 +100,12 @@
             "binding": {
               "config": {
                 "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Alarms/{name}/Sts/Active"
               },
               "transforms": [
                 {
@@ -162,8 +170,12 @@
             "binding": {
               "config": {
                 "fallbackDelay": 2.5,
-                "mode": "expression",
-                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Alarms/{name}/Sts/Active"
               },
               "transforms": [
                 {

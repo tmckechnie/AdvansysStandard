@@ -1,7 +1,7 @@
 {
-  "title": "Advansys Standard",
-  "description": "Advansys Standard",
+  "title": "Advansys Standard Development",
+  "description": "Advansys Standard Development",
   "parent": "",
   "enabled": true,
-  "inheritable": true
+  "inheritable": false
 }

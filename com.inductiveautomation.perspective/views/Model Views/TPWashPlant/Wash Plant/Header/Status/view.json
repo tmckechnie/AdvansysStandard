@@ -1,0 +1,84 @@
+{
+  "custom": {
+    "StsValue": "Feed Running",
+    "tonPhr": "42"
+  },
+  "params": {},
+  "propConfig": {
+    "custom.StsValue": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[TPWashPlant]Wash Plant/Feed/200G002/Sts/Running"
+        },
+        "transforms": [
+          {
+            "expression": "if({value},\"Feed Running\",\"Feed Stopped\")",
+            "type": "expression"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.tonPhr": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[TPWashPlant]Wash Plant/Feed/CV205/200WT004/Sts/Value"
+        },
+        "transforms": [
+          {
+            "formatType": "numeric",
+            "formatValue": "integer",
+            "type": "format"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 78,
+      "width": 313
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.StsValue} + \" at \" + {view.custom.tonPhr} + \" t/hr\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Docked/Header/ContentBackground Standard/Docked/Header/ContentText",
+            "fontSize": 20
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

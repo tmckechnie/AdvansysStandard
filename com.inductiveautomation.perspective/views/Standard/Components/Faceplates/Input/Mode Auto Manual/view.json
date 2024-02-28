@@ -1,12 +1,561 @@
 {
   "custom": {
-    "CurrentValue": null
+    "CurrentValue": {
+      "Alarms": {
+        "Available": {
+          "Cfg": {
+            "ConditionSetpoint": null,
+            "Delay": null,
+            "DisplayPath": null,
+            "Enable": null,
+            "OperationActivePriority": null,
+            "OperationPassivePriority": null
+          },
+          "Cmd": {
+            "Acknowledge": null,
+            "OperationActive": null
+          },
+          "In": {
+            "Condition": null
+          },
+          "Sts": {
+            "Active": null,
+            "ElapsedTime": null,
+            "Priority": null
+          }
+        },
+        "CloseLimit": {
+          "Cfg": {
+            "ConditionSetpoint": null,
+            "Delay": 15,
+            "DisplayPath": "Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400/Alarms/CloseLimit",
+            "Enable": false,
+            "OperationActivePriority": "Critical",
+            "OperationPassivePriority": "Low"
+          },
+          "Cmd": {
+            "Acknowledge": false,
+            "OperationActive": false
+          },
+          "In": {
+            "Condition": true
+          },
+          "Sts": {
+            "Active": true,
+            "ElapsedTime": 0,
+            "Priority": "Low"
+          }
+        },
+        "Communication": {
+          "Cfg": {
+            "ConditionSetpoint": null,
+            "Delay": null,
+            "DisplayPath": null,
+            "Enable": null,
+            "OperationActivePriority": null,
+            "OperationPassivePriority": null
+          },
+          "Cmd": {
+            "Acknowledge": null,
+            "OperationActive": null
+          },
+          "In": {
+            "Condition": null
+          },
+          "Sts": {
+            "Active": null,
+            "ElapsedTime": null,
+            "Priority": null
+          }
+        },
+        "OpenLimit": {
+          "Cfg": {
+            "ConditionSetpoint": null,
+            "Delay": 15,
+            "DisplayPath": "Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400/Alarms/OpenLimit",
+            "Enable": false,
+            "OperationActivePriority": "Critical",
+            "OperationPassivePriority": "Low"
+          },
+          "Cmd": {
+            "Acknowledge": false,
+            "OperationActive": false
+          },
+          "In": {
+            "Condition": true
+          },
+          "Sts": {
+            "Active": true,
+            "ElapsedTime": 0,
+            "Priority": "Low"
+          }
+        },
+        "Position": {
+          "Cfg": {
+            "ConditionSetpoint": 0,
+            "Delay": 10,
+            "DisplayPath": "Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400/Alarms/Position/Cfg/DisplayPath",
+            "Enable": false,
+            "OperationActivePriority": "Critical",
+            "OperationPassivePriority": "Low"
+          },
+          "Cmd": {
+            "Acknowledge": false,
+            "OperationActive": false
+          },
+          "In": {
+            "Condition": false
+          },
+          "Sts": {
+            "Active": false,
+            "ElapsedTime": 0,
+            "Priority": "Low"
+          }
+        },
+        "Summary": {
+          "DisplayPath": "Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400*",
+          "Information": {
+            "HighestActivePriority": 0,
+            "HighestActivePriorityName": null,
+            "HighestUnackedPriority": 0,
+            "HighestUnackedPriorityName": null,
+            "Overall": {
+              "ActiveAckCount": 0,
+              "ActiveUnackCount": 0,
+              "ClearUnackCount": 0,
+              "Detail": [],
+              "ShelvedCount": 0,
+              "Total": 0
+            },
+            "PriorityDetail": {
+              "Critical": {
+                "ActiveAckCount": 0,
+                "ActiveUnackCount": 0,
+                "ClearUnackCount": 0,
+                "Detail": [],
+                "ShelvedCount": 0,
+                "Total": 0
+              },
+              "High": {
+                "ActiveAckCount": 0,
+                "ActiveUnackCount": 0,
+                "ClearUnackCount": 0,
+                "Detail": [],
+                "ShelvedCount": 0,
+                "Total": 0
+              },
+              "Low": {
+                "ActiveAckCount": 0,
+                "ActiveUnackCount": 0,
+                "ClearUnackCount": 0,
+                "Detail": [],
+                "ShelvedCount": 0,
+                "Total": 0
+              },
+              "Medium": {
+                "ActiveAckCount": 0,
+                "ActiveUnackCount": 0,
+                "ClearUnackCount": 0,
+                "Detail": [],
+                "ShelvedCount": 0,
+                "Total": 0
+              }
+            }
+          },
+          "Update Trigger": 0
+        }
+      },
+      "Cfg": {
+        "DelayCloseTime": null,
+        "DelayOpenTime": null,
+        "DisableManualMode": false,
+        "EnableDualAction": false,
+        "EnableLimitClosed": true,
+        "EnableLimitOpen": true,
+        "FailSafePosition": false,
+        "IsHandValve": false
+      },
+      "Cmd": {
+        "AutoClose": true,
+        "AutoImmediateClose": null,
+        "AutoImmediateOpen": null,
+        "AutoOpen": false,
+        "ManualClose": false,
+        "ManualOpen": false,
+        "Mode": 1,
+        "OperationActive": true,
+        "StrokeReset": null
+      },
+      "Id": {
+        "Identify": false,
+        "Owner": "",
+        "OwnerIdentifyRequest": false,
+        "OwnerTagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400",
+        "Self": "",
+        "SelfIdentifyRequest": false
+      },
+      "In": {
+        "Available": null,
+        "Closed": false,
+        "Opened": false
+      },
+      "Interlock": {
+        "Hold": {
+          "FirstUpReason": null,
+          "FirstUpReasonCode": null,
+          "FirstUpReasonModuleInfo": null,
+          "Reason": null,
+          "ReasonCode": null,
+          "ReasonModuleInfo": null,
+          "State": null
+        },
+        "Interlocked": false,
+        "Operation": {
+          "FirstUpReason": "",
+          "FirstUpReasonCode": 0,
+          "FirstUpReasonModuleInfo": {
+            "instanceExists": false
+          },
+          "Reason": "",
+          "ReasonCode": 0,
+          "ReasonModuleInfo": {
+            "instanceExists": false
+          },
+          "State": true
+        },
+        "Protective": {
+          "FirstUpReason": null,
+          "FirstUpReasonCode": null,
+          "FirstUpReasonModuleInfo": null,
+          "Reason": null,
+          "ReasonCode": null,
+          "ReasonModuleInfo": null,
+          "State": null
+        }
+      },
+      "Metadata": {
+        "ContainedName": "Steam_Valve",
+        "Description": "Discrete Valve. Update description to describe the instance.",
+        "DriverModuleTagPath": " ",
+        "InstanceName": "Rh_UY_8400",
+        "InstancePath": "Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400",
+        "ModelPath": "Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400",
+        "PathToParentFolder": "Standard/Modules/Control Modules/Control Module Testing",
+        "ShortDescription": "Rh_UY_8400 - Steam_Valve",
+        "StandardViewPath": "Standard/Control Modules/Valve",
+        "TagProvider": "TPOpnim"
+      },
+      "Out": {
+        "Close": true,
+        "Open": false
+      },
+      "Sim": {
+        "Action": null,
+        "Active": null,
+        "Delay": null,
+        "ElapsedTime": null,
+        "Mode": null
+      },
+      "Sts": {
+        "Closed": false,
+        "Closing": true,
+        "Command": "Close",
+        "DelayCloseElapsed": null,
+        "DelayOpenElapsed": null,
+        "FailureReasonCode": null,
+        "Held": null,
+        "Opened": false,
+        "Opening": false,
+        "RequestClose": true,
+        "RequestImmediateClose": null,
+        "RequestImmediateOpen": null,
+        "RequestOpen": false,
+        "StrokeCount": null,
+        "Value": "Valve is closing"
+      },
+      "Version": "2.2023.195.16.35"
+    },
+    "DisableManualMode": false
   },
   "params": {
     "CurrentValue": 2,
-    "CurrentValueOut": "No Data",
+    "CurrentValueOut": {
+      "Alarms": {
+        "Available": {
+          "Cfg": {
+            "ConditionSetpoint": null,
+            "Delay": null,
+            "DisplayPath": null,
+            "Enable": null,
+            "OperationActivePriority": null,
+            "OperationPassivePriority": null
+          },
+          "Cmd": {
+            "Acknowledge": null,
+            "OperationActive": null
+          },
+          "In": {
+            "Condition": null
+          },
+          "Sts": {
+            "Active": null,
+            "ElapsedTime": null,
+            "Priority": null
+          }
+        },
+        "CloseLimit": {
+          "Cfg": {
+            "ConditionSetpoint": null,
+            "Delay": 15,
+            "DisplayPath": "Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400/Alarms/CloseLimit",
+            "Enable": false,
+            "OperationActivePriority": "Critical",
+            "OperationPassivePriority": "Low"
+          },
+          "Cmd": {
+            "Acknowledge": false,
+            "OperationActive": false
+          },
+          "In": {
+            "Condition": true
+          },
+          "Sts": {
+            "Active": true,
+            "ElapsedTime": 0,
+            "Priority": "Low"
+          }
+        },
+        "Communication": {
+          "Cfg": {
+            "ConditionSetpoint": null,
+            "Delay": null,
+            "DisplayPath": null,
+            "Enable": null,
+            "OperationActivePriority": null,
+            "OperationPassivePriority": null
+          },
+          "Cmd": {
+            "Acknowledge": null,
+            "OperationActive": null
+          },
+          "In": {
+            "Condition": null
+          },
+          "Sts": {
+            "Active": null,
+            "ElapsedTime": null,
+            "Priority": null
+          }
+        },
+        "OpenLimit": {
+          "Cfg": {
+            "ConditionSetpoint": null,
+            "Delay": 15,
+            "DisplayPath": "Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400/Alarms/OpenLimit",
+            "Enable": false,
+            "OperationActivePriority": "Critical",
+            "OperationPassivePriority": "Low"
+          },
+          "Cmd": {
+            "Acknowledge": false,
+            "OperationActive": false
+          },
+          "In": {
+            "Condition": true
+          },
+          "Sts": {
+            "Active": true,
+            "ElapsedTime": 0,
+            "Priority": "Low"
+          }
+        },
+        "Position": {
+          "Cfg": {
+            "ConditionSetpoint": 0,
+            "Delay": 10,
+            "DisplayPath": "Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400/Alarms/Position/Cfg/DisplayPath",
+            "Enable": false,
+            "OperationActivePriority": "Critical",
+            "OperationPassivePriority": "Low"
+          },
+          "Cmd": {
+            "Acknowledge": false,
+            "OperationActive": false
+          },
+          "In": {
+            "Condition": false
+          },
+          "Sts": {
+            "Active": false,
+            "ElapsedTime": 0,
+            "Priority": "Low"
+          }
+        },
+        "Summary": {
+          "DisplayPath": "Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400*",
+          "Information": {
+            "HighestActivePriority": 0,
+            "HighestActivePriorityName": null,
+            "HighestUnackedPriority": 0,
+            "HighestUnackedPriorityName": null,
+            "Overall": {
+              "ActiveAckCount": 0,
+              "ActiveUnackCount": 0,
+              "ClearUnackCount": 0,
+              "Detail": [],
+              "ShelvedCount": 0,
+              "Total": 0
+            },
+            "PriorityDetail": {
+              "Critical": {
+                "ActiveAckCount": 0,
+                "ActiveUnackCount": 0,
+                "ClearUnackCount": 0,
+                "Detail": [],
+                "ShelvedCount": 0,
+                "Total": 0
+              },
+              "High": {
+                "ActiveAckCount": 0,
+                "ActiveUnackCount": 0,
+                "ClearUnackCount": 0,
+                "Detail": [],
+                "ShelvedCount": 0,
+                "Total": 0
+              },
+              "Low": {
+                "ActiveAckCount": 0,
+                "ActiveUnackCount": 0,
+                "ClearUnackCount": 0,
+                "Detail": [],
+                "ShelvedCount": 0,
+                "Total": 0
+              },
+              "Medium": {
+                "ActiveAckCount": 0,
+                "ActiveUnackCount": 0,
+                "ClearUnackCount": 0,
+                "Detail": [],
+                "ShelvedCount": 0,
+                "Total": 0
+              }
+            }
+          },
+          "Update Trigger": 0
+        }
+      },
+      "Cfg": {
+        "DelayCloseTime": null,
+        "DelayOpenTime": null,
+        "DisableManualMode": false,
+        "EnableDualAction": false,
+        "EnableLimitClosed": true,
+        "EnableLimitOpen": true,
+        "FailSafePosition": false,
+        "IsHandValve": false
+      },
+      "Cmd": {
+        "AutoClose": true,
+        "AutoImmediateClose": null,
+        "AutoImmediateOpen": null,
+        "AutoOpen": false,
+        "ManualClose": false,
+        "ManualOpen": false,
+        "Mode": 1,
+        "OperationActive": true,
+        "StrokeReset": null
+      },
+      "Id": {
+        "Identify": false,
+        "Owner": "",
+        "OwnerIdentifyRequest": false,
+        "OwnerTagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400",
+        "Self": "",
+        "SelfIdentifyRequest": false
+      },
+      "In": {
+        "Available": null,
+        "Closed": false,
+        "Opened": false
+      },
+      "Interlock": {
+        "Hold": {
+          "FirstUpReason": null,
+          "FirstUpReasonCode": null,
+          "FirstUpReasonModuleInfo": null,
+          "Reason": null,
+          "ReasonCode": null,
+          "ReasonModuleInfo": null,
+          "State": null
+        },
+        "Interlocked": false,
+        "Operation": {
+          "FirstUpReason": "",
+          "FirstUpReasonCode": 0,
+          "FirstUpReasonModuleInfo": {
+            "instanceExists": false
+          },
+          "Reason": "",
+          "ReasonCode": 0,
+          "ReasonModuleInfo": {
+            "instanceExists": false
+          },
+          "State": true
+        },
+        "Protective": {
+          "FirstUpReason": null,
+          "FirstUpReasonCode": null,
+          "FirstUpReasonModuleInfo": null,
+          "Reason": null,
+          "ReasonCode": null,
+          "ReasonModuleInfo": null,
+          "State": null
+        }
+      },
+      "Metadata": {
+        "ContainedName": "Steam_Valve",
+        "Description": "Discrete Valve. Update description to describe the instance.",
+        "DriverModuleTagPath": " ",
+        "InstanceName": "Rh_UY_8400",
+        "InstancePath": "Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400",
+        "ModelPath": "Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400",
+        "PathToParentFolder": "Standard/Modules/Control Modules/Control Module Testing",
+        "ShortDescription": "Rh_UY_8400 - Steam_Valve",
+        "StandardViewPath": "Standard/Control Modules/Valve",
+        "TagProvider": "TPOpnim"
+      },
+      "Out": {
+        "Close": true,
+        "Open": false
+      },
+      "Sim": {
+        "Action": null,
+        "Active": null,
+        "Delay": null,
+        "ElapsedTime": null,
+        "Mode": null
+      },
+      "Sts": {
+        "Closed": false,
+        "Closing": true,
+        "Command": "Close",
+        "DelayCloseElapsed": null,
+        "DelayOpenElapsed": null,
+        "FailureReasonCode": null,
+        "Held": null,
+        "Opened": false,
+        "Opening": false,
+        "RequestClose": true,
+        "RequestImmediateClose": null,
+        "RequestImmediateOpen": null,
+        "RequestOpen": false,
+        "StrokeCount": null,
+        "Value": "Valve is closing"
+      },
+      "Version": "2.2023.195.16.35"
+    },
     "Label": "Mode",
-    "TagPath": "[FMG]Test/DOC201A/Cfg/Mode"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400"
   },
   "propConfig": {
     "custom.CurrentValue": {
@@ -19,6 +568,26 @@
           },
           "tagPath": "{TagPath}"
         },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.DisableManualMode": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/DisableManualMode"
+        },
+        "transforms": [
+          {
+            "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027 or \u0027Bad_NotFound\u0027 in quality.toString():\n\t\treturn False\n\treturn value",
+            "type": "script"
+          }
+        ],
         "type": "tag"
       },
       "persistent": true
@@ -151,6 +720,14 @@
           "grow": 1
         },
         "propConfig": {
+          "props.enabled": {
+            "binding": {
+              "config": {
+                "expression": "!{view.custom.DisableManualMode}"
+              },
+              "type": "expr"
+            }
+          },
           "props.style.classes": {
             "binding": {
               "config": {

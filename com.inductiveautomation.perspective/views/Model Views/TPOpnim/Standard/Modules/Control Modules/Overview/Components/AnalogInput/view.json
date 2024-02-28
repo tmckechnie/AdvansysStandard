@@ -1,0 +1,138 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 200,
+      "width": 180
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/HeadingText"
+          },
+          "text": "Analogue Input"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Symbol"
+            },
+            "position": {
+              "height": 35,
+              "width": 125,
+              "x": 27.5,
+              "y": 18
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "AbbreviationDisplay": false,
+                  "AbbreviationOverwrite": ""
+                },
+                "TagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_FIT_7100R"
+              },
+              "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 25,
+              "width": 100,
+              "x": 40,
+              "y": 2
+            },
+            "props": {
+              "params": {
+                "InstanceTagPath": "/Metadata/InstanceName",
+                "TagPath": "[TPOpnim]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput01"
+              },
+              "path": "Standard/Components/Symbols/Label"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Bar"
+            },
+            "position": {
+              "height": 100,
+              "width": 32,
+              "x": 133.5,
+              "y": 50
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "ShowAlarmOutLine": true,
+                  "ValueWedgeExtent": 10
+                },
+                "TagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_FIT_7100R"
+              },
+              "path": "Standard/Control Modules/AnalogInput/Symbols/Bar"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "SparkLine"
+            },
+            "position": {
+              "height": 100,
+              "width": 133,
+              "x": 7,
+              "y": 50
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "Desired": {
+                    "HighTag": "Cfg/ControlLimitHigh",
+                    "LowTag": "Cfg/ControlLimitLow"
+                  },
+                  "ShowAlarmOutLine": true,
+                  "ValueWedgeExtent": 2
+                },
+                "TagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_FIT_7100R"
+              },
+              "path": "Standard/Control Modules/AnalogInput/Symbols/SparkLine"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

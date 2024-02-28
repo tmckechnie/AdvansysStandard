@@ -1,0 +1,580 @@
+{
+  "custom": {
+    "AlarmSummary": {
+      "HighestActivePriority": 0,
+      "HighestActivePriorityName": null,
+      "HighestUnackedPriority": 0,
+      "HighestUnackedPriorityName": null,
+      "Overall": {
+        "ActiveAckCount": 0,
+        "ActiveUnackCount": 0,
+        "ClearUnackCount": 0,
+        "Detail": [],
+        "ShelvedCount": 0,
+        "Total": 0
+      },
+      "PriorityDetail": {
+        "Critical": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "High": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Low": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Medium": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        }
+      }
+    },
+    "ModuleType": "Three Phase Power Meter",
+    "References": {},
+    "Styling": {
+      "Base": {},
+      "Default": {
+        "Container": "Standard/Body/Symbols/Displays/Container"
+      }
+    }
+  },
+  "params": {
+    "Cfg": {
+      "Label": null,
+      "MaxValue": null,
+      "MeasureTagPath": "Power/PV",
+      "MinValue": null,
+      "ShowAlarmOutLine": true
+    },
+    "TagPath": "[TPFMS]FMS/Facility/Energy/Solar/SE1331806"
+  },
+  "propConfig": {
+    "custom.AlarmSummary": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Alarms/Summary/Information"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ModuleType": {
+      "persistent": true
+    },
+    "custom.References": {
+      "persistent": true
+    },
+    "custom.References.Description": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}",
+            "measureTagPath": "{view.params.Cfg.MeasureTagPath}"
+          },
+          "tagPath": "{TagPath}/{measureTagPath}.Documentation"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.EngUnits": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}",
+            "measureTagPath": "{view.params.Cfg.MeasureTagPath}"
+          },
+          "tagPath": "{TagPath}/{measureTagPath}.EngUnit"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.FormatString": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}",
+            "measureTagPath": "{view.params.Cfg.MeasureTagPath}"
+          },
+          "tagPath": "{TagPath}/{measureTagPath}.FormatString"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.FormattedValue": {
+      "binding": {
+        "config": {
+          "expression": "numberFormat({view.custom.References.Value},{view.custom.References.FormatString}) + \" \" + {view.custom.References.EngUnits}"
+        },
+        "type": "expr"
+      }
+    },
+    "custom.References.Identify": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Id/Identify"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.InstanceName": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/InstanceName"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.ScaleEngineeringMax": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}",
+            "measureTagPath": "{view.params.Cfg.MeasureTagPath}"
+          },
+          "tagPath": "{TagPath}/{measureTagPath}.EngHigh"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.ScaleEngineeringMin": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}",
+            "measureTagPath": "{view.params.Cfg.MeasureTagPath}"
+          },
+          "tagPath": "{TagPath}/{measureTagPath}.EngLow"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.References.Value": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}",
+            "measureTagPath": "{view.params.Cfg.MeasureTagPath}"
+          },
+          "tagPath": "{TagPath}/{measureTagPath}"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Styling": {
+      "persistent": true
+    },
+    "custom.Styling.Base.Alarm": {
+      "binding": {
+        "config": {
+          "path": "view.custom.AlarmSummary"
+        },
+        "transforms": [
+          {
+            "code": "\t \n\tstyle \u003d Standard.Modules.Alarms.GetAlarmStyle(AlarmSummary\u003dvalue,ComponentPart\u003d\"Outline\")\n\treturn style[\u0027classes\u0027]\n",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Styling.Base.Identify": {
+      "binding": {
+        "config": {
+          "path": "view.custom.References.Identify"
+        },
+        "transforms": [
+          {
+            "fallback": "Standard/Body/Symbols/Base/Basic",
+            "inputType": "scalar",
+            "mappings": [
+              {
+                "input": true,
+                "output": "Standard/Body/Symbols/Base/Basic Standard/Body/Symbols/Base/Identify"
+              }
+            ],
+            "outputType": "style-list",
+            "type": "map"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "params.Cfg": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 105,
+      "width": 231
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "TagPath",
+          "type": "Application Default/Control Modules/AI"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Label"
+                },
+                "position": {
+                  "shrink": 0
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "expression": "if(isNull({view.params.Cfg.Label}),{view.custom.References.Description},{view.params.Cfg.Label})"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "alignVertical": "top",
+                  "style": {
+                    "marginLeft": 10,
+                    "marginTop": 5
+                  },
+                  "textStyle": {
+                    "classes": "Standard/Body/Symbols/Displays/Text",
+                    "fontSize": 10,
+                    "fontWeight": "bold"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Value"
+                },
+                "position": {
+                  "grow": 1
+                },
+                "propConfig": {
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.References.FormattedValue"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "margin": 10
+                  },
+                  "textStyle": {
+                    "classes": "Standard/Body/Symbols/Displays/Text",
+                    "fontSize": 18,
+                    "fontWeight": "bold",
+                    "textAlign": "right"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "FlexContainerHeading"
+            },
+            "position": {
+              "basis": "30px",
+              "shrink": 0
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "custom": {
+                  "points": {},
+                  "x": 51,
+                  "y": 72
+                },
+                "events": {
+                  "dom": {
+                    "onMouseMove": {
+                      "config": {
+                        "script": "\tself.custom.x \u003d event.clientX\n\tself.custom.y \u003d event.clientY"
+                      },
+                      "scope": "G",
+                      "type": "script"
+                    }
+                  }
+                },
+                "meta": {
+                  "name": "AreaGraph"
+                },
+                "position": {
+                  "basis": "479px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "custom.points.path": {
+                    "binding": {
+                      "config": {
+                        "struct": {
+                          "data": "{parent.custom.History.data[0].data}",
+                          "duration": "{parent.custom.History.duration}",
+                          "maxValue": "if(isNull({view.params.Cfg.MaxValue}),{view.custom.References.ScaleEngineeringMax},{view.params.Cfg.MaxValue})",
+                          "minValue": "if(isNull({view.params.Cfg.MinValue}),{view.custom.References.ScaleEngineeringMin},{view.params.Cfg.MinValue})"
+                        },
+                        "waitOnAll": true
+                      },
+                      "transforms": [
+                        {
+                          "code": "\tdata \u003d value[\u0027data\u0027]\n\tmaxValue\u003d value[\u0027maxValue\u0027]\n\tminValue\u003d value[\u0027minValue\u0027]\n\tduration \u003d value[\u0027duration\u0027]*60.0*1000.0\n\tboxX\u003d 500.0\n\tboxY\u003d 500.0\n\tvalueRange \u003d maxValue-minValue\n\txFactor \u003d boxX/duration\n\tyFactor \u003d boxY/valueRange\n\t#return [xFactor,yFactor]\n\ti\u003d0\n\tdur1 \u003d 0\n\tif data is None or len(data)\u003d\u003d0:\n\t\treturn \u0027\u0027\n\tts0 \u003d data[0][\u0027time\u0027]\n\tpath \u003d \u0027M 0 %s \u0027 %boxY\n\txPre \u003d 0\n\tyPre \u003d minValue\n\tfor point in data:\n\t\tv\u003d abs(point[\u0027Value\u0027])-minValue\n\t\tts \u003d point[\u0027time\u0027]\n\t\tdur \u003d ts-ts0\n\t\tx \u003d dur*xFactor\n\t\ty \u003d v*yFactor\n\t\tnextPoint \u003d \u0027L %s %s \u0027 %(str(x),str(boxY-yPre))\n\t\tyPre \u003d y\n\t\tpath \u003d path + nextPoint + \u0027L %s %s \u0027 %(str(x),str(boxY-y))\n\n\t\ti +\u003d1\n\t#Add Last Point Line\n\tx \u003d duration*xFactor\n\tpath \u003d path + \u0027L %s %s \u0027 %(str(x),str(boxY-y))\n\t\n\tpath \u003d path + \u0027L %s %s \u0027 % (str(boxX),str(boxY))\n\treturn path + \u0027Z\u0027",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "expr-struct"
+                    }
+                  },
+                  "props.elements[0].d": {
+                    "binding": {
+                      "config": {
+                        "path": "this.custom.points.path"
+                      },
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "alignContent": "stretch",
+                  "alignItems": "stretch",
+                  "direction": "row",
+                  "elements": [
+                    {
+                      "fill": {
+                        "paint": "#D5D5D5"
+                      },
+                      "name": "path",
+                      "stroke": {
+                        "paint": "#555555",
+                        "width": 0.4
+                      },
+                      "type": "path"
+                    }
+                  ],
+                  "justify": "flex-start",
+                  "preserveAspectRatio": "none",
+                  "style": {
+                    "overflow": "auto"
+                  },
+                  "text": null,
+                  "viewBox": "0 0 500 500",
+                  "wrap": "nowrap"
+                },
+                "type": "ia.shapes.svg"
+              }
+            ],
+            "custom": {
+              "History": {
+                "run": false
+              }
+            },
+            "meta": {
+              "name": "Trend"
+            },
+            "position": {
+              "basis": "200px",
+              "grow": 1
+            },
+            "propConfig": {
+              "custom.History.config": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "currentValue": "{view.custom.References.Value}*{this.custom.History.run}",
+                      "gatewayType": "{session.custom.SystemInfo.GatewayType}",
+                      "historyPath": "tag({view.params.TagPath}+\"/\"+{view.params.Cfg.MeasureTagPath}+\".History Path\")\r\n"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\t#return value\n\thistoryPath \u003d value[\u0027historyPath\u0027]\n\tgatewayType \u003d value[\u0027gatewayType\u0027]\n\tcurrentValue \u003d value[\u0027currentValue\u0027]\n\tpath \u003d historyPath\n\tif gatewayType \u003d\u003d \"Edge\":\n\t\tpath \u003d self.params.TagPath + \"/Sts/Value\"\n\tseries \u003d {\"seriesName\": \"Value\",\"tags\": [{\"alias\":\"Value\", \"currentValue\": currentValue,\"path\": path,\"isBool\":False}]}\n\treturn [series]\n",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "custom.History.data": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "config": "{this.custom.History.config}",
+                      "duration": "{this.custom.History.duration}",
+                      "periodEnd": "now(1000*{this.custom.History.run})"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tconfig \u003d value[\u0027config\u0027] \n\tduration \u003d value[\u0027duration\u0027] \n\tperiodEnd \u003d value[\u0027periodEnd\u0027]\n\tdata \u003d Standard.Tags.Common.GetTrendData(HistoryConfig\u003dconfig,PeriodEnd\u003dperiodEnd,HistoryDuration\u003dduration) \n\treturn data\n\t\n\t\n",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "custom.History.duration": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "session.custom.DefaultPopupHistoryDuration"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "DisplayContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.style.classes": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Cfg.ShowAlarmOutLine},{view.custom.Styling.Default.Container} +\" \"+ {view.custom.Styling.Base.Alarm},\"\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.style.margin": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Cfg.ShowAlarmOutLine},3,0)"
+              },
+              "type": "expr"
+            }
+          },
+          "props.style.outline-offset": {
+            "binding": {
+              "config": {
+                "expression": "if({view.params.Cfg.ShowAlarmOutLine},1,0)"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "borderBottomLeftRadius": 10,
+            "borderBottomRightRadius": 10,
+            "borderTopLeftRadius": 10,
+            "borderTopRightRadius": 10,
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "custom": {
+      "UpdateRateSeconds": 5
+    },
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\ttagPath \u003d self.view.params.TagPath\n\tinstanceName \u003d self.view.custom.References.InstanceName\n\tdescription \u003d self.view.custom.References.ShortDescription\n\ttitle \u003d instanceName + \" - \" + description\n\tparamsObject \u003d {\"TagPath\":tagPath}\n\tmoduleType \u003d self.view.custom.ModuleType\n\tfaceplatePath \u003d \"Standard/Device Modules/\"+moduleType+\"/Faceplates/Faceplate\"\n\tStandard.Modules.Common.OpenFaceplate(ParamsObject\u003dparamsObject,Title\u003dtitle,FaceplatePath\u003dfaceplatePath)"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.style.classes": {
+        "binding": {
+          "config": {
+            "expression": "if({view.params.Cfg.ShowAlarmOutLine},{view.custom.Styling.Base.Identify},\"\")"
+          },
+          "type": "expr"
+        }
+      }
+    },
+    "props": {
+      "direction": "column",
+      "style": {}
+    },
+    "type": "ia.container.flex"
+  }
+}

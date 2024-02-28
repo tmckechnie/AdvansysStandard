@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100XV100"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400"
   },
   "propConfig": {
     "params.TagPath": {

@@ -2,32 +2,8 @@
   "custom": {
     "Interlocks": [
       {
-        "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor/Interlock/Protective",
+        "TagPath": "[TPOpnim]Standard/Modules/Control Modules/CMTESTING/CMs/Valve/Interlock/Operation",
         "displayOrder": 0,
-        "instancePosition": {},
-        "instanceStyle": {
-          "classes": ""
-        }
-      },
-      {
-        "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor/Interlock/Permissive",
-        "displayOrder": 1,
-        "instancePosition": {},
-        "instanceStyle": {
-          "classes": ""
-        }
-      },
-      {
-        "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor/Interlock/Operation",
-        "displayOrder": 2,
-        "instancePosition": {},
-        "instanceStyle": {
-          "classes": ""
-        }
-      },
-      {
-        "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor/Interlock/Hold",
-        "displayOrder": 3,
         "instancePosition": {},
         "instanceStyle": {
           "classes": ""
@@ -36,7 +12,7 @@
     ]
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
   },
   "propConfig": {
     "custom.Interlocks": {
@@ -46,7 +22,7 @@
         },
         "transforms": [
           {
-            "code": "\ttags \u003d system.tag.browse(path\u003dvalue+\"/Interlock\",filter\u003d{\"typeId\":\"Standard/Primitives/Interlock Primitive\",\"tagType\":\"UdtInstance\"})\n\tinstances \u003d []\n\t\n\tfor tag in tags:\n\t\tfullPath \u003d tag[\u0027fullPath\u0027]\n\t\tfullPath \u003d str(fullPath)+\"\\Parameters.DisplayOrder\"\n\t\ttagValue \u003d system.tag.readBlocking(tagPaths\u003d[fullPath])[0].value\n\t\tdisplayOrder \u003d  tagValue\n\t\tif \u0027Interlocked\u0027 not in tag[\u0027name\u0027]:\n\t\t\tinstance \u003d {\n\t\t\t\t\t\t\t  \"instanceStyle\": {\n\t\t\t\t\t\t\t\t\"classes\": \"\"\n\t\t\t\t\t\t\t  },\n\t\t\t\t\t\t\t  \"instancePosition\": {},\n\t\t\t\t\t\t\t  \"TagPath\": tag[\u0027fullPath\u0027],\n\t\t\t\t\t\t\t  \"displayOrder\":displayOrder\n\t\t\t\t\t\t\t}\n\t\t\tinstances.append(instance)\n\tinstancesSorted \u003d sorted(instances,key\u003dlambda row: row[\u0027displayOrder\u0027],reverse\u003dFalse)\n\treturn instancesSorted",
+            "code": "\ttags \u003d system.tag.browse(path\u003dvalue+\"/Interlock\",filter\u003d{\"typeId\":\"Standard/Primitives/Interlock Primitive\",\"tagType\":\"UdtInstance\"})\n\tinstances \u003d []\n\n\tfor tag in tags:\n\t\tfullPath \u003d tag[\u0027fullPath\u0027]\n\t\tstatePath \u003d str(fullPath)+\"/State\"\n\t\tdisplayOrderPath \u003d str(fullPath)+\"\\Parameters.DisplayOrder\"\n\t\tstate \u003d system.tag.readBlocking(tagPaths\u003d[statePath])[0]\n\t\tif str(state.quality) !\u003d \"Bad_Disabled\":\n\t\t\ttagValue \u003d system.tag.readBlocking(tagPaths\u003d[displayOrderPath])[0].value\n\t\t\tdisplayOrder \u003d  tagValue\n\t\t\tif \u0027Interlocked\u0027 not in tag[\u0027name\u0027]:\n\t\t\t\tinstance \u003d {\n\t\t\t\t\t\t\t\t  \"instanceStyle\": {\n\t\t\t\t\t\t\t\t\t\"classes\": \"\"\n\t\t\t\t\t\t\t\t  },\n\t\t\t\t\t\t\t\t  \"instancePosition\": {},\n\t\t\t\t\t\t\t\t  \"TagPath\": tag[\u0027fullPath\u0027],\n\t\t\t\t\t\t\t\t  \"displayOrder\":displayOrder\n\t\t\t\t\t\t\t\t}\n\t\t\t\tinstances.append(instance)\n\tinstancesSorted \u003d sorted(instances,key\u003dlambda row: row[\u0027displayOrder\u0027],reverse\u003dFalse)\n\treturn instances",
             "type": "script"
           }
         ],

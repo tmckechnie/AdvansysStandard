@@ -7,15 +7,15 @@
       "LowLow": {}
     },
     "ControlLimits": {},
-    "EngUnit": "l/hr",
+    "EngUnit": "t/hr",
     "FormatString": "#,##0.##",
-    "ScaleEngineeringMax": 800,
+    "ScaleEngineeringMax": 100,
     "ScaleEngineeringMin": 0,
     "Target": 0,
-    "Value": 262.92932
+    "Value": 0
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput02"
+    "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/AI"
   },
   "propConfig": {
     "custom.Alarms": {
@@ -382,13 +382,14 @@
                           "config": {
                             "path": "view.custom.ControlLimits.HighHigh"
                           },
+                          "overlayOptOut": true,
                           "type": "property"
                         }
                       },
                       "props.plots[0].markers[0].visible": {
                         "binding": {
                           "config": {
-                            "expression": "{view.custom.ControlLimits.HighHigh}\u003e{view.custom.ControlLimits.High}"
+                            "expression": "if(qualityOf({view.custom.ControlLimits.HighHigh})!\u003d\"Bad_Disabled\",{view.custom.ControlLimits.HighHigh}\u003e{view.custom.ControlLimits.High},False)"
                           },
                           "type": "expr"
                         }
@@ -414,13 +415,14 @@
                           "config": {
                             "path": "view.custom.ControlLimits.High"
                           },
+                          "overlayOptOut": true,
                           "type": "property"
                         }
                       },
                       "props.plots[0].markers[1].visible": {
                         "binding": {
                           "config": {
-                            "expression": "{view.custom.ControlLimits.High}\u003e{view.custom.ControlLimits.Low}"
+                            "expression": "if(qualityOf({view.custom.ControlLimits.High})!\u003d\"Bad_Disabled\",{view.custom.ControlLimits.High}\u003e{view.custom.ControlLimits.Low},False)"
                           },
                           "type": "expr"
                         }
@@ -430,13 +432,14 @@
                           "config": {
                             "path": "view.custom.ControlLimits.Low"
                           },
+                          "overlayOptOut": true,
                           "type": "property"
                         }
                       },
                       "props.plots[0].markers[2].visible": {
                         "binding": {
                           "config": {
-                            "expression": "{view.custom.ControlLimits.Low}\u003c{view.custom.ControlLimits.High}"
+                            "expression": "if(qualityOf({view.custom.ControlLimits.Low})!\u003d\"Bad_Disabled\",{view.custom.ControlLimits.Low}\u003c{view.custom.ControlLimits.High},False)"
                           },
                           "type": "expr"
                         }
@@ -446,13 +449,14 @@
                           "config": {
                             "path": "view.custom.ControlLimits.LowLow"
                           },
+                          "overlayOptOut": true,
                           "type": "property"
                         }
                       },
                       "props.plots[0].markers[3].visible": {
                         "binding": {
                           "config": {
-                            "expression": "{view.custom.ControlLimits.LowLow}\u003c{view.custom.ControlLimits.Low}"
+                            "expression": "if(qualityOf({view.custom.ControlLimits.LowLow})!\u003d\"Bad_Disabled\",{view.custom.ControlLimits.LowLow}\u003c{view.custom.ControlLimits.Low},False)"
                           },
                           "type": "expr"
                         }
@@ -769,7 +773,7 @@
                                     "color": "",
                                     "size": 10
                                   },
-                                  "position": "right",
+                                  "position": "left",
                                   "style": {
                                     "classes": ""
                                   },
@@ -946,15 +950,7 @@
                 ],
                 "custom": {
                   "History": {
-                    "firstTimestamp": {
-                      "$": [
-                        "ts",
-                        192,
-                        1689243968693
-                      ],
-                      "$ts": 1689243369068
-                    },
-                    "run": true
+                    "run": false
                   }
                 },
                 "meta": {
@@ -1009,21 +1005,6 @@
                         "bidirectional": true,
                         "path": "session.custom.DefaultPopupHistoryDuration"
                       },
-                      "type": "property"
-                    }
-                  },
-                  "custom.History.firstTimestamp": {
-                    "binding": {
-                      "config": {
-                        "path": "this.custom.History.data[0].data[0].time"
-                      },
-                      "enabled": false,
-                      "transforms": [
-                        {
-                          "expression": "fromMillis({value})",
-                          "type": "expression"
-                        }
-                      ],
                       "type": "property"
                     }
                   }
@@ -1154,6 +1135,16 @@
         },
         "position": {
           "basis": "35px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "qualityOf(tag({view.params.TagPath}+\"/Sim/Active\"))!\u003d\"Bad_Disabled\""
+              },
+              "type": "expr"
+            }
+          }
         },
         "props": {
           "params": {

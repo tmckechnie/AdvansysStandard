@@ -1,0 +1,41 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 92
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Chart"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "props": {
+          "params": {
+            "ChartID": 8,
+            "ConnectionTagPath": "[TPROM]ROM/System/Flow Connection",
+            "Period": {
+              "End": "",
+              "Start": ""
+            }
+          },
+          "path": "Standard/Interface Modules/Flow/Charts/Chart"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

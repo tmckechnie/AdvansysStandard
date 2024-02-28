@@ -1,0 +1,538 @@
+{
+  "custom": {
+    "APIKey": "OO8P75697HQMLWNWH4RM5K00QLZ7UELZ",
+    "Endpoints": {
+      "CurrentPowerFlow": {
+        "EndPoint": "currentPowerFlow"
+      },
+      "SiteDataPeriod": {
+        "EndPoint": "dataPeriod"
+      },
+      "SiteDetails": {
+        "EndPoint": "details"
+      },
+      "SiteEnergy": {
+        "EndPoint": "energy"
+      },
+      "SiteEnergyDetails": {
+        "EndPoint": "energyDetails"
+      },
+      "SiteOverview": {
+        "EndPoint": "overview"
+      },
+      "SitePower": {
+        "EndPoint": "power"
+      },
+      "SitePowerDetails": {
+        "EndPoint": "powerDetails"
+      },
+      "StorageData": {
+        "EndPoint": "storageData"
+      },
+      "TimeFrameEnergy": {
+        "EndPoint": "timeFrameEnergy"
+      }
+    },
+    "Period": {
+      "End": {
+        "$": [
+          "ts",
+          192,
+          1701092159987
+        ],
+        "$ts": 1701086400000
+      },
+      "Start": {
+        "$": [
+          "ts",
+          201,
+          1701092177086
+        ],
+        "$ts": 1701082800000
+      },
+      "TimeUnit": "QUARTER_OF_AN_HOUR"
+    },
+    "SiteID": 1331806,
+    "eps": [
+      "SiteOverview",
+      "SiteEnergyDetails",
+      "SiteDetails",
+      "SiteEnergy",
+      "CurrentPowerFlow",
+      "SitePowerDetails",
+      "StorageData",
+      "TimeFrameEnergy",
+      "SitePower",
+      "SiteDataPeriod"
+    ],
+    "key": {
+      "siteCurrentPowerFlow": {
+        "GRID": {
+          "currentPower": 0,
+          "status": "Active"
+        },
+        "LOAD": {
+          "currentPower": 50.7,
+          "status": "Active"
+        },
+        "PV": {
+          "currentPower": 50.7,
+          "status": "Active"
+        },
+        "connections": [
+          {
+            "from": "PV",
+            "to": "Load"
+          }
+        ],
+        "unit": "kW",
+        "updateRefreshRate": 3
+      }
+    },
+    "url": "https://monitoringapi.solaredge.com/site"
+  },
+  "params": {},
+  "propConfig": {
+    "custom.APIKey": {
+      "persistent": true
+    },
+    "custom.Endpoints": {
+      "persistent": true
+    },
+    "custom.Endpoints.CurrentPowerFlow.Response": {
+      "binding": {
+        "config": {
+          "path": "view.custom.Endpoints.CurrentPowerFlow.Url"
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value\n\tclient \u003d system.net.httpClient()\n\tresponse \u003d client.get(value)\n\tresults \u003d response.getText()\n\tdecodedDict \u003d system.util.jsonDecode(results)\n\t\n\treturn decodedDict",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Endpoints.CurrentPowerFlow.Url": {
+      "binding": {
+        "config": {
+          "struct": {
+            "APIKey": "{view.custom.APIKey}",
+            "EndPoint": "{view.custom.Endpoints.CurrentPowerFlow.EndPoint}",
+            "Period": "{view.custom.Period}",
+            "SiteID": "{view.custom.SiteID}",
+            "url": "{view.custom.url}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value[\u0027url\u0027]\n\tsiteID \u003d value[\u0027SiteID\u0027]\n\t\n\tapiKey \u003d value [\u0027APIKey\u0027]\n\tep \u003d value [\u0027EndPoint\u0027]\n\tendpoint \u003d url + \u0027/\u0027 + str(siteID) + \u0027/\u0027+ep+\u0027?\u0026api_key\u003d\u0027+apiKey\n\t\t\n\treturn endpoint",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Endpoints.SiteDataPeriod.Response": {
+      "binding": {
+        "config": {
+          "path": "view.custom.Endpoints.SiteDataPeriod.Url"
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value\n\tclient \u003d system.net.httpClient()\n\tresponse \u003d client.get(value)\n\tresults \u003d response.getText()\n\tdecodedDict \u003d system.util.jsonDecode(results)\n\t\n\treturn decodedDict",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Endpoints.SiteDataPeriod.Url": {
+      "binding": {
+        "config": {
+          "struct": {
+            "APIKey": "{view.custom.APIKey}",
+            "EndPoint": "{view.custom.Endpoints.SiteDataPeriod.EndPoint}",
+            "SiteID": "{view.custom.SiteID}",
+            "url": "{view.custom.url}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value[\u0027url\u0027]\n\tsiteID \u003d value[\u0027SiteID\u0027]\n\tapiKey \u003d value [\u0027APIKey\u0027]\n\tep \u003d value [\u0027EndPoint\u0027]\n\tendpoint \u003d url + \u0027/\u0027 + str(siteID) + \u0027/\u0027+ep+\u0027?\u0027+\u0027\u0026api_key\u003d\u0027+apiKey\n\t\t\n\treturn endpoint",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Endpoints.SiteDetails.Response": {
+      "binding": {
+        "config": {
+          "path": "view.custom.Endpoints.SiteDetails.Url"
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value\n\tclient \u003d system.net.httpClient()\n\tresponse \u003d client.get(value)\n\tresults \u003d response.getText()\n\tdecodedDict \u003d system.util.jsonDecode(results)\n\t\n\treturn decodedDict",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Endpoints.SiteDetails.Url": {
+      "binding": {
+        "config": {
+          "struct": {
+            "APIKey": "{view.custom.APIKey}",
+            "EndPoint": "{view.custom.Endpoints.SiteDetails.EndPoint}",
+            "SiteID": "{view.custom.SiteID}",
+            "url": "{view.custom.url}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value[\u0027url\u0027]\n\tsiteID \u003d value[\u0027SiteID\u0027]\n\tapiKey \u003d value [\u0027APIKey\u0027]\n\tep \u003d value [\u0027EndPoint\u0027]\n\tendpoint \u003d url + \u0027/\u0027 + str(siteID) + \u0027/\u0027+ep+\u0027?\u0027+\u0027\u0026api_key\u003d\u0027+apiKey\n\t\t\n\treturn endpoint",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Endpoints.SiteEnergy.Response": {
+      "binding": {
+        "config": {
+          "path": "view.custom.Endpoints.SiteEnergy.Url"
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value\n\tclient \u003d system.net.httpClient()\n\tresponse \u003d client.get(value)\n\tresults \u003d response.getText()\n\tdecodedDict \u003d system.util.jsonDecode(results)\n\t\n\treturn decodedDict",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Endpoints.SiteEnergy.Url": {
+      "binding": {
+        "config": {
+          "struct": {
+            "APIKey": "{view.custom.APIKey}",
+            "EndPoint": "{view.custom.Endpoints.SiteEnergy.EndPoint}",
+            "Period": "{view.custom.Period}",
+            "SiteID": "{view.custom.SiteID}",
+            "url": "{view.custom.url}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value[\u0027url\u0027]\n\tsiteID \u003d value[\u0027SiteID\u0027]\n\t\n\t#Period Part\n\tperiod \u003d value[\u0027Period\u0027]\n\t\n\tstartTime \u003d system.date.format(period[\u0027Start\u0027],\u0027yyyy-MM-dd\u0027)\n\tendTime \u003d system.date.format(period[\u0027End\u0027],\u0027yyyy-MM-dd\u0027)\n\ttimeUnit \u003d period[\u0027TimeUnit\u0027]\n\tperiodUrl \u003d \u0027startDate\u003d\u0027+str(startTime) + \u0027\u0026endDate\u003d\u0027+str(endTime) + \u0027\u0026timeUnit\u003d\u0027+str(timeUnit)\n\t\n\t\n\t\n\tapiKey \u003d value [\u0027APIKey\u0027]\n\tep \u003d value [\u0027EndPoint\u0027]\n\tendpoint \u003d url + \u0027/\u0027 + str(siteID) + \u0027/\u0027+ep+\u0027?\u0027+ periodUrl+\u0027\u0026api_key\u003d\u0027+apiKey\n\t\t\n\treturn endpoint",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Endpoints.SiteEnergyDetails.Response": {
+      "binding": {
+        "config": {
+          "path": "view.custom.Endpoints.SiteEnergyDetails.Url"
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value\n\tclient \u003d system.net.httpClient()\n\tresponse \u003d client.get(value)\n\tresults \u003d response.getText()\n\tdecodedDict \u003d system.util.jsonDecode(results)\n\t\n\treturn decodedDict",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Endpoints.SiteEnergyDetails.Url": {
+      "binding": {
+        "config": {
+          "struct": {
+            "APIKey": "{view.custom.APIKey}",
+            "EndPoint": "{view.custom.Endpoints.SiteEnergyDetails.EndPoint}",
+            "Period": "{view.custom.Period}",
+            "SiteID": "{view.custom.SiteID}",
+            "url": "{view.custom.url}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value[\u0027url\u0027]\n\tsiteID \u003d value[\u0027SiteID\u0027]\n\t\n\t#Period Part\n\tperiod \u003d value[\u0027Period\u0027]\n\t\n\tstartTime \u003d system.date.format(period[\u0027Start\u0027],\u0027yyyy-MM-dd%20HH:mm:00\u0027)\n\tendTime \u003d system.date.format(period[\u0027End\u0027],\u0027yyyy-MM-dd%20HH:mm:00\u0027)\n\ttimeUnit \u003d period[\u0027TimeUnit\u0027]\n\tperiodUrl \u003d \u0027startTime\u003d\u0027+str(startTime) + \u0027\u0026endTime\u003d\u0027+str(endTime) + \u0027\u0026timeUnit\u003d\u0027+str(timeUnit)\n\t\n\t\n\t\n\tapiKey \u003d value [\u0027APIKey\u0027]\n\tep \u003d value [\u0027EndPoint\u0027]\n\tendpoint \u003d url + \u0027/\u0027 + str(siteID) + \u0027/\u0027+ep+\u0027?\u0027+ periodUrl+\u0027\u0026api_key\u003d\u0027+apiKey\n\t\t\n\treturn endpoint",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Endpoints.SiteOverview.Response": {
+      "binding": {
+        "config": {
+          "path": "view.custom.Endpoints.SiteOverview.Url"
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value\n\tclient \u003d system.net.httpClient()\n\tresponse \u003d client.get(value)\n\tresults \u003d response.getText()\n\tdecodedDict \u003d system.util.jsonDecode(results)\n\t\n\treturn decodedDict",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Endpoints.SiteOverview.Url": {
+      "binding": {
+        "config": {
+          "struct": {
+            "APIKey": "{view.custom.APIKey}",
+            "EndPoint": "{view.custom.Endpoints.SiteOverview.EndPoint}",
+            "SiteID": "{view.custom.SiteID}",
+            "url": "{view.custom.url}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value[\u0027url\u0027]\n\tsiteID \u003d value[\u0027SiteID\u0027]\n\tapiKey \u003d value [\u0027APIKey\u0027]\n\tep \u003d value [\u0027EndPoint\u0027]\n\tendpoint \u003d url + \u0027/\u0027 + str(siteID) + \u0027/\u0027+ep+\u0027?\u0027+\u0027\u0026api_key\u003d\u0027+apiKey\n\t\t\n\treturn endpoint",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Endpoints.SitePower.Response": {
+      "binding": {
+        "config": {
+          "path": "view.custom.Endpoints.SitePower.Url"
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value\n\tclient \u003d system.net.httpClient()\n\tresponse \u003d client.get(value)\n\tresults \u003d response.getText()\n\tdecodedDict \u003d system.util.jsonDecode(results)\n\t\n\treturn decodedDict",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Endpoints.SitePower.Url": {
+      "binding": {
+        "config": {
+          "struct": {
+            "APIKey": "{view.custom.APIKey}",
+            "EndPoint": "{view.custom.Endpoints.SitePower.EndPoint}",
+            "Period": "{view.custom.Period}",
+            "SiteID": "{view.custom.SiteID}",
+            "url": "{view.custom.url}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value[\u0027url\u0027]\n\tsiteID \u003d value[\u0027SiteID\u0027]\n\tperiod \u003d value[\u0027Period\u0027][\u0027Filter\u0027]\n\tapiKey \u003d value [\u0027APIKey\u0027]\n\tep \u003d value [\u0027EndPoint\u0027]\n\tendpoint \u003d url + \u0027/\u0027 + str(siteID) + \u0027/\u0027+ep+\u0027?\u0027+ period+\u0027\u0026api_key\u003d\u0027+apiKey\n\t\t\n\treturn endpoint",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Endpoints.SitePowerDetails.Response": {
+      "binding": {
+        "config": {
+          "path": "view.custom.Endpoints.SitePowerDetails.Url"
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value\n\tclient \u003d system.net.httpClient()\n\tresponse \u003d client.get(value)\n\tresults \u003d response.getText()\n\tdecodedDict \u003d system.util.jsonDecode(results)\n\t\n\treturn decodedDict",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Endpoints.SitePowerDetails.Url": {
+      "binding": {
+        "config": {
+          "struct": {
+            "APIKey": "{view.custom.APIKey}",
+            "EndPoint": "{view.custom.Endpoints.SitePowerDetails.EndPoint}",
+            "Period": "{view.custom.Period}",
+            "SiteID": "{view.custom.SiteID}",
+            "url": "{view.custom.url}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value[\u0027url\u0027]\n\tsiteID \u003d value[\u0027SiteID\u0027]\n\tperiod \u003d value[\u0027Period\u0027][\u0027Filter\u0027]\n\tapiKey \u003d value [\u0027APIKey\u0027]\n\tep \u003d value [\u0027EndPoint\u0027]\n\tendpoint \u003d url + \u0027/\u0027 + str(siteID) + \u0027/\u0027+ep+\u0027?\u0027+ period+\u0027\u0026api_key\u003d\u0027+apiKey\n\t\t\n\treturn endpoint",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Endpoints.StorageData.Response": {
+      "binding": {
+        "config": {
+          "path": "view.custom.Endpoints.StorageData.Url"
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value\n\tclient \u003d system.net.httpClient()\n\tresponse \u003d client.get(value)\n\tresults \u003d response.getText()\n\tdecodedDict \u003d system.util.jsonDecode(results)\n\t\n\treturn decodedDict",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Endpoints.StorageData.Url": {
+      "binding": {
+        "config": {
+          "struct": {
+            "APIKey": "{view.custom.APIKey}",
+            "EndPoint": "{view.custom.Endpoints.StorageData.EndPoint}",
+            "Period": "{view.custom.Period}",
+            "SiteID": "{view.custom.SiteID}",
+            "url": "{view.custom.url}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value[\u0027url\u0027]\n\tsiteID \u003d value[\u0027SiteID\u0027]\n\t\n\t#Period Part\n\tperiod \u003d value[\u0027Period\u0027]\n\t\n\tstartTime \u003d system.date.format(period[\u0027Start\u0027],\u0027yyyy-MM-dd%20HH:mm:00\u0027)\n\tendTime \u003d system.date.format(period[\u0027End\u0027],\u0027yyyy-MM-dd%20HH:mm:00\u0027)\n\ttimeUnit \u003d period[\u0027TimeUnit\u0027]\n\tperiodUrl \u003d \u0027startTime\u003d\u0027+str(startTime) + \u0027\u0026endTime\u003d\u0027+str(endTime) + \u0027\u0026timeUnit\u003d\u0027+str(timeUnit)\n\t\n\t\n\t\n\tapiKey \u003d value [\u0027APIKey\u0027]\n\tep \u003d value [\u0027EndPoint\u0027]\n\tendpoint \u003d url + \u0027/\u0027 + str(siteID) + \u0027/\u0027+ep+\u0027?\u0027+ periodUrl+\u0027\u0026api_key\u003d\u0027+apiKey\n\t\t\n\treturn endpoint",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Endpoints.TimeFrameEnergy.Response": {
+      "binding": {
+        "config": {
+          "path": "view.custom.Endpoints.TimeFrameEnergy.Url"
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value\n\tclient \u003d system.net.httpClient()\n\tresponse \u003d client.get(value)\n\tresults \u003d response.getText()\n\tdecodedDict \u003d system.util.jsonDecode(results)\n\t\n\treturn decodedDict",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.Endpoints.TimeFrameEnergy.Url": {
+      "binding": {
+        "config": {
+          "struct": {
+            "APIKey": "{view.custom.APIKey}",
+            "EndPoint": "{view.custom.Endpoints.TimeFrameEnergy.EndPoint}",
+            "Period": "{view.custom.Period}",
+            "SiteID": "{view.custom.SiteID}",
+            "url": "{view.custom.url}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\turl \u003d value[\u0027url\u0027]\n\tsiteID \u003d value[\u0027SiteID\u0027]\n\t\n\t#Period Part\n\tperiod \u003d value[\u0027Period\u0027]\n\tstartTime \u003d system.date.format(period[\u0027Start\u0027],\u0027yyyy-MM-dd\u0027)\n\tendTime \u003d system.date.format(period[\u0027End\u0027],\u0027yyyy-MM-dd\u0027)\n\tperiodUrl \u003d \u0027startDate\u003d\u0027+str(startTime) + \u0027\u0026endDate\u003d\u0027+str(endTime)\n\t\n\t\n\t\n\tapiKey \u003d value [\u0027APIKey\u0027]\n\tep \u003d value [\u0027EndPoint\u0027]\n\tendpoint \u003d url + \u0027/\u0027 + str(siteID) + \u0027/\u0027+ep+\u0027?\u0027+ periodUrl+\u0027\u0026api_key\u003d\u0027+apiKey\n\t\t\n\treturn endpoint",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Period": {
+      "persistent": true
+    },
+    "custom.Period.End": {
+      "binding": {
+        "config": {
+          "expression": "addDays(now(300000),-1)"
+        },
+        "enabled": false,
+        "type": "expr"
+      }
+    },
+    "custom.Period.Filter": {
+      "binding": {
+        "config": {
+          "struct": {
+            "PeriodEnd": "{view.custom.Period.End}",
+            "PeriodStart": "{view.custom.Period.Start}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tstartTime \u003d system.date.format(value[\u0027PeriodStart\u0027],\u0027yyyy-MM-dd%20HH:mm:00\u0027)\n\tendTime \u003d system.date.format(value[\u0027PeriodEnd\u0027],\u0027yyyy-MM-dd%20HH:mm:00\u0027)\n\tfilterValue \u003d \u0027startTime\u003d\u0027+str(startTime) + \u0027\u0026endTime\u003d\u0027+str(endTime)\n\treturn filterValue",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.Period.Start": {
+      "binding": {
+        "config": {
+          "path": "view.custom.Period.End"
+        },
+        "enabled": false,
+        "transforms": [
+          {
+            "expression": "addHours({value},-1)",
+            "type": "expression"
+          }
+        ],
+        "type": "property"
+      }
+    },
+    "custom.SiteID": {
+      "persistent": true
+    },
+    "custom.eps": {
+      "binding": {
+        "config": {
+          "path": "view.custom.Endpoints"
+        },
+        "transforms": [
+          {
+            "code": "\teps \u003d []\n\tfor ep in value:\n\t\t\n\t\ttext \u003d \"\"\"#\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003dGet\"\"\"+ep+\"\"\"\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n\t\tdef Get\"\"\"+ep+\"\"\"(SiteRequestDetails,Period):\n\t\t\tendpoint \u003d\u0027\"\"\"+ep+\"\"\"\u0027\n\t\t\t\t\n\t\t\t#Site Details\n\t\t\turl \u003d SiteRequestDetails[\u0027BaseUrl\u0027]\n\t\t\tsiteID \u003d SiteRequestDetails[\u0027SiteID\u0027]\n\t\t\tapiKey \u003d SiteRequestDetails [\u0027APIKey\u0027]\n\t\t\t\t\n\t\t\t#Period Part\n\t\t\tperiod \u003d Period\n\t\t\tperiodUrl \u003d period[\u0027UrlPart\u0027]\n\t\t\turl \u003d url + \u0027/\u0027 + str(siteID) + \u0027/\u0027+endpoint+\u0027?\u0027+ periodUrl+\u0027\u0026api_key\u003d\u0027+apiKey\n\t\t\treturn get(url)\t\"\"\"\n\t\teps.append(ep)\n\treturn eps",
+            "type": "script"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.key": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "publishInitial": false,
+          "tagPath": "[TPFMS]FMS/Facility/Energy/Solar/SE1331806/Power/CurrentPowerFlow"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.url": {
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

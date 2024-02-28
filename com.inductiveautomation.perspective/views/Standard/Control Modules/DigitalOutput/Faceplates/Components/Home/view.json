@@ -1,11 +1,11 @@
 {
   "custom": {
     "FormatString": "#,##0.##",
-    "State": true,
-    "StsValue": "On"
+    "State": false,
+    "StsValue": "Off"
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalOutput"
+    "TagPath": "[TPOpnim]Control Modules/Rh_UV_6025A"
   },
   "propConfig": {
     "custom.FormatString": {
@@ -116,7 +116,7 @@
                   "marginLeft": 2,
                   "textAlign": "left"
                 },
-                "Value": "On",
+                "Value": "Off",
                 "ValueStyle": {
                   "classes": "Standard/Popups/Faceplates/ValueDisplay",
                   "paddingRight": 0,
@@ -288,14 +288,6 @@
         ],
         "custom": {
           "History": {
-            "firstTimestamp": {
-              "$": [
-                "ts",
-                192,
-                1689243968693
-              ],
-              "$ts": 1689243369068
-            },
             "run": true
           }
         },
@@ -351,21 +343,6 @@
                 "bidirectional": true,
                 "path": "session.custom.DefaultPopupHistoryDuration"
               },
-              "type": "property"
-            }
-          },
-          "custom.History.firstTimestamp": {
-            "binding": {
-              "config": {
-                "path": "this.custom.History.data[0].data[0].time"
-              },
-              "enabled": false,
-              "transforms": [
-                {
-                  "expression": "fromMillis({value})",
-                  "type": "expression"
-                }
-              ],
               "type": "property"
             }
           }
@@ -459,7 +436,7 @@
             "props": {
               "params": {
                 "Label": "Command",
-                "OperMode": 2,
+                "OperMode": 1,
                 "Tag1": {
                   "Label": "On",
                   "Name": "Cmd/ManualOn",
@@ -511,6 +488,16 @@
         "position": {
           "basis": "35px",
           "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "qualityOf(tag({view.params.TagPath}+\"/Sim/Active\"))!\u003d\"Bad_Disabled\""
+              },
+              "type": "expr"
+            }
+          }
         },
         "props": {
           "params": {

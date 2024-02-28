@@ -26,12 +26,32 @@
         "value": "Calendar445"
       },
       {
+        "label": "CCBAFlowProductionTemplate",
+        "value": "CCBAFlowProductionTemplate"
+      },
+      {
+        "label": "CCBAStandard",
+        "value": "CCBAStandard"
+      },
+      {
         "label": "conversion-report.txt",
         "value": "conversion-report.txt"
       },
       {
+        "label": "FacilitiesManagementSystem",
+        "value": "FacilitiesManagementSystem"
+      },
+      {
+        "label": "FlowCCBAQA",
+        "value": "FlowCCBAQA"
+      },
+      {
         "label": "FlowInterfaces",
         "value": "FlowInterfaces"
+      },
+      {
+        "label": "FMS",
+        "value": "FMS"
       },
       {
         "label": "GatewayScripting",
@@ -42,12 +62,20 @@
         "value": "Hall-Longmore"
       },
       {
+        "label": "ImpalaStandard",
+        "value": "ImpalaStandard"
+      },
+      {
         "label": "JellyFactory",
         "value": "JellyFactory"
       },
       {
         "label": "JellyFactoryStandard",
         "value": "JellyFactoryStandard"
+      },
+      {
+        "label": "MESGateway",
+        "value": "MESGateway"
       },
       {
         "label": "Multotec_PUCasting",
@@ -84,6 +112,10 @@
       {
         "label": "TheOffice",
         "value": "TheOffice"
+      },
+      {
+        "label": "TrackAndTrace",
+        "value": "TrackAndTrace"
       },
       {
         "label": "Training",

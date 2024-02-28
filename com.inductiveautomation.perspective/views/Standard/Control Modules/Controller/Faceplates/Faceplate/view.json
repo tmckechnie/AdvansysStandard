@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100WC001"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_FIC_7100R"
   },
   "propConfig": {
     "params.TagPath": {

@@ -1,0 +1,166 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 200,
+      "width": 180
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/HeadingText"
+          },
+          "text": "Digital Input"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 25,
+              "width": 100,
+              "x": 40,
+              "y": 2
+            },
+            "props": {
+              "params": {
+                "InstanceTagPath": "/Metadata/InstanceName",
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput01"
+              },
+              "path": "Standard/Components/Symbols/Label"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "SymbolHandValve"
+            },
+            "position": {
+              "height": 35,
+              "width": 60,
+              "x": 11.5,
+              "y": 41.5
+            },
+            "props": {
+              "params": {
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput01"
+              },
+              "path": "Standard/Control Modules/DigitalInput/Symbols/Hand Valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "SymbolMultiPort"
+            },
+            "position": {
+              "height": 60,
+              "width": 50,
+              "x": 76.5,
+              "y": 29
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "active": {
+                    "bottom": false,
+                    "left": {
+                      "bottom": false,
+                      "middle": true,
+                      "top": false
+                    },
+                    "middle": {
+                      "bottom": false,
+                      "top": false
+                    },
+                    "right": {
+                      "bottom": false,
+                      "middle": true,
+                      "top": false
+                    },
+                    "top": false
+                  },
+                  "passive": {
+                    "bottom": true,
+                    "left": {
+                      "bottom": false,
+                      "middle": false,
+                      "top": false
+                    },
+                    "middle": {
+                      "bottom": true,
+                      "top": true
+                    },
+                    "right": {
+                      "bottom": false,
+                      "middle": false,
+                      "top": false
+                    },
+                    "top": true
+                  }
+                },
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput01"
+              },
+              "path": "Standard/Control Modules/DigitalInput/Symbols/Multi Port"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "SymbolSignal"
+            },
+            "position": {
+              "height": 35,
+              "width": 35,
+              "x": 131.5,
+              "y": 41.5
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "AbbreviationOverwrite": "",
+                  "InstanceNameOverwrite": "",
+                  "LabelPosition": "Left",
+                  "ShowLabel": false
+                },
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput01"
+              },
+              "path": "Standard/Control Modules/DigitalInput/Symbols/Signal"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

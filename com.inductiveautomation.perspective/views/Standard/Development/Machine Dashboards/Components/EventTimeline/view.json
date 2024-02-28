@@ -1,0 +1,92 @@
+{
+  "custom": {
+    "States": [
+      {
+        "Colour": "#008000",
+        "Duration": 100,
+        "Label": "Running"
+      },
+      {
+        "Colour": "#FF4747",
+        "Duration": 57,
+        "Label": "Stopped"
+      },
+      {
+        "Colour": "#008000",
+        "Duration": 30,
+        "Label": "Running"
+      },
+      {
+        "Colour": "#FF4747",
+        "Duration": 80,
+        "Label": "Stopped"
+      }
+    ],
+    "TotalDuration": 480
+  },
+  "params": {},
+  "propConfig": {
+    "custom.States": {
+      "persistent": true
+    },
+    "custom.TotalDuration": {
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 31
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "FlexRepeater"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.instances": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "positionBasis": "{view.props.defaultSize.width}",
+                  "states": "{view.custom.States}",
+                  "totalDuration": "{view.custom.TotalDuration}"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\tstates \u003d value[\u0027states\u0027]\n\tpositionBasis \u003d long(value[\u0027positionBasis\u0027])\n\ttotalDuration \u003d value[\u0027totalDuration\u0027]\n\tbasisFactor \u003d float(positionBasis)/float(totalDuration)\n\t#return basisFactor\n\tinstances \u003d []\n\tfor state in states:\n\t\tduration \u003d state[\u0027Duration\u0027]\n\t\tstatePositionBasis \u003d duration*basisFactor\n\t\tlabel \u003d state[\u0027Label\u0027]\n\t\tif statePositionBasis \u003c 50:\n\t\t\tlabel \u003d \u0027\u0027\n\t\tcontext \u003d {\"Colour\": state[\u0027Colour\u0027],\"Label\": label}\n\t\tinstancePosition \u003d {\"basis\": str(statePositionBasis)+\"px\",\"grow\": 0,\"shrink\": 0}\n\t\tinstance \u003d {\"Context\":context,\"instanceStyle\": {\"classes\": \"\"},\"instancePosition\": instancePosition}\n\t\tinstances.append(instance)\n\treturn instances",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          }
+        },
+        "props": {
+          "elementPosition": {
+            "grow": 0,
+            "shrink": 0
+          },
+          "path": "Standard/Development/Machine Dashboards/Components/Context",
+          "useDefaultViewHeight": false,
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

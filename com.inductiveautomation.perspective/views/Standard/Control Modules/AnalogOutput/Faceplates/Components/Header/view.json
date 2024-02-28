@@ -1,11 +1,63 @@
 {
   "custom": {
-    "AlarmSummary": null,
+    "AlarmSummary": {
+      "HighestActivePriority": 0,
+      "HighestActivePriorityName": null,
+      "HighestUnackedPriority": 0,
+      "HighestUnackedPriorityName": null,
+      "Overall": {
+        "ActiveAckCount": 0,
+        "ActiveUnackCount": 0,
+        "ClearUnackCount": 0,
+        "Detail": [],
+        "ShelvedCount": 0,
+        "Total": 0
+      },
+      "PriorityDetail": {
+        "Critical": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "High": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Low": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Medium": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        }
+      }
+    },
+    "Interlocked": false,
     "alarmLabel": "Unacked: None: Active: None",
-    "alarmStyle": null
+    "alarmStyle": {
+      "classes": ""
+    },
+    "interlockLabel": "Healthy",
+    "interlockStyle": "Standard/Popups/Faceplates/Interlocked"
   },
   "params": {
-    "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/100NS102"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_FY_7100R"
   },
   "propConfig": {
     "custom.AlarmSummary": {
@@ -17,6 +69,20 @@
             "TagPath": "{view.params.TagPath}"
           },
           "tagPath": "{TagPath}/Alarms/Summary/Information"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Interlocked": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Interlock/Interlocked"
         },
         "type": "tag"
       },
@@ -43,6 +109,24 @@
           }
         ],
         "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.interlockLabel": {
+      "binding": {
+        "config": {
+          "expression": "if({view.custom.Interlocked},\"Interlocked\",\"Healthy\")"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.interlockStyle": {
+      "binding": {
+        "config": {
+          "expression": "if({view.custom.Interlocked},\"Standard/Popups/Faceplates/Interlocked\",\"Standard/Popups/Faceplates/Interlocked\")"
+        },
+        "type": "expr"
       },
       "persistent": true
     },
@@ -106,7 +190,7 @@
           "props.text": {
             "binding": {
               "config": {
-                "expression": "\"Alarms: \" + {view.custom.alarmLabel}"
+                "expression": "\"[Alarms: \" + {view.custom.alarmLabel} + \"] [Interlock: \" + {view.custom.interlockLabel} + \"]\""
               },
               "type": "expr"
             }

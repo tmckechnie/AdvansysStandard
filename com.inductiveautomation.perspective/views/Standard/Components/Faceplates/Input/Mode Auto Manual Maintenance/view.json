@@ -1,14 +1,15 @@
 {
   "custom": {
-    "CommandValue": null,
-    "StatusValue": null
+    "CommandValue": 1,
+    "DisableManualMode": false,
+    "StatusValue": 1
   },
   "params": {
     "CommandTagname": "Cmd/Mode",
     "HasMaintenanceMode": true,
     "Label": "Mode",
     "StatusTagname": "Cmd/Mode",
-    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/100G001"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400"
   },
   "propConfig": {
     "custom.CommandValue": {
@@ -23,6 +24,26 @@
           },
           "tagPath": "{TagPath}/{CommandTagname}"
         },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.DisableManualMode": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/DisableManualMode"
+        },
+        "transforms": [
+          {
+            "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027 or \u0027Bad_NotFound\u0027 in quality.toString():\n\t\treturn False\n\treturn value",
+            "type": "script"
+          }
+        ],
         "type": "tag"
       },
       "persistent": true
@@ -178,7 +199,7 @@
           "props.enabled": {
             "binding": {
               "config": {
-                "expression": "if(isGood({view.custom.StatusValue}),//If Status Value is good quality then check for enabled. Otherwise disable\r\nif({view.params.HasMaintenanceMode}\u0026\u0026{view.custom.StatusValue}\u003d{../Maintenance.custom.OperMode},False,true),false)"
+                "expression": "if(isGood({view.custom.StatusValue}),//If Status Value is good quality then check for enabled. Otherwise disable\r\nif(({view.params.HasMaintenanceMode}\u0026\u0026{view.custom.StatusValue}\u003d{../Maintenance.custom.OperMode})||{view.custom.DisableManualMode},False,true),false)"
               },
               "type": "expr"
             }
@@ -201,7 +222,7 @@
         },
         "props": {
           "style": {
-            "classes": "Standard/Popups/Faceplates/Button/UnSelected",
+            "classes": "Standard/Popups/Faceplates/Button/Selected",
             "margin": 4
           },
           "text": "Manual"
@@ -304,7 +325,7 @@
             },
             "props": {
               "params": {
-                "Bad": true
+                "Bad": false
               },
               "path": "Standard/Components/Symbols/Quality"
             },

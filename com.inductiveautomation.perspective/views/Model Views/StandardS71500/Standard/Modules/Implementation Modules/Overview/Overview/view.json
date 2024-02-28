@@ -1,0 +1,75 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 835,
+      "width": 1189
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/HeadingText"
+          },
+          "text": "Implementation Modules"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Group"
+            },
+            "position": {
+              "height": 200,
+              "width": 180
+            },
+            "props": {
+              "path": "Model Views/StandardS71500/Standard/Modules/Implementation Modules/Overview/Components/Group"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Route"
+            },
+            "position": {
+              "height": 200,
+              "width": 180,
+              "x": 234
+            },
+            "props": {
+              "path": "Model Views/StandardS71500/Standard/Modules/Implementation Modules/Overview/Components/Route"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,6 +1,53 @@
 {
   "custom": {
-    "AlarmSummary": null,
+    "AlarmSummary": {
+      "HighestActivePriority": 0,
+      "HighestActivePriorityName": null,
+      "HighestUnackedPriority": 0,
+      "HighestUnackedPriorityName": null,
+      "Overall": {
+        "ActiveAckCount": 0,
+        "ActiveUnackCount": 0,
+        "ClearUnackCount": 0,
+        "Detail": [],
+        "ShelvedCount": 0,
+        "Total": 0
+      },
+      "PriorityDetail": {
+        "Critical": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "High": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Low": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Medium": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        }
+      }
+    },
     "Alarms": {
       "High": {},
       "HighHigh": {},
@@ -22,7 +69,7 @@
       "ShowAlarmOutLine": true,
       "ValueWedgeExtent": 2
     },
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/100AI100"
+    "TagPath": "[TPOpnim]Control Modules/Rh_FIT_7080"
   },
   "propConfig": {
     "custom.AlarmSummary": {
@@ -574,6 +621,7 @@
                       "config": {
                         "expression": "{view.custom.ControlLimits.HighHigh}"
                       },
+                      "overlayOptOut": true,
                       "type": "expr"
                     }
                   },
@@ -582,6 +630,7 @@
                       "config": {
                         "expression": "{view.custom.ControlLimits.High}"
                       },
+                      "overlayOptOut": true,
                       "type": "expr"
                     }
                   },
@@ -590,6 +639,7 @@
                       "config": {
                         "expression": " {view.custom.ControlLimits.Low}"
                       },
+                      "overlayOptOut": true,
                       "type": "expr"
                     }
                   },
@@ -598,6 +648,7 @@
                       "config": {
                         "expression": "{view.custom.ControlLimits.LowLow}"
                       },
+                      "overlayOptOut": true,
                       "type": "expr"
                     }
                   },

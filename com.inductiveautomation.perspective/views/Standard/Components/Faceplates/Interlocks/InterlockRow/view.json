@@ -1,8 +1,8 @@
 {
   "custom": {
-    "Interlocked": false,
+    "Interlocked": null,
     "Label": "Protective",
-    "Reason": "Protective",
+    "Reason": null,
     "reasonDetail": {
       "instanceExists": false
     }

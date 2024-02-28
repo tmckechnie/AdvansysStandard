@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100T100"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_FQ_7230B_2"
   },
   "propConfig": {
     "params.TagPath": {
@@ -36,6 +36,25 @@
               "transforms": [
                 {
                   "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.Enable": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}"
+                },
+                "tagPath": "{TagPath}/Cfg/DisableTargetInteraction"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027 or \u0027Bad_NotFound\u0027 in quality.toString():\n\t\treturn True\n\treturn not value",
                   "type": "script"
                 }
               ],
@@ -88,7 +107,6 @@
         },
         "props": {
           "params": {
-            "Enable": true,
             "Label": "Target",
             "ShowLabel": true
           },

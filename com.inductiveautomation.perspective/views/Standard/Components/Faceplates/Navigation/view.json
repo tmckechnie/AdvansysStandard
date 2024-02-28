@@ -2,8 +2,8 @@
   "custom": {},
   "params": {
     "CurrentView": "Home",
-    "InterlockEnabled": true,
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/MotorReverse"
+    "InterlockEnabled": false,
+    "TagPath": ""
   },
   "propConfig": {
     "params.CurrentView": {
@@ -307,7 +307,7 @@
             }
           },
           "style": {
-            "classes": "Standard/Popups/Faceplates/Button/UnSelected",
+            "classes": "Standard/Popups/Faceplates/Button/Disabled",
             "margin": 2
           },
           "text": ""
@@ -445,12 +445,13 @@
           }
         },
         "props": {
+          "enabled": false,
           "image": {
             "icon": {},
             "style": {}
           },
           "style": {
-            "classes": "Standard/Popups/Faceplates/Button/UnSelected",
+            "classes": "Standard/Popups/Faceplates/Button/Disabled",
             "margin": 2
           },
           "text": ""

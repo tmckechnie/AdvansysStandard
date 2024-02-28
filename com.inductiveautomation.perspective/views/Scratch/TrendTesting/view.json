@@ -1,0 +1,631 @@
+{
+  "custom": {
+    "History": {
+      "run": true
+    },
+    "lastKnownTimeStamp": {
+      "$": [
+        "ts",
+        192,
+        1693314126092
+      ],
+      "$ts": 1693314126092
+    }
+  },
+  "params": {
+    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
+  },
+  "propConfig": {
+    "custom.History": {
+      "persistent": true
+    },
+    "custom.History.config": {
+      "binding": {
+        "config": {
+          "struct": {
+            "closedCurrentValue": "tag({view.params.TagPath} + \"/In/Closed\")",
+            "closedHistoryPath": "tag({view.params.TagPath} + \"/In/Closed.History Path\")",
+            "gatewayType": "{session.custom.SystemInfo.GatewayType}",
+            "openedCurrentValue": "tag({view.params.TagPath} + \"/In/Opened\")",
+            "openedHistoryPath": "tag({view.params.TagPath} + \"/In/Opened.History Path\")"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tgatewayType \u003d value[\u0027gatewayType\u0027]\n\tclosedHistoryPath \u003d value[\"closedHistoryPath\"]\n\topenedHistoryPath \u003d value[\"openedHistoryPath\"]\n\tclosedCurrentValue \u003d value[\u0027closedCurrentValue\u0027]\n\topenedCurrentValue \u003d value[\u0027openedCurrentValue\u0027]\n\tif gatewayType \u003d\u003d \"Edge\":\n\t\tclosedHistoryPath \u003d self.params.TagPath + \"/In/Closed\"\n\t\topenedHistoryPath \u003d self.params.TagPath + \"/In/Opened\"\n\t\t\n\tclosed \u003d {\"seriesName\": \"Closed\",\"tags\": [{\"alias\":\"Value\", \"currentValue\": closedCurrentValue,\"path\": closedHistoryPath,\"isBool\":True}]}\n\topened \u003d {\"seriesName\": \"Opened\",\"tags\": [{\"alias\":\"Value\", \"currentValue\": openedCurrentValue,\"path\": openedHistoryPath,\"isBool\":True}]}\n\n\treturn [opened,closed]\n",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.History.config[0].tags[0].currentValue": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/In/Opened"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.History.config[1].tags[0].currentValue": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/In/Closed"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.History.data": {
+      "binding": {
+        "config": {
+          "struct": {
+            "config": "{view.custom.History.config}",
+            "duration": "{view.custom.History.duration}",
+            "periodEnd": "now(1000*{view.custom.History.run})"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tconfig \u003d value[\u0027config\u0027]\n\tduration \u003d value[\u0027duration\u0027]\n\tperiodEnd \u003d value[\u0027periodEnd\u0027]  \n\tdata \u003d Standard.Tags.Common.GetTrendData(HistoryConfig\u003dconfig,PeriodEnd\u003dperiodEnd,HistoryDuration\u003dduration,TimestampFormat\u003d\"yyyy-MM-dd HH:mm:ss.SSS\")\n\treturn data\n\t\n\t\n",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.History.duration": {
+      "binding": {
+        "config": {
+          "path": "session.custom.DefaultPopupHistoryDuration"
+        },
+        "type": "property"
+      }
+    },
+    "custom.lastKnownTimeStamp": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/In/Opened.Timestamp"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "TimeSeriesChart"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.plots[0].axes[0].label.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.History.config[0].seriesName"
+              },
+              "type": "property"
+            }
+          },
+          "props.plots[1].axes[0].label.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.History.config[1].seriesName"
+              },
+              "type": "property"
+            }
+          },
+          "props.series": {
+            "binding": {
+              "config": {
+                "path": "view.custom.History.data"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "plots": [
+            {
+              "axes": [
+                {
+                  "alignment": "left",
+                  "grid": {
+                    "color": "",
+                    "dashArray": 0,
+                    "opacity": 0.9,
+                    "style": {
+                      "classes": ""
+                    },
+                    "visible": false
+                  },
+                  "label": {
+                    "font": {
+                      "color": "",
+                      "size": 10
+                    },
+                    "offset": 0,
+                    "style": {
+                      "classes": ""
+                    },
+                    "visible": true
+                  },
+                  "max": 1,
+                  "min": 0,
+                  "name": "Opened",
+                  "style": {
+                    "classes": ""
+                  },
+                  "tick": {
+                    "color": "",
+                    "count": "Auto",
+                    "label": {
+                      "font": {
+                        "color": "",
+                        "size": 10
+                      },
+                      "format": "Auto",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "width": 60
+                }
+              ],
+              "markers": [],
+              "relativeWeight": 1,
+              "trends": [
+                {
+                  "axis": "Opened",
+                  "baselines": [],
+                  "breakLine": true,
+                  "columns": [],
+                  "interpolation": "curveStepAfter",
+                  "radius": 2,
+                  "series": "Opened",
+                  "stack": true,
+                  "type": "line",
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "axes": [
+                {
+                  "alignment": "left",
+                  "grid": {
+                    "color": "",
+                    "dashArray": 0,
+                    "opacity": 0.9,
+                    "style": {
+                      "classes": ""
+                    },
+                    "visible": false
+                  },
+                  "label": {
+                    "font": {
+                      "color": "",
+                      "size": 10
+                    },
+                    "offset": 0,
+                    "style": {
+                      "classes": ""
+                    },
+                    "visible": true
+                  },
+                  "max": 1,
+                  "min": 0,
+                  "name": "Closed",
+                  "style": {
+                    "classes": ""
+                  },
+                  "tick": {
+                    "color": "",
+                    "count": "Auto",
+                    "label": {
+                      "font": {
+                        "color": "",
+                        "size": 10
+                      },
+                      "format": "Auto",
+                      "style": {
+                        "classes": ""
+                      }
+                    },
+                    "style": {
+                      "classes": ""
+                    }
+                  },
+                  "width": 60
+                }
+              ],
+              "markers": [],
+              "relativeWeight": 1,
+              "trends": [
+                {
+                  "axis": "Closed",
+                  "baselines": [],
+                  "breakLine": true,
+                  "columns": [],
+                  "interpolation": "curveStepAfter",
+                  "radius": 2,
+                  "series": "Closed",
+                  "stack": true,
+                  "type": "line",
+                  "visible": true
+                }
+              ]
+            }
+          ]
+        },
+        "type": "ia.chart.timeseries"
+      },
+      {
+        "meta": {
+          "name": "TrendDurationSelector"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "path": "Standard/Components/Faceplates/TrendController"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "basis": "400px"
+        },
+        "propConfig": {
+          "props.data": {
+            "binding": {
+              "config": {
+                "path": "view.custom.History.data[0].data"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "columns": [
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "timestamp",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Timestamp"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "Value",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": false,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            },
+            {
+              "align": "center",
+              "boolean": "checkbox",
+              "dateFormat": "MM/DD/YYYY",
+              "editable": false,
+              "field": "boundryType",
+              "filter": {
+                "boolean": {
+                  "condition": ""
+                },
+                "date": {
+                  "condition": "",
+                  "value": ""
+                },
+                "enabled": false,
+                "number": {
+                  "condition": "",
+                  "value": ""
+                },
+                "string": {
+                  "condition": "",
+                  "value": ""
+                },
+                "visible": "on-hover"
+              },
+              "footer": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": ""
+              },
+              "header": {
+                "align": "center",
+                "justify": "left",
+                "style": {
+                  "classes": ""
+                },
+                "title": "Boundry Type"
+              },
+              "justify": "auto",
+              "nullFormat": {
+                "includeNullStrings": false,
+                "nullFormatValue": "",
+                "strict": false
+              },
+              "number": "value",
+              "numberFormat": "0,0.##",
+              "progressBar": {
+                "bar": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "max": 100,
+                "min": 0,
+                "track": {
+                  "color": "",
+                  "style": {
+                    "classes": ""
+                  }
+                },
+                "value": {
+                  "enabled": true,
+                  "format": "0,0.##",
+                  "justify": "center",
+                  "style": {
+                    "classes": ""
+                  }
+                }
+              },
+              "render": "auto",
+              "resizable": true,
+              "sort": "none",
+              "sortable": true,
+              "strictWidth": false,
+              "style": {
+                "classes": ""
+              },
+              "toggleSwitch": {
+                "color": {
+                  "selected": "",
+                  "unselected": ""
+                }
+              },
+              "viewParams": {},
+              "viewPath": "",
+              "visible": true,
+              "width": ""
+            }
+          ]
+        },
+        "type": "ia.display.table"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.custom.History.data[0].periodStart"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

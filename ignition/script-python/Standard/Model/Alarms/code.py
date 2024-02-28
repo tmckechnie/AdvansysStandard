@@ -117,18 +117,18 @@ def TriggerParentModelItemAlarmSummaryInformation():
 	currentTriggerValue = currentTriggerQualifiedValue.value
 	currentTriggerQualityCode = currentTriggerQualifiedValue.quality.getCode()
 	
-	message = "currentParentTriggerValue: " + str(currentTriggerValue) + " currentParentTriggerQuality: " + str(currentTriggerQualityCode)
+	#message = "currentParentTriggerValue: " + str(currentTriggerValue) + " currentParentTriggerQuality: " + str(currentTriggerQualityCode)
 		
-	Standard.Utilities.Common.LogMessage(LoggerName=loggerName,Message=message,DebugLevel = 1)
+	#Standard.Utilities.Common.LogMessage(LoggerName=loggerName,Message=message,DebugLevel = 1)
 
 	if currentTriggerQualityCode == -2147483129:#Should be 519 according to documentation
 		message = "Parent Not Found"
-		Standard.Utilities.Common.LogMessage(LoggerName=loggerName,Message=message,DebugLevel = 1)
+		#Standard.Utilities.Common.LogMessage(LoggerName=loggerName,Message=message,DebugLevel = 1)
 		return message
 	
 	updateModelItemAlarmTrigger = system.tag.writeBlocking([parentModelItemUpdateTriggerPath],[not currentTriggerValue])
-	message = "Parent Found:" + " UpdateModelItemAlarmTrigger: " + str(updateModelItemAlarmTrigger)
-	Standard.Utilities.Common.LogMessage(LoggerName=loggerName,Message=message,DebugLevel = 1)
+	#message = "Parent Found:" + " UpdateModelItemAlarmTrigger: " + str(updateModelItemAlarmTrigger)
+	#Standard.Utilities.Common.LogMessage(LoggerName=loggerName,Message=message,DebugLevel = 1)
 	return updateModelItemAlarmTrigger	
 	
 #=================================================================TriggerParentModelItemAlarmSummaryInformation#=================================================================	

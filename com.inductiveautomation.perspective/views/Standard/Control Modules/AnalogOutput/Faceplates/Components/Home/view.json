@@ -1,6 +1,6 @@
 {
   "custom": {
-    "ClampHigh": 100,
+    "ClampHigh": 0,
     "ClampLow": 0,
     "Data": null,
     "EngUnit": "%",
@@ -9,19 +9,19 @@
       {
         "aggregate": "MinMax",
         "alias": "Value",
-        "path": "[StandardS71500/default:default]CAN01VS1/StandardS71500/Standard/Modules/Control Modules/CMTESTING/CMs/AnalogOutput01/Sts/Value"
+        "path": "{HistoryModelPathPrefix}Standard/Control Modules/Application/AO/Sts/Value"
       }
     ],
-    "InternalExternalSelect": true,
-    "InternalSetpoint": 0,
-    "ScaleEngineeringMax": 100,
+    "InternalExternalSelect": false,
+    "InternalSetpoint": null,
+    "ScaleEngineeringMax": null,
     "ScaleEngineeringMin": 0,
     "Simulation": false,
     "Value": 0,
-    "historyDuration": 30
+    "historyDuration": 60
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogOutput01"
+    "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/AO"
   },
   "propConfig": {
     "custom.ClampHigh": {
@@ -294,13 +294,14 @@
                           "config": {
                             "path": "view.custom.ClampHigh"
                           },
+                          "overlayOptOut": true,
                           "type": "property"
                         }
                       },
                       "props.plots[0].markers[0].visible": {
                         "binding": {
                           "config": {
-                            "expression": "{view.custom.ClampHigh}\u003e{view.custom.ClampLow}"
+                            "expression": "if(qualityOf({view.custom.ClampHigh})!\u003d\"Bad_Disabled\",{view.custom.ClampHigh}\u003e{view.custom.ClampLow},False)"
                           },
                           "type": "expr"
                         }
@@ -310,13 +311,14 @@
                           "config": {
                             "path": "view.custom.ClampLow"
                           },
+                          "overlayOptOut": true,
                           "type": "property"
                         }
                       },
                       "props.plots[0].markers[1].visible": {
                         "binding": {
                           "config": {
-                            "expression": "{view.custom.ClampLow}\u003c{view.custom.ClampHigh}"
+                            "expression": "if(qualityOf({view.custom.ClampLow})!\u003d\"Bad_Disabled\",{view.custom.ClampLow}\u003c{view.custom.ClampHigh},False)"
                           },
                           "type": "expr"
                         }
@@ -507,14 +509,6 @@
                 ],
                 "custom": {
                   "History": {
-                    "firstTimestamp": {
-                      "$": [
-                        "ts",
-                        192,
-                        1689243968693
-                      ],
-                      "$ts": 1689243369068
-                    },
                     "run": true
                   }
                 },
@@ -570,21 +564,6 @@
                         "bidirectional": true,
                         "path": "session.custom.DefaultPopupHistoryDuration"
                       },
-                      "type": "property"
-                    }
-                  },
-                  "custom.History.firstTimestamp": {
-                    "binding": {
-                      "config": {
-                        "path": "this.custom.History.data[0].data[0].time"
-                      },
-                      "enabled": false,
-                      "transforms": [
-                        {
-                          "expression": "fromMillis({value})",
-                          "type": "expression"
-                        }
-                      ],
                       "type": "property"
                     }
                   }
@@ -646,6 +625,7 @@
                           "config": {
                             "path": "view.custom.ClampHigh"
                           },
+                          "overlayOptOut": true,
                           "type": "property"
                         }
                       },
@@ -654,6 +634,7 @@
                           "config": {
                             "path": "view.custom.ClampLow"
                           },
+                          "overlayOptOut": true,
                           "type": "property"
                         }
                       },
@@ -937,6 +918,16 @@
         "position": {
           "basis": "25px"
         },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "qualityOf(tag({view.params.TagPath}+\"/Sim/Active\"))!\u003d\"Bad_Disabled\""
+              },
+              "type": "expr"
+            }
+          }
+        },
         "props": {
           "params": {
             "Cfg": {
@@ -944,7 +935,7 @@
               "RetractedIconPath": "material/keyboard_arrow_up",
               "ShowIcon": true
             },
-            "Expanded": true,
+            "Expanded": false,
             "Title": "Simulation"
           },
           "path": "Standard/Components/Faceplates/Header"

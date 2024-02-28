@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Modules/Implementation Modules/100G100"
+    "TagPath": "[TPROM]ROM/100G001"
   },
   "propConfig": {
     "params.TagPath": {

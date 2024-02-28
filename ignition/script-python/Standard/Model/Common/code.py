@@ -231,6 +231,30 @@ def getModelItem(Name,ModelItemTagPath,tagFolderName,path,order,viewPaths,baseVi
 				}
 
 	return menuItem
+#=========================================================GetChildrenContainedNames=========================================================
+#Function that searches for all the contained names of all CMs in current folder.
+#Returns a document tag mapping the contained name to tagpath
+def GetChildren(PathToParentFolder):	
+	pathToParentFolder = PathToParentFolder
+	filterObject = {
+				"name":"ContainedName",
+				"recursive":True
+				}
+	containedNames = system.tag.browse(path = pathToParentFolder,filter = filterObject)
+	
+	children = {}
+	for containedNameObject in containedNames:
+		containedNameQualifiedValue = containedNameObject["value"]
+		if containedNameQualifiedValue is not None:
+			containedNameValue = containedNameQualifiedValue.value
+			if containedNameValue is not None and containedNameValue != " " and containedNameValue != "":
+				containedNameFullPath = containedNameObject["fullPath"].toString()
+				childFullPath = containedNameFullPath.replace("/Metadata/ContainedName","")
+				children[containedNameValue] = childFullPath
+	
+	childrenJson = system.util.jsonEncode(children)		
+	return childrenJson
+	
 #=========================================================GetTagProvidersList=========================================================
 def GetTagProvidersList(StartModelItemTagPath,ModelItems=None):
 	modelItems = ModelItems

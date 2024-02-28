@@ -22,11 +22,21 @@ def WriteTagsTVQ(TagPaths,TVQs):
 	return result
 	
 #------------------------------------------------------GetTrendData------------------------------------------------------
-def GetTrendData(HistoryConfig,PeriodEnd,HistoryDuration,TimestampFormat=None):
-	#return None 
-	periodStart = system.date.addMinutes(PeriodEnd, -HistoryDuration)
+def GetTrendData(HistoryConfig,PeriodStart=None,PeriodEnd=None,HistoryDuration=0,TimestampFormat=None,ReturnRawData = False,ReturnFormat='Wide'):
+	#return None
+	returnRawData = ReturnRawData
+	returnFormat = ReturnFormat
+	if PeriodStart is None:
+		periodStart = system.date.addMinutes(PeriodEnd, -HistoryDuration)
+	else:
+		periodStart = PeriodStart
+		
 	periodStartMillis = system.date.toMillis(periodStart)
 	series = {}
+	if returnFormat=="Wide":
+		timestampKey = 't_stamp'
+	else:
+		timestampKey = 'timestamp'
 	for seriesConfig in HistoryConfig:
 		paths = []
 		columnNames = []
@@ -36,20 +46,26 @@ def GetTrendData(HistoryConfig,PeriodEnd,HistoryDuration,TimestampFormat=None):
 		for tag in tags:
 			path = tag['path']
 			columnName = tag['alias']
-			paths.append(path)
-			columnNames.append(columnName)
+			if path is not None:
+				paths.append(path)
+				columnNames.append(columnName)
 		#break
 		#return columnNames
-		rawData=system.tag.queryTagHistory(paths=paths,columnNames=columnNames,startDate=periodStart,endDate=PeriodEnd,returnSize=-1,includeBoundingValues=True,noInterpolation=True,returnFormat='Wide')
+		rawData=system.tag.queryTagHistory(paths=paths,columnNames=columnNames,startDate=periodStart,endDate=PeriodEnd,returnSize=-1,includeBoundingValues=True,noInterpolation=True,returnFormat=ReturnFormat)
 		#return rawData
 		data = Standard.Utilities.Common.GetListFromDataset(Dataset=rawData)
+		if returnRawData:
+			series[seriesName]['data'] = data
+			series[seriesName]['name'] = seriesName
+			continue
 		
 		#Add 'dateTime' key in data
 		addDateTime = TimestampFormat is not None
 		
 		#Convert 't_stamp' to millis time
 		for dataPoint in data:
-			t_stamp = dataPoint.pop('t_stamp')
+			
+			t_stamp = dataPoint.pop(timestampKey)
 			
 			timeMillis = system.date.toMillis(t_stamp)
 			#Set Boundry Timestamp if 
@@ -63,12 +79,23 @@ def GetTrendData(HistoryConfig,PeriodEnd,HistoryDuration,TimestampFormat=None):
 			dataPoint['time'] = timeMillis
 			if addDateTime:
 				dataPoint['timestamp'] = system.date.format(t_stamp,TimestampFormat)
-			
-			for tag in tags:
-				isBool = tag['isBool']
-				if tag['isBool']:
+			#Get value
+			if returnFormat=="Tall":
+				path = dataPoint['path']
+				dataPointValue = ['value']
+				for tag in tags:
+					isBool = tag['isBool']
 					alias = tag['alias']
-					dataPoint[alias]= 1 if dataPoint[alias] else 0
+					if isBool and alias==path:
+						dataPointValue = 1 if dataPointValue else 0
+						dataPoint['value'] = dataPointValue
+			else:
+				for tag in tags:
+					isBool = tag['isBool']
+					if tag['isBool']:
+						alias = tag['alias']
+						dataPoint[alias]= 1 if dataPoint[alias] else 0
+		
 		
 		#Create Period Start Trend Data Point if no Data
 		if len(data)==0:
@@ -90,18 +117,18 @@ def GetTrendData(HistoryConfig,PeriodEnd,HistoryDuration,TimestampFormat=None):
 			if timeMillis < periodStartMillis:
 				fisrtDataPoint['boundryType'] = 'Boundry'	
 				
-				
-		#Create End Trend Data Point
-		periodEndDataPoint = {"time": system.date.toMillis(PeriodEnd),'boundryType': 'Current'}
-		if addDateTime:
-			periodEndDataPoint['timestamp'] = system.date.format(PeriodEnd,TimestampFormat)
-		for tag in tags:
-			alias = tag['alias']
-			currentValue = tag['currentValue']
-			if tag['isBool']:
-				currentValue = 1 if currentValue else 0
-			periodEndDataPoint[alias]=currentValue
-		data.append(periodEndDataPoint)
+		if returnFormat=="Wide":		
+			#Create End Trend Data Point
+			periodEndDataPoint = {"time": system.date.toMillis(PeriodEnd),'boundryType': 'Current'}
+			if addDateTime:
+				periodEndDataPoint['timestamp'] = system.date.format(PeriodEnd,TimestampFormat)
+			for tag in tags:
+				alias = tag['alias']
+				currentValue = tag['currentValue']
+				if tag['isBool']:
+					currentValue = 1 if currentValue else 0
+				periodEndDataPoint[alias]=currentValue
+			data.append(periodEndDataPoint)
 		
 		series[seriesName]['data'] = data
 		series[seriesName]['name'] = seriesName

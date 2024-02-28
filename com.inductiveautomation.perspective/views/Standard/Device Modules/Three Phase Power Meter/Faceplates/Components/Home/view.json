@@ -1,0 +1,203 @@
+{
+  "custom": {
+    "Description": "IEC Driver",
+    "Instance": "Three Phase"
+  },
+  "params": {
+    "TagPath": "[TPFMS]Power Meters/IEC/Three Phase"
+  },
+  "propConfig": {
+    "custom.Description": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/Description"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Instance": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Metadata/InstanceName"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 700,
+      "width": 390
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Power Meter System"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "props": {
+              "params": {
+                "Config": {
+                  "MeasureType": "Current",
+                  "TypeLabelPrefix": "I"
+                },
+                "TagPath": "[TPFMS]Power Meters/IEC/Three Phase"
+              },
+              "path": "Standard/Device Modules/Three Phase Power Meter/Faceplates/Components/Power Meter System"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "padding": 10
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "HeaderStatus"
+            },
+            "position": {
+              "basis": "35px"
+            },
+            "props": {
+              "params": {
+                "Title": "Phase Details"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "custom": {
+              "measureList": [
+                {
+                  "MeasureType": "Volt",
+                  "TypeLabelPrefix": "V"
+                },
+                {
+                  "MeasureType": "Current",
+                  "TypeLabelPrefix": "I"
+                },
+                {
+                  "MeasureType": "Power Factor",
+                  "TypeLabelPrefix": "PF"
+                },
+                {
+                  "MeasureType": "Active Power",
+                  "TypeLabelPrefix": "W"
+                },
+                {
+                  "MeasureType": "Apparent Power",
+                  "TypeLabelPrefix": "VA"
+                },
+                {
+                  "MeasureType": "Reactive Power",
+                  "TypeLabelPrefix": "VAr"
+                }
+              ]
+            },
+            "meta": {
+              "name": "Carousel"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.views": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "measureList": "{this.custom.measureList}",
+                      "tagPath": "{view.params.TagPath}",
+                      "viewPath": "\"Standard/Device Modules/Three Phase Power Meter/Faceplates/Components/Power Meter Phases\""
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tinstances \u003d []\n\tviewPath \u003d value[\u0027viewPath\u0027]\n\ttagPath \u003d value[\u0027tagPath\u0027]\n\tmeasureList \u003d value[\u0027measureList\u0027]\n\tfor measure in measureList:\n\t\n\t\tinstance \u003d {\n\t\t  \"viewPath\": viewPath,\n\t\t  \"viewParams\": {\n\t\t    \"Config\": measure,\n\t\t    \"TagPath\": tagPath\n\t\t  },\n\t\t  \"direction\": \"row\",\n\t\t  \"justify\": \"flex-start\",\n\t\t  \"alignItems\": \"flex-start\"\n\t\t}\n\t\tinstances.append(instance)\n\treturn instances",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              }
+            },
+            "props": {
+              "activePane": 3,
+              "appearance": {
+                "slidePadding": 5,
+                "useDefaultViewHeight": true
+              },
+              "autoplay": {
+                "enabled": true,
+                "pauseOnFocus": true,
+                "pauseOnHover": true
+              },
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/ContentBackground"
+              }
+            },
+            "type": "ia.display.carousel"
+          }
+        ],
+        "meta": {
+          "name": "FlexContainerPhaseDetails"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "padding": 10
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

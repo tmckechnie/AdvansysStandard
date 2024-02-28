@@ -1,0 +1,349 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Value Display"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 186.5,
+          "y": 63.5
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": true,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput01"
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 25,
+          "width": 73,
+          "x": 212.5,
+          "y": 16
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/Description",
+            "LabelOverwrite": "Inlet Flow",
+            "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput01"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Value Display_0"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 187,
+          "y": 36
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": true,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Totaliser01"
+          },
+          "path": "Standard/Control Modules/Totaliser/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Value Display_1"
+        },
+        "position": {
+          "height": 75,
+          "width": 125,
+          "x": 187,
+          "y": 146
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "Display": {
+                "Output": true,
+                "ProcessVariable": true,
+                "Setpoint": true
+              }
+            },
+            "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Controller01"
+          },
+          "path": "Standard/Control Modules/Controller/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Balance Tank"
+        },
+        "position": {
+          "height": 210,
+          "width": 211,
+          "x": 333,
+          "y": 41
+        },
+        "props": {
+          "params": {
+            "HistoryDuration": 60,
+            "LevelTagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput03",
+            "ShowLevelTrend": true,
+            "ShowMajorTicks": true,
+            "ShowMinorTicks": true,
+            "ShowTankLevel": true
+          },
+          "path": "Standard/Equipment/Balance Tank"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Value Display_2"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 623,
+          "y": 136
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": true,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Totaliser02"
+          },
+          "path": "Standard/Control Modules/Totaliser/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 25,
+          "width": 131,
+          "x": 620,
+          "y": 111
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/Description",
+            "LabelOverwrite": "Outlet Flow",
+            "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput01"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Value Display_3"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 623,
+          "y": 181
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": true,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput02"
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Butterfly"
+        },
+        "position": {
+          "height": 35,
+          "width": 60,
+          "x": 552,
+          "y": 199.5
+        },
+        "props": {
+          "params": {
+            "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
+          },
+          "path": "Standard/Control Modules/Valve/Symbols/Butterfly"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Valve"
+        },
+        "position": {
+          "height": 35,
+          "width": 60,
+          "x": 82,
+          "y": 62.5
+        },
+        "props": {
+          "params": {
+            "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogOutput01"
+          },
+          "path": "Standard/Control Modules/AnalogOutput/Symbols/Valve"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Value Display_4"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 350,
+          "y": 6
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": true,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput03"
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Value Display_5"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 49.5,
+          "y": 34
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": true,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogOutput01"
+          },
+          "path": "Standard/Control Modules/AnalogOutput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "height": 25,
+          "width": 131,
+          "x": 519,
+          "y": 226
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/Description",
+            "LabelOverwrite": "",
+            "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "pipes": [
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "x": 746.5,
+                        "y": 217.5
+                      }
+                    ],
+                    "x": 438.5,
+                    "y": 217.5
+                  }
+                ],
+                "x": 438.5,
+                "y": 82
+              }
+            ],
+            "x": 17,
+            "y": 82
+          },
+          "start": "none",
+          "stroke": "",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_0",
+          "origin": {
+            "connections": [
+              {
+                "x": 685,
+                "y": 166.5
+              }
+            ],
+            "x": 685,
+            "y": 201
+          },
+          "start": "none",
+          "stroke": "",
+          "visible": true,
+          "width": 2
+        }
+      ]
+    },
+    "type": "ia.container.coord"
+  }
+}

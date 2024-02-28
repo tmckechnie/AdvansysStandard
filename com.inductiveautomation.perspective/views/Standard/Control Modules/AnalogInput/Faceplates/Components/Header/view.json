@@ -1,11 +1,60 @@
 {
   "custom": {
-    "AlarmSummary": null,
+    "AlarmSummary": {
+      "HighestActivePriority": 0,
+      "HighestActivePriorityName": null,
+      "HighestUnackedPriority": 0,
+      "HighestUnackedPriorityName": null,
+      "Overall": {
+        "ActiveAckCount": 0,
+        "ActiveUnackCount": 0,
+        "ClearUnackCount": 0,
+        "Detail": [],
+        "ShelvedCount": 0,
+        "Total": 0
+      },
+      "PriorityDetail": {
+        "Critical": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "High": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Low": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        },
+        "Medium": {
+          "ActiveAckCount": 0,
+          "ActiveUnackCount": 0,
+          "ClearUnackCount": 0,
+          "Detail": [],
+          "ShelvedCount": 0,
+          "Total": 0
+        }
+      }
+    },
     "alarmLabel": "Unacked: None: Active: None",
-    "alarmStyle": null
+    "alarmStyle": {
+      "classes": ""
+    }
   },
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100AI100"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_FY_7100R"
   },
   "propConfig": {
     "custom.AlarmSummary": {

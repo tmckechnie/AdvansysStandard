@@ -484,8 +484,7 @@
         "custom": {
           "History": {
             "run": true
-          },
-          "key_1": "value"
+          }
         },
         "meta": {
           "name": "Trend"
@@ -541,20 +540,6 @@
                 "bidirectional": true,
                 "path": "session.custom.DefaultPopupHistoryDuration"
               },
-              "type": "property"
-            }
-          },
-          "custom.History.firstTimestamp": {
-            "binding": {
-              "config": {
-                "path": "this.custom.History.data[0].data[0].time"
-              },
-              "transforms": [
-                {
-                  "expression": "fromMillis({value})",
-                  "type": "expression"
-                }
-              ],
               "type": "property"
             }
           }

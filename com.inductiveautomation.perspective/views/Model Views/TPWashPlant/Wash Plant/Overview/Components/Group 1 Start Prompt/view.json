@@ -1,0 +1,391 @@
+{
+  "custom": {
+    "InterlockPermissive": true,
+    "ManualStartPrompt": {
+      "parameters": {
+        "Label": "Start",
+        "Message": "Are You sure you would like to Start The Group?",
+        "SetValue": true,
+        "TagPath": "[TPWashPlant]Wash Plant/Feed/200G002"
+      },
+      "popupIdentifier": "Group1StartPopup",
+      "viewPath": "Model Views/TPWashPlant/Wash Plant/Overview/Components/Group 1 Start Prompt"
+    },
+    "MaterialGradeTag": {
+      "Enabled": true,
+      "Value": 1,
+      "ValueString": "1 "
+    },
+    "Running": true,
+    "SupplierTag": {
+      "Enabled": true,
+      "Value": 1,
+      "ValueString": "1 "
+    },
+    "popName": "Group1StartPopup"
+  },
+  "params": {
+    "TagPath": "[TPWashPlant]Wash Plant/Feed/200G001/Cmd/ManualStart"
+  },
+  "propConfig": {
+    "custom.InterlockPermissive": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[TPWashPlant]Wash Plant/Feed/200SEQ001/Interlock/Permissive/State"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ManualStartPrompt": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}Prompt"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.MaterialGradeTag": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {},
+          "tagPath": "[TPWashPlant]Wash Plant/Feed/200SEQ001/Cfg/MaterialGrade"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Running": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[TPWashPlant]Wash Plant/Feed/200G001/Sts/Running"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.SupplierTag": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {},
+          "tagPath": "[TPWashPlant]Wash Plant/Feed/200SEQ001/Cfg/Supplier"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.popName": {
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 159,
+      "width": 321
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "LabelMessage",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.TagPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/HeaderBackground Standard/Popups/Faceplates/HeaderText"
+          },
+          "text": "Wash Plant Sequencer Start"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "LabelDropdown"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "propConfig": {
+              "props.params.Enable": {
+                "binding": {
+                  "config": {
+                    "expression": "!{view.custom.Running}\u0026\u0026{view.custom.MaterialGradeTag.Enabled}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Label": {
+                "binding": {
+                  "config": {
+                    "expression": "if({this.props.params.Value}\u003d0,\"Please select Material Grade?\",\"Material Grade\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[TPWashPlant]Wash Plant/Feed/200SEQ001/Cfg/MaterialGrade/Value"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "ShowLabel": true,
+                "options": [
+                  {
+                    "label": "None",
+                    "value": 0
+                  },
+                  {
+                    "label": "Metallurgical (\u003e40%)",
+                    "value": 1
+                  },
+                  {
+                    "label": "Chemical (40-46%)",
+                    "value": 2
+                  },
+                  {
+                    "label": "Refractory (\u003c40%)",
+                    "value": 3
+                  }
+                ]
+              },
+              "path": "Standard/Components/Faceplates/Input/LabelDropdown"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Grade"
+        },
+        "position": {
+          "basis": "35px",
+          "shrink": 0
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "LabelDropdown"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "propConfig": {
+              "props.params.Enable": {
+                "binding": {
+                  "config": {
+                    "expression": "!{view.custom.Running}\u0026\u0026{view.custom.SupplierTag.Enabled}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Label": {
+                "binding": {
+                  "config": {
+                    "expression": "if({this.props.params.Value}\u003d0,\"Please select Supplier?\",\"Supplier\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[TPWashPlant]Wash Plant/Feed/200SEQ001/Cfg/Supplier/Value"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "ShowLabel": true,
+                "options": [
+                  {
+                    "label": "None",
+                    "value": 0
+                  },
+                  {
+                    "label": "Sefateng",
+                    "value": 1
+                  },
+                  {
+                    "label": "Other",
+                    "value": 2
+                  }
+                ]
+              },
+              "path": "Standard/Components/Faceplates/Input/LabelDropdown"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Supplier"
+        },
+        "position": {
+          "basis": "35px",
+          "shrink": 0
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tpath \u003d self.view.params.TagPath\n\tvalue \u003d self.view.custom.ManualStartPrompt.parameters.SetValue\n\tresult \u003d system.tag.writeBlocking([path],[value])\n\tif str(result[0]) \u003d\u003d \"Good\":\n\t\tsystem.perspective.closePopup(id\u003dself.view.custom.popName)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "ButtonAction"
+            },
+            "position": {
+              "basis": "34px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.InterlockPermissive} \u0026\u0026! {view.custom.Running}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Button/Default",
+                "margin": 10
+              },
+              "text": "Start"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "draggable": false,
+                    "id": "{view.custom.popName}",
+                    "modal": false,
+                    "overlayDismiss": false,
+                    "resizable": false,
+                    "showCloseIcon": false,
+                    "type": "close",
+                    "viewPath": "Standard/Implementation Modules/Group/Faceplates/Components/Prompt",
+                    "viewportBound": false
+                  },
+                  "scope": "C",
+                  "type": "popup"
+                }
+              }
+            },
+            "meta": {
+              "name": "ButtonCancel",
+              "tooltip": {
+                "enabled": true
+              }
+            },
+            "position": {
+              "basis": "34px",
+              "grow": 1
+            },
+            "propConfig": {
+              "meta.tooltip.text": {
+                "binding": {
+                  "config": {
+                    "expression": "\"Cancel and Close Popup: \" + {view.custom.popName}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Button/Default",
+                "margin": 10
+              },
+              "text": "Cancel"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "Command"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Popups/Faceplates/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

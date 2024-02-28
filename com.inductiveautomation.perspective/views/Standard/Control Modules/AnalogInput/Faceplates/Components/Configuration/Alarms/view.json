@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100IT100"
+    "TagPath": "[TPOpnim]Control Modules/Rh_FIT_7080"
   },
   "propConfig": {
     "params.TagPath": {
@@ -26,6 +26,26 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Alarms/{name}/Sts/Active"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.AlarmPrimitiveTagPath": {
             "binding": {
               "config": {
@@ -55,6 +75,26 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Alarms/{name}/Sts/Active"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.AlarmPrimitiveTagPath": {
             "binding": {
               "config": {
@@ -85,6 +125,26 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Alarms/{name}/Sts/Active"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.AlarmPrimitiveTagPath": {
             "binding": {
               "config": {
@@ -115,6 +175,26 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Alarms/{name}/Sts/Active"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.AlarmPrimitiveTagPath": {
             "binding": {
               "config": {
@@ -145,6 +225,26 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Alarms/{name}/Sts/Active"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.AlarmPrimitiveTagPath": {
             "binding": {
               "config": {
@@ -175,6 +275,26 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Alarms/{name}/Sts/Active"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.AlarmPrimitiveTagPath": {
             "binding": {
               "config": {
@@ -205,6 +325,26 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Alarms/{name}/Sts/Active"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.AlarmPrimitiveTagPath": {
             "binding": {
               "config": {
@@ -234,6 +374,26 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Alarms/{name}/Sts/Active"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.AlarmPrimitiveTagPath": {
             "binding": {
               "config": {
@@ -263,6 +423,26 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Alarms/{name}/Sts/Active"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.AlarmPrimitiveTagPath": {
             "binding": {
               "config": {

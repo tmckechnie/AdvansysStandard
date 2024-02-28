@@ -1,18 +1,10 @@
 {
   "custom": {
-    "GetHtml": "\u003chtml\u003e\u003cbody\u003eHello World Send Me Somethng\u003c/body\u003e\u003c/html\u003e",
-    "GetJson": {
-      "value": "Hello World Send Me Somethng"
-    },
-    "PostViaHttpBinding": {
-      "value": "Hello World Take it net lekker"
-    },
-    "Put": {
-      "value": "Hello World Take it net lekker"
-    },
-    "PutViaScript": {
-      "value": "Hello World Take it net lekker"
-    },
+    "GetHtml": null,
+    "GetJson": null,
+    "PostViaHttpBinding": "Error_Exception(\"Got Unexpected Response Status Line: HTTP/1.1 402 Payment Required\")",
+    "Put": "Error_Exception(\"Got Unexpected Response Status Line: HTTP/1.1 402 Payment Required\")",
+    "PutViaScript": null,
     "auth": "UmVtb3RlOnBhc3N3b3Jk",
     "baseUrl": "http://ign01vs1:8088/system/webdev/AdvansysStandard/Example/API/V1/HelloWorld",
     "body": {
@@ -244,6 +236,20 @@
   },
   "props": {},
   "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "text": "Label"
+        },
+        "type": "ia.display.label"
+      }
+    ],
     "meta": {
       "name": "root"
     },

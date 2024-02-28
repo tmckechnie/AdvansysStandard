@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100M100"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/CMTESTING/CMs/Totaliser01"
   },
   "propConfig": {
     "params.TagPath": {

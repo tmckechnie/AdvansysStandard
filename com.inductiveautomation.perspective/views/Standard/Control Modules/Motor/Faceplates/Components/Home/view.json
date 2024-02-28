@@ -2,10 +2,10 @@
   "custom": {
     "FormatString": "#,##0.##",
     "Running": false,
-    "StsValue": "Not Running"
+    "StsValue": " Contactor is not made, motor is stopped.- Motor tripped. Interlocks healthy."
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
   },
   "propConfig": {
     "custom.FormatString": {
@@ -151,6 +151,38 @@
         "children": [
           {
             "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "40px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.StsValue"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "marginLeft": 2,
+                "marginRight": 2
+              },
+              "textStyle": {
+                "classes": "Standard/Popups/Faceplates/Text",
+                "fontSize": 12,
+                "textAlign": "center",
+                "wordWrap": "normal"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
               "name": "TimeSeriesChart"
             },
             "position": {
@@ -170,6 +202,7 @@
                   "config": {
                     "path": "view.custom.StsValue"
                   },
+                  "enabled": false,
                   "type": "property"
                 }
               }
@@ -244,7 +277,9 @@
                   "size": 15
                 },
                 "height": 20,
-                "visible": true
+                "style": {
+                  "wordWrap": "break-word"
+                }
               },
               "xTrace": {
                 "infoBox": {
@@ -288,14 +323,6 @@
         ],
         "custom": {
           "History": {
-            "firstTimestamp": {
-              "$": [
-                "ts",
-                192,
-                1689243968693
-              ],
-              "$ts": 1689243369068
-            },
             "run": true
           }
         },
@@ -351,21 +378,6 @@
                 "bidirectional": true,
                 "path": "session.custom.DefaultPopupHistoryDuration"
               },
-              "type": "property"
-            }
-          },
-          "custom.History.firstTimestamp": {
-            "binding": {
-              "config": {
-                "path": "this.custom.History.data[0].data[0].time"
-              },
-              "enabled": false,
-              "transforms": [
-                {
-                  "expression": "fromMillis({value})",
-                  "type": "expression"
-                }
-              ],
               "type": "property"
             }
           }
@@ -433,6 +445,14 @@
               "shrink": 0
             },
             "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "if(qualityOf(tag({this.props.params.TagPath}+\"/\"+{this.props.params.Tag1.Name}))\u003d\"Bad_Disabled\",False,True)"
+                  },
+                  "type": "expr"
+                }
+              },
               "props.params.OperMode": {
                 "binding": {
                   "config": {
@@ -511,6 +531,16 @@
         "position": {
           "basis": "35px",
           "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "qualityOf(tag({view.params.TagPath}+\"/Sim/Active\"))!\u003d\"Bad_Disabled\""
+              },
+              "type": "expr"
+            }
+          }
         },
         "props": {
           "params": {

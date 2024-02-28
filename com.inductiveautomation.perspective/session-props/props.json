@@ -7,7 +7,7 @@
         "SearchModule": ""
       }
     },
-    "DefaultPopupHistoryDuration": 10,
+    "DefaultPopupHistoryDuration": 60,
     "FlowInfo": {
       "CurrentAuthenticatedUser": ""
     },
@@ -94,11 +94,11 @@
     }
   },
   "props": {
-    "address": "192.168.1.119",
+    "address": "192.168.1.94",
     "device": {},
     "geolocation": {},
-    "locale": "en-ZA",
+    "locale": "en-US",
     "theme": "standard",
-    "timeZoneId": "Africa/Harare"
+    "timeZoneId": "Africa/Johannesburg"
   }
 }

@@ -1,0 +1,262 @@
+{
+  "custom": {
+    "InterlockPermissive": true,
+    "ManualStart": false,
+    "Started": false,
+    "StsStarted": true,
+    "popName": "GroupActionPopup"
+  },
+  "params": {
+    "TagPath": "[TPROM]ROM/100G001/Cmd/ManualStart"
+  },
+  "propConfig": {
+    "custom.InterlockPermissive": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "publishInitial": false,
+          "tagPath": "[TPROM]ROM/100G001/Interlock/Permissive/State"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ManualStart": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[TPROM]ROM/100G001/Cmd/ManualStart"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.StsStarted": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "publishInitial": false,
+          "tagPath": "[TPROM]ROM/100G001/Sts/Started"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.popName": {
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 138,
+      "width": 321
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "LabelMessage"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/HeaderBackground Standard/Popups/Faceplates/HeaderText"
+          },
+          "text": "ROM Main Group Start"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "LabelDropdown"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "propConfig": {
+              "props.params.Enable": {
+                "binding": {
+                  "config": {
+                    "expression": "!{view.custom.StsStarted}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Label": {
+                "binding": {
+                  "config": {
+                    "expression": "if({this.props.params.Value}\u003d0,\"Please select Material Source?\",\"Material Source\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[TPROM]ROM/100G001/Cfg/Source/Value"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "ShowLabel": true,
+                "options": [
+                  {
+                    "label": "None",
+                    "value": 0
+                  },
+                  {
+                    "label": "Development",
+                    "value": 1
+                  },
+                  {
+                    "label": "Stoping",
+                    "value": 2
+                  }
+                ]
+              },
+              "path": "Standard/Components/Faceplates/Input/LabelDropdown"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Source"
+        },
+        "position": {
+          "basis": "35px",
+          "shrink": 0
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tresult \u003d system.tag.writeBlocking([self.view.params.TagPath], [True])\n\tif str(result[0]) \u003d\u003d \"Good\":\n\t\tsystem.perspective.closePopup(id\u003dself.view.custom.popName)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "ButtonAction"
+            },
+            "position": {
+              "basis": "34px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "isGood({view.custom.ManualStart}) \u0026\u0026 {view.custom.InterlockPermissive}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Button/Default",
+                "margin": 10
+              },
+              "text": "Start"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "draggable": false,
+                    "id": "{view.custom.popName}",
+                    "modal": false,
+                    "overlayDismiss": false,
+                    "resizable": false,
+                    "showCloseIcon": false,
+                    "type": "close",
+                    "viewPath": "Standard/Implementation Modules/Group/Faceplates/Components/Prompt",
+                    "viewportBound": false
+                  },
+                  "scope": "C",
+                  "type": "popup"
+                }
+              }
+            },
+            "meta": {
+              "name": "ButtonCancel",
+              "tooltip": {
+                "enabled": true
+              }
+            },
+            "position": {
+              "basis": "34px",
+              "grow": 1
+            },
+            "propConfig": {
+              "meta.tooltip.text": {
+                "binding": {
+                  "config": {
+                    "expression": "\"Cancel and Close Popup: \" + {view.custom.popName}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Button/Default",
+                "margin": 10
+              },
+              "text": "Cancel"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "Command"
+        },
+        "position": {
+          "basis": "45px",
+          "grow": 1
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Popups/Faceplates/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

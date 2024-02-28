@@ -1,7 +1,7 @@
 {
   "custom": {
-    "fullTagPath1": "[StandardS71500]Standard/Modules/Control Modules/100M100/Cmd/ManualStart",
-    "fullTagPath2": "[StandardS71500]Standard/Modules/Control Modules/100M100/Cmd/ManualStop"
+    "fullTagPath1": "",
+    "fullTagPath2": ""
   },
   "params": {
     "Label": "Command",
@@ -27,7 +27,7 @@
         "viewPath": ""
       }
     },
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/100M100"
+    "TagPath": ""
   },
   "propConfig": {
     "custom.fullTagPath1": {
@@ -165,7 +165,6 @@
               "props.value": {
                 "binding": {
                   "config": {
-                    "bidirectional": true,
                     "fallbackDelay": 2.5,
                     "mode": "indirect",
                     "references": {
@@ -224,6 +223,7 @@
             },
             "position": {
               "basis": "80px",
+              "display": false,
               "grow": 1
             },
             "propConfig": {
@@ -241,7 +241,8 @@
                     "expression": "!{../OneShotButton1.position.display}"
                   },
                   "type": "expr"
-                }
+                },
+                "persistent": true
               },
               "props.enabled": {
                 "binding": {
@@ -384,6 +385,7 @@
             },
             "position": {
               "basis": "80px",
+              "display": false,
               "grow": 1
             },
             "propConfig": {
@@ -401,7 +403,8 @@
                     "expression": "!{../OneShotButton2.position.display}"
                   },
                   "type": "expr"
-                }
+                },
+                "persistent": true
               },
               "props.enabled": {
                 "binding": {

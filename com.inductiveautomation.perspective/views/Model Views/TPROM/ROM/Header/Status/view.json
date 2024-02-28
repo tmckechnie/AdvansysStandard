@@ -1,0 +1,101 @@
+{
+  "custom": {
+    "Source": "Devolopment",
+    "StsValue": "Started and Running Devolopment",
+    "tonPhr": "36"
+  },
+  "params": {},
+  "propConfig": {
+    "custom.Source": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[TPROM]ROM/100G001/Cfg/Source/ValueString"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.StsValue": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[TPROM]ROM/100G001/Sts/Value"
+        },
+        "transforms": [
+          {
+            "expression": "{value} + \" \" + {view.custom.Source}",
+            "type": "expression"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.tonPhr": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[TPROM]ROM/CV01/100WT001/Sts/Value"
+        },
+        "transforms": [
+          {
+            "formatType": "numeric",
+            "formatValue": "integer",
+            "type": "format"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 78,
+      "width": 313
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.StsValue} + \" at \" + {view.custom.tonPhr} + \" t/hr\""
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Docked/Header/ContentBackground Standard/Docked/Header/ContentText",
+            "fontSize": 18
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

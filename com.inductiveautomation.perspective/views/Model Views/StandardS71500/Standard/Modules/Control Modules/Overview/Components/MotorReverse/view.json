@@ -1,0 +1,111 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 200,
+      "width": 180
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/HeadingText"
+          },
+          "text": "Motor Reverse"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 25,
+              "width": 100,
+              "x": 40,
+              "y": 2
+            },
+            "props": {
+              "params": {
+                "InstanceTagPath": "/Metadata/InstanceName",
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/MotorReverse"
+              },
+              "path": "Standard/Components/Symbols/Label"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Sequence"
+            },
+            "position": {
+              "height": 35,
+              "width": 150,
+              "x": 15,
+              "y": 18
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "AbbreviationOverwrite": "",
+                  "InstanceNameOverwrite": ""
+                },
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/MotorReverse"
+              },
+              "path": "Standard/Control Modules/MotorReverse/Symbols/Sequence"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Symbol"
+            },
+            "position": {
+              "height": 40,
+              "width": 40,
+              "x": 70,
+              "y": 55
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "AbbreviationOverwrite": "M"
+                },
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/MotorReverse"
+              },
+              "path": "Standard/Control Modules/MotorReverse/Symbols/Motor"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

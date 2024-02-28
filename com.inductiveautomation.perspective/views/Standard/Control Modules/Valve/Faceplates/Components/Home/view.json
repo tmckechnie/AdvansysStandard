@@ -3,17 +3,16 @@
     "Closed": false,
     "FailSafePosition": false,
     "FormatString": "#,##0.##",
-    "IsHandValve": true,
-    "Mode": 2,
+    "IsHandValve": false,
+    "Mode": 1,
     "Opened": false,
     "OpenedText": "Transitioning",
     "Simulation": false,
-    "SimulationActive": false,
-    "Value": "Closing",
-    "outOpen": false
+    "SimulationActive": null,
+    "Value": "Valve is closing"
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_UY_8400"
   },
   "propConfig": {
     "custom.Closed": {
@@ -128,18 +127,6 @@
       },
       "persistent": true
     },
-    "custom.outOpen": {
-      "binding": {
-        "config": {
-          "bidirectional": true,
-          "fallbackDelay": 2.5,
-          "mode": "direct",
-          "tagPath": "[AdvansysStandard]Standard/Control Modules/Application/Sim/DB100V001/Out/Open"
-        },
-        "type": "tag"
-      },
-      "persistent": true
-    },
     "params.TagPath": {
       "paramDirection": "input",
       "persistent": true
@@ -230,7 +217,6 @@
         },
         "position": {
           "basis": "55px",
-          "display": false,
           "shrink": 0
         },
         "propConfig": {
@@ -617,20 +603,6 @@
               },
               "type": "property"
             }
-          },
-          "custom.History.firstTimestamp": {
-            "binding": {
-              "config": {
-                "path": "this.custom.History.data[0].data[0].time"
-              },
-              "transforms": [
-                {
-                  "expression": "fromMillis({value})",
-                  "type": "expression"
-                }
-              ],
-              "type": "property"
-            }
           }
         },
         "props": {
@@ -663,8 +635,7 @@
               "name": "CmdOperModeRow"
             },
             "position": {
-              "basis": "52px",
-              "display": false
+              "basis": "52px"
             },
             "propConfig": {
               "position.display": {
@@ -688,6 +659,7 @@
             "props": {
               "params": {
                 "CurrentValueOut": 2,
+                "HasMaintenanceMode": true,
                 "Label": "Mode",
                 "ModeTagname": "Cmd/Mode"
               },
@@ -723,7 +695,7 @@
               "props.params.Tag1.Enabled": {
                 "binding": {
                   "config": {
-                    "expression": "(!{view.custom.Opened} \u0026\u0026 {view.custom.Mode}\u003d1) || {view.custom.FailSafePosition} || {view.custom.SimulationActive}"
+                    "expression": "(!{view.custom.Opened} \u0026\u0026 {view.custom.Mode}\u003d1) || {view.custom.FailSafePosition} || if(qualityOf({view.custom.SimulationActive})\u003d\u0027Bad_Disabled\u0027,False,{view.custom.SimulationActive})"
                   },
                   "type": "expr"
                 }
@@ -731,7 +703,7 @@
               "props.params.Tag2.Enabled": {
                 "binding": {
                   "config": {
-                    "expression": "(!{view.custom.Closed} \u0026\u0026 {view.custom.Mode}\u003d1) || !{view.custom.FailSafePosition} || {view.custom.SimulationActive}"
+                    "expression": "(!{view.custom.Opened} \u0026\u0026 {view.custom.Mode}\u003d1) || {view.custom.FailSafePosition} || if(qualityOf({view.custom.SimulationActive})\u003d\u0027Bad_Disabled\u0027,False,{view.custom.SimulationActive})"
                   },
                   "type": "expr"
                 }
@@ -799,6 +771,16 @@
         },
         "position": {
           "basis": "35px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "qualityOf(tag({view.params.TagPath}+\"/Sim/Active\"))!\u003d\"Bad_Disabled\""
+              },
+              "type": "expr"
+            }
+          }
         },
         "props": {
           "params": {

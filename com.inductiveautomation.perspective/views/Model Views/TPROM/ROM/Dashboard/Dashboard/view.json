@@ -1,0 +1,55 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1920
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/HeadingText",
+            "fontSize": 25
+          },
+          "text": "ROM Dashboard"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Dashboard"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "props": {
+          "params": {
+            "ConnectionTagPath": "[TPROM]ROM/System/Flow Connection",
+            "DashboardID": 3,
+            "Timestamp": ""
+          },
+          "path": "Standard/Interface Modules/Flow/Charts/Dashboard"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

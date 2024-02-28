@@ -1,32 +1,10 @@
 {
-  "custom": {
-    "Display": true
-  },
+  "custom": {},
   "params": {
-    "AlarmPrimitiveTagPath": "[StandardS71500]Modules/Control Modules/100M100/Alarms/LocalStop",
+    "AlarmPrimitiveTagPath": "[TPOpnim]Control Modules/Rh_FIT_7080/Alarms/NoChange",
     "ShowHeader": false
   },
   "propConfig": {
-    "custom.Display": {
-      "binding": {
-        "config": {
-          "fallbackDelay": 2.5,
-          "mode": "indirect",
-          "references": {
-            "AlarmPrimitiveTagPath": "{view.params.AlarmPrimitiveTagPath}"
-          },
-          "tagPath": "{AlarmPrimitiveTagPath}.Documentation"
-        },
-        "transforms": [
-          {
-            "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
-            "type": "script"
-          }
-        ],
-        "type": "tag"
-      },
-      "persistent": true
-    },
     "params.AlarmPrimitiveTagPath": {
       "paramDirection": "input",
       "persistent": true
@@ -581,16 +559,6 @@
         "position": {
           "basis": "32px",
           "shrink": 0
-        },
-        "propConfig": {
-          "position.display": {
-            "binding": {
-              "config": {
-                "path": "view.custom.Display"
-              },
-              "type": "property"
-            }
-          }
         },
         "props": {
           "style": {

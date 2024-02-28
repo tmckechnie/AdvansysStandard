@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100AI100"
+    "TagPath": "[AdvansysStandard]Standard/Control Modules/Application/AI"
   },
   "propConfig": {
     "params.TagPath": {

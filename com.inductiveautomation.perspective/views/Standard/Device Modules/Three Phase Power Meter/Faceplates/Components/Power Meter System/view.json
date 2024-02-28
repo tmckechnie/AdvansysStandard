@@ -1,0 +1,1038 @@
+{
+  "custom": {},
+  "params": {
+    "ShowTrends": true,
+    "TagPath": "[TPFMS]Power Meters/IEC/Three Phase"
+  },
+  "propConfig": {
+    "params.ShowTrends": {
+      "paramDirection": "inout",
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 250,
+      "width": 390
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "LabelSubHeading"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#2B2B2B",
+                "fontSize": 18
+              },
+              "text": "System Details",
+              "textStyle": {
+                "fontWeight": "bold",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "HeaderStatus"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "params": {
+                "Title": "System Details"
+              },
+              "path": "Standard/Components/Faceplates/Header"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tself.view.params.ShowTrends \u003d not self.view.params.ShowTrends"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button"
+            },
+            "position": {
+              "height": 0.72,
+              "width": 0.1282,
+              "x": 0.8509,
+              "y": 0.16
+            },
+            "props": {
+              "image": {
+                "icon": {
+                  "path": "material/trending_up"
+                }
+              },
+              "style": {
+                "backgroundColor": "#D5D5D5"
+              },
+              "text": ""
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "42px",
+          "grow": 1
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "50px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.label"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "alignVertical": "top",
+              "textStyle": {
+                "fontSize": 10
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Sparkline"
+            },
+            "position": {
+              "basis": "150px",
+              "grow": 1
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.ShowTrends"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.points": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.History.data[0].data"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tpoints \u003d []\n\tfor v in value:\n\t\tpoints.append(v[\u0027Value\u0027])\n\treturn points",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.display.sparkline"
+          },
+          {
+            "meta": {
+              "name": "LedDisplay"
+            },
+            "position": {
+              "basis": "80px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.Value"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "segmentFormat": "7 segment"
+            },
+            "type": "ia.display.led-display"
+          }
+        ],
+        "custom": {
+          "History": {
+            "run": true
+          },
+          "measureTagPath": "System/Frequency"
+        },
+        "meta": {
+          "name": "FlexContainerFrequency"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "custom.History.config": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "currentValue": "{this.custom.Value}*{this.custom.History.run}",
+                  "gatewayType": "{session.custom.SystemInfo.GatewayType}",
+                  "historyPath": "tag({view.params.TagPath}+\"/\"+{this.custom.measureTagPath}+\".History Path\")\r\n"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\thistoryPath \u003d value[\u0027historyPath\u0027]\n\tgatewayType \u003d value[\u0027gatewayType\u0027]\n\tcurrentValue \u003d value[\u0027currentValue\u0027]\n\tpath \u003d historyPath\n\tif gatewayType \u003d\u003d \"Edge\":\n\t\tpath \u003d self.params.TagPath + \"/Sts/Value\"\n\tseries \u003d {\"seriesName\": \"Value\",\"tags\": [{\"alias\":\"Value\", \"currentValue\": currentValue,\"path\": path,\"isBool\":False}]}\n\treturn [series]\n",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          },
+          "custom.History.data": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "config": "{this.custom.History.config}",
+                  "duration": "{this.custom.History.duration}",
+                  "periodEnd": "now(1000*{this.custom.History.run})"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\tconfig \u003d value[\u0027config\u0027] \n\tduration \u003d value[\u0027duration\u0027] \n\tperiodEnd \u003d value[\u0027periodEnd\u0027]\n\tdata \u003d Standard.Tags.Common.GetTrendData(HistoryConfig\u003dconfig,PeriodEnd\u003dperiodEnd,HistoryDuration\u003dduration) \n\treturn data\n\t\n\t\n",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          },
+          "custom.History.duration": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "session.custom.DefaultPopupHistoryDuration"
+              },
+              "type": "property"
+            }
+          },
+          "custom.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "measureTagPath": "{this.custom.measureTagPath}"
+                },
+                "tagPath": "{TagPath}/{measureTagPath}"
+              },
+              "type": "tag"
+            }
+          },
+          "custom.label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "measureTagPath": "{this.custom.measureTagPath}"
+                },
+                "tagPath": "{TagPath}/{measureTagPath}.EngUnit"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "justify": "center",
+          "style": {
+            "margin": 10
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "50px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.label"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "alignVertical": "top",
+              "textStyle": {
+                "fontSize": 10
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Sparkline"
+            },
+            "position": {
+              "basis": "150px",
+              "grow": 1
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.ShowTrends"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.points": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.History.data[0].data"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tpoints \u003d []\n\tfor v in value:\n\t\tpoints.append(v[\u0027Value\u0027])\n\treturn points",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.display.sparkline"
+          },
+          {
+            "meta": {
+              "name": "LedDisplay"
+            },
+            "position": {
+              "basis": "80px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.Value"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "segmentFormat": "7 segment"
+            },
+            "type": "ia.display.led-display"
+          }
+        ],
+        "custom": {
+          "History": {
+            "run": true
+          },
+          "measureTagPath": "System/Power Factor"
+        },
+        "meta": {
+          "name": "FlexContainerPowerFactor"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "custom.History.config": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "currentValue": "{this.custom.Value}*{this.custom.History.run}",
+                  "gatewayType": "{session.custom.SystemInfo.GatewayType}",
+                  "historyPath": "tag({view.params.TagPath}+\"/\"+{this.custom.measureTagPath}+\".History Path\")\r\n"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\thistoryPath \u003d value[\u0027historyPath\u0027]\n\tgatewayType \u003d value[\u0027gatewayType\u0027]\n\tcurrentValue \u003d value[\u0027currentValue\u0027]\n\tpath \u003d historyPath\n\tif gatewayType \u003d\u003d \"Edge\":\n\t\tpath \u003d self.params.TagPath + \"/Sts/Value\"\n\tseries \u003d {\"seriesName\": \"Value\",\"tags\": [{\"alias\":\"Value\", \"currentValue\": currentValue,\"path\": path,\"isBool\":False}]}\n\treturn [series]\n",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          },
+          "custom.History.data": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "config": "{this.custom.History.config}",
+                  "duration": "{this.custom.History.duration}",
+                  "periodEnd": "now(1000*{this.custom.History.run})"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\tconfig \u003d value[\u0027config\u0027] \n\tduration \u003d value[\u0027duration\u0027] \n\tperiodEnd \u003d value[\u0027periodEnd\u0027]\n\tdata \u003d Standard.Tags.Common.GetTrendData(HistoryConfig\u003dconfig,PeriodEnd\u003dperiodEnd,HistoryDuration\u003dduration) \n\treturn data\n\t\n\t\n",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          },
+          "custom.History.duration": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "session.custom.DefaultPopupHistoryDuration"
+              },
+              "type": "property"
+            }
+          },
+          "custom.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "measureTagPath": "{this.custom.measureTagPath}"
+                },
+                "tagPath": "{TagPath}/{measureTagPath}"
+              },
+              "type": "tag"
+            }
+          },
+          "custom.label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "measureTagPath": "{this.custom.measureTagPath}"
+                },
+                "tagPath": "{TagPath}/{measureTagPath}.EngUnit"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "justify": "center",
+          "style": {
+            "margin": 10
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "50px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.label"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "alignVertical": "top",
+              "textStyle": {
+                "fontSize": 10
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Sparkline"
+            },
+            "position": {
+              "basis": "150px",
+              "grow": 1
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.ShowTrends"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.points": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.History.data[0].data"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tpoints \u003d []\n\tfor v in value:\n\t\tpoints.append(v[\u0027Value\u0027])\n\treturn points",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.display.sparkline"
+          },
+          {
+            "meta": {
+              "name": "LedDisplay"
+            },
+            "position": {
+              "basis": "80px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.Value"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "segmentFormat": "7 segment"
+            },
+            "type": "ia.display.led-display"
+          }
+        ],
+        "custom": {
+          "History": {
+            "run": true
+          },
+          "measureTagPath": "System/Active Power"
+        },
+        "meta": {
+          "name": "FlexContainerActivePower"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "custom.History.config": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "currentValue": "{this.custom.Value}*{this.custom.History.run}",
+                  "gatewayType": "{session.custom.SystemInfo.GatewayType}",
+                  "historyPath": "tag({view.params.TagPath}+\"/\"+{this.custom.measureTagPath}+\".History Path\")\r\n"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\thistoryPath \u003d value[\u0027historyPath\u0027]\n\tgatewayType \u003d value[\u0027gatewayType\u0027]\n\tcurrentValue \u003d value[\u0027currentValue\u0027]\n\tpath \u003d historyPath\n\tif gatewayType \u003d\u003d \"Edge\":\n\t\tpath \u003d self.params.TagPath + \"/Sts/Value\"\n\tseries \u003d {\"seriesName\": \"Value\",\"tags\": [{\"alias\":\"Value\", \"currentValue\": currentValue,\"path\": path,\"isBool\":False}]}\n\treturn [series]\n",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          },
+          "custom.History.data": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "config": "{this.custom.History.config}",
+                  "duration": "{this.custom.History.duration}",
+                  "periodEnd": "now(1000*{this.custom.History.run})"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\tconfig \u003d value[\u0027config\u0027] \n\tduration \u003d value[\u0027duration\u0027] \n\tperiodEnd \u003d value[\u0027periodEnd\u0027]\n\tdata \u003d Standard.Tags.Common.GetTrendData(HistoryConfig\u003dconfig,PeriodEnd\u003dperiodEnd,HistoryDuration\u003dduration) \n\treturn data\n\t\n\t\n",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          },
+          "custom.History.duration": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "session.custom.DefaultPopupHistoryDuration"
+              },
+              "type": "property"
+            }
+          },
+          "custom.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "measureTagPath": "{this.custom.measureTagPath}"
+                },
+                "tagPath": "{TagPath}/{measureTagPath}"
+              },
+              "type": "tag"
+            }
+          },
+          "custom.label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "measureTagPath": "{this.custom.measureTagPath}"
+                },
+                "tagPath": "{TagPath}/{measureTagPath}.EngUnit"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "justify": "center",
+          "style": {
+            "margin": 10
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "50px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.label"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "alignVertical": "top",
+              "textStyle": {
+                "fontSize": 10
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Sparkline"
+            },
+            "position": {
+              "basis": "150px",
+              "grow": 1
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.ShowTrends"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.points": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.History.data[0].data"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tpoints \u003d []\n\tfor v in value:\n\t\tpoints.append(v[\u0027Value\u0027])\n\treturn points",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.display.sparkline"
+          },
+          {
+            "meta": {
+              "name": "LedDisplay"
+            },
+            "position": {
+              "basis": "80px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.Value"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "segmentFormat": "7 segment"
+            },
+            "type": "ia.display.led-display"
+          }
+        ],
+        "custom": {
+          "History": {
+            "run": true
+          },
+          "measureTagPath": "System/Apparent Power"
+        },
+        "meta": {
+          "name": "FlexContainerApparentPower"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "custom.History.config": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "currentValue": "{this.custom.Value}*{this.custom.History.run}",
+                  "gatewayType": "{session.custom.SystemInfo.GatewayType}",
+                  "historyPath": "tag({view.params.TagPath}+\"/\"+{this.custom.measureTagPath}+\".History Path\")\r\n"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\thistoryPath \u003d value[\u0027historyPath\u0027]\n\tgatewayType \u003d value[\u0027gatewayType\u0027]\n\tcurrentValue \u003d value[\u0027currentValue\u0027]\n\tpath \u003d historyPath\n\tif gatewayType \u003d\u003d \"Edge\":\n\t\tpath \u003d self.params.TagPath + \"/Sts/Value\"\n\tseries \u003d {\"seriesName\": \"Value\",\"tags\": [{\"alias\":\"Value\", \"currentValue\": currentValue,\"path\": path,\"isBool\":False}]}\n\treturn [series]\n",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          },
+          "custom.History.data": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "config": "{this.custom.History.config}",
+                  "duration": "{this.custom.History.duration}",
+                  "periodEnd": "now(1000*{this.custom.History.run})"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\tconfig \u003d value[\u0027config\u0027] \n\tduration \u003d value[\u0027duration\u0027] \n\tperiodEnd \u003d value[\u0027periodEnd\u0027]\n\tdata \u003d Standard.Tags.Common.GetTrendData(HistoryConfig\u003dconfig,PeriodEnd\u003dperiodEnd,HistoryDuration\u003dduration) \n\treturn data\n\t\n\t\n",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          },
+          "custom.History.duration": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "session.custom.DefaultPopupHistoryDuration"
+              },
+              "type": "property"
+            }
+          },
+          "custom.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "measureTagPath": "{this.custom.measureTagPath}"
+                },
+                "tagPath": "{TagPath}/{measureTagPath}"
+              },
+              "type": "tag"
+            }
+          },
+          "custom.label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "measureTagPath": "{this.custom.measureTagPath}"
+                },
+                "tagPath": "{TagPath}/{measureTagPath}.EngUnit"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "justify": "center",
+          "style": {
+            "margin": 10
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "50px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.label"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "alignVertical": "top",
+              "textStyle": {
+                "fontSize": 10
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Sparkline"
+            },
+            "position": {
+              "basis": "150px",
+              "grow": 1
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.ShowTrends"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.points": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.History.data[0].data"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tpoints \u003d []\n\tfor v in value:\n\t\tpoints.append(v[\u0027Value\u0027])\n\treturn points",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "type": "ia.display.sparkline"
+          },
+          {
+            "meta": {
+              "name": "LedDisplay"
+            },
+            "position": {
+              "basis": "80px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "path": "parent.custom.Value"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "segmentFormat": "7 segment"
+            },
+            "type": "ia.display.led-display"
+          }
+        ],
+        "custom": {
+          "History": {
+            "run": true
+          },
+          "measureTagPath": "System/Reactive Power"
+        },
+        "meta": {
+          "name": "FlexContainerReactivePower"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "propConfig": {
+          "custom.History.config": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "currentValue": "{this.custom.Value}*{this.custom.History.run}",
+                  "gatewayType": "{session.custom.SystemInfo.GatewayType}",
+                  "historyPath": "tag({view.params.TagPath}+\"/\"+{this.custom.measureTagPath}+\".History Path\")\r\n"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\thistoryPath \u003d value[\u0027historyPath\u0027]\n\tgatewayType \u003d value[\u0027gatewayType\u0027]\n\tcurrentValue \u003d value[\u0027currentValue\u0027]\n\tpath \u003d historyPath\n\tif gatewayType \u003d\u003d \"Edge\":\n\t\tpath \u003d self.params.TagPath + \"/Sts/Value\"\n\tseries \u003d {\"seriesName\": \"Value\",\"tags\": [{\"alias\":\"Value\", \"currentValue\": currentValue,\"path\": path,\"isBool\":False}]}\n\treturn [series]\n",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          },
+          "custom.History.data": {
+            "binding": {
+              "config": {
+                "struct": {
+                  "config": "{this.custom.History.config}",
+                  "duration": "{this.custom.History.duration}",
+                  "periodEnd": "now(1000*{this.custom.History.run})"
+                },
+                "waitOnAll": true
+              },
+              "transforms": [
+                {
+                  "code": "\tconfig \u003d value[\u0027config\u0027] \n\tduration \u003d value[\u0027duration\u0027] \n\tperiodEnd \u003d value[\u0027periodEnd\u0027]\n\tdata \u003d Standard.Tags.Common.GetTrendData(HistoryConfig\u003dconfig,PeriodEnd\u003dperiodEnd,HistoryDuration\u003dduration) \n\treturn data\n\t\n\t\n",
+                  "type": "script"
+                }
+              ],
+              "type": "expr-struct"
+            }
+          },
+          "custom.History.duration": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "session.custom.DefaultPopupHistoryDuration"
+              },
+              "type": "property"
+            }
+          },
+          "custom.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "measureTagPath": "{this.custom.measureTagPath}"
+                },
+                "tagPath": "{TagPath}/{measureTagPath}"
+              },
+              "type": "tag"
+            }
+          },
+          "custom.label": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "measureTagPath": "{this.custom.measureTagPath}"
+                },
+                "tagPath": "{TagPath}/{measureTagPath}.EngUnit"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "justify": "center",
+          "style": {
+            "margin": 10
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/ContentBackground"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,1519 @@
+{
+  "custom": {
+    "CurrentStepIndex": 0,
+    "ExcelValidation": {
+      "ConfigurationSheet": [
+        {
+          "ChartName": "ProductionProductionMonthlyDataCapture",
+          "Report": "Production",
+          "ReportType": "CaptureData",
+          "Section": 0,
+          "SheetNumber": 2,
+          "Tab": 0
+        },
+        {
+          "ChartName": "WaterSupplyWaterMonthlyDataCapture",
+          "Report": "Water",
+          "ReportType": "CaptureData",
+          "Section": 0,
+          "SheetNumber": 3,
+          "Tab": 0
+        },
+        {
+          "ChartName": "WaterWaterTreatmentMonthlyDataCapture",
+          "Report": "Water",
+          "ReportType": "CaptureData",
+          "Section": 0,
+          "SheetNumber": 4,
+          "Tab": 1
+        },
+        {
+          "ChartName": "ElectricityElectricityMonthlyDataCapture",
+          "Report": "Electricity",
+          "ReportType": "CaptureData",
+          "Section": 0,
+          "SheetNumber": 5,
+          "Tab": 0
+        },
+        {
+          "ChartName": "EnergyDieselMonthlyDataCapture",
+          "Report": "Energy",
+          "ReportType": "CaptureData",
+          "Section": 0,
+          "SheetNumber": 6,
+          "Tab": 0
+        },
+        {
+          "ChartName": "EnergyGasolineMonthlyDataCapture",
+          "Report": "Energy",
+          "ReportType": "CaptureData",
+          "Section": 0,
+          "SheetNumber": 7,
+          "Tab": 1
+        },
+        {
+          "ChartName": "EnergyCoalMonthlyDataCapture",
+          "Report": "Energy",
+          "ReportType": "CaptureData",
+          "Section": 0,
+          "SheetNumber": 8,
+          "Tab": 2
+        },
+        {
+          "ChartName": "EnergyLiquidNaturalGasMonthlyDataCapture",
+          "Report": "Energy",
+          "ReportType": "CaptureData",
+          "Section": 0,
+          "SheetNumber": 9,
+          "Tab": 3
+        },
+        {
+          "ChartName": "EnergyLiquidPetroleumGasMonthlyDataCapture",
+          "Report": "Energy",
+          "ReportType": "CaptureData",
+          "Section": 0,
+          "SheetNumber": 10,
+          "Tab": 4
+        },
+        {
+          "ChartName": "EnergyHeavyFuelOilMonthlyDataCapture",
+          "Report": "Energy",
+          "ReportType": "CaptureData",
+          "Section": 0,
+          "SheetNumber": 11,
+          "Tab": 5
+        },
+        {
+          "ChartName": "EnergyLightFuelOilMonthlyDataCapture",
+          "Report": "Energy",
+          "ReportType": "CaptureData",
+          "Section": 0,
+          "SheetNumber": 12,
+          "Tab": 6
+        },
+        {
+          "ChartName": "EnergyBiofuelMonthlyDataCapture",
+          "Report": "Energy",
+          "ReportType": "CaptureData",
+          "Section": 0,
+          "SheetNumber": 13,
+          "Tab": 7
+        },
+        {
+          "ChartName": "CarbonCarbonOffsetMonthlyDataCapture",
+          "Report": "Carbon",
+          "ReportType": "CaptureData",
+          "Section": 0,
+          "SheetNumber": 14,
+          "Tab": 0
+        },
+        {
+          "ChartName": "ProductionTarget",
+          "Report": "Production",
+          "ReportType": "Target",
+          "Section": 0,
+          "SheetNumber": 15,
+          "Tab": 0
+        },
+        {
+          "ChartName": "WaterSupplyWaterTarget",
+          "Report": "Water",
+          "ReportType": "Target",
+          "Section": 0,
+          "SheetNumber": 16,
+          "Tab": 0
+        },
+        {
+          "ChartName": "WaterWaterTreatmentTarget",
+          "Report": "Water",
+          "ReportType": "Target",
+          "Section": 0,
+          "SheetNumber": 17,
+          "Tab": 1
+        },
+        {
+          "ChartName": "ElectricityElectricityTarget",
+          "Report": "Electricity",
+          "ReportType": "Target",
+          "Section": 0,
+          "SheetNumber": 18,
+          "Tab": 0
+        },
+        {
+          "ChartName": "EnergyEnergyTarget",
+          "Report": "Energy",
+          "ReportType": "Target",
+          "Section": 0,
+          "SheetNumber": 19,
+          "Tab": 0
+        },
+        {
+          "ChartName": "EnergyDieselTarget",
+          "Report": "Energy",
+          "ReportType": "Target",
+          "Section": 0,
+          "SheetNumber": 20,
+          "Tab": 1
+        },
+        {
+          "ChartName": "EnergyGasolineTarget",
+          "Report": "Energy",
+          "ReportType": "Target",
+          "Section": 0,
+          "SheetNumber": 21,
+          "Tab": 2
+        },
+        {
+          "ChartName": "EnergyCoalTarget",
+          "Report": "Energy",
+          "ReportType": "Target",
+          "Section": 0,
+          "SheetNumber": 22,
+          "Tab": 3
+        },
+        {
+          "ChartName": "EnergyLiquidNaturalGasTarget",
+          "Report": "Energy",
+          "ReportType": "Target",
+          "Section": 0,
+          "SheetNumber": 23,
+          "Tab": 4
+        },
+        {
+          "ChartName": "EnergyLiquidPetroleumGasTarget",
+          "Report": "Energy",
+          "ReportType": "Target",
+          "Section": 0,
+          "SheetNumber": 24,
+          "Tab": 5
+        },
+        {
+          "ChartName": "EnergyHeavyFuelOilTarget",
+          "Report": "Energy",
+          "ReportType": "Target",
+          "Section": 0,
+          "SheetNumber": 25,
+          "Tab": 6
+        },
+        {
+          "ChartName": "EnergyLightFuelOilTarget",
+          "Report": "Energy",
+          "ReportType": "Target",
+          "Section": 0,
+          "SheetNumber": 26,
+          "Tab": 7
+        },
+        {
+          "ChartName": "EnergyBioFuelTarget",
+          "Report": "Energy",
+          "ReportType": "Target",
+          "Section": 0,
+          "SheetNumber": 27,
+          "Tab": 8
+        }
+      ]
+    },
+    "RequiredRoles": [
+      "UtilitiesSupervisor",
+      "UtilitiesManager",
+      "UtilitiesCOE",
+      "AdvansysAdministrator"
+    ],
+    "Steps": [
+      {
+        "Description": "Browse for your filled in Excel Template Sheet and upload below. Make sure the uploaded file is a valid Excel Template and has the correct data entered. You can download the excel template at the link above."
+      },
+      {
+        "Description": "Upload the loaded Excel data to Flow by clicking the Upload button."
+      },
+      {
+        "Description": "Uploading Data to Flow... Please wait"
+      },
+      {
+        "Description": "Upload Complete. "
+      }
+    ],
+    "UploadParameters": {
+      "ExcelData": []
+    },
+    "hasRole": null
+  },
+  "params": {},
+  "propConfig": {
+    "custom.CurrentStepIndex": {
+      "persistent": true
+    },
+    "custom.ExcelValidation": {
+      "persistent": true
+    },
+    "custom.ExcelValidation.ChartsNotConfigured": {
+      "binding": {
+        "config": {
+          "struct": {
+            "ConfigurationSheetValid": "{view.custom.ExcelValidation.ConfigurationSheetValid.Valid}",
+            "FlowParameter": "{view.custom.UploadParameters.FlowParameter}",
+            "UploadedConfigurationSheet": "{view.custom.UploadParameters.ExcelData[0]}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\t#If Configuration sheet is not valid then dont attempt to find charts.\n\tconfigurationSheetValid \u003d value[\"ConfigurationSheetValid\"]\n\tif configurationSheetValid \u003d\u003d False:\n\t\tconfigurationSheetValidObject \u003d {\n\t\t\t\t\t\t\t\t\t\"Valid\":False,\n\t\t\t\t\t\t\t\t\t\"Message\":\"Valid Configuration Sheet needs to be uploaded before charts can be validated.\",\n\t\t\t\t\t\t\t\t\t\"SheetsNotFound:[]\n\t\t\t\t\t\t\t\t\t}\n\t\treturn configurationSheetValidObject\n\t\t\n\tconfigurationSheetValidObject \u003d {\n\t\t\t\t\t\t\t\t\"Valid\":True,\n\t\t\t\t\t\t\t\t\"Message\":\"All Charts Configured on Configuration Sheet exist on Site Config.\",\n\t\t\t\t\t\t\t\t\"SheetsNotFound\":[]\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\n\t#Check if all charts in Configuration Sheet exist in Flow Parameter\n\t#If true then chances are they are using the correct template\n\tuploadedConfigurationSheet \u003d value[\"UploadedConfigurationSheet\"]\n\tutilitiesFlowParameterTag \u003d value[\"FlowParameter\"]\n\t\n\tsheetsNotFound \u003d []\n\tfor chartRow in uploadedConfigurationSheet:\n\t\tchartReportType \u003d chartRow[\"ReportType\"]\n\t\tchartReport \u003d chartRow[\"Report\"]\n\t\tchartSection \u003d chartRow[\"Section\"]\n\t\tchartTab \u003d chartRow[\"Tab\"]\n\t\tchartName \u003d chartRow[\"ChartName\"]\n\t\ttry:\n\t\t\t#First check if section exists\n\t\t\tsectionInfo \u003d utilitiesFlowParameterTag[chartReportType][chartReport][\"Sections\"][chartSection] #[\"Tabs\"][chartTab][\"Charts\"][chartName]\n\t\t\t#find valid chartName within section\n\t\t\tchartFound \u003d False\n\t\t\tfor chartTab in sectionInfo[\"Tabs\"]:\n\t\t\t\tcharts \u003d chartTab[\"Charts\"]\n\t\t\t\tif chartName in charts:\n\t\t\t\t\tchartFound \u003d True\n\t\t\t\t\tbreak\n\t\t\tif chartFound \u003d\u003d False:\n\t\t\t\tsheetsNotFound.append(chartRow[\"SheetNumber\"])\n\t\texcept:\n\t\t\t#\n\t\t\tsheetsNotFound.append(chartRow[\"SheetNumber\"])\t\t\t\t\n\t\n\tif len(sheetsNotFound) \u003e 0:\n\t\tsheetsNotFoundString \u003d \"\"\n\t\tfor sheet in sheetsNotFound:\n\t\t\tsheetsNotFoundString +\u003d \" %s,\"%(sheet+1)\n\t\tconfigurationSheetValidObject[\"Valid\"] \u003d False\t\n\t\tconfigurationSheetValidObject[\"Message\"] \u003d \"Uploaded Configuration for Sheets %s can not be found on Site Config. These sheets will be ignored.\"%(sheetsNotFoundString[1:-1])\n\t\tconfigurationSheetValidObject[\"SheetsNotFound\"] \u003d sheetsNotFound\n\t\n\treturn configurationSheetValidObject",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.ExcelValidation.ChartsValidValues": {
+      "binding": {
+        "config": {
+          "struct": {
+            "ExcelData": "{view.custom.UploadParameters.ExcelData}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\t\n\tconfigurationSheetValidObject \u003d {\n\t\t\t\t\t\t\t\t\t\"Valid\":True,\n\t\t\t\t\t\t\t\t\t\"Message\":\"All Entered Values on Charts are valid.\"\t\n\t\t\t\t\t\t\t\t\t}\t\n\t#Script to check that all measure values can be converted to floats and all comments to strings\n\texcelData \u003d value[\"ExcelData\"]\n\tinvalidSheets \u003d []\n\tfor i in range(2,len(excelData)):\n\t\tsheetData \u003d excelData[i]\n\t\tfor row in sheetData:\n\t\t\tfor col in row:\n\t\t\t\tcellValue \u003d row[col]\n\t\t\t\tif cellValue is None:\n\t\t\t\t\tcontinue\n\t\t\t\telif col \u003d\u003d \"Month\" or col \u003d\u003d \"PeriodStartLocal\" or col \u003d\u003d \"PeriodEndLocal\":\n\t\t\t\t\tcontinue\n\t\t\t\telif col \u003d\u003d \"Comment\":\n\t\t\t\t\t#Check if value can be turned into a string\n\t\t\t\t\ttry:\n\t\t\t\t\t\tcellValue \u003d str(cellValue)\n\t\t\t\t\texcept:\n\t\t\t\t\t\tinvalidSheets.append(i + 1)\n\t\t\t\telse:\n\t\t\t\t\t#Check if value can be turned into a float\n\t\t\t\t\ttry:\n\t\t\t\t\t\tcellValue \u003d float(cellValue)\n\t\t\t\t\texcept:\n\t\t\t\t\t\tinvalidSheets.append(i + 1)\t\t\t\t\t\n\n\tif len(invalidSheets) \u003e 0:\n\t\tconfigurationSheetValidObject[\"Valid\"] \u003d False\t\n\t\tinvalidSheetsString \u003d \"\"\n\t\tfor sheetNumber in invalidSheets:\n\t\t\tinvalidSheetsString +\u003d \" %s,\"%(sheetNumber)\n\t\tconfigurationSheetValidObject[\"Message\"] \u003d \"Uploaded Data for Sheet(s) %s have invalid measure or comment values. Make sure all captured data and comments on the listed sheets have valid values.\"%(invalidSheetsString[1:-1])\n\t\n\t\n\treturn configurationSheetValidObject\n",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.ExcelValidation.ConfigurationSheetValid": {
+      "binding": {
+        "config": {
+          "struct": {
+            "RequiredConfigurationSheet": "{view.custom.ExcelValidation.ConfigurationSheet}",
+            "UploadedConfigurationSheet": "{view.custom.UploadParameters.ExcelData[0]}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tconfigurationSheetValidObject \u003d {\n\t\t\t\t\t\t\t\t\"Valid\":True,\n\t\t\t\t\t\t\t\t\"Message\":\"Uploaded Configuration Sheet matches Template Configuration Sheet.\"\n\t\n\t\t\t\t\t\t\t\t}\n\t#Check if first sheet has required configuration sheet\n\t#If true then chances are they are using the correct template\n\tuploadedConfigurationSheet \u003d value[\"UploadedConfigurationSheet\"]\n\trequiredConfigurationSheet \u003d value[\"RequiredConfigurationSheet\"]\n\trequiredColumns \u003d requiredConfigurationSheet[0].keys()\n\tuploadedColumns \u003d uploadedConfigurationSheet[0].keys()\n\t#Check if quantity of columns is correct\n\tif len(requiredColumns) !\u003d len(uploadedColumns):\n\t\tconfigurationSheetValidObject[\"Valid\"] \u003d False\n\t\tconfigurationSheetValidObject[\"Message\"] \u003d \"Uploaded Configuration Sheet has different columns than Template Configuration Sheet.\"\n\t\treturn configurationSheetValidObject\n\t\t\n\t#Check if columns are correct\n\tfor col in uploadedColumns:\n\t\tif (col in requiredColumns) \u003d\u003d False:\n\t\t\tconfigurationSheetValidObject[\"Valid\"] \u003d False\n\t\t\tconfigurationSheetValidObject[\"Message\"] \u003d \"Uploaded Configuration Sheet has different columns than Template Configuration Sheet.\"\n\t\t\treturn configurationSheetValidObject\n\t#Check if quantity of rows is correct\n\tif len(uploadedConfigurationSheet) !\u003d len(requiredConfigurationSheet):\n\t\tconfigurationSheetValidObject[\"Valid\"] \u003d False\n\t\tconfigurationSheetValidObject[\"Message\"] \u003d \"Uploaded Configuration Sheet has different rows than Template Sheet.\"\n\t\treturn configurationSheetValidObject\t\n\t\t\t\t\n\t#Check if any row values differ\n\tfor i in range(len(requiredConfigurationSheet)):\n\t\tfor col in requiredColumns:\n\t\t\tuploadedRowValue \u003d uploadedConfigurationSheet[i][col]\n\t\t\trequiredRowValue \u003d requiredConfigurationSheet[i][col]\n\t\t\tif uploadedRowValue !\u003d requiredRowValue:\n\t\t\t\tconfigurationSheetValidObject[\"Valid\"] \u003d False\n\t\t\t\tconfigurationSheetValidObject[\"Message\"] \u003d \"Uploaded Configuration Sheet has different row values than Template Configuration Sheet.\"\n\t\t\t\treturn configurationSheetValidObject\t\t\t\t\t\n\t\n\treturn configurationSheetValidObject",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.ExcelValidation.DataSheetsValid": {
+      "binding": {
+        "config": {
+          "struct": {
+            "DataSheets": "{view.custom.UploadParameters.ExcelData}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tconfigurationSheetValidObject \u003d {\n\t\t\t\t\t\t\t\t\t\"Valid\":True,\n\t\t\t\t\t\t\t\t\t\"Message\":\"Data Sheets have Required Columns.\"\n\t\t\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\n\tdataSheets \u003d value[\"DataSheets\"]\n\t#Check that each sheet has minimum columns of Period Start, End and Comment\n\tindex \u003d 0 \n\tfor sheet in dataSheets[2:]:\n\t\tif len(sheet) \u003e 0:\n\t\t\tsheetColumns \u003d sheet[0].keys()\n\t\t\tif (\"PeriodStartLocal\" in sheetColumns) \u003d\u003d False:\n\t\t\t\tconfigurationSheetValidObject[\"Valid\"] \u003d False\n\t\t\t\tconfigurationSheetValidObject[\"Message\"] \u003d \"Uploaded Data Sheet %s does not have Period Start Column.\"%(index)\n\t\t\t\treturn configurationSheetValidObject\t\t\t\n\t\t\telif (\"PeriodEndLocal\" in sheetColumns) \u003d\u003d False:\n\t\t\t\tconfigurationSheetValidObject[\"Valid\"] \u003d False\n\t\t\t\tconfigurationSheetValidObject[\"Message\"] \u003d \"Uploaded Data Sheet %s does not have Period End Column.\"%(index)\n\t\t\t\treturn configurationSheetValidObject\t\t\n\t\t\t\t\n\t\tindex +\u003d 1\n\t\t\n\treturn configurationSheetValidObject",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.ExcelValidation.ExcelValid": {
+      "binding": {
+        "config": {
+          "expression": "if({view.custom.ExcelValidation.DataSheetsValid.Valid}\u003dfalse ||\r\n{view.custom.ExcelValidation.ConfigurationSheetValid.Valid}\u003dfalse||\r\n{view.custom.ExcelValidation.ChartsValidValues.Valid}\u003dfalse,false,true)"
+        },
+        "type": "expr"
+      }
+    },
+    "custom.RequiredRoles": {
+      "persistent": true
+    },
+    "custom.Steps": {
+      "persistent": true
+    },
+    "custom.Steps[0].CurrentStep": {
+      "binding": {
+        "config": {
+          "expression": "{view.custom.CurrentStepIndex} \u003d 0"
+        },
+        "type": "expr"
+      }
+    },
+    "custom.Steps[1].CurrentStep": {
+      "binding": {
+        "config": {
+          "expression": "{view.custom.CurrentStepIndex} \u003d 1"
+        },
+        "type": "expr"
+      }
+    },
+    "custom.Steps[2].CurrentStep": {
+      "binding": {
+        "config": {
+          "expression": "{view.custom.CurrentStepIndex} \u003d 2"
+        },
+        "type": "expr"
+      }
+    },
+    "custom.Steps[3].CurrentStep": {
+      "binding": {
+        "config": {
+          "expression": "{view.custom.CurrentStepIndex} \u003d 3"
+        },
+        "type": "expr"
+      }
+    },
+    "custom.UploadParameters": {
+      "persistent": true
+    },
+    "custom.UploadParameters.CalendarManager": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "CalendarManagerName": "{session.custom.CalendarManagerName}",
+            "SiteTagPath": "{session.custom.SiteTagPath}"
+          },
+          "tagPath": "{SiteTagPath}{CalendarManagerName}"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.UploadParameters.Connection": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "ConnectionTagPath": "{session.custom.ConnectionTagPath}"
+          },
+          "tagPath": "{ConnectionTagPath}"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.UploadParameters.FlowParameter": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "UtilitiesTagPath": "{session.custom.UtilitiesTagPath}"
+          },
+          "tagPath": "{UtilitiesTagPath}/Flow Parameters/Dashboard Parameters"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.UploadParameters.UserInfo": {
+      "binding": {
+        "config": {
+          "path": "session.custom.UserInformation"
+        },
+        "type": "property"
+      }
+    },
+    "custom.UploadParameters.Username": {
+      "binding": {
+        "config": {
+          "path": "session.custom.Username"
+        },
+        "type": "property"
+      }
+    },
+    "custom.hasRole": {
+      "binding": {
+        "config": {
+          "struct": {
+            "RequiredRoles": "{view.custom.RequiredRoles}",
+            "UserRoles": "{session.custom.UserInformation.Interfaces.Flow.UserRoles}"
+          },
+          "waitOnAll": true
+        },
+        "overlayOptOut": true,
+        "transforms": [
+          {
+            "code": "\treturn Standard.InterfaceModules.Flow.Common.HasRequiredRole(value[\"UserRoles\"] ,value[\"RequiredRoles\"] )",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 801,
+      "width": 1219
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 1,
+              "width": 1
+            },
+            "props": {
+              "style": {
+                "classes": "ApplicationStandard/Card/Heading"
+              },
+              "text": "Upload Flow Utilities Data",
+              "textStyle": {
+                "textAlign": "center",
+                "textDecoration": "underline"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "newTab": true,
+                    "url": "https://ccbagroup.sharepoint.com/sites/FLOW-UTILITIESPROJECT/Shared%20Documents/Forms/AllItems.aspx?id\u003d%2Fsites%2FFLOW%2DUTILITIESPROJECT%2FShared%20Documents%2FGeneral%2FPhase%201%20%2D%20Monthly%20Reporting%2FData%20Entry%20Upload%20Master\u0026p\u003dtrue\u0026ga\u003d1"
+                  },
+                  "scope": "C",
+                  "type": "nav"
+                }
+              }
+            },
+            "meta": {
+              "name": "Button",
+              "tooltip": {
+                "enabled": true,
+                "text": "Make sure to download a copy and do not edit the existing file on sharepoint."
+              }
+            },
+            "position": {
+              "height": 0.7125,
+              "width": 0.2675,
+              "x": 0.7075,
+              "y": 0.1125
+            },
+            "props": {
+              "image": {
+                "icon": {
+                  "path": "CCBA/download"
+                }
+              },
+              "text": "Download Excel Template from Sharepoint"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "Heading"
+        },
+        "position": {
+          "basis": "80px",
+          "shrink": 0
+        },
+        "props": {
+          "mode": "percent"
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Upload Steps"
+            },
+            "position": {
+              "grow": 1
+            },
+            "propConfig": {
+              "props.instances[0].RadioColour": {
+                "binding": {
+                  "config": {
+                    "expression": "if({view.custom.CurrentStepIndex}\u003d0,\u0027var(--ccb-11)\u0027,\u0027var(--ccb-15)\u0027)"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.instances[0].Selected": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Steps[0].CurrentStep"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.instances[1].RadioColour": {
+                "binding": {
+                  "config": {
+                    "expression": "if({view.custom.CurrentStepIndex}\u003d1,\u0027var(--ccb-11)\u0027,\u0027var(--ccb-15)\u0027)"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.instances[1].Selected": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Steps[1].CurrentStep"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.instances[2].Selected": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Steps[2].CurrentStep"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.instances[3].RadioColour": {
+                "binding": {
+                  "config": {
+                    "expression": "if({view.custom.CurrentStepIndex}\u003d3,\u0027var(--ccb-12)\u0027,\u0027var(--ccb-11)\u0027)"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.instances[3].Selected": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.Steps[3].CurrentStep"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "instances": [
+                {
+                  "ChevronVisible": true,
+                  "Label": "Load Excel Template",
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  }
+                },
+                {
+                  "ChevronVisible": true,
+                  "Label": "Start Upload",
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  }
+                },
+                {
+                  "ChevronVisible": true,
+                  "Label": "Uploading",
+                  "RadioColour": "var(--ccb-11)",
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  }
+                },
+                {
+                  "ChevronVisible": false,
+                  "Label": "Complete",
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": ""
+                  }
+                }
+              ],
+              "justify": "center",
+              "path": "Application Standard/Interface Modules/Flow/Bulk Upload/Bulk Upload Components/Upload Step"
+            },
+            "type": "ia.display.flex-repeater"
+          },
+          {
+            "meta": {
+              "name": "Step Description"
+            },
+            "position": {
+              "basis": "32px",
+              "grow": 1
+            },
+            "propConfig": {
+              "meta.visible": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.CurrentStepIndex} \u003c\u003d 1"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.Steps}[{view.custom.CurrentStepIndex}][\u0027Description\u0027]"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "ApplicationStandard/Card/Body"
+              },
+              "textStyle": {
+                "fontStyle": "italic",
+                "fontWeight": "400",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Upload Information"
+        },
+        "position": {
+          "basis": "85px",
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "marginBottom": 20
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "50px",
+              "display": false,
+              "grow": 1
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.CurrentStepIndex} \u003e 1"
+                  },
+                  "type": "expr"
+                },
+                "persistent": true
+              },
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.Steps}[{view.custom.CurrentStepIndex}][\u0027Description\u0027]"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "var(--ccb-16)",
+                "classes": "ApplicationStandard/Card/Body"
+              },
+              "textStyle": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "events": {
+              "component": {
+                "onFileReceived": {
+                  "config": {
+                    "script": "\tbytes \u003d event.file.getBytes()\n\texcelSheetArray \u003d Standard.Utilities.Excel.ExcelToList(bytesIn \u003d bytes,fileName\u003dNone, hasHeaders \u003d True, sheetNums \u003d None)\n\tself.view.custom.UploadParameters.ExcelData \u003d excelSheetArray\n\tself.view.custom.CurrentStepIndex \u003d 1"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                },
+                "onUploadsCleared": {
+                  "config": {
+                    "script": "\tself.view.custom.UploadParameters.ExcelData \u003d []\n\tself.view.custom.CurrentStepIndex \u003d 0"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "FileUpload"
+            },
+            "position": {
+              "basis": "100px",
+              "grow": 1
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.CurrentStepIndex} \u003d 0 || {view.custom.CurrentStepIndex} \u003d 1"
+                  },
+                  "type": "expr"
+                },
+                "persistent": true
+              }
+            },
+            "props": {
+              "fileUploadIcon": {
+                "color": "var(--ccb-15)"
+              },
+              "supportedFileTypes": [
+                "xlsx"
+              ]
+            },
+            "type": "ia.input.fileupload"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "File Validation Message"
+                },
+                "position": {
+                  "basis": "35px",
+                  "grow": 1,
+                  "shrink": 0
+                },
+                "props": {
+                  "style": {
+                    "classes": "ApplicationStandard/Card/Heading"
+                  },
+                  "text": "Uploaded Excel Spreadsheet Validation ",
+                  "textStyle": {
+                    "textAlign": "center",
+                    "textDecoration": "underline"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "Step Description"
+                },
+                "position": {
+                  "basis": "32px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "meta.visible": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.CurrentStepIndex} \u003c\u003d 1"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "classes": "ApplicationStandard/Card/Body"
+                  },
+                  "text": "If errors have been found on your uploaded spreadsheet make sure you are using the correct Excel Template which can be downloaded above. Make sure all columns and sheets appear as in the template. If the issue persists, log a ticket with your uploaded spreadsheet attached.",
+                  "textStyle": {
+                    "fontStyle": "italic",
+                    "fontWeight": "400",
+                    "textAlign": "center"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "FlexRepeater"
+                },
+                "position": {
+                  "basis": "320px"
+                },
+                "propConfig": {
+                  "props.instances[0].Label": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.ExcelValidation.DataSheetsValid.Message"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.instances[0].RadioColour": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.ExcelValidation.DataSheetsValid.Valid"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": "var(--ccb-15)",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": true,
+                              "output": "var(--ccb-12)"
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  },
+                  "props.instances[1].Label": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.ExcelValidation.ConfigurationSheetValid.Message"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.instances[1].RadioColour": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.ExcelValidation.ConfigurationSheetValid.Valid"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": "var(--ccb-15)",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": true,
+                              "output": "var(--ccb-12)"
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  },
+                  "props.instances[2].Label": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.ExcelValidation.ChartsValidValues.Message"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.instances[2].RadioColour": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.ExcelValidation.ChartsValidValues.Valid"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": "var(--ccb-15)",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": true,
+                              "output": "var(--ccb-12)"
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  },
+                  "props.instances[3].Label": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.ExcelValidation.ChartsNotConfigured.Message"
+                      },
+                      "type": "property"
+                    }
+                  },
+                  "props.instances[3].RadioColour": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.ExcelValidation.ChartsNotConfigured.Valid"
+                      },
+                      "transforms": [
+                        {
+                          "fallback": "var(--ccb-13)",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": true,
+                              "output": "var(--ccb-12)"
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "direction": "column",
+                  "instances": [
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      }
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      }
+                    },
+                    {
+                      "ChevronVisible": false,
+                      "Selected": true,
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      }
+                    },
+                    {
+                      "instancePosition": {},
+                      "instanceStyle": {
+                        "classes": ""
+                      }
+                    }
+                  ],
+                  "path": "Application Standard/Interface Modules/Flow/Bulk Upload/Bulk Upload Components/Upload Step",
+                  "style": {
+                    "marginLeft": 45,
+                    "marginRight": 45,
+                    "marginTop": 5
+                  },
+                  "useDefaultViewWidth": false
+                },
+                "type": "ia.display.flex-repeater"
+              }
+            ],
+            "meta": {
+              "name": "Validation Error"
+            },
+            "position": {
+              "basis": "300px",
+              "display": false,
+              "grow": 1,
+              "shrink": 0
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.CurrentStepIndex} \u003d 1"
+                  },
+                  "type": "expr"
+                },
+                "persistent": true
+              }
+            },
+            "props": {
+              "direction": "column"
+            },
+            "type": "ia.container.flex"
+          }
+        ],
+        "meta": {
+          "name": "Upload Flex"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "persistent": true
+          }
+        },
+        "props": {
+          "direction": "column",
+          "justify": "flex-end",
+          "style": {
+            "borderColor": "var(--ccb-08)",
+            "borderStyle": "solid",
+            "borderWidth": "2px",
+            "margin": 10
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "Heading"
+                },
+                "position": {
+                  "height": 0.64,
+                  "width": 1
+                },
+                "props": {
+                  "style": {
+                    "classes": "ApplicationStandard/Card/Heading"
+                  },
+                  "text": "Upload Summary"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "CopyToClipboardIcon"
+                },
+                "position": {
+                  "height": 0.825,
+                  "width": 0.0421,
+                  "x": 0.9361
+                },
+                "propConfig": {
+                  "meta.visible": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.CurrentStepIndex} \u003d 3"
+                      },
+                      "type": "expr"
+                    }
+                  },
+                  "props.params.text": {
+                    "binding": {
+                      "config": {
+                        "path": "..../Save/Save.custom.ResultObject"
+                      },
+                      "transforms": [
+                        {
+                          "code": "\treturn system.util.jsonEncode(value)",
+                          "type": "script"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "params": {
+                    "icon_color_dark_theme": "#cac5c4",
+                    "icon_color_light_theme": "#636363"
+                  },
+                  "path": "Application Standard/Interface Modules/Flow/Bulk Upload/Bulk Upload Components/CopyToClipboardIcon",
+                  "useDefaultViewHeight": true,
+                  "useDefaultViewWidth": true
+                },
+                "type": "ia.display.view"
+              },
+              {
+                "meta": {
+                  "name": "Copy to ClipboardLabel"
+                },
+                "position": {
+                  "height": 0.64,
+                  "width": 0.1326,
+                  "x": 0.8028,
+                  "y": -0.025
+                },
+                "propConfig": {
+                  "meta.visible": {
+                    "binding": {
+                      "config": {
+                        "expression": "{view.custom.CurrentStepIndex} \u003d 3"
+                      },
+                      "type": "expr"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "classes": "ApplicationStandard/Card/Body"
+                  },
+                  "text": "Copy Summary to Clipboard"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "CoordinateContainer"
+            },
+            "position": {
+              "basis": "40px",
+              "shrink": 0
+            },
+            "props": {
+              "mode": "percent"
+            },
+            "type": "ia.container.coord"
+          },
+          {
+            "custom": {
+              "SheetsProcessed": 0
+            },
+            "meta": {
+              "name": "Summary"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "propConfig": {
+              "custom.FailedRequestsCount": {
+                "binding": {
+                  "config": {
+                    "path": ".../Save/Save.custom.ResultObject"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tfailedRequests \u003d value[\"FailedRequests\"]\n\tfailedRequestCount \u003d 0\n\tfor chart in failedRequests:\n\t\tfailedRequestCount +\u003d len(chart[\"Comments\"])\n\t\tfailedRequestCount +\u003d len(chart[\"Measures\"])\n\t\t\n\treturn failedRequestCount",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "custom.SheetToProcess": {
+                "binding": {
+                  "config": {
+                    "expression": "(len({view.custom.UploadParameters.ExcelData}) - 2)"
+                  },
+                  "type": "expr"
+                }
+              },
+              "custom.SuccessfulRequestsCount": {
+                "binding": {
+                  "config": {
+                    "path": ".../Save/Save.custom.ResultObject"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tsuccessfulRequests \u003d value[\"SuccessfulRequests\"]\n\tsuccessfulRequestCount \u003d 0\n\tfor chart in successfulRequests:\n\t\tsuccessfulRequestCount +\u003d len(chart[\"Comments\"])\n\t\tsuccessfulRequestCount +\u003d len(chart[\"Measures\"])\n\t\n\treturn successfulRequestCount",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "custom.SummaryObjectCount": {
+                "binding": {
+                  "config": {
+                    "expression": "len({.../Save/Save.custom.ResultObject.SummaryObjects})"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.instances[0].Label": {
+                "binding": {
+                  "config": {
+                    "expression": "\"Sheets Processed: \" + {this.custom.SheetsProcessed} + \"/\" + {this.custom.SheetToProcess}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.instances[1].Label": {
+                "binding": {
+                  "config": {
+                    "expression": "\"Successful Requests: \" + {this.custom.SuccessfulRequestsCount}\t"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.instances[2].Label": {
+                "binding": {
+                  "config": {
+                    "expression": "\"Failed Requests: \" + {this.custom.FailedRequestsCount}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.instances[2].instanceStyle.color": {
+                "binding": {
+                  "config": {
+                    "expression": "if({this.custom.FailedRequestsCount}\u003e0,\"var(--ccb-15)\",\"\")"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "direction": "column",
+              "instances": [
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": "ApplicationStandard/Card/Body"
+                  }
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": "ApplicationStandard/Card/Body"
+                  }
+                },
+                {
+                  "instancePosition": {},
+                  "instanceStyle": {
+                    "classes": "ApplicationStandard/Card/Body"
+                  }
+                }
+              ],
+              "path": "Application Standard/Interface Modules/Flow/Bulk Upload/Bulk Upload Components/ResultRow",
+              "useDefaultViewWidth": false
+            },
+            "type": "ia.display.flex-repeater"
+          },
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "{../Summary.custom.FailedRequestsCount}\u003e0"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "ApplicationStandard/Card/Body"
+              },
+              "text": "Failed Requests occurred, please try upload again. If the issue persists, Copy the Upload Summary, save to a text file and log a ticket with the Upload Summary attached.",
+              "textStyle": {
+                "fontWeight": "bold"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Upload Summary"
+        },
+        "position": {
+          "display": false,
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.CurrentStepIndex} \u003e\u003d 2"
+              },
+              "type": "expr"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "margin": 25,
+            "marginBottom": 0,
+            "marginTop": 5,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "custom": {
+              "ResultObject": {
+                "FailedRequests": [],
+                "SuccessfulRequests": [],
+                "SummaryObjects": []
+              },
+              "Saving": false
+            },
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\t\n\t\n\tresultObject \u003d {\"SuccessfulRequests\":[],\"FailedRequests\":[],\"SummaryObjects\":[]}\n\tself.parent.parent.getChild(\"Upload Summary\").getChild(\"Summary\").custom.SheetsProcessed \u003d 0\n\tself.custom.ResultObject \u003d resultObject\n\t\n\tself.custom.Saving \u003d True\n\tself.view.custom.CurrentStepIndex \u003d 2\n\n\tUsername \u003d self.session.custom.Username\n\tConnection \u003d self.view.custom.UploadParameters.Connection\n\tUserInfo \u003d self.view.custom.UploadParameters.UserInfo\n\tFlowParameter \u003d self.view.custom.UploadParameters.FlowParameter\n\tCalendarManager \u003d self.view.custom.UploadParameters.CalendarManager\n\tExcelData\u003d self.view.custom.UploadParameters.ExcelData\n\t#resultObject \u003d Standard.InterfaceModules.Flow.PrivateAPI.V1.TimePeriod.UploadChartData(Username,Connection,UserInfo,FlowParameter,CalendarManager,ExcelBytes \u003d None,ExcelList \u003d ExcelData)\n\t#In Order to Provide Progress Data per Chart, loop through chart configuration on frontend and call UploadScript for each sheet based on chartInfo\n\t#Get Chart Info\n\tchartConfiguration \u003d ExcelData[0]\n\tsheetQuantity \u003d len(ExcelData)\n\tsheetsExcluded \u003d self.view.custom.ExcelValidation.ChartsNotConfigured.SheetsNotFound\n\tfor chartRow in chartConfiguration:\n\t\tsheetNum \u003d chartRow[\"SheetNumber\"]\n\t\tif sheetNum in sheetsExcluded:\n\t\t\tcontinue\n\t\t#Check if sheet Number is present in excel:\n\t\tif sheetNum \u003e (sheetQuantity - 1):\n\t\t\tcontinue\n\t\tchartReportType \u003d chartRow[\"ReportType\"]\n\t\tchartReport \u003d chartRow[\"Report\"]\n\t\tchartSection \u003d chartRow[\"Section\"]\n\t\tchartTab \u003d chartRow[\"Tab\"]\n\t\tchartName \u003d chartRow[\"ChartName\"]\n\t\tchartInfo \u003d FlowParameter[chartReportType][chartReport][\"Sections\"][chartSection][\"Tabs\"][chartTab][\"Charts\"][chartName]\t\n\t\texcelSheetData \u003d ExcelData[sheetNum]\n\t\tchartResultObject \u003d Standard.InterfaceModules.Flow.PrivateAPI.V1.TimePeriod.UploadChartDataSheet(Username,Connection,UserInfo,chartInfo,CalendarManager,ExcelSheetBytes \u003d None,ExcelSheetList \u003d excelSheetData)\n\t\tresultObject[\"FailedRequests\"] +\u003d chartResultObject[\"FailedRequests\"]\n\t\tresultObject[\"SuccessfulRequests\"] +\u003d chartResultObject[\"SuccessfulRequests\"]\n\t\tresultObject[\"SummaryObjects\"] +\u003d chartResultObject[\"SummaryObjects\"]\n\t\tself.parent.parent.getChild(\"Upload Summary\").getChild(\"Summary\").custom.SheetsProcessed +\u003d 1\n\t\tself.custom.ResultObject \u003d resultObject\n\t\t\n\tself.view.custom.CurrentStepIndex \u003d 3\n\t\n\tself.custom.Saving \u003d False\n\t"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Save",
+              "tooltip": {
+                "enabled": true
+              }
+            },
+            "position": {
+              "basis": "140px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "meta.tooltip.text": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "Enabled": "{this.props.enabled}",
+                      "ExcelDataUploaded": "len({view.custom.UploadParameters.ExcelData}) \u003e 0",
+                      "ExcelDataValid": "{view.custom.ExcelValidation.ExcelValid}",
+                      "HasRole": "{view.custom.hasRole}",
+                      "Saving": "{this.custom.Saving}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tenabled \u003d value[\"Enabled\"]\n\texcelDataUploaded \u003d value[\"ExcelDataUploaded\"]\n\texcelDataValid \u003d value[\"ExcelDataValid\"]\n\tsaving \u003d value[\"Saving\"]\n\thasRole \u003d value[\"HasRole\"]\n\tif enabled:\n\t\treturn \"Upload Data to Flow.\"\n\t\t\n\telif hasRole \u003d\u003d False:\n\t\tusersString \u003d \"\"\n\t\tfor role in self.view.custom.RequiredRoles:\n\t\t\tusersString +\u003d role + \"/\"\n\t\treturn \"%s roles are required to Upload Data to Flow.\"%(usersString[0:-1])\n\t\t\n\telif excelDataValid \u003d\u003d False:\n\t\treturn \"You can only upload to Flow with a valid Excel Template.\"\n\t\n\telif excelDataUploaded \u003d\u003d False:\n\t\treturn \"A Valid spreadsheet must be loaded before uploading Data to Flow.\"\n\t\n\telif saving:\n\t\treturn \"Upload already in progress.\"\n\t\n\t\t\n\treturn \"\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "len({view.custom.UploadParameters.ExcelData}) \u003e 0 \u0026\u0026 {this.custom.Saving} \u003d false \u0026\u0026 {view.custom.ExcelValidation.ExcelValid}"
+                  },
+                  "type": "expr"
+                },
+                "persistent": true
+              },
+              "props.style.classes": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "Enabled": "{this.props.enabled}",
+                      "Saving": "{this.custom.Saving}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tenabled \u003d value[\"Enabled\"]\n\tsaving \u003d value[\"Saving\"]\n\tif saving:\n\t\treturn \"ApplicationStandard/Card/Button/Pending\"\n\telif enabled:\n\t\treturn \"ApplicationStandard/Card/Button/Default\"\n\treturn \"ApplicationStandard/Card/Button/Disabled\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "if({this.custom.Saving},\"Uploading\",\"Upload\")"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.textStyle.color": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "Enabled": "{this.props.enabled}",
+                      "Saving": "{this.custom.Saving}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tenabled \u003d value[\"Enabled\"]\n\tsaving \u003d value[\"Saving\"]\n\tif saving:\n\t\treturn \"var(--ccb-11)\"\n\telif enabled:\n\t\treturn \"var(--ccb-09)\"\n\treturn \"\"",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              }
+            },
+            "props": {
+              "enabled": false,
+              "style": {
+                "marginRight": 4
+              },
+              "textStyle": {
+                "fontWeight": "600"
+              }
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tself.view.custom.UploadParameters.ExcelData\u003d []\n\tself.view.custom.CurrentStepIndex \u003d 0"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "Reset"
+            },
+            "position": {
+              "basis": "80px"
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.CurrentStepIndex} \u003d 3"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "image": {
+                "icon": {
+                  "path": "CCBA/autorenew"
+                }
+              },
+              "style": {
+                "classes": "ApplicationStandard/Card/Button/Default",
+                "marginLeft": 4
+              },
+              "text": "Reset",
+              "textStyle": {
+                "color": "var(--ccb-09)",
+                "fontWeight": "600"
+              }
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "Save"
+        },
+        "position": {
+          "basis": "40px",
+          "shrink": 0
+        },
+        "props": {
+          "alignItems": "center",
+          "justify": "center",
+          "style": {
+            "marginTop": 20
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

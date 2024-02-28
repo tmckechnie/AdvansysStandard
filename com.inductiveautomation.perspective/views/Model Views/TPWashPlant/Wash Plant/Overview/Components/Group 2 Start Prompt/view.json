@@ -1,0 +1,282 @@
+{
+  "custom": {
+    "BinLevelTag": {
+      "Enabled": true,
+      "Value": 80,
+      "ValueString": "80 %"
+    },
+    "InterlockPermissive": true,
+    "ManualStartPrompt": {
+      "parameters": {
+        "Label": "Start",
+        "Message": "Are You sure you would like to Start The Group?",
+        "SetValue": true,
+        "TagPath": "[TPWashPlant]Wash Plant/Feed/200G002"
+      },
+      "popupIdentifier": "Group2StartPopup",
+      "viewPath": "Model Views/TPWashPlant/Wash Plant/Overview/Components/Group 2 Start Prompt"
+    },
+    "Running": true,
+    "popName": "Group2StartPopup"
+  },
+  "params": {
+    "TagPath": "[TPWashPlant]Wash Plant/Feed/200G002/Cmd/ManualStart"
+  },
+  "propConfig": {
+    "custom.BinLevelTag": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {},
+          "tagPath": "[TPWashPlant]Wash Plant/Feed/200SEQ001/Cfg/BinLevel"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.InterlockPermissive": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {},
+          "tagPath": "[TPWashPlant]Wash Plant/Feed/200G002/Interlock/Permissive/state"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.ManualStartPrompt": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}Prompt"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Running": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[TPWashPlant]Wash Plant/Feed/200G002/Sts/Running"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.popName": {
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 122,
+      "width": 321
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "LabelMessage",
+          "tooltip": {
+            "enabled": true
+          }
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "meta.tooltip.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.TagPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Popups/Faceplates/HeaderBackground Standard/Popups/Faceplates/HeaderText"
+          },
+          "text": "Wash Plant Sequencer Start"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "LabelNumericEntryField"
+            },
+            "position": {
+              "basis": "320px"
+            },
+            "propConfig": {
+              "props.params.Enable": {
+                "binding": {
+                  "config": {
+                    "expression": "!{view.custom.Running}\u0026\u0026{view.custom.BinLevelTag.Enabled}"
+                  },
+                  "type": "expr"
+                }
+              },
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "fallbackDelay": 2.5,
+                    "mode": "direct",
+                    "tagPath": "[TPWashPlant]Wash Plant/Feed/200SEQ001/Cfg/BinLevel/Value"
+                  },
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "params": {
+                "Format": "0,0.##",
+                "Label": "Max Bin Level",
+                "ShowLabel": true,
+                "Units": ""
+              },
+              "path": "Standard/Components/Faceplates/Input/LabelNumericEntryField"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "BinLevel"
+        },
+        "position": {
+          "basis": "35px",
+          "shrink": 0
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "script": "\tpath \u003d self.view.params.TagPath\n\tvalue \u003d self.view.custom.ManualStartPrompt.parameters.SetValue\n\tresult \u003d system.tag.writeBlocking([path],[value])\n\tif str(result[0]) \u003d\u003d \"Good\":\n\t\tsystem.perspective.closePopup(id\u003dself.view.custom.popName)"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "ButtonAction"
+            },
+            "position": {
+              "basis": "34px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.enabled": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.InterlockPermissive} \u0026\u0026! {view.custom.Running}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Button/Default",
+                "margin": 10
+              },
+              "text": "Start"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "events": {
+              "component": {
+                "onActionPerformed": {
+                  "config": {
+                    "draggable": false,
+                    "id": "{view.custom.popName}",
+                    "modal": false,
+                    "overlayDismiss": false,
+                    "resizable": false,
+                    "showCloseIcon": false,
+                    "type": "close",
+                    "viewPath": "Standard/Implementation Modules/Group/Faceplates/Components/Prompt",
+                    "viewportBound": false
+                  },
+                  "scope": "C",
+                  "type": "popup"
+                }
+              }
+            },
+            "meta": {
+              "name": "ButtonCancel",
+              "tooltip": {
+                "enabled": true
+              }
+            },
+            "position": {
+              "basis": "34px",
+              "grow": 1
+            },
+            "propConfig": {
+              "meta.tooltip.text": {
+                "binding": {
+                  "config": {
+                    "expression": "\"Cancel and Close Popup: \" + {view.custom.popName}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Button/Default",
+                "margin": 10
+              },
+              "text": "Cancel"
+            },
+            "type": "ia.input.button"
+          }
+        ],
+        "meta": {
+          "name": "Command"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Standard/Popups/Faceplates/Background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

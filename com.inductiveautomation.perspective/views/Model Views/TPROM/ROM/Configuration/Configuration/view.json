@@ -1,0 +1,2541 @@
+{
+  "custom": {
+    "Configurations": [
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Siren Local Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Cfg/SirenLocalEnable",
+        "hasChildren": false,
+        "name": "SirenLocalEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787027
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Delay Siren Time",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Cfg/DelaySirenTime",
+        "hasChildren": false,
+        "name": "DelaySirenTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787028
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Siren Auto Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Cfg/SirenAutoEnable",
+        "hasChildren": false,
+        "name": "SirenAutoEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787028
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Override",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Cfg/MotionSwitchOverride",
+        "hasChildren": false,
+        "name": "MotionSwitchOverride",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787028
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Type",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Cfg/MotionSwitchType",
+        "hasChildren": false,
+        "name": "MotionSwitchType",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787029
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Run Duration in Local Mode",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Cfg/LocalRunningTime",
+        "hasChildren": false,
+        "name": "LocalRunningTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787029
+        },
+        "value": 0,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Delay Stop Time",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Cfg/DelayStopTime",
+        "hasChildren": false,
+        "name": "DelayStopTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787029
+        },
+        "value": 0,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Local Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Cfg/MotionSwitchLocalEnable",
+        "hasChildren": false,
+        "name": "MotionSwitchLocalEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787029
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Delay Start Time",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Cfg/DelayStartTime",
+        "hasChildren": false,
+        "name": "DelayStartTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787029
+        },
+        "value": 0,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Reset Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Cfg/MotionSwitchResetEnable",
+        "hasChildren": false,
+        "name": "MotionSwitchResetEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787030
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Siren Manual Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Cfg/SirenManualEnable",
+        "hasChildren": false,
+        "name": "SirenManualEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787030
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Alarms/Communication/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787027
+        },
+        "value": 10,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Alarms/Communication/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1690282841554
+        },
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Alarms/Communication/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787027
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Alarms/LocalStop/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787025
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Alarms/LocalStop/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787025
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Alarms/Available/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787026
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Alarms/Available/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787026
+        },
+        "value": 0,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Alarms/MotionSwitch/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787026
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Alarms/MotionSwitch/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787026
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Alarms/Running/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787025
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/Striker 1/121M001/Alarms/Running/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787025
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Delay Start Time",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Cfg/DelayStartTime",
+        "hasChildren": false,
+        "name": "DelayStartTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786974
+        },
+        "value": 0,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Type",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Cfg/MotionSwitchType",
+        "hasChildren": false,
+        "name": "MotionSwitchType",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786974
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Siren Manual Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Cfg/SirenManualEnable",
+        "hasChildren": false,
+        "name": "SirenManualEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786974
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Siren Local Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Cfg/SirenLocalEnable",
+        "hasChildren": false,
+        "name": "SirenLocalEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786974
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Siren Auto Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Cfg/SirenAutoEnable",
+        "hasChildren": false,
+        "name": "SirenAutoEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786974
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Override",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Cfg/MotionSwitchOverride",
+        "hasChildren": false,
+        "name": "MotionSwitchOverride",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786974
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Local Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Cfg/MotionSwitchLocalEnable",
+        "hasChildren": false,
+        "name": "MotionSwitchLocalEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786974
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Run Duration in Local Mode",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Cfg/LocalRunningTime",
+        "hasChildren": false,
+        "name": "LocalRunningTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786974
+        },
+        "value": 0,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Delay Stop Time",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Cfg/DelayStopTime",
+        "hasChildren": false,
+        "name": "DelayStopTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786974
+        },
+        "value": 20,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Reset Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Cfg/MotionSwitchResetEnable",
+        "hasChildren": false,
+        "name": "MotionSwitchResetEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786974
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Delay Siren Time",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Cfg/DelaySirenTime",
+        "hasChildren": false,
+        "name": "DelaySirenTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786975
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Alarms/Running/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786972
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Alarms/Running/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786972
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Alarms/Available/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786973
+        },
+        "value": 0,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Alarms/Available/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786973
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Alarms/LocalStop/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786972
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Alarms/LocalStop/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786972
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Alarms/Communication/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1690282841304
+        },
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Alarms/Communication/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786973
+        },
+        "value": 10,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Alarms/Communication/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786973
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Alarms/MotionSwitch/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786973
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/CV05/100M005/Alarms/MotionSwitch/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786973
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Local Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Cfg/MotionSwitchLocalEnable",
+        "hasChildren": false,
+        "name": "MotionSwitchLocalEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787005
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Run Duration in Local Mode",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Cfg/LocalRunningTime",
+        "hasChildren": false,
+        "name": "LocalRunningTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787005
+        },
+        "value": 0,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Siren Auto Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Cfg/SirenAutoEnable",
+        "hasChildren": false,
+        "name": "SirenAutoEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787005
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Override",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Cfg/MotionSwitchOverride",
+        "hasChildren": false,
+        "name": "MotionSwitchOverride",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787005
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Delay Start Time",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Cfg/DelayStartTime",
+        "hasChildren": false,
+        "name": "DelayStartTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787005
+        },
+        "value": 0,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Delay Stop Time",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Cfg/DelayStopTime",
+        "hasChildren": false,
+        "name": "DelayStopTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787005
+        },
+        "value": 20,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Reset Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Cfg/MotionSwitchResetEnable",
+        "hasChildren": false,
+        "name": "MotionSwitchResetEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787006
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Delay Siren Time",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Cfg/DelaySirenTime",
+        "hasChildren": false,
+        "name": "DelaySirenTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787006
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Type",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Cfg/MotionSwitchType",
+        "hasChildren": false,
+        "name": "MotionSwitchType",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787006
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Siren Manual Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Cfg/SirenManualEnable",
+        "hasChildren": false,
+        "name": "SirenManualEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787006
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Siren Local Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Cfg/SirenLocalEnable",
+        "hasChildren": false,
+        "name": "SirenLocalEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787007
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Alarms/Available/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787002
+        },
+        "value": 0,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Alarms/Available/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787002
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Alarms/Running/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787000
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Alarms/Running/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787000
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Alarms/LocalStop/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787001
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Alarms/LocalStop/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787001
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Alarms/MotionSwitch/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787001
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Alarms/MotionSwitch/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787002
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Alarms/Communication/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1690282841492
+        },
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Alarms/Communication/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787003
+        },
+        "value": 10,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/CV21/120M003/Alarms/Communication/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787004
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Siren Local Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Cfg/SirenLocalEnable",
+        "hasChildren": false,
+        "name": "SirenLocalEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787055
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Delay Siren Time",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Cfg/DelaySirenTime",
+        "hasChildren": false,
+        "name": "DelaySirenTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787055
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Siren Auto Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Cfg/SirenAutoEnable",
+        "hasChildren": false,
+        "name": "SirenAutoEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787056
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Override",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Cfg/MotionSwitchOverride",
+        "hasChildren": false,
+        "name": "MotionSwitchOverride",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787056
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Delay Start Time",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Cfg/DelayStartTime",
+        "hasChildren": false,
+        "name": "DelayStartTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787056
+        },
+        "value": 0,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Type",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Cfg/MotionSwitchType",
+        "hasChildren": false,
+        "name": "MotionSwitchType",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787056
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Local Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Cfg/MotionSwitchLocalEnable",
+        "hasChildren": false,
+        "name": "MotionSwitchLocalEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787057
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Run Duration in Local Mode",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Cfg/LocalRunningTime",
+        "hasChildren": false,
+        "name": "LocalRunningTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787057
+        },
+        "value": 0,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Delay Stop Time",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Cfg/DelayStopTime",
+        "hasChildren": false,
+        "name": "DelayStopTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787057
+        },
+        "value": 20,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Reset Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Cfg/MotionSwitchResetEnable",
+        "hasChildren": false,
+        "name": "MotionSwitchResetEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787057
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Siren Manual Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Cfg/SirenManualEnable",
+        "hasChildren": false,
+        "name": "SirenManualEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787058
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Alarms/LocalStop/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787051
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Alarms/LocalStop/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787052
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Alarms/Communication/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787054
+        },
+        "value": 10,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Alarms/Communication/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1690282841742
+        },
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Alarms/Communication/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787055
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Alarms/Available/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787053
+        },
+        "value": 0,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Alarms/Available/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787053
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Alarms/MotionSwitch/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787053
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Alarms/MotionSwitch/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787053
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Alarms/Running/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787052
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 1/CV11/110M003/Alarms/Running/Cfg/Enable",
+        "hasChildren": false,
+        "name": "Enable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347787052
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Siren Auto Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/120M002/Cfg/SirenAutoEnable",
+        "hasChildren": false,
+        "name": "SirenAutoEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786943
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Delay Siren Time",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/120M002/Cfg/DelaySirenTime",
+        "hasChildren": false,
+        "name": "DelaySirenTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786943
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Reset Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/120M002/Cfg/MotionSwitchResetEnable",
+        "hasChildren": false,
+        "name": "MotionSwitchResetEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786943
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Siren Local Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/120M002/Cfg/SirenLocalEnable",
+        "hasChildren": false,
+        "name": "SirenLocalEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786943
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Local Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/120M002/Cfg/MotionSwitchLocalEnable",
+        "hasChildren": false,
+        "name": "MotionSwitchLocalEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786944
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Type",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/120M002/Cfg/MotionSwitchType",
+        "hasChildren": false,
+        "name": "MotionSwitchType",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786944
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Motion Switch Override",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/120M002/Cfg/MotionSwitchOverride",
+        "hasChildren": false,
+        "name": "MotionSwitchOverride",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786944
+        },
+        "value": false,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Delay Start Time",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/120M002/Cfg/DelayStartTime",
+        "hasChildren": false,
+        "name": "DelayStartTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786944
+        },
+        "value": 0,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Run Duration in Local Mode",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/120M002/Cfg/LocalRunningTime",
+        "hasChildren": false,
+        "name": "LocalRunningTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786944
+        },
+        "value": 0,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Float4",
+        "documentation": "Delay Stop Time",
+        "engUnit": "s",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/120M002/Cfg/DelayStopTime",
+        "hasChildren": false,
+        "name": "DelayStopTime",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786944
+        },
+        "value": 5,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[security]",
+        "dataType": "Boolean",
+        "documentation": "Siren Manual Enable",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/120M002/Cfg/SirenManualEnable",
+        "hasChildren": false,
+        "name": "SirenManualEnable",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786945
+        },
+        "value": true,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Float4",
+        "documentation": "",
+        "engUnit": "",
+        "formatString": "#,##0.##",
+        "fullPath": "[TPROM]ROM/Level 2/120M002/Alarms/LocalStop/Cfg/Delay",
+        "hasChildren": false,
+        "name": "Delay",
+        "quality": "Good",
+        "tagType": "AtomicTag",
+        "timestamp": {
+          "$": [
+            "ts",
+            192,
+            1692349352098
+          ],
+          "$ts": 1692347786937
+        },
+        "value": 5,
+        "valueSource": "opc"
+      }
+    ],
+    "tags": {
+      "100M005": {},
+      "110M003": {},
+      "120M002": {},
+      "120M003": {},
+      "121M001": {},
+      "Available": {},
+      "Communication": {},
+      "LocalStop": {},
+      "MotionSwitch": {},
+      "Running": {}
+    }
+  },
+  "params": {},
+  "propConfig": {
+    "custom.Configurations": {
+      "binding": {
+        "config": {
+          "struct": {},
+          "waitOnAll": true
+        },
+        "enabled": false,
+        "transforms": [
+          {
+            "code": "\tprovider \u003d \u0027TPROM\u0027\n\tlimit \u003d 100\n\t\n\tquery \u003d {\n\t  \"options\": {\n\t    \"includeUdtMembers\": True,\n\t    \"includeUdtDefinitions\": False\n\t  },\n\t  \"condition\": {\n\t    \"path\": \"*/Cfg*\",\n\t    \"hierarchy\": {\n\t      \"typeId\": \"Application Default/Control Modules/Motor\",\n\t      \"relationship\": \"SubType\"\n\t    },\n\t    \"tagType\": \"AtomicTag\",\n\t    \"attributes\": {\n\t      \"values\": [],\n\t      \"requireAll\": True\n\t    },\n\t    \"valueSource\": \"opc\"\n\t  },\n\t  \"returnProperties\": [\n\t    \"dataType\",\n\t    \"documentation\",\n\t    \"name\",\n\t    \"tagType\",\n\t    \"engUnit\",\n\t    \"quality\",\n\t    \"timestamp\"\n\t  ]\n\t}\n\t\n\t# Limited to 100 rows. Use continuationPoint functionality to continue from last result, \n\t# or remove limit for full results.\n\tresults \u003d system.tag.query(provider, query, limit)\n\treturn results",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "custom.tags": {
+      "binding": {
+        "config": {
+          "struct": {
+            "configurations": "{view.custom.Configurations}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tconfigurations \u003d value[\u0027configurations\u0027]\n\ttags \u003d []\n\tfor config in configurations:\n\t\tfullTagPath \u003d config[\u0027fullPath\u0027]\n\t\tinstanceName \u003d fullTagPath.split(\u0027/\u0027)[-3]\n\t\ttag \u003d {}\n\t\ttag[\u0027FullTagPath\u0027] \u003d fullTagPath\n\t\ttag[\u0027InstanceName\u0027] \u003d instanceName\n\t\ttag[\u0027Tagname\u0027] \u003d config[\u0027name\u0027]\n\t\ttag[\u0027Documentation\u0027] \u003d config[\u0027documentation\u0027]\n\t\ttag[\u0027Value\u0027] \u003d config[\u0027value\u0027]\n\t\ttag[\u0027Quality\u0027] \u003d config[\u0027quality\u0027]\n\t\ttag[\u0027Timestamp\u0027] \u003d config[\u0027timestamp\u0027]\n\t\ttags.append(tag)\n\t\n\tcols \u003d {\"Instance\":{}}\n\tinstances \u003d {}\n\t\n\tfor tag in tags:\n\t\t#cols[tag[\u0027Documentation\u0027]] \u003d {}\n\t\tinstanceName \u003d tag[\u0027InstanceName\u0027]\n\t\tinstances[instanceName]\u003d{}\n\treturn instances",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1
+        },
+        "props": {
+          "data": [
+            {
+              "city": {
+                "align": "center",
+                "editable": true,
+                "justify": "left",
+                "style": {
+                  "backgroundColor": "#F7901D",
+                  "classes": "some-class"
+                },
+                "value": "Folsom"
+              },
+              "country": "United States",
+              "population": 77271
+            },
+            {
+              "city": "Helsinki",
+              "country": "Finland",
+              "population": 635591
+            },
+            {
+              "city": "Jakarta",
+              "country": "Indonesia",
+              "population": 10187595
+            },
+            {
+              "city": "Madrid",
+              "country": "Spain",
+              "population": 3233527
+            },
+            {
+              "city": "Prague",
+              "country": "Czech Republic",
+              "population": 1241664
+            },
+            {
+              "city": "San Diego",
+              "country": "United States",
+              "population": 1406630
+            },
+            {
+              "city": "San Francisco",
+              "country": "United States",
+              "population": 884363
+            },
+            {
+              "city": "Shanghai",
+              "country": "China",
+              "population": 24153000
+            },
+            {
+              "city": "Tokyo",
+              "country": "Japan",
+              "population": 13617000
+            },
+            {
+              "city": "Washington, DC",
+              "country": "United States",
+              "population": 658893
+            },
+            {
+              "city": "Wellington",
+              "country": "New Zealand",
+              "population": 405000
+            },
+            {
+              "city": "Delhi",
+              "country": "India",
+              "population": 11034555
+            },
+            {
+              "city": "Dhaka",
+              "country": "Bangladesh",
+              "population": 14399000
+            },
+            {
+              "city": "Lagos",
+              "country": "Nigeria",
+              "population": 16060303
+            },
+            {
+              "city": "Karachi",
+              "country": "Pakistan",
+              "population": 14910352
+            },
+            {
+              "city": "Istanbul",
+              "country": "Turkey",
+              "population": 14025000
+            },
+            {
+              "city": "Cairo",
+              "country": "Egypt",
+              "population": 10230350
+            },
+            {
+              "city": "Mexico City",
+              "country": "Mexico",
+              "population": 8974724
+            },
+            {
+              "city": "London",
+              "country": "United Kingdom",
+              "population": 8825001
+            },
+            {
+              "city": "New York City",
+              "country": "United States",
+              "population": 8622698
+            },
+            {
+              "city": "Tehran",
+              "country": "Iran",
+              "population": 8154051
+            },
+            {
+              "city": "Bogota",
+              "country": "Colombia",
+              "population": 7878783
+            },
+            {
+              "city": "Rio de Janeiro",
+              "country": "Brazil",
+              "population": 6429923
+            },
+            {
+              "city": "Riyadh",
+              "country": "Saudi Arabia",
+              "population": 5676621
+            },
+            {
+              "city": "Singapore",
+              "country": "Singapore",
+              "population": 5535000
+            },
+            {
+              "city": "Saint Petersburg",
+              "country": "Russia",
+              "population": 5191690
+            },
+            {
+              "city": "Sydney",
+              "country": "Australia",
+              "population": 208374
+            },
+            {
+              "city": "Abidjan",
+              "country": "Ivory Coast",
+              "population": 4765000
+            },
+            {
+              "city": "Dar es Salaam",
+              "country": "Tanzania",
+              "population": 4364541
+            },
+            {
+              "city": "Wellington",
+              "country": "New Zealand",
+              "population": 405000
+            },
+            {
+              "city": "Los Angeles",
+              "country": "United States",
+              "population": 3884307
+            },
+            {
+              "city": "Berlin",
+              "country": "Germany",
+              "population": 3517424
+            },
+            {
+              "city": "Jeddah",
+              "country": "Saudi Arabia",
+              "population": 3456259
+            },
+            {
+              "city": "Kabul",
+              "country": "Afghanistan",
+              "population": 3414100
+            },
+            {
+              "city": "Mashhad",
+              "country": "Iran",
+              "population": 3001184
+            },
+            {
+              "city": "Milan",
+              "country": "Italy",
+              "population": 1359905
+            },
+            {
+              "city": "Kiev",
+              "country": "Ukraine",
+              "population": 2908703
+            },
+            {
+              "city": "Rome",
+              "country": "Italy",
+              "population": 2877215
+            },
+            {
+              "city": "Chicago",
+              "country": "United States",
+              "population": 2695598
+            },
+            {
+              "city": "Osaka",
+              "country": "Japan",
+              "population": 2691742
+            },
+            {
+              "city": "Bandung",
+              "country": "Indonesia",
+              "population": 2575478
+            },
+            {
+              "city": "Managua",
+              "country": "Nicaragua",
+              "population": 2560789
+            },
+            {
+              "city": "Paris",
+              "country": "France",
+              "population": 2229621
+            },
+            {
+              "city": "Shiraz",
+              "country": "Iran",
+              "population": 1869001
+            },
+            {
+              "city": "Manila",
+              "country": "Philippines",
+              "population": 1780148
+            },
+            {
+              "city": "Montreal",
+              "country": "Canada",
+              "population": 1649519
+            },
+            {
+              "city": "Guadalajara",
+              "country": "Mexico",
+              "population": 1495189
+            },
+            {
+              "city": "Dallas",
+              "country": "United States",
+              "population": 1317929
+            },
+            {
+              "city": "Yerevan",
+              "country": "Armenia",
+              "population": 1060138
+            },
+            {
+              "city": "Tunis",
+              "country": "Tunisia",
+              "population": 1056247
+            }
+          ]
+        },
+        "type": "ia.display.table"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

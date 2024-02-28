@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100M100"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
   },
   "propConfig": {
     "params.TagPath": {
@@ -76,6 +76,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
+                    "Expanded": true,
                     "Title": "General"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"
@@ -127,6 +128,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
+                    "Expanded": true,
                     "Title": "Control"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"
@@ -166,7 +168,7 @@
                 "viewParams": {},
                 "viewPath": "Standard/Control Modules/Motor/Faceplates/Components/Configuration/Alarms"
               },
-              "expanded": false,
+              "expanded": true,
               "header": {
                 "content": {
                   "style": {
@@ -177,6 +179,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
+                    "Expanded": true,
                     "Title": "Alarms"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"

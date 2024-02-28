@@ -1,0 +1,443 @@
+{
+  "custom": {
+    "TagPaths": {
+      "Motor": "[TPROM]ROM/CV01/100M001",
+      "Totaliser": "[TPROM]ROM/CV01/100WQ001",
+      "WeightTransmitter": "[TPROM]ROM/CV01/100WT001"
+    }
+  },
+  "params": {
+    "FolderPath": "[TPROM]ROM/CV01"
+  },
+  "propConfig": {
+    "custom.TagPaths": {
+      "binding": {
+        "config": {
+          "struct": {
+            "folderPath": "{view.params.FolderPath}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\t#return value\n\tpath \u003d value[\u0027folderPath\u0027]\n\t \n\t#tags \u003d system.tag.browse(path\u003dpath, filter\u003d{})\n\t\n\tprovider \u003d path.split(\u0027]\u0027)[0].replace(\u0027[\u0027,\u0027\u0027)\n\tlimit \u003d 100\n\t\n\tquery \u003d {\"options\": {\"includeUdtMembers\": True,\"includeUdtDefinitions\": False},\n\t  \"condition\": {\"path\": path + \"*Metadata/ContainedName\",\"attributes\": {\"values\": [],\"requireAll\": True}},\n\t  \"returnProperties\": [\"tagType\",\"quality\" ]}\n\tresults \u003d system.tag.query(provider, query, limit)\n\tlookup \u003d {}\n\tfor result in results:\n\t\tcomponentType \u003d result[\u0027value\u0027]\n\t\tif len(componentType.value)\u003e0:\n\t\t\tfullTagPath \u003d str(result[\u0027fullPath\u0027])\n\t\t\tcomponentType \u003d componentType.value.replace(\u0027 \u0027,\u0027\u0027)\n\t\t\tlookup[componentType] \u003d fullTagPath.replace(\u0027/Metadata/ContainedName\u0027,\u0027\u0027)\n\treturn lookup\n",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    },
+    "params.FolderPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 249,
+      "width": 440
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "White pilot light 3"
+        },
+        "position": {
+          "height": 247,
+          "width": 51.410000000000004,
+          "x": 1.8,
+          "y": 0.23
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M 190 490 L 160 490 Q 120 490 110 460 L 20 280 Q 0 240 20 200 L 110 30 Q 130 10 160 10 L 190 10 L 190 220 L 220 220 L 220 260 L 190 260 Z",
+              "fill": {
+                "paint": "#D5D5D5"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#555555",
+                "width": 2
+              },
+              "type": "path"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 220 500"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "White pilot light 4"
+        },
+        "position": {
+          "height": 19,
+          "width": 39.81,
+          "x": 45.58,
+          "y": 108.73
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M 0 200 L 0 0 L 200 0 L 200 200 Z",
+              "fill": {
+                "paint": "#555555"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#555555",
+                "width": 2
+              },
+              "type": "path"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 200 200"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "White pilot light 5"
+        },
+        "position": {
+          "height": 162,
+          "width": 373.15,
+          "x": 61.87,
+          "y": 38.15
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M 0 200 L 0 0 L 200 0 L 200 200 Z",
+              "fill": {
+                "paint": "#D5D5D5"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#555555",
+                "width": 2
+              },
+              "type": "path"
+            }
+          ],
+          "preserveAspectRatio": "none",
+          "viewBox": "0 0 200 200"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Motor"
+        },
+        "position": {
+          "height": 42.81999999999999,
+          "width": 41.46000000000001,
+          "x": 182.93937499999998,
+          "y": 37.760225
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.TagPaths}[{this.meta.name}]"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            }
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/Motor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "MotorCurrent"
+        },
+        "position": {
+          "height": 40.150000000000006,
+          "width": 127.70000000000002,
+          "x": 218.29,
+          "y": 39.4075
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.TagPaths}[{this.meta.name}]"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": true,
+              "AbbreviationOverwrite": "A"
+            }
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "MotorDETemperature"
+        },
+        "position": {
+          "height": 40.14000000000001,
+          "width": 127.7,
+          "x": 60.89,
+          "y": 85.98
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.TagPaths}[{this.meta.name}]"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": true,
+              "AbbreviationOverwrite": "DET"
+            }
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "MotorNDETemperature"
+        },
+        "position": {
+          "height": 40.14,
+          "width": 127.69999999999999,
+          "x": 307.54,
+          "y": 87.75
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.TagPaths}[{this.meta.name}]"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": true,
+              "AbbreviationOverwrite": "NDE"
+            }
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "MotorWinding3Temperature"
+        },
+        "position": {
+          "height": 40.150000000000006,
+          "width": 127.69999999999999,
+          "x": 183.12,
+          "y": 162.69
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.TagPaths}[{this.meta.name}]"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": true,
+              "AbbreviationOverwrite": "WT3"
+            }
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "MotorWinding1Temperature"
+        },
+        "position": {
+          "height": 40.14,
+          "width": 127.69999999999999,
+          "x": 183.2,
+          "y": 88.32
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.TagPaths}[{this.meta.name}]"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": true,
+              "AbbreviationOverwrite": "WT1"
+            }
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "MotorDEVibration"
+        },
+        "position": {
+          "height": 40.150000000000006,
+          "width": 127.7,
+          "x": 60.89,
+          "y": 162.61
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.TagPaths}[{this.meta.name}]"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": true,
+              "AbbreviationOverwrite": "DEV"
+            }
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label2Motor"
+        },
+        "position": {
+          "height": 26.769999999999996,
+          "width": 101.17000000000002,
+          "x": 65.1975625,
+          "y": 37.689425
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.TagPaths}[replace({this.meta.name},\u0027Label2\u0027,\u0027\u0027)]"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "MotorWinding2Temperature"
+        },
+        "position": {
+          "height": 40.13999999999999,
+          "width": 127.69999999999999,
+          "x": 183.12,
+          "y": 124.96
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.TagPaths}[{this.meta.name}]"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": true,
+              "AbbreviationOverwrite": "WT2"
+            }
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "LabelMotor"
+        },
+        "position": {
+          "height": 26.769999999999996,
+          "width": 101.17000000000002,
+          "x": 183.135,
+          "y": 2.90815
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.TagPaths}[replace({this.meta.name},\u0027Label\u0027,\u0027\u0027)]"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/Description"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

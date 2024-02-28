@@ -1,0 +1,108 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 200,
+      "width": 180
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px",
+          "shrink": 0
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/HeadingText"
+          },
+          "text": "Valve"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "height": 25,
+              "width": 100,
+              "x": 38,
+              "y": -1.5
+            },
+            "props": {
+              "params": {
+                "InstanceTagPath": "/Metadata/InstanceName",
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Positioner"
+              },
+              "path": "Standard/Components/Symbols/Label"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "SymbolDiverter"
+            },
+            "position": {
+              "height": 40,
+              "width": 40,
+              "x": 60,
+              "y": 64
+            },
+            "props": {
+              "params": {
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Positioner"
+              },
+              "path": "Standard/Control Modules/Valve/Symbols/Diverter"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Sequence"
+            },
+            "position": {
+              "height": 40,
+              "width": 150,
+              "x": 15,
+              "y": 18
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "AbbreviationOverwrite": "",
+                  "InstanceNameOverwrite": ""
+                },
+                "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Positioner"
+              },
+              "path": "Standard/Control Modules/Positioner/Symbols/Sequence"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

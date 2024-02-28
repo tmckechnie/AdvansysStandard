@@ -166,7 +166,7 @@
                 "viewParams": {},
                 "viewPath": "Standard/Control Modules/AnalogInput/Faceplates/Components/Diagnostics/Alarms"
               },
-              "expanded": false,
+              "expanded": true,
               "header": {
                 "content": {
                   "style": {
@@ -177,6 +177,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
+                    "Expanded": true,
                     "Title": "Alarms"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"

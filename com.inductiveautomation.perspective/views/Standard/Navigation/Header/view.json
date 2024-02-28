@@ -133,6 +133,91 @@
                 },
                 "text": "Menu Bar",
                 "type": "method"
+              },
+              {
+                "children": [
+                  {
+                    "children": [],
+                    "icon": {
+                      "color": "",
+                      "path": "",
+                      "style": {}
+                    },
+                    "link": {
+                      "target": "self",
+                      "url": ""
+                    },
+                    "message": {
+                      "payload": {},
+                      "scope": "page",
+                      "type": ""
+                    },
+                    "method": {
+                      "name": "ChangeTheme",
+                      "params": {
+                        "Theme": "Light"
+                      }
+                    },
+                    "style": {
+                      "classes": ""
+                    },
+                    "text": "Light",
+                    "type": "method"
+                  },
+                  {
+                    "children": [],
+                    "icon": {
+                      "color": "",
+                      "path": "",
+                      "style": {}
+                    },
+                    "link": {
+                      "target": "self",
+                      "url": ""
+                    },
+                    "message": {
+                      "payload": {},
+                      "scope": "page",
+                      "type": ""
+                    },
+                    "method": {
+                      "name": "ChangeTheme",
+                      "params": {
+                        "Theme": "Dark"
+                      }
+                    },
+                    "style": {
+                      "classes": ""
+                    },
+                    "text": "Dark",
+                    "type": "method"
+                  }
+                ],
+                "icon": {
+                  "color": "",
+                  "path": "material/power_input",
+                  "style": {}
+                },
+                "link": {
+                  "target": "self",
+                  "url": ""
+                },
+                "message": {
+                  "payload": {},
+                  "scope": "page",
+                  "type": ""
+                },
+                "method": {
+                  "name": "ChangeNavigationType",
+                  "params": {
+                    "NavigationType": "Menu Bar"
+                  }
+                },
+                "style": {
+                  "classes": ""
+                },
+                "text": "Theme",
+                "type": "submenu"
               }
             ]
           },
@@ -181,6 +266,13 @@
                 "NavigationType"
               ],
               "script": "\tsystem.perspective.print(\"Change NavigationType: \"+NavigationType)\n\theaderViewPath \u003d self.view.custom.HeaderView\n\tsystem.perspective.print(\"Change NavigationType From: \" + self.view.custom.HeaderView)\n\t\n\tif NavigationType \u003d\u003d \"Default\":\n\t\tself.view.custom.HeaderView \u003d self.view.params.HeaderView\n\t\t\n\tif NavigationType \u003d\u003d \"Menu Bar\":\n\t\theaderViewPath \u003d \"Standard/Navigation/Header Menu Bar\"\n\t\t\n\tif NavigationType \u003d\u003d \"Breadcrumb\":\n\t\theaderViewPath \u003d \"Standard/Navigation/Header Breadcrumb\"\n\t\n\tsystem.perspective.print(\"Change NavigationType To: \" + headerViewPath)\n\tself.view.custom.HeaderView \u003d headerViewPath\n\t"
+            },
+            {
+              "name": "ChangeTheme",
+              "params": [
+                "Theme"
+              ],
+              "script": "\t# implement your method here\n\tif Theme \u003d\u003d \u0027Light\u0027:\n\t\tself.session.props.theme \u003d \u0027standard\u0027\n\tif Theme \u003d\u003d \u0027Dark\u0027:\n\t\tself.session.props.theme \u003d \u0027standard-dark\u0027\n\t\t"
             }
           ],
           "extensionFunctions": null,

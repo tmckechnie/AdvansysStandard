@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
   },
   "propConfig": {
     "params.TagPath": {
@@ -92,6 +92,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
+                    "Expanded": false,
                     "Title": "General"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"
@@ -143,6 +144,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
+                    "Expanded": false,
                     "Title": "Input"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"
@@ -194,6 +196,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
+                    "Expanded": false,
                     "Title": "Status"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"
@@ -245,6 +248,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
+                    "Expanded": false,
                     "Title": "Output"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"

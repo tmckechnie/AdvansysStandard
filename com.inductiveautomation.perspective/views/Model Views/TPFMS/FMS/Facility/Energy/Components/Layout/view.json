@@ -1,0 +1,251 @@
+{
+  "custom": {
+    "key": {
+      "siteCurrentPowerFlow": {
+        "GRID": {
+          "currentPower": 0,
+          "status": "Active"
+        },
+        "LOAD": {
+          "currentPower": 153.77,
+          "status": "Active"
+        },
+        "PV": {
+          "currentPower": 153.77,
+          "status": "Active"
+        },
+        "connections": [
+          {
+            "from": "PV",
+            "to": "Load"
+          }
+        ],
+        "unit": "kW",
+        "updateRefreshRate": 3
+      }
+    }
+  },
+  "params": {},
+  "propConfig": {
+    "custom.key": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "publishInitial": false,
+          "tagPath": "[TPFMS]FMS/Facility/Energy/Solar/SE1331806/Power/CurrentPowerFlow"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Measure"
+            },
+            "position": {
+              "height": 105,
+              "width": 231,
+              "x": 20,
+              "y": 9
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "MaxValue": 52,
+                  "MeasureTagPath": "System/Frequency",
+                  "MinValue": 45,
+                  "ShowAlarmOutLine": true
+                },
+                "TagPath": "[TPFMS]FMS/Facility/Energy/Power Meters/IEC/Three Phase"
+              },
+              "path": "Standard/Device Modules/Three Phase Power Meter/Symbols/Measure"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "MeasureApparentPower"
+            },
+            "position": {
+              "height": 105,
+              "width": 231,
+              "x": 53,
+              "y": 347.5
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "MaxValue": null,
+                  "MeasureTagPath": "System/Apparent Power",
+                  "MinValue": null,
+                  "ShowAlarmOutLine": true
+                },
+                "TagPath": "[TPFMS]FMS/Facility/Energy/Power Meters/IEC/Three Phase"
+              },
+              "path": "Standard/Device Modules/Three Phase Power Meter/Symbols/Measure"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Measure_0"
+            },
+            "position": {
+              "height": 105,
+              "width": 231,
+              "x": 298,
+              "y": 9
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "Label": null,
+                  "MaxValue": null,
+                  "MeasureTagPath": "Power/PV",
+                  "MinValue": null,
+                  "ShowAlarmOutLine": true
+                },
+                "TagPath": "[TPFMS]FMS/Facility/Energy/Solar/SE1331806"
+              },
+              "path": "Standard/Device Modules/Solar/Symbols/Measure"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Measure_1"
+            },
+            "position": {
+              "height": 105,
+              "width": 231,
+              "x": 298,
+              "y": 211
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "Label": null,
+                  "MaxValue": null,
+                  "MeasureTagPath": "Power/Load",
+                  "MinValue": null,
+                  "ShowAlarmOutLine": true
+                },
+                "TagPath": "[TPFMS]FMS/Facility/Energy/Solar/SE1331806"
+              },
+              "path": "Standard/Device Modules/Solar/Symbols/Measure"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "MeasureApparentPower_0"
+            },
+            "position": {
+              "height": 105,
+              "width": 231,
+              "x": 298,
+              "y": 341
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "MaxValue": null,
+                  "MeasureTagPath": "System/Active Power",
+                  "MinValue": null,
+                  "ShowAlarmOutLine": true
+                },
+                "TagPath": "[TPFMS]FMS/Facility/Energy/Power Meters/IEC/Three Phase"
+              },
+              "path": "Standard/Device Modules/Three Phase Power Meter/Symbols/Measure"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "MeasureApparentPower_1"
+            },
+            "position": {
+              "height": 105,
+              "width": 231,
+              "x": 553,
+              "y": 347
+            },
+            "props": {
+              "params": {
+                "Cfg": {
+                  "MaxValue": null,
+                  "MeasureTagPath": "System/Apparent Power",
+                  "MinValue": null,
+                  "ShowAlarmOutLine": true
+                },
+                "TagPath": "[TPFMS]FMS/Facility/Energy/Power Meters/IEC/Three Phase"
+              },
+              "path": "Standard/Device Modules/Three Phase Power Meter/Symbols/Measure"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "props": {
+          "pipes": [
+            {
+              "appearance": "p\u0026id",
+              "end": "arrowOutward",
+              "fill": "",
+              "flanges": true,
+              "lineVariant": "solid",
+              "name": "pipe",
+              "origin": {
+                "connections": [
+                  {
+                    "x": 413.5,
+                    "y": 211
+                  }
+                ],
+                "x": 413.5,
+                "y": 114
+              },
+              "start": "arrowInward",
+              "stroke": "#7DC407",
+              "visible": true,
+              "width": 4
+            }
+          ]
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "IFrame"
+        },
+        "position": {
+          "basis": "200px"
+        },
+        "props": {
+          "src": "http://ign01vs1:4501/flow-software/flow/instances/7BFB45BD-D51F-4E9E-8B3F-DEB6885F688D/server/charts/34?toolbar\u003dfalse"
+        },
+        "type": "ia.display.iframe"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

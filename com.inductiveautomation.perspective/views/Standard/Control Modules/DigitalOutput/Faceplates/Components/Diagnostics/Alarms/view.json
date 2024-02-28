@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalOutput"
+    "TagPath": "[TPOpnim]Control Modules/Rh_UV_6025A"
   },
   "propConfig": {
     "params.TagPath": {
@@ -31,7 +31,7 @@
               "config": {
                 "fallbackDelay": 2.5,
                 "mode": "expression",
-                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
+                "tagPath": "{view.params.TagPath} + \"/Alarms/\"+{this.meta.name}+\"/Sts/Active\""
               },
               "transforms": [
                 {
@@ -97,7 +97,7 @@
               "config": {
                 "fallbackDelay": 2.5,
                 "mode": "expression",
-                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
+                "tagPath": "{view.params.TagPath} + \"/Alarms/\"+{this.meta.name}+\"/Sts/Active\""
               },
               "transforms": [
                 {
@@ -163,7 +163,7 @@
               "config": {
                 "fallbackDelay": 2.5,
                 "mode": "expression",
-                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
+                "tagPath": "{view.params.TagPath} + \"/Alarms/\"+{this.meta.name}+\"/Sts/Active\""
               },
               "transforms": [
                 {

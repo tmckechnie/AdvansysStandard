@@ -8,21 +8,33 @@
       "ParentTagProviderFolderPath": ""
     },
     "TagProviders": [
-      "[TPPlant1]",
-      "[TPPlant2]",
+      "[TPPressplant]",
       "[TPROM]",
       "[StandardS71500]",
-      "[TPJellyFactory]",
-      "[TPPackaging]",
+      "[TPFMS]",
+      "[TPMES]",
+      "[MQTT Engine]",
+      "[MES Metrics]",
       "[Utilities]",
       "[TPSite]",
       "[default]",
       "[TPWashPlant]",
-      "[AdvansysStandard]",
-      "[TOPSERVER]",
+      "[TPOpnim]",
       "[TPPower]",
       "[TPPSCV01003]",
+      "[MQTT Transmission]",
+      "[MES]",
       "[TPJellyFactoryStandard]",
+      "[TPPlant1]",
+      "[TPPlant2]",
+      "[TPJellyFactory]",
+      "[TPPackaging]",
+      "[AdvansysPublic_MQTT_Engine]",
+      "[TPPerformance]",
+      "[CCBA]",
+      "[AdvansysStandard]",
+      "[TOPSERVER]",
+      "[MQTT Distributor]",
       "[BATHeidelberg]"
     ],
     "derivedFromUDTFolder": "S71500",
@@ -46,6 +58,7 @@
                   "documentation": "Version 20230623",
                   "name": "Enumeration",
                   "parameters": {
+                    "ContainedName": "{datatype\u003dString, value\u003d}",
                     "Description": "{datatype\u003dString, value\u003dnull}",
                     "HistoryModelPathPrefix": "{datatype\u003dString, value\u003dnull}",
                     "HistoryStorageProvider": "{datatype\u003dString, value\u003dStandard}",
@@ -103,6 +116,16 @@
                         },
                         {
                           "dataType": "String",
+                          "documentation": "Contained Name",
+                          "name": "ContainedName",
+                          "path": "ContainedName",
+                          "readOnly": true,
+                          "tagType": "AtomicTag",
+                          "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                          "valueSource": "memory"
+                        },
+                        {
+                          "dataType": "String",
                           "name": "StandardViewPath",
                           "path": "StandardViewPath",
                           "tagType": "AtomicTag",
@@ -113,6 +136,7 @@
                           "dataType": "String",
                           "eventScripts": [
                             {
+                              "enabled": false,
                               "eventid": "valueChanged",
                               "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                             }
@@ -125,11 +149,12 @@
                         },
                         {
                           "dataType": "String",
+                          "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                           "name": "TagProvider",
                           "path": "TagProvider",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "String",
@@ -334,6 +359,7 @@
                   "documentation": "Version 20230623",
                   "name": "Value",
                   "parameters": {
+                    "ContainedName": "{datatype\u003dString, value\u003d}",
                     "Description": "{datatype\u003dString, value\u003dnull}",
                     "EngUnits": "{datatype\u003dString, value\u003d}",
                     "FormatString": "{datatype\u003dString, value\u003d#,##0.##}",
@@ -476,11 +502,12 @@
                       "tags": [
                         {
                           "dataType": "String",
+                          "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                           "name": "TagProvider",
                           "path": "TagProvider",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "String",
@@ -513,6 +540,7 @@
                           "dataType": "String",
                           "eventScripts": [
                             {
+                              "enabled": false,
                               "eventid": "valueChanged",
                               "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                             }
@@ -522,6 +550,16 @@
                           "path": "PathToParentFolder",
                           "tagType": "AtomicTag",
                           "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "String",
+                          "documentation": "Contained Name",
+                          "name": "ContainedName",
+                          "path": "ContainedName",
+                          "readOnly": true,
+                          "tagType": "AtomicTag",
+                          "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                          "valueSource": "memory"
                         },
                         {
                           "dataType": "String",
@@ -556,9 +594,327 @@
               ]
             },
             {
+              "documentation": "Version 20230623",
+              "name": "Equipment",
+              "parameters": {
+                "ContainedName": "{datatype\u003dString, value\u003d}",
+                "Description": "{datatype\u003dString, value\u003dnull}",
+                "HistoryModelPathPrefix": "{datatype\u003dString, value\u003dnull}",
+                "HistoryStorageProvider": "{datatype\u003dString, value\u003dStandard}",
+                "IMPath": "{datatype\u003dString, value\u003d{bindType\u003dparameter, binding\u003d{InstanceName}}}",
+                "OPCPath": "{datatype\u003dString, value\u003dnull}",
+                "OPCServerName": "{datatype\u003dString, value\u003dIgnition OPC UA Server}",
+                "ParentTagProviderFolderPath": "{datatype\u003dString, value\u003d}",
+                "ShortDescription": "{datatype\u003dString, value\u003d }",
+                "StandardViewPath": "{datatype\u003dString, value\u003dnull}",
+                "Version": "{datatype\u003dString, value\u003d2.2023.195.16.35}"
+              },
+              "path": "Equipment",
+              "tagType": "UdtType",
+              "tags": [
+                {
+                  "name": "Id",
+                  "path": "Id",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "dataType": "Boolean",
+                      "name": "SelfIdentifyRequest",
+                      "path": "SelfIdentifyRequest",
+                      "tagType": "AtomicTag",
+                      "value": false,
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "Boolean",
+                      "documentation": "Request from Owner to Identify Children",
+                      "expression": "if({[.]Owner}\u003d{[.]Self} || {[.]Owner}\u003d\"\",\r\n\t{[.]SelfIdentifyRequest},\r\n\ttag({[.]OwnerTagPath}+\"/Id/SelfIdentifyRequest\")\r\n)",
+                      "name": "OwnerIdentifyRequest",
+                      "path": "OwnerIdentifyRequest",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "valueSource": "expr"
+                    },
+                    {
+                      "dataType": "String",
+                      "enabled": true,
+                      "name": "Owner",
+                      "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{InstanceName}\".\"CM\".\"Id\".\"{TagName}\"}",
+                      "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
+                      "path": "Owner",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
+                      "enabled": true,
+                      "name": "Self",
+                      "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{InstanceName}\".\"CM\".\"Id\".\"{TagName}\"}",
+                      "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
+                      "path": "Self",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
+                      "expression": "if({[.]Owner}\u003d{[.]Self} || {[.]Owner}\u003d\"\",\r\n\t\"[\"+{[.]../Metadata/TagProvider}+\"]\"+{[.]../Metadata/InstancePath},\r\n\trunScript(\"Standard.Modules.Common.GetModuleTagPath\",0,{[.]../Metadata/TagProvider},{[.]Owner},\u0027DB,#\u0027)\r\n\r\n)\r\n",
+                      "name": "OwnerTagPath",
+                      "path": "OwnerTagPath",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "valueSource": "expr"
+                    },
+                    {
+                      "dataType": "Boolean",
+                      "documentation": "Highlights a symbol to Identify it",
+                      "expression": "{[.]SelfIdentifyRequest}||{[.]OwnerIdentifyRequest}",
+                      "name": "Identify",
+                      "path": "Identify",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": false,
+                      "valueSource": "expr"
+                    }
+                  ]
+                },
+                {
+                  "name": "Performance",
+                  "path": "Performance",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "Produced Rejected",
+                      "path": "Produced Rejected",
+                      "tagType": "AtomicTag",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "name": "Quality",
+                      "path": "Quality",
+                      "tagType": "AtomicTag",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "name": "Produced Total",
+                      "path": "Produced Total",
+                      "tagType": "AtomicTag",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "name": "Utilization",
+                      "path": "Utilization",
+                      "tagType": "AtomicTag",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "name": "Produced Good",
+                      "path": "Produced Good",
+                      "tagType": "AtomicTag",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "name": "Availability",
+                      "path": "Availability",
+                      "tagType": "AtomicTag",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "Float4",
+                      "name": "Throughput",
+                      "path": "Throughput",
+                      "tagType": "AtomicTag",
+                      "valueSource": "memory"
+                    }
+                  ]
+                },
+                {
+                  "dataType": "String",
+                  "name": "Version",
+                  "path": "Version",
+                  "readOnly": true,
+                  "tagType": "AtomicTag",
+                  "value": "{bindType\u003dparameter, binding\u003d{Version}}",
+                  "valueSource": "memory"
+                },
+                {
+                  "name": "Context",
+                  "path": "Context",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "dataType": "String",
+                      "name": "Product Name",
+                      "path": "Product Name",
+                      "tagType": "AtomicTag",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
+                      "name": "Batch Number",
+                      "path": "Batch Number",
+                      "tagType": "AtomicTag",
+                      "valueSource": "memory"
+                    }
+                  ]
+                },
+                {
+                  "documentation": "Status",
+                  "name": "Status",
+                  "path": "Status",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "name": "STD",
+                      "path": "STD",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "dataType": "Document",
+                          "expression": "jsonGet({[.]../Datasourse},\u0027State[\"STD (min)\"][\"Minutely\"][\"Production (Calendar)\"][\"State\"]\u0027)",
+                          "name": "States",
+                          "path": "States",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Float4",
+                          "expression": "jsonGet({[.]../Datasourse},\u0027State[\"STD (min)\"][\"Minutely\"][\"Production (Calendar)\"][\"Value\"]\u0027)",
+                          "name": "Value",
+                          "path": "Value",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
+                        }
+                      ]
+                    },
+                    {
+                      "dataType": "String",
+                      "name": "Mode",
+                      "path": "Mode",
+                      "tagType": "AtomicTag",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "Document",
+                      "name": "Datasourse",
+                      "path": "Datasourse",
+                      "tagType": "AtomicTag",
+                      "valueSource": "reference"
+                    },
+                    {
+                      "dataType": "String",
+                      "name": "State",
+                      "path": "State",
+                      "tagType": "AtomicTag",
+                      "value": "",
+                      "valueSource": "memory"
+                    }
+                  ],
+                  "tooltip": "Status"
+                },
+                {
+                  "name": "Metadata",
+                  "path": "Metadata",
+                  "tagType": "Folder",
+                  "tags": [
+                    {
+                      "dataType": "String",
+                      "name": "InstanceName",
+                      "path": "InstanceName",
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{InstanceName}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
+                      "name": "StandardViewPath",
+                      "path": "StandardViewPath",
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{StandardViewPath}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
+                      "eventScripts": [
+                        {
+                          "enabled": false,
+                          "eventid": "valueChanged",
+                          "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
+                        }
+                      ],
+                      "expression": "replace({PathToParentFolder},\"/\"+{InstanceName}+\"/Metadata\",\"\")",
+                      "name": "PathToParentFolder",
+                      "path": "PathToParentFolder",
+                      "tagType": "AtomicTag",
+                      "valueSource": "expr"
+                    },
+                    {
+                      "dataType": "String",
+                      "documentation": "Path From Main Model",
+                      "expression": "//Get Start of Parent Model Path\r\nif({ParentTagProviderFolderPath}\u003d\"\",\"\",\r\n\t\tsubstring({ParentTagProviderFolderPath},indexOf({ParentTagProviderFolderPath},\"]\")+1) + \"/\"\r\n\t)\r\n+ \r\n\r\n{[.]PathToParentFolder} + \"/\" + {InstanceName}",
+                      "name": "ModelPath",
+                      "path": "ModelPath",
+                      "tagType": "AtomicTag",
+                      "valueSource": "expr"
+                    },
+                    {
+                      "dataType": "String",
+                      "name": "Description",
+                      "path": "Description",
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{Description}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
+                      "expression": "if({ShortDescription}\u003d\"\",{Description},{ShortDescription})",
+                      "name": "ShortDescription",
+                      "path": "ShortDescription",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{Description}}",
+                      "valueSource": "expr"
+                    },
+                    {
+                      "dataType": "String",
+                      "expression": "replace({PathToTag},\"/Metadata/InstancePath\",\"\")",
+                      "name": "InstancePath",
+                      "path": "InstancePath",
+                      "tagType": "AtomicTag",
+                      "valueSource": "expr"
+                    },
+                    {
+                      "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
+                      "name": "TagProvider",
+                      "path": "TagProvider",
+                      "tagType": "AtomicTag",
+                      "value": "",
+                      "valueSource": "expr"
+                    }
+                  ]
+                }
+              ],
+              "typeId": "Standard/Implementation Modules/Equipment"
+            },
+            {
               "documentation": "{bindType\u003dparameter, binding\u003d{InstanceName}}",
               "name": "Interlock",
               "parameters": {
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "HistoryModelPathPrefix": "{datatype\u003dString, value\u003d[StandardS71500/default:default]CAN01VS1/StandardS71500}",
                 "HistoryStorageProvider": "{datatype\u003dString, value\u003dStandardS71500}",
@@ -677,6 +1033,7 @@
                       "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -707,11 +1064,12 @@
                     },
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     },
                     {
                       "dataType": "String",
@@ -720,6 +1078,16 @@
                       "path": "InstancePath",
                       "tagType": "AtomicTag",
                       "valueSource": "expr"
+                    },
+                    {
+                      "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
                     },
                     {
                       "dataType": "String",
@@ -737,22 +1105,13 @@
                   "tagType": "Folder",
                   "tags": [
                     {
-                      "dataType": "Document",
-                      "name": "Sts_duplicate_1",
-                      "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{IMPath}\".\"{TagName}\"}",
-                      "opcServer": "1500",
-                      "path": "Sts_duplicate_1",
-                      "tagType": "AtomicTag",
-                      "valueSource": "opc"
-                    },
-                    {
                       "name": "Interlock2",
                       "path": "Interlock2",
                       "tagType": "Folder",
                       "tags": [
                         {
                           "dataType": "Document",
-                          "expression": "runScript(\"Standard.Modules.Common.GetModuleInfoFromInterlockReason\",0,{[.]Reason},{PathToParentFolder},\u0027\"\u0027,\u0027DB\u0027)",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
@@ -839,7 +1198,7 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "runScript(\"Standard.Modules.Common.GetModuleInfoFromInterlockReason\",0,{[.]Reason},{PathToParentFolder},\u0027\"\u0027,\u0027DB\u0027)",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
@@ -881,7 +1240,7 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "runScript(\"Standard.Modules.Common.GetModuleInfoFromInterlockReason\",0,{[.]Reason},{PathToParentFolder},\u0027\"\u0027,\u0027DB\u0027)",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
@@ -932,7 +1291,7 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "runScript(\"Standard.Modules.Common.GetModuleInfoFromInterlockReason\",0,{[.]Reason},{PathToParentFolder},\u0027\"\u0027,\u0027DB\u0027)",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
@@ -976,6 +1335,7 @@
               "documentation": "{bindType\u003dparameter, binding\u003d{Description}}",
               "name": "Group",
               "parameters": {
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "HistoryModelPathPrefix": "{datatype\u003dString, value\u003d[StandardS71500/default:default]CAN01VS1/StandardS71500}",
                 "HistoryStorageProvider": "{datatype\u003dString, value\u003dStandardS71500}",
@@ -1006,16 +1366,18 @@
                   "tags": [
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     },
                     {
                       "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -1051,6 +1413,16 @@
                       "path": "InstancePath",
                       "tagType": "AtomicTag",
                       "valueSource": "expr"
+                    },
+                    {
+                      "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
                     },
                     {
                       "dataType": "String",
@@ -1662,6 +2034,14 @@
                           "valueSource": "expr"
                         },
                         {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
+                        },
+                        {
                           "dataType": "Boolean",
                           "documentation": "Interlocked\u003dFalse, Healthy\u003dTrue",
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
@@ -1674,11 +2054,11 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "String",
@@ -1703,12 +2083,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -1923,6 +2297,7 @@
               "documentation": "{bindType\u003dparameter, binding\u003d{Description}}",
               "name": "Route",
               "parameters": {
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "HistoryModelPathPrefix": "{datatype\u003dString, value\u003d[StandardS71500/default:default]CAN01VS1/StandardS71500}",
                 "HistoryStorageProvider": "{datatype\u003dString, value\u003dStandardS71500}",
@@ -2417,6 +2792,14 @@
                       "tagType": "UdtInstance",
                       "tags": [
                         {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
+                        },
+                        {
                           "documentation": "Interlock Reason",
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "ReasonCode",
@@ -2449,12 +2832,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -2475,11 +2852,11 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         }
                       ],
                       "typeId": "Standard/Primitives/Interlock Primitive"
@@ -2513,17 +2890,19 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
                           "tagType": "AtomicTag",
                           "value": "",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
                           "valueSource": "expr"
                         },
                         {
@@ -2548,11 +2927,11 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "String",
@@ -2836,6 +3215,7 @@
                       "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -2875,6 +3255,16 @@
                     },
                     {
                       "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
                       "name": "Description",
                       "path": "Description",
                       "tagType": "AtomicTag",
@@ -2891,11 +3281,12 @@
                     },
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     }
                   ]
                 }
@@ -2906,6 +3297,7 @@
               "documentation": "Version 20230623",
               "name": "Sequence",
               "parameters": {
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "HistoryModelPathPrefix": "{datatype\u003dString, value\u003d[StandardS71500/default:default]CAN01VS1/StandardS71500}",
                 "HistoryStorageProvider": "{datatype\u003dString, value\u003dStandardS71500}",
@@ -3959,6 +4351,7 @@
                       "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -4006,11 +4399,22 @@
                     },
                     {
                       "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     }
                   ]
                 },
@@ -4048,12 +4452,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -4104,11 +4502,19 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
                         }
                       ],
                       "typeId": "Standard/Primitives/Interlock Primitive"
@@ -4123,6 +4529,7 @@
               "name": "Testing",
               "parameters": {
                 "CMPath": "{datatype\u003dString, value\u003d{bindType\u003dparameter, binding\u003dDB{InstanceName}}}",
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "HistoryModelPathPrefix": "{datatype\u003dString, value\u003dnull}",
                 "HistoryStorageProvider": "{datatype\u003dString, value\u003dStandard}",
@@ -4663,6 +5070,7 @@
                       "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -4683,11 +5091,12 @@
                     },
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     },
                     {
                       "dataType": "String",
@@ -4707,6 +5116,16 @@
                       "tagType": "AtomicTag",
                       "value": "{bindType\u003dparameter, binding\u003d{Description}}",
                       "valueSource": "expr"
+                    },
+                    {
+                      "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
                     },
                     {
                       "dataType": "String",
@@ -4749,6 +5168,7 @@
               "name": "Controller",
               "parameters": {
                 "CMPath": "{datatype\u003dString, value\u003d{bindType\u003dparameter, binding\u003dDB{InstanceName}\".\"CM}}",
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "DriverModuleTagPath": "{datatype\u003dString, value\u003d }",
                 "HistoryModelPathPrefix": "{datatype\u003dString, value\u003d[StandardS71500/default:default]CAN01VS1/StandardS71500/}",
@@ -5852,6 +6272,7 @@
                       "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -5880,11 +6301,12 @@
                     },
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     },
                     {
                       "dataType": "String",
@@ -5909,6 +6331,16 @@
                       "path": "InstancePath",
                       "tagType": "AtomicTag",
                       "valueSource": "expr"
+                    },
+                    {
+                      "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
                     }
                   ]
                 },
@@ -6010,6 +6442,7 @@
               "name": "AO",
               "parameters": {
                 "CMPath": "{datatype\u003dString, value\u003d{bindType\u003dparameter, binding\u003dDB{InstanceName}\".\"CM}}",
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "DriverModuleTagPath": "{datatype\u003dString, value\u003d }",
                 "EngUnits": "{datatype\u003dString, value\u003d%}",
@@ -6111,11 +6544,19 @@
                       "tags": [
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
                         },
                         {
                           "documentation": "Interlock Reason that has occurred first",
@@ -6130,12 +6571,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -6167,11 +6602,12 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         }
                       ],
                       "typeId": "Standard/Primitives/Interlock Primitive"
@@ -6215,17 +6651,19 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
                           "tagType": "AtomicTag",
                           "value": "",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
                           "valueSource": "expr"
                         },
                         {
@@ -6240,11 +6678,11 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "Boolean",
@@ -6260,11 +6698,12 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         }
                       ],
                       "typeId": "Standard/Primitives/Interlock Primitive"
@@ -6433,6 +6872,16 @@
                     },
                     {
                       "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
                       "name": "EngUnits",
                       "path": "EngUnits",
                       "tagType": "AtomicTag",
@@ -6449,11 +6898,12 @@
                     },
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     },
                     {
                       "dataType": "String",
@@ -6483,14 +6933,6 @@
                     },
                     {
                       "dataType": "String",
-                      "name": "Description",
-                      "path": "Description",
-                      "tagType": "AtomicTag",
-                      "value": "{bindType\u003dparameter, binding\u003d{Description}}",
-                      "valueSource": "memory"
-                    },
-                    {
-                      "dataType": "String",
                       "name": "DriverModuleTagPath",
                       "path": "DriverModuleTagPath",
                       "tagType": "AtomicTag",
@@ -6499,8 +6941,17 @@
                     },
                     {
                       "dataType": "String",
+                      "name": "Description",
+                      "path": "Description",
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{Description}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -6931,6 +7382,7 @@
               "name": "Motor",
               "parameters": {
                 "CMPath": "{datatype\u003dString, value\u003d{bindType\u003dparameter, binding\u003dDB{InstanceName}\".\"CM}}",
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "DriverModuleTagPath": "{datatype\u003dString, value\u003d }",
                 "HistoryModelPathPrefix": "{datatype\u003dString, value\u003d[StandardS71500/default:default]CAN01VS1/StandardS71500}",
@@ -7098,11 +7550,12 @@
                               "DocumentationOrder": 1,
                               "dataType": "Float4",
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 0,
@@ -7286,11 +7739,12 @@
                               "DocumentationOrder": 1,
                               "dataType": "Float4",
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 3,
@@ -7456,11 +7910,12 @@
                               "DocumentationOrder": 1,
                               "dataType": "Float4",
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 4,
@@ -7716,11 +8171,12 @@
                               "DocumentationOrder": 1,
                               "dataType": "Float4",
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 0,
@@ -8058,6 +8514,16 @@
                     },
                     {
                       "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
                       "name": "Description",
                       "path": "Description",
                       "tagType": "AtomicTag",
@@ -8082,11 +8548,12 @@
                     },
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     },
                     {
                       "dataType": "String",
@@ -8119,6 +8586,7 @@
                       "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -8185,12 +8653,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -8221,11 +8683,19 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         }
                       ],
                       "typeId": "Standard/Primitives/Interlock Primitive"
@@ -8262,14 +8732,16 @@
                           "valueSource": "expr"
                         },
                         {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
+                        },
+                        {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -8299,11 +8771,11 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         }
                       ],
                       "typeId": "Standard/Primitives/Interlock Primitive"
@@ -8340,11 +8812,19 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
                         },
                         {
                           "documentation": "Interlock Reason",
@@ -8369,12 +8849,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -8417,11 +8891,11 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "documentation": "Interlock Reason that has occurred first",
@@ -8434,14 +8908,16 @@
                           "valueSource": "expr"
                         },
                         {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
+                        },
+                        {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -9128,6 +9604,7 @@
               "name": "Selector",
               "parameters": {
                 "CMPath": "{datatype\u003dString, value\u003d{bindType\u003dparameter, binding\u003dDB{InstanceName}\".\"CM}}",
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "DriverModuleTagPath": "{datatype\u003dString, value\u003d }",
                 "HistoryModelPathPrefix": "{datatype\u003dString, value\u003d[StandardS71500/default:default]CAN01VS1/StandardS71500/}",
@@ -9228,6 +9705,16 @@
                     },
                     {
                       "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
                       "name": "Description",
                       "path": "Description",
                       "tagType": "AtomicTag",
@@ -9253,11 +9740,12 @@
                     },
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     },
                     {
                       "dataType": "String",
@@ -9271,6 +9759,7 @@
                       "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -9427,26 +9916,28 @@
                       "tags": [
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
                           "tagType": "AtomicTag",
                           "value": "",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
                           "valueSource": "expr"
                         },
                         {
@@ -9473,11 +9964,12 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "documentation": "Interlock Reason",
@@ -9523,17 +10015,19 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
                           "tagType": "AtomicTag",
                           "value": "",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
                           "valueSource": "expr"
                         },
                         {
@@ -9548,11 +10042,11 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "Boolean",
@@ -9568,11 +10062,12 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         }
                       ],
                       "typeId": "Standard/Primitives/Interlock Primitive"
@@ -9588,6 +10083,7 @@
               "name": "Motor Reverse",
               "parameters": {
                 "CMPath": "{datatype\u003dString, value\u003d{bindType\u003dparameter, binding\u003dDB{InstanceName}\".\"CM}}",
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "DriverModuleTagPath": "{datatype\u003dString, value\u003d }",
                 "HistoryModelPathPrefix": "{datatype\u003dString, value\u003d[StandardS71500/default:default]CAN01VS1/StandardS71500}",
@@ -9609,16 +10105,18 @@
                   "tags": [
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     },
                     {
                       "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -9679,6 +10177,16 @@
                       "path": "InstancePath",
                       "tagType": "AtomicTag",
                       "valueSource": "expr"
+                    },
+                    {
+                      "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
                     },
                     {
                       "dataType": "String",
@@ -10253,17 +10761,19 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
                           "tagType": "AtomicTag",
                           "value": "",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
                           "valueSource": "expr"
                         },
                         {
@@ -10298,11 +10808,11 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "documentation": "Interlock Reason",
@@ -10337,6 +10847,14 @@
                           "valueSource": "expr"
                         },
                         {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
+                        },
+                        {
                           "documentation": "Interlock Reason that has occurred first",
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReasonCode",
@@ -10349,12 +10867,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -10373,11 +10885,11 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "Boolean",
@@ -10444,17 +10956,19 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
                           "tagType": "AtomicTag",
                           "value": "",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
                           "valueSource": "expr"
                         },
                         {
@@ -10469,11 +10983,11 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         }
                       ],
                       "typeId": "Standard/Primitives/Interlock Primitive"
@@ -10511,12 +11025,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -10545,11 +11053,19 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
                         }
                       ],
                       "typeId": "Standard/Primitives/Interlock Primitive"
@@ -10565,11 +11081,11 @@
                       "tags": [
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "Boolean",
@@ -10580,6 +11096,14 @@
                           "tagType": "AtomicTag",
                           "tooltip": "Interlocked\u003dFalse, Healthy\u003dTrue",
                           "value": true,
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
                           "valueSource": "expr"
                         },
                         {
@@ -10614,12 +11138,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -10663,12 +11181,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -10678,11 +11190,19 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "documentation": "Interlock Reason",
@@ -10729,11 +11249,19 @@
                       "tags": [
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
                         },
                         {
                           "documentation": "Interlock Reason",
@@ -10748,12 +11276,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -11089,11 +11611,12 @@
                               "dataType": "Float4",
                               "enabled": false,
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 0,
@@ -11284,11 +11807,12 @@
                               "dataType": "Float4",
                               "enabled": false,
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             }
                           ]
                         },
@@ -11441,11 +11965,12 @@
                               "dataType": "Float4",
                               "enabled": false,
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 0,
@@ -11629,11 +12154,12 @@
                               "dataType": "Float4",
                               "enabled": false,
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 2,
@@ -11952,11 +12478,12 @@
                               "dataType": "Float4",
                               "enabled": false,
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 0,
@@ -12341,6 +12868,7 @@
               "name": "DO",
               "parameters": {
                 "CMPath": "{datatype\u003dString, value\u003d{bindType\u003dparameter, binding\u003dDB{InstanceName}\".\"CM}}",
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "DriverModuleTagPath": "{datatype\u003dString, value\u003d }",
                 "HistoryModelPathPrefix": "{datatype\u003dString, value\u003d[StandardS71500/default:default]CAN01VS1/StandardS71500}",
@@ -12797,11 +13325,12 @@
                               "dataType": "Float4",
                               "enabled": false,
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 0,
@@ -13199,11 +13728,12 @@
                               "dataType": "Float4",
                               "enabled": false,
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 5,
@@ -13351,12 +13881,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -13375,6 +13899,14 @@
                           "valueSource": "expr"
                         },
                         {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
+                        },
+                        {
                           "documentation": "Interlock Reason",
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "ReasonCode",
@@ -13386,11 +13918,11 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "Boolean",
@@ -13406,11 +13938,12 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         }
                       ],
                       "typeId": "Standard/Primitives/Interlock Primitive"
@@ -13427,17 +13960,19 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
                           "tagType": "AtomicTag",
                           "value": "",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
                           "valueSource": "expr"
                         },
                         {
@@ -13452,11 +13987,11 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "Boolean",
@@ -13482,11 +14017,12 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         }
                       ],
                       "typeId": "Standard/Primitives/Interlock Primitive"
@@ -13522,19 +14058,28 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "documentation": "Interlock Reason that has occurred first",
@@ -13549,12 +14094,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -13587,12 +14126,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -13623,11 +14156,20 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "Boolean",
@@ -13642,11 +14184,11 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         }
                       ],
                       "typeId": "Standard/Primitives/Interlock Primitive"
@@ -13697,6 +14239,16 @@
                     },
                     {
                       "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
                       "name": "StandardViewPath",
                       "path": "StandardViewPath",
                       "tagType": "AtomicTag",
@@ -13705,11 +14257,12 @@
                     },
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     },
                     {
                       "dataType": "String",
@@ -13729,8 +14282,17 @@
                     },
                     {
                       "dataType": "String",
+                      "name": "DriverModuleTagPath",
+                      "path": "DriverModuleTagPath",
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{DriverModuleTagPath}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -13740,14 +14302,6 @@
                       "path": "PathToParentFolder",
                       "tagType": "AtomicTag",
                       "valueSource": "expr"
-                    },
-                    {
-                      "dataType": "String",
-                      "name": "DriverModuleTagPath",
-                      "path": "DriverModuleTagPath",
-                      "tagType": "AtomicTag",
-                      "value": "{bindType\u003dparameter, binding\u003d{DriverModuleTagPath}}",
-                      "valueSource": "memory"
                     },
                     {
                       "dataType": "String",
@@ -13895,6 +14449,7 @@
               "name": "Testing",
               "parameters": {
                 "CMPath": "{datatype\u003dString, value\u003d{bindType\u003dparameter, binding\u003dDB{InstanceName}}}",
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "DriverModuleTagPath": "{datatype\u003dString, value\u003d }",
                 "HistoryModelPathPrefix": "{datatype\u003dString, value\u003dnull}",
@@ -14521,6 +15076,16 @@
                     },
                     {
                       "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
                       "expression": "if({ShortDescription}\u003d\"\",{Description},{ShortDescription})",
                       "name": "ShortDescription",
                       "path": "ShortDescription",
@@ -14539,8 +15104,17 @@
                     },
                     {
                       "dataType": "String",
+                      "name": "DriverModuleTagPath",
+                      "path": "DriverModuleTagPath",
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{DriverModuleTagPath}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -14553,14 +15127,6 @@
                     },
                     {
                       "dataType": "String",
-                      "name": "DriverModuleTagPath",
-                      "path": "DriverModuleTagPath",
-                      "tagType": "AtomicTag",
-                      "value": "{bindType\u003dparameter, binding\u003d{DriverModuleTagPath}}",
-                      "valueSource": "memory"
-                    },
-                    {
-                      "dataType": "String",
                       "name": "StandardViewPath",
                       "path": "StandardViewPath",
                       "tagType": "AtomicTag",
@@ -14569,11 +15135,12 @@
                     },
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     }
                   ]
                 },
@@ -14753,6 +15320,7 @@
               "name": "DI",
               "parameters": {
                 "CMPath": "{datatype\u003dString, value\u003d{bindType\u003dparameter, binding\u003dDB{InstanceName}\".\"CM}}",
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "DriverModuleTagPath": "{datatype\u003dString, value\u003d }",
                 "HistoryModelPathPrefix": "{datatype\u003dString, value\u003d[StandardS71500/default:default]CAN01VS1/StandardS71500/}",
@@ -14906,11 +15474,22 @@
                     },
                     {
                       "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     },
                     {
                       "dataType": "String",
@@ -14959,6 +15538,7 @@
                       "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -15242,11 +15822,12 @@
                               "dataType": "Float4",
                               "enabled": false,
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 5,
@@ -15406,11 +15987,12 @@
                               "dataType": "Float4",
                               "enabled": false,
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 2,
@@ -15587,11 +16169,12 @@
                               "dataType": "Float4",
                               "enabled": false,
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 0,
@@ -15844,6 +16427,7 @@
               "name": "Valve",
               "parameters": {
                 "CMPath": "{datatype\u003dString, value\u003d{bindType\u003dparameter, binding\u003dDB{InstanceName}\".\"CM}}",
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "DriverModuleTagPath": "{datatype\u003dString, value\u003d }",
                 "HistoryModelPathPrefix": "{datatype\u003dString, value\u003d[StandardS71500/default:default]CAN01VS1/StandardS71500/}",
@@ -15874,24 +16458,11 @@
                   "tags": [
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
-                    },
-                    {
-                      "dataType": "String",
-                      "eventScripts": [
-                        {
-                          "eventid": "valueChanged",
-                          "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
-                        }
-                      ],
-                      "expression": "replace({PathToParentFolder},\"/\"+{InstanceName}+\"/Metadata\",\"\")",
-                      "name": "PathToParentFolder",
-                      "path": "PathToParentFolder",
-                      "tagType": "AtomicTag",
                       "valueSource": "expr"
                     },
                     {
@@ -15901,6 +16472,21 @@
                       "tagType": "AtomicTag",
                       "value": "{bindType\u003dparameter, binding\u003d{DriverModuleTagPath}}",
                       "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
+                      "eventScripts": [
+                        {
+                          "enabled": false,
+                          "eventid": "valueChanged",
+                          "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
+                        }
+                      ],
+                      "expression": "replace({PathToParentFolder},\"/\"+{InstanceName}+\"/Metadata\",\"\")",
+                      "name": "PathToParentFolder",
+                      "path": "PathToParentFolder",
+                      "tagType": "AtomicTag",
+                      "valueSource": "expr"
                     },
                     {
                       "dataType": "String",
@@ -15927,6 +16513,16 @@
                       "path": "InstancePath",
                       "tagType": "AtomicTag",
                       "valueSource": "expr"
+                    },
+                    {
+                      "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
                     },
                     {
                       "dataType": "String",
@@ -15971,11 +16567,19 @@
                       "tags": [
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "Boolean",
@@ -15991,11 +16595,12 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "documentation": "Interlock Reason that has occurred first",
@@ -16010,12 +16615,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -16048,12 +16647,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -16074,11 +16667,12 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "Boolean",
@@ -16093,11 +16687,11 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "documentation": "Interlock Reason that has occurred first",
@@ -16107,6 +16701,14 @@
                           "readOnly": true,
                           "tagType": "AtomicTag",
                           "value": 0,
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
                           "valueSource": "expr"
                         }
                       ],
@@ -16133,12 +16735,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -16159,11 +16755,12 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "Boolean",
@@ -16178,11 +16775,11 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "documentation": "Interlock Reason that has occurred first",
@@ -16192,6 +16789,14 @@
                           "readOnly": true,
                           "tagType": "AtomicTag",
                           "value": 0,
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
                           "valueSource": "expr"
                         }
                       ],
@@ -16946,11 +17551,12 @@
                               "dataType": "Float4",
                               "enabled": false,
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 0,
@@ -17393,11 +17999,12 @@
                               "dataType": "Float4",
                               "enabled": false,
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             }
                           ]
                         },
@@ -17448,11 +18055,12 @@
                               "dataType": "Float4",
                               "enabled": false,
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 0,
@@ -17627,6 +18235,7 @@
               "name": "AI",
               "parameters": {
                 "CMPath": "{datatype\u003dString, value\u003d{bindType\u003dparameter, binding\u003dDB{InstanceName}\".\"CM}}",
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "DriverModuleTagPath": "{datatype\u003dString, value\u003d }",
                 "EngUnits": "{datatype\u003dString, value\u003dnull}",
@@ -17650,11 +18259,12 @@
                   "tags": [
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     },
                     {
                       "dataType": "String",
@@ -17677,6 +18287,7 @@
                       "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -17728,6 +18339,16 @@
                       "path": "InstancePath",
                       "tagType": "AtomicTag",
                       "valueSource": "expr"
+                    },
+                    {
+                      "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
                     },
                     {
                       "dataType": "String",
@@ -18693,12 +19314,13 @@
                           "tags": [
                             {
                               "dataType": "Boolean",
+                              "expression": "jsonGet({[.]../../Alarms}, {ParentInstanceName}+\".In\"+{TagName})",
                               "name": "Condition",
                               "path": "Condition",
                               "readOnly": true,
                               "tagType": "AtomicTag",
                               "value": false,
-                              "valueSource": "memory"
+                              "valueSource": "expr"
                             }
                           ]
                         },
@@ -18711,11 +19333,12 @@
                               "DocumentationOrder": 2,
                               "dataType": "Float4",
                               "name": "Delay",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"Delay{ParentInstanceName}Time\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "Delay",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 3,
@@ -18749,22 +19372,23 @@
                               "DocumentationOrder": 0,
                               "dataType": "Boolean",
                               "name": "Enable",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"Alarm{ParentInstanceName}Enable\"}",
-                              "opcServer": "",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "Enable",
                               "tagType": "AtomicTag",
                               "value": false,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 1,
                               "dataType": "Float4",
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             }
                           ]
                         },
@@ -18801,12 +19425,13 @@
                                   "script": "\tStandard.Modules.Alarms.AlarmAcknowledgeChangeScript(State \u003d alarmEvent[\"state\"],AckedBy \u003d ackedBy)"
                                 }
                               ],
+                              "expression": "jsonGet({[.]../../Alarms}, {ParentInstanceName}+\".Sts\"+{TagName})",
                               "name": "Active",
                               "path": "Active",
                               "readOnly": true,
                               "tagType": "AtomicTag",
                               "value": false,
-                              "valueSource": "memory"
+                              "valueSource": "expr"
                             },
                             {
                               "dataType": "String",
@@ -18819,12 +19444,13 @@
                             {
                               "dataType": "Float4",
                               "engUnit": "s",
+                              "expression": "jsonGet({[.]../../Alarms}, {ParentInstanceName}+\".Sts\"+{TagName})",
                               "name": "ElapsedTime",
                               "path": "ElapsedTime",
                               "readOnly": true,
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "expr"
                             }
                           ]
                         },
@@ -18836,10 +19462,12 @@
                             {
                               "dataType": "Boolean",
                               "name": "Acknowledge",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cmd{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "Acknowledge",
                               "tagType": "AtomicTag",
                               "value": false,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "dataType": "Boolean",
@@ -19974,6 +20602,7 @@
               "name": "Totaliser",
               "parameters": {
                 "CMPath": "{datatype\u003dString, value\u003d{bindType\u003dparameter, binding\u003dDB{InstanceName}\".\"CM}}",
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "DriverModuleTagPath": "{datatype\u003dString, value\u003d }",
                 "EngUnits": "{datatype\u003dString, value\u003dL}",
@@ -19997,11 +20626,12 @@
                   "tags": [
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     },
                     {
                       "dataType": "String",
@@ -20037,6 +20667,16 @@
                     },
                     {
                       "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
                       "name": "StandardViewPath",
                       "path": "StandardViewPath",
                       "tagType": "AtomicTag",
@@ -20062,8 +20702,17 @@
                     },
                     {
                       "dataType": "String",
+                      "name": "DriverModuleTagPath",
+                      "path": "DriverModuleTagPath",
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{DriverModuleTagPath}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -20073,14 +20722,6 @@
                       "path": "PathToParentFolder",
                       "tagType": "AtomicTag",
                       "valueSource": "expr"
-                    },
-                    {
-                      "dataType": "String",
-                      "name": "DriverModuleTagPath",
-                      "path": "DriverModuleTagPath",
-                      "tagType": "AtomicTag",
-                      "value": "{bindType\u003dparameter, binding\u003d{DriverModuleTagPath}}",
-                      "valueSource": "memory"
                     },
                     {
                       "dataType": "String",
@@ -20990,6 +21631,7 @@
               "name": "Positioner",
               "parameters": {
                 "CMPath": "{datatype\u003dString, value\u003d{bindType\u003dparameter, binding\u003dDB{InstanceName}\".\"CM}}",
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "DriverModuleTagPath": "{datatype\u003dString, value\u003d }",
                 "HistoryModelPathPrefix": "{datatype\u003dString, value\u003d[StandardS71500/default:default]CAN01VS1/StandardS71500}",
@@ -21021,12 +21663,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -21057,19 +21693,28 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "Boolean",
@@ -21107,12 +21752,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -21132,11 +21771,19 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "Boolean",
@@ -21152,11 +21799,12 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         }
                       ],
                       "typeId": "Standard/Primitives/Interlock Primitive"
@@ -21194,12 +21842,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -21220,19 +21862,28 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         }
                       ],
                       "typeId": "Standard/Primitives/Interlock Primitive"
@@ -21249,11 +21900,12 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "Boolean",
@@ -21278,26 +21930,28 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
                           "tagType": "AtomicTag",
                           "value": "",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
                           "valueSource": "expr"
                         },
                         {
@@ -21348,11 +22002,12 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "documentation": "Interlock Reason that has occurred first",
@@ -21366,26 +22021,28 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
                           "tagType": "AtomicTag",
                           "value": "",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
                           "valueSource": "expr"
                         },
                         {
@@ -21422,21 +22079,23 @@
                         },
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -21468,11 +22127,12 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         }
                       ],
                       "typeId": "Standard/Primitives/Interlock Primitive"
@@ -21500,11 +22160,19 @@
                       "tags": [
                         {
                           "dataType": "Document",
-                          "expression": "",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]Reason},toStr({this.path}),\u0027DB,#\u0027)",
                           "name": "ReasonModuleInfo",
                           "path": "ReasonModuleInfo",
                           "tagType": "AtomicTag",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
+                        },
+                        {
+                          "dataType": "Document",
+                          "expression": "runScript(\u0027Standard.Modules.Common.GetModuleInfoFromInterlockReason\u0027,0,{[.]FirstUpReason},toStr({this.path}),\u0027DB,#\u0027)",
+                          "name": "FirstUpReasonModuleInfo",
+                          "path": "FirstUpReasonModuleInfo",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
                         },
                         {
                           "dataType": "Boolean",
@@ -21530,12 +22198,6 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
-                          "eventScripts": [
-                            {
-                              "eventid": "valueChanged",
-                              "script": "\treason \u003d currentValue.value\n\tmoduleInfo \u003d Standard.Modules.Common.GetModuleInfoFromInterlockReason(Reason\u003dreason,BrowsePath\u003dtagPath,ModuleIdentifiers \u003d \u0027DB,#\u0027)\n\tsystem.tag.writeBlocking(tagPaths\u003d[\"[.]ReasonModuleInfo\"], values\u003d[moduleInfo])\n"
-                            }
-                          ],
                           "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "Reason",
                           "path": "Reason",
@@ -21556,11 +22218,12 @@
                         {
                           "dataType": "String",
                           "documentation": "This can be used to recieve additional information for the interlock Status",
+                          "expression": "jsonGet({[.]../Interlock}, {InstanceName}+\".\"+{TagName})",
                           "name": "FirstUpReason",
                           "path": "FirstUpReason",
                           "tagType": "AtomicTag",
                           "value": "",
-                          "valueSource": "memory"
+                          "valueSource": "expr"
                         }
                       ],
                       "typeId": "Standard/Primitives/Interlock Primitive"
@@ -21753,11 +22416,12 @@
                               "DocumentationOrder": 1,
                               "dataType": "Float4",
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             }
                           ]
                         }
@@ -21819,11 +22483,12 @@
                               "DocumentationOrder": 1,
                               "dataType": "Float4",
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 0,
@@ -22159,11 +22824,12 @@
                               "DocumentationOrder": 1,
                               "dataType": "Float4",
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             }
                           ]
                         }
@@ -22317,7 +22983,7 @@
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 4,
@@ -22510,7 +23176,7 @@
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 5,
@@ -22567,7 +23233,7 @@
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 0,
@@ -22812,11 +23478,12 @@
                               "DocumentationOrder": 1,
                               "dataType": "Float4",
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 2,
@@ -23039,11 +23706,12 @@
                               "DocumentationOrder": 1,
                               "dataType": "Float4",
                               "name": "ConditionSetpoint",
-                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{RootInstanceName}\".\"CM\".\"Cfg\".\"AlarmLimit{ParentInstanceName}\"}",
+                              "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"{CMPath}\".\"Alarms\".\"{InstanceName}\".\"Cfg{TagName}\"}",
+                              "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
                               "path": "ConditionSetpoint",
                               "tagType": "AtomicTag",
                               "value": 0,
-                              "valueSource": "memory"
+                              "valueSource": "opc"
                             },
                             {
                               "DocumentationOrder": 5,
@@ -23714,6 +24382,16 @@
                     },
                     {
                       "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
+                    },
+                    {
+                      "dataType": "String",
                       "name": "InstanceName",
                       "path": "InstanceName",
                       "tagType": "AtomicTag",
@@ -23722,16 +24400,18 @@
                     },
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     },
                     {
                       "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -24368,6 +25048,7 @@
               "documentation": "Version 20230623",
               "name": "SINAMICS",
               "parameters": {
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "ExtendedDiagnosticsTagPath": "{datatype\u003dString, value\u003d }",
                 "HistoryModelPathPrefix": "{datatype\u003dString, value\u003d[Standard/default:default]CAN01VS1/ImpalaStandard/}",
@@ -24419,6 +25100,7 @@
                       "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -24436,6 +25118,16 @@
                       "path": "InstancePath",
                       "tagType": "AtomicTag",
                       "valueSource": "expr"
+                    },
+                    {
+                      "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
                     },
                     {
                       "dataType": "String",
@@ -24463,11 +25155,12 @@
                     },
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     }
                   ]
                 },
@@ -24596,6 +25289,7 @@
               "documentation": "Version 20230623",
               "name": "SIMOCODE Extended Diagnostics",
               "parameters": {
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "ExtendedDiagnosticsTagPath": "{datatype\u003dString, value\u003d }",
                 "HistoryModelPathPrefix": "{datatype\u003dString, value\u003d[Standard/default:default]CAN01VS1/ImpalaStandard/}",
@@ -24619,6 +25313,7 @@
                       "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -24648,11 +25343,12 @@
                     },
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     },
                     {
                       "dataType": "String",
@@ -24696,6 +25392,16 @@
                       "path": "InstancePath",
                       "tagType": "AtomicTag",
                       "valueSource": "expr"
+                    },
+                    {
+                      "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
                     }
                   ]
                 },
@@ -24822,16 +25528,6 @@
                   "tagType": "Folder",
                   "tags": [
                     {
-                      "dataType": "Document",
-                      "name": "Structure",
-                      "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{InstanceName}\".\"DM\".\"Sts\"}",
-                      "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
-                      "path": "Structure",
-                      "tagType": "AtomicTag",
-                      "value": {},
-                      "valueSource": "opc"
-                    },
-                    {
                       "name": "MeasuredValues",
                       "path": "MeasuredValues",
                       "tagType": "Folder",
@@ -24855,6 +25551,15 @@
                           "valueSource": "expr"
                         },
                         {
+                          "documentation": "Current (Phase 2)",
+                          "engUnit": "A",
+                          "expression": "{[.]Structure}[\"I_L2\"]",
+                          "name": "Il2",
+                          "path": "Il2",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
+                        },
+                        {
                           "dataType": "Document",
                           "name": "Structure",
                           "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{InstanceName}\".\"DM\".\"Sts\"}",
@@ -24863,15 +25568,6 @@
                           "tagType": "AtomicTag",
                           "value": {},
                           "valueSource": "opc"
-                        },
-                        {
-                          "documentation": "Current (Phase 2)",
-                          "engUnit": "A",
-                          "expression": "{[.]Structure}[\"I_L2\"]",
-                          "name": "Il2",
-                          "path": "Il2",
-                          "tagType": "AtomicTag",
-                          "valueSource": "expr"
                         },
                         {
                           "documentation": "Current (Last Trip)",
@@ -24892,20 +25588,20 @@
                           "valueSource": "expr"
                         },
                         {
-                          "documentation": "Cooldown Period",
-                          "engUnit": "s",
-                          "expression": "{[.]Structure}[\"CoolingDownPeriod\"]",
-                          "name": "CoolingDownPeriod",
-                          "path": "CoolingDownPeriod",
-                          "tagType": "AtomicTag",
-                          "valueSource": "expr"
-                        },
-                        {
                           "documentation": "Power (Actual)",
                           "engUnit": "W",
                           "expression": "{[.]Structure}[\"Pact\"]",
                           "name": "Pact",
                           "path": "Pact",
+                          "tagType": "AtomicTag",
+                          "valueSource": "expr"
+                        },
+                        {
+                          "documentation": "Cooldown Period",
+                          "engUnit": "s",
+                          "expression": "{[.]Structure}[\"CoolingDownPeriod\"]",
+                          "name": "CoolingDownPeriod",
+                          "path": "CoolingDownPeriod",
                           "tagType": "AtomicTag",
                           "valueSource": "expr"
                         },
@@ -24996,6 +25692,16 @@
                       ]
                     },
                     {
+                      "dataType": "Document",
+                      "name": "Structure",
+                      "opcItemPath": "{bindType\u003dparameter, binding\u003d{OPCPath}\"DB{InstanceName}\".\"DM\".\"Sts\"}",
+                      "opcServer": "{bindType\u003dparameter, binding\u003d{OPCServerName}}",
+                      "path": "Structure",
+                      "tagType": "AtomicTag",
+                      "value": {},
+                      "valueSource": "opc"
+                    },
+                    {
                       "name": "Diagnostics",
                       "path": "Diagnostics",
                       "tagType": "Folder",
@@ -25022,6 +25728,7 @@
               "documentation": "Version 20230623",
               "name": "SIMOCODE",
               "parameters": {
+                "ContainedName": "{datatype\u003dString, value\u003d}",
                 "Description": "{datatype\u003dString, value\u003dnull}",
                 "ExtendedDiagnosticsTagPath": "{datatype\u003dString, value\u003d }",
                 "HistoryModelPathPrefix": "{datatype\u003dString, value\u003dnull}",
@@ -25079,16 +25786,18 @@
                   "tags": [
                     {
                       "dataType": "String",
+                      "expression": "replace(split({this.path},\"]\")[0],\"[\",\"\")",
                       "name": "TagProvider",
                       "path": "TagProvider",
                       "tagType": "AtomicTag",
                       "value": "",
-                      "valueSource": "memory"
+                      "valueSource": "expr"
                     },
                     {
                       "dataType": "String",
                       "eventScripts": [
                         {
+                          "enabled": false,
                           "eventid": "valueChanged",
                           "script": "\ttagProvider\u003d tagPath.split(\u0027]\u0027)[0]\n\ttagProvider \u003d tagProvider.replace(\"[\",\"\")\n\ttagProviderPath \u003d \"[.]TagProvider\"\n\tsystem.tag.writeBlocking([tagProviderPath],[tagProvider])\n\t\n\t"
                         }
@@ -25139,6 +25848,16 @@
                       "path": "InstancePath",
                       "tagType": "AtomicTag",
                       "valueSource": "expr"
+                    },
+                    {
+                      "dataType": "String",
+                      "documentation": "Contained Name",
+                      "name": "ContainedName",
+                      "path": "ContainedName",
+                      "readOnly": true,
+                      "tagType": "AtomicTag",
+                      "value": "{bindType\u003dparameter, binding\u003d{ContainedName}}",
+                      "valueSource": "memory"
                     },
                     {
                       "dataType": "String",
@@ -26308,6 +27027,18 @@
                   "typeId": "S71500/Implementation Modules/Primitives/Value"
                 }
               ]
+            },
+            {
+              "name": "Equipment",
+              "parameters": {
+                "HistoryModelPathPrefix": "[StandardS71500/default:default]CAN01VS1/StandardS71500",
+                "HistoryStorageProvider": "StandardS71500",
+                "OPCPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d",
+                "OPCServerName": "1500",
+                "ParentTagProviderFolderPath": ""
+              },
+              "tagType": "UdtType",
+              "typeId": "S71500/Implementation Modules/Equipment"
             },
             {
               "name": "Interlock",

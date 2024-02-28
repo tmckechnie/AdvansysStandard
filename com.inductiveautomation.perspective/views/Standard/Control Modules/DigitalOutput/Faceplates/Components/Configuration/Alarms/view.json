@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/100DO100"
+    "TagPath": "[TPOpnim]Control Modules/Rh_UV_6025A"
   },
   "propConfig": {
     "params.TagPath": {
@@ -26,6 +26,22 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Alarms/\"+{this.meta.name}+\"/Cfg/Enable\""
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.AlarmPrimitiveTagPath": {
             "binding": {
               "config": {
@@ -55,6 +71,22 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Alarms/\"+{this.meta.name}+\"/Cfg/Enable\""
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.AlarmPrimitiveTagPath": {
             "binding": {
               "config": {
@@ -84,6 +116,22 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Alarms/\"+{this.meta.name}+\"/Cfg/Enable\""
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.AlarmPrimitiveTagPath": {
             "binding": {
               "config": {

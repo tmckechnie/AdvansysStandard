@@ -1,0 +1,757 @@
+{
+  "custom": {
+    "key": [
+      {
+        "attributes": "[]",
+        "dataType": "Document",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Driver Modules/Simocode DM/Sts/Structure",
+        "hasChildren": false,
+        "name": "Structure",
+        "quality": "Error_Configuration(\"Server \"StandardS71500\" does not exist.\")",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[scripting, security]",
+        "dataType": "String",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Driver Modules/Simocode DM/Id/Self",
+        "hasChildren": false,
+        "name": "Self",
+        "quality": "Error_Configuration(\"Server \"StandardS71500\" does not exist.\")",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[scripting, security]",
+        "dataType": "String",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Driver Modules/Simocode DM/Id/Owner",
+        "hasChildren": false,
+        "name": "Owner",
+        "quality": "Error_Configuration(\"Server \"StandardS71500\" does not exist.\")",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Driver Modules/Simocode DM/Cmd/ACK",
+        "hasChildren": false,
+        "name": "ACK",
+        "quality": "Error_Configuration(\"Server \"StandardS71500\" does not exist.\")",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Driver Modules/Simocode DM/Cmd/EnableMaintenanceMode",
+        "hasChildren": false,
+        "name": "EnableMaintenanceMode",
+        "quality": "Error_Configuration(\"Server \"StandardS71500\" does not exist.\")",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[scripting, security]",
+        "dataType": "String",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Driver Modules/Simocode ED/Id/Owner",
+        "hasChildren": false,
+        "name": "Owner",
+        "quality": "Error_Configuration(\"Server \"StandardS71500\" does not exist.\")",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[scripting, security]",
+        "dataType": "String",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Driver Modules/Simocode ED/Id/Self",
+        "hasChildren": false,
+        "name": "Self",
+        "quality": "Error_Configuration(\"Server \"StandardS71500\" does not exist.\")",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Document",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Driver Modules/Simocode ED/Sts/Structure",
+        "hasChildren": false,
+        "name": "Structure",
+        "quality": "Error_Configuration(\"Server \"StandardS71500\" does not exist.\")",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Boolean",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Driver Modules/Simocode ED/Cmd/ReadExtendedData",
+        "hasChildren": false,
+        "name": "ReadExtendedData",
+        "quality": "Error_Configuration(\"Server \"StandardS71500\" does not exist.\")",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Document",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Driver Modules/Simocode ED/Sts/MeasuredValues/Structure",
+        "hasChildren": false,
+        "name": "Structure",
+        "quality": "Error_Configuration(\"Server \"StandardS71500\" does not exist.\")",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[]",
+        "dataType": "Document",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Driver Modules/Simocode ED/Sts/Diagnostics/Structure",
+        "hasChildren": false,
+        "name": "Structure",
+        "quality": "Error_Configuration(\"Server \"StandardS71500\" does not exist.\")",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput01/Alarms/BadData/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput01/Alarms/Communication/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve/Alarms/CloseLimit/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve/Alarms/OpenLimit/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve/Alarms/Available/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve/Alarms/Communication/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor/Alarms/Communication/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalOutput/Alarms/LocalOff/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalOutput/Alarms/Available/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalOutput/Alarms/Communication/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/MotorReverse/Alarms/Communication/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/MotorReverse/Alarms/LocalStop/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/MotorReverse/Alarms/RunningForward/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/MotorReverse/Alarms/MotionSwitch/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/MotorReverse/Alarms/Available/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/MotorReverse/Alarms/RunningReverse/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput03/Alarms/BadData/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput03/Alarms/Communication/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput01/Alarms/Communication/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput01/Alarms/State/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput01/Alarms/Warning/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogOutput01/Alarms/Communication/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput02/Alarms/Communication/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput02/Alarms/BadData/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogOutput02/Alarms/Communication/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput02/Alarms/Communication/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput02/Alarms/Warning/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput02/Alarms/State/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/HandValve/Alarms/OpenLimit/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/HandValve/Alarms/Communication/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/HandValve/Alarms/Available/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      },
+      {
+        "attributes": "[disabled]",
+        "dataType": "Float4",
+        "formatString": "#,##0.##",
+        "fullPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/HandValve/Alarms/CloseLimit/Cfg/ConditionSetpoint",
+        "hasChildren": false,
+        "name": "ConditionSetpoint",
+        "quality": "Bad_Disabled",
+        "tagType": "AtomicTag",
+        "value": null,
+        "valueSource": "opc"
+      }
+    ]
+  },
+  "params": {},
+  "propConfig": {
+    "custom.key": {
+      "binding": {
+        "config": {
+          "expression": "0"
+        },
+        "transforms": [
+          {
+            "code": "\tprovider \u003d \u0027StandardS71500\u0027\n\tlimit \u003d 100\n\t\n\tquery \u003d {\n\t  \"options\": {\n\t    \"includeUdtMembers\": True,\n\t    \"includeUdtDefinitions\": False\n\t  },\n\t  \"condition\": {\n\t    \"path\": \"Standard*\",\n\t    \"tagType\": \"AtomicTag\",\n\t    \"attributes\": {\n\t      \"values\": [],\n\t      \"requireAll\": True\n\t    },\n\t    \"valueSource\": \"opc\",\n\t    \"quality\": [\n\t      \"Bad\",\n\t      \"Error\",\n\t      \"Uncertain\"\n\t    ]\n\t  },\n\t  \"returnProperties\": [\n\t    \"tagType\",\n\t    \"quality\"\n\t  ]\n\t}\n\t\n\t# Limited to 100 rows. Use continuationPoint functionality to continue from last result, \n\t# or remove limit for full results.\n\tresults \u003d system.tag.query(provider, query, limit)\n\treturn results",
+            "type": "script"
+          }
+        ],
+        "type": "expr"
+      },
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 835,
+      "width": 1189
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "basis": "32px"
+        },
+        "props": {
+          "style": {
+            "classes": "Standard/Body/HeadingText"
+          },
+          "text": "Control Modules"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "AI"
+            },
+            "position": {
+              "height": 200,
+              "width": 180
+            },
+            "props": {
+              "path": "Model Views/StandardS71500/Standard/Modules/Control Modules/Overview/Components/AnalogInput"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DI"
+            },
+            "position": {
+              "height": 200,
+              "width": 180,
+              "y": 210
+            },
+            "props": {
+              "path": "Model Views/StandardS71500/Standard/Modules/Control Modules/Overview/Components/DigitalInput"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "DO"
+            },
+            "position": {
+              "height": 200,
+              "width": 180,
+              "x": 234,
+              "y": 210
+            },
+            "props": {
+              "path": "Model Views/StandardS71500/Standard/Modules/Control Modules/Overview/Components/DigitalOutput"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Motor"
+            },
+            "position": {
+              "height": 200,
+              "width": 180,
+              "y": 420
+            },
+            "props": {
+              "path": "Model Views/StandardS71500/Standard/Modules/Control Modules/Overview/Components/Motor"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "MotorReverse"
+            },
+            "position": {
+              "height": 200,
+              "width": 180,
+              "x": 234
+            },
+            "props": {
+              "path": "Model Views/StandardS71500/Standard/Modules/Control Modules/Overview/Components/MotorReverse"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Selector"
+            },
+            "position": {
+              "height": 145,
+              "width": 180,
+              "x": 458,
+              "y": 364
+            },
+            "props": {
+              "path": "Model Views/StandardS71500/Standard/Modules/Control Modules/Overview/Components/Selector"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Totaliser"
+            },
+            "position": {
+              "height": 200,
+              "width": 180,
+              "x": 234,
+              "y": 420
+            },
+            "props": {
+              "path": "Model Views/StandardS71500/Standard/Modules/Control Modules/Overview/Components/Totaliser"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Valve"
+            },
+            "position": {
+              "height": 200,
+              "width": 180,
+              "x": 464
+            },
+            "props": {
+              "path": "Model Views/StandardS71500/Standard/Modules/Control Modules/Overview/Components/Valve"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "AnalogOutput"
+            },
+            "position": {
+              "height": 129,
+              "width": 180,
+              "x": 450,
+              "y": 509
+            },
+            "props": {
+              "path": "Model Views/StandardS71500/Standard/Modules/Control Modules/Overview/Components/AnalogOutput"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Controller"
+            },
+            "position": {
+              "height": 200,
+              "width": 180,
+              "x": 700,
+              "y": 210
+            },
+            "props": {
+              "path": "Model Views/StandardS71500/Standard/Modules/Control Modules/Overview/Components/Controller"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Positioner"
+            },
+            "position": {
+              "height": 200,
+              "width": 180,
+              "x": 700
+            },
+            "props": {
+              "path": "Model Views/StandardS71500/Standard/Modules/Control Modules/Overview/Components/Positioner"
+            },
+            "type": "ia.display.view"
+          },
+          {
+            "meta": {
+              "name": "Hand Valve"
+            },
+            "position": {
+              "height": 144,
+              "width": 188,
+              "x": 454.4,
+              "y": 210
+            },
+            "props": {
+              "path": "Model Views/StandardS71500/Standard/Modules/Control Modules/Overview/Components/Hand Valve"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "CoordinateContainer"
+        },
+        "position": {
+          "basis": "200px",
+          "grow": 1
+        },
+        "type": "ia.container.coord"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

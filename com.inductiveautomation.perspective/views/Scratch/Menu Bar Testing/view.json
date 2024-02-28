@@ -1,0 +1,43 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1453
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "View"
+        },
+        "position": {
+          "height": 70,
+          "width": 1000,
+          "x": 26,
+          "y": 159
+        },
+        "props": {
+          "params": {
+            "AllowedContentTypes": [
+              "Mimic",
+              "Alarms",
+              "Trend",
+              "Setpoints"
+            ],
+            "InitialModelItemTagPath": "[TPPlant1]Plant 1",
+            "LimitItems": 0,
+            "ShowOnlyConfiguredContentTypes": true
+          },
+          "path": "Standard/Navigation/Menu Bar/View"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

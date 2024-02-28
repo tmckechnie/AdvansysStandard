@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100DI100"
+    "TagPath": "[TPOpnim]Control Modules/Rh_FSL_7075"
   },
   "propConfig": {
     "params.TagPath": {
@@ -84,6 +84,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
+                    "Expanded": false,
                     "Title": "General"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"
@@ -135,6 +136,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
+                    "Expanded": false,
                     "Title": "Input"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"
@@ -185,6 +187,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
+                    "Expanded": false,
                     "Title": "Status"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"
@@ -234,6 +237,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
+                    "Expanded": false,
                     "Title": "Alarms"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"

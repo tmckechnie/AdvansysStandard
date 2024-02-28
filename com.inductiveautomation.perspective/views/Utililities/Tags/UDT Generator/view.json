@@ -1,0 +1,3955 @@
+{
+  "custom": {
+    "TagProviders": [
+      "[TPPressplant]",
+      "[TPROM]",
+      "[StandardS71500]",
+      "[TPFMS]",
+      "[TPMES]",
+      "[MQTT Engine]",
+      "[MES Metrics]",
+      "[Utilities]",
+      "[TPSite]",
+      "[default]",
+      "[TPWashPlant]",
+      "[TPOpnim]",
+      "[TPPower]",
+      "[TPPSCV01003]",
+      "[MQTT Transmission]",
+      "[MES]",
+      "[TPJellyFactoryStandard]",
+      "[TPPlant1]",
+      "[TPPlant2]",
+      "[TPJellyFactory]",
+      "[TPPackaging]",
+      "[AdvansysPublic_MQTT_Engine]",
+      "[TPPerformance]",
+      "[CCBA]",
+      "[AdvansysStandard]",
+      "[TOPSERVER]",
+      "[MQTT Distributor]",
+      "[BATHeidelberg]"
+    ],
+    "applicationFolderPath": "Modbus/Device Modules/Generator",
+    "baseFolderPath": "Standard/Device Modules/Generator",
+    "collisionPolicy": "o",
+    "controlModulePath": "Standard/Control Modules/Application",
+    "data": [
+      {
+        "DataType": "Float4",
+        "Description": "Engine Oil Pressure",
+        "OPC Address": 1024,
+        "TagFolderPath": "Engine",
+        "Tagname": "Oil Pressure",
+        "engUnit": "kPa",
+        "localID": 1,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Engine Coolant Temperature",
+        "OPC Address": 1025,
+        "TagFolderPath": "Engine",
+        "Tagname": "Coolant Temperature",
+        "engUnit": "Â°C",
+        "localID": 2,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Engine Oil Temperature",
+        "OPC Address": 1026,
+        "TagFolderPath": "Engine",
+        "Tagname": "Oil Temperature",
+        "engUnit": "Â°C",
+        "localID": 3,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Engine Fuel Level",
+        "OPC Address": 1027,
+        "TagFolderPath": "Engine",
+        "Tagname": "Fuel Level",
+        "engUnit": "%",
+        "localID": 4,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Engine Charge Alternator Voltage",
+        "OPC Address": 1028,
+        "TagFolderPath": "Engine",
+        "Tagname": "Charge Alternator Voltage",
+        "engUnit": "V",
+        "localID": 5,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Engine Battery Voltage",
+        "OPC Address": 1029,
+        "TagFolderPath": "Engine",
+        "Tagname": "Battery Voltage",
+        "engUnit": "V",
+        "localID": 6,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Engine Speed",
+        "OPC Address": 1030,
+        "TagFolderPath": "Engine",
+        "Tagname": "Speed",
+        "engUnit": "rpm",
+        "localID": 7,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator Frequency",
+        "OPC Address": 1031,
+        "TagFolderPath": "Generator",
+        "Tagname": "Frequency",
+        "engUnit": "Hz",
+        "localID": 8,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L1-N Voltage",
+        "OPC Address": 1032,
+        "TagFolderPath": "Generator",
+        "Tagname": "L1-N Voltage",
+        "engUnit": "V",
+        "localID": 9,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L2-N Voltage",
+        "OPC Address": 1034,
+        "TagFolderPath": "Generator",
+        "Tagname": "L2-N Voltage",
+        "engUnit": "V",
+        "localID": 10,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L3-N Voltage",
+        "OPC Address": 1036,
+        "TagFolderPath": "Generator",
+        "Tagname": "L3-N Voltage",
+        "engUnit": "V",
+        "localID": 11,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L1-L2 Voltage",
+        "OPC Address": 1038,
+        "TagFolderPath": "Generator",
+        "Tagname": "L1-L2 Voltage",
+        "engUnit": "V",
+        "localID": 12,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L2-L3 Voltage",
+        "OPC Address": 1040,
+        "TagFolderPath": "Generator",
+        "Tagname": "L2-L3 Voltage",
+        "engUnit": "V",
+        "localID": 13,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L3-L1 Voltage",
+        "OPC Address": 1042,
+        "TagFolderPath": "Generator",
+        "Tagname": "L3-L1 Voltage",
+        "engUnit": "V",
+        "localID": 14,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L1 Current",
+        "OPC Address": 1044,
+        "TagFolderPath": "Generator",
+        "Tagname": "L1 Current",
+        "engUnit": "A",
+        "localID": 15,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L2 Current",
+        "OPC Address": 1046,
+        "TagFolderPath": "Generator",
+        "Tagname": "L2 Current",
+        "engUnit": "A",
+        "localID": 16,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L3 Current",
+        "OPC Address": 1048,
+        "TagFolderPath": "Generator",
+        "Tagname": "L3 Current",
+        "engUnit": "A",
+        "localID": 17,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator Earth Current",
+        "OPC Address": 1050,
+        "TagFolderPath": "Generator",
+        "Tagname": "Earth Current",
+        "engUnit": "A",
+        "localID": 18,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L1 Watts",
+        "OPC Address": 1052,
+        "TagFolderPath": "Generator",
+        "Tagname": "L1 Watts",
+        "engUnit": "W",
+        "localID": 19,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L2 Watts",
+        "OPC Address": 1054,
+        "TagFolderPath": "Generator",
+        "Tagname": "L2 Watts",
+        "engUnit": "W",
+        "localID": 20,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L3 Watts",
+        "OPC Address": 1056,
+        "TagFolderPath": "Generator",
+        "Tagname": "L3 Watts",
+        "engUnit": "W",
+        "localID": 21,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator Current Lag",
+        "OPC Address": 1058,
+        "TagFolderPath": "Generator",
+        "Tagname": "Current Lag",
+        "engUnit": "A",
+        "localID": 22,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains Frequency",
+        "OPC Address": 1059,
+        "TagFolderPath": "Mains",
+        "Tagname": "Frequency",
+        "engUnit": "Hz",
+        "localID": 23,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L1-N Voltage",
+        "OPC Address": 1060,
+        "TagFolderPath": "Mains",
+        "Tagname": "L1-N Voltage",
+        "engUnit": "V",
+        "localID": 24,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L2-N Voltage",
+        "OPC Address": 1062,
+        "TagFolderPath": "Mains",
+        "Tagname": "L2-N Voltage",
+        "engUnit": "V",
+        "localID": 25,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L3-N Voltage",
+        "OPC Address": 1064,
+        "TagFolderPath": "Mains",
+        "Tagname": "L3-N Voltage",
+        "engUnit": "V",
+        "localID": 26,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L1-L2 Voltage",
+        "OPC Address": 1066,
+        "TagFolderPath": "Mains",
+        "Tagname": "L1-L2 Voltage",
+        "engUnit": "V",
+        "localID": 27,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L2-L3 Voltage",
+        "OPC Address": 1068,
+        "TagFolderPath": "Mains",
+        "Tagname": "L2-L3 Voltage",
+        "engUnit": "V",
+        "localID": 28,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L3-L1 Voltage",
+        "OPC Address": 1070,
+        "TagFolderPath": "Mains",
+        "Tagname": "L3-L1 Voltage",
+        "engUnit": "V",
+        "localID": 29,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains Voltage Phase Lag Lead",
+        "OPC Address": 1072,
+        "TagFolderPath": "Mains",
+        "Tagname": "Voltage Phase Lag Lead",
+        "engUnit": "V",
+        "localID": 30,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator Phase Rotation",
+        "OPC Address": 1073,
+        "TagFolderPath": "Generator",
+        "Tagname": "Phase Rotation",
+        "engUnit": "%",
+        "localID": 31,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains Phase Rotation",
+        "OPC Address": 1074,
+        "TagFolderPath": "Mains",
+        "Tagname": "Phase Rotation",
+        "engUnit": "Â°",
+        "localID": 32,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains Current Lag Lead",
+        "OPC Address": 1075,
+        "TagFolderPath": "Mains",
+        "Tagname": "Current Lag Lead",
+        "engUnit": "A",
+        "localID": 33,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L1 Current",
+        "OPC Address": 1076,
+        "TagFolderPath": "Mains",
+        "Tagname": "L1 Current",
+        "engUnit": "A",
+        "localID": 34,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L2 Current",
+        "OPC Address": 1078,
+        "TagFolderPath": "Mains",
+        "Tagname": "L2 Current",
+        "engUnit": "A",
+        "localID": 35,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L3 Current",
+        "OPC Address": 1080,
+        "TagFolderPath": "Mains",
+        "Tagname": "L3 Current",
+        "engUnit": "A",
+        "localID": 36,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains Earth Current",
+        "OPC Address": 1082,
+        "TagFolderPath": "Mains",
+        "Tagname": "Earth Current",
+        "engUnit": "A",
+        "localID": 37,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L1 Watts",
+        "OPC Address": 1084,
+        "TagFolderPath": "Mains",
+        "Tagname": "L1 Watts",
+        "engUnit": "W",
+        "localID": 38,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L2 Watts",
+        "OPC Address": 1086,
+        "TagFolderPath": "Mains",
+        "Tagname": "L2 Watts",
+        "engUnit": "W",
+        "localID": 39,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L3 Watts",
+        "OPC Address": 1088,
+        "TagFolderPath": "Mains",
+        "Tagname": "L3 Watts",
+        "engUnit": "W",
+        "localID": 40,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus Current Lag",
+        "OPC Address": 1090,
+        "TagFolderPath": "Bus",
+        "Tagname": "Current Lag",
+        "engUnit": "A",
+        "localID": 41,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus Frequency",
+        "OPC Address": 1091,
+        "TagFolderPath": "Bus",
+        "Tagname": "Frequency",
+        "engUnit": "Hz",
+        "localID": 42,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L1-N Voltage",
+        "OPC Address": 1092,
+        "TagFolderPath": "Bus",
+        "Tagname": "L1-N Voltage",
+        "engUnit": "V",
+        "localID": 43,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L2-N Voltage",
+        "OPC Address": 1094,
+        "TagFolderPath": "Bus",
+        "Tagname": "L2-N Voltage",
+        "engUnit": "V",
+        "localID": 44,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L3-N Voltage",
+        "OPC Address": 1096,
+        "TagFolderPath": "Bus",
+        "Tagname": "L3-N Voltage",
+        "engUnit": "V",
+        "localID": 45,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L1-L2 Voltage",
+        "OPC Address": 1098,
+        "TagFolderPath": "Bus",
+        "Tagname": "L1-L2 Voltage",
+        "engUnit": "V",
+        "localID": 46,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L2-L3 Voltage",
+        "OPC Address": 1100,
+        "TagFolderPath": "Bus",
+        "Tagname": "L2-L3 Voltage",
+        "engUnit": "V",
+        "localID": 47,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L3-L1 Voltage",
+        "OPC Address": 1102,
+        "TagFolderPath": "Bus",
+        "Tagname": "L3-L1 Voltage",
+        "engUnit": "V",
+        "localID": 48,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L1 Current",
+        "OPC Address": 1104,
+        "TagFolderPath": "Bus",
+        "Tagname": "L1 Current",
+        "engUnit": "A",
+        "localID": 49,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L2 Current",
+        "OPC Address": 1106,
+        "TagFolderPath": "Bus",
+        "Tagname": "L2 Current",
+        "engUnit": "A",
+        "localID": 50,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L3 Current",
+        "OPC Address": 1108,
+        "TagFolderPath": "Bus",
+        "Tagname": "L3 Current",
+        "engUnit": "A",
+        "localID": 51,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus Earth Current",
+        "OPC Address": 1110,
+        "TagFolderPath": "Bus",
+        "Tagname": "Earth Current",
+        "engUnit": "A",
+        "localID": 52,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L1 Watts",
+        "OPC Address": 1112,
+        "TagFolderPath": "Bus",
+        "Tagname": "L1 Watts",
+        "engUnit": "W",
+        "localID": 53,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L2 Watts",
+        "OPC Address": 1114,
+        "TagFolderPath": "Bus",
+        "Tagname": "L2 Watts",
+        "engUnit": "W",
+        "localID": 54,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L3 Watts",
+        "OPC Address": 1116,
+        "TagFolderPath": "Bus",
+        "Tagname": "L3 Watts",
+        "engUnit": "W",
+        "localID": 55,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus Phase Rotation",
+        "OPC Address": 1118,
+        "TagFolderPath": "Bus",
+        "Tagname": "Phase Rotation",
+        "engUnit": "Â°",
+        "localID": 56,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus 2 Frequency",
+        "OPC Address": 1119,
+        "TagFolderPath": "Bus",
+        "Tagname": "2 Frequency",
+        "engUnit": "Hz",
+        "localID": 57,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus 2 L1-N Voltage",
+        "OPC Address": 1120,
+        "TagFolderPath": "Bus",
+        "Tagname": "2 L1-N Voltage",
+        "engUnit": "V",
+        "localID": 58,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus 2 L2-N Voltage",
+        "OPC Address": 1122,
+        "TagFolderPath": "Bus",
+        "Tagname": "2 L2-N Voltage",
+        "engUnit": "V",
+        "localID": 59,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      }
+    ],
+    "dataList": "",
+    "derivedFrom": "Standard/Base/Device Module",
+    "filePath": "C:\\Projects\\FMG\\FMG ISA S95 v2 (CSV).csv",
+    "key": {
+      "name": "Three Phase",
+      "tagType": "UdtType",
+      "tags": [
+        {
+          "name": "Cfg",
+          "tagType": "Folder"
+        },
+        {
+          "name": "Out",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "dataType": "Boolean",
+              "documentation": "Output 2",
+              "name": "Output 2",
+              "tagType": "AtomicTag",
+              "value": false,
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "documentation": "Output 1",
+              "name": "Output 1",
+              "tagType": "AtomicTag",
+              "value": false,
+              "valueSource": "memory"
+            }
+          ]
+        },
+        {
+          "name": "Phase A",
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "Reactive Power",
+              "tagType": "AtomicTag"
+            },
+            {
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Volt",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Apparent Power",
+              "tagType": "AtomicTag"
+            },
+            {
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Current",
+              "tagType": "AtomicTag"
+            },
+            {
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Active Power",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Power Factor",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "Standard/Device Modules/Power Meters/PhasePrimitive"
+        },
+        {
+          "name": "Alarms",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Summary",
+              "parameters": {
+                "DisplayPath": {
+                  "dataType": "String",
+                  "value": {
+                    "bindType": "parameter",
+                    "binding": "{PathToParentFolder}"
+                  }
+                }
+              },
+              "tagType": "UdtInstance",
+              "tags": [
+                {
+                  "name": "Information",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "DisplayPath",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Update Trigger",
+                  "tagType": "AtomicTag"
+                }
+              ],
+              "typeId": "Standard/Alarms/Alarm Summary"
+            }
+          ]
+        },
+        {
+          "name": "System",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Power Factor",
+              "engHigh": 50,
+              "engUnit": "Hz",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Power Factor",
+              "tagType": "AtomicTag",
+              "value": 1,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Reactive Power",
+              "engHigh": 2000,
+              "engUnit": "VAR",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Reactive Power",
+              "tagType": "AtomicTag",
+              "value": 0,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Frequency",
+              "engHigh": 50,
+              "engUnit": "Hz",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Frequency",
+              "tagType": "AtomicTag",
+              "value": 0,
+              "valueSource": "memory"
+            },
+            {
+              "ComponentName": {
+                "bindType": "parameter",
+                "binding": "{Description}"
+              },
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Active Power",
+              "engHigh": 2000,
+              "engUnit": "W",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Active Power",
+              "tagType": "AtomicTag",
+              "value": 0,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Apparent Power",
+              "engHigh": 2000,
+              "engUnit": "VA",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Apparent Power",
+              "tagType": "AtomicTag",
+              "value": 0,
+              "valueSource": "memory"
+            }
+          ]
+        },
+        {
+          "name": "Id",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "Identify",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Self",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "SelfIdentifyRequest",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Owner",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "OwnerTagPath",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "OwnerIdentifyRequest",
+              "tagType": "AtomicTag"
+            }
+          ]
+        },
+        {
+          "name": "Phase C",
+          "parameters": {
+            "Phase": {
+              "dataType": "String",
+              "value": ""
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "Apparent Power",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Volt",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Reactive Power",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Power Factor",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Current",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Active Power",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "Standard/Device Modules/Power Meters/PhasePrimitive"
+        },
+        {
+          "name": "Version",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "Phase B",
+          "parameters": {
+            "Phase": {
+              "dataType": "String",
+              "value": ""
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "Reactive Power",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Power Factor",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Current",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Volt",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Active Power",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Apparent Power",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "Standard/Device Modules/Power Meters/PhasePrimitive"
+        },
+        {
+          "name": "In",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "dataType": "Boolean",
+              "documentation": "Input 1",
+              "name": "Input 1",
+              "readOnly": true,
+              "tagType": "AtomicTag",
+              "value": false,
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "documentation": "Input 4",
+              "name": "Input 4",
+              "readOnly": true,
+              "tagType": "AtomicTag",
+              "value": false,
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "documentation": "Input 6",
+              "name": "Input 6",
+              "readOnly": true,
+              "tagType": "AtomicTag",
+              "value": false,
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "documentation": "Input 2",
+              "name": "Input 2",
+              "readOnly": true,
+              "tagType": "AtomicTag",
+              "value": false,
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "documentation": "Input 3",
+              "name": "Input 3",
+              "readOnly": true,
+              "tagType": "AtomicTag",
+              "value": false,
+              "valueSource": "memory"
+            },
+            {
+              "dataType": "Boolean",
+              "documentation": "Input 5",
+              "name": "Input 5",
+              "readOnly": true,
+              "tagType": "AtomicTag",
+              "value": false,
+              "valueSource": "memory"
+            }
+          ]
+        },
+        {
+          "name": "Metadata",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "name": "ShortDescription",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "TagProvider",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "InstancePath",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "PathToParentFolder",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "StandardViewPath",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "ModelPath",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "InstanceName",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Description",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "DriverModuleTagPath",
+              "tagType": "AtomicTag"
+            }
+          ]
+        }
+      ],
+      "typeId": "Standard/Base/Device Module"
+    },
+    "modelItem": "Model Item",
+    "modelItemPath": "Standard/Model/Model Item",
+    "name": "Generator",
+    "results": [
+      "Good"
+    ],
+    "tagProvider": "TPFMS",
+    "udtBase": {
+      "name": "Generator",
+      "tagType": "UdtType",
+      "tags": [
+        {
+          "name": "Bus",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus Current Lag",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Current Lag",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus Frequency",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Frequency",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus L1-N Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L1-N Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus L2-N Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L2-N Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus L3-N Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L3-N Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus L1-L2 Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L1-L2 Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus L2-L3 Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L2-L3 Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus L3-L1 Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L3-L1 Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus L1 Current",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L1 Current",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus L2 Current",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L2 Current",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus L3 Current",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L3 Current",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus Earth Current",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Earth Current",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus L1 Watts",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L1 Watts",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus L2 Watts",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L2 Watts",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus L3 Watts",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L3 Watts",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus Phase Rotation",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Phase Rotation",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus 2 Frequency",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "2 Frequency",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus 2 L1-N Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "2 L1-N Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Bus 2 L2-N Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "2 L2-N Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            }
+          ]
+        },
+        {
+          "name": "Mains",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Mains Frequency",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Frequency",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Mains L1-N Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L1-N Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Mains L2-N Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L2-N Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Mains L3-N Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L3-N Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Mains L1-L2 Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L1-L2 Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Mains L2-L3 Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L2-L3 Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Mains L3-L1 Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L3-L1 Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Mains Voltage Phase Lag Lead",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Voltage Phase Lag Lead",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Generator Phase Rotation",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Phase Rotation",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Mains Phase Rotation",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Phase Rotation",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Mains Current Lag Lead",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Current Lag Lead",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Mains L1 Current",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L1 Current",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Mains L2 Current",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L2 Current",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Mains L3 Current",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L3 Current",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Mains Earth Current",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Earth Current",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Mains L1 Watts",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L1 Watts",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Mains L2 Watts",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L2 Watts",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Mains L3 Watts",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L3 Watts",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            }
+          ]
+        },
+        {
+          "name": "Engine",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Engine Oil Pressure",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Oil Pressure",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Engine Coolant Temperature",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Coolant Temperature",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Engine Oil Temperature",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Oil Temperature",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Engine Fuel Level",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Fuel Level",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Engine Charge Alternator Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Charge Alternator Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Engine Battery Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Battery Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Engine Speed",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Speed",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            }
+          ]
+        },
+        {
+          "name": "Generator",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Generator Frequency",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Frequency",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Generator L1-N Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L1-N Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Generator L2-N Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L2-N Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Generator L3-N Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L3-N Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Generator L1-L2 Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L1-L2 Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Generator L2-L3 Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L2-L3 Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Generator L3-L1 Voltage",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L3-L1 Voltage",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Generator L1 Current",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L1 Current",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Generator L2 Current",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L2 Current",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Generator L3 Current",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L3 Current",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Generator Earth Current",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Earth Current",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Generator L1 Watts",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L1 Watts",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Generator L2 Watts",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L2 Watts",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Generator L3 Watts",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "L3 Watts",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            },
+            {
+              "History Path": {
+                "bindType": "parameter",
+                "binding": "{HistoryModelPathPrefix}/{PathToTag}"
+              },
+              "dataType": "Float4",
+              "documentation": "Generator Current Lag",
+              "historicalDeadbandStyle": "Discrete",
+              "historyEnabled": true,
+              "historyProvider": {
+                "bindType": "parameter",
+                "binding": "{HistoryStorageProvider}"
+              },
+              "name": "Current Lag",
+              "tagType": "AtomicTag",
+              "value": null,
+              "valueSource": "memory"
+            }
+          ]
+        }
+      ],
+      "typeId": "Standard/Base/Device Module"
+    }
+  },
+  "params": {},
+  "propConfig": {
+    "custom.TagProviders": {
+      "binding": {
+        "config": {
+          "expression": "True"
+        },
+        "transforms": [
+          {
+            "code": "\ttags\u003dsystem.tag.browse(filter\u003d{\"tagType\":\"Provider\"}).results\n\tarrTagProviders\u003d[]\n\tfor result in tags:\n\t\tprovider\u003dstr(result[\u0027fullPath\u0027])\n\t\tif provider !\u003d \"[System]\":\n\t\t\tarrTagProviders.append(provider)\n\treturn arrTagProviders\n",
+            "type": "script"
+          }
+        ],
+        "type": "expr"
+      },
+      "persistent": true
+    },
+    "custom.applicationFolderPath": {
+      "persistent": true
+    },
+    "custom.baseFolderPath": {
+      "persistent": true
+    },
+    "custom.collisionPolicy": {
+      "persistent": true
+    },
+    "custom.controlModulePath": {
+      "persistent": true
+    },
+    "custom.data": {
+      "binding": {
+        "config": {
+          "path": "/root/flexContainerData/ExcelDrop.props.params.Data"
+        },
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "custom.dataList": {
+      "persistent": true
+    },
+    "custom.derivedFrom": {
+      "persistent": true
+    },
+    "custom.filePath": {
+      "persistent": true
+    },
+    "custom.key": {
+      "persistent": true
+    },
+    "custom.modelItem": {
+      "persistent": true
+    },
+    "custom.modelItemPath": {
+      "persistent": true
+    },
+    "custom.name": {
+      "persistent": true
+    },
+    "custom.results": {
+      "persistent": true
+    },
+    "custom.tagProvider": {
+      "persistent": true
+    },
+    "custom.udtApplication": {
+      "binding": {
+        "config": {
+          "struct": {
+            "baseFolderPath": "{view.custom.baseFolderPath}",
+            "data": "{view.custom.data}",
+            "derivedFrom": "{view.custom.baseFolderPath}",
+            "name": "{view.custom.name}",
+            "tagProvider": "{view.custom.tagProvider}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tdata \u003d value[\u0027data\u0027]\n\tudt \u003d {\"tagType\": \"UdtType\"}\n\tudtName \u003d value[\u0027name\u0027]\n\tudt[\u0027name\u0027] \u003d udtName\n\t\n\tbaseFolderPath \u003d value[\u0027baseFolderPath\u0027]\n\ttagProvider \u003d value[\u0027tagProvider\u0027]\n\tderivedFrom \u003d baseFolderPath + \"/\" + udtName\n\tudt[\u0027typeId\u0027] \u003d derivedFrom\n\t\n\tfolders \u003d {}\n\tdef getTag(line):\n\t\tname \u003d line[\u0027Tagname\u0027]\n\t\tdataType \u003d line[\u0027DataType\u0027]\n\t\tdocumentation \u003d line[\u0027Description\u0027]\n\t\tdefaultValue \u003d None\n\t\ttagType \u003d \"AtomicTag\"\n\t\taddress \u003d str(line[\u0027OPC Address\u0027])\n\t\tif len(address)\u003e0:\n\t\t\tvalueSource \u003d \"opc\"\n\t\t\tif dataType \u003d\u003d\"Float4\":\n\t\t\t\topcItemPath \u003d \"{OPCPath}{UnitId}.HRF\" + address\n\t\telse:\n\t\t\treturn None\n\t\ttag \u003d {\n\t\t\t\t\"name\":name,\n\t\t          \"valueSource\": valueSource,\n\t\t          \"opcServer\": {\"bindType\": \"parameter\",\"binding\": \"{OPCServerName}\"},\n\t\t          \"opcItemPath\": {\"bindType\": \"parameter\",\"binding\": opcItemPath}\n\t\t        }\n\t\t\n\t\tscaleMode \u003d line[\u0027scaleMode\u0027]#\"Linear\"\n\t\tif scaleMode !\u003d \u0027None\u0027:\n\t\t\ttag[\u0027scaleMode\u0027] \u003d scaleMode\n\t\t\ttag[\u0027rawLo\u0027] \u003d line[\u0027rawLo\u0027]\n\t\t\ttag[\u0027rawHigh\u0027] \u003d line[\u0027rawHigh\u0027]\n\t\t\ttag[\u0027scaledLo\u0027] \u003d line[\u0027scaledLo\u0027]\n\t\t\ttag[\u0027scaledHigh\u0027] \u003d line[\u0027scaledHigh\u0027]\n\t\treturn tag\n\t\n\t#Get Folders\n\tfor line in data:\n\t\ttagFolderPath \u003d line[\u0027TagFolderPath\u0027]\n\t\tif tagFolderPath in folders:\n\t\t\t#create Tag\n\t\t\ttag \u003d getTag(line)\n\t\t\tif tag is not None:\n\t\t\t\tfolder[\u0027tags\u0027].append(tag)\n\t\telse:\n\t\t\ttag \u003d getTag(line)\n\t\t\tif tag is not None:\n\t\t\t\tfolder \u003d {\"name\": tagFolderPath,\"tagType\": \"Folder\"}\n\t\t\t\tfolder[\u0027tags\u0027] \u003d [tag]\n\t\t\t\tfolders[tagFolderPath] \u003d folder\n\t\t\t\n\tudt[\u0027tags\u0027]\u003dfolders.values()\t\n\treturn udt",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      }
+    },
+    "custom.udtBase": {
+      "binding": {
+        "config": {
+          "struct": {
+            "baseFolderPath": "{view.custom.baseFolderPath}",
+            "data": "{view.custom.data}",
+            "derivedFrom": "{view.custom.derivedFrom}",
+            "name": "{view.custom.name}",
+            "tagProvider": "{view.custom.tagProvider}"
+          },
+          "waitOnAll": true
+        },
+        "transforms": [
+          {
+            "code": "\tdata \u003d value[\u0027data\u0027]\n\tudt \u003d {\"tagType\": \"UdtType\"}\n\tudt[\u0027name\u0027] \u003d value[\u0027name\u0027]\n\t\n\tbaseFolderPath \u003d value[\u0027baseFolderPath\u0027]\n\ttagProvider \u003d value[\u0027tagProvider\u0027]\n\tderivedFrom \u003d value[\u0027derivedFrom\u0027]\n\tudt[\u0027typeId\u0027] \u003d derivedFrom\n\t\n\tfolders \u003d {}\n\tdef getTag(line):\n\t\tname \u003d line[\u0027Tagname\u0027]\n\t\tdataType \u003d line[\u0027DataType\u0027]\n\t\tdocumentation \u003d line[\u0027Description\u0027]\n\t\tdefaultValue \u003d None\n\t\ttagType \u003d \"AtomicTag\"\n\t\tvalueSource \u003d \"memory\"\n\t\tengUnit\u003dline[\u0027engUnit\u0027]\n\t\ttag \u003d {\n\t\t          \"valueSource\": valueSource,\n\t\t          \"dataType\": dataType,\n\t\t          \"documentation\": documentation,\n\t\t          \"name\": name,\n\t\t          \"value\": defaultValue,\n\t\t          \"tagType\": tagType\n\t\t        }\n\t\t#Create Scaling\n\t\tscaleMode \u003d line[\u0027scaleMode\u0027]\n\t\tif scaleMode !\u003d \u0027None\u0027:\n\t\t\ttag[\u0027scaleMode\u0027] \u003d scaleMode\n\t\t\ttag[\u0027rawLo\u0027] \u003d line[\u0027rawLo\u0027]\n\t\t\ttag[\u0027rawHigh\u0027] \u003d line[\u0027rawHigh\u0027]\n\t\t\ttag[\u0027scaledLo\u0027] \u003d line[\u0027scaledLo\u0027]\n\t\t\ttag[\u0027scaledHigh\u0027] \u003d line[\u0027scaledHigh\u0027]\n\t\t#Create History\n\t\thistoryEnabled \u003d True#line[\u0027HistoryEnabled\u0027]\n\t\tif historyEnabled:\n\t\t\ttag[\u0027historyEnabled\u0027] \u003dTrue\n\t\t\ttag[\u0027historicalDeadbandStyle\u0027] \u003d\u0027Discrete\u0027\n\t\t\ttag[\u0027historyProvider\u0027] \u003d {\"bindType\": \"parameter\",\"binding\": \"{HistoryStorageProvider}\"}\n\t\t\ttag[\u0027History Path\u0027] \u003dhistoryPath \u003d {\"bindType\": \"parameter\",\"binding\": \"{HistoryModelPathPrefix}/{PathToTag}\"}\n\t\treturn tag\n\t\n\t#Get Folders\n\tfor line in data:\n\t\ttagFolderPath \u003d line[\u0027TagFolderPath\u0027]\n\t\tif tagFolderPath in folders:\n\t\t\t#create Tag\n\t\t\ttag \u003d getTag(line)\n\t\t\tfolder[\u0027tags\u0027].append(tag)\n\t\telse:\n\t\t\ttag \u003d getTag(line)\n\t\t\tfolder \u003d {\"name\": tagFolderPath,\"tagType\": \"Folder\"}\n\t\t\tfolder[\u0027tags\u0027] \u003d [tag]\n\t\t\tfolders[tagFolderPath] \u003d folder\n\t\t\t\n\tudt[\u0027tags\u0027]\u003dfolders.values()\t\n\treturn udt",
+            "type": "script"
+          }
+        ],
+        "type": "expr-struct"
+      },
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 895
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "labelBaseFolderPath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFCCCC",
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text"
+              },
+              "text": "Name"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "textBaseFolderPath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.name"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text"
+              }
+            },
+            "type": "ia.input.text-field"
+          }
+        ],
+        "meta": {
+          "name": "flexContainerName"
+        },
+        "position": {
+          "basis": 50,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Label"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "parent.meta.name"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFCCCC",
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Dropdown"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "propConfig": {
+              "props.options": {
+                "binding": {
+                  "config": {
+                    "path": "view.custom.TagProviders"
+                  },
+                  "transforms": [
+                    {
+                      "code": "\toptions \u003d []\n\tfor tp in value:\n\t\ttpName \u003d tp.replace(\u0027[\u0027,\u0027\u0027).replace(\u0027]\u0027,\u0027\u0027)\n\t\toption \u003d {\n\t\t  \"value\": tpName,\n\t\t  \"label\": tpName\n\t\t}\n\t\toptions.append(option)\n\treturn options",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "property"
+                }
+              },
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.tagProvider"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "dropdownOptionStyle": {
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text"
+              },
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text"
+              }
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "Source Tag Provider"
+        },
+        "position": {
+          "basis": "50px",
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "labelBaseFolderPath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFCCCC",
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text"
+              },
+              "text": "Derived From"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "textBaseFolderPath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.derivedFrom"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text"
+              }
+            },
+            "type": "ia.input.text-field"
+          }
+        ],
+        "meta": {
+          "name": "flexContainerDerivedFrom"
+        },
+        "position": {
+          "basis": 50,
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "labelBaseFolderPath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFCCCC",
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text"
+              },
+              "text": "Base Folder Path"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "textBaseFolderPath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.baseFolderPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text"
+              }
+            },
+            "type": "ia.input.text-field"
+          }
+        ],
+        "meta": {
+          "name": "flexContainerBaseFolderPath"
+        },
+        "position": {
+          "basis": "50px",
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "label"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFCCCC",
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text"
+              },
+              "text": "Application Folder Path"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "textValue"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.applicationFolderPath"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text"
+              }
+            },
+            "type": "ia.input.text-field"
+          }
+        ],
+        "meta": {
+          "name": "flexContainerApplicationFolderPath"
+        },
+        "position": {
+          "basis": "50px",
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "labelBaseFolderPath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFCCCC",
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text"
+              },
+              "text": "Type ID"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "textBaseFolderPath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "expression": "{view.custom.baseFolderPath}+\"/\"+{view.custom.name}"
+                  },
+                  "type": "expr"
+                }
+              }
+            },
+            "props": {
+              "enabled": false,
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text"
+              }
+            },
+            "type": "ia.input.text-field"
+          }
+        ],
+        "meta": {
+          "name": "flexContainerTypeID"
+        },
+        "position": {
+          "basis": "50px",
+          "shrink": 0
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "labelBaseFolderPath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFCCCC",
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text"
+              },
+              "text": "Container Collision Policy"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "dropdownContainerCollisionPolicy"
+            },
+            "position": {
+              "basis": "36px"
+            },
+            "propConfig": {
+              "props.value": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.collisionPolicy"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "options": [
+                {
+                  "label": "Abort",
+                  "value": "a"
+                },
+                {
+                  "label": "Overwrite",
+                  "value": "o"
+                },
+                {
+                  "label": "Ignore",
+                  "value": "i"
+                },
+                {
+                  "label": "Merge",
+                  "value": "m"
+                }
+              ],
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text"
+              }
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "flexContainerCollisionPolicy"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "labelFilePath"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFCCCC",
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text"
+              },
+              "text": "Drop Excel File"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "ExcelDrop"
+            },
+            "position": {
+              "basis": "33px",
+              "grow": 1
+            },
+            "props": {
+              "params": {
+                "Data": [
+                  {
+                    "DataType": "Float4",
+                    "Description": "Engine Oil Pressure",
+                    "OPC Address": 1024,
+                    "TagFolderPath": "Engine",
+                    "Tagname": "Oil Pressure",
+                    "engUnit": "kPa",
+                    "localID": 1,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Engine Coolant Temperature",
+                    "OPC Address": 1025,
+                    "TagFolderPath": "Engine",
+                    "Tagname": "Coolant Temperature",
+                    "engUnit": "Â°C",
+                    "localID": 2,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Engine Oil Temperature",
+                    "OPC Address": 1026,
+                    "TagFolderPath": "Engine",
+                    "Tagname": "Oil Temperature",
+                    "engUnit": "Â°C",
+                    "localID": 3,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Engine Fuel Level",
+                    "OPC Address": 1027,
+                    "TagFolderPath": "Engine",
+                    "Tagname": "Fuel Level",
+                    "engUnit": "%",
+                    "localID": 4,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Engine Charge Alternator Voltage",
+                    "OPC Address": 1028,
+                    "TagFolderPath": "Engine",
+                    "Tagname": "Charge Alternator Voltage",
+                    "engUnit": "V",
+                    "localID": 5,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Engine Battery Voltage",
+                    "OPC Address": 1029,
+                    "TagFolderPath": "Engine",
+                    "Tagname": "Battery Voltage",
+                    "engUnit": "V",
+                    "localID": 6,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Engine Speed",
+                    "OPC Address": 1030,
+                    "TagFolderPath": "Engine",
+                    "Tagname": "Speed",
+                    "engUnit": "rpm",
+                    "localID": 7,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Generator Frequency",
+                    "OPC Address": 1031,
+                    "TagFolderPath": "Generator",
+                    "Tagname": "Frequency",
+                    "engUnit": "Hz",
+                    "localID": 8,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Generator L1-N Voltage",
+                    "OPC Address": 1032,
+                    "TagFolderPath": "Generator",
+                    "Tagname": "L1-N Voltage",
+                    "engUnit": "V",
+                    "localID": 9,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Generator L2-N Voltage",
+                    "OPC Address": 1034,
+                    "TagFolderPath": "Generator",
+                    "Tagname": "L2-N Voltage",
+                    "engUnit": "V",
+                    "localID": 10,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Generator L3-N Voltage",
+                    "OPC Address": 1036,
+                    "TagFolderPath": "Generator",
+                    "Tagname": "L3-N Voltage",
+                    "engUnit": "V",
+                    "localID": 11,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Generator L1-L2 Voltage",
+                    "OPC Address": 1038,
+                    "TagFolderPath": "Generator",
+                    "Tagname": "L1-L2 Voltage",
+                    "engUnit": "V",
+                    "localID": 12,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Generator L2-L3 Voltage",
+                    "OPC Address": 1040,
+                    "TagFolderPath": "Generator",
+                    "Tagname": "L2-L3 Voltage",
+                    "engUnit": "V",
+                    "localID": 13,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Generator L3-L1 Voltage",
+                    "OPC Address": 1042,
+                    "TagFolderPath": "Generator",
+                    "Tagname": "L3-L1 Voltage",
+                    "engUnit": "V",
+                    "localID": 14,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Generator L1 Current",
+                    "OPC Address": 1044,
+                    "TagFolderPath": "Generator",
+                    "Tagname": "L1 Current",
+                    "engUnit": "A",
+                    "localID": 15,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Generator L2 Current",
+                    "OPC Address": 1046,
+                    "TagFolderPath": "Generator",
+                    "Tagname": "L2 Current",
+                    "engUnit": "A",
+                    "localID": 16,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Generator L3 Current",
+                    "OPC Address": 1048,
+                    "TagFolderPath": "Generator",
+                    "Tagname": "L3 Current",
+                    "engUnit": "A",
+                    "localID": 17,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Generator Earth Current",
+                    "OPC Address": 1050,
+                    "TagFolderPath": "Generator",
+                    "Tagname": "Earth Current",
+                    "engUnit": "A",
+                    "localID": 18,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Generator L1 Watts",
+                    "OPC Address": 1052,
+                    "TagFolderPath": "Generator",
+                    "Tagname": "L1 Watts",
+                    "engUnit": "W",
+                    "localID": 19,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Generator L2 Watts",
+                    "OPC Address": 1054,
+                    "TagFolderPath": "Generator",
+                    "Tagname": "L2 Watts",
+                    "engUnit": "W",
+                    "localID": 20,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Generator L3 Watts",
+                    "OPC Address": 1056,
+                    "TagFolderPath": "Generator",
+                    "Tagname": "L3 Watts",
+                    "engUnit": "W",
+                    "localID": 21,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Generator Current Lag",
+                    "OPC Address": 1058,
+                    "TagFolderPath": "Generator",
+                    "Tagname": "Current Lag",
+                    "engUnit": "A",
+                    "localID": 22,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Mains Frequency",
+                    "OPC Address": 1059,
+                    "TagFolderPath": "Mains",
+                    "Tagname": "Frequency",
+                    "engUnit": "Hz",
+                    "localID": 23,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Mains L1-N Voltage",
+                    "OPC Address": 1060,
+                    "TagFolderPath": "Mains",
+                    "Tagname": "L1-N Voltage",
+                    "engUnit": "V",
+                    "localID": 24,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Mains L2-N Voltage",
+                    "OPC Address": 1062,
+                    "TagFolderPath": "Mains",
+                    "Tagname": "L2-N Voltage",
+                    "engUnit": "V",
+                    "localID": 25,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Mains L3-N Voltage",
+                    "OPC Address": 1064,
+                    "TagFolderPath": "Mains",
+                    "Tagname": "L3-N Voltage",
+                    "engUnit": "V",
+                    "localID": 26,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Mains L1-L2 Voltage",
+                    "OPC Address": 1066,
+                    "TagFolderPath": "Mains",
+                    "Tagname": "L1-L2 Voltage",
+                    "engUnit": "V",
+                    "localID": 27,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Mains L2-L3 Voltage",
+                    "OPC Address": 1068,
+                    "TagFolderPath": "Mains",
+                    "Tagname": "L2-L3 Voltage",
+                    "engUnit": "V",
+                    "localID": 28,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Mains L3-L1 Voltage",
+                    "OPC Address": 1070,
+                    "TagFolderPath": "Mains",
+                    "Tagname": "L3-L1 Voltage",
+                    "engUnit": "V",
+                    "localID": 29,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Mains Voltage Phase Lag Lead",
+                    "OPC Address": 1072,
+                    "TagFolderPath": "Mains",
+                    "Tagname": "Voltage Phase Lag Lead",
+                    "engUnit": "V",
+                    "localID": 30,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Generator Phase Rotation",
+                    "OPC Address": 1073,
+                    "TagFolderPath": "Generator",
+                    "Tagname": "Phase Rotation",
+                    "engUnit": "%",
+                    "localID": 31,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Mains Phase Rotation",
+                    "OPC Address": 1074,
+                    "TagFolderPath": "Mains",
+                    "Tagname": "Phase Rotation",
+                    "engUnit": "Â°",
+                    "localID": 32,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Mains Current Lag Lead",
+                    "OPC Address": 1075,
+                    "TagFolderPath": "Mains",
+                    "Tagname": "Current Lag Lead",
+                    "engUnit": "A",
+                    "localID": 33,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Mains L1 Current",
+                    "OPC Address": 1076,
+                    "TagFolderPath": "Mains",
+                    "Tagname": "L1 Current",
+                    "engUnit": "A",
+                    "localID": 34,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Mains L2 Current",
+                    "OPC Address": 1078,
+                    "TagFolderPath": "Mains",
+                    "Tagname": "L2 Current",
+                    "engUnit": "A",
+                    "localID": 35,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Mains L3 Current",
+                    "OPC Address": 1080,
+                    "TagFolderPath": "Mains",
+                    "Tagname": "L3 Current",
+                    "engUnit": "A",
+                    "localID": 36,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Mains Earth Current",
+                    "OPC Address": 1082,
+                    "TagFolderPath": "Mains",
+                    "Tagname": "Earth Current",
+                    "engUnit": "A",
+                    "localID": 37,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Mains L1 Watts",
+                    "OPC Address": 1084,
+                    "TagFolderPath": "Mains",
+                    "Tagname": "L1 Watts",
+                    "engUnit": "W",
+                    "localID": 38,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Mains L2 Watts",
+                    "OPC Address": 1086,
+                    "TagFolderPath": "Mains",
+                    "Tagname": "L2 Watts",
+                    "engUnit": "W",
+                    "localID": 39,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Mains L3 Watts",
+                    "OPC Address": 1088,
+                    "TagFolderPath": "Mains",
+                    "Tagname": "L3 Watts",
+                    "engUnit": "W",
+                    "localID": 40,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus Current Lag",
+                    "OPC Address": 1090,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "Current Lag",
+                    "engUnit": "A",
+                    "localID": 41,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus Frequency",
+                    "OPC Address": 1091,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "Frequency",
+                    "engUnit": "Hz",
+                    "localID": 42,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus L1-N Voltage",
+                    "OPC Address": 1092,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "L1-N Voltage",
+                    "engUnit": "V",
+                    "localID": 43,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus L2-N Voltage",
+                    "OPC Address": 1094,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "L2-N Voltage",
+                    "engUnit": "V",
+                    "localID": 44,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus L3-N Voltage",
+                    "OPC Address": 1096,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "L3-N Voltage",
+                    "engUnit": "V",
+                    "localID": 45,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus L1-L2 Voltage",
+                    "OPC Address": 1098,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "L1-L2 Voltage",
+                    "engUnit": "V",
+                    "localID": 46,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus L2-L3 Voltage",
+                    "OPC Address": 1100,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "L2-L3 Voltage",
+                    "engUnit": "V",
+                    "localID": 47,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus L3-L1 Voltage",
+                    "OPC Address": 1102,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "L3-L1 Voltage",
+                    "engUnit": "V",
+                    "localID": 48,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus L1 Current",
+                    "OPC Address": 1104,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "L1 Current",
+                    "engUnit": "A",
+                    "localID": 49,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus L2 Current",
+                    "OPC Address": 1106,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "L2 Current",
+                    "engUnit": "A",
+                    "localID": 50,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus L3 Current",
+                    "OPC Address": 1108,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "L3 Current",
+                    "engUnit": "A",
+                    "localID": 51,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus Earth Current",
+                    "OPC Address": 1110,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "Earth Current",
+                    "engUnit": "A",
+                    "localID": 52,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus L1 Watts",
+                    "OPC Address": 1112,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "L1 Watts",
+                    "engUnit": "W",
+                    "localID": 53,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus L2 Watts",
+                    "OPC Address": 1114,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "L2 Watts",
+                    "engUnit": "W",
+                    "localID": 54,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus L3 Watts",
+                    "OPC Address": 1116,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "L3 Watts",
+                    "engUnit": "W",
+                    "localID": 55,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus Phase Rotation",
+                    "OPC Address": 1118,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "Phase Rotation",
+                    "engUnit": "Â°",
+                    "localID": 56,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus 2 Frequency",
+                    "OPC Address": 1119,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "2 Frequency",
+                    "engUnit": "Hz",
+                    "localID": 57,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus 2 L1-N Voltage",
+                    "OPC Address": 1120,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "2 L1-N Voltage",
+                    "engUnit": "V",
+                    "localID": 58,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  },
+                  {
+                    "DataType": "Float4",
+                    "Description": "Bus 2 L2-N Voltage",
+                    "OPC Address": 1122,
+                    "TagFolderPath": "Bus",
+                    "Tagname": "2 L2-N Voltage",
+                    "engUnit": "V",
+                    "localID": 59,
+                    "rawHigh": 100,
+                    "rawLo": 0,
+                    "scaleMode": "None",
+                    "scaledHigh": 100,
+                    "scaledLo": 0
+                  }
+                ],
+                "DownloadFileName": "Export.xlsx",
+                "EnableDownload": false,
+                "SheetNumber": 1,
+                "ShowTable": true
+              },
+              "path": "Utililities/Excel/ExcelDrop"
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "flexContainerData"
+        },
+        "position": {
+          "basis": 100,
+          "grow": 1
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\t# Create Logger\n\tlogger \u003d system.util.getLogger(\u0027UDT Generator\u0027)\n\tcollisionPolicy \u003d self.view.custom.collisionPolicy\n\tudtBase \u003d self.view.custom.udtBase\n\tudtBase \u003d dict(udtBase)\n\ttagProvider \u003d self.view.custom.tagProvider\n\t\n\t#Configure Base UDT \n\tbaseTagPath \u003d self.view.custom.baseFolderPath\n\tbaseTagPath \u003d \u0027[\u0027+tagProvider+\u0027]_types_/\u0027+baseTagPath\n\tresults \u003d system.tag.configure(baseTagPath, udtBase, collisionPolicy)\n\tself.view.custom.results\u003dresults\n\tsystem.perspective.print(results[0])\n\tif str(results[0])\u003d\u003d\"Good\":\n\t\t\n\t\t#Configure Application UDT\n\t\tapplicationFolderPath \u003d self.view.custom.applicationFolderPath\n\t\tsystem.perspective.print(applicationFolderPath)\n\t\tudtApplication \u003d self.view.custom.udtApplication\n\t\t\n\t\tudtApplication \u003d dict(udtApplication)\n\t\tapplicationFolderPath \u003d \u0027[\u0027+tagProvider+\u0027]_types_/\u0027+applicationFolderPath\n\t\tapplicationResults \u003d system.tag.configure(applicationFolderPath, udtApplication, collisionPolicy)\n\t\tresults.append(applicationResults)\n\t\n\t\t\t\t\n\t\t\t"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "buttonGenerateUDT"
+        },
+        "position": {
+          "basis": "42px"
+        },
+        "propConfig": {
+          "props.enabled": {
+            "binding": {
+              "config": {
+                "expression": "{view.custom.collisionPolicy}"
+              },
+              "transforms": [
+                {
+                  "fallback": false,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": "a",
+                      "output": true
+                    },
+                    {
+                      "input": "o",
+                      "output": true
+                    },
+                    {
+                      "input": "m",
+                      "output": true
+                    },
+                    {
+                      "input": "i",
+                      "output": true
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "text": "Generate UDT"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "labelResults"
+            },
+            "position": {
+              "basis": "32px"
+            },
+            "props": {
+              "style": {
+                "backgroundColor": "#FFCCCC",
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text"
+              },
+              "text": "Results"
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "labelText"
+            },
+            "position": {
+              "basis": "32px",
+              "grow": 1
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.results"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "alignVertical": "top",
+              "style": {
+                "classes": "Standard/Popups/Faceplates/Content Standard/Popups/Faceplates/Text",
+                "textAlign": "start"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "flexContainerCollisionPolicy_0"
+        },
+        "position": {
+          "basis": "20px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

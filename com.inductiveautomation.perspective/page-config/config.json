@@ -4,6 +4,14 @@
       "title": "",
       "viewPath": "Screens/Main"
     },
+    "/FMS": {
+      "title": "FMS",
+      "viewPath": "Model Views/TPFMS/FMS/Facility/Energy/Energy"
+    },
+    "/GatewayDiagnostics": {
+      "title": "",
+      "viewPath": "Standard/Diagnostic Modules/Gateway Diagnostics"
+    },
     "/Home/:ContentType": {
       "title": "",
       "viewPath": "Screens/Main"
@@ -11,6 +19,10 @@
     "/MapTest": {
       "title": "MapTest",
       "viewPath": "Standard/Components/Map/Map"
+    },
+    "/Testing": {
+      "title": "",
+      "viewPath": "Tests/Persistence and Loading"
     },
     "/WebDev/Test": {
       "title": "",
@@ -57,6 +69,22 @@
           "ModelItemTagPath": "[StandardS71500]Standard/Model Item"
         },
         "viewPath": "Standard/Navigation/Tree/View"
+      }
+    ],
+    "right": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "cover",
+        "handle": "show",
+        "iconUrl": "",
+        "id": "DockRight",
+        "modal": true,
+        "resizable": false,
+        "show": "onDemand",
+        "size": 370,
+        "viewParams": {},
+        "viewPath": "Standard/Navigation/User Info/View"
       }
     ],
     "top": [

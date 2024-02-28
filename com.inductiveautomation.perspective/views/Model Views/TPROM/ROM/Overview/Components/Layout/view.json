@@ -1,0 +1,1930 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1920
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Transfer-CV01"
+        },
+        "position": {
+          "height": 512,
+          "width": 342.9999999999999,
+          "x": 751.83,
+          "y": 73.78
+        },
+        "propConfig": {
+          "props.params.height": {
+            "binding": {
+              "config": {
+                "path": "this.position.height"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.params.width": {
+            "binding": {
+              "config": {
+                "path": "this.position.width"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "params": {
+            "Name": {
+              "Bottom": "CV01",
+              "Top": ""
+            },
+            "height": 512,
+            "width": 342.9999999999999
+          },
+          "path": "Standard/Equipment/Material Handling/Decline Conveyor Down"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Primary Stockpile"
+        },
+        "position": {
+          "height": 166,
+          "width": 198,
+          "x": 14,
+          "y": 627.5
+        },
+        "props": {
+          "params": {
+            "name": "Primary Stockpile"
+          },
+          "path": "Standard/Equipment/Material Handling/Stockpile"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Secondary Stockpile"
+        },
+        "position": {
+          "height": 133,
+          "width": 240,
+          "x": 247.25,
+          "y": 646
+        },
+        "props": {
+          "params": {
+            "name": "Secondary Stockpile"
+          },
+          "path": "Standard/Equipment/Material Handling/Stockpile"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Product-CV03"
+        },
+        "position": {
+          "height": 148,
+          "width": 247,
+          "x": 642.8189923706054,
+          "y": 453.5039923706055
+        },
+        "propConfig": {
+          "props.params.height": {
+            "binding": {
+              "config": {
+                "path": "this.position.height"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.params.width": {
+            "binding": {
+              "config": {
+                "path": "this.position.width"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "params": {
+            "Name": {
+              "Bottom": "Secondary Feed Conveyor",
+              "Top": "CV04"
+            },
+            "height": 148,
+            "width": 247
+          },
+          "path": "Standard/Equipment/Material Handling/Decline Conveyor Down"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Product-CV02"
+        },
+        "position": {
+          "height": 148.00000000000006,
+          "width": 492.99999999999994,
+          "x": 343.18,
+          "y": 286.32
+        },
+        "propConfig": {
+          "props.params.height": {
+            "binding": {
+              "config": {
+                "path": "this.position.height"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.params.width": {
+            "binding": {
+              "config": {
+                "path": "this.position.width"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "params": {
+            "Name": {
+              "Bottom": "Product Conveyor",
+              "Top": "CV02"
+            },
+            "height": 148.00000000000006,
+            "name": "Product-CV02",
+            "width": 492.99999999999994
+          },
+          "path": "Standard/Equipment/Material Handling/Decline Conveyor Down"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "S 03"
+        },
+        "position": {
+          "height": 80,
+          "width": 65,
+          "x": 299.1,
+          "y": 330.547
+        },
+        "props": {
+          "params": {
+            "Label": ""
+          },
+          "path": "Standard/Equipment/Material Handling/Chute Left"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "S 04"
+        },
+        "position": {
+          "height": 80,
+          "width": 65,
+          "x": 597.7389923706055,
+          "y": 498.73399237060545
+        },
+        "props": {
+          "params": {
+            "Label": ""
+          },
+          "path": "Standard/Equipment/Material Handling/Chute Left"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Route 1-CV10"
+        },
+        "position": {
+          "height": 148,
+          "width": 581,
+          "x": 948.99,
+          "y": 245.64
+        },
+        "propConfig": {
+          "props.params.height": {
+            "binding": {
+              "config": {
+                "path": "this.position.height"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.params.width": {
+            "binding": {
+              "config": {
+                "path": "this.position.width"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "params": {
+            "Name": {
+              "Bottom": "Level 1",
+              "Top": "CV10"
+            },
+            "height": 148,
+            "width": 581
+          },
+          "path": "Standard/Equipment/Material Handling/Decline Conveyor Down"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Route 1-CV11"
+        },
+        "position": {
+          "height": 200,
+          "width": 358,
+          "x": 1508.8,
+          "y": 188.876
+        },
+        "propConfig": {
+          "props.params.height": {
+            "binding": {
+              "config": {
+                "path": "this.position.height"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.params.width": {
+            "binding": {
+              "config": {
+                "path": "this.position.width"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "params": {
+            "Name": {
+              "Bottom": "Level 1",
+              "Top": "CV11"
+            },
+            "height": 200,
+            "width": 358
+          },
+          "path": "Standard/Equipment/Material Handling/Decline Conveyor Down"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Route 2-CV21"
+        },
+        "position": {
+          "height": 200,
+          "width": 358,
+          "x": 1507.83,
+          "y": 427.49
+        },
+        "propConfig": {
+          "props.params.height": {
+            "binding": {
+              "config": {
+                "path": "this.position.height"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.params.width": {
+            "binding": {
+              "config": {
+                "path": "this.position.width"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "params": {
+            "Name": {
+              "Bottom": "Level 2",
+              "Top": "CV21"
+            },
+            "height": 200,
+            "width": 358
+          },
+          "path": "Standard/Equipment/Material Handling/Decline Conveyor Down"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Route 2-CV20"
+        },
+        "position": {
+          "height": 193,
+          "width": 469,
+          "x": 1061.35,
+          "y": 439
+        },
+        "propConfig": {
+          "props.params.height": {
+            "binding": {
+              "config": {
+                "path": "this.position.height"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.params.width": {
+            "binding": {
+              "config": {
+                "path": "this.position.width"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "params": {
+            "Name": {
+              "Bottom": "Level 2",
+              "Top": "CV20"
+            },
+            "height": 193,
+            "width": 469
+          },
+          "path": "Standard/Equipment/Material Handling/Decline Conveyor Down"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "VF 210"
+        },
+        "position": {
+          "height": 80,
+          "width": 65,
+          "x": 1840,
+          "y": 477.859
+        },
+        "props": {
+          "params": {
+            "Label": "",
+            "Mirror": false
+          },
+          "path": "Standard/Equipment/Material Handling/Chute Left"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "VF 110"
+        },
+        "position": {
+          "height": 80,
+          "width": 65,
+          "x": 1840,
+          "y": 238.609
+        },
+        "props": {
+          "params": {
+            "Label": "",
+            "Mirror": false
+          },
+          "path": "Standard/Equipment/Material Handling/Chute Left"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "TT-C8"
+        },
+        "position": {
+          "height": 80,
+          "width": 65,
+          "x": 1703.57,
+          "y": 417.828
+        },
+        "props": {
+          "params": {
+            "Label": "",
+            "Mirror": false
+          },
+          "path": "Standard/Equipment/Material Handling/Chute Left"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "VF 100"
+        },
+        "position": {
+          "height": 80,
+          "width": 65,
+          "x": 1711.19,
+          "y": 182.812
+        },
+        "props": {
+          "params": {
+            "Label": "",
+            "Mirror": false
+          },
+          "path": "Standard/Equipment/Material Handling/Chute Left"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "VF 101"
+        },
+        "position": {
+          "height": 80,
+          "width": 65,
+          "x": 1259.27,
+          "y": 197.765
+        },
+        "props": {
+          "params": {
+            "Label": "",
+            "Mirror": false
+          },
+          "path": "Standard/Equipment/Material Handling/Chute Left"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_0"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 706.266,
+          "y": 51.31287499999999
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/CV01/100M001"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_1"
+        },
+        "position": {
+          "height": 40,
+          "width": 70,
+          "x": 737.266,
+          "y": 74.3129
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/CV01/100M001"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/MotorWithIcons"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_4"
+        },
+        "position": {
+          "height": 40,
+          "width": 70,
+          "x": 328.594,
+          "y": 286.313
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/CV02/100M002"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/MotorWithIcons"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_5"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 298.594,
+          "y": 263.313
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/CV02/100M002"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_6"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 592.266,
+          "y": 430.313
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/CV04/100M004"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_7"
+        },
+        "position": {
+          "height": 40,
+          "width": 70,
+          "x": 629.4049923706054,
+          "y": 453.49999237060547
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/CV04/100M004"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/MotorWithIcons"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_9"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 29.95949999999999,
+          "y": 426.5875
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/CV03/100M003"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_15"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 249.33875,
+          "y": 586.3795
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/CV03/100MR001"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_18"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 548.571,
+          "y": 720.056
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/CV05/100MR002"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Product-CV3"
+        },
+        "position": {
+          "height": 145,
+          "width": 252,
+          "x": 68.18,
+          "y": 454.63
+        },
+        "propConfig": {
+          "props.params.height": {
+            "binding": {
+              "config": {
+                "path": "this.position.height"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.params.width": {
+            "binding": {
+              "config": {
+                "path": "this.position.width"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "params": {
+            "Name": {
+              "Bottom": "Primary Slew Conveyor",
+              "Top": "CV03"
+            },
+            "height": 145,
+            "width": 252
+          },
+          "path": "Standard/Equipment/Material Handling/Decline Conveyor Down"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_10"
+        },
+        "position": {
+          "height": 40,
+          "width": 70,
+          "x": 60.0689,
+          "y": 450.556
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/CV03/100M003"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/MotorWithIcons"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 905.589375,
+          "y": 233.523
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/Level 1/CV10/110M001"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_2"
+        },
+        "position": {
+          "height": 40,
+          "width": 70,
+          "x": 936.79,
+          "y": 246.317
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/Level 1/CV10/110M001"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/MotorWithIcons"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_3"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 1468.86,
+          "y": 163.873
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/Level 1/CV11/110M003"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_8"
+        },
+        "position": {
+          "height": 40,
+          "width": 70,
+          "x": 1495.86,
+          "y": 188.873
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/Level 1/CV11/110M003"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/MotorWithIcons"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_11"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 1262,
+          "y": 141.27566955566405
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/Level 1/Striker 1/111M001"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_14"
+        },
+        "position": {
+          "height": 40,
+          "width": 70,
+          "x": 1289,
+          "y": 157.77566955566405
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/Level 1/Striker 1/111M001"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/MotorWithIcons"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_17"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 1712.86,
+          "y": 139.313
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/Level 1/Striker 2/112M001"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_20"
+        },
+        "position": {
+          "height": 40,
+          "width": 70,
+          "x": 1740,
+          "y": 178.813
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/Level 1/Striker 2/112M001"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/MotorWithIcons"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_21"
+        },
+        "position": {
+          "height": 25,
+          "width": 54,
+          "x": 1862.15,
+          "y": 218.41
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/Level 1/110M002"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_22"
+        },
+        "position": {
+          "height": 40,
+          "width": 40,
+          "x": 1869.82,
+          "y": 232.745
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/Level 1/110M002"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/Motor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_23"
+        },
+        "position": {
+          "height": 25,
+          "width": 50,
+          "x": 1865.15,
+          "y": 458.3
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/Level 2/120M002"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_24"
+        },
+        "position": {
+          "height": 40,
+          "width": 40,
+          "x": 1869.82,
+          "y": 474.471
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/Level 2/120M002"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/Motor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_25"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 1704.82,
+          "y": 397.841
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/Level 2/Striker 1/121M001"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_26"
+        },
+        "position": {
+          "height": 40,
+          "width": 70,
+          "x": 1734.82,
+          "y": 414.297
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/Level 2/Striker 1/121M001"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/MotorWithIcons"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_27"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 1025.176875,
+          "y": 421.9245
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/Level 2/CV20/120M001"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_28"
+        },
+        "position": {
+          "height": 40,
+          "width": 70,
+          "x": 1050.62,
+          "y": 435.987
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/Level 2/CV20/120M001"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/MotorWithIcons"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_29"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 1464.82,
+          "y": 407.531
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/Level 2/CV21/120M003"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_30"
+        },
+        "position": {
+          "height": 40,
+          "width": 70,
+          "x": 1495.82,
+          "y": 426.987
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/Level 2/CV21/120M003"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/MotorWithIcons"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Product-CV4"
+        },
+        "position": {
+          "height": 148,
+          "width": 247,
+          "x": 370.588,
+          "y": 583.612
+        },
+        "propConfig": {
+          "props.params.height": {
+            "binding": {
+              "config": {
+                "path": "this.position.height"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          },
+          "props.params.width": {
+            "binding": {
+              "config": {
+                "path": "this.position.width"
+              },
+              "type": "property"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "params": {
+            "Name": {
+              "Bottom": "Secondary Slew Conveyor",
+              "Top": "CV05"
+            },
+            "height": 148,
+            "name": "Secondary Slew Conveyor",
+            "width": 247
+          },
+          "path": "Standard/Equipment/Material Handling/Decline Conveyor Down"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_12"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 329.234,
+          "y": 561.738
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/CV05/100M005"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_13"
+        },
+        "position": {
+          "height": 40,
+          "width": 70,
+          "x": 358.234,
+          "y": 584.504
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/CV05/100M005"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/MotorWithIcons"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_19"
+        },
+        "position": {
+          "height": 40,
+          "width": 40,
+          "x": 577.816,
+          "y": 686.509
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": "M"
+            },
+            "TagPath": "[TPROM]ROM/CV05/100MR002"
+          },
+          "path": "Standard/Control Modules/MotorReverse/Symbols/Motor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_31"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 957.863125,
+          "y": 155.12545
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/CV01/100WQ001"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_32"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 859.969125,
+          "y": 148.55885
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": false,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/CV01/100WQ001"
+          },
+          "path": "Standard/Control Modules/Totaliser/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_33"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 957.156125,
+          "y": 118.80505
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/CV01/100WT001"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_34"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 859.312125,
+          "y": 114.05085
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": false,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/CV01/100WT001"
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "S 4"
+        },
+        "position": {
+          "height": 80,
+          "width": 65,
+          "x": 695.707375,
+          "y": 117.67099999999999
+        },
+        "props": {
+          "params": {
+            "Label": ""
+          },
+          "path": "Standard/Equipment/Material Handling/Chute Left"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Screen"
+        },
+        "position": {
+          "height": 95,
+          "width": 127,
+          "x": 684.97,
+          "y": 237.63
+        },
+        "props": {
+          "params": {
+            "Mirror": false
+          },
+          "path": "Standard/Equipment/Material Handling/Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_36"
+        },
+        "position": {
+          "height": 40,
+          "width": 70,
+          "x": 760.6565,
+          "y": 279.25
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/SCR01/100M006"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/MotorWithIcons"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Sequence"
+        },
+        "position": {
+          "height": 225,
+          "width": 446,
+          "x": 14.266,
+          "y": 41.1407
+        },
+        "props": {
+          "path": "Model Views/TPROM/ROM/Overview/Components/Sequence"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_37"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 728.64075,
+          "y": 403.1873125
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": false,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/CV04/100WT003"
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_38"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 473.1875,
+          "y": 224.8435
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": false,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/CV02/100WT002"
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_39"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 681.718125,
+          "y": 189.157
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPROM]ROM/G01/100V001"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_40"
+        },
+        "position": {
+          "height": 45,
+          "width": 48,
+          "x": 663.34,
+          "y": 182.88
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "Mirror": true
+            },
+            "TagPath": "[TPROM]ROM/G01/100V001"
+          },
+          "path": "Standard/Control Modules/Valve/Symbols/Diverter"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_16"
+        },
+        "position": {
+          "height": 40,
+          "width": 40,
+          "x": 279.05975,
+          "y": 556.499875
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": "M"
+            },
+            "TagPath": "[TPROM]ROM/CV03/100MR001"
+          },
+          "path": "Standard/Control Modules/MotorReverse/Symbols/Motor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_35"
+        },
+        "position": {
+          "height": 35,
+          "width": 35,
+          "x": 253.001,
+          "y": 561.219
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": "LL",
+              "InstanceNameOverwrite": "",
+              "LabelPosition": "Left",
+              "ShowLabel": false
+            },
+            "TagPath": "[TPROM]ROM/CV03/100ZSL010"
+          },
+          "path": "Standard/Control Modules/DigitalInput/Symbols/Signal"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_41"
+        },
+        "position": {
+          "height": 35,
+          "width": 35,
+          "x": 311.188,
+          "y": 561.219
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": "LR",
+              "InstanceNameOverwrite": "",
+              "LabelPosition": "Left",
+              "ShowLabel": false
+            },
+            "TagPath": "[TPROM]ROM/CV03/100ZSR011"
+          },
+          "path": "Standard/Control Modules/DigitalInput/Symbols/Signal"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_42"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 473.5625,
+          "y": 251.3125
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": false,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/CV02/100WQ002"
+          },
+          "path": "Standard/Control Modules/Totaliser/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "ModuleFinder"
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "if({this.props.params.Cfg.UseAsPointer} \u0026\u0026 isNull({this.props.params.SelectedModule}),false,true)"
+              },
+              "type": "expr"
+            }
+          },
+          "position.height": {
+            "binding": {
+              "config": {
+                "expression": "if({this.props.params.Cfg.UseAsPointer},{this.props.params.SelectedModule.position.height},32)"
+              },
+              "type": "expr"
+            }
+          },
+          "position.width": {
+            "binding": {
+              "config": {
+                "expression": "if({this.props.params.Cfg.UseAsPointer},{this.props.params.SelectedModule.position.width},310)"
+              },
+              "type": "expr"
+            }
+          },
+          "position.x": {
+            "binding": {
+              "config": {
+                "expression": "if({this.props.params.Cfg.UseAsPointer},{this.props.params.SelectedModule.position.x},0)"
+              },
+              "type": "expr"
+            }
+          },
+          "position.y": {
+            "binding": {
+              "config": {
+                "expression": "if({this.props.params.Cfg.UseAsPointer},{this.props.params.SelectedModule.position.y},0)"
+              },
+              "type": "expr"
+            }
+          },
+          "props.params.Cfg.viewPath": {
+            "binding": {
+              "config": {
+                "path": "page.props.pageId"
+              },
+              "enabled": false,
+              "type": "property"
+            }
+          },
+          "props.params.SearchModule": {
+            "binding": {
+              "config": {
+                "expression": "runScript(\"Standard.Navigation.Common.GetCurrentModelItemTagPath\",0,{session.custom.CurrentModelItemTagPaths},{session.custom.UseSessionModelItemTagPath},{page.props.pageId})[\u0027SearchModule\u0027]"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "UseAsPointer": true,
+              "projectName": "AdvansysStandardDevelopment",
+              "viewPath": "Model Views/TPROM/ROM/Overview/Components/Layout"
+            },
+            "ClearSearchModule": false,
+            "SelectedModule": null
+          },
+          "path": "Standard/Navigation/Components/ModuleFinder"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_43"
+        },
+        "position": {
+          "height": 40,
+          "width": 40,
+          "x": 1696,
+          "y": 413.5
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/Level 2/Striker 1/121S001"
+          },
+          "path": "Standard/Control Modules/Selector/Symbols/Symbol"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_44"
+        },
+        "position": {
+          "height": 40,
+          "width": 40,
+          "x": 1248,
+          "y": 148.875
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/Level 1/Striker 1/111S001"
+          },
+          "path": "Standard/Control Modules/Selector/Symbols/Symbol"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_45"
+        },
+        "position": {
+          "height": 40,
+          "width": 40,
+          "x": 1708,
+          "y": 168.875
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/Level 1/Striker 2/112S001"
+          },
+          "path": "Standard/Control Modules/Selector/Symbols/Symbol"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_46"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 728.21875,
+          "y": 430.4533125
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": false,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPROM]ROM/CV04/100WQ003"
+          },
+          "path": "Standard/Control Modules/Totaliser/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "pipes": [
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe",
+          "origin": {
+            "connections": [
+              {
+                "x": 301,
+                "y": 509.83
+              }
+            ],
+            "x": 301,
+            "y": 409
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_0",
+          "origin": {
+            "connections": [
+              {
+                "x": 600,
+                "y": 645
+              }
+            ],
+            "x": 600,
+            "y": 582
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_1",
+          "origin": {
+            "connections": [
+              {
+                "x": 702.6,
+                "y": 234.31
+              }
+            ],
+            "x": 702.6,
+            "y": 212.4
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_2",
+          "origin": {
+            "connections": [
+              {
+                "x": 676.97,
+                "y": 339.84
+              }
+            ],
+            "x": 675.97,
+            "y": 214.87
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_3",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "x": 860.27,
+                    "y": 503.99
+                  }
+                ],
+                "x": 860.27,
+                "y": 286.01
+              }
+            ],
+            "x": 806.27,
+            "y": 286.32
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_4",
+          "origin": {
+            "connections": [
+              {
+                "connections": [],
+                "x": 806.27,
+                "y": 354.34
+              }
+            ],
+            "x": 806.27,
+            "y": 329.78
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_5",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "x": 917.82,
+                    "y": 272.84
+                  }
+                ],
+                "x": 957.73,
+                "y": 339.84
+              }
+            ],
+            "x": 957.73,
+            "y": 286.32
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_6",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "x": 1023.82,
+                    "y": 445.5
+                  }
+                ],
+                "x": 1070.82,
+                "y": 527.5
+              }
+            ],
+            "x": 1070.82,
+            "y": 475.99
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_7",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "x": 1386.82,
+                    "y": 508.72
+                  }
+                ],
+                "x": 1508.8,
+                "y": 538.73
+              }
+            ],
+            "x": 1508.8,
+            "y": 466.99
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_8",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "x": 1387.82,
+                    "y": 291.72
+                  }
+                ],
+                "x": 1508.8,
+                "y": 303.91
+              }
+            ],
+            "x": 1508.8,
+            "y": 228.87
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "width": 2
+        }
+      ]
+    },
+    "type": "ia.container.coord"
+  }
+}

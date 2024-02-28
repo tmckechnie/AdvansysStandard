@@ -307,14 +307,6 @@
             ],
             "custom": {
               "History": {
-                "firstTimestamp": {
-                  "$": [
-                    "ts",
-                    192,
-                    1689243968693
-                  ],
-                  "$ts": 1689243369068
-                },
                 "run": false
               }
             },
@@ -370,21 +362,6 @@
                     "bidirectional": true,
                     "path": "session.custom.DefaultPopupHistoryDuration"
                   },
-                  "type": "property"
-                }
-              },
-              "custom.History.firstTimestamp": {
-                "binding": {
-                  "config": {
-                    "path": "this.custom.History.data[0].data[0].time"
-                  },
-                  "enabled": false,
-                  "transforms": [
-                    {
-                      "expression": "fromMillis({value})",
-                      "type": "expression"
-                    }
-                  ],
                   "type": "property"
                 }
               }

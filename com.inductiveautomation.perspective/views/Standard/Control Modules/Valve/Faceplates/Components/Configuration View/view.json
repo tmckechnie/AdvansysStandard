@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Standard/Examples/Material Handling/ROM/G01/100V001"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
   },
   "propConfig": {
     "params.TagPath": {
@@ -68,6 +68,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
+                    "Expanded": false,
                     "Title": "General"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"
@@ -119,6 +120,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
+                    "Expanded": true,
                     "Title": "Alarms"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"

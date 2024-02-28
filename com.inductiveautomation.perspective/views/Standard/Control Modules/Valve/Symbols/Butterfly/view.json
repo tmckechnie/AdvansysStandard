@@ -1,17 +1,17 @@
 {
   "custom": {
     "AlarmSummary": {
-      "HighestActivePriority": 0,
-      "HighestActivePriorityName": null,
-      "HighestUnackedPriority": 0,
-      "HighestUnackedPriorityName": null,
+      "HighestActivePriority": 1,
+      "HighestActivePriorityName": "Low",
+      "HighestUnackedPriority": 1,
+      "HighestUnackedPriorityName": "Low",
       "Overall": {
         "ActiveAckCount": 0,
-        "ActiveUnackCount": 0,
+        "ActiveUnackCount": 1,
         "ClearUnackCount": 0,
         "Detail": [],
         "ShelvedCount": 0,
-        "Total": 0
+        "Total": 1
       },
       "PriorityDetail": {
         "Critical": {
@@ -32,11 +32,17 @@
         },
         "Low": {
           "ActiveAckCount": 0,
-          "ActiveUnackCount": 0,
+          "ActiveUnackCount": 1,
           "ClearUnackCount": 0,
-          "Detail": [],
+          "Detail": [
+            {
+              "EventID": "8b20ebbf-daa8-4a15-b068-150c9b531a59",
+              "Label": "Available",
+              "State": "Active, Unacknowledged"
+            }
+          ],
           "ShelvedCount": 0,
-          "Total": 0
+          "Total": 1
         },
         "Medium": {
           "ActiveAckCount": 0,

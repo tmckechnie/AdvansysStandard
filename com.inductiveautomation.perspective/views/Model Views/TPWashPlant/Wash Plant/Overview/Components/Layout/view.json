@@ -1,0 +1,1578 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 856,
+      "width": 1920
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Stockpile"
+        },
+        "position": {
+          "height": 210,
+          "rotate": {
+            "anchor": "50% 0%"
+          },
+          "width": 272.0000000000001,
+          "x": 990.88,
+          "y": 612.1
+        },
+        "props": {
+          "params": {
+            "name": "Live Bottom Stockpile"
+          },
+          "path": "Standard/Equipment/Material Handling/Stockpile"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "CV203"
+        },
+        "position": {
+          "height": 126.24000000000001,
+          "width": 287,
+          "x": 456.15,
+          "y": 324.14
+        },
+        "props": {
+          "params": {
+            "height": 130,
+            "name": "",
+            "width": 280
+          },
+          "path": "Standard/Equipment/Material Handling/Decline Conveyor Up"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "CV204"
+        },
+        "position": {
+          "height": 126.24000000000001,
+          "width": 455.0000000000001,
+          "x": 727.074,
+          "y": 494.317
+        },
+        "props": {
+          "params": {
+            "height": 150,
+            "name": "",
+            "width": 450
+          },
+          "path": "Standard/Equipment/Material Handling/Decline Conveyor Up"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label Secondary HazeMag"
+        },
+        "position": {
+          "height": 32,
+          "width": 142,
+          "x": 1510.48,
+          "y": 583.254
+        },
+        "props": {
+          "style": {
+            "fontSize": 13
+          },
+          "text": "Secondary HazeMag"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "200M001 Label"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 294.325,
+          "y": 79.1172
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV201/200M001"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200M002 Label"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 902.353,
+          "y": 659.417
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV202/200M002"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200M003 Label"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 665.097,
+          "y": 339.757
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV203/200M003"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200M003"
+        },
+        "position": {
+          "height": 40,
+          "width": 40,
+          "x": 695.097,
+          "y": 359.759
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV203/200M003"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/Motor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200M004 Label"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 1081.31,
+          "y": 497.302
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV204/200M004"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200M004"
+        },
+        "position": {
+          "height": 40,
+          "width": 40,
+          "x": 1111.31,
+          "y": 518.419
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV204/200M004"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/Motor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Vibrating Screen"
+        },
+        "position": {
+          "height": 77,
+          "width": 102,
+          "x": 377.8975,
+          "y": 285.450625
+        },
+        "props": {
+          "params": {
+            "Mirror": false
+          },
+          "path": "Standard/Equipment/Material Handling/Screen"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "CV 201"
+        },
+        "position": {
+          "height": 126.24000000000001,
+          "width": 260,
+          "x": 101.965,
+          "y": 64.5106
+        },
+        "props": {
+          "params": {
+            "height": 130,
+            "name": "",
+            "width": 260
+          },
+          "path": "Standard/Equipment/Material Handling/Decline Conveyor Up"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Feed"
+        },
+        "position": {
+          "height": 77.68,
+          "width": 65,
+          "x": 45.3009,
+          "y": 36.2312
+        },
+        "props": {
+          "params": {
+            "Label": "",
+            "Mirror": true
+          },
+          "path": "Standard/Equipment/Material Handling/Chute"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200M001"
+        },
+        "position": {
+          "height": 40,
+          "width": 40,
+          "x": 322.818,
+          "y": 99.8038
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV201/200M001"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/Motor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "CV 202"
+        },
+        "position": {
+          "height": 126.00000000000006,
+          "width": 604,
+          "x": 380.696,
+          "y": 644.917
+        },
+        "props": {
+          "params": {
+            "height": 130,
+            "name": "",
+            "width": 600
+          },
+          "path": "Standard/Equipment/Material Handling/Decline Conveyor Up"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200M002"
+        },
+        "position": {
+          "height": 40,
+          "width": 40,
+          "x": 934.205,
+          "y": 681.948
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV202/200M002"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/Motor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200M005 Label"
+        },
+        "position": {
+          "height": 25,
+          "width": 100,
+          "x": 1506.2,
+          "y": 419.095
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV205/200M005"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "CV 205"
+        },
+        "position": {
+          "height": 126.24000000000001,
+          "width": 260,
+          "x": 1321.94,
+          "y": 403.703
+        },
+        "props": {
+          "params": {
+            "height": 130,
+            "name": "",
+            "width": 260
+          },
+          "path": "Standard/Equipment/Material Handling/Decline Conveyor Up"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200M005"
+        },
+        "position": {
+          "height": 40,
+          "width": 40,
+          "x": 1537.25,
+          "y": 437.239
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV205/200M005"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/Motor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "CV 206"
+        },
+        "position": {
+          "height": 126.24000000000001,
+          "width": 260,
+          "x": 1602.68,
+          "y": 575.924
+        },
+        "props": {
+          "params": {
+            "height": 130,
+            "name": "",
+            "width": 260
+          },
+          "path": "Standard/Equipment/Material Handling/Decline Conveyor Up"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200M006 Label"
+        },
+        "position": {
+          "height": 25,
+          "width": 51,
+          "x": 1812.86,
+          "y": 590.14
+        },
+        "props": {
+          "params": {
+            "InstanceTagPath": "/Metadata/InstanceName",
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV206/200M006"
+          },
+          "path": "Standard/Components/Symbols/Label"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200M006"
+        },
+        "position": {
+          "height": 40,
+          "width": 40,
+          "x": 1819.86,
+          "y": 613.067
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV206/200M006"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/Motor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Sequence"
+        },
+        "position": {
+          "height": 220,
+          "width": 415,
+          "x": 1359.27,
+          "y": 9.73
+        },
+        "props": {
+          "path": "Model Views/TPWashPlant/Wash Plant/Overview/Components/Sequence"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200M010"
+        },
+        "position": {
+          "height": 40,
+          "width": 40,
+          "x": 443,
+          "y": 315
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/SCR201/200M010"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/Motor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label Primary HazeMag"
+        },
+        "position": {
+          "height": 32,
+          "width": 121,
+          "x": 674.657,
+          "y": 501.87
+        },
+        "props": {
+          "style": {
+            "fontSize": 13
+          },
+          "text": "Primary HazeMag"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "200WT001"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 169.313,
+          "y": 39.1094
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": false,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV201/200WT001"
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200WQ001"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 169.313,
+          "y": 69.1094
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": false,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV201/200WQ001"
+          },
+          "path": "Standard/Control Modules/Totaliser/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200WT002"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 568.5,
+          "y": 631.90625
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": false,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV202/200WT002"
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200WQ002"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 568.5,
+          "y": 662.156
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": false,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV202/200WQ002"
+          },
+          "path": "Standard/Control Modules/Totaliser/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200WQ003"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 927,
+          "y": 500
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": false,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV204/200WQ003"
+          },
+          "path": "Standard/Control Modules/Totaliser/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200WT003"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 927,
+          "y": 471.219
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": false,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV204/200WT003"
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200WQ004"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 1357.57,
+          "y": 407.078
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": false,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV205/200WQ004"
+          },
+          "path": "Standard/Control Modules/Totaliser/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200WT004"
+        },
+        "position": {
+          "height": 35,
+          "width": 125,
+          "x": 1356.57,
+          "y": 376.125
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": false,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CV205/200WT004"
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label Secondary Circulation"
+        },
+        "position": {
+          "height": 32,
+          "width": 115,
+          "x": 1730.33,
+          "y": 435.531
+        },
+        "props": {
+          "style": {
+            "fontSize": 12,
+            "textAlign": "center"
+          },
+          "text": "Circulation Feed "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Primary Crusher"
+        },
+        "position": {
+          "height": 82,
+          "width": 98,
+          "x": 310.47,
+          "y": 171.27
+        },
+        "props": {
+          "params": {
+            "Mirror": false
+          },
+          "path": "Standard/Equipment/Material Handling/Crusher"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200M007"
+        },
+        "position": {
+          "height": 40,
+          "width": 40,
+          "x": 324.815,
+          "y": 206.281
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CR201/200M007"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/Motor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label Primary Crusher"
+        },
+        "position": {
+          "height": 30.99999999999997,
+          "width": 101,
+          "x": 305.85,
+          "y": 235.28
+        },
+        "props": {
+          "style": {
+            "fontSize": 12,
+            "textAlign": "center"
+          },
+          "text": "Primary Crusher"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Primary HazeMag"
+        },
+        "position": {
+          "height": 82,
+          "width": 98,
+          "x": 682.668,
+          "y": 435.843
+        },
+        "props": {
+          "params": {
+            "Mirror": false
+          },
+          "path": "Standard/Equipment/Material Handling/Crusher"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200M008"
+        },
+        "position": {
+          "height": 40,
+          "width": 40,
+          "x": 696.791,
+          "y": 470.972
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CR202/200M008"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/Motor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Secondary HazeMag"
+        },
+        "position": {
+          "height": 82,
+          "width": 98,
+          "x": 1525.67,
+          "y": 517.914
+        },
+        "props": {
+          "params": {
+            "Mirror": false
+          },
+          "path": "Standard/Equipment/Material Handling/Crusher"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200M009"
+        },
+        "position": {
+          "height": 40,
+          "width": 40,
+          "x": 1540.27,
+          "y": 554.633
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/CR203/200M009"
+          },
+          "path": "Standard/Control Modules/Motor/Symbols/Motor"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label CV 201"
+        },
+        "position": {
+          "height": 30.99999999999997,
+          "width": 127.99999999999999,
+          "x": 181.6009375,
+          "y": 147.93
+        },
+        "props": {
+          "style": {
+            "fontSize": 12,
+            "textAlign": "center"
+          },
+          "text": "Primary Feed - CV 201"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label CV 203"
+        },
+        "position": {
+          "height": 30.99999999999997,
+          "width": 152,
+          "x": 529.38896875,
+          "y": 412.574234375
+        },
+        "props": {
+          "style": {
+            "fontSize": 12,
+            "textAlign": "center"
+          },
+          "text": "HazeMag Feed - CV 203"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label CV 204"
+        },
+        "position": {
+          "height": 30.99999999999997,
+          "width": 152,
+          "x": 911.027,
+          "y": 574.808
+        },
+        "props": {
+          "style": {
+            "fontSize": 12,
+            "textAlign": "center"
+          },
+          "text": "Live Bottom Feed - CV204 "
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label CV 202"
+        },
+        "position": {
+          "height": 30.99999999999997,
+          "width": 152,
+          "x": 638.9143125,
+          "y": 732.81146875
+        },
+        "props": {
+          "style": {
+            "fontSize": 12,
+            "textAlign": "center"
+          },
+          "text": "HazeMag Bypass - CV 202"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label CV 205"
+        },
+        "position": {
+          "height": 30.99999999999997,
+          "width": 152,
+          "x": 1367.43,
+          "y": 504.53
+        },
+        "props": {
+          "style": {
+            "fontSize": 12,
+            "textAlign": "center"
+          },
+          "text": "Secondary HazeMag Feed - CV 205"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label CV206"
+        },
+        "position": {
+          "height": 30.99999999999997,
+          "width": 152,
+          "x": 1670.93,
+          "y": 663.073
+        },
+        "props": {
+          "style": {
+            "fontSize": 12,
+            "textAlign": "center"
+          },
+          "text": "Wash Plant Feed  - CV 206"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_2"
+        },
+        "position": {
+          "height": 93.99999999999999,
+          "width": 201.9999999999999,
+          "x": 1781.33,
+          "y": 32.388374999999996
+        },
+        "props": {
+          "params": {
+            "LabelOverwrite": "",
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/200SEQ001"
+          },
+          "path": "Standard/Implementation Modules/Sequencer/Symbols/Symbol Step Desc"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "200AI001"
+        },
+        "position": {
+          "height": 35,
+          "width": 89,
+          "x": 1894.33,
+          "y": 718.19
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationDisplay": false,
+              "AbbreviationOverwrite": ""
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/SP201/200AI001"
+          },
+          "path": "Standard/Control Modules/AnalogInput/Symbols/Value Display"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label CV 206"
+        },
+        "position": {
+          "height": 30.99999999999997,
+          "width": 152,
+          "x": 1867.36,
+          "y": 743.12
+        },
+        "props": {
+          "style": {
+            "fontSize": 12,
+            "textAlign": "center"
+          },
+          "text": "Bin Level"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Bin"
+        },
+        "position": {
+          "height": 109,
+          "width": 122,
+          "x": 1779,
+          "y": 707.41
+        },
+        "props": {
+          "params": {
+            "Mirror": false,
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/SP201/200AI001"
+          },
+          "path": "Standard/Equipment/Material Handling/Bin/Bin"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Label CV207"
+        },
+        "position": {
+          "height": 30.99999999999997,
+          "width": 152,
+          "x": 1763.93,
+          "y": 807.073
+        },
+        "props": {
+          "style": {
+            "fontSize": 12,
+            "textAlign": "center"
+          },
+          "text": "Wash Plant Feeder Bin"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "ModuleFinder"
+        },
+        "position": {
+          "height": 32,
+          "width": 310
+        },
+        "propConfig": {
+          "props.params.Cfg.viewPath": {
+            "binding": {
+              "config": {
+                "path": "page.props.pageId"
+              },
+              "enabled": false,
+              "type": "property"
+            }
+          },
+          "props.params.ClearSearchModule": {
+            "binding": {
+              "config": {
+                "bidirectional": true,
+                "path": "../ModulePointer.props.params.ClearSearchModule"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.SearchModule": {
+            "binding": {
+              "config": {
+                "expression": "runScript(\"Standard.Navigation.Common.GetCurrentModelItemTagPath\",0,{session.custom.CurrentModelItemTagPaths},{session.custom.UseSessionModelItemTagPath},{page.props.pageId})[\u0027SearchModule\u0027]"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "UseAsPointer": false,
+              "projectName": "AdvansysStandardDevelopment",
+              "viewPath": "Model Views/TPWashPlant/Wash Plant/Overview/Components/Layout"
+            },
+            "SelectedModule": null
+          },
+          "path": "Standard/Navigation/Components/ModuleFinder"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "ModulePointer"
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "!isNull({../ModuleFinder.props.params.SelectedModule})"
+              },
+              "type": "expr"
+            }
+          },
+          "position.height": {
+            "binding": {
+              "config": {
+                "path": "../ModuleFinder.props.params.SelectedModule.position.height"
+              },
+              "type": "property"
+            }
+          },
+          "position.width": {
+            "binding": {
+              "config": {
+                "path": "../ModuleFinder.props.params.SelectedModule.position.width"
+              },
+              "type": "property"
+            }
+          },
+          "position.x": {
+            "binding": {
+              "config": {
+                "path": "../ModuleFinder.props.params.SelectedModule.position.x"
+              },
+              "type": "property"
+            }
+          },
+          "position.y": {
+            "binding": {
+              "config": {
+                "path": "../ModuleFinder.props.params.SelectedModule.position.y"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ClearSearchModule": false
+          },
+          "path": "Standard/Navigation/Components/ModulePointer"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "pipes": [
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "x": 154.3,
+                    "y": 134.8
+                  }
+                ],
+                "x": 111.3,
+                "y": 142.8
+              }
+            ],
+            "x": 111.3,
+            "y": 117.23
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_0",
+          "origin": {
+            "connections": [
+              {
+                "x": 342.82,
+                "y": 187.72
+              }
+            ],
+            "x": 342.82,
+            "y": 131.8
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_1",
+          "origin": {
+            "connections": [
+              {
+                "x": 399.98,
+                "y": 286.79
+              }
+            ],
+            "x": 399.98,
+            "y": 251.79
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_2",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "x": 491.98,
+                    "y": 708.34
+                  }
+                ],
+                "x": 399.98,
+                "y": 720.34
+              }
+            ],
+            "x": 399.98,
+            "y": 324.14
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_3",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "x": 514,
+                    "y": 391.35
+                  }
+                ],
+                "x": 468,
+                "y": 399.35
+              }
+            ],
+            "x": 468,
+            "y": 362
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_4",
+          "origin": {
+            "connections": [
+              {
+                "x": 714.51,
+                "y": 454.08
+              }
+            ],
+            "x": 714.51,
+            "y": 399.35
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_5",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "x": 835,
+                    "y": 558.62
+                  }
+                ],
+                "x": 765.1,
+                "y": 570.63
+              }
+            ],
+            "x": 765.1,
+            "y": 519
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "auto",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_6",
+          "origin": {
+            "connections": [
+              {
+                "x": 1137.31,
+                "y": 540.42
+              }
+            ],
+            "x": 1137.31,
+            "y": 540.42
+          },
+          "start": "none",
+          "stroke": "",
+          "visible": true,
+          "width": 10
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_7",
+          "origin": {
+            "connections": [
+              {
+                "x": 1557.27,
+                "y": 529.78
+              }
+            ],
+            "x": 1557.27,
+            "y": 478.24
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_8",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "x": 1684.27,
+                    "y": 642.42
+                  }
+                ],
+                "x": 1616.2,
+                "y": 654.07
+              }
+            ],
+            "x": 1616.2,
+            "y": 609.14
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_9",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "connections": [
+                              {
+                                "connections": [],
+                                "x": 1336.61,
+                                "y": 477.24
+                              }
+                            ],
+                            "x": 1336.61,
+                            "y": 454.08
+                          }
+                        ],
+                        "x": 1295.36,
+                        "y": 454.08
+                      }
+                    ],
+                    "x": 1295.36,
+                    "y": 838.07
+                  }
+                ],
+                "x": 1127.27,
+                "y": 838.07
+              }
+            ],
+            "x": 1127.27,
+            "y": 813.72
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "auto",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "solid",
+          "name": "pipe_10",
+          "origin": {
+            "x": 111,
+            "y": 753
+          },
+          "start": "none",
+          "stroke": "",
+          "visible": true,
+          "width": 10
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_11",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "connections": [
+                          {
+                            "x": 1518.27,
+                            "y": 449.1
+                          }
+                        ],
+                        "x": 1518.27,
+                        "y": 339.05
+                      }
+                    ],
+                    "x": 1733.68,
+                    "y": 339.05
+                  }
+                ],
+                "x": 1733.68,
+                "y": 583.25
+              },
+              {
+                "x": 1607.2,
+                "y": 583.25
+              }
+            ],
+            "x": 1675.27,
+            "y": 583.25
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "visible": true,
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_12",
+          "origin": {
+            "connections": [
+              {
+                "x": 1839.27,
+                "y": 704.78
+              }
+            ],
+            "x": 1839.27,
+            "y": 653.24
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_13",
+          "origin": {
+            "connections": [
+              {
+                "x": 1127.27,
+                "y": 610.78
+              }
+            ],
+            "x": 1127.27,
+            "y": 559.24
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "width": 2
+        },
+        {
+          "appearance": "p\u0026id",
+          "end": "arrowOutward",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe_14",
+          "origin": {
+            "connections": [
+              {
+                "x": 1049,
+                "y": 694.95
+              }
+            ],
+            "x": 975.1,
+            "y": 699.63
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "width": 2
+        }
+      ]
+    },
+    "type": "ia.container.coord"
+  }
+}

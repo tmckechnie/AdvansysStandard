@@ -53,7 +53,7 @@
       "Low": {},
       "NoChange": {}
     },
-    "ModuleType": "AnalogInput",
+    "ModuleType": "Totaliser",
     "References": {},
     "Styling": {
       "Base": {},
@@ -67,7 +67,7 @@
       "ShowAlarmOutLine": true,
       "ValueWedgeExtent": 0.5
     },
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Totaliser01"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/CMTESTING/CMs/Totaliser01"
   },
   "propConfig": {
     "custom.AlarmSummary": {
@@ -520,7 +520,7 @@
                   "props.indicators[3].color": {
                     "binding": {
                       "config": {
-                        "expression": "\"var(--Alarm\"+{view.custom.Alarms.Low.Priority}+\")\""
+                        "expression": "if(qualityOf({view.custom.Alarms.Low.Priority})\u003d\"Bad_Disabled\",\"var(--AlarmLow)\",\"var(--Alarm\"+{view.custom.Alarms.Low.Priority}+\")\")"
                       },
                       "type": "expr"
                     }
@@ -528,7 +528,7 @@
                   "props.indicators[3].extent": {
                     "binding": {
                       "config": {
-                        "expression": "{view.custom.Alarms.Low.Enable}*({view.custom.Alarms.Low.Setpoint}-{view.custom.References.ValueTrendMin})"
+                        "expression": "if(qualityOf({view.custom.Alarms.Low.Enable})\u003d\"Bad_Disabled\",0,{view.custom.Alarms.Low.Enable}*({view.custom.Alarms.Low.Setpoint}-{view.custom.References.ValueTrendMin}))"
                       },
                       "type": "expr"
                     }

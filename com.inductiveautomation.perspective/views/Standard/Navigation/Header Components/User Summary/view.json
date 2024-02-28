@@ -29,7 +29,8 @@
               "name": "Username"
             },
             "position": {
-              "basis": "25px"
+              "basis": "25px",
+              "display": false
             },
             "propConfig": {
               "position.display": {

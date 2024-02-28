@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100M100"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_FQ_7230B_2"
   },
   "propConfig": {
     "params.TagPath": {
@@ -76,7 +76,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
-                    "Expanded": false,
+                    "Expanded": true,
                     "Title": "General"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"
@@ -117,7 +117,7 @@
                 "viewParams": {},
                 "viewPath": "Standard/Control Modules/Totaliser/Faceplates/Components/Configuration/Control"
               },
-              "expanded": false,
+              "expanded": true,
               "header": {
                 "content": {
                   "style": {
@@ -128,7 +128,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
-                    "Expanded": false,
+                    "Expanded": true,
                     "Title": "Control"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"
@@ -168,7 +168,7 @@
                 "viewParams": {},
                 "viewPath": "Standard/Control Modules/Totaliser/Faceplates/Components/Configuration/Alarms"
               },
-              "expanded": false,
+              "expanded": true,
               "header": {
                 "content": {
                   "style": {
@@ -179,6 +179,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
+                    "Expanded": true,
                     "Title": "Alarms"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"

@@ -1,0 +1,55 @@
+{
+  "custom": {},
+  "params": {
+    "TagPath": "[TPFMS]Power Meters/IEC/Three Phase"
+  },
+  "propConfig": {
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 690,
+      "width": 387
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Main Page"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.params.TagPath": {
+            "binding": {
+              "config": {
+                "path": "view.params.TagPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ModulePath": "Device Modules/Three Phase Power Meter"
+          },
+          "path": "Standard/Components/Faceplates/Main Page"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

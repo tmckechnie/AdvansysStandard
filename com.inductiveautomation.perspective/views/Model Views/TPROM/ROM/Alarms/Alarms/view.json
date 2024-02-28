@@ -1,0 +1,77 @@
+{
+  "custom": {
+    "CurrentModelItemTagPath": {
+      "ContentType": "",
+      "ModelItemTagPath": "[TPPower]Power Plant 1/Model Item",
+      "SearchModule": ""
+    }
+  },
+  "params": {},
+  "propConfig": {
+    "custom.CurrentModelItemTagPath": {
+      "binding": {
+        "config": {
+          "expression": "runScript(\"Standard.Navigation.Common.GetCurrentModelItemTagPath\",0,{session.custom.CurrentModelItemTagPaths},{session.custom.UseSessionModelItemTagPath},{page.props.pageId})"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "AlarmList"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.params.DisplayPathFilter": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "CurrentModelItemTagPath": "{view.custom.CurrentModelItemTagPath.ModelItemTagPath}"
+                },
+                "tagPath": "{CurrentModelItemTagPath}/ModelPath"
+              },
+              "transforms": [
+                {
+                  "expression": "{value}+\"*\"",
+                  "type": "expression"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "AlarmJournal": {
+              "Name": "AdvansysStandard",
+              "RefreshRate": 5000
+            },
+            "ContentHeaderStyle": {
+              "classes": "Standard/Docked/Footer/ContentBackground Standard/Docked/Footer/ContentBorder Standard/Docked/Footer/ContentText"
+            },
+            "ShowCleared": true
+          },
+          "path": "Standard/Components/Alarms/AlarmList"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

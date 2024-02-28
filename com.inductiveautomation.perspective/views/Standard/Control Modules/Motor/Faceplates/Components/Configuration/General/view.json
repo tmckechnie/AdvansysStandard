@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/CMTESTING/CMs/Motor"
   },
   "propConfig": {
     "params.TagPath": {
@@ -26,6 +26,22 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.Value": {
             "binding": {
               "config": {
@@ -73,6 +89,22 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.Value": {
             "binding": {
               "config": {
@@ -120,6 +152,22 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.Value": {
             "binding": {
               "config": {
@@ -671,6 +719,22 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.Value": {
             "binding": {
               "config": {
@@ -718,6 +782,22 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.Value": {
             "binding": {
               "config": {
@@ -765,6 +845,22 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.Value": {
             "binding": {
               "config": {
@@ -812,6 +908,22 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Cfg/\"+{this.meta.name}"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.Value": {
             "binding": {
               "config": {

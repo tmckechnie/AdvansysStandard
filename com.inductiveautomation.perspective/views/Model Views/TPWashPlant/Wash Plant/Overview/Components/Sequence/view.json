@@ -1,0 +1,135 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 264,
+      "width": 422
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "EmbeddedView"
+        },
+        "position": {
+          "height": 40,
+          "width": 170,
+          "x": 21,
+          "y": 130
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": "",
+              "InstanceNameOverwrite": "Live Bottom Feed"
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/200G001"
+          },
+          "path": "Standard/Implementation Modules/Group/Symbols/Sequence"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_0"
+        },
+        "position": {
+          "height": 40,
+          "width": 170,
+          "x": 228,
+          "y": 130
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": "",
+              "InstanceNameOverwrite": "Wash Plant Feed"
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/200G002"
+          },
+          "path": "Standard/Implementation Modules/Group/Symbols/Sequence"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "EmbeddedView_1"
+        },
+        "position": {
+          "height": 40,
+          "width": 170,
+          "x": 120,
+          "y": 27
+        },
+        "props": {
+          "params": {
+            "Cfg": {
+              "AbbreviationOverwrite": "",
+              "InstanceNameOverwrite": "Wash Plant"
+            },
+            "TagPath": "[TPWashPlant]Wash Plant/Feed/200SEQ001"
+          },
+          "path": "Standard/Implementation Modules/Sequencer/Symbols/Sequence"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "pipes": [
+        {
+          "appearance": "p\u0026id",
+          "end": "none",
+          "fill": "",
+          "flanges": true,
+          "lineVariant": "dashed",
+          "name": "pipe",
+          "origin": {
+            "connections": [
+              {
+                "connections": [
+                  {
+                    "connections": [
+                      {
+                        "x": 302,
+                        "y": 137.25
+                      }
+                    ],
+                    "x": 302,
+                    "y": 99.27
+                  },
+                  {
+                    "connections": [
+                      {
+                        "x": 106,
+                        "y": 137.25
+                      }
+                    ],
+                    "x": 106,
+                    "y": 99.27
+                  }
+                ],
+                "x": 204,
+                "y": 99.27
+              }
+            ],
+            "x": 204,
+            "y": 58.27
+          },
+          "start": "none",
+          "stroke": "var(--bodyMaterialFlowLine)",
+          "visible": true,
+          "width": 2
+        }
+      ],
+      "style": {
+        "classes": "Standard/Body/Background"
+      }
+    },
+    "type": "ia.container.coord"
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "custom": {
+    "Closed": null,
+    "FailSafePosition": null,
+    "FormatString": null,
+    "IsHandValve": null,
+    "Mode": null,
+    "Opened": null,
+    "OpenedText": "Transitioning",
+    "Simulation": false,
+    "SimulationActive": null,
+    "Value": null,
+    "outOpen": false
+  },
+  "params": {
+    "TagPath": ""
+  },
+  "propConfig": {
+    "custom.Closed": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/In/Closed"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.FailSafePosition": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/FailSafePosition"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.FormatString": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sim/Delay.FormatString"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.IsHandValve": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cfg/IsHandValve"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Mode": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Cmd/Mode"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Opened": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/In/Opened"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.SimulationActive": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sim/Active"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.Value": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "TagPath": "{view.params.TagPath}"
+          },
+          "tagPath": "{TagPath}/Sts/Value"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.outOpen": {
+      "binding": {
+        "config": {
+          "bidirectional": true,
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[AdvansysStandard]Standard/Control Modules/Application/Sim/DB100V001/Out/Open"
+        },
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.TagPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 540,
+      "width": 380
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "StsCommandRow"
+            },
+            "position": {
+              "basis": "35px",
+              "shrink": 0
+            },
+            "propConfig": {
+              "position.display": {
+                "persistent": true
+              },
+              "props.params.Value": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 2.5,
+                    "mode": "indirect",
+                    "references": {
+                      "TagPath": "{view.params.TagPath}"
+                    },
+                    "tagPath": "{TagPath}/Sts/Command"
+                  },
+                  "type": "tag"
+                },
+                "persistent": true
+              }
+            },
+            "props": {
+              "params": {
+                "Format": "",
+                "Label": "Command",
+                "ShowLabel": true,
+                "ShowUnits": false,
+                "Units": "EU",
+                "UnitsStyle": {
+                  "classes": "Standard/Popups/Faceplates/Text",
+                  "marginLeft": 2,
+                  "textAlign": "left"
+                },
+                "Value": null,
+                "ValueStyle": {
+                  "classes": "Standard/Popups/Faceplates/ValueDisplay",
+                  "paddingRight": 0,
+                  "textAlign": "center"
+                }
+              },
+              "path": "Standard/Components/Faceplates/Status/LabelDisplayField",
+              "style": {
+                "margin": 5,
+                "paddingLeft": 3
+              }
+            },
+            "type": "ia.display.view"
+          }
+        ],
+        "meta": {
+          "name": "Status"
+        },
+        "position": {
+          "basis": "55px",
+          "display": null,
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "!{view.custom.IsHandValve}"
+              },
+              "type": "expr"
+            },
+            "persistent": true
+          }
+        },
+        "props": {
+          "direction": "column",
+          "style": {
+            "classes": "Standard/Popups/Faceplates/Content"
+          }
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

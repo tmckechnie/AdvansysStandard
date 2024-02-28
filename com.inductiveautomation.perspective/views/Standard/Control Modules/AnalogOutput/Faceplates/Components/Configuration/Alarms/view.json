@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100AO100"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_FY_7100R"
   },
   "propConfig": {
     "params.TagPath": {
@@ -26,6 +26,75 @@
           "shrink": 0
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Alarms/{name}/Sts/Active"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.AlarmPrimitiveTagPath": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.TagPath}+\"/Alarms/\"+{this.meta.name}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "ShowHeader": true
+          },
+          "path": "Standard/Components/Faceplates/Alarms/Alarm Primitive Config",
+          "style": {
+            "marginTop": 3
+          }
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Limit"
+        },
+        "position": {
+          "basis": "64px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "TagPath": "{view.params.TagPath}",
+                  "name": "{this.meta.name}"
+                },
+                "tagPath": "{TagPath}/Alarms/{name}/Sts/Active"
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
           "props.params.AlarmPrimitiveTagPath": {
             "binding": {
               "config": {

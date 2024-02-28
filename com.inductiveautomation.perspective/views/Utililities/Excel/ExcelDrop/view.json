@@ -2,393 +2,1702 @@
   "custom": {
     "data": [
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1669154400000
-        },
-        "C2": "Koos",
-        "C3": 48.53174392419729,
-        "localID": 1
+        "DataType": "Float4",
+        "Description": "Engine Oil Pressure",
+        "OPC Address": 1024,
+        "TagFolderPath": "Engine",
+        "Tagname": "Oil Pressure",
+        "engUnit": "kPa",
+        "localID": 1,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1669240800000
-        },
-        "C2": "Jan",
-        "C3": 96.67749245988567,
-        "localID": 2
+        "DataType": "Float4",
+        "Description": "Engine Coolant Temperature",
+        "OPC Address": 1025,
+        "TagFolderPath": "Engine",
+        "Tagname": "Coolant Temperature",
+        "engUnit": "°C",
+        "localID": 2,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1669327200000
-        },
-        "C2": "Koos",
-        "C3": 90.83262721767062,
-        "localID": 3
+        "DataType": "Float4",
+        "Description": "Engine Oil Temperature",
+        "OPC Address": 1026,
+        "TagFolderPath": "Engine",
+        "Tagname": "Oil Temperature",
+        "engUnit": "°C",
+        "localID": 3,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1669413600000
-        },
-        "C2": "Feb",
-        "C3": 96.7149060296517,
-        "localID": 4
+        "DataType": "Float4",
+        "Description": "Engine Fuel Level",
+        "OPC Address": 1027,
+        "TagFolderPath": "Engine",
+        "Tagname": "Fuel Level",
+        "engUnit": "%",
+        "localID": 4,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1669500000000
-        },
-        "C2": "Koos",
-        "C3": 92.53766736724187,
-        "localID": 5
+        "DataType": "Float4",
+        "Description": "Engine Charge Alternator Voltage",
+        "OPC Address": 1028,
+        "TagFolderPath": "Engine",
+        "Tagname": "Charge Alternator Voltage",
+        "engUnit": "V",
+        "localID": 5,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1669586400000
-        },
-        "C2": "Mar",
-        "C3": 86.31042142500348,
-        "localID": 6
+        "DataType": "Float4",
+        "Description": "Engine Battery Voltage",
+        "OPC Address": 1029,
+        "TagFolderPath": "Engine",
+        "Tagname": "Battery Voltage",
+        "engUnit": "V",
+        "localID": 6,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1669672800000
-        },
-        "C2": "Koos",
-        "C3": 70.02499500561076,
-        "localID": 7
+        "DataType": "Float4",
+        "Description": "Engine Speed",
+        "OPC Address": 1030,
+        "TagFolderPath": "Engine",
+        "Tagname": "Speed",
+        "engUnit": "rpm",
+        "localID": 7,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1669759200000
-        },
-        "C2": "Apr",
-        "C3": 68.11020467248734,
-        "localID": 8
+        "DataType": "Float4",
+        "Description": "Generator Frequency",
+        "OPC Address": 1031,
+        "TagFolderPath": "Generator",
+        "Tagname": "Frequency",
+        "engUnit": "Hz",
+        "localID": 8,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1669845600000
-        },
-        "C2": "Koos",
-        "C3": 59.24931482675264,
-        "localID": 9
+        "DataType": "Float4",
+        "Description": "Generator L1-N Voltage",
+        "OPC Address": 1032,
+        "TagFolderPath": "Generator",
+        "Tagname": "L1-N Voltage",
+        "engUnit": "V",
+        "localID": 9,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1669932000000
-        },
-        "C2": "May",
-        "C3": 35.58799955719982,
-        "localID": 10
+        "DataType": "Float4",
+        "Description": "Generator L2-N Voltage",
+        "OPC Address": 1034,
+        "TagFolderPath": "Generator",
+        "Tagname": "L2-N Voltage",
+        "engUnit": "V",
+        "localID": 10,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1670018400000
-        },
-        "C2": "Koos",
-        "C3": 31.96712519263484,
-        "localID": 11
+        "DataType": "Float4",
+        "Description": "Generator L3-N Voltage",
+        "OPC Address": 1036,
+        "TagFolderPath": "Generator",
+        "Tagname": "L3-N Voltage",
+        "engUnit": "V",
+        "localID": 11,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1670104800000
-        },
-        "C2": "Jun",
-        "C3": 0.5401272046263728,
-        "localID": 12
+        "DataType": "Float4",
+        "Description": "Generator L1-L2 Voltage",
+        "OPC Address": 1038,
+        "TagFolderPath": "Generator",
+        "Tagname": "L1-L2 Voltage",
+        "engUnit": "V",
+        "localID": 12,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1670191200000
-        },
-        "C2": "Koos",
-        "C3": 5.881435339806829,
-        "localID": 13
+        "DataType": "Float4",
+        "Description": "Generator L2-L3 Voltage",
+        "OPC Address": 1040,
+        "TagFolderPath": "Generator",
+        "Tagname": "L2-L3 Voltage",
+        "engUnit": "V",
+        "localID": 13,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1670277600000
-        },
-        "C2": "Jul",
-        "C3": 11.935057322750797,
-        "localID": 14
+        "DataType": "Float4",
+        "Description": "Generator L3-L1 Voltage",
+        "OPC Address": 1042,
+        "TagFolderPath": "Generator",
+        "Tagname": "L3-L1 Voltage",
+        "engUnit": "V",
+        "localID": 14,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1670364000000
-        },
-        "C2": "Koos",
-        "C3": 98.66947150236756,
-        "localID": 15
+        "DataType": "Float4",
+        "Description": "Generator L1 Current",
+        "OPC Address": 1044,
+        "TagFolderPath": "Generator",
+        "Tagname": "L1 Current",
+        "engUnit": "A",
+        "localID": 15,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1670450400000
-        },
-        "C2": "Aug",
-        "C3": 73.55408797003453,
-        "localID": 16
+        "DataType": "Float4",
+        "Description": "Generator L2 Current",
+        "OPC Address": 1046,
+        "TagFolderPath": "Generator",
+        "Tagname": "L2 Current",
+        "engUnit": "A",
+        "localID": 16,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1670536800000
-        },
-        "C2": "Koos",
-        "C3": 53.65945470181514,
-        "localID": 17
+        "DataType": "Float4",
+        "Description": "Generator L3 Current",
+        "OPC Address": 1048,
+        "TagFolderPath": "Generator",
+        "Tagname": "L3 Current",
+        "engUnit": "A",
+        "localID": 17,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1670623200000
-        },
-        "C2": "Sep",
-        "C3": 26.729715432974665,
-        "localID": 18
+        "DataType": "Float4",
+        "Description": "Generator Earth Current",
+        "OPC Address": 1050,
+        "TagFolderPath": "Generator",
+        "Tagname": "Earth Current",
+        "engUnit": "A",
+        "localID": 18,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1670709600000
-        },
-        "C2": "Koos",
-        "C3": 55.772525862281206,
-        "localID": 19
+        "DataType": "Float4",
+        "Description": "Generator L1 Watts",
+        "OPC Address": 1052,
+        "TagFolderPath": "Generator",
+        "Tagname": "L1 Watts",
+        "engUnit": "W",
+        "localID": 19,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1670796000000
-        },
-        "C2": "Oct",
-        "C3": 78.79236320669956,
-        "localID": 20
+        "DataType": "Float4",
+        "Description": "Generator L2 Watts",
+        "OPC Address": 1054,
+        "TagFolderPath": "Generator",
+        "Tagname": "L2 Watts",
+        "engUnit": "W",
+        "localID": 20,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1670882400000
-        },
-        "C2": "Koos",
-        "C3": 0.6376439322074323,
-        "localID": 21
+        "DataType": "Float4",
+        "Description": "Generator L3 Watts",
+        "OPC Address": 1056,
+        "TagFolderPath": "Generator",
+        "Tagname": "L3 Watts",
+        "engUnit": "W",
+        "localID": 21,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1670968800000
-        },
-        "C2": "Nov",
-        "C3": 0.3674410453684773,
-        "localID": 22
+        "DataType": "Float4",
+        "Description": "Generator Current Lag",
+        "OPC Address": 1058,
+        "TagFolderPath": "Generator",
+        "Tagname": "Current Lag",
+        "engUnit": "A",
+        "localID": 22,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1671055200000
-        },
-        "C2": "Koos",
-        "C3": 49.729129017146676,
-        "localID": 23
+        "DataType": "Float4",
+        "Description": "Mains Frequency",
+        "OPC Address": 1059,
+        "TagFolderPath": "Mains",
+        "Tagname": "Frequency",
+        "engUnit": "Hz",
+        "localID": 23,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1671141600000
-        },
-        "C2": "Dec",
-        "C3": 31.124666724055295,
-        "localID": 24
+        "DataType": "Float4",
+        "Description": "Mains L1-N Voltage",
+        "OPC Address": 1060,
+        "TagFolderPath": "Mains",
+        "Tagname": "L1-N Voltage",
+        "engUnit": "V",
+        "localID": 24,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1671228000000
-        },
-        "C2": "Koos",
-        "C3": 57.48093644070035,
-        "localID": 25
+        "DataType": "Float4",
+        "Description": "Mains L2-N Voltage",
+        "OPC Address": 1062,
+        "TagFolderPath": "Mains",
+        "Tagname": "L2-N Voltage",
+        "engUnit": "V",
+        "localID": 25,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1671314400000
-        },
-        "C2": "Jan",
-        "C3": 2.780524100685877,
-        "localID": 26
+        "DataType": "Float4",
+        "Description": "Mains L3-N Voltage",
+        "OPC Address": 1064,
+        "TagFolderPath": "Mains",
+        "Tagname": "L3-N Voltage",
+        "engUnit": "V",
+        "localID": 26,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1671400800000
-        },
-        "C2": "Koos",
-        "C3": 61.5512325235807,
-        "localID": 27
+        "DataType": "Float4",
+        "Description": "Mains L1-L2 Voltage",
+        "OPC Address": 1066,
+        "TagFolderPath": "Mains",
+        "Tagname": "L1-L2 Voltage",
+        "engUnit": "V",
+        "localID": 27,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1671487200000
-        },
-        "C2": "Feb",
-        "C3": 17.826739982657724,
-        "localID": 28
+        "DataType": "Float4",
+        "Description": "Mains L2-L3 Voltage",
+        "OPC Address": 1068,
+        "TagFolderPath": "Mains",
+        "Tagname": "L2-L3 Voltage",
+        "engUnit": "V",
+        "localID": 28,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       },
       {
-        "C1": {
-          "$": [
-            "ts",
-            192,
-            1669201078619
-          ],
-          "$ts": 1671573600000
-        },
-        "C2": "Koos",
-        "C3": 49.41983260524855,
-        "localID": 29
+        "DataType": "Float4",
+        "Description": "Mains L3-L1 Voltage",
+        "OPC Address": 1070,
+        "TagFolderPath": "Mains",
+        "Tagname": "L3-L1 Voltage",
+        "engUnit": "V",
+        "localID": 29,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains Voltage Phase Lag Lead",
+        "OPC Address": 1072,
+        "TagFolderPath": "Mains",
+        "Tagname": "Voltage Phase Lag Lead",
+        "engUnit": "V",
+        "localID": 30,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator Phase Rotation",
+        "OPC Address": 1073,
+        "TagFolderPath": "Generator",
+        "Tagname": "Phase Rotation",
+        "engUnit": "%",
+        "localID": 31,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains Phase Rotation",
+        "OPC Address": 1074,
+        "TagFolderPath": "Mains",
+        "Tagname": "Phase Rotation",
+        "engUnit": "°",
+        "localID": 32,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains Current Lag Lead",
+        "OPC Address": 1075,
+        "TagFolderPath": "Mains",
+        "Tagname": "Current Lag Lead",
+        "engUnit": "A",
+        "localID": 33,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L1 Current",
+        "OPC Address": 1076,
+        "TagFolderPath": "Mains",
+        "Tagname": "L1 Current",
+        "engUnit": "A",
+        "localID": 34,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L2 Current",
+        "OPC Address": 1078,
+        "TagFolderPath": "Mains",
+        "Tagname": "L2 Current",
+        "engUnit": "A",
+        "localID": 35,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L3 Current",
+        "OPC Address": 1080,
+        "TagFolderPath": "Mains",
+        "Tagname": "L3 Current",
+        "engUnit": "A",
+        "localID": 36,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains Earth Current",
+        "OPC Address": 1082,
+        "TagFolderPath": "Mains",
+        "Tagname": "Earth Current",
+        "engUnit": "A",
+        "localID": 37,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L1 Watts",
+        "OPC Address": 1084,
+        "TagFolderPath": "Mains",
+        "Tagname": "L1 Watts",
+        "engUnit": "W",
+        "localID": 38,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L2 Watts",
+        "OPC Address": 1086,
+        "TagFolderPath": "Mains",
+        "Tagname": "L2 Watts",
+        "engUnit": "W",
+        "localID": 39,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L3 Watts",
+        "OPC Address": 1088,
+        "TagFolderPath": "Mains",
+        "Tagname": "L3 Watts",
+        "engUnit": "W",
+        "localID": 40,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus Current Lag",
+        "OPC Address": 1090,
+        "TagFolderPath": "Bus",
+        "Tagname": "Current Lag",
+        "engUnit": "A",
+        "localID": 41,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus Frequency",
+        "OPC Address": 1091,
+        "TagFolderPath": "Bus",
+        "Tagname": "Frequency",
+        "engUnit": "Hz",
+        "localID": 42,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L1-N Voltage",
+        "OPC Address": 1092,
+        "TagFolderPath": "Bus",
+        "Tagname": "L1-N Voltage",
+        "engUnit": "V",
+        "localID": 43,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L2-N Voltage",
+        "OPC Address": 1094,
+        "TagFolderPath": "Bus",
+        "Tagname": "L2-N Voltage",
+        "engUnit": "V",
+        "localID": 44,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L3-N Voltage",
+        "OPC Address": 1096,
+        "TagFolderPath": "Bus",
+        "Tagname": "L3-N Voltage",
+        "engUnit": "V",
+        "localID": 45,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L1-L2 Voltage",
+        "OPC Address": 1098,
+        "TagFolderPath": "Bus",
+        "Tagname": "L1-L2 Voltage",
+        "engUnit": "V",
+        "localID": 46,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L2-L3 Voltage",
+        "OPC Address": 1100,
+        "TagFolderPath": "Bus",
+        "Tagname": "L2-L3 Voltage",
+        "engUnit": "V",
+        "localID": 47,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L3-L1 Voltage",
+        "OPC Address": 1102,
+        "TagFolderPath": "Bus",
+        "Tagname": "L3-L1 Voltage",
+        "engUnit": "V",
+        "localID": 48,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L1 Current",
+        "OPC Address": 1104,
+        "TagFolderPath": "Bus",
+        "Tagname": "L1 Current",
+        "engUnit": "A",
+        "localID": 49,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L2 Current",
+        "OPC Address": 1106,
+        "TagFolderPath": "Bus",
+        "Tagname": "L2 Current",
+        "engUnit": "A",
+        "localID": 50,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L3 Current",
+        "OPC Address": 1108,
+        "TagFolderPath": "Bus",
+        "Tagname": "L3 Current",
+        "engUnit": "A",
+        "localID": 51,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus Earth Current",
+        "OPC Address": 1110,
+        "TagFolderPath": "Bus",
+        "Tagname": "Earth Current",
+        "engUnit": "A",
+        "localID": 52,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L1 Watts",
+        "OPC Address": 1112,
+        "TagFolderPath": "Bus",
+        "Tagname": "L1 Watts",
+        "engUnit": "W",
+        "localID": 53,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L2 Watts",
+        "OPC Address": 1114,
+        "TagFolderPath": "Bus",
+        "Tagname": "L2 Watts",
+        "engUnit": "W",
+        "localID": 54,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L3 Watts",
+        "OPC Address": 1116,
+        "TagFolderPath": "Bus",
+        "Tagname": "L3 Watts",
+        "engUnit": "W",
+        "localID": 55,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus Phase Rotation",
+        "OPC Address": 1118,
+        "TagFolderPath": "Bus",
+        "Tagname": "Phase Rotation",
+        "engUnit": "°",
+        "localID": 56,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus 2 Frequency",
+        "OPC Address": 1119,
+        "TagFolderPath": "Bus",
+        "Tagname": "2 Frequency",
+        "engUnit": "Hz",
+        "localID": 57,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus 2 L1-N Voltage",
+        "OPC Address": 1120,
+        "TagFolderPath": "Bus",
+        "Tagname": "2 L1-N Voltage",
+        "engUnit": "V",
+        "localID": 58,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus 2 L2-N Voltage",
+        "OPC Address": 1122,
+        "TagFolderPath": "Bus",
+        "Tagname": "2 L2-N Voltage",
+        "engUnit": "V",
+        "localID": 59,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
       }
     ]
   },
-  "params": {},
+  "params": {
+    "Data": [
+      {
+        "DataType": "Float4",
+        "Description": "Engine Oil Pressure",
+        "OPC Address": 1024,
+        "TagFolderPath": "Engine",
+        "Tagname": "Oil Pressure",
+        "engUnit": "kPa",
+        "localID": 1,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Engine Coolant Temperature",
+        "OPC Address": 1025,
+        "TagFolderPath": "Engine",
+        "Tagname": "Coolant Temperature",
+        "engUnit": "°C",
+        "localID": 2,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Engine Oil Temperature",
+        "OPC Address": 1026,
+        "TagFolderPath": "Engine",
+        "Tagname": "Oil Temperature",
+        "engUnit": "°C",
+        "localID": 3,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Engine Fuel Level",
+        "OPC Address": 1027,
+        "TagFolderPath": "Engine",
+        "Tagname": "Fuel Level",
+        "engUnit": "%",
+        "localID": 4,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Engine Charge Alternator Voltage",
+        "OPC Address": 1028,
+        "TagFolderPath": "Engine",
+        "Tagname": "Charge Alternator Voltage",
+        "engUnit": "V",
+        "localID": 5,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Engine Battery Voltage",
+        "OPC Address": 1029,
+        "TagFolderPath": "Engine",
+        "Tagname": "Battery Voltage",
+        "engUnit": "V",
+        "localID": 6,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Engine Speed",
+        "OPC Address": 1030,
+        "TagFolderPath": "Engine",
+        "Tagname": "Speed",
+        "engUnit": "rpm",
+        "localID": 7,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator Frequency",
+        "OPC Address": 1031,
+        "TagFolderPath": "Generator",
+        "Tagname": "Frequency",
+        "engUnit": "Hz",
+        "localID": 8,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L1-N Voltage",
+        "OPC Address": 1032,
+        "TagFolderPath": "Generator",
+        "Tagname": "L1-N Voltage",
+        "engUnit": "V",
+        "localID": 9,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L2-N Voltage",
+        "OPC Address": 1034,
+        "TagFolderPath": "Generator",
+        "Tagname": "L2-N Voltage",
+        "engUnit": "V",
+        "localID": 10,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L3-N Voltage",
+        "OPC Address": 1036,
+        "TagFolderPath": "Generator",
+        "Tagname": "L3-N Voltage",
+        "engUnit": "V",
+        "localID": 11,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L1-L2 Voltage",
+        "OPC Address": 1038,
+        "TagFolderPath": "Generator",
+        "Tagname": "L1-L2 Voltage",
+        "engUnit": "V",
+        "localID": 12,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L2-L3 Voltage",
+        "OPC Address": 1040,
+        "TagFolderPath": "Generator",
+        "Tagname": "L2-L3 Voltage",
+        "engUnit": "V",
+        "localID": 13,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L3-L1 Voltage",
+        "OPC Address": 1042,
+        "TagFolderPath": "Generator",
+        "Tagname": "L3-L1 Voltage",
+        "engUnit": "V",
+        "localID": 14,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L1 Current",
+        "OPC Address": 1044,
+        "TagFolderPath": "Generator",
+        "Tagname": "L1 Current",
+        "engUnit": "A",
+        "localID": 15,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L2 Current",
+        "OPC Address": 1046,
+        "TagFolderPath": "Generator",
+        "Tagname": "L2 Current",
+        "engUnit": "A",
+        "localID": 16,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L3 Current",
+        "OPC Address": 1048,
+        "TagFolderPath": "Generator",
+        "Tagname": "L3 Current",
+        "engUnit": "A",
+        "localID": 17,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator Earth Current",
+        "OPC Address": 1050,
+        "TagFolderPath": "Generator",
+        "Tagname": "Earth Current",
+        "engUnit": "A",
+        "localID": 18,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L1 Watts",
+        "OPC Address": 1052,
+        "TagFolderPath": "Generator",
+        "Tagname": "L1 Watts",
+        "engUnit": "W",
+        "localID": 19,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L2 Watts",
+        "OPC Address": 1054,
+        "TagFolderPath": "Generator",
+        "Tagname": "L2 Watts",
+        "engUnit": "W",
+        "localID": 20,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator L3 Watts",
+        "OPC Address": 1056,
+        "TagFolderPath": "Generator",
+        "Tagname": "L3 Watts",
+        "engUnit": "W",
+        "localID": 21,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator Current Lag",
+        "OPC Address": 1058,
+        "TagFolderPath": "Generator",
+        "Tagname": "Current Lag",
+        "engUnit": "A",
+        "localID": 22,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains Frequency",
+        "OPC Address": 1059,
+        "TagFolderPath": "Mains",
+        "Tagname": "Frequency",
+        "engUnit": "Hz",
+        "localID": 23,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L1-N Voltage",
+        "OPC Address": 1060,
+        "TagFolderPath": "Mains",
+        "Tagname": "L1-N Voltage",
+        "engUnit": "V",
+        "localID": 24,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L2-N Voltage",
+        "OPC Address": 1062,
+        "TagFolderPath": "Mains",
+        "Tagname": "L2-N Voltage",
+        "engUnit": "V",
+        "localID": 25,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L3-N Voltage",
+        "OPC Address": 1064,
+        "TagFolderPath": "Mains",
+        "Tagname": "L3-N Voltage",
+        "engUnit": "V",
+        "localID": 26,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L1-L2 Voltage",
+        "OPC Address": 1066,
+        "TagFolderPath": "Mains",
+        "Tagname": "L1-L2 Voltage",
+        "engUnit": "V",
+        "localID": 27,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L2-L3 Voltage",
+        "OPC Address": 1068,
+        "TagFolderPath": "Mains",
+        "Tagname": "L2-L3 Voltage",
+        "engUnit": "V",
+        "localID": 28,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L3-L1 Voltage",
+        "OPC Address": 1070,
+        "TagFolderPath": "Mains",
+        "Tagname": "L3-L1 Voltage",
+        "engUnit": "V",
+        "localID": 29,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains Voltage Phase Lag Lead",
+        "OPC Address": 1072,
+        "TagFolderPath": "Mains",
+        "Tagname": "Voltage Phase Lag Lead",
+        "engUnit": "V",
+        "localID": 30,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Generator Phase Rotation",
+        "OPC Address": 1073,
+        "TagFolderPath": "Generator",
+        "Tagname": "Phase Rotation",
+        "engUnit": "%",
+        "localID": 31,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains Phase Rotation",
+        "OPC Address": 1074,
+        "TagFolderPath": "Mains",
+        "Tagname": "Phase Rotation",
+        "engUnit": "°",
+        "localID": 32,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains Current Lag Lead",
+        "OPC Address": 1075,
+        "TagFolderPath": "Mains",
+        "Tagname": "Current Lag Lead",
+        "engUnit": "A",
+        "localID": 33,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L1 Current",
+        "OPC Address": 1076,
+        "TagFolderPath": "Mains",
+        "Tagname": "L1 Current",
+        "engUnit": "A",
+        "localID": 34,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L2 Current",
+        "OPC Address": 1078,
+        "TagFolderPath": "Mains",
+        "Tagname": "L2 Current",
+        "engUnit": "A",
+        "localID": 35,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L3 Current",
+        "OPC Address": 1080,
+        "TagFolderPath": "Mains",
+        "Tagname": "L3 Current",
+        "engUnit": "A",
+        "localID": 36,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains Earth Current",
+        "OPC Address": 1082,
+        "TagFolderPath": "Mains",
+        "Tagname": "Earth Current",
+        "engUnit": "A",
+        "localID": 37,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L1 Watts",
+        "OPC Address": 1084,
+        "TagFolderPath": "Mains",
+        "Tagname": "L1 Watts",
+        "engUnit": "W",
+        "localID": 38,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L2 Watts",
+        "OPC Address": 1086,
+        "TagFolderPath": "Mains",
+        "Tagname": "L2 Watts",
+        "engUnit": "W",
+        "localID": 39,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Mains L3 Watts",
+        "OPC Address": 1088,
+        "TagFolderPath": "Mains",
+        "Tagname": "L3 Watts",
+        "engUnit": "W",
+        "localID": 40,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus Current Lag",
+        "OPC Address": 1090,
+        "TagFolderPath": "Bus",
+        "Tagname": "Current Lag",
+        "engUnit": "A",
+        "localID": 41,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus Frequency",
+        "OPC Address": 1091,
+        "TagFolderPath": "Bus",
+        "Tagname": "Frequency",
+        "engUnit": "Hz",
+        "localID": 42,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L1-N Voltage",
+        "OPC Address": 1092,
+        "TagFolderPath": "Bus",
+        "Tagname": "L1-N Voltage",
+        "engUnit": "V",
+        "localID": 43,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L2-N Voltage",
+        "OPC Address": 1094,
+        "TagFolderPath": "Bus",
+        "Tagname": "L2-N Voltage",
+        "engUnit": "V",
+        "localID": 44,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L3-N Voltage",
+        "OPC Address": 1096,
+        "TagFolderPath": "Bus",
+        "Tagname": "L3-N Voltage",
+        "engUnit": "V",
+        "localID": 45,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L1-L2 Voltage",
+        "OPC Address": 1098,
+        "TagFolderPath": "Bus",
+        "Tagname": "L1-L2 Voltage",
+        "engUnit": "V",
+        "localID": 46,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L2-L3 Voltage",
+        "OPC Address": 1100,
+        "TagFolderPath": "Bus",
+        "Tagname": "L2-L3 Voltage",
+        "engUnit": "V",
+        "localID": 47,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L3-L1 Voltage",
+        "OPC Address": 1102,
+        "TagFolderPath": "Bus",
+        "Tagname": "L3-L1 Voltage",
+        "engUnit": "V",
+        "localID": 48,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L1 Current",
+        "OPC Address": 1104,
+        "TagFolderPath": "Bus",
+        "Tagname": "L1 Current",
+        "engUnit": "A",
+        "localID": 49,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L2 Current",
+        "OPC Address": 1106,
+        "TagFolderPath": "Bus",
+        "Tagname": "L2 Current",
+        "engUnit": "A",
+        "localID": 50,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L3 Current",
+        "OPC Address": 1108,
+        "TagFolderPath": "Bus",
+        "Tagname": "L3 Current",
+        "engUnit": "A",
+        "localID": 51,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus Earth Current",
+        "OPC Address": 1110,
+        "TagFolderPath": "Bus",
+        "Tagname": "Earth Current",
+        "engUnit": "A",
+        "localID": 52,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L1 Watts",
+        "OPC Address": 1112,
+        "TagFolderPath": "Bus",
+        "Tagname": "L1 Watts",
+        "engUnit": "W",
+        "localID": 53,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L2 Watts",
+        "OPC Address": 1114,
+        "TagFolderPath": "Bus",
+        "Tagname": "L2 Watts",
+        "engUnit": "W",
+        "localID": 54,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus L3 Watts",
+        "OPC Address": 1116,
+        "TagFolderPath": "Bus",
+        "Tagname": "L3 Watts",
+        "engUnit": "W",
+        "localID": 55,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus Phase Rotation",
+        "OPC Address": 1118,
+        "TagFolderPath": "Bus",
+        "Tagname": "Phase Rotation",
+        "engUnit": "°",
+        "localID": 56,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus 2 Frequency",
+        "OPC Address": 1119,
+        "TagFolderPath": "Bus",
+        "Tagname": "2 Frequency",
+        "engUnit": "Hz",
+        "localID": 57,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus 2 L1-N Voltage",
+        "OPC Address": 1120,
+        "TagFolderPath": "Bus",
+        "Tagname": "2 L1-N Voltage",
+        "engUnit": "V",
+        "localID": 58,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      },
+      {
+        "DataType": "Float4",
+        "Description": "Bus 2 L2-N Voltage",
+        "OPC Address": 1122,
+        "TagFolderPath": "Bus",
+        "Tagname": "2 L2-N Voltage",
+        "engUnit": "V",
+        "localID": 59,
+        "rawHigh": 100,
+        "rawLo": 0,
+        "scaleMode": "None",
+        "scaledHigh": 100,
+        "scaledLo": 0
+      }
+    ],
+    "DownloadFileName": "Export.xlsx",
+    "EnableDownload": false,
+    "SheetNumber": 1,
+    "ShowTable": true
+  },
   "propConfig": {
     "custom.data": {
+      "persistent": true
+    },
+    "params.Data": {
+      "binding": {
+        "config": {
+          "path": "view.custom.data"
+        },
+        "type": "property"
+      },
+      "paramDirection": "output",
+      "persistent": true
+    },
+    "params.DownloadFileName": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.EnableDownload": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.SheetNumber": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.ShowTable": {
+      "paramDirection": "input",
       "persistent": true
     }
   },
   "props": {
     "defaultSize": {
-      "height": 612
+      "height": 689,
+      "width": 531
     }
   },
   "root": {
@@ -969,7 +2278,7 @@
           "component": {
             "onFileReceived": {
               "config": {
-                "script": "\tfileBytes \u003d event.file.getBytes()\n\tdata \u003d Standard.Utilities.Excel.ExcelToList(bytesIn \u003d fileBytes,hasHeaders \u003d True)\n\ti\u003d1\n\tfor row in data:\n\t\trow[\u0027localID\u0027] \u003d i\n\t\ti \u003d i+1\n\tself.view.custom.data \u003d data"
+                "script": "\tfileBytes \u003d event.file.getBytes()\n#\tExcelToList(\n#\tbytesIn \u003d None,\n#\tfileName\u003dNone, \n#\thasHeaders \u003d False,\n#\tsheetNum \u003d 0,\n#\tfirstRow \u003d None,\n#\tlastRow \u003d None,\n#\tfirstCol \u003d None,\n#\tlastCol \u003d None):\n\tsheetNumber \u003d self.view.params.SheetNumber\n\tdata \u003d Standard.Utilities.Excel.ExcelToList(bytesIn \u003d fileBytes,hasHeaders \u003d True,sheetNum\u003dsheetNumber)\n\ti\u003d1\n\tfor row in data:\n\t\trow[\u0027localID\u0027] \u003d i\n\t\ti \u003d i+1\n\tself.view.custom.data \u003d data"
               },
               "scope": "G",
               "type": "script"
@@ -980,7 +2289,8 @@
           "name": "FileUpload"
         },
         "position": {
-          "basis": "500px"
+          "basis": "50px",
+          "grow": 1
         },
         "props": {
           "maxUploads": 1
@@ -993,16 +2303,30 @@
         },
         "position": {
           "basis": "500px",
-          "grow": 1,
-          "shrink": 0
+          "grow": 1
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.params.ShowTable"
+              },
+              "type": "property"
+            }
+          },
           "props.data": {
             "binding": {
               "config": {
                 "path": "view.custom.data"
               },
               "type": "property"
+            }
+          }
+        },
+        "props": {
+          "rows": {
+            "style": {
+              "fontSize": 10
             }
           }
         },
@@ -1013,9 +2337,26 @@
           "name": "Excel Download"
         },
         "position": {
-          "basis": "320px"
+          "basis": "320px",
+          "grow": 1
         },
         "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.params.EnableDownload"
+              },
+              "type": "property"
+            }
+          },
+          "props.params.FileName": {
+            "binding": {
+              "config": {
+                "path": "view.params.DownloadFileName"
+              },
+              "type": "property"
+            }
+          },
           "props.params.Sheets[0].Columns": {
             "binding": {
               "config": {
@@ -1041,7 +2382,6 @@
         },
         "props": {
           "params": {
-            "FileName": "Export.xlsx",
             "Sheets": [
               {
                 "Name": "Sheet1"

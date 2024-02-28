@@ -54,7 +54,7 @@
     }
   },
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100T100"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_FQ_7230B_2"
   },
   "propConfig": {
     "custom.AlarmSummary": {

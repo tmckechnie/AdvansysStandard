@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100AO100"
+    "TagPath": "[TPOpnim]Control Modules/Rh_FY_7080"
   },
   "propConfig": {
     "params.TagPath": {
@@ -127,6 +127,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
+                    "Expanded": false,
                     "Title": "Control"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"
@@ -167,7 +168,7 @@
                 "viewParams": {},
                 "viewPath": "Standard/Control Modules/AnalogOutput/Faceplates/Components/Configuration/Alarms"
               },
-              "expanded": true,
+              "expanded": false,
               "header": {
                 "content": {
                   "style": {
@@ -178,6 +179,7 @@
                   "useDefaultViewHeight": false,
                   "useDefaultViewWidth": false,
                   "viewParams": {
+                    "Expanded": true,
                     "Title": "Alarms"
                   },
                   "viewPath": "Standard/Components/Faceplates/Header"

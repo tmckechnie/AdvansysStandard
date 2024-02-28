@@ -3,15 +3,15 @@
     "AlarmSummary": {
       "HighestActivePriority": 0,
       "HighestActivePriorityName": null,
-      "HighestUnackedPriority": 1,
-      "HighestUnackedPriorityName": "Low",
+      "HighestUnackedPriority": 0,
+      "HighestUnackedPriorityName": null,
       "Overall": {
         "ActiveAckCount": 0,
         "ActiveUnackCount": 0,
-        "ClearUnackCount": 6,
+        "ClearUnackCount": 0,
         "Detail": [],
         "ShelvedCount": 0,
-        "Total": 6
+        "Total": 0
       },
       "PriorityDetail": {
         "Critical": {
@@ -33,41 +33,10 @@
         "Low": {
           "ActiveAckCount": 0,
           "ActiveUnackCount": 0,
-          "ClearUnackCount": 6,
-          "Detail": [
-            {
-              "EventID": "3c4f460c-6e24-4dd0-8b0d-60a83f67b133",
-              "Label": "Available",
-              "State": "Cleared, Unacknowledged"
-            },
-            {
-              "EventID": "92f2f6ce-b8ba-4be2-94ff-0be506f4ba1f",
-              "Label": "CloseLimit",
-              "State": "Cleared, Unacknowledged"
-            },
-            {
-              "EventID": "c3ef4fdb-8eb7-4327-8bba-011b12cc4017",
-              "Label": "CloseLimit",
-              "State": "Cleared, Unacknowledged"
-            },
-            {
-              "EventID": "9499b46f-5726-4009-9e53-3a76c8a554d0",
-              "Label": "CloseLimit",
-              "State": "Cleared, Unacknowledged"
-            },
-            {
-              "EventID": "21ed137a-1cc8-4145-8812-c27a09e9a1aa",
-              "Label": "CloseLimit",
-              "State": "Cleared, Unacknowledged"
-            },
-            {
-              "EventID": "ed9d86e9-cb16-4e2a-89e9-0c22ad8dd740",
-              "Label": "CloseLimit",
-              "State": "Cleared, Unacknowledged"
-            }
-          ],
+          "ClearUnackCount": 0,
+          "Detail": [],
           "ShelvedCount": 0,
-          "Total": 6
+          "Total": 0
         },
         "Medium": {
           "ActiveAckCount": 0,
@@ -80,16 +49,16 @@
       }
     },
     "Interlocked": false,
-    "State": "Closed",
-    "alarmLabel": "Unacked: Low; Active: None",
+    "State": 0,
+    "alarmLabel": "Unacked: None; Active: None",
     "alarmStyle": {
-      "classes": "Standard/Alarms/Low/Text Standard/Alarms/Low/Border Standard/Alarms/BorderAnimation Standard/Alarms/Low/ClearUnacked/Border"
+      "classes": ""
     },
     "interlockLabel": "Healthy",
     "interlockStyle": "Standard/Popups/Faceplates/Interlocked"
   },
   "params": {
-    "TagPath": "[StandardS71500]Modules/Control Modules/100XV100"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_FY_7100R"
   },
   "propConfig": {
     "custom.AlarmSummary": {
@@ -226,7 +195,7 @@
               },
               "transforms": [
                 {
-                  "code": "\tstyleClasses \u003d value\n\tstyleClasses +\u003d \" Standard/Popups/Faceplates/HeaderText Standard/Popups/Faceplates/HeaderBackground\"\n\treturn styleClasses",
+                  "code": "\tstyleClasses \u003d value\n\tif styleClasses is None:\n\t\treturn \"Standard/Popups/Faceplates/HeaderText Standard/Popups/Faceplates/HeaderBackground\"\n\tstyleClasses +\u003d \" Standard/Popups/Faceplates/HeaderText Standard/Popups/Faceplates/HeaderBackground\"\n\treturn styleClasses",
                   "type": "script"
                 }
               ],

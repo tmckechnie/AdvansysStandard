@@ -5,7 +5,7 @@
     "StateString": "Passive"
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/DigitalInput01"
+    "TagPath": "[TPOpnim]Control Modules/Rh_FSL_7075"
   },
   "propConfig": {
     "custom.FormatString": {
@@ -228,14 +228,6 @@
         ],
         "custom": {
           "History": {
-            "firstTimestamp": {
-              "$": [
-                "ts",
-                192,
-                1689243968693
-              ],
-              "$ts": 1689243369068
-            },
             "run": true
           }
         },
@@ -293,21 +285,6 @@
               },
               "type": "property"
             }
-          },
-          "custom.History.firstTimestamp": {
-            "binding": {
-              "config": {
-                "path": "this.custom.History.data[0].data[0].time"
-              },
-              "enabled": false,
-              "transforms": [
-                {
-                  "expression": "fromMillis({value})",
-                  "type": "expression"
-                }
-              ],
-              "type": "property"
-            }
           }
         },
         "props": {
@@ -321,6 +298,16 @@
         },
         "position": {
           "basis": "35px"
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "qualityOf(tag({view.params.TagPath}+\"/Sim/Active\"))!\u003d\"Bad_Disabled\""
+              },
+              "type": "expr"
+            }
+          }
         },
         "props": {
           "params": {

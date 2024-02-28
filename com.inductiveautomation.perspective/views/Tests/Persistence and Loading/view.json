@@ -1,0 +1,351 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "LabelNumericEntryField"
+        },
+        "position": {
+          "height": 26,
+          "width": 300,
+          "x": 68,
+          "y": 35
+        },
+        "propConfig": {
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "direct",
+                "tagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput01/Sts/Value"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Format": "0,0.##",
+            "Label": "",
+            "ShowLabel": true,
+            "Units": ""
+          },
+          "path": "Tests/Components/LabelNumericEntryField"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "LabelNumericEntryField TagPath"
+        },
+        "position": {
+          "height": 26,
+          "width": 300,
+          "x": 67,
+          "y": 83
+        },
+        "props": {
+          "params": {
+            "Enable": true,
+            "Format": "0,0.##",
+            "Label": "",
+            "ShowLabel": true,
+            "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/AnalogInput01/Sts/Value",
+            "Units": "",
+            "Value": ""
+          },
+          "path": "Tests/Components/LabelNumericEntryField TagPath"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "draggable": true,
+                "id": "StrippedHomePage",
+                "modal": false,
+                "overlayDismiss": false,
+                "resizable": true,
+                "showCloseIcon": true,
+                "type": "open",
+                "viewParams": {
+                  "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
+                },
+                "viewPath": "Tests/Components/Home",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Open Stripped Out Home Page"
+        },
+        "position": {
+          "height": 34,
+          "width": 148,
+          "x": 220,
+          "y": 126
+        },
+        "props": {
+          "text": "Stripped Out Home Page"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "draggable": true,
+                "id": "ValveHomePage",
+                "modal": false,
+                "overlayDismiss": false,
+                "resizable": true,
+                "showCloseIcon": true,
+                "type": "open",
+                "viewParams": {
+                  "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
+                },
+                "viewPath": "Standard/Control Modules/Valve/Faceplates/Components/Home",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Open Home Page"
+        },
+        "position": {
+          "height": 34,
+          "width": 148,
+          "x": 220,
+          "y": 168
+        },
+        "props": {
+          "text": "Valve Home Page"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "draggable": true,
+                "id": "ValveFacePlate",
+                "modal": false,
+                "overlayDismiss": false,
+                "resizable": true,
+                "showCloseIcon": true,
+                "type": "open",
+                "viewParams": {
+                  "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
+                },
+                "viewPath": "Standard/Control Modules/Valve/Faceplates/Faceplate",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Open FacePlate"
+        },
+        "position": {
+          "height": 34,
+          "width": 147,
+          "x": 221,
+          "y": 254
+        },
+        "props": {
+          "text": "Valve FacePlate"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "draggable": true,
+                "id": "ValveMainPage",
+                "modal": false,
+                "overlayDismiss": false,
+                "resizable": true,
+                "showCloseIcon": true,
+                "type": "open",
+                "viewParams": {
+                  "ModulePath": "Control Modules/Valve",
+                  "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
+                },
+                "viewPath": "Standard/Components/Faceplates/Main Page",
+                "viewportBound": false
+              },
+              "scope": "C",
+              "type": "popup"
+            }
+          }
+        },
+        "meta": {
+          "name": "Open Main Page"
+        },
+        "position": {
+          "height": 34,
+          "width": 148,
+          "x": 221,
+          "y": 210
+        },
+        "props": {
+          "text": "Valve Main Page"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "TabContainer"
+        },
+        "position": {
+          "height": 300,
+          "width": 300,
+          "x": 95,
+          "y": 327
+        },
+        "props": {
+          "tabs": [
+            {
+              "viewPath": "value"
+            }
+          ]
+        },
+        "type": "ia.container.tab"
+      },
+      {
+        "meta": {
+          "name": "HorizontalMenu"
+        },
+        "position": {
+          "height": 46,
+          "width": 600,
+          "x": 38,
+          "y": 645
+        },
+        "props": {
+          "items": [
+            {
+              "enabled": true,
+              "icon": {
+                "path": ""
+              },
+              "items": [
+                {
+                  "enabled": true,
+                  "icon": {
+                    "color": "",
+                    "path": "material/link"
+                  },
+                  "items": [],
+                  "label": "Link to Google",
+                  "style": {
+                    "classes": ""
+                  },
+                  "target": "http://www.google.com",
+                  "viewPath": ""
+                }
+              ],
+              "label": "Menu Item",
+              "style": {
+                "classes": ""
+              },
+              "target": "",
+              "viewPath": ""
+            },
+            {
+              "enabled": true,
+              "icon": {
+                "color": "",
+                "path": "material/link"
+              },
+              "items": [],
+              "label": "Link to Google",
+              "style": {
+                "classes": ""
+              },
+              "target": "http://www.google.com"
+            },
+            {
+              "enabled": false,
+              "icon": {
+                "path": ""
+              },
+              "items": [],
+              "label": "Disabled Menu Item",
+              "style": {
+                "classes": ""
+              },
+              "target": ""
+            },
+            {
+              "enabled": true,
+              "icon": {
+                "path": ""
+              },
+              "items": [],
+              "label": "Last Menu Item",
+              "style": {
+                "classes": ""
+              },
+              "target": ""
+            }
+          ]
+        },
+        "type": "ia.navigation.horizontalmenu"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "documentTitle": "Report",
+                "target": "View"
+              },
+              "scope": "C",
+              "type": "request-print"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 34,
+          "width": 80,
+          "x": 38,
+          "y": 18
+        },
+        "props": {
+          "text": "Print"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "position": {
+      "x": 48,
+      "y": 13
+    },
+    "type": "ia.container.coord"
+  }
+}

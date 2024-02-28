@@ -1,7 +1,7 @@
 {
   "custom": {},
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/CMTESTING/CMs/Valve"
   },
   "propConfig": {
     "params.TagPath": {
@@ -31,7 +31,7 @@
               "config": {
                 "fallbackDelay": 2.5,
                 "mode": "expression",
-                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
+                "tagPath": "{view.params.TagPath} + \"/Alarms/\"+{this.meta.name}+\"/Sts/Active\""
               },
               "transforms": [
                 {
@@ -50,6 +50,14 @@
                 "tagPath": "{view.params.TagPath} + \"/Alarms/\" + {this.meta.name} + \"/Sts/ElapsedTime.FormatString\""
               },
               "type": "tag"
+            }
+          },
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "expression": "{this.meta.name} + \" Alarm Elapsed Time\""
+              },
+              "type": "expr"
             }
           },
           "props.params.Units": {
@@ -75,7 +83,6 @@
         },
         "props": {
           "params": {
-            "Label": "Available Alarm Elapsed Time",
             "ShowLabel": true,
             "ShowUnits": true
           },
@@ -97,7 +104,7 @@
               "config": {
                 "fallbackDelay": 2.5,
                 "mode": "expression",
-                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
+                "tagPath": "{view.params.TagPath} + \"/Alarms/\"+{this.meta.name}+\"/Sts/Active\""
               },
               "transforms": [
                 {
@@ -116,6 +123,14 @@
                 "tagPath": "{view.params.TagPath} + \"/Alarms/\" + {this.meta.name} + \"/Sts/ElapsedTime.FormatString\""
               },
               "type": "tag"
+            }
+          },
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "expression": "{this.meta.name} + \" Alarm Elapsed Time\""
+              },
+              "type": "expr"
             }
           },
           "props.params.Units": {
@@ -141,7 +156,6 @@
         },
         "props": {
           "params": {
-            "Label": "Open Limit Alarm Elapsed Time",
             "ShowLabel": true,
             "ShowUnits": true
           },
@@ -163,7 +177,7 @@
               "config": {
                 "fallbackDelay": 2.5,
                 "mode": "expression",
-                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
+                "tagPath": "{view.params.TagPath} + \"/Alarms/\"+{this.meta.name}+\"/Sts/Active\""
               },
               "transforms": [
                 {
@@ -182,6 +196,14 @@
                 "tagPath": "{view.params.TagPath} + \"/Alarms/\" + {this.meta.name} + \"/Sts/ElapsedTime.FormatString\""
               },
               "type": "tag"
+            }
+          },
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "expression": "{this.meta.name} + \" Alarm Elapsed Time\""
+              },
+              "type": "expr"
             }
           },
           "props.params.Units": {
@@ -207,7 +229,6 @@
         },
         "props": {
           "params": {
-            "Label": "Close Limit Alarm Elapsed Time",
             "ShowLabel": true,
             "ShowUnits": true
           },
@@ -229,7 +250,7 @@
               "config": {
                 "fallbackDelay": 2.5,
                 "mode": "expression",
-                "tagPath": "{view.params.TagPath} + \"/Sts/\"+{this.meta.name}"
+                "tagPath": "{view.params.TagPath} + \"/Alarms/\"+{this.meta.name}+\"/Sts/Active\""
               },
               "transforms": [
                 {
@@ -248,6 +269,14 @@
                 "tagPath": "{view.params.TagPath} + \"/Alarms/\" + {this.meta.name} + \"/Sts/ElapsedTime.FormatString\""
               },
               "type": "tag"
+            }
+          },
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "expression": "{this.meta.name} + \" Alarm Elapsed Time\""
+              },
+              "type": "expr"
             }
           },
           "props.params.Units": {
@@ -273,7 +302,79 @@
         },
         "props": {
           "params": {
-            "Label": "Communication Alarm Elapsed Time",
+            "ShowLabel": true,
+            "ShowUnits": true
+          },
+          "path": "Standard/Components/Faceplates/Status/LabelDisplayField"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "meta": {
+          "name": "Position"
+        },
+        "position": {
+          "basis": "26px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Alarms/\"+{this.meta.name}+\"/Sts/Active\""
+              },
+              "transforms": [
+                {
+                  "code": "\tif quality.toString() \u003d\u003d \u0027Bad_Disabled\u0027:\n\t\treturn False\n\treturn True",
+                  "type": "script"
+                }
+              ],
+              "type": "tag"
+            }
+          },
+          "props.params.Format": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Alarms/\" + {this.meta.name} + \"/Sts/ElapsedTime.FormatString\""
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Label": {
+            "binding": {
+              "config": {
+                "expression": "{this.meta.name} + \" Alarm Elapsed Time\""
+              },
+              "type": "expr"
+            }
+          },
+          "props.params.Units": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Alarms/\" + {this.meta.name} + \"/Sts/ElapsedTime.EngUnit\""
+              },
+              "type": "tag"
+            }
+          },
+          "props.params.Value": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "expression",
+                "tagPath": "{view.params.TagPath} + \"/Alarms/\" + {this.meta.name} + \"/Sts/ElapsedTime\""
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "params": {
             "ShowLabel": true,
             "ShowUnits": true
           },

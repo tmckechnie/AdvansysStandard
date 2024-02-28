@@ -1,27 +1,27 @@
 {
   "custom": {
-    "DeviationNegative": 0,
-    "DeviationPositive": 0,
-    "InstanceName": "Controller01",
+    "DeviationNegative": 10,
+    "DeviationPositive": 10,
+    "InstanceName": "Rh_FIC_7100R",
     "InternalExternalSelect": false,
     "InternalSetpoint": 0,
     "ManualOutput": 0,
     "Mode": 2,
     "Output": 0,
-    "OutputClampHigh": 100,
-    "OutputClampLow": 0,
+    "OutputClampHigh": null,
+    "OutputClampLow": null,
     "OutputDisplayFormat": "#,##0.##",
     "OutputEngUnit": "%",
     "ProcessVariable": 0,
     "ProcessVariableDisplayFormat": "#,##0.##",
-    "ProcessVariableEngUnit": "%",
-    "ScaleEngineeringMax": 100,
+    "ProcessVariableEngUnit": "",
+    "ScaleEngineeringMax": 20,
     "ScaleEngineeringMin": 0,
     "Setpoint": 0,
-    "ShortDescription": "Controller 1"
+    "ShortDescription": "Rh_FIC_7100R - Flow_Control"
   },
   "params": {
-    "TagPath": "[StandardS71500]Standard/Modules/Control Modules/CMTESTING/CMs/Controller01"
+    "TagPath": "[TPOpnim]Standard/Modules/Control Modules/Control Module Testing/Rh_FIC_7100R"
   },
   "propConfig": {
     "custom.DeviationNegative": {
@@ -403,7 +403,16 @@
                           "config": {
                             "path": "view.custom.OutputClampHigh"
                           },
+                          "overlayOptOut": true,
                           "type": "property"
+                        }
+                      },
+                      "props.plots[1].markers[1].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "qualityOf({view.custom.OutputClampHigh})!\u003d\"Bad_Disabled\""
+                          },
+                          "type": "expr"
                         }
                       },
                       "props.plots[1].markers[2].value": {
@@ -411,7 +420,16 @@
                           "config": {
                             "path": "view.custom.OutputClampLow"
                           },
+                          "overlayOptOut": true,
                           "type": "property"
+                        }
+                      },
+                      "props.plots[1].markers[2].visible": {
+                        "binding": {
+                          "config": {
+                            "expression": "qualityOf({view.custom.OutputClampLow})!\u003d\"Bad_Disabled\""
+                          },
+                          "type": "expr"
                         }
                       },
                       "props.series": {
@@ -751,8 +769,7 @@
                                   "classes": "Standard/Popups/Faceplates/Trend/Control/High"
                                 }
                               },
-                              "type": "line",
-                              "visible": true
+                              "type": "line"
                             },
                             {
                               "axis": "Value",
@@ -774,8 +791,7 @@
                                   "classes": "Standard/Popups/Faceplates/Trend/Control/High"
                                 }
                               },
-                              "type": "line",
-                              "visible": true
+                              "type": "line"
                             }
                           ],
                           "trends": [
@@ -867,17 +883,8 @@
                 ],
                 "custom": {
                   "History": {
-                    "firstTimestamp": {
-                      "$": [
-                        "ts",
-                        192,
-                        1689259659776
-                      ],
-                      "$ts": 1689243369068
-                    },
                     "run": true
-                  },
-                  "key_1": "value"
+                  }
                 },
                 "meta": {
                   "name": "Trend"
